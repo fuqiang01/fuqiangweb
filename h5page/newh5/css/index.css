@@ -1,0 +1,122 @@
+.banner{
+    width: 10rem;
+}
+.banner img{
+    width: 100%;
+}
+.content{
+    background-color: #eee;
+    padding-bottom: 1.5rem;
+}
+/* 服务项目 */
+.type{
+    display: flex;
+    flex-wrap: wrap;
+    padding: .3rem 0;
+    background-color: #fff;
+}
+.type > .item{
+    width: 2.5rem;
+}
+.type > .item >a{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    color: #333;   
+}
+.type > .item > a img{
+    width: 40%;
+    margin: .2rem 0;
+}
+.type > .item > a span{
+    font-size: .4rem;
+}
+.banner-show{
+    box-shadow: 0 0 .2rpx rgba(0,0,0,.3);
+    margin-top: .3rem;
+}
+.banner-show > img{
+    width: 100%;
+}
+/* 热门展示 */
+.hot,
+.government,
+.advantage{
+    box-shadow: 0 0 .3rpx rgba(0,0,0,.3);
+    margin-top: 1rem;
+}
+.hot-title,
+.government-title,
+.advantage-title{
+    height: 1rem;
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #03abf1; 
+}
+.hot-title > img,
+.government-title > img,
+.advantage-title > img{
+    width: 4rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -.4rem;
+}
+.hot-content{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    justify-content: space-around;
+}
+.hot-content .hot-item{
+    width: 30%;
+}
+.hot-content .hot-item >a{
+    display: flex;
+    height: 1.5rem;
+    align-items: center;
+    color: #777;
+}
+.hot-content .hot-item >a img{
+    width: 1rem;
+    height: 1rem;
+}
+.hot-content .hot-item >a span{
+    font-size: .4rem;
+}
+/* 行政 */
+.government-title{
+    border-bottom-color: #ed556e;
+}
+.government-content{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    justify-content: space-around;
+    
+}
+.government-content .government-item{
+    width: 33%;
+    margin-bottom: .3rem;
+}
+.government-content .government-item >a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #777;
+}
+.government-content .government-item >a img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: .2rem 0;
+}
+.government-content .government-item >a > span{
+    font-size: .4rem;
+}
+.government-content .government-item >a > span.price{
+    color: #ed556e;
+    font-size: .3rem;
+}
+.advantage-title{
+    border-bottom-color: #25b88a;
+}

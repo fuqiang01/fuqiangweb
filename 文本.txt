@@ -1,0 +1,26 @@
+样式图片地址: http://demo.cwgszc.com/
+本地测试地址: www.hbcw.cms
+四个网址: http://www.cwcwdl.com/
+ 
+   	  http://www.cwgsdl.com/ 
+   
+          http://www.cwgszc.com/
+          
+http://www.cwzcgs.com/
+
+第一套模板:http://www.blgszc.com/
+第二套模板:http://www.dlgsi.com/
+第三套模板:http://www.zcegs.com/
+
+
+
+
+
+jquery_CDN : <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+bootstrap_CDN : 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>

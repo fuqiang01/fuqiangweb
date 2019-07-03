@@ -1,0 +1,76 @@
+/* banner */
+.banner{
+    min-width: 1250px;
+    height: 600px;
+}
+.banner > img{
+    float: left;
+    width: 50%;
+    min-width: 625px;
+    height: 600px;
+}
+/* 联系我们 */
+.contact{
+    text-align: center;
+    position: relative;
+    height: 600px;
+    background-color: #eee;
+}
+.contact > h2{
+    font-size: 30px;
+    padding: 50px 0; 
+    position: relative;
+}
+.contact > h2::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: #aaa;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: 10px;
+}
+.contact > .contact-info{
+    width: 1180px;
+    position: absolute;
+    left: 50%;
+    margin-left: -590px;
+}
+.contact > .contact-info > div{
+    float: left;
+}
+.contact > .contact-info > div.info-left > ul > li{
+    padding: 10px 0;
+}
+.contact > .contact-info > div.info-left > ul > li > span:first-of-type{
+    display: inline-block;
+    width: 130px;
+    height: 60px;
+    background-color: rgb(45,55,132);
+    color: #fff;
+    line-height: 60px;
+}
+.contact > .contact-info > div.info-left > ul > li > span:last-of-type{
+    display: inline-block;
+    width: 500px;
+    height: 60px;
+    background-color: #f5f5f5;
+    line-height: 60px;
+    margin-left: -4px;
+}
+.contact > .contact-info > div.info-right{
+    width: 500px;
+    margin-left: 49px;
+    text-align: left;
+}
+div.info-right > ul > li{
+    margin-bottom: 20px;
+}
+div.info-right > ul > li > h4{
+    color: rgb(45,55,132);
+    border-bottom: 1px solid rgb(45,55,132);
+    font-size: 18px;
+    margin-bottom: 10px;
+}

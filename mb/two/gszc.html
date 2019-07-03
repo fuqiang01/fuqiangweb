@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>公司注册</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/gszc.css">
+</head>
+
+<body>
+    <!-- topBar -->
+    <div class="topBar ">
+        <nav class="navbar navbar-default container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">
+                        <span class="position">随州</span>
+                        <button type="button" class="btn" data-toggle="modal"
+                            data-target=".bs-example-modal-lg">[点我切换]</button>
+                        <!-- <span class="switch-pos">[点我切换]</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#">售后热线：1010-0168</a>
+                </li>
+                <li>
+                    <a href="#">咨询热线：400-017-2000</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">欢迎来到湖北楚威!</a></li>"
+                <!-- <li><a href="#">服务商网点查询</a></li> -->
+            </ul>
+        </nav>
+    </div>
+    <!-- 地址切换弹窗 -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">随州</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-2">上海</div>
+                        <div class="col-md-2">武汉</div>
+                        <div class="col-md-2">随州</div>
+                        <div class="col-md-2">昆山</div>
+                        <div class="col-md-2">广州</div>
+                        <div class="col-md-2">深圳</div>
+                    </div>
+                </div>
+                <!-- 弹窗底部按钮 -->
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <div class="header container">
+        <!-- 企业logo -->
+       <div class="logo">
+            <a href="./index.html">
+                <img src="./images/LOGO.png" alt="楚威logo">
+                <p class="logo-name">湖北楚威</p>
+            </a>
+        </div>
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav nav-left">
+                <li class="all-service">
+                    <a href="#">全部服务</a>
+                    <span class="all-btn glyphicon glyphicon-align-justify"></span>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav nav-right">
+                <li><a href="./index.html">首页</a></li>
+                <li class="active"><a href="./gszc.html">公司注册</a></li>
+                <li><a href="./dljz.html">代理记账</a></li>
+                <li><a href="./gssj.html">公司审计</a></li>
+                <li><a href="./qyhm.html">企业核名</a></li>
+                <li><a href="./cszx.html">财税资讯</a></li>
+                <!-- <li><a href="#">加盟我们</a></li> -->
+                <li><a href="./gywm.html">关于我们</a></li>
+            </ul>
+            <!--全部服务展开区域-->
+            <ul class="all-service-list">
+                <li id="service-kgs">
+                    <a href="#">
+                        <p class="service-title">
+                            <!-- <span class="glyphicon glyphicon-user"></span> -->
+                            <img src="./images/icon_yi.png" alt="">
+                            <span>开公司</span>
+                        </p>
+                        <P class="service-introduce">公司注册、变更注销</P>
+                    </a>
+                </li>
+                <li id="service-dljz">
+                    <a href="#">
+                        <p class="service-title">
+                            <img src="./images/icon_er.png" alt="">
+                            <span>代理记账</span>
+                        </p>
+                        <P class="service-introduce">财税代理、记账报税</P>
+                    </a>
+                </li>
+                <li id="service-swdb">
+                    <a href="#">
+                        <p class="service-title">
+                            <img src="./images/icon_san.png" alt="">
+                            <span>税务代办</span>
+                        </p>
+                        <P class="service-introduce">汇算清缴、税控发票</P>
+                    </a>
+                </li>
+                <li id="service-sjsc">
+                    <a href="#">
+                        <p class="service-title">
+                            <img src="./images/icon_si.png" alt="">
+                            <span>审计税筹</span>
+                        </p>
+                        <P class="service-introduce">公司审计、税收筹划</P>
+                    </a>
+                </li>
+                <li id="service-zzfw">
+                    <a href="#">
+                        <p class="service-title">
+                            <img src="./images/icon_wu.png" alt="">
+                            <span>增值服务</span>
+                        </p>
+                        <P class="service-introduce">其他更多</P>
+                    </a>
+                </li>
+            </ul>
+            <!--展开列表hover后显示区域-->
+            <div class="service-kgs service-list-hover">
+                <h4>企业工商注册服务 快人一步！即刻拥有自己的公司</h4>
+                <ul>
+                    <li>
+                        <a href="./gszc.html">公司注册</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司注册资金变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司股权转让</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./gszc.html">公司注册地址变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司名称变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">企业工商年检</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./gszc.html">公司经营范围变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司法人变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司注销</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-dljz service-list-hover">
+                <h4>企业服务 低价高质！让您的企业体验真正的互联网模式</h4>
+                <ul>
+                    <li>
+                        <a href="./dljz.html">小规模代理记账</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./dljz.html">一般纳税人代理记账</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./dljz.html">旧账梳理</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-swdb service-list-hover">
+                <h4>税务代办 专业注册税务师为您代理税管清算工作</h4>
+                <ul>
+                    <li>
+                        <a href="./qyhm.html">增值税进项发票认证</a>
+                    </li>
+                    <li>
+                        <a href="./qyhm.html">税务异常处理</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./qyhm.html">申请一般纳税人认定</a>
+                    </li>
+                    <li>
+                        <a href="./qyhm.html">企业所得税汇算清缴</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./qyhm.html">税控器托管</a>
+                    </li>
+                    <li>
+                        <a href="./qyhm.html">出口退税</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-sjsc  service-list-hover">
+                <h4>审计税筹 高水准财务审计！轻松掌控公司经营状况</h4>
+                <ul>
+                    <li>
+                        <a href="./gssj.html">财务报表审计</a>
+                    </li>
+                    <li>
+                        <a href="./gssj.html">企业税收筹划</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./gssj.html">汇算清缴审计</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./gssj.html">个人税收筹划</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-zzfw service-list-hover">
+                <h4>增值服务,敬请期待</h4>
+                <ul>
+                    <!-- <li>
+                        <a href="#">公司注册</a>
+                    </li> -->
+                </ul>
+                <ul>
+                    <!-- <li>
+                        <a href="#">公司注册</a>
+                    </li> -->
+                </ul>
+                <ul>
+                    <!-- <li>
+                        <a href="#">公司注册</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!--hover展开列表end-->
+        </nav>
+    </div>
+    <!--header区域end-->
+    <!-- banner -->
+    <div class="banner">
+        <img src="./images/banner_gsgs.jpg" alt="">
+    </div>
+    <!-- content区域 -->
+    <div class="content">
+        <!-- 快速注册通道 -->
+        <div class="channel-wrapper">
+            <div class="channel container">
+                <h2>注册公司,创业第一步</h2>
+                <div class="channel-left">
+                    <h3>一 企业注册快速通道 一</h3>
+                    <div class="form">
+                        <ul>
+                            <li>
+                                <label>注册地域:</label>
+                                <span class="channel-position">随州</span>
+                            </li>
+                            <li>
+                                <label for=""></label>
+                                <input type="radio" name="channel-position" value="yes" checked="checked">有注册地址
+                                <input type="radio" name="channel-position" value="no">无注册地址
+                            </li>
+                            <li>
+                                <label for="channel-enterprise">企业名称:</label>
+                                <input type="text" id="channel-enterprise" class="channel-text"
+                                    placeholder="如:湖北楚威公司注册有限公司">
+                            </li>
+                            <li>
+                                <label for=""></label>
+                                <input type="radio" name="channel-verify" value="yes" checked="checked">已核名
+                                <input type="radio" name="channel-verify" value="no">未核名
+                                <a href="#">立即核名</a>
+                            </li>
+                            <li>
+                                <label for="channel-name">称呼:</label>
+                                <input type="text" id="channel-name" class="channel-text" placeholder="如:王先生,何女士">
+                            </li>
+                            <li>
+                                <label for="channel-phone">联系方式:</label>
+                                <input type="text" id="channel-phone" class="channel-text" placeholder="请输入你的联系方式">
+                            </li>
+                            <li class="channel-btn">
+                                <span>马上联系我们</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="channel-right">
+                    <div class="channelR-top">
+                        <span id="zcdzxz" class="active">注册地址须知</span>
+                        <span id="qyhmxz">企业核名须知</span>
+                    </div>
+                    <div class="channelR-bot">
+                        <!-- 注册地址须知hover绑定的版块 -->
+                        <div class="zcdzxz channelR-hover">
+                            <p>虽说公司注册地址后期可以变更，但跨城区的税务变更会比较麻烦，所以在选择注册地址时，最好先咨询专业人员，确定好城区</p>
+                            <div>
+                                <a href="./gszc.html">选址方案咨询</a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="./gszc.html">
+                                        <img src="./images/notice_01.png">
+                                        <p>税收优惠地域</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./gszc.html">
+                                        <img src="./images/notice_05.png">
+                                        <p>写字楼</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./gszc.html">
+                                        <img src="./images/notice_06.png">
+                                        <p>商业楼</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 企业核名须知hover绑定的版块 -->
+                        <div class="qyhmxz channelR-hover">
+                            <p>准备1-5个企业名字，注册公司初步就是核名，了解核名规则能有效降低企业注册周期，并规避后期商标等知识产权的风险</p>
+                            <div>
+                                <a href="./qyhm.html">急速核名</a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="./qyhm.html">
+                                        <img src="./images/notice_04.png">
+                                        <p>公司常用核名规则</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./qyhm.html">
+                                        <img src="./images/notice_02.png">
+                                        <p>企业名称对比规则</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./qyhm.html">
+                                        <img src="./images/notice_03.png">
+                                        <p>注册公司的流程简介</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 快速注册通道end -->
+        <!-- 工商热门服务 -->
+        <div class="hot container">
+            <h2>工商热门服务</h2>
+            <p>公司免费核名、注册公司、变更、注销，服务企业全生命周期</p>
+            <div class="hot-info">
+                <div class="hInfo-left">
+                    <div class="left-title">
+                        <h3>工商注册</h3>
+                        <p>
+                            慧算账工商注册服务包含
+                            <span>免费核名</span>
+                            <span>地址</span>
+                            <span>网登</span>
+                            <span>领取执照</span>
+                            <span>刻章</span>
+                        </p>
+                        <p><span>领取一证通</span>
+                            <span>免费赠送税务报到和税务咨询</span>
+                            等服务
+                        </p>
+                    </div>
+                    <div class="left-type">
+                        <p>公司注册类型</p>
+                        <p>纳税类型</p>
+                    </div>
+                    <div class="left-list hInfoClick">
+                        <ul class="gs">
+                            <li class="active">股份有限公司注册</li>
+                            <li>有限合伙公司注册</li>
+                            <li>集团公司注册</li>
+                            <li>内资公司注册</li>
+                            <li>合资公司注册</li>
+                        </ul>
+                        <ul class="ns">
+                            <li class="active">小规模代理记账</li>
+                            <li>一般纳税人代理记账</li>
+                        </ul>
+                    </div>
+                    <div class="left-btn">
+                        <span>咨询价格</span>
+                    </div>
+                </div>
+                <div class="hInfo-right">
+                    <div class="right-title">
+                        <h3>变更</h3>
+                        <p>慧算账变更：因地域原因各地的政策和详细服务内容有所不同，详细情况还请咨询顾问了解最新信息</p>
+                    </div>
+                    <div class="right-type">
+                        <div class="type-chang">
+                            <img src="./images/hot_icon_01.png" alt="">
+                            <p>公司名称变更</p>
+                        </div>
+                        <div class="type-cancellation">
+                            <img src="./images/hot_icon_02.png" alt="">
+                            <p>公司名称变更</p>
+                        </div>
+                    </div>
+                    <div class="right-list hInfoClick">
+                        <ul>
+                            <li class="active">监事变更</li>
+                            <li>地址变更</li>
+                            <li>法人变更</li>
+                            <li>股权变更</li>
+                            <li>银行基本户注销</li>
+                            <li>注册资本变更</li>
+                            <li>经营范围变更</li>
+                        </ul>
+                    </div>
+                    <div class="right-btn">
+                        <span>咨询其他</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 专属通道 -->
+        <div class="vipChannel-wrapper">
+            <div class="vipChannel container">
+                <h2>为客户开通vip急速通道</h2>
+                <ul>
+                    <li>预约专属上门,法人只需到场一次</li>
+                    <li>最快3个工作日办结</li>
+                    <li>办理只需30分钟</li>
+                    <li>套餐多选7折优惠</li>
+                </ul>
+                <span class="vipChannel-btn">了解详情</span>
+            </div>
+            <div class="right-img">
+                <img src="./images/bg2.png" alt="">
+            </div>
+        </div>
+        <!-- 注册公司相关政策咨询 -->
+        <div class="policy container">
+            <h2>注册公司相关政策咨询</h2>
+            <ul>
+                <li>
+                    <a href="./cszx.html">
+                        <img src="./images/consult_01.png" alt="">
+                        <p>税收政策</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./cszx.html">
+                        <img src="./images/consult_02.png" alt="">
+                        <p>社保政策</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./cszx.html">
+                        <img src="./images/consult_03.png" alt="">
+                        <p>扶持政策</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./cszx.html">
+                        <img src="./images/consult_04.png" alt="">
+                        <p>房租政策</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./cszx.html">
+                        <img src="./images/consult_05.png" alt="">
+                        <p>税收政策</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./cszx.html">
+                        <img src="./images/consult_06.png" alt="">
+                        <p>贷款政策</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./cszx.html">
+                        <img src="./images/consult_07.png" alt="">
+                        <p>知识产权</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./cszx.html">
+                        <p>了解更多</p>
+                        <img src="./images/consult_08.png" alt="">
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 注册公司流程 -->
+        <div class="process-wrapper">
+            <div class="process container">
+                <div class="process-title">
+                    <ul>
+                        <li class="active" id="processT-yzd">注册公司要做的</li>
+                        <li id="processT-lc">服务流程</li>
+                        <li id="processT-zl">您能拿到的资料</li>
+                        <li id="processT-sh">售后保障</li>
+                        <li id="processT-cjwt">常见问题</li>
+                    </ul>
+                </div>
+                <div class="process-content container">
+                    <div class="processT-yzd active">
+                        <div class="yzd-left">
+                            <p class="yzd-title">您要提供的:</p>
+                            <ul>
+                                <li>
+                                    <img src="./images/icon_color_01.png">
+                                    <p>股东,法人,监事身份证</p>
+                                </li>
+                                <li>
+                                    <img src="./images/icon_color_02.png">
+                                    <p>几个备用的企业名称(核用命)</p>
+                                </li>
+                                <li>
+                                    <img src="./images/icon_color_03.png">
+                                    <p>产权证明</p>
+                                </li>
+                                <li>
+                                    <img src="./images/icon_color_04.png">
+                                    <p>大体经营范围</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="yzd-right">
+                            <p class="yzd-title">我们要做的:</p>
+                            <ul>
+                                <li>
+                                    <img src="./images/icon_color_05.png">
+                                    <p>企业核名</p>
+                                </li>
+                                <li>
+                                    <img src="./images/icon_color_06.png">
+                                    <p>领取执照</p>
+                                </li>
+                                <li>
+                                    <img src="./images/icon_color_07.png">
+                                    <p>提交工商信息</p>
+                                </li>
+                                <li>
+                                    <img src="./images/icon_color_08.png">
+                                    <p>备案刻章</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="processT-lc">
+                        <h3>公司注册流程</h3>
+                        <p>【省时】最快3天拿证【省力】摆脱繁复，让创业更简单</p>
+                        <ul>
+                            <li>
+                                <img src="./images/pro_icon_01.png">
+                                <p>1.资料准备</p>
+                                <p>2-3个工作日</p>
+                            </li>
+                            <li>
+                                <img src="./images/pro_icon_02.png">
+                                <p>2.网上注册</p>
+                                <p>5-7个工作日</p>
+                            </li>
+                            <li>
+                                <img src="./images/pro_icon_03.png">
+                                <p>3.领取执照</p>
+                                <p>1个工作日</p>
+                            </li>
+                            <li>
+                                <img src="./images/pro_icon_04.png">
+                                <p>4.刻章</p>
+                                <p>1-2个工作日</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="processT-zl">
+                        <h3>您能拿到的资料</h3>
+                        <p>【省时】最快3天拿证【省力】摆脱繁复，让创业更简单</p>
+                        <ul>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="./images/data_01.png" alt="">
+                                </div>
+                                <p>营业执照正本</p>
+                            </li>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="./images/data_02.png" alt="">
+                                </div>
+                                <p>营业执照副本</p>
+                            </li>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="./images/data_03.png" alt="">
+                                </div>
+                                <p>企业统一社会信用代码证明</p>
+                            </li>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="./images/data_04.png" alt="">
+                                </div>
+                                <p>公司章程</p>
+                            </li>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="./images/data_05.png" alt="">
+                                </div>
+                                <p>公司印章及印鉴存留卡</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="processT-sh">
+                        <div>
+                            <span>我们承诺</span>
+                            <div>
+                                <span>关于服务质量的反馈，我们会第一时间专人处理。保证及时解决您的问题</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span>消费保障</span>
+                            <div>
+                                <span>凡在湖北楚威平台消费的用户，一律尊享全方位服务保障，因平台过失、差错及疏忽行为导致用户直接经济损失，依法判决、裁定的平台责任或连带责任，将由湖北楚威在限额内进行退款或赔付。</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span>联系渠道</span>
+                            <div class="lxqd">
+                                <p>1.登陆湖北楚威官网留言反馈</p>
+                                <p>2.拨打************进行举报投诉</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span>处理流程</span>
+                            <div class="cllc">
+                                <span class="cllc-text">服务中遇到的困难</span>
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                                <span class="cllc-text">
+                                    1.电话联系湖北楚威或者专属财税顾问（推荐)
+                                    <br>
+                                    2.在线留言反馈
+                                </span>
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                                <span class="cllc-text">
+                                    1、核实问题具体情况
+                                    2、确定责任人责任划分（是否涉退款赔付问题）
+                                </span>
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                                <span class="cllc-text">
+                                    1、财务专家问题咨询
+                                    2、按责进行相关赔付
+                                    3、正常财务退款
+                                </span>
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                                <span class="cllc-text">
+                                    处理完毕
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="processT-cjwt">
+                        <ul>
+                            <li>
+                                <p class="cjwt-w">公司注册一般需要多长时间？</p>
+                                <p class="cjwt-d">一般来说代办公司注册需要15-20个工作日。各地有所不同，具体请与工商顾问沟通确认。</p>
+                            </li>
+                            <li>
+                                <p class="cjwt-w">谁当公司法定代表人更合适？</p>
+                                <p class="cjwt-d">创始人或者团队核心人员。法定代表人意味着权利和责任，由团队灵魂人物担任最合适不过。</p>
+                            </li>
+                            <li>
+                                <p class="cjwt-w">没有注册地址怎么办？</p>
+                                <p class="cjwt-d">慧算账可以为您介绍入驻集中办公区，提供安全、可靠、低价的虚拟注册地址帮您注册公司。</p>
+                            </li>
+                            <li>
+                                <p class="cjwt-w">注册资本写多少合适？</p>
+                                <p class="cjwt-d">建议参考行业内同类公司，主要考虑未来各类资质的要求，如：ICP经
+                                    营许可证需要100万注册资本，视频网站牌照需要1000万注册资本。无特殊需求的，10-100万都可以。</p>
+                            </li>
+                            <li>
+                                <p class="cjwt-w">注册虚拟地址的公司要多久?</p>
+                                <p class="cjwt-d">虚拟地址采用购买式，一般只要付钱并提供名称核准通知书照片（截 图）后，当天即可发送房间号，3个工作日内一般会收到房租合同。</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--页尾-->
+    <div class="footer">
+        <!--优点-->
+        <div class="footer-benefit container">
+            <ul>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="./images/benefit1_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>品质保证</h4>
+                        <p>15年以上财税经验积累</p>
+                        <p>国内获IDG投资互联网财税企业</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="./images/benefit2_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>品质保证</h4>
+                        <p>15年以上财税经验积累</p>
+                        <p>国内获IDG投资互联网财税企业</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="./images/benefit3_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>品质保证</h4>
+                        <p>15年以上财税经验积累</p>
+                        <p>国内获IDG投资互联网财税企业</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="./images/benefit4_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>品质保证</h4>
+                        <p>15年以上财税经验积累</p>
+                        <p>国内获IDG投资互联网财税企业</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+         <!--列表-->
+         <div class="footer-list-wrapper">
+            <div class="footer-list container">
+                <div class="fList-left">
+                    <dl>
+                        <dt>关于我们</dt>
+                        <dd>
+                            <a href="./gywm.html">关于楚威</a>
+                        </dd>
+                        <dd>
+                            <a href="#">官网移动端</a>
+                        </dd>
+                        <dd>
+                            <a href="#">总部全景图</a>
+                        </dd>
+                        <dd>
+                            <a href="./gywm.html">联系我们</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>财税服务</dt>
+                        <dd>
+                            <a href="./dljz.html">代理记账</a>
+                        </dd>
+                        <dd>
+                            <a href="./gszc.html">注册公司</a>
+                        </dd>
+                        <dd>
+                            <a href="./gssj.html">公司审计</a>
+                        </dd>
+                        <dd>
+                            <a href="./cszx.html">税收筹划</a>
+                        </dd>
+                        <dd>
+                            <a href="./dljz.html">财务记账</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>财税资讯</dt>
+                        <dd>
+                            <a href="./gywm.html">公司动态</a>
+                        </dd>
+                        <dd>
+                            <a href="./cszx.html">财税解答</a>
+                        </dd>
+                        <dd>
+                            <a href="./dljz.html">代理记账</a>
+                        </dd>
+                        <dd>
+                            <a href="./cszx.html">财税资讯</a>
+                        </dd>
+                        <dd>
+                            <a href="./gssj.html">公司审计</a>
+                        </dd>
+                    </dl>
+                    <dl> 
+                        <dt>品牌认证</dt>
+                        <dd>
+                            <a href="#">品牌保护</a>
+                        </dd>
+                        <dd>
+                            <a href="#">财税服务</a>
+                        </dd>
+                        <dd>
+                            <a href="#">网络学院</a>
+                        </dd>
+                        <dd>
+                            <a href="#">商务合作</a>
+                        </dd>
+                        <dd>
+                            <a href="./qyhm.html">除名查询</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="fList-center">
+                    <ul>
+                        <li>
+                            <p>关注服务号</p>
+                            <p>你的专属财务管家</p>
+                            <img src="http://rxwl.oss-cn-hangzhou.aliyuncs.com/staic/hbcw/img/160.jpg">
+                        </li>
+                        <li>
+                            <p>关注服务号</p>
+                            <p>你的专属财务管家</p>
+                            <img src="http://rxwl.oss-cn-hangzhou.aliyuncs.com/staic/hbcw/img/160.jpg">
+                        </li>
+                    </ul>
+                </div>
+                <div class="fList-right">
+                    <ul>
+                        <li>
+                            <p class="footer-phone">400-000-0000</p>
+                            <p>全国咨询热线</p>
+                        </li>
+                        <li>
+                            <p class="footer-phone">400-000-0000</p>
+                            <p>全国投诉电话</p>
+                        </li>
+                        <li>
+                            <p class="footer-phone">08:30-17:30</p>
+                            <p>全限时服务</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="beian container">
+                <a href="#">鄂ICP备11111111111号-2丨Copyright©2013-2019 湖北楚威企业注册有限公司</a>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边栏 -->
+    <div class="rightBar">
+        <ul>
+            <li id="phone">
+                <img src="./images/rightNav_phone.png" alt="">
+            </li>
+            <li id="wx">
+                <img src="./images/rightNav_wx.png" alt="">
+            </li>
+            <li class="goTop">
+                <img src="./images/rightNav_db.png" alt="">
+            </li>
+        </ul>
+        <div class="phone">
+            <p>24小时服务热线:</p>
+            <p>13233332222</p>
+        </div>
+        <div class="wx">
+            <p>QQ联系我们:</p>
+            <p>55555555</p>
+            <p>微信联系我们:</p>
+            <p>13233332222</p>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/gszc.js"></script>
+</body>
+
+</html>

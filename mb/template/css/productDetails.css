@@ -1,0 +1,102 @@
+/* 面包屑 */
+.content > .crumbs{
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+.content > .crumbs  a{
+    color: #aaa;
+}
+/* 产品介绍 */
+.container-fluid{
+    padding: 0;
+}
+.pro-title .pro-name h2{
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+}
+@media (max-width:768px) {
+    .pro-title .pro-name h2{
+        text-align: center;
+    }
+}
+.pro-title .pro-jump{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.pro-title .pro-jump a{
+    color: #333;
+    font-size: 16px;
+    padding: 0 15px;
+    padding-bottom: 10px;
+}
+.pro-title .pro-jump a.active{
+    border-bottom: 2px solid red;
+    color: red;
+}
+.pro-title .pro-jump a:hover{
+    color: red;
+}
+.productIntroduction .introduce h1{
+    text-align: center;
+    background-color: #b53032;
+    color: #fff;
+    padding: 50px 0;
+    margin: 0;
+}
+.productIntroduction .introduce .introduce-info{
+    background: url('../img/Phone_SensePhoto1.jpg') center no-repeat;
+    height: 600px;
+}
+.productIntroduction .introduce .introduce-info > div{
+    margin-top: 150px;
+    color: #fff;
+}
+.productIntroduction .advantage h1{
+    background: url('../img/tiaowen.jpg') center no-repeat;
+    text-align: center;
+    color: #b53032;
+    height: 150px;
+    line-height: 150px;
+}
+.productIntroduction .advantage .col-md-4 > div{
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.productIntroduction .advantage .col-md-4 > div > img{
+    max-width: 150px;
+    margin-bottom: 30px;
+}
+.productIntroduction .scenario{
+    text-align: center;
+}
+.productIntroduction .scenario h1{
+    color: #fff;
+    padding: 50px 0;
+    background-color: #281ba2;
+    margin: 0;
+}
+.productIntroduction .scenario .scenario-info{
+    height: 600px;
+    background-position: center center;
+}
+.productIntroduction .scenario .scenario-info:nth-of-type(1){
+    background-image: url('../img/Phone_SensePhoto2.jpg');
+}
+.productIntroduction .scenario .scenario-info:nth-of-type(2){
+    background-image: url('../img/Phone_SensePhoto3.jpg');
+}
+.productIntroduction .scenario .scenario-info:nth-of-type(3){
+    background-image: url('../img/Phone_SensePhoto4.jpg');
+}
+.productIntroduction .scenario .scenario-info h2{
+    color: #fff;
+    padding-top: 300px;
+    margin: 0;
+}

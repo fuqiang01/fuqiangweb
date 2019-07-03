@@ -1,0 +1,101 @@
+.content-wrapper{
+    background-color: rgb(244,247,255);
+    padding-top: 50px;
+}
+/* content  left*/
+.content .content-left{
+    width: 900px;
+    margin-right: 10px;
+    float: left;
+    position: relative;
+}
+.content-left ul li{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.content-left ul li div.text{
+    position: absolute;
+    padding-left: 390px;
+    padding-right: 10px;
+    height: 230px;
+}
+.content-left ul li div.text h4{
+    padding: 10px 0 20px;
+}
+.content-left ul li div.text p.date{
+    position: absolute;
+    bottom: 16px;
+}
+.content-left ul li img{
+    width: 400px;
+    height: 200px;
+}
+.content-left nav.changPage > ul{
+    float: right;
+    background-color: rgb(244,247,255);
+}
+ul.pagination li span{
+    float: none;
+}
+ul.pagination li{
+    float: left;
+    background-color: rgb(244,247,255);
+}
+
+.content .content-right{
+    float: left;
+    width: 310px;
+}
+.content-right > div{
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.content-right h4{
+    color: rgb(37,166,255);
+    margin: 20px 10px;
+    padding-left: 20px;
+    border-left: 2px solid rgb(37,166,255);
+}
+.content-right div.title{
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+.content-right div.title img{
+    width: 100%;
+    height: 100%;
+}
+.content-right div.title p{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;  
+    padding: 10px;
+    color: #fefefe;
+    margin-bottom: 0;
+}
+.content-right ul{
+    padding: 10px;
+}
+.content-right ul li{
+    padding: 10px 0;
+}
+.content-right ul li div.text{
+    position: absolute;
+    padding-left: 80px;
+    height: 60px;
+}
+.content-right ul li div.text p.text-title{
+    width: 220px;
+}
+.content-right ul li div.text p.date{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+}
+.content-right ul li img{
+    width: 80px;
+    height: 60px;
+}

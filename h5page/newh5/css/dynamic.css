@@ -1,0 +1,72 @@
+/* content */
+.content{
+    background-color: #eee;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-bottom: 1.7rem;
+}
+/* 资讯列表 */
+.information{
+    margin-top: .2rem;
+    background-color: #fff;
+}
+.information > ul{
+    padding-left: 0;
+    list-style: none;
+}
+.information > ul > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    box-sizing: border-box;
+    height: 2.4rem;
+    margin-bottom: .1rem;
+}
+.information > ul > li:not(:last-of-type) {
+    border-bottom: 1px solid #ccc;
+}
+.information > ul > li a{
+    color: #000;
+}
+.information > ul > li img{
+    width: 3rem;
+    height: 2rem;
+}
+.information > ul > li .info{
+    width: 7rem;
+    height: 100%;
+    padding-left: .3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.information > ul > li .info > a{
+    height: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.information > ul > li .info  p.title{
+    margin-bottom: 0;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: .4rem;
+}
+.information > ul > li .info .flag{
+    color: #aaa;
+    display: flex;
+    justify-content: space-between;
+    font-size: .3rem;
+}
+.content > .more{
+    text-align: center;
+    background-color: #fefefe;
+    padding: .3rem 0;
+    font-size: .4rem;
+}
+

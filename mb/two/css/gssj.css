@@ -1,0 +1,115 @@
+/* 金牌服务 */
+.service{
+    padding-bottom: 50px;
+}
+.service h3{
+    padding: 30px 0;
+}
+.service ul{
+    padding-left: 0;
+}
+.service ul li{
+    width: 293px;
+    height: 330px;
+    float: left;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+.service ul li:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+}
+.service ul li:not(:last-of-type){
+    margin-right: 16px;
+}
+.service ul li img{
+    width: 100%;
+    height: 150px;
+}
+.service ul li h4{
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;    
+}
+.service ul li h4:hover{
+    color: rgb(38,166,255);
+}
+.service ul li p{
+    padding-bottom: 20px;
+    color: #777;
+}
+
+/* 审计流程 */
+.process-wrapper{
+    background-color: rgb(235,234,242);
+    padding-bottom: 50px;
+}
+.process{
+    position: relative;
+}
+.process h3{
+    padding: 30px 0;
+}
+.process ul{
+    padding-left: 0;
+}
+.process ul li{
+    width: 195px;
+    height: 250px;
+    padding: 20px;
+    background-color: #fff;
+    float: left;
+}
+.process ul li:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+}
+.process ul li:not(:last-of-type){
+    margin-right: 10px;
+}
+.process ul li h4{
+    text-align: center;
+    padding-bottom: 30px;
+    color: rgb(38,166,255);
+}
+.process ul li p{
+    color: #777;
+}
+.process-wrapper .bot-image{
+    position: absolute;
+    left: 5px;
+    bottom: 18px;
+}
+.process-wrapper .bot-image img{
+    width: 100%;
+}
+/*成功案例*/
+div.example-wrapper{
+    background-color: rgb(241,244,248);
+    padding-bottom: 50px;
+}
+div.example{
+    margin-bottom: 20px;
+}
+div.example div.example-title{
+    padding: 20px 0;
+}
+div.example > ul{
+    padding-left: 0;
+}
+div.example > ul > li{
+    width: 235px;
+    height: 130px;
+    background-color: #fff;
+    float: left;
+    text-align: center;
+}
+div.example > ul > li:not(:last-of-type){
+    margin-right: 11px;
+}
+div.example > ul > li > img{
+    max-width: 190px;
+    max-height: 130px;
+}

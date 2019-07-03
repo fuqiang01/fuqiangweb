@@ -1,0 +1,68 @@
+.content{
+    background-color: #eee;
+}
+.gsjj-info > .row > .col-md-2,
+.gsjj-info > .row > .col-md-10{
+    border: 15px solid #eee;
+    background-color: #fff;
+}
+.gsjj-info > .row > .col-md-2{
+    text-align: center;
+    padding: 0 0 40px;
+}
+.gsjj-info > .row > .col-md-2 > dl > dt > img{
+    width: 80px;
+    height: 80px;
+    padding: 50px 0 15px;
+    box-sizing: content-box;
+}
+.gsjj-info > .row > .col-md-2 > dl > dt > p{
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+.gsjj-info > .row > .col-md-2 dl > dd{
+    font-size: 16px;
+    padding: 10px 0;
+    letter-spacing: 5px;
+    position: relative;
+}
+.gsjj-info > .row > .col-md-2 dl > dd.active{
+    background-color: rgb(45,55,132);
+    color: #fff;
+}
+.gsjj-info > .row > .col-md-2 dl > dd.active::before{
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 14px;
+    left: 27px;
+
+}
+.gsjj-info > .row > .col-md-10{
+    padding: 20px 40px 20px 20px;
+}
+.gsjj-info > .row > .col-md-10 > div{
+    display: none;
+}
+.gsjj-info > .row > .col-md-10 > div > h4{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 80px;
+}
+.gsjj-info > .row > .col-md-10 > .qywh .text-title{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.gsjj-info > .row > .col-md-10 > .lxwm{
+    display: block;
+}
+.gsjj-info > .row > .col-md-10 > .lxwm  p{
+    color: #999;
+}
+.gsjj-info > .row > .col-md-10 > .gywm h3{
+    padding-bottom: 20px;
+}

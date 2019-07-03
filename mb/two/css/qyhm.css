@@ -1,0 +1,137 @@
+/* banner */
+.banner{
+    /* background-color: rgb(71,85,208); */
+    background-image: url('../images/banner.png');
+    text-align: center;
+}
+.banner div.input{
+    background-color: #fff;
+    display: inline-block;
+    margin-top: 330px;
+}
+.banner div.input span{
+    padding: 15px 50px;
+}
+.banner div.input span.btn{
+    background-color: rgb(101, 243, 194);
+    color: #333;
+}
+.banner div.input input{
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    border-left: 1px solid #ccc;
+}
+/* 公司核名注意事项 */
+.attention{
+    color: #fefefe;
+}
+.attention h2{
+    padding: 50px 0;
+    text-align: center;
+    color: #000;
+}
+.attention .row .col-md-2{
+    height: 250px;
+    padding: 15px;
+}
+.attention .row .col-md-2:nth-of-type(1){
+    background-image: url('../images/bg_1.png');
+}
+.attention .row .col-md-2:nth-of-type(2){
+    background-image: url('../images/bg_2\ \(1\).png');
+}
+.attention .row .col-md-2:nth-of-type(3){
+    background-image: url('../images/bg_3.png');
+}
+.attention .row .col-md-2:nth-of-type(4){
+    background-image: url('../images/bg_4.png');
+}
+.attention .row .col-md-2:nth-of-type(5){
+    background-image: url('../images/bg_5.png');
+}
+.attention .row .col-md-2:nth-of-type(6){
+    background-image: url('../images/bg_6.png');
+}
+.attention .row .col-md-2 h4{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+/* 公司核名必知事项 */
+div.know{
+    text-align: center;
+    padding-bottom: 50px;
+}
+div.know h2{
+    padding: 50px 0;
+}
+div.know ul{
+    padding-left: 0;
+}
+div.know ul li{
+    float: left;
+    width: 235px;
+}
+div.know ul li:not(:last-of-type){
+    margin-right: 11px; 
+}
+div.know ul li p{
+    padding-top: 30px;
+}
+div.know ul li p a{
+    color: #555;
+    font-size: 16px;
+}
+div.know > p.btn{
+    padding-top: 70px;
+}
+div.know > p.btn a{
+    padding: 13px 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right,#6bf9c2, #088cc3);
+    color: #fefefe;
+}
+/* 人工急速通道 */
+div.people{
+    background-image: url('../images/banner_2.png');
+    background-size: 100% 100%;
+    text-align: center;
+    color: #fefefe;
+}
+div.people h2{
+    padding-top:  80px;
+}
+div.people h4{
+    color: #6bf9c2;
+}
+div.people div.input-box{
+    padding: 80px 0;
+    display: inline-block;
+    position: relative;
+}
+div.people div.input-box input{
+    padding: 15px 180px 15px 40px;
+    border: none;
+    outline: none;
+    position: relative;
+}
+div.people div.input-box::before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url('../images/icon_check.png');
+    background-size: 100% 100%;
+    position: absolute;
+    left: 16px;
+    top: 97px;
+    z-index: 1;
+}
+div.people div.input-box span{
+    padding: 17px 50px;
+    margin-left: -4px;
+    background-image: linear-gradient(to right,#6bf9c2, #088cc3);
+    cursor: pointer;
+}

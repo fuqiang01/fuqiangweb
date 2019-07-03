@@ -1,0 +1,304 @@
+﻿﻿@charset "utf-8";
+
+/*Banner*/
+.banner {
+	width: 100%;
+	min-width: 1180px;
+	height: 444px;
+	background: url(../images/banner.jpg) no-repeat center;
+}
+
+/*板块*/
+.zone {
+	width: 100%;
+	min-width: 1180px;
+}
+.zone > .container {
+	width: 1180px;
+	padding-top: 91px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+/*板块标题*/
+.zone > .container > h1 {
+	font-size: 26px;
+	text-align: center;
+	color: #333;
+}
+.zone > .container > h1 img {
+	position: relative;
+	top: 2px;
+	display: inline-block;
+	margin-left: 9px;
+	margin-right: 9px;
+}
+.line {
+	position: relative;
+	top: -8px;
+	display: inline-block;
+	width: 67px;
+	height: 1px;
+	background-color: #dbdbdb;
+}
+
+/*免费名称核准*/
+.audit { background-color: #f5f5f5; }
+.audit > .container { padding-bottom: 72px; }
+.audit .wrapper {
+	margin-top: 37px;
+	width: 936px;
+}
+.audit h3 { color: #ff712b; }
+.check {
+	margin-top: 27px;
+	font-size: 0;
+	line-height: normal;
+}
+.check > input[type=text],
+.check > input[type=tel] {
+	margin-right: 10px;
+	width: 353px;
+	height: 54px;
+	padding-left: 60px;
+	padding-right: 11px;
+	font-size: 18px;
+	border: 1px solid #b8bbc0;
+	background-color: #fff;
+}
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder { color: #b6bac0; }
+/* Mozilla Firefox 19+ */
+::-moz-placeholder { color: #b6bac0; }
+input:-ms-input-placeholder { color: #b6bac0; }
+input::-webkit-input-placeholder { color: #b6bac0; }
+.company {
+	background: url(../images/register.png) left center no-repeat;
+	background-clip: padding-box;
+}
+.phone {
+	background: url(../images/companyphone.png) left center no-repeat;
+	background-clip: padding-box;
+}
+.BrandName {
+	background: url(../images/register.png) left center no-repeat;
+	background-clip: padding-box;
+}
+.checkBtn {
+	width: 210px;
+	height: 54px;
+	font-size: 18px;
+	color: #fff;
+	background: #ff712b url(../images/checkbtn.png) 36px 17px no-repeat;
+	cursor: pointer;
+}
+.checkBtn:active {
+	top: 1px;
+	left: 1px;
+}
+
+.checkResult {
+	padding: 31px 26px;
+	width: 936px;
+	height: 309px;
+	border: 1px solid #b8bbc0;
+	background-color: #fff;
+}
+.checkResult:before {
+	content: '';
+	position: absolute;
+	top: -30px;
+	right: 93px;
+	border: 15px solid transparent;
+	border-bottom-color: #b8bbc0;
+}
+.checkResult:after {
+	content: '';
+	position: absolute;
+	top: -29px;
+	right: 93px;
+	border: 15px solid transparent;
+	border-bottom-color: #fff;
+}
+.checkResult h5 { color: #333; }
+.scroll {
+    height: 172px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.resultList > li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #999;
+}
+.result {
+	padding-right: 10px;
+	width: 431px;
+}
+.checkResult .sum {
+	margin-top: 5px;
+	color: #666;
+}
+.sum > em { color: #ff6000; }
+
+.resultList > li:last-child { margin-bottom: 0; }
+.resultList > li > .statue { color: #666; }
+.question {
+	padding-left: 10px;
+	width: 431px;
+}
+.questionList { margin-top: 20px; }
+.questionList > li {
+	margin-bottom: 5px;
+	font-size: 16px;
+	color: #666;
+}
+.control {
+	margin-top: 12px;
+	margin-right: 5px;
+	width: 180px;
+	height: 42px;
+	line-height: 40px;
+	border: 1px solid #ff5f10;
+	color: #ff5f10;
+}
+.control:active {
+	background-color: #ff5f10;
+	color: #fff;
+}
+/* 核心业务 */
+.BrandRegister { background-color: #62a9f6; }
+.BrandRegister > .container > h1 { color: #fff; }
+.BrandRegister > .container > img {
+	display: block;
+	width: 943px;
+	margin: 74px auto 29px auto;
+}
+
+/*商标注册所需资料*/
+.needFiles { background-color: #fff; }
+.needFiles > .container > img {
+	display: block;
+	width: 707px;
+	margin: 68px auto 56px auto;
+}
+
+/*商标注册流程*/
+.step {
+	/*background:url(../images/linebg.png) no-repeat left center, url(../../images/sbzc/linebg.png) no-repeat right center;*/
+	background-color: #ff7854;
+}
+.step > .container{position: relative; }
+.step > .container > h1 { color: #fff; }
+.step > .container > img {
+	display: block;
+	width: 747px;
+	margin: 35px auto 46px auto;
+}
+.step > .container p.step-phone{
+	position: absolute;
+	left: 66%;
+	top: 68%;
+	font-size: 25px;
+	font-weight: bold;
+	color: #fefefe;
+}
+/*为什么选晟森*/
+.choice { background-color: #fff; } 
+.choice > .container > img {
+	display: block;
+	width: 602px;
+	margin: 60px auto 58px auto;
+}
+
+/*客户见证*/
+.customer { background-color: #fab758; }
+.customer > .container { padding-bottom: 40px; }
+.customer > .container > h1 { color: #fff; }
+.customer > .container > h1 .line { background-attachment: #b4e3f8; }
+.ck-slide ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.ck-slide {
+	position: relative;
+	overflow: hidden;
+	width: 780px;
+	height: 360px;
+	margin: 0 auto;
+}
+.ck-slide ul.ck-slide-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+	height: 320px;
+}
+.ck-slide ul.ck-slide-wrapper li {
+	position: absolute;
+	padding-top: 50px;
+	margin-top:0px;
+	width: 780px;
+	height: 320px;
+}
+.ck-slide ul.ck-slide-wrapper li a{
+	/*a标签是行内元素，宽高对a标签不起作用，这里必须添加line-height:0px;display:black，否则垂直滚动<li>之间会出现间隔*/
+	line-height:0px;
+	display:block;
+}
+.ck-slidebox {
+	position: absolute;
+	left: 50%;
+	bottom: 12px;
+	z-index: 30;
+}
+.ck-slidebox ul {
+	height: 20px;
+	padding: 0 4px;
+	border-radius: 8px;
+}
+.ck-slidebox ul li {
+	float: left;
+	height: 12px;
+	margin: 4px 4px;
+}
+.ck-slidebox ul li em {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: #999;
+	background-color: rgba(0,0,0,.3);
+	text-indent: -9999px;
+	cursor: pointer;
+}
+.ck-slidebox ul li.current em {
+	background-color: #fff;
+}
+.ck-slidebox ul li em:hover {
+	background-color: #fff;
+}
+.customerPic {
+	width: 231px;
+	height: 231px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 3px solid #fff;
+}
+.customerInfo { padding-top: 30px; }
+.customerInfo > p {
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-family: '黑体';
+	color: #fff;
+}
+.customerInfo > img {
+	display: block;
+	margin-top: 20px;
+	margin-left: -5px;
+}

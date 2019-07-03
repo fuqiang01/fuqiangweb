@@ -1,0 +1,211 @@
+.con-wrapper{
+    background-color: rgb(244,247,255);
+    padding-bottom: 50px;
+}
+
+.content{
+    width: 1250px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.content::after{
+    content: '';
+    display: block;
+    clear:both;
+}
+.content > .link-up{
+    padding: 20px 0;
+    font-size: 12px;
+    color: #777;
+}
+.content > .link-up span a{
+    color: #777;
+    text-decoration: none;
+}
+.content > .link-up span a:hover{
+    text-decoration: none;
+}
+.content .show-window .article-wrapper{
+    float: left;
+    width: 820px;
+    margin-right: 50px;
+}
+.content .article-wrapper > div.article{
+    padding: 20px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+div.article > h2{
+    text-align: center;
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+div.article .article-info{
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+div.article .article-info > p.data{
+    float: right;
+    color: #aaa;
+    font-size: 12px;
+}
+div.article .article-info > p.author{
+    float: left;
+    color: #aaa;
+    font-size: 14px;
+}
+div.article > p.text{
+    text-indent: 2em;
+    color: #666;
+    padding: 0 20px;
+}
+div.article > p.img{
+    text-align: center;
+}
+div.article > p.img img{
+    max-width: 600px;
+}
+div.article > div.flag{
+    color: #333;
+    font-size: 14px;
+    margin-top: 80px;
+    padding: 0 20px;
+}
+div.article > div.flag > p > a{
+    color: #333;
+    text-decoration: none;
+}
+div.article > div.flag > p > a:hover{
+    text-decoration: none;
+}
+.change-page{
+    padding-top: 50px;
+}
+.change-page > div{
+    width: 400px;
+    margin: 0 5px;
+    float: left;
+    background-color: #fff;
+    height: 130px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.change-page > div > a{
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+}
+.change-page > div h4{
+    padding: 0;
+    margin: 0;
+    letter-spacing: 5px;
+    color: #25a6ff;
+}
+.change-page > div p{
+    color: #777;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.change-page > div:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+}
+
+
+.content .show-window > div.recommend{
+    float: left;
+    width: 380px;
+}
+div.recommend .rec-top{
+    background-color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.rec-top > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 340px;
+    text-align: left;
+}
+.rec-top > ul li{
+    border: 1px solid rgb(44,54,240);
+    margin: 15px;
+    height: 35px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.rec-top > ul li img{
+    vertical-align: middle;
+}
+.rec-top > ul li > input{
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+.rec-top > ul li.rec-btn{
+    background-color: rgb(44,54,240);
+    height: 40px;
+    line-height: 40px;
+}
+.rec-top > ul li.rec-btn > p{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+.rec-bot{
+    background-color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+.rec-bot > dl > dt{
+    color: #25a6ff;
+    border-left: 2px solid #25a6ff;
+    padding-left: 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.rec-bot > dl > dd{
+    margin-left: 10px;
+    padding: 15px 0 15px 20px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    position: relative;
+}
+.rec-bot > dl > dd::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: url('./images/im_pop.png') center no-repeat;
+    background-size: 100% 100%;
+    left: 0;
+    top: 24px;
+}
+.rec-bot > dl > dd:not(:last-of-type){
+    border-bottom: 1px solid #aaa;
+}
+.rec-bot > dl > dd> a{
+    color: #555;
+    text-decoration: none;
+}
+.goHome > a > img{
+    width: 380px;
+}

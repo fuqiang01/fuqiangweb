@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>湖北楚威</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://demo.cwgszc.com/red/css/common.css">
+    <link rel="stylesheet" href="http://demo.cwgszc.com/red/css/index.css">
+</head>
+
+<body>
+    <!-- topBar -->
+    <div class="topBar ">
+        <nav class="navbar navbar-default container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">
+                        <span class="position">随州</span>
+                        <button type="button" class="btn" data-toggle="modal"
+                            data-target=".bs-example-modal-lg">[点我切换]</button>
+                        <!-- <span class="switch-pos">[点我切换]</span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#">售后热线：1010-0168</a>
+                </li>
+                <li>
+                    <a href="#">咨询热线：400-017-2000</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">欢迎来到湖北楚威!</a></li>
+                <!-- <!-- <li><a href="#">服务商网点查询</a></li> --> -->
+            </ul>
+        </nav>
+    </div>
+    <!-- 地址切换弹窗 -->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">随州</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-2">上海</div>
+                        <div class="col-md-2">武汉</div>
+                        <div class="col-md-2">随州</div>
+                        <div class="col-md-2">昆山</div>
+                        <div class="col-md-2">广州</div>
+                        <div class="col-md-2">深圳</div>
+                    </div>
+                </div>
+                <!-- 弹窗底部按钮 -->
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <div class="header container">
+        <!-- 企业logo -->
+        <div class="logo">
+            <a href="./index.html">
+                <img src="http://demo.cwgszc.com/red/images/logo.png" alt="楚威logo">
+                <p class="logo-name">湖北楚威</p>
+            </a>
+        </div>
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav nav-left">
+                <li class="all-service">
+                    <a href="#">全部服务</a>
+                    <span class="all-btn glyphicon glyphicon-align-justify"></span>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav nav-right">
+                <li class="active"><a href="./index.html">首页</a></li>
+                <li><a href="./gszc.html">公司注册</a></li>
+                <li><a href="./dljz.html">代理记账</a></li>
+                <li><a href="./gssj.html">公司审计</a></li>
+                <li><a href="./qyhm.html">企业核名</a></li>
+                <li><a href="./cszx.html">财税资讯</a></li>
+                <!-- <li><a href="#">加盟我们</a></li> -->
+                <li><a href="./gywm.html">关于我们</a></li>
+            </ul>
+            <!--全部服务展开区域-->
+            <ul class="all-service-list">
+                <li id="service-kgs">
+                    <a href="#">
+                        <p class="service-title">
+                            <!-- <span class="glyphicon glyphicon-user"></span> -->
+                            <img src="http://demo.cwgszc.com/red/images/icon_yi.png" alt="">
+                            <span>开公司</span>
+                        </p>
+                        <P class="service-introduce">公司注册、变更注销</P>
+                    </a>
+                </li>
+                <li id="service-dljz">
+                    <a href="#">
+                        <p class="service-title">
+                            <img src="http://demo.cwgszc.com/red/images/icon_er.png" alt="">
+                            <span>代理记账</span>
+                        </p>
+                        <P class="service-introduce">财税代理、记账报税</P>
+                    </a>
+                </li>
+                <li id="service-swdb">
+                    <a href="#">
+                        <p class="service-title">
+                            <img src="http://demo.cwgszc.com/red/images/icon_san.png" alt="">
+                            <span>税务代办</span>
+                        </p>
+                        <P class="service-introduce">汇算清缴、税控发票</P>
+                    </a>
+                </li>
+                <li id="service-sjsc">
+                    <a href="#">
+                        <p class="service-title">
+                            <img src="http://demo.cwgszc.com/red/images/icon_si.png" alt="">
+                            <span>审计税筹</span>
+                        </p>
+                        <P class="service-introduce">公司审计、税收筹划</P>
+                    </a>
+                </li>
+                <li id="service-zzfw">
+                    <a href="#">
+                        <p class="service-title">
+                            <img src="http://demo.cwgszc.com/red/images/icon_wu.png" alt="">
+                            <span>增值服务</span>
+                        </p>
+                        <P class="service-introduce">其他更多</P>
+                    </a>
+                </li>
+            </ul>
+            <!--展开列表hover后显示区域-->
+            <div class="service-kgs service-list-hover">
+                <h4>企业工商注册服务 快人一步！即刻拥有自己的公司</h4>
+                <ul>
+                    <li>
+                        <a href="./gszc.html">公司注册</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司注册资金变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司股权转让</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./gszc.html">公司注册地址变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司名称变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">企业工商年检</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./gszc.html">公司经营范围变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司法人变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司注销</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-dljz service-list-hover">
+                <h4>企业服务 低价高质！让您的企业体验真正的互联网模式</h4>
+                <ul>
+                    <li>
+                        <a href="./dljz.html">小规模代理记账</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./dljz.html">一般纳税人代理记账</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./dljz.html">旧账梳理</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-swdb service-list-hover">
+                <h4>税务代办 专业注册税务师为您代理税管清算工作</h4>
+                <ul>
+                    <li>
+                        <a href="./qyhm.html">增值税进项发票认证</a>
+                    </li>
+                    <li>
+                        <a href="./qyhm.html">税务异常处理</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./qyhm.html">申请一般纳税人认定</a>
+                    </li>
+                    <li>
+                        <a href="./qyhm.html">企业所得税汇算清缴</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./qyhm.html">税控器托管</a>
+                    </li>
+                    <li>
+                        <a href="./qyhm.html">出口退税</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-sjsc  service-list-hover">
+                <h4>审计税筹 高水准财务审计！轻松掌控公司经营状况</h4>
+                <ul>
+                    <li>
+                        <a href="./gssj.html">财务报表审计</a>
+                    </li>
+                    <li>
+                        <a href="./gssj.html">企业税收筹划</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./gssj.html">汇算清缴审计</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="./gssj.html">个人税收筹划</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-zzfw service-list-hover">
+                <h4>增值服务,敬请期待</h4>
+                <ul>
+                    <!-- <li>
+                        <a href="#">公司注册</a>
+                    </li> -->
+                </ul>
+                <ul>
+                    <!-- <li>
+                        <a href="#">公司注册</a>
+                    </li> -->
+                </ul>
+                <ul>
+                    <!-- <li>
+                        <a href="#">公司注册</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!--hover展开列表end-->
+        </nav>
+        <!-- 轮播图 -->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="http://demo.cwgszc.com/red/images/banner_1.jpg" alt="...">
+                </div>
+                <div class="item">
+                    <img src="http://demo.cwgszc.com/red/images/banner_2.jpg" alt="...">
+                </div>
+                <div class="item">
+                    <img src="http://demo.cwgszc.com/red/images/banner_3.jpg" alt="...">
+                </div>
+            </div>
+
+            <!-- 前进回退按钮 -->
+            <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a> -->
+        </div>
+    </div>
+    <!--header区域end-->
+    <!-- 急速预约 -->
+    <div class="appointment container">
+        <h3>-----&nbsp;&nbsp;&nbsp;急速预约&nbsp;&nbsp;&nbsp;-----</h3>
+        <div class="input">
+            <span class="appointment-location">随州</span>
+            <input type="text" class="phoneNum" name="phoneNum" placeholder="请输入您的手机号码">
+            <input type="text" class="name" name="name" placeholder="请输入称呼,例:陈先生">
+            <span class="appointment-btn">免费预约</span>
+        </div>
+    </div>
+    <!--热门服务-->
+    <div class="hot container">
+        <div class="hot-title">
+            <div class="more">
+                <a href="./cszx.html">更多资讯 &gt;</a>
+            </div>
+            <h3>热门服务</h3>
+        </div>
+        <ul class="hot-list">
+            <li>
+                <p class="hot-list-icon"></p>
+                <p>企业财务咨询</p>
+                <p>财税咨询，保障企业日常经营</p>
+                <a href="./dljz.html">会计回电</a>
+            </li>
+            <li>
+                <p class="hot-list-icon"></p>
+                <p>代理记账套餐</p>
+                <p>企业财税无忧托管</p>
+                <a href="./dljz.html">获取报价</a>
+            </li>
+            <li>
+                <p class="hot-list-icon"></p>
+                <p>公司注册</p>
+                <p>工商注册+免费工商核名</p>
+                <a href="./gszc.html">马上代办</a>
+            </li>
+            <li>
+                <p class="hot-list-icon"></p>
+                <p>审计服务</p>
+                <p>精细核准企业经营及资产状况</p>
+                <a href="./gssj.html">预约回电</a>
+            </li>
+            <li>
+                <p class="hot-list-icon"></p>
+                <p>税收筹划</p>
+                <p>减轻企业负担、规避税务风险</p>
+                <a href="./gssj.html">专家咨询</a>
+            </li>
+        </ul>
+    </div>
+    <!--热门服务end-->
+    <!--content区域-->
+    <div class="content">
+        <!--展示窗口-->
+        <div class="show-window container">
+            <div class="show-edge">
+                <p class="show-icon icon_xgmdljz"></p>
+                <h4>小规模代理记账</h4>
+                <p>高质量财税服务是我们给您的承诺</p>
+            </div>
+            <div class="show-center">
+                <div class="showlist-title">
+                    <p>工商注册</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="./gszc.html">公司注册</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司注册资金变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司名称变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司法人变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司地址变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司股权转让</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">公司经营范围变更</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">个体工商户注册</a>
+                    </li>
+                    <li>
+                        <a href="./gszc.html">企业工商年检</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="show-edge">
+
+                <div class="showlist-title">
+                    <p>审计服务</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="./gssj.html">财务报表审计</a>
+                    </li>
+                    <li>
+                        <a href="./gssj.html">汇算清缴审计</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="show-edge">
+                <p class="show-icon icon_ybnsr"></p>
+                <h4>小规模代理记账</h4>
+                <p>高质量财税服务是我们给您的承诺</p>
+            </div>
+            <div class="show-center">
+                <div class="showlist-title">
+                    <p>税务代办</p>
+                </div>
+                <ul>
+
+                    <li>
+                        <a href="./dljz.html">税控器托管</a>
+                    </li>
+                    <li>
+                        <a href="./dljz.html">申请一般纳税人认定</a>
+                    </li>
+                    <li>
+                        <a href="./dljz.html">税务异常处理</a>
+                    </li>
+                    <li>
+                        <a href="./dljz.html">增值税进项发票认证</a>
+                    </li>
+                    <li>
+                        <a href="./dljz.html">企业所得税汇算清缴</a>
+                    </li>
+                    <li>
+                        <a href="./dljz.html">出口退税</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="show-edge">
+
+                <div class="showlist-title">
+                    <p>审计服务</p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="./gssj.html">税务筹划</a>
+                    </li>
+                    <li>
+                        <a href="./gssj.html">个人税收筹划</a>
+                    </li>
+                    <li>
+                        <a href="./gssj.html">企业税收筹划</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--我们的优势-->
+        <div class="advantage container">
+            <h3>我们的优势</h3>
+            <ul>
+                <li>
+                    <h4>专业团队</h4>
+                    <p>15年财税行业经验，注册会计师</p>
+                    <p>高效应对各行业企业财税问题</p>
+                    <img src="http://demo.cwgszc.com/red/images/gold_service_img4_bg.jpg">
+                </li>
+                <li>
+                    <h4>专业团队</h4>
+                    <p>15年财税行业经验，注册会计师</p>
+                    <p>高效应对各行业企业财税问题</p>
+                    <img src="http://demo.cwgszc.com/red/images/gold_service_img4_bg.jpg">
+                </li>
+                <li>
+                    <h4>专业团队</h4>
+                    <p>15年财税行业经验，注册会计师</p>
+                    <p>高效应对各行业企业财税问题</p>
+                    <img src="http://demo.cwgszc.com/red/images/gold_service_img4_bg.jpg">
+                </li>
+                <li>
+                    <h4>专业团队</h4>
+                    <p>15年财税行业经验，注册会计师</p>
+                    <p>高效应对各行业企业财税问题</p>
+                    <img src="http://demo.cwgszc.com/red/images/gold_service_img4_bg.jpg">
+                </li>
+            </ul>
+        </div>
+        <!--客户案例-->
+        <div class="example container">
+            <div class="example-title">
+                <a href="#">查看更多 ></a>
+                <h3>客户案例</h3>
+            </div>
+            <ul>
+                <li>
+                    <img src="http://demo.cwgszc.com/red/images/logo.png">
+                </li>
+                <li>
+                    <img src="http://demo.cwgszc.com/red/images/logo.png">
+                </li>
+                <li>
+                    <img src="http://demo.cwgszc.com/red/images/logo.png">
+                </li>
+                <li>
+                    <img src="http://demo.cwgszc.com/red/images/logo.png">
+                </li>
+                <li>
+                    <img src="http://demo.cwgszc.com/red/images/logo.png">
+                </li>
+                <li>
+                    <img src="http://demo.cwgszc.com/red/images/logo.png">
+                </li>
+            </ul>
+
+        </div>
+        <!--客户案列end-->
+        <div class="zs container">
+            <h2>----- 楚威正在为各行各业提供专业财税解决方案 ------</h2>
+            <p>各行业企业客户共同选择，数千家行业龙头企业战略合作伙伴</p>
+        </div>
+        <!--资讯-->
+        <div class="information container">
+            <ul>
+                <li>
+                    <img src="http://demo.cwgszc.com/red/images/im_caishuzix.png">
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                </li>
+                <li>
+                    <img src="http://demo.cwgszc.com/red/images/im_gsinfo.png">
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                </li>
+                <li>
+                    <img src="http://demo.cwgszc.com/red/images/im_gszhuce.png">
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                </li>
+                <li>
+                    <img src="http://demo.cwgszc.com/red/images/im_dljz.png">
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                    <p>
+                        <a href="#">湖北省财政厅、湖北省税务局公示湖北省耕地占用税适用税额</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--content区域end-->
+    <!--页尾-->
+    <div class="footer">
+        <!--优点-->
+        <div class="footer-benefit container">
+            <ul>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="http://demo.cwgszc.com/red/images/benefit1_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>品质保证</h4>
+                        <p>15年以上财税经验积累</p>
+                        <p>国内获IDG投资互联网财税企业</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="http://demo.cwgszc.com/red/images/benefit2_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>品质保证</h4>
+                        <p>15年以上财税经验积累</p>
+                        <p>国内获IDG投资互联网财税企业</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="http://demo.cwgszc.com/red/images/benefit3_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>品质保证</h4>
+                        <p>15年以上财税经验积累</p>
+                        <p>国内获IDG投资互联网财税企业</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="http://demo.cwgszc.com/red/images/benefit4_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>品质保证</h4>
+                        <p>15年以上财税经验积累</p>
+                        <p>国内获IDG投资互联网财税企业</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--列表-->
+        <div class="footer-list-wrapper">
+            <div class="footer-list container">
+                <div class="fList-left">
+                    <dl>
+                        <dt>关于我们</dt>
+                        <dd>
+                            <a href="./gywm.html">关于楚威</a>
+                        </dd>
+                        <dd>
+                            <a href="#">官网移动端</a>
+                        </dd>
+                        <dd>
+                            <a href="#">总部全景图</a>
+                        </dd>
+                        <dd>
+                            <a href="./gywm.html">联系我们</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>财税服务</dt>
+                        <dd>
+                            <a href="./dljz.html">代理记账</a>
+                        </dd>
+                        <dd>
+                            <a href="./gszc.html">注册公司</a>
+                        </dd>
+                        <dd>
+                            <a href="./gssj.html">公司审计</a>
+                        </dd>
+                        <dd>
+                            <a href="./cszx.html">税收筹划</a>
+                        </dd>
+                        <dd>
+                            <a href="./dljz.html">财务记账</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>财税资讯</dt>
+                        <dd>
+                            <a href="./gywm.html">公司动态</a>
+                        </dd>
+                        <dd>
+                            <a href="./cszx.html">财税解答</a>
+                        </dd>
+                        <dd>
+                            <a href="./dljz.html">代理记账</a>
+                        </dd>
+                        <dd>
+                            <a href="./cszx.html">财税资讯</a>
+                        </dd>
+                        <dd>
+                            <a href="./gssj.html">公司审计</a>
+                        </dd>
+                    </dl>
+                    <dl> 
+                        <dt>品牌认证</dt>
+                        <dd>
+                            <a href="#">品牌保护</a>
+                        </dd>
+                        <dd>
+                            <a href="#">财税服务</a>
+                        </dd>
+                        <dd>
+                            <a href="#">网络学院</a>
+                        </dd>
+                        <dd>
+                            <a href="#">商务合作</a>
+                        </dd>
+                        <dd>
+                            <a href="./qyhm.html">除名查询</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="fList-center">
+                    <ul>
+                        <li>
+                            <p>关注服务号</p>
+                            <p>你的专属财务管家</p>
+                            <img src="http://rxwl.oss-cn-hangzhou.aliyuncs.com/staic/hbcw/img/160.jpg">
+                        </li>
+                        <li>
+                            <p>关注服务号</p>
+                            <p>你的专属财务管家</p>
+                            <img src="http://rxwl.oss-cn-hangzhou.aliyuncs.com/staic/hbcw/img/160.jpg">
+                        </li>
+                    </ul>
+                </div>
+                <div class="fList-right">
+                    <ul>
+                        <li>
+                            <p class="footer-phone">400-000-0000</p>
+                            <p>全国咨询热线</p>
+                        </li>
+                        <li>
+                            <p class="footer-phone">400-000-0000</p>
+                            <p>全国投诉电话</p>
+                        </li>
+                        <li>
+                            <p class="footer-phone">08:30-17:30</p>
+                            <p>全限时服务</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="beian container">
+                <a href="#">鄂ICP备11111111111号-2丨Copyright©2013-2019 湖北楚威企业注册有限公司</a>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边栏 -->
+    <div class="rightBar">
+        <ul>
+            <li id="phone">
+                <img src="http://demo.cwgszc.com/red/images/rightNav_phone.png" alt="">
+            </li>
+            <li id="wx">
+                <img src="http://demo.cwgszc.com/red/images/rightNav_wx.png" alt="">
+            </li>
+            <li class="goTop">
+                <img src="http://demo.cwgszc.com/red/images/rightNav_db.png" alt="">
+            </li>
+        </ul>
+        <div class="phone">
+            <p>24小时服务热线:</p>
+            <p>13233332222</p>
+        </div>
+        <div class="wx">
+            <p>QQ联系我们:</p>
+            <p>55555555</p>
+            <p>微信联系我们:</p>
+            <p>13233332222</p>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://demo.cwgszc.com/red/js/common.js"></script>
+    <script src="http://demo.cwgszc.com/red/js/index.js"></script>
+</body>
+
+</html>

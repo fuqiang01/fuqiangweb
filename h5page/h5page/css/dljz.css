@@ -1,0 +1,128 @@
+.content{
+    background-color: #eee;
+}
+.service{
+    background-color: #fff;
+}
+.service > h2{
+    padding: .5rem 0;
+    font-size: .6rem;
+    color: rgb(95,130,180);
+    text-align: center;
+    font-weight: bold;
+}
+.service > h2 > span {
+    font-size: .8rem;
+    padding: 0 .2rem;
+}
+.service-info{
+    padding: 10px .7rem;
+    display: flex;
+}
+.service-info > p{
+    flex-grow: 1;
+    width: 1.4rem;
+    display: inline-block;
+    padding: .2rem .4rem;
+    font-size: .6rem;
+    text-align: center;
+    color: #fff;
+    background-size: 100% 4.5rem;
+    background-repeat: no-repeat;
+}
+.jichu > p{
+    background-image: url('../img/stag1.png');
+}
+.zengsong > p{
+    background-image: url('../img/stag2.png');
+}
+.service-info > ul{
+    flex-grow: 1;
+    width: 8.6rem;
+    list-style: none;
+}
+.service-info > ul > li > p{
+    padding: .2rem .4rem;
+    border: 2px solid #d4dfef;
+    background: #ecf1f8;
+    display: inline-block;
+    border-radius: .2rem;
+    font-size: .4rem;
+    margin-bottom: .3rem;
+}
+.zengsong > ul > li > p{
+    color: rgb(255,65,61);
+    border: 2px solid rgb(167,136,135);
+    background: rgba(147,116,115,.1);
+}
+/* 热门问答 */
+.service {
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.service > h3{
+    font-size: .6rem;
+    padding-left: 30px;
+    border-left: 8px solid rgb(255,67,61);
+}
+.service > .info{
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+.service-problem .info ul{
+    list-style: none;
+    padding-left: 0;
+}
+.service-problem .info ul.porblem-title{
+    display: flex;
+    padding-top: .3rem;
+}
+.service-problem .info ul.porblem-title > li{
+    flex-grow: 1;
+    font-size: .4rem;
+    padding: .2rem .3rem;
+}
+.service-problem .info ul.porblem-title > li.active{
+    background-color: rgb(255,116,130);
+    color: #fff;
+    border-radius: .2rem;
+}
+.service-problem .info ul.porblem-content{
+    text-align: left;
+}
+.service-problem .info ul.jzxg{
+    display: none;
+}
+.service-problem .info ul.porblem-content > li.question{
+    font-size: .5rem;
+    color: #555;
+    padding-left: .8rem;
+    margin-top: .5rem;
+    position: relative;
+}
+.service-problem .info ul.porblem-content > li.tagged{
+    color: rgb(255,65,61);
+}
+.service-problem .info ul.porblem-content > li.question::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: .2rem;
+    height: .2rem;
+    background-color: rgb(255,116,130);
+    border-radius: 50%;
+    top: .25rem;
+    left: .3rem;
+}
+.service-problem .info ul.porblem-content > li.answer{
+    font-size: .4rem;
+    padding: .3rem;
+    border: 1px solid #ecbc88;
+    background-color: #fffdef;
+    color: #777;
+    border-radius: .3rem;
+    margin: 0 .6rem;
+    display: none;
+}

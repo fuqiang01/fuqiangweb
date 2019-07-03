@@ -1,0 +1,219 @@
+/* 急速通道 */
+.dljz-channel{
+    position: relative;
+}
+ .dljz-channel h2{
+    text-align: center;
+    padding: 50px 0;
+ }
+ .dljz-channel .channel-content{
+    box-shadow: 0 0 10px rgba(0,0,0,.3)
+ }
+ .channel-content ul{
+     padding: 50px;
+ }
+ .channel-content ul li{
+     padding: 20px 0;
+ }
+ .channel-content ul li span{
+     padding: 10px 20px;
+     background-color: #eee;
+     border-radius: 20px;
+     margin: 0 10px;
+ }
+ .channel-content ul li span:first-of-type{
+     background-color: #fff;
+ }
+ .channel-content ul li span.active{
+     background-color: rgb(91,121,241);
+     color: #fefefe;
+ }
+ .channel-content ul li span.submitBtn{
+     background-color: rgb(91,119,241);
+     padding: 10px 40px;
+     border-radius: 5px;
+     color: #fefefe;
+ }
+ .channel-content ul li input{
+     background-color: #eee;
+     border: none;
+     outline: none;
+     padding: 10px 20px;
+ }
+ .dljz-channel .right-img{
+     position: absolute;
+     height: 350px;
+     right: 57px;
+     top: 186px;
+ }
+ .dljz-channel .right-img img{
+     height: 100%;
+ }
+/* 预约服务 */
+div.hot ul.hot-list{
+    padding-left: 0;
+}
+div.hot ul.hot-list li{
+    width: 290px;
+    height: 150px;
+    /* background-color: #2faaff; */
+    background-size: 100% 100%;
+    float: left;
+    text-align: center;
+}
+div.hot ul.hot-list li:nth-of-type(1){
+    background-image: url('../images/pic_03.png');
+}
+div.hot ul.hot-list li:nth-of-type(2){
+    background-image: url('../images/pic_04.png');
+}
+div.hot ul.hot-list li:nth-of-type(3){
+    background-image: url('../images/pic_02.png');
+}
+div.hot ul.hot-list li:nth-of-type(4){
+    background-image: url('../images/pic_01.png');
+}
+div.hot ul.hot-list li:not(:last-of-type){
+    margin-right: 20px;
+}
+div.hot ul.hot-list li p{
+    color: #fefefe;
+    padding: 5px 0;
+}
+div.hot ul.hot-list li p:first-of-type{
+    padding: 20px 0 10px;
+    font-size: 20px;
+}
+div.hot ul.hot-list li a{
+    color: #ffffff;
+    border: 1px solid #fefefe;
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+div.hot ul.hot-list li a:hover{
+    text-decoration: none;
+    background-color: #fefefe;
+    color: #2faaff;
+}
+/* 服务内容 */
+div.service-list{
+    text-align: center;
+    margin-bottom: 30px;
+}
+div.service-list h2{
+    padding: 50px 0;
+}
+div.service-list > ul{
+    padding-left: 0;
+    display: inline-block;
+}
+div.service-list > ul > li{
+    width: 350px;
+    float: left;
+    border: 1px solid #ccc;
+    margin: 0 15px;
+    position: relative;
+    height: 630px;
+}
+div.service-list > ul > li div.title{
+    height: 120px;
+    color: #fefefe;
+}
+div.service-list > ul > li:nth-of-type(1)  div.title{
+    background-color: rgb(91,119,241);
+}
+div.service-list > ul > li:nth-of-type(2)  div.title{
+    background-color: rgb(59,207,163);
+}
+div.service-list > ul > li:nth-of-type(3)  div.title{
+    background-color: rgb(242,173,61);
+}
+div.service-list > ul > li div.title img{
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+}
+div.service-list > ul > li div.title p{
+    margin: 0;
+}
+div.service-list > ul > li div.title p:first-of-type{
+    font-size: 18px;
+}
+div.service-list > ul > li > ul{
+    padding-left: 0;
+}
+div.service-list > ul > li > ul > li{
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+div.service-list > ul > li div.btn{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+    padding-bottom: 30px;
+}
+div.service-list > ul > li div.btn span{
+    padding: 13px 50px;
+    color: #fefefe;
+    border-radius: 5px;
+}
+div.service-list > ul > li:nth-of-type(1)  div.btn span{
+    background-color: rgb(91,119,241);
+}
+div.service-list > ul > li:nth-of-type(2)  div.btn span{
+    background-color: rgb(59,207,163);
+}
+div.service-list > ul > li:nth-of-type(3)  div.btn span{
+    background-color: rgb(242,173,61);
+}
+div.service-list > ul > li:nth-of-type(1)  div.btn span:hover{
+    background-color: rgb(51,89,211);
+}
+div.service-list > ul > li:nth-of-type(2)  div.btn span:hover{
+    background-color: rgb(51,177,103);
+}
+div.service-list > ul > li:nth-of-type(3)  div.btn span:hover{
+    background-color: rgb(212,143,31);
+}
+
+
+/* 服务流程 */
+div.process-wrapper{
+    background-color: rgb(116,112,241);
+    text-align: center;
+    color: #fefefe;
+}
+div.process h2{
+    padding: 50px 0;
+}
+div.process ul{
+    padding-left: 0;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+div.process ul li{
+    width: 150px;
+    margin: 0 10px;
+    float: left;
+    position: relative;
+}
+div.process ul li:not(:last-of-type)::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-image: url('../img/jt.png');
+    background-size: 100% 100%;
+    right: -36px;
+    top: 30px;
+}
+div.process ul li img{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #333;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,61 @@
+.topbar{
+    box-shadow: 0 0 10px rgba(0,0,0,.3)
+}
+.content{
+    display: flex;
+}
+.content > ul.type{
+    width: 3rem;
+    background-color: #eee;
+    padding-top: .5rem;
+}
+.content > ul.type > li{
+    font-size: .5rem;
+    padding: .5rem 0 .5rem .2rem;
+    color: #777;
+    border-bottom: 1px solid #fff;
+}
+.content > ul.type > li.active{
+    color: #22b0eb;
+    border-left: 2px solid #22b0eb;
+    background-color: #fff;
+}
+.content > .list{
+    width: 7rem;
+    height: 100%;
+    padding: 0rem .3rem 1.5rem;
+    overflow: auto;
+}
+.content > .list > dl{
+    display: none;
+}
+.content > .list > dl.type-1{
+    display: block;
+}
+.content > .list dl dt{
+    margin-top: 1rem;
+    padding: 0 0 .2rem .5rem;
+    font-size: .5rem;
+    color: #555;
+    border-bottom: 1px solid #aaa;
+    border-left: 3px solid #22b0eb;
+}
+.content > .list dl dd{
+    border-bottom: 1px solid #ccc;
+}
+.content > .list dl dd a{
+    color: #777;
+}
+.content > .list dl dd h3{
+    font-size: .5rem;
+}
+.content > .list dl dd p.info{
+    font-size: .3rem;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.content > .list dl dd p.price{
+    color: #ff7300;
+    font-size: .3rem;
+}

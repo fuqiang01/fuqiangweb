@@ -1,0 +1,144 @@
+﻿@charset "utf-8";
+
+.cnt-wrapper {
+	padding-bottom: 140px;
+	width: 1180px;
+}
+
+/*面包屑*/
+.breadcrumb li {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.breadcrumb li,.breadcrumb a {
+	font-size: 14px;
+	color: #666;
+	height: 20px;
+	line-height: 20px;
+}
+.breadcrumb .active { color: #aaa; }
+.breadcrumb a:hover { color: #1B84F5; }
+.breadcrumb .interval { width: 17px; }
+
+/*文章正文*/
+.articleText {
+	padding-top: 30px;
+	width: 765px;
+}
+.articleTitle {
+	margin-bottom: 30px;
+	font-size: 20px;
+	color: #666;
+}
+.Paragraph {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	color: #666;
+}
+.articlePic { border: 1px solid #eee; }
+
+/*标签、文章导航*/
+.TagNav {
+	margin-top: 50px;
+	border-top: 1px solid #ddd;
+}
+.tagArea { margin-top: 30px; }
+.tagArea th {
+	padding-top: 4px;
+	width: 80px;
+	font-size: 16px;
+	font-weight: normal;
+	vertical-align: top;
+	color: #666;
+}
+.tag {
+	margin-left: 15px;
+	margin-bottom: 10px;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 30px;
+	line-height: 29px;
+	text-align: center;
+	color: #3aaae1;
+	border: 1px solid #3aaae1;
+}
+.tag:hover {
+	color: #235ca9;
+	border-color: #235ca9;
+}
+.articleNav {
+	margin-top: 30px;
+}
+.articleNav a {
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	color: #999;
+}
+.articleNav a:hover {
+	color: #235ca9;
+	text-decoration: underline;
+}
+.articleNav img { top: 2px; }
+.articleNav .prev { margin-right: 5px; }
+.articleNav .next { margin-left: 5px; }
+
+/*边栏推送*/
+.sideBar { width: 306px; }
+.push {
+	margin-bottom: 16px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+}
+.pushTitle {
+	margin-top: -1px;
+	margin-left: -1px;
+	margin-right: -1px;
+	padding-left: 20px;
+	height: 48px;
+	line-height: 48px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #3aaae1;
+}
+.pushTitle img {
+	position: relative;
+	top: 2px;
+	margin-right: 8px;
+}
+.pushList > li {
+	margin-left: auto;
+	margin-right: auto;
+	width: 278px;
+	border-bottom: 1px solid #ddd;
+}
+.pushList > li:last-child { border-bottom: none; }
+.capital {
+	height: 50px;
+	line-height: 50px;
+}
+.pushList > li a {
+	font-size: 14px;
+	color: #666;
+}
+.pushList > li a:hover { color: #3aaae1; }
+.explain {
+	padding: 0 10px 10px;
+	font-size: 14px;
+	color: #999;	
+}
+.tagCloud {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+.tagCloud .tag {
+	margin-left: 0;
+	margin-right: 10px;
+}
+.tagCloud a { color: #3aaae1 !important; }
+.tagCloud a:hover { color: #235ca9 !important; }

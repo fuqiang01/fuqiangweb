@@ -1,0 +1,218 @@
+.content{
+    background-color: #eee;
+}
+/* 快捷跳转 */
+.quick-jump{
+    padding: .8rem 0;
+}
+.quick-jump > div{
+    display: flex;
+}
+.quick-jump > div > a{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #555;
+    text-align: center;
+    font-size: .4rem;
+}
+.quick-jump > div > a div.img{
+    width: 70%;
+}
+.quick-jump > div > a div.img > img{
+    width: 100%;
+}
+/* 服务内容 */
+.service {
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.service > h3{
+    font-size: .6rem;
+    padding-left: 30px;
+    border-left: 8px solid rgb(255,67,61);
+}
+.service > .info{
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+.service > .info h2{
+    font-size: .7rem;
+    color: rgb(255,67,61);
+    margin-bottom: .1rem;
+    margin-top: .5rem;
+}
+.service > .info p{
+    font-size: .3rem;
+    margin-bottom: .5rem;
+}
+.service > .info p.introduce{
+    color: #777;
+    text-align: left;
+}
+.service > .info > .img{
+    width: 100%;
+}
+.service > .info > .img img{
+    width: 100%;
+}
+.service > .info > p.note{
+    color: rgb(255,67,61);
+    padding-top: 20px;
+    font-size: .4rem;
+}
+.service-date .info .img{
+    position: relative;
+}
+.service-date .info .img::before{
+    content: '';
+    display: block;
+    width: 2.7rem;
+    height: 2.7rem;
+    background-image: url('../img/get.gif');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 3.3rem;
+    left: .5rem;
+}
+/* 所需材料 */
+.service-need .info dl{
+    border: 1px solid #cddddf;
+    background-color: #f3f6fb;
+    margin: 10px;
+    padding: .5rem;
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: .5rem;
+}
+.service-need .info dl dt{
+    padding: .3rem 0;
+}
+.service-need .info dl dt img{
+    width: .7rem;
+}
+.service-need .info dl dt span{
+    font-size: .4rem;
+    color: rgb(255,65,53);
+}
+.service-need .info dl dd{
+    margin: .3rem 0;
+    padding-left: .3rem;
+    border-left: 1px solid #ddd;
+    font-size: .4rem;
+    color: #777;
+}
+.service-need .info dl dd.important{
+    color: rgb(255,65,61);
+    border-left-color: rgb(255,65,61);
+}
+/* 地址相关 */
+.service-address .info > div{
+    display: flex;
+}
+.service-address .info > div .img{
+    width: 4rem;
+}
+.service-address .info > div .img img{
+    width: 100%;
+}
+.service-address .info > div .text{
+    width: 6rem;
+    text-align: left;
+    padding-left: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+.service-address .info > div .text > h3{
+    font-size: .6rem;
+    margin-top: .8rem;
+}
+.service-address .info > div .text > p{
+    font-size: .3rem;
+    color: #777;
+}
+/* 售后保障 */
+.service-security .info > div{
+    margin: 10px;
+    padding: .3rem;
+    border: 1px solid rgb(255,65,61);
+    border-radius: .3rem;
+    text-align: left;
+}
+.service-security .info > div > h4{
+    font-size: .5rem;
+    color: rgb(255,65,61);
+}
+.service-security .info > div > p{
+    font-size: .4rem;
+    word-break: break-all;
+}
+.service-security .info > div > p > span{
+    color: rgb(255,65,61);
+    padding: 0 5px;
+}
+.service-security .info > div > img{
+    width: 100%;
+}
+/* 热门问答 */
+.service-problem .info ul{
+    list-style: none;
+    padding-left: 0;
+}
+.service-problem .info ul.porblem-title{
+    display: flex;
+    padding-top: .3rem;
+}
+.service-problem .info ul.porblem-title > li{
+    flex-grow: 1;
+    font-size: .4rem;
+    padding: .2rem .3rem;
+}
+.service-problem .info ul.porblem-title > li.active{
+    background-color: rgb(255,116,130);
+    color: #fff;
+    border-radius: .2rem;
+}
+.service-problem .info ul.porblem-content{
+    text-align: left;
+}
+.service-problem .info ul.dzxg,
+.service-problem .info ul.zhl{
+    display: none;
+}
+.service-problem .info ul.porblem-content > li.question{
+    font-size: .5rem;
+    color: #555;
+    padding-left: .8rem;
+    margin-top: .5rem;
+    position: relative;
+}
+.service-problem .info ul.porblem-content > li.tagged{
+    color: rgb(255,65,61);
+}
+.service-problem .info ul.porblem-content > li.question::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: .2rem;
+    height: .2rem;
+    background-color: rgb(255,116,130);
+    border-radius: 50%;
+    top: .25rem;
+    left: .3rem;
+}
+.service-problem .info ul.porblem-content > li.answer{
+    font-size: .4rem;
+    padding: .3rem;
+    border: 1px solid #ecbc88;
+    background-color: #fffdef;
+    color: #777;
+    border-radius: .3rem;
+    margin: 0 .6rem;
+    display: none;
+}

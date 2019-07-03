@@ -1,0 +1,46 @@
+﻿.index-banner {
+	width: 100%; min-width: 1180px;
+	height: 444px;
+	background: #fff;
+}
+.index-banner > .banners {
+	width: 100%;
+	height: 444px;
+	left: 0;
+	top: 0;
+}
+.index-banner .banner {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 444px;
+	overflow: hidden;
+}
+.index-banner .banner img {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.index-banner > .focus {
+	width: 1180px;
+	padding-top: 410px;
+}
+.index-banner > .focus a{
+	z-index:3;
+	width:11px;
+	height:10px;
+	position:relative;
+	display: inline-block;
+	overflow: hidden;
+	margin-right: 5px;
+	zoom:1;
+}
+.index-banner .focus a .bg-m{z-index:4;color:white;position:absolute;display: block;left:2px;top:6px;cursor:pointer; display: none;}
+.index-banner .focus a .bg-b{background-image:url(../images/i_dot.png);position:absolute;display: block;left:0px;top:0px;cursor:pointer; width: 11px; height: 10px;}
+.index-banner .focus a .inner{background-image:url(../images/i_dot_hover.png);position:absolute;left:0px;top:0px;z-index:9;opacity:0;width: 11px;height: 10px;}
+.index-banner .focus a.on .inner,.index-banner .focus a:hover .inner{cursor:pointer;display:block;border:0;-webkit-transition:opacity .3s ease-in-out;-ms-transition:opacity .3s ease-in-out;transition:opacity .3s ease-in-out;opacity:1;}
+.index-banner .focus .hover .inner{display:block;}

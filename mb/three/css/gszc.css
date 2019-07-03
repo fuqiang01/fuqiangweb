@@ -1,0 +1,300 @@
+/* banner */
+.banner{
+    height: auto;
+    position: relative;
+}
+.banner > img {
+    height: auto;
+}
+.banner > ul{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+}
+.banner > ul > li{
+    float: left;
+    width: 320px;
+    height: 200px;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+}
+.banner > ul > li:not(:last-of-type){
+    margin-right: 20px;
+}
+.banner > ul > li > .img{
+    background-image: url('../images/shanghai.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    width: 320px;
+    height: 200px;
+    transition: all .5s;
+}
+.banner > ul > li:hover .img{
+    transform: scale(1.1,1.1);
+}
+.banner > ul > li > p{
+    width: 320px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 200px;
+    background-color: rgba(0,0,0,.3);
+    position: absolute;
+}
+/* content */
+/* 注册公司种类 */
+.con-type{
+    text-align: center;
+    position: relative;
+}
+.type-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    padding-top: 50px;
+}
+.type > ul{
+    padding-top: 30px;
+}
+.type > ul > li{
+    width: 120px;
+    height: 55px;
+    line-height: 55px;
+    background-color: rgba(255,255,255,.8);
+    float: left;
+    margin: 5px;
+    font-size: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+.type > ul > li:hover{
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+}
+.type > ul > li.hot{
+    color: rgb(1,164,235);
+    box-shadow: 0 0 5px rgb(1,164,235);
+    position: relative;
+}
+.type > ul > li.hot:hover{
+    background-color: rgba(1,164,235,.8);
+    color: #fff;
+}
+.type > ul > li.hot::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url('../images/hot-li.png');
+    width: 52px;
+    height: 52px;
+    top: 0;
+    left: 0;
+}
+.phone-consulting-box{
+    margin-top: 30px;
+}
+.phone-consulting-box > span{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    border: 2px solid #fff; 
+}
+.phone-consulting-box > span.num{
+    color: #fff;
+}
+.phone-consulting-box > span.text{
+    background-color: #fefefe;
+    margin-left: -4px;
+}
+/* 急速拿证 */
+.con-certificate{
+    position: relative;
+    text-align: center;
+}
+.certificate-wrapper{
+    position: absolute;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
+}
+.certificate > img:first-of-type{
+    padding: 30px 0 20px;
+}
+/* 服务流程 */
+.con-process{
+    position: relative;
+    text-align: center;
+}
+.process-wrapper{
+    position: absolute;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
+}
+.process h2{
+    color: #fff;
+    text-align: left;
+    padding:0 15px;
+    border-left: 2px solid #fff;
+    margin: 30px 0 10px;
+}
+.process div.info > p{
+    text-align: center;
+}
+.process .pro-top > div.info{
+    background-color: #fefefe;
+    text-align: center;
+    height: 200px;
+    padding: 20px;
+}
+.process .pro-top > div.info > ul{
+    display: inline-block;
+    padding-top: 20px;
+}
+.process .pro-top > div.info > ul > li{
+    float: left;
+    height: 100px;
+    margin: 0 10px;
+    line-height: 100px;
+    font-size: 18px;
+    color: #aaa;
+}
+.process .pro-top > div.info > ul > li.item{
+    width: 100px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+}
+.process .pro-top > div.info > ul > li:hover{
+    color: rgb(45,55,132);
+    border-color: rgb(45,55,132);
+}
+/* 服务时间end */
+.process .pro-center > div.info{
+    background-color: #fefefe;
+    padding: 20px;
+    height: 300px;
+    text-align: center;
+}
+.process .pro-center > div.info > ul{
+    display: inline-block;
+}
+.process .pro-center > div.info > ul > li{
+    float: left;
+    height: 230px;
+}
+.process .pro-center > div.info > ul > li.item{
+    width: 270px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.process .pro-center > div.info > ul > li.item:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+}
+.process .pro-center > div.info > ul > li.item > p{
+    color: #aaa;
+    text-align: left;
+}
+.process .pro-center > div.info > ul > li.item > p:first-of-type{
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+.process .pro-center > div.info > ul > li.item > p:last-of-type{
+    border-top: 1px solid #aaa;
+    padding-top: 10px;
+    color: rgb(45,55,132);
+}
+.process .pro-center > div.info > ul > li.plus{
+    line-height: 220px;
+    padding: 0 30px;
+}
+/* 所需材料end */
+.process .pro-bot > div.info{
+    background-color: #fefefe;
+    padding: 20px;
+    height:170px;
+    position: relative;
+    text-align: left;
+}
+.process .pro-bot > div.info > ul > li{
+    float: left;
+    width: 520px;
+    height: 90px;
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid #aaa;
+}
+.process .pro-bot > div.info > ul > li:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+}
+.process .pro-bot > div.info > ul > li >img{
+    padding: 10px 0 0 10px;
+}
+.process .pro-bot > div.info > ul > li > div.text{
+    position: absolute;
+    padding-left: 80px;
+    width: 500px;
+    height: 90px;
+}
+.process-wrapper .phone-consulting-box{
+    margin-top: 50px;
+}
+/* 售后 */
+.con-after-sales{
+    position: relative;
+    text-align: center;
+}
+.after-sales-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+}
+.after-sales > img{
+    padding: 30px 0;
+}
+.after-sales > ul{
+    display: inline-block;
+}
+.after-sales > ul.bot{
+    background-color: #fff;
+}
+.after-sales > ul > li{
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin: 0 50px;
+}
+.after-sales > ul.top > li{
+    border-radius: 50%;
+    background-color: #fff;
+    line-height: 120px;
+}
+.after-sales > ul.bot > li{
+    position: relative;
+}
+.after-sales > ul.bot > li p:first-of-type{
+    font-size: 16px;
+    color: rgb(57,184,235);
+    font-weight: bold;
+    padding-top: 20px;
+}
+.after-sales > ul.bot > li::before{
+    content: '';
+    display: block;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    position: absolute;
+    top: -20px;
+    left: 50px;
+}

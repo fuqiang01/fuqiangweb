@@ -1,0 +1,419 @@
+/* banner */
+.banner{
+    height: auto;
+    position: relative;
+}
+.banner > img{
+    height: auto;
+}
+/* 需求快捷登记 */
+.registration{
+    position: absolute;
+    background-color: rgba(255,255,255,.3);
+    right: 200px;
+    top: 150px;
+    text-align: center;
+    padding: 30px 50px;
+}
+.registration > p.title{
+    font-size: 20px;
+    color: rgb(45,55,132);
+    margin-bottom: 0;
+}
+.registration > p.info{
+    color: #777;
+    padding-bottom: 30px;
+}
+.registration > p.input-wrapper input{
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.registration > p.btn{
+    padding: 10px 35px;
+    background-color: rgb(45,55,132);
+    color: #fefefe;
+    font-size: 16px;
+    margin-top: 30px;
+}
+/* 楚威记账，安全便捷有保障 */
+.security-wrapper{
+    background-color: #eee;
+}
+.security{
+    text-align: center;
+    padding-bottom: 50px;
+    
+}
+.security h2{
+    padding: 50px;
+    position: relative;  
+}
+.security h2::after{
+    content: '';
+    display: block;
+    background: url('../images/dljz_03.png') center center no-repeat;
+    height: 20px;
+}
+.security > ul{
+    height: 251px;
+    border-bottom: 1px solid #aaa;
+}
+.security > ul > li{
+    float: left;
+    width: 244px;
+}
+.security > ul > li::after{
+    content: '';
+    display: none;
+    width: 50px;
+    height: 3px;
+    background-color: #007cc6;
+    margin-left: 97px;
+}
+.security > ul > li.active::after{
+    display: block;
+}
+.security > ul > li > div.img{
+    height: 180px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.security > ul > li:nth-of-type(1) > div.img{
+    background-image: url('../images/zj_03.png');
+}
+.security > ul > li:nth-of-type(2) > div.img{
+    background-image: url('../images/zj_05.png');
+}
+.security > ul > li:nth-of-type(3) > div.img{
+    background-image: url('../images/zj_07.png');
+}
+.security > ul > li:nth-of-type(4) > div.img{
+    background-image: url('../images/zj_09.png');
+}
+.security > ul > li:nth-of-type(5) > div.img{
+    background-image: url('../images/zj_11.png');
+}
+.security > ul > li > p{
+    font-size: 20px;
+    padding: 10px 0 20px;
+    text-align: center;
+}
+.security > ul > li.active > p{
+    color: #007cc6;
+}
+.security > div.details{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #aaa;
+    display: none;
+}
+.security > div.active{
+    display: block;
+}
+.security > div.details > ul{
+    display: inline-block;
+    padding-top: 30px;
+}
+.security > div.details > ul > li{
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+.security > div.details > ul > li::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 13px;
+    margin-right: 10px;
+    background: url('../images/zj1.png') center no-repeat;
+}
+.security > div.details > div.security-btn > span{
+    padding: 10px 30px;
+    margin: 10px 15px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.security > div.details > div.security-btn > span.consulting{
+    background-color: rgb(0,124,198);
+}
+.security > div.details > div.security-btn > span.handle{
+    background-color: rgb(255,127,0);
+}
+/* 您是否还在为这些问题头疼 */
+.problem{
+    height: 730px;
+    position: relative;
+    text-align: center;
+}
+.problem > h1{
+    padding: 50px 0;
+}
+.problem > h1::after{
+    content: '';
+    display: block;
+    background: url('../images/dljz_03.png') center center no-repeat;
+    height: 40px;
+}
+.problem > h1 > span{
+    font-size: 45px;
+    color: #ff7f00;
+}
+.problem > .problem-info{
+    position: absolute;
+    text-align: left;
+    width: 100%;
+}
+.problem > .problem-info > div > h2{
+    text-align: left;
+    padding-left: 0;
+}
+.problem > .problem-info > div.right{
+    float: right;
+    margin-right: 100px;
+    width: 350px;
+    height: 500px;
+}
+.problem > .problem-info > div.left{
+    float: left;
+    width: 500px;
+    height: 500px;
+}
+.problem > .problem-info > div.left > h2{
+    color: rgb(255,127,0);
+}
+.problem > .problem-info > div.right > h2{
+    color: rgb(0,124,198);
+}
+.problem > .problem-info .problem-text{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+}
+.problem > .problem-info .problem-text > p{
+    padding-top: 5px;
+}
+.problem > .problem-info .problem-btn{
+    padding-top: 20px;
+}
+.problem > .problem-info .problem-btn > span{
+    padding: 10px 30px;
+    margin: 10px 15px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.problem > .problem-info .problem-btn > span.consulting{
+    background-color: rgb(0,124,198);
+}
+.problem > .problem-info .problem-btn > span.handle{
+    background-color: rgb(255,127,0);
+}   
+/* 全方位为您服务 */
+.service-wrapper{
+    background-color: rgb(21,133,201);
+    color: #fff;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.service > h2::after{
+    content: '';
+    display: block;
+    background: url('../images/dljz_03.png') center center no-repeat;
+    height: 20px;
+}
+.service > .row > .col-md-2 > div.img{
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.service > .row > .col-md-2:nth-of-type(1) > div.img{
+    background-image: url('../images/lc01.png');
+}
+.service > .row > .col-md-2:nth-of-type(2) > div.img{
+    background-image: url('../images/lc02.png');
+}
+.service > .row > .col-md-2:nth-of-type(3) > div.img{
+    background-image: url('../images/lc03.png');
+}
+.service > .row > .col-md-2:nth-of-type(4) > div.img{
+    background-image: url('../images/lc04.png');
+}
+.service > .row > .col-md-2:nth-of-type(5) > div.img{
+    background-image: url('../images/lc05.png');
+}
+.service > .row > .col-md-2:nth-of-type(6) > div.img{
+    background-image: url('../images/lc06.png');
+}
+/* -- */
+.service > .row > .col-md-2:nth-of-type(1) > div.img:hover{
+    background-image: url('../images/lc1.png');
+    background-color: #fff;
+}
+.service > .row > .col-md-2:nth-of-type(2) > div.img:hover{
+    background-image: url('../images/lc2.png');
+    background-color: #fff;
+}
+.service > .row > .col-md-2:nth-of-type(3) > div.img:hover{
+    background-image: url('../images/lc3.png');
+    background-color: #fff;
+}
+.service > .row > .col-md-2:nth-of-type(4) > div.img:hover{
+    background-image: url('../images/lc4.png');
+    background-color: #fff;
+}
+.service > .row > .col-md-2:nth-of-type(5) > div.img:hover{
+    background-image: url('../images/lc5.png');
+    background-color: #fff;
+}
+.service > .row > .col-md-2:nth-of-type(6) > div.img:hover{
+    background-image: url('../images/lc6.png');
+    background-color: #fff;
+}
+.service > .row > .col-md-2 > div.img::before{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: rgb(21,133,201);
+    position: absolute;
+    top: 8px;
+    left: 0;
+    font-size: 18px;
+    border: 1px solid #fff; 
+}
+.service > .row > .col-md-2:nth-of-type(1) > div.img::before{
+    content: '01';
+}
+.service > .row > .col-md-2:nth-of-type(2) > div.img::before{
+    content: '02';
+}
+.service > .row > .col-md-2:nth-of-type(3) > div.img::before{
+    content: '03';
+}
+.service > .row > .col-md-2:nth-of-type(4) > div.img::before{
+    content: '04';
+}
+.service > .row > .col-md-2:nth-of-type(5) > div.img::before{
+    content: '05';
+}
+.service > .row > .col-md-2:nth-of-type(6) > div.img::before{
+    content: '06';
+}
+/* -- */
+.service > .row > .col-md-2:nth-of-type(1) > div.img:hover::before{
+    background-color: rgb(21,133,201);
+    color: #fff;
+}
+.service > .row > .col-md-2:nth-of-type(2) > div.img:hover::before{
+    background-color: rgb(21,133,201);
+    color: #fff;
+}
+.service > .row > .col-md-2:nth-of-type(3) > div.img:hover::before{
+    background-color: rgb(21,133,201);
+    color: #fff;
+}
+.service > .row > .col-md-2:nth-of-type(4) > div.img:hover::before{
+    background-color: rgb(21,133,201);
+    color: #fff;
+}
+.service > .row > .col-md-2:nth-of-type(5) > div.img:hover::before{
+    background-color: rgb(21,133,201);
+    color: #fff;
+}
+.service > .row > .col-md-2:nth-of-type(6) > div.img:hover::before{
+    background-color: rgb(21,133,201);
+    color: #fff;
+}
+.service > .row > .col-md-2 > h3{
+    padding-bottom: 10px;
+}
+/* 我们的优势 */
+.advantage{
+    padding-bottom: 50px;
+}
+.advantage > h2::after{
+    content: '';
+    display: block;
+    background: url('../images/dljz_03.png') center center no-repeat;
+    height: 20px;
+}
+.advantage > .row > div.advantage-info > ul > li{
+    position: relative;
+    padding: 10px;
+    height: 90px;
+}
+div.advantage-info > ul > li > div.text{
+    position: absolute;
+    padding-left: 80px;   
+}
+.info-blue > ul > li > div.text {
+    color: #007cc6;
+}
+.info-black > ul > li > div.text {
+    color: #777;
+}
+div.advantage-info > ul > li > img{
+    padding-top: 10px;
+}
+.advantage > .row > .advantage-img{
+    margin-top: 80px;
+}
+.advantage-btn{
+    text-align: center;
+}
+.advantage-btn > span{
+    padding: 10px 30px;
+    margin: 10px 15px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.advantage-btn > span.consulting{
+    background-color: rgb(0,124,198);
+}
+.advantage-btn > span.handle{
+    background-color: rgb(255,127,0);
+}   
+/* 为什么选择楚威 */
+.cw-why-wrapper{
+    background-color: #eee;
+    text-align: center;
+}
+.cw-why > h2::after{
+    content: '';
+    display: block;
+    background: url('../images/dljz_03.png') center center no-repeat;
+    height: 20px;
+}
+.cw-why > .row > .col-md-3{
+    padding: 35px;
+}
+.cw-why > .row > .col-md-3 > p{
+    text-align: left;
+    height: 60px;
+    color: #777;
+}
+.cw-why-btn{
+    text-align: center;
+    padding-top: 20px;
+}
+.cw-why-btn > span{
+    padding: 10px 20px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.cw-why-btn > span.consulting{
+    background-color: rgb(0,124,198);
+}
+.cw-why-btn > span.handle{
+    background-color: rgb(255,127,0);
+}   
