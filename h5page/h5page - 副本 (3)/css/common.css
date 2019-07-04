@@ -1,0 +1,145 @@
+
+a,a:link{
+    text-decoration:none;
+}
+.topbar > a{
+    color: #fff;
+    flex-grow: 1;
+    text-align: center;
+    margin: .3rem 0;
+    font-size: .4rem;
+}
+.topbar > a:not(:last-of-type){
+    border-right: 1px solid #fff;
+}
+
+/* banner */
+.banner {
+    width: 10rem;
+}
+.banner img{
+    width: 100%;
+}
+.banner .carousel-inner .item img{
+    width: 100%;
+    height: 6rem;
+}
+
+
+/* footer */
+.footer{
+    text-align: center;
+    color: #aaa;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 1.8rem;
+}
+.footer a{
+    color: #aaa;
+    font-size: .3rem;
+}
+.footer p{
+    margin-bottom: 0;
+    font-size: .3rem;
+}
+/* botbar */
+.botbar{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(66,182,231,0.8);
+    width: 10rem;
+    padding: .08rem 0;
+}
+.botbar > a{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botbar > a.active{
+    color: rgb(230,219,116);
+}
+.botbar > a > span{
+    font-size: .3rem;
+}
+.botbar > a > span.glyphicon{
+    font-size: .6rem;
+    padding: .1rem;
+}
+/* 侧边栏 */
+.right-bar{
+    position: fixed;
+    right: 0rem;
+    bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+.right-bar > a{
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(66,182,231,0.8);
+    font-size: .3rem;
+    margin: .15rem .3rem;;
+    border-radius: 20%;
+}
+.right-bar > a.goTop{
+    background-color: rgba(255,255,255,.8);
+    border: 1px solid #22b0eb;
+    display: none;
+    text-align: center;
+}
+.right-bar > a > img{
+    width: .5rem;
+    height: .5rem;
+    margin: .1rem 0;
+}
+.right-bar > a.goTop > img{
+    width: 80%;
+    height: 80%;
+}
+
+/* 我们联系您弹框 */
+.modal-dialog{
+    top: 20%;
+    margin: 10px;
+    width: auto;
+}
+.modal-header{
+    background-color: rgb(10,123,210);
+    color: #fff;
+}
+.modal-header button{
+    font-size: .6rem;
+}
+.modal-header h4{
+    font-size: .5rem;
+}
+.modal-body > div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: .5rem 0;
+}
+.modal-body span{
+    background-color: rgb(10,123,210);
+    font-size: .8rem;
+    padding: .3rem .5rem;
+    color: #fff;
+    top: 0;
+}
+.modal-body input{
+    border: 1px solid rgb(10,123,210);
+    outline: none;
+    padding: .3rem;
+    font-size: .4rem;
+}
+.modal-footer button{
+    font-size: .5rem;
+    margin: 0 .3rem;
+}

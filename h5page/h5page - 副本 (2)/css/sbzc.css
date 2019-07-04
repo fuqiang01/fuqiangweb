@@ -1,0 +1,176 @@
+.content{
+    background-color: #eee;
+}
+/* 快捷跳转 */
+.quick-jump{
+    padding: .8rem 0;
+}
+.quick-jump > div{
+    display: flex;
+    justify-content: center;
+}
+.quick-jump > div > a{
+    width: 3.33rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #555;
+    text-align: center;
+    font-size: .4rem;
+}
+.quick-jump > div > a div.img{
+    width: 70%;
+}
+.quick-jump > div > a div.img > img{
+    width: 100%;
+}
+/* 服务内容 */
+.service {
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.service > h3{
+    font-size: .6rem;
+    padding-left: 30px;
+    border-left: 8px solid rgb(10,183,240);
+}
+.service > .info{
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+.service > .info h4{
+    font-size: .5rem;
+    padding-top: .5rem;
+}
+.service > .info > .img{
+    width: 100%;
+    padding: .5rem 0;
+}
+.service > .info > .img img{
+    width: 100%;
+}
+.service > .info > ul{
+    list-style: none;
+}
+.service > .info > ul > li{
+    margin: .5rem 0;
+}
+.service-advantage > .info > ul,
+.service-guarantee > .info > ul{
+    padding: .5rem;
+}
+.service-advantage > .info > ul > li > img{
+    width: 2rem;
+}
+.service-advantage > .info > ul > li > h2{
+    font-size: .6rem;
+}
+.service-advantage > .info > ul > li > p{
+    font-size: .4rem;
+    margin: 0 1rem;
+    color: #777;
+}
+.service-guarantee > .info > ul > li{
+    display: flex;
+    height: 3rem;
+    border-radius: .3rem;
+    overflow: hidden;
+}
+.service-guarantee > .info > ul > li > div.left{
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.service-guarantee > .info > ul > li:nth-of-type(1) > div.left{
+    background-color: rgb(122,178,194);
+}
+.service-guarantee > .info > ul > li:nth-of-type(2) > div.left{
+    background-color: rgb(240,183,0);
+}
+.service-guarantee > .info > ul > li:nth-of-type(3) > div.left{
+    background-color: rgb(0,176,143);
+}
+.service-guarantee > .info > ul > li > div.left p{
+    margin-bottom: 0;
+    font-size: .6rem;
+    color: #fff;
+}
+.service-guarantee > .info > ul > li > div.img{
+    margin-left: -1px;
+    height: 100%;
+}
+.service-guarantee > .info > ul > li > div.img img{
+    height: 100%;
+}
+.service-guarantee > .info > ul > li > div.right{
+    background-color: #eee;
+    width: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.service-guarantee > .info > ul > li > div.right p{
+    font-size: .4rem;
+    padding: 0 .2rem;
+    margin-bottom: 0;
+}
+.service-guarantee > .info > ul > li > div.right p.label{
+    color: rgb(255,65,61);
+}
+/* 热门问答 */
+.service-problem .info ul{
+    list-style: none;
+    padding-left: 0;
+}
+.service-problem .info ul.porblem-title{
+    display: flex;
+    padding-top: .3rem;
+}
+.service-problem .info ul.porblem-title > li{
+    flex-grow: 1;
+    font-size: .4rem;
+    padding: .2rem .3rem;
+}
+.service-problem .info ul.porblem-title > li.active{
+    background-color: rgb(255,116,130);
+    color: #fff;
+    border-radius: .2rem;
+}
+.service-problem .info ul.porblem-content{
+    text-align: left;
+}
+.service-problem .info ul.porblem-content > li.question{
+    font-size: .5rem;
+    color: #555;
+    padding-left: .8rem;
+    margin-top: .5rem;
+    position: relative;
+}
+.service-problem .info ul.porblem-content > li.tagged{
+    color: rgb(255,65,61);
+}
+.service-problem .info ul.porblem-content > li.question::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: .2rem;
+    height: .2rem;
+    background-color: rgb(255,116,130);
+    border-radius: 50%;
+    top: .25rem;
+    left: .3rem;
+}
+.service-problem .info ul.porblem-content > li.answer{
+    font-size: .4rem;
+    padding: .3rem;
+    border: 1px solid #ecbc88;
+    background-color: #fffdef;
+    color: #777;
+    border-radius: .3rem;
+    margin: 0 .6rem;
+    display: none;
+}

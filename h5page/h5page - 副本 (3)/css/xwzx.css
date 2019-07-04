@@ -1,0 +1,51 @@
+.content{
+    padding: 1rem .3rem;
+    box-sizing: border-box;
+}
+.content > h3{
+    text-align: center;
+    font-size: .6rem;
+    margin-bottom: .3rem;
+}
+.content > .info{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    color: #aaa;
+    margin-bottom: .5rem;
+    font-size: .3rem;
+}
+.content > .text > p{
+    text-indent: 2em;
+    font-size: .4rem;
+}
+.content > .text > p > img{
+    width: 100%;
+    margin-left: -2em;
+}
+p.xiangguan{
+    margin: .8rem 0 0;
+    padding-top: .2rem;
+    border-top: 1px solid #ccc;
+    font-size: .4rem;
+}
+.flag-wrapper{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.flag-wrapper > a{
+    color: #aaa;
+    font-size: .3rem;
+    margin: 0 .2rem;
+}
+.change-page{
+    display: flex;
+    justify-content: space-around;
+}
+.change-page >div > a{
+    font-size: .4rem;
+    color: #555;
+    padding: .3rem .5rem;
+    border-radius: .3rem;
+    border: 1px solid #ccc;
+}
