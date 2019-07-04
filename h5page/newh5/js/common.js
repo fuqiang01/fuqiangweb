@@ -16,7 +16,7 @@ function changeFontSize () {
 }
 
 $(window).scroll( function () {
-    
+
     var scrollT = $(window).scrollTop();
     if ( scrollT >= 300) {
         $('.goTop').fadeIn();
