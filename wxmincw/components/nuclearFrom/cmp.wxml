@@ -1,0 +1,21 @@
+<view class="form">
+    <picker mode="region"
+            class="picker" 
+            value="{{address}}"
+            bindchange="addressChange">{{address[0]}} {{address[1]}} {{address[2]}}</picker>
+    <input placeholder="请输入您的公司名称,如:湖北楚威"  class="input" />
+    <view class="industryType">
+        <picker mode="multiSelector" 
+                range="{{industryType}}" 
+                class="picker"
+                bind:change="industryTypeChange"
+                bind:columnchange="industryTypeColumnChange" >{{industryType[1][industryTypeIndex]}}</picker>
+        <picker mode="selector" 
+                range="{{companyType}}" 
+                class="picker"
+                bind:change="companyTypeChange">{{companyType[companyTypeIndex]}}</picker>
+    </view>
+    <text class="but">免费核名</text>
+    <text class="case">案例提示：湖北楚威企业注册有限公司</text>
+    <text class="case">城市区域：随州；名称：楚威；企业类型：有限公司</text>
+</view>

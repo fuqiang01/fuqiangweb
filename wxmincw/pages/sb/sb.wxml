@@ -1,0 +1,54 @@
+<view class="banner">
+    <image mode="widthFix" src="/img/banner.png" />
+</view>
+<view class="service">
+    <f-h3 main-title="企业一站式服务" />
+    <view class="service-list">
+        <f-info img-src="/img/services1.png" main-title="社保相关服务" vice-title="社保转移,社保代缴" />
+        <f-info img-src="/img/services2.png" main-title="公积金服务" vice-title="公积金贷款,提取" />
+        <f-info img-src="/img/services3.png" main-title="生育津贴" vice-title="生育津贴报销,申领" />
+        <f-info img-src="/img/services4.png" main-title="公司审计" vice-title="公司财务审计,代理" />
+        <f-info img-src="/img/services5.png" main-title="银行开户" vice-title="指定,非指定银行开户" />
+        <f-info img-src="/img/services6.png" main-title="资金周转" vice-title="资金周转急速代办" />
+    </view>
+</view>
+<view class="value-added">
+    <view class="title">
+        <text>楚威增值业务</text>
+        <text>其他平台增值服务</text>
+    </view>
+    <view class="info">
+        <view class="item">
+            <text>双资格证书、价格透明、创新产品解决方案、快速解决用户所需</text>
+            <view class="img-box">
+                <image src="/img/service1.png" mode="widthFix" />
+                <text>社保相关</text>
+            </view>
+            <text>无社保相关资格证书、价格存在猫腻、老套服务难以适应新问题</text>
+        </view>
+        <view class="item">
+            <text>公积金解决方案定制、专属VIP资源、双方签订代理协议更放心</text>
+            <view class="img-box">
+                <image src="/img/service2.png" mode="widthFix" />
+                <text>公积金相关</text>
+            </view>
+            <text>公积金服务响应慢、公积金提取中介市场混乱、服务品质信誉差</text>
+        </view>
+        <view class="item">
+            <text>专业高效公司审计、清晰企业状况，助力企业健康发展</text>
+            <view class="img-box">
+                <image src="/img/service3.png" mode="widthFix" />
+                <text>公司审计</text>
+            </view>
+            <text>公司审计流程不健全、审计效率慢、影响企业发展</text>
+        </view>
+        <view class="item">
+            <text>银行开户更简单、企业投融资专属通道、资金周转更迅速</text>
+            <view class="img-box">
+                <image src="/img/service4.png" mode="widthFix" />
+                <text>银行相关</text>
+            </view>
+            <text>没有银行服务渠道、公司资金周转程序繁复、借款手续复杂、周期长</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,4 @@
+<view class="container">
+    <text class="main">{{mainTitle}}</text>
+    <text class="vice">{{viceTitle}}</text>
+</view>

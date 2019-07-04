@@ -1,0 +1,5 @@
+<view class="container" style="width:{{wrapperW}}">
+    <image src="{{imgSrc}}" mode="widthFix" style="width:{{imgW}}"/>
+    <text class="mainTitle">{{mainTitle}}</text>
+    <text class="viceTitle">{{viceTitle}}</text>
+</view>

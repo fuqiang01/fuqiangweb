@@ -1,0 +1,29 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .wrapper > .img-wrapper{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper > .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+    padding: 15rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+  .wrapper > .text .title{
+    font-size: 35rpx;
+  }
+  .wrapper > .text .info{
+    font-size: 25rpx;
+    color: #777;
+  }

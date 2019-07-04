@@ -1,0 +1,31 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.container > span{
+    display: block;
+    position: absolute;
+    transition: all .3s;
+}
+
+.year{
+    transform: translateX(-20px);
+}
+.active{
+    color: red;
+}
+
+/* @keyframes run {
+    form{ transform: rotateZ(0deg) translateX(500px);}
+    to{ transform: rotateZ(360deg) translateX(500px);}
+}
+.seconds{
+    animation: run linear 60s;
+} */

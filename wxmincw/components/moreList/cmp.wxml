@@ -1,0 +1,6 @@
+<view class="container">
+    <view class="item" wx:for="{{moreList}}" wx:key="{{index}}">
+        <image src="{{item.imgSrc}}" mode="widthFix" class="img" />
+        <text class="text">{{item.title}}</text>
+    </view>
+</view>

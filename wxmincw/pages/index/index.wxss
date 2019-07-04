@@ -1,0 +1,85 @@
+/* 轮播图 */
+swiper{
+  height: 410rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+/* contetn */
+.content{
+  width: 750rpx;
+  background-color: #eee;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+/* 为什么选择我们 */
+view.line-two{
+  width: 100%;
+  border-bottom: 4rpx solid #ccc;
+}
+view.line-one{
+  width: 100%;
+  border-bottom: 1rpx solid #ccc;
+}
+/* 合作伙伴 */
+.partner{
+  background-color: #fff;
+}
+.partner-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.partner-list > image{
+  width: 220rpx;
+  margin-bottom: 20rpx;
+}
+/* 我们能为您做更多 */
+.more-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.more-list  .more-wrapper{
+  width: 230rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 25rpx;
+  padding: 15rpx 0;
+}
+.more-list  .more-wrapper:last-of-type{
+  background-color: #28a7e1;
+}
+.more-list  .more-wrapper > image{
+  width: 70rpx;
+  height: 70rpx;
+  margin-bottom: 10rpx;
+}
+.more-list  .more-wrapper > text{
+  font-size: 30rpx;
+}
+/* 财税资讯 */
+.news{
+  background-color: #fff;
+}
+.news-title{
+  display: flex;
+}
+.news-title > text{
+  display: inline-block;
+  width: 50%;
+  padding: 20rpx 0;
+  text-align: center;
+  border-bottom: 5rpx solid #ccc;
+}
+.news-info > view > view{
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+}
+.news-info > view > view:not(:last-of-type){
+  border-bottom: 1rpx solid #ccc;
+}

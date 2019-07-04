@@ -1,0 +1,48 @@
+.form{
+    padding: 10rpx;
+    box-sizing: border-box;
+}
+.form .picker{
+    position: relative;
+}
+.form .picker,
+.form .input{
+    padding: 20rpx;
+    border: 1px solid #ccc;
+    border-radius: 15rpx;
+    margin-bottom: 20rpx;
+    font-size: 30rpx;
+    background-color: #eee;
+    color: #777;
+}
+
+.form .picker::after{
+    content: '>';
+    position: absolute;
+    padding: 15rpx 0;
+    right: 30rpx;
+    top: 0;
+    color: #055cfe;
+}
+.industryType{
+    display: flex;
+    justify-content: space-between;
+}
+.industryType > .picker{
+    width: 43%;
+}
+.form .but{
+    display: block;
+    background: linear-gradient(to right,#055cfe, #49a3fb);
+    color: #fff;
+    text-align: center;
+    padding: 20rpx 0;
+    border-radius: 20rpx;
+}
+.case{
+    color: #aaa;
+    font-size: 25rpx;
+    text-align: center;
+    display: block;
+    padding-top: 15rpx;
+}

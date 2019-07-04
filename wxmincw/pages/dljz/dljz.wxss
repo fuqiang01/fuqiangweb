@@ -1,0 +1,243 @@
+/* banner */
+.banner > image{
+    width: 100%;
+}
+.content{
+    background-color: #eee;
+    /* padding: 10rpx;
+    box-sizing: border-box; */
+}
+/* 按月票业务 */
+.month-business{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding-bottom: 20rpx;
+}
+.business-title{
+    padding: 50rpx 0 30rpx;
+}
+.business-num{
+    display: flex;
+    justify-content: space-around;
+}
+.business-num > text{
+    color: #777;
+    background-color: #ccc;
+    margin: 0 10rpx;
+    padding: 12rpx 15rpx;
+    border-radius: 15rpx;
+    font-size: 33rpx;
+}
+.business-num > text.active{
+    color: #fff;
+    background-color: #68a6fb;
+}
+.business-btn{
+    display: block;
+    width: 680rpx;
+    text-align: center;
+    padding: 20rpx;
+    background: linear-gradient(to right, #285ef5 , #62a1f4);
+    color: #fff;
+    margin-top: 30rpx;
+    border-radius: 20rpx;
+}
+.business-note{
+    font-size: 30rpx;
+    color: #aaa;
+    padding-top: 20rpx;
+}
+/* 服务内容 */
+.service{
+    background-color: #fff;
+}
+.service .service-info:nth-of-type(1) .service-title{
+    background-image: url('http://demo.cwgszc.com/fuqiangwxminimg/dljz_bg_1.png');
+}
+.service .service-info:nth-of-type(2) .service-title{
+    background-image: url('http://demo.cwgszc.com/fuqiangwxminimg/dljz_bg_2.png');
+}
+.service-info .service-title{
+    height: 150rpx;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 30rpx;
+    margin-top: 30rpx;
+}
+.service-info .service-title .title-main{
+    padding: 20rpx 0 10rpx;
+    font-size: 40rpx;
+}
+.service-info .service-list{
+    display: flex;
+}
+.service-info .service-list .list-left{
+    width: 60%;
+}
+.service-info .service-list .list-right{
+    width: 40%;
+}
+.service-info .service-list > view > text{
+    display: block;
+    font-size: 30rpx;
+    padding-left: 20rpx;
+    margin: 15rpx 0;
+    color: #777;
+}
+.service-info .service-list > view > text::before{
+    content: '●';
+    font-size: 25rpx;
+    color: #777;
+    margin-right: 20rpx;
+}
+.service-btn{
+    display: block;
+    width: 680rpx;
+    text-align: center;
+    padding: 20rpx;
+    background: linear-gradient(to right, #285ef5 , #62a1f4);
+    color: #fff;
+    margin-top: 30rpx;
+    border-radius: 20rpx;
+}
+.service-note{
+    font-size: 30rpx;
+    color: #aaa;
+    display: block;
+    padding: 20rpx 80rpx;
+    text-align: center;
+}
+/* 办理流程 */
+.process{
+    background-color: #fff;
+}
+.process-info{
+    display: flex;
+    height: 600rpx;
+    padding: 30rpx 0;
+}
+.process-left .process-bg1{
+    background-image: url('http://demo.cwgszc.com/fuqiangwxminimg/btn_1.png');
+}
+.process-left .process-bg2{
+    background-image: url('http://demo.cwgszc.com/fuqiangwxminimg/btn_2.png');
+}
+.process-left .process-bg3{
+    background-image: url('http://demo.cwgszc.com/fuqiangwxminimg/btn_3.png');
+}
+.process-left .process-bg4{
+    background-image: url('http://demo.cwgszc.com/fuqiangwxminimg/btn_4.png');
+}
+.process-right .process-bg5{
+    background-image: url('http://demo.cwgszc.com/fuqiangwxminimg/btn_5.png');
+}
+.process-right .process-bg6{
+    background-image: url('http://demo.cwgszc.com/fuqiangwxminimg/btn_6.png');
+}
+.process-right .process-bg7{
+    background-image: url('http://demo.cwgszc.com/fuqiangwxminimg/btn_7.png');
+}
+.process-left,
+.process-center,
+.process-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.process-left > view,
+.process-right > view{
+    background-size: 100% 100%;
+    font-size: 35rpx;
+    color: #fff;
+    padding: 15rpx 20rpx; 
+    margin:0 20rpx;
+    text-align: center;
+}
+.process-left{
+    width: 50%;  
+}
+.process-center{
+    flex: 0 10rpx;
+    background-color: #e0eeff;
+    width: 10rpx;    
+}
+.process-center > view{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #add1fd;
+    text-align: center;
+    margin-left: -22rpx;
+}
+.process-right{
+    width: 50%;
+}
+/* 为什么选择我们 */
+.advantage{
+    background-color: #fff;
+}
+.advantage-item{
+    display: flex;
+    padding: 15rpx;
+    margin: 15rpx 0;
+}
+.advantage-item:nth-of-type(2n + 1){
+    background: linear-gradient(to right, #fff, #fff6e4);
+}
+.advantage-item > image{
+    width: 100rpx;
+}
+.title-wrapper > text{
+    color: #777;
+    font-size: 30rpx;
+    display: block;
+    padding-left: 30rpx;
+}
+.title-wrapper .advantage-titel{
+    color: #333;
+    font-size: 35rpx;
+}
+/* 常见问题 */
+.problem-item{
+    padding: 20rpx;
+    background-color: #fff;
+    margin-bottom: 10rpx;
+}
+.problem-item > view{
+    display: flex;
+}
+.problem-item .problem-top{
+    margin-bottom: 10rpx;
+}
+.problem-item text{
+    color: #555;
+    font-size: 35rpx;
+}
+.problem-bot text{
+    font-size: 30rpx;
+    color: #777;
+}
+.problem-item .problem-q,
+.problem-item .problem-a{
+    flex: 0 0 60rpx;
+    display: inline-block;
+    width: 60rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    border-radius: 50%;
+    color: #fff;
+    margin: 0 30rpx;
+}
+.problem-item .problem-q{
+    background-color: #ff7852;
+}
+.problem-item .problem-a{
+    background-color: #60c87e;
+}

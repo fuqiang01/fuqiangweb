@@ -1,0 +1,219 @@
+<!-- banner -->
+<view class="banner">
+    <image mode="widthFix" src="/img/banner.jpg" />
+</view>
+<!-- content -->
+<view class="content">
+    <!-- 企业核名 -->
+    <view class="nuclear">
+        <f-h3 main-title="企业核名" />
+        <f-nuclearFrom bind:text="onTest" />
+    </view>
+    <!-- 地址注册 -->
+    <view class="registeredAddress">
+        <view>
+            <f-info wrapper-w="335rpx" img-src="/img/icon_1.png" img-w="60%" main-title="有注册地址" vice-title="商业楼,办公楼,写字楼.商住两用地址一般注册不成功" />
+            <text>立即询价</text>
+        </view>
+        <view>
+            <f-info class="noAddress" wrapper-w="335rpx" img-src="/img/icon_2.png" img-w="60%" main-title="没有地址注册" vice-title="我方提供地址(地址多,效率快,价格低)" />
+            <text>立即询价</text>
+        </view>
+    </view>
+    <!-- 相关政策 -->
+    <view class="policy">
+        <f-h4 title="相关政策咨询" />
+        <f-more more-list="{{policyList}}" />
+    </view>
+    <!-- 前期准备资料 -->
+    <view class="prepare">
+        <f-h4 title="前期准备材料" />
+        <view class="pre-item">
+            <view class="item-text">
+                <text class="item-title">文字材料</text>
+                <view class="item-info">
+                    <view>
+                        <image src="/img/star_1.png" mode="widthFix" />
+                        <text>3-5个公司名称</text>
+                    </view>
+                    <view>
+                        <image src="/img/star_1.png" mode="widthFix" />
+                        <text>注册资金和出资金额比</text>
+                    </view>
+                    <view>
+                        <image src="/img/star_1.png" mode="widthFix" />
+                        <text>经营范围</text>
+                    </view>
+                    <view>
+                        <image src="/img/star_1.png" mode="widthFix" />
+                        <text>全体股东签字</text>
+                    </view>
+                </view>
+            </view>
+            <image src="/img/bg_1.png" mode="widthFix" />
+        </view>
+        <view class="pre-item">
+            <view class="item-text">
+                <text class="item-title">实体材料</text>
+                <view class="item-info">
+                    <view>
+                        <image src="/img/star_2.png" mode="widthFix" />
+                        <text>法人,股东,监事身份证复印件</text>
+                    </view>
+                    <view>
+                        <image src="/img/star_2.png" mode="widthFix" />
+                        <text>法人身份证原件(刻章)</text>
+                    </view>
+                </view>
+            </view>
+            <image src="/img/bg_2.png" mode="widthFix" />
+        </view>
+        <view class="pre-item">
+            <view class="item-text">
+                <text class="item-title">注册地址</text>
+                <view class="item-info">
+                    <view>
+                        <image src="/img/star_3.png" mode="widthFix" />
+                        <text>自有注册地址提供相关材料</text>
+                    </view>
+                    <view>
+                        <image src="/img/star_3.png" mode="widthFix" />
+                        <text>我们提供注册地址</text>
+                    </view>
+                </view>
+            </view>
+            <image src="/img/bg_3.png" mode="widthFix" />
+        </view>
+    </view>
+    <!-- 后期拿到的资料 -->
+    <view class="take">
+        <f-h4 title="后期拿到的资料" />
+        <scroll-view scroll-x="{{true}}" >
+            <view class="take-item">
+                <view class="img-wrapper">
+                    <image mode="widthFix" src="/img/material1.jpg" />
+                </view>
+                <text>营业执照副本</text>
+            </view>
+            <view class="take-item">
+                <view class="img-wrapper">
+                    <image mode="widthFix" src="/img/material2.jpg" />
+                </view>
+                <text>公司章程</text>
+            </view>
+            <view class="take-item">
+                <view class="img-wrapper">
+                    <image mode="widthFix" src="/img/material3.jpg" />
+                </view>
+                <text>社会信用证明</text>
+            </view>
+            <view class="take-item">
+                <view class="img-wrapper">
+                    <image mode="widthFix" src="/img/material4.jpg" />
+                </view>
+                <text>房屋租房合同</text>
+            </view>
+            <view class="take-item">
+                <view class="img-wrapper">
+                    <image mode="widthFix" src="/img/material5.jpg" />
+                </view>
+                <text>公司印章和印鉴卡</text>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- 公司注册流程 -->
+    <view class="process">
+        <f-h4 title="公司注册流程" />
+        <view class="process-top">
+            <view></view>
+            <view class="colorTwo">
+                <text class="text-time">5-7个工作日</text>
+                <text class="text-service">预约服务</text>
+            </view>
+            <view></view>
+            <view class="colorFore">
+                <text class="text-time">1-2个工作日</text>
+                <text class="text-service">刻章备案</text>
+            </view>
+        </view>
+        <view class="process-index">
+            <view>
+                <text>1</text>
+            </view>
+            <view>
+                <text>2</text>
+            </view>
+            <view>
+                <text>3</text>
+            </view>
+            <view>
+                <text>4</text>
+            </view>
+        </view>
+        <view class="process-bot">
+            <view class="colorOne">
+                <text class="text-service">企业核名</text>
+                <text class="text-time">1-3个工作日</text>  
+            </view>
+            <view></view>
+            <view class="colorThree">
+                <text class="text-service">领取执照</text>
+                <text class="text-time">1个工作日</text>
+            </view>
+            <view></view>
+        </view>
+    </view>
+    <!-- 优势 -->
+    <view class="advantage">
+        <f-h4 title="湖北楚威注册优势" />
+        <scroll-view scroll-x="{{true}}" class=".scroll">
+            <view class="advantage-item">
+                <view class="title">
+                    <image src="/img/icon_11.png" mode="widthFix"/>
+                    <text>防抢注</text>
+                </view>
+                <text>最快24小时快速核名</text>
+            </view>
+            <view class="advantage-item">
+                <view class="title">
+                    <image src="/img/icon_12.png" mode="widthFix"/>
+                    <text>防诈骗</text>
+                </view>
+                <text>全国优选注册地址</text>
+            </view>
+            <view class="advantage-item">
+                <view class="title">
+                    <image src="/img/icon_13.png" mode="widthFix"/>
+                    <text>可加急</text>
+                </view>
+                <text>最快3个工作日领证</text>
+            </view>
+            <view class="advantage-item">
+                <view class="title">
+                    <image src="/img/icon_14.png" mode="widthFix"/>
+                    <text>无风险</text>
+                </view>
+                <text>注册不成功退全款</text>
+            </view>
+            <view class="advantage-item">
+                <view class="title">
+                    <image src="/img/icon_15.png" mode="widthFix"/>
+                    <text>有保障</text>
+                </view>
+                <text>楚威品牌实力保障</text>
+            </view>
+            <view class="advantage-item">
+                <view class="title">
+                    <image src="/img/icon_16.png" mode="widthFix"/>
+                    <text>绝隐患</text>
+                </view>
+                <text>提供终身咨询服务</text>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- 我们还能做跟多 -->
+    <view class="more">
+        <f-h4 title="我们还能为您做更多" />
+        <f-more more-list="{{moreList}}" catch:tap="toDLJZ" />
+    </view>
+</view>

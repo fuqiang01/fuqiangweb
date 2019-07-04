@@ -1,0 +1,131 @@
+<view class="banner">
+    <image mode="widthFix" src="/img/banner.jpg"/>
+</view>
+<view class="content">
+    <!-- 按月票业务 -->
+    <view class="month-business">
+        <text class="business-title">按你的月开票量选择代帐业务</text>
+        <view class="business-num">
+            <text class="{{business[0]}}"
+                data-index="0"
+                bind:tap="businessNumTap">0申报</text>
+            <text class="{{business[1]}}"
+                data-index="1"
+                bind:tap="businessNumTap">50张以内</text>
+            <text class="{{business[2]}}"
+                data-index="2"
+                bind:tap="businessNumTap">50-100张</text>
+            <text class="{{business[3]}}"
+                data-index="3"
+                bind:tap="businessNumTap">100-200张</text>
+        </view>
+        <text class="business-btn">免费获取代帐方案及报价</text>
+        <text class="business-note">注:定制化代帐方案,让企业更省钱</text>
+    </view>
+    <!-- 服务内容 -->
+    <view class="service">
+        <f-h4 title="代帐服务内容" />
+        <view class="service-info">
+            <view class="service-title">
+                <text class="title-main">基础服务</text>
+                <text>我们能为你做的</text>
+            </view>
+            <view class="service-list">
+                <view class="list-left">
+                    <text>整理原始凭证,记录记账凭证</text>
+                    <text>财务管理咨询建议</text>
+                    <text>税务申报表及时推送</text>
+                    <text>日常基本财务、税务咨询</text>
+                    <text>年末装订账簿</text>
+                </view>
+                <view class="list-right">
+                    <text>财税专家审核</text>
+                    <text>每月纳税申报</text>
+                    <text>出具财务报表</text>
+                    <text>月度装订凭证</text>
+                    <text>财税风险预警</text>
+                </view>
+            </view>
+        </view>
+        <view class="service-info">
+            <view class="service-title">
+                <text class="title-main">赠送服务</text>
+                <text>我们还能给你更多的</text>
+            </view>
+            <view class="service-list">
+                <view class="list-left">
+                    <text>年度企业所得税汇算清缴</text>
+                    <text>国地税报道</text>
+                    <text>终身后续指导服务</text>
+                </view>
+                <view class="list-right">
+                    <text>企业工商年检</text>
+                    <text>核定残保金</text>
+                    <text>法人一证通</text>
+                </view>
+            </view>
+        </view>
+        <text class="service-btn">获取当地的服务内容及价格</text>
+        <text class="service-note">注：服务内容和价格由于地域和政策的区别会有所不同,具体请留下联系方式让当地的财税顾问联系您</text>
+    </view>
+    <!-- 办理流程 -->
+    <view class="process">
+        <f-h4 title="办理流程" />
+        <view class="process-info">
+            <view class="process-left">
+                <view class="process-bg1">签订代帐服务合同</view>
+                <view></view>
+                <view class="process-bg2">专属会计开始做账</view>
+                <view></view>
+                <view class="process-bg3">企业纳税申报</view>
+                <view></view>
+                <view class="process-bg4">售后服务</view>
+            </view>
+            <view class="process-center">
+                <view>1</view>
+                <view>2</view>
+                <view>3</view>
+                <view>4</view>
+                <view>5</view>
+                <view>6</view>
+                <view>7</view>
+            </view>
+            <view class="process-right">
+                <view></view>
+                <view class="process-bg5">取票通知</view>
+                <view></view>
+                <view class="process-bg6">税金确认</view>
+                <view></view>
+                <view class="process-bg7">财务报表智能推送</view>
+                <view></view>
+            </view>
+        </view>
+    </view>
+    <!-- 为什么选择我们 -->
+    <view class="advantage">
+        <f-h4 title="为什么选择湖北楚威" />
+        <view class="advantage-info">
+            <view class="advantage-item" wx:for="{{advantageList}}" wx:key="{{index}}">
+                <image mode="widthFix" src="/img/dljz_icon_1.png" />
+                <view class="title-wrapper">
+                    <text class="advantage-titel">{{item.main}}</text>
+                    <text>{{item.vice}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 常见问题 -->
+    <view class="problem">
+        <f-h4 title="常见问题" />
+        <view class="problem-item" wx:for="{{problemList}}">
+            <view class="problem-top">
+                <text class="problem-q">问</text>
+                <text>{{item.q}}</text>
+            </view>
+            <view class="problem-bot">
+                <text class="problem-a">答</text>
+                <text>{{item.a}}</text>
+            </view>
+        </view>
+    </view>
+</view>

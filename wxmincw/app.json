@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/gszc/gszc",
+    "pages/dljz/dljz",
+    "pages/gshm/gshm",
+    "pages/sb/sb"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "usingComponents": {
+    "f-h3": "/components/h3/cmp",
+    "f-two": "/components/twoColumns/cmp",
+    "f-h4": "/components/h4/cmp",
+    "f-info": "/components/listInfo/cmp",
+    "f-more": "/components/moreList/cmp"
+  },
+  "tabBar": {
+    "selectedColor": "#22b0eb",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/img/home.png",
+        "selectedIconPath": "/img/home_1.png"
+      },
+      {
+        "pagePath": "pages/gszc/gszc",
+        "text": "公司注册",
+        "iconPath": "/img/gszc.png",
+        "selectedIconPath": "/img/gszc_1.png"
+      },
+      {
+        "pagePath": "pages/dljz/dljz",
+        "text": "代理记账",
+        "iconPath": "/img/dljz.png",
+        "selectedIconPath": "/img/dljz_1.png"
+      },
+      {
+        "pagePath": "pages/gshm/gshm",
+        "text": "公司核名",
+        "iconPath": "/img/gshm.png",
+        "selectedIconPath": "/img/gshm_1.png"
+      }
+    ]
+  }
+}
