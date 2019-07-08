@@ -11,6 +11,8 @@
         #container {
             width: 100%;
             height: 100%;
+            padding: 0;
+            margin: 0;
         }
     </style>
     <style type="text/css">
@@ -45,8 +47,17 @@
     var map = new AMap.Map("container", {
         resizeEnable: true,
         center: [113.365922,31.719517],//地图中心点
-        zoom: 13 //地图显示的缩放级别
+        zoom: 18 //地图显示的缩放级别
     });
+
+    var marker = new AMap.Marker({
+        position:[113.365922,31.719517]//位置
+    })
+    map.add(marker);
+
+
+
+
 
     AMap.plugin('AMap.Driving', function() {
         var driving = new AMap.Driving({
@@ -60,15 +71,13 @@
 
         driving.search(startLngLat, endLngLat, function (status, result) {
             // 未出错时，result即是对应的路线规划方案
-            if (status === 'complete') {
-                alert('绘制驾车路线完成')
-            } else {
-                alert('获取驾车数据失败：' + result)
-            }
+            // if (status === 'complete') {
+            //     alert('绘制驾车路线完成')
+            // } else {
+            //     alert('获取驾车数据失败：' + result)
+            // }
         })
     })
-
-
 
 
 </script>
