@@ -18,8 +18,10 @@ http://www.cwzcgs.com/
 	web页面 : 98fda6f87a3ee41aecec4699e373ee32
 	微信小程序 : 3431219bdcd1e60359342cb05d7fdd26
 	
+swiper: 
 
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.5/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.5/js/swiper.min.js"></script>
 
 jquery_CDN : <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
 
