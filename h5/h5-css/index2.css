@@ -1,7 +1,0 @@
-div.content:last-of-type{
-    display: flex;
-    align-items: center;
-}
-div.content:last-of-type img{
-    width: 50%;
-}

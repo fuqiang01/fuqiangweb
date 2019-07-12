@@ -1,69 +1,40 @@
-*{
-    padding: 0;
+header h2{
     margin: 0;
-}
-.header{
-    height: 15vw;
-    background-color: rgb(45,132,255);
-    color: #fefefe;
-    text-align: center;
-    line-height: 15vw;
-    font-size: 7vw;
-    width: 100vw;
+    padding: 15px;
 }
 .content{
-    box-sizing: border-box;
-    padding: 5px;
-    width: 100vw;
-    background-color: #ccc;
+    padding: 10px;
 }
-.content ul{
-    display: flex;
-    flex-direction: column;
+.content p{
+    text-indent: 2em;
 }
-.content ul>li{
-    background-color: #fff;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contetn p img{
+    text-indent: -2em;
 }
-.content>ul>li h4{
-    color: #fd924b;
-    padding-top: 40px;
+.wx-code{
     margin-bottom: 30px;
-    font-size: 4vw;
-}
-.content>ul>li p{
-    font-size: 3vw;
-    margin-bottom: 20px;
-}
-.content>ul>li img{
-    width: 80%;
-}
-.footer {
-    height: 7vh;
-    text-align: center;
-    line-height: 7vh;
-    background-color: rgb(45,132,255);
-    color: #fefefe;
-    font-size: 20px;
-}
-.footer > span.contact{
-    position: relative;
-}
-.footer > span.contact::before{
-    content: '';
-    display: block;
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 2px;
-    left: -30px;
-    background-image: url('./images/phone.png');
+    background-image: url('./code_wrapper.jpg');
     background-size: 100% 100%;
+    height: 40vw;
+    box-sizing: border-box;
+    padding-top: 8vw;
+    padding-left: 9vw;
 }
-.footer > a{
-    color: #fefefe;
-    text-decoration: none;
+.wx-code img{
+    width: 21vw;
+    height: 21vw;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.3);
+}
+footer h3{
+    margin: 0;
+    padding: 10px 0;
+}
+footer a{
+    color: #fff;
 }
