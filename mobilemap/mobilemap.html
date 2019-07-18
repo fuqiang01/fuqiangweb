@@ -186,7 +186,6 @@
             })
 
             $('.input-btn').click(function() {
-
                 var val = $('.input').val();
                 getSearchAddress(val);
             })
@@ -253,6 +252,8 @@
 
                     var startLngLat = [longitude, latitude]
                     var endLngLat = [113.365922, 31.719517]
+
+                    map.clearMap(); //删除所有覆盖物,用来删除以前规划的路线
 
                     driving.search(startLngLat, endLngLat, function(status, result) {
                         // 未出错时，result即是对应的路线规划方案
