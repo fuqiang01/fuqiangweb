@@ -1,0 +1,46 @@
+.content-wrapper{
+    background-color: rgb(244,247,255);
+    padding-top: 50px;
+}
+.content .row{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.content .row .col-md-9 h4{
+    padding: 10px 0 0px;
+    margin-bottom: 5px;
+}
+.content .row .col-md-9 p.date{
+    color: #aaa;
+}
+.content .row .col-md-9 p.date > span{
+    padding-right: 15px;
+}
+.content .row .col-md-9 p.date > span.reading{
+    padding-right: 0px;
+}
+.content .row .col-md-9 p.info{
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #555;
+}
+.content .row .col-md-3 img{
+    width: 100%;
+}
+/* 页面切换按钮 */
+.content nav.changPage > ul{
+    float: right;
+    background-color: rgb(244,247,255);
+}
+ul.pagination li span{
+    float: none;
+}
+ul.pagination li{
+    float: left;
+    background-color: rgb(244,247,255);
+}

@@ -1,0 +1,246 @@
+/* content */
+
+.content>h1 {
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+}
+
+.content>h1::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: #555;
+    position: absolute;
+    left: calc(50% - 180px);
+    top: 50px;
+}
+
+.content>h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: #555;
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 50px;
+}
+
+.content>h3 {
+    font-size: 16px;
+    text-align: center;
+    max-width: 750px;
+    padding: 0 0 50px;
+    color: #777;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+/* 公告栏 */
+
+.announcement>h3 {
+    color: #777;
+}
+
+.announcement>.row>.col-md-7 {
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.announcement>.row .col-md-3 {
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.announcement p.tag-orange>span {
+    color: #ff7800;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.announcement p.tag-img>img {
+    max-width: 40%;
+}
+
+a.more {
+    float: right;
+    color: #777;
+}
+
+.announcement>.row>.col-md-5 .title {
+    padding-top: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.announcement>.row>.col-md-5 .title h4 {
+    padding-left: 10px;
+    border-left: 3px solid #ff7800;
+}
+
+.announcement>.row>.col-md-5>ul {
+    padding-top: 20px;
+}
+
+.announcement>.row>.col-md-5>ul>li {
+    padding: 10px 0;
+    color: #ff7800;
+}
+
+.announcement>.row>.col-md-5>ul>li>a {
+    color: #555;
+    width: 70%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.announcement>.row>.col-md-5>ul>li>span {
+    float: right;
+    color: #aaa;
+}
+
+@media (min-width:768px) {
+    .content>h3 {
+        font-size: 25px;
+    }
+    .announcement>.row>.col-md-5 {
+        padding-left: 50px;
+    }
+    .announcement>.row>.col-md-5 .title {
+        padding-top: 0;
+    }
+    .announcement>.row>.col-md-5>ul>li>a {
+        width: 60%;
+    }
+}
+
+
+/* 产品类型 */
+
+.product-item {
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+}
+
+.product-item>img {
+    width: 100%;
+    height: 185px;
+}
+
+.product-item>.product-name {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px 0 0 10px;
+}
+
+.product-item>.product-info {
+    font-size: 12px;
+    color: #777;
+    height: 35px;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-item>.product-info-hover {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    top: 230px;
+    padding: 5px;
+    color: #777;
+    display: none;
+}
+
+.product-item>.product-price>span {
+    color: rgb(249, 158, 97);
+}
+
+.product-item>.product-sales>span {
+    color: rgb(138, 51, 141);
+}
+
+.product-item .product-details>a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(99, 123, 255);
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+.product-item .product-details>a:hover {
+    text-decoration: none;
+}
+
+.showImg-wrapper {
+    background: url('../img/showImg.jpg') center no-repeat;
+    height: 150px;
+}
+
+
+/* 合作伙伴 */
+
+.partner {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    background: url('../img/partner.png') center center no-repeat;
+    background-position: 48.5%;
+    height: 350px;
+    background-color: #fff;
+}
+
+.partner>img {
+    width: 100%;
+    min-width: 900px;
+}
+
+.partner-info {
+    /* 这个宽度是根据五张图片大小来设置的,如果要修改的话,html文件中的图片摆放顺序也需要修改 */
+    width: 1200px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    overflow: hidden;
+}
+
+@keyframes showPartner {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -1440px;
+    }
+}
+
+.partner-info>.img-wrapper {
+    /* 这个宽度是图片总宽度 */
+    width: 2640px;
+    position: absolute;
+    left: 0;
+    animation: showPartner 20s linear infinite;
+}
+
+.partner-info>.img-wrapper img {
+    width: 200px;
+    height: 100px;
+    margin: 0 20px;
+    float: left;
+}

@@ -1,0 +1,151 @@
+.content {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* 面包屑 */
+
+.content>.crumbs {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.content>.crumbs a {
+    color: #aaa;
+}
+
+
+/* 产品介绍 */
+
+.container-fluid {
+    padding: 0;
+}
+
+.pro-title .pro-name h2 {
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+}
+
+@media (max-width:768px) {
+    .pro-title .pro-name h2 {
+        text-align: center;
+    }
+}
+
+.pro-title .pro-jump {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.pro-title .pro-jump a {
+    color: #333;
+    font-size: 16px;
+    padding: 0 15px;
+    padding-bottom: 10px;
+}
+
+.pro-title .pro-jump a.active {
+    border-bottom: 2px solid red;
+    color: red;
+}
+
+.pro-title .pro-jump a:hover {
+    color: red;
+}
+
+.productIntroduction .introduce h1 {
+    text-align: center;
+    background-color: #b53032;
+    color: #fff;
+    padding: 50px 0;
+    margin: 0;
+}
+
+.productIntroduction .introduce .introduce-info {
+    background: url('../img/product_bg_1.jpg') center no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+.productIntroduction .introduce .introduce-info>div {
+    margin-top: 150px;
+    color: #fff;
+}
+
+.productIntroduction .advantage h1 {
+    background: url('../img/tiaowen.jpg') center no-repeat;
+    text-align: center;
+    color: #b53032;
+    height: 150px;
+    line-height: 150px;
+}
+
+.productIntroduction .advantage img {
+    width: 100%;
+}
+
+.productIntroduction .contactUs {}
+
+.productIntroduction .contactUs h1 {
+    color: #fff;
+    padding: 50px 0;
+    background-color: #281ba2;
+    margin: 0;
+    text-align: center;
+}
+
+.contactUs-info-wrapper {
+    width: 100%;
+    height: 600px;
+    padding-top: 150px;
+    box-sizing: border-box;
+    background: url('../img/product_bg_6.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.contactUs-info {
+    /* background-color: rgba(255, 255, 255, .8); */
+    margin-left: 25%;
+    display: inline-block;
+    padding: 20px;
+}
+
+@media (max-width:768px) {
+    .contactUs-info-wrapper {
+        padding-top: 80px;
+    }
+    .contactUs-info {
+        margin-left: 0;
+    }
+}
+
+.contactUs-info>p {
+    font-size: 25px;
+}
+
+.contactUs-info>div {
+    margin-bottom: 10px;
+}
+
+.contactUs-info label {
+    font-size: 16px;
+}
+
+.contactUs-info input {
+    width: auto;
+}
+
+.submit-btn {
+    background-color: #281ba2;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 60px;
+    margin-left: 60px;
+}

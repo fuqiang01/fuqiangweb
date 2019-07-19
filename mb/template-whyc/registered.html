@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>产品中心</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/registered.css">
+</head>
+
+<body>
+    <!-- topbar -->
+    <div class="topbar-wrapper">
+        <div class="topbar container">
+            <p class="left">欢迎来到武汉易创公司</p>
+            <p class="right">
+                <span class="glyphicon glyphicon-phone-alt"></span>
+                <span>客服电话:</span>
+                <span>027-6552-8529</span>
+            </p>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-default container">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="#">
+                    <img src="./img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav ">
+                    <li class="active"><a href="./index.html">公司首页</a></li>
+                    <li><a href="./gywm.html">关于我们</a></li>
+                    <li><a href="./cpzx.html">产品中心</a></li>
+                    <li><a href="./xwzx.html">新闻资讯</a></li>
+                    <li><a href="./lxwm.html">联系我们</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right login-btn">
+                    <li class="login"><a href="./registered.html">登录</a></li>
+                    <li class="registered"><a href="./registered.html">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- content -->
+    <div class="content">
+        <div class="form-wrapper container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 form-info col-xs-12">
+                    <div>
+                        <label for="phoneNum">手机号码</label>
+                        <input type="text" id="phoneNum" placeholder="请输入手机号码">
+                    </div>
+                    <div class="verification">
+                        <label for="verification">验证码</label>
+                        <input type="text" id="verification" placeholder="请输入验证码">
+                        <div class="img-wrapper">
+                            <img src="./img/imageCode.do" alt="">
+                            <p href="#">换一张</p>
+                        </div>
+                    </div>
+                    <div class="sms">
+                        <label for="sms">短信码</label>
+                        <input type="text" id="sms" placeholder="请输入短信验证码">
+                        <span>发送验证码</span>
+                    </div>
+                    <div>
+                        <label for="set-password">设置密码</label>
+                        <input type="text" id="set-password" placeholder="请输入6-20个字符,区分大小写">
+                    </div>
+                    <div>
+                        <label for="confirm-password">确认密码</label>
+                        <input type="text" id="confirm-password" placeholder="请确认密码">
+                    </div>
+                    <div class="agreement">
+                        <label for=""></label>
+                        <input type="radio" name="agreement" id="agreement">
+                        <span>我已经阅读同意<a href="#">《网站协议》</a></span>
+                    </div>
+                    <div class="form-btn">
+                        <label for=""></label>
+                        <p>免费注册</p>
+                    </div>
+                    <div class="goLogin">
+                        <label for=""></label>
+                        <p>有账号?<a href="#">点击登录</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content区域end -->
+    <!-- footer -->
+    <footer class="container">
+        <div class="row footer-list">
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <dl>
+                    <dt>关于我们</dt>
+                    <dd>
+                        <a href="#">公司介绍</a>
+                    </dd>
+                    <dd>
+                        <a href="#">网站公告</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <dl>
+                    <dt>帮助中心</dt>
+                    <dd>
+                        <a href="#">常见问题</a>
+                    </dd>
+                    <dd>
+                        <a href="#">新手指导</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <dl>
+                    <dt>合作伙伴</dt>
+                    <dd>
+                        <a href="#">湖北楚威</a>
+                    </dd>
+                    <dd>
+                        <a href="#">武汉楚威</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <dl>
+                    <dt>微信公众号</dt>
+                    <dd>
+                        <img src="http://rxwl.oss-cn-hangzhou.aliyuncs.com/staic/hbcw/img/160.jpg" alt="">
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 lxwm">
+                <dl>
+                    <dt>联系我们</dt>
+                    <dd>
+                        <span class="glyphicon glyphicon-earphone"></span>
+                        <span>18986152107</span>
+                    </dd>
+                    <dd>
+                        <span class="glyphicon glyphicon-time"></span>
+                        <span>08:30-17:30(周一到周五)</span>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </footer>
+    <!-- 版权 -->
+    <div class="copyright">
+        <a href="#">鄂ICP备160*******号</a>
+        <span>丨 © Copyright 2019-2022公司注册|企业注册|工商注册|商标查询湖北楚威企业登记代理有限公司</span>
+    </div>
+    <!-- 侧边栏 -->
+    <div class="rightBar">
+        <ul>
+            <li id="phone">
+                <img src="./img/rightNav_phone.png" alt="">
+            </li>
+            <li id="wx">
+                <img src="./img/rightNav_wx.png" alt="">
+            </li>
+            <li class="goTop">
+                <img src="./img/rightNav_db.png" alt="">
+            </li>
+        </ul>
+        <div class="phone">
+            <p>24小时服务热线:</p>
+            <p>18986152107</p>
+        </div>
+        <div class="wx">
+            <p>QQ联系我们:</p>
+            <p>55555555</p>
+            <p>微信联系我们:</p>
+            <p>18986152107</p>
+        </div>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/cpzx.js"></script>
+</body>
+
+</html>
