@@ -71,6 +71,11 @@ input {
     flex-wrap: wrap;
 }
 
+.radio-box ul li input {
+    width: .3rem;
+    height: .3rem;
+}
+
 .input-wrapper {
     text-align: center;
     font-size: .4rem;
