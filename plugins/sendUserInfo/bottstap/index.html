@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <ul class="submit-wrapper">
+        <li>
+            <label>注册地域:</label>
+            <span class="channel-position">随州</span>
+        </li>
+        <li>
+            <label for=""></label>
+            <input type="radio" name="channel-position" value="yes" checked="checked">有注册地址
+            <input type="radio" name="channel-position" value="no">无注册地址
+        </li>
+        <li>
+            <label for="channel-enterprise">企业名称:</label>
+            <input type="text" id="channel-enterprise" class="channel-text company-name" placeholder="如:湖北楚威公司注册有限公司" data-toggle="popover" data-placement="right" data-content="请输入正确的公司名称" autocomplete="off">
+        </li>
+        <li>
+            <label for=""></label>
+            <input type="radio" name="channel-verify" value="yes" checked="checked">已核名
+            <input type="radio" name="channel-verify" value="no">未核名
+        </li>
+        <li>
+            <label for="channel-name">称呼:</label>
+            <input type="text" id="channel-name" class="channel-text name" placeholder="如:王先生,何女士" data-toggle="popover" data-placement="right" data-content="请输入2-6位字符" autocomplete="off">
+        </li>
+        <li>
+            <label for="channel-phone">联系方式:</label>
+            <input type="text" id="channel-phone" class="channel-text phoneNum" placeholder="请输入你的联系方式" data-toggle="popover" data-placement="right" data-content="请输入正确的电话号码" autocomplete="off">
+        </li>
+        <li class="channel-btn">
+            <span>马上联系我们</span>
+        </li>
+    </ul>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="./senduserinfo.js"></script>
+    <script>
+        $('.channel-btn').click(function() {
+
+            var newSendUserInfo = sendUserInfo(this);
+            if (!newSendUserInfo) {
+                return
+            }
+            newSendUserInfo("/tel");
+
+        })
+    </script>
+</body>
+
+</html>
