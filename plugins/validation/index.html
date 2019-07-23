@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="form">
+        测试:<input type="text" id='oInput'>
+        <button id="btn">haha</button>
+    </div>
+
+
+
+    <script src="./index.js"></script>
+    <script>
+
+        
+        btn.onclick = function () {
+            var val = oInput.value;
+            var validation = new Validation();
+
+            var results = validation.results( val, [ 'noEmpty', 'minLength:2', 'maxLength:6'] );
+
+            // .add( 规则名 , 规则函数 ) 添加自定义规则
+            validation.add( 'eleven', function ( val) {
+                if ( val.length === 11) {
+                    return true;
+                }
+                return false;
+            })
+
+            var a = validation.results( val, 'eleven');
+            
+            //要使用正则的时候要在转义字符\前边多加一个转义字符\,要不然识别出来
+            //比如下边的匹配以非数字结尾的字符串,就得写成  \\D$
+            var b = validation.results( val, 'regexp:\\D$');
+
+            console.log( validation.results( val, 'isMobile'));
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
-import '../less/index.less'
-import $ from 'jquery'
-import Swiper from 'swiper'
+import '../less/index.less';
+import $ from 'jquery';
+import Swiper from 'swiper';
 
 let windowHeight = getWindowSize().h;
 
@@ -25,7 +25,7 @@ function swiperInit() {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
+        }
     })
 
     // 服务推荐区域
@@ -40,12 +40,12 @@ function swiperInit() {
             //轮播模式,默认滚动,fade代表淡入淡出
             effect: 'fade',
             fadeEffect: {
-                crossFade: true,
+                crossFade: true
             },
             controller: {
-                control: Swiper1, //控制Swiper1
-            },
-        })
+                control: Swiper1 //控制Swiper1
+            }
+        });
         //Swiper1控制Swiper2，需要在Swiper2初始化后
     Swiper1.controller.control = Swiper2;
 
