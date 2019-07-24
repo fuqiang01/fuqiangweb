@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+a,
+a:link,
+a:hover {
+  text-decoration: none;
+}
+.container {
+  width: 1450px;
+  margin: 0 auto;
+}
+@keyframes subMouse {
+  form {
+    bottom: 10px;
+    opacity: 1;
+  }
+  to {
+    bottom: 50px;
+    opacity: .3;
+  }
+}
+header .topbar-wrapper {
+  background-color: #f67524;
+  color: #fff;
+  font-size: 14px;
+}
+header .topbar-wrapper .topbar {
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .topbar-wrapper .topbar div img {
+  vertical-align: middle;
+}
+header .nav-wrapper {
+  background-color: #fff;
+  width: 100%;
+  z-index: 3;
+}
+header .nav-wrapper.header-hover {
+  top: 0;
+}
+header .nav-wrapper nav {
+  height: 86px;
+  display: flex;
+  justify-content: space-between;
+}
+header .nav-wrapper nav .logo img {
+  height: 80px;
+}
+header .nav-wrapper nav ul {
+  display: flex;
+}
+header .nav-wrapper nav ul li {
+  height: 86px;
+  line-height: 86px;
+}
+header .nav-wrapper nav ul li a {
+  display: inline-block;
+  padding: 0 35px;
+  color: #555;
+}
+header .nav-wrapper nav ul li a.active {
+  color: #f67524;
+}
+header .nav-wrapper nav ul li a:hover {
+  color: #f67524;
+}
+header .nav-wrapper nav ul li:not(last-of-type)::after {
+  content: '/';
+  display: inline-block;
+  color: #aaa;
+}
+.banner {
+  overflow: hidden;
+  position: relative;
+}
+.banner .swiper-wrapper .swiper-slide {
+  cursor: pointer;
+  min-height: 600px;
+  background-position: cover;
+  background-repeat: no-repeat;
+}
+.banner .swiper-wrapper .swiper-slide.slide1 {
+  background-image: url('../img/banner.jpg');
+}
+.banner .swiper-wrapper .swiper-slide.slide2 {
+  background-image: url('../img/banner2.jpg');
+}
+.banner .swiper-wrapper .swiper-slide.slide3 {
+  background-image: url('../img/banner3.jpg');
+}
+.banner .swiper-wrapper .swiper-slide.slide4 {
+  background-image: url('../img/banner4.jpg');
+}
+.banner .sub-mouse {
+  position: absolute;
+  z-index: 3;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: subMouse 1s alternate infinite;
+}

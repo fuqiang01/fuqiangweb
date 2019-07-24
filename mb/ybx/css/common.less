@@ -1,0 +1,133 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+ul{
+    list-style: none;
+}
+a,a:link,a:hover{
+    text-decoration: none;
+}
+.container{
+    width: 1450px;
+    margin: 0 auto;
+}
+
+
+
+@keyframes subMouse {
+    form{
+        bottom: 10px;
+        opacity: 1;
+    }
+    to{
+        bottom: 50px;
+        opacity: .3;
+    }
+}
+
+
+
+
+
+@mainC:#f67524;
+
+// header
+header{
+    .topbar-wrapper{
+        background-color: @mainC;
+        color: #fff;
+        font-size: 14px;
+        .topbar{
+            height: 38px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            div{
+                img{
+                    vertical-align: middle;
+                }
+            }
+        }
+        
+    }
+    .nav-wrapper{
+        background-color: #fff;
+        // position: fixed;
+        // top: 38px;
+        width: 100%;
+        z-index: 3;
+        &.header-hover{
+            top: 0;
+        }
+        nav{
+            height: 86px;
+            display: flex;
+            justify-content: space-between;
+            .logo{
+                img{
+                    height: 80px;
+                }
+            }
+            ul{
+                display: flex;
+                li{
+                    height: 86px;
+                    line-height: 86px;
+                    a{
+                        display: inline-block;
+                        padding: 0 35px;
+                        color: #555;
+                        &.active{
+                            color: @mainC;
+                        }
+                        &:hover{
+                            color: @mainC;
+                        }
+                    }
+                    &:not(last-of-type)::after{
+                        content: '/';
+                        display: inline-block;
+                        color: #aaa;
+                    }
+                }
+            }
+        }
+    }
+}
+// banner
+.banner{
+    // margin-top: 86px;
+    overflow: hidden;
+    position: relative;
+    .swiper-wrapper{
+        .swiper-slide{
+            cursor: pointer;
+            min-height: 600px;
+            background-position: cover;
+            background-repeat: no-repeat;
+            &.slide1{
+                background-image: url('../img/banner.jpg');
+            }
+            &.slide2{
+                background-image: url('../img/banner2.jpg');
+            }
+            &.slide3{
+                background-image: url('../img/banner3.jpg');
+            }
+            &.slide4{
+                background-image: url('../img/banner4.jpg');
+            }
+        }
+    }
+    .sub-mouse{
+        position: absolute;
+        z-index: 3;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: subMouse 1s alternate infinite;
+    }
+}
