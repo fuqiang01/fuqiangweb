@@ -26,7 +26,7 @@ p.check-details{
 }
 @keyframes reverseRun{
     0%{transform: rotateZ(0deg);}
-    100%{transform: rotateZ(-90deg);}
+    100%{transform: rotateZ(90deg);}
 }
 
 // content
@@ -317,16 +317,26 @@ p.check-details{
         }
         .sol-right{
             width: 50%;
-            padding: 250px 100px 0;
+            padding: 120px 100px;
             box-sizing: border-box;
             display: flex;
             flex-wrap: wrap;
             .item{
                 width: 40%;
-                border: 1px solid red;
+                border: 1px solid #fff;
                 text-align: center;
                 position: relative;
                 overflow: hidden;
+                &:nth-of-type(1){
+                    border-bottom: none;
+                    border-right: none;
+                }
+                &:nth-of-type(2){
+                    border-bottom: none;
+                }
+                &:nth-of-type(3){
+                    border-right: none;
+                }
                 img{
                     display: block;
                     margin: 0 auto;
@@ -383,7 +393,7 @@ p.check-details{
                 &.to-left{
                     &::before{
                         content: '';
-                        transform-origin: 100% 0;
+                        transform-origin: 0 0;
                         transform: rotateZ(0deg);
                         animation: reverseRun .3s forwards;
                     }
@@ -391,7 +401,7 @@ p.check-details{
                 &.to-right{
                     &::before{
                         content: '';
-                        transform-origin: 0 100%;
+                        transform-origin: 100% 100%;
                         transform: rotateZ(0deg);
                         animation: reverseRun .3s forwards;
                     }
@@ -399,7 +409,7 @@ p.check-details{
                 &.to-top{
                     &::before{
                         content: '';
-                        transform-origin: 0 0;
+                        transform-origin: 100% 0;
                         transform: rotateZ(0deg);
                         animation: reverseRun .3s forwards;
                     }
@@ -407,7 +417,7 @@ p.check-details{
                 &.to-bottom{
                     &::before{
                         content: '';
-                        transform-origin: 100% 100%;
+                        transform-origin: 0 100%;
                         transform: rotateZ(0deg);
                         animation: reverseRun .3s forwards;
                     }

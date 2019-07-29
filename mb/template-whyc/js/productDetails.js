@@ -1,22 +1,25 @@
-getProductListData();
 
 
-function getProductListData() {
+// getProductListData();
+pageInit(productListData);
 
-    $.ajax({
-        url: "http://demo.cwgszc.com/template/moke/product.json",
-        type: "get",
-        dataType: 'json',
-        success: function(res) {
-            // renderProductList(res.gszc);
-            pageInit(res)
-        },
-        error: function(err) {
-            console.log(err)
-        }
 
-    })
-}
+// function getProductListData() {
+
+//     $.ajax({
+//         url: "http://demo.cwgszc.com/template/moke/product.json",
+//         type: "get",
+//         dataType: 'json',
+//         success: function(res) {
+//             // renderProductList(res.gszc);
+//             pageInit(res)
+//         },
+//         error: function(err) {
+//             console.log(err)
+//         }
+
+//     })
+// }
 
 
 function pageInit(data) {

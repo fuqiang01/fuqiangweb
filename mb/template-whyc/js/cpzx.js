@@ -1,10 +1,9 @@
-var productListData = null;
-
 
 function init() {
     bindEvent();
-    getProductListData();
+    // getProductListData();
     $('.product-directory dt').eq(0).trigger('click');
+    renderProductList(productListData.gszc);
 }
 
 init();
@@ -43,23 +42,22 @@ function bindEvent() {
 
 
 
+// function getProductListData() {
 
-function getProductListData() {
+//     $.ajax({
+//         url: "http://demo.cwgszc.com/template/moke/product.json",
+//         type: "get",
+//         dataType: 'json',
+//         success: function(res) {
+//             productListData = res;
+//             renderProductList(res.gszc);
+//         },
+//         error: function(err) {
+//             console.log(err)
+//         }
 
-    $.ajax({
-        url: "http://demo.cwgszc.com/template/moke/product.json",
-        type: "get",
-        dataType: 'json',
-        success: function(res) {
-            productListData = res;
-            renderProductList(res.gszc);
-        },
-        error: function(err) {
-            console.log(err)
-        }
-
-    })
-}
+//     })
+// }
 
 
 function renderProductList(data) {
