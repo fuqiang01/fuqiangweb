@@ -1,0 +1,332 @@
+// banner
+.carousel-indicators{
+    top: 590px;
+    li{
+        width: 46px;
+        height: 6px;
+        border-radius: 0;
+        margin: 0 2px;
+        padding: 0;
+        border: none;
+        background: rgba(255,255,255,.2);
+        &.active{
+            width: 46px;
+            height: 6px;
+            background: #30C8C6;
+        }
+    }
+}
+
+.order{
+    position: absolute;
+    width: 100%;
+    top: 630px;
+    padding-bottom: 100px;
+    z-index: 16;
+    h4{
+        color: #fff;
+        padding: 50px 0;
+    }
+    form{
+        position: absolute;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 60px;
+        padding: 10px 0 10px 30px;
+        background: #fff;
+        .address{
+            padding: 0 20px;
+            color: #555;
+            cursor: pointer;
+        }
+        .glyphicon{
+            margin-right: 10px;
+            color: #30C8C6;
+            transition: all .3s;
+            cursor: pointer;
+            &.active{
+                transform: rotate(90deg);
+            }
+        }
+        input{
+            border: none;
+            border-left: 1px solid #ccc;
+            padding: 0 20px;
+            outline: none;
+        }
+        button{
+            border: none;
+            background: #30c8c6;
+            color: #fff;
+            height: 60px;
+            margin-top: -10px;
+            padding: 0 30px;
+        }
+        ul{
+            display: none;
+            background: #fff;
+            position: absolute;
+            border: 1px solid #ccc;
+            border-top: none;
+            top: 60px;
+            left: 0;
+            width: 120px;
+            li{
+                padding: 5px 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
+// content
+.content{
+    background: #070a3c;
+    // 金牌财税服务
+    .caishui{
+        h1{
+            text-align: center;
+            color: #fff;
+            padding: 30px 0;
+            span{
+                color: #F5638C;
+            }
+        }
+        .row{
+            .item{
+                border: 10px solid #070a3c;
+                padding: 0 0 20px 0;
+                &:nth-of-type(1){
+                    background: linear-gradient(132deg, #8e51fa 0%, #c377ff 100%);
+                }
+                &:nth-of-type(2){
+                    background: linear-gradient(131deg, #e45c53 0%, #ff9d97 100%);
+                }
+                &:nth-of-type(3){
+                    background: linear-gradient(132deg, #729eff 0%, #81dcff 100%);
+                }
+                &:nth-of-type(4){
+                    background: linear-gradient(132deg, #ff5180 0%, #ff8bff 100%);
+                }
+                &:nth-of-type(5){
+                    background: linear-gradient(132deg, #5fbcf0 0%, #4de5f2 100%);
+                }
+                &:nth-of-type(6){
+                    background: linear-gradient(132deg, #faa151 0%, #fdc788 100%);
+                }
+                &:nth-of-type(7){
+                    background: linear-gradient(132deg, #ea6447 0%, #f99e71 100%);
+                }
+                &:nth-of-type(8){
+                    background: linear-gradient(-49deg, #6fe6aa 0%, #60c8c6 100%);
+                }
+                &:nth-of-type(9){
+                    background: linear-gradient(-41deg, #a35ef6 0%, #7b72f6 100%);
+                }
+                .flag{
+                    font-size: 18px;
+                    background: url('../img/im_bg_gold.png') left no-repeat;
+                    background-size:auto 100% ;
+                    padding: 10px 0 10px 20px;
+                    color: #A9763E;
+                }
+                .col-md-5{
+                    text-align: center;
+                    padding: 0;
+                    margin-top: -30px;
+                }
+                h3{
+                    color: #FEF502;
+                }
+                p{
+                    color: #fff;
+                    font-size: 16px;
+                }
+                button{
+                    border: 2px solid #fff;
+                    background: transparent;
+                    color: #fff;
+                    padding: 8px 15px;
+                    border-radius: 5px;
+                }
+                .white-title{
+                    padding:0 20px;
+                    font-size: 24px;
+                    &.last-row{
+                        margin: -30px 0 30px;
+                    }
+                }
+                .white-p{
+                    padding:0 20px;
+                }
+                .col-md-6{
+                    p{
+                        width: 100%;
+                        height: 40px;
+                        line-height: 40px;
+                        background: #fff;
+                        cursor: pointer;
+                    }
+                    &.font-color1{
+                        p{
+                            color: #EA6447;
+                            &:hover{
+                                background: #e04b2b;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    &.font-color2{
+                        p{
+                            color: #60C8C6;
+                            &:hover{
+                                background: #47b7be;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    &.font-color3{
+                        p{
+                            color: #9068f6;
+                            &:hover{
+                                background: #7b53e1;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 优势
+    .advantage{
+        h1{
+            text-align: center;
+            color: #fff;
+            padding: 50px 0;
+            span{
+                color: #F5638C;
+            }
+        }
+        .adv-info{
+            height: 550px;
+            background: url('../img/im_fwysh_03.png') center no-repeat;
+            position: relative;
+            div{
+                position: absolute;
+                color: #fff;
+                width: 260px;
+                height: 150px;
+                padding: 25px 50px;
+                &:nth-of-type(1){
+                    top: 21px;
+                    left: 40px;;
+                    background-image: url('../img/im_bg_jgtm.png');
+                }
+                &:nth-of-type(2){
+                    top: 203px;
+                    left: 0;
+                    background-image: url('../img/im_bg_zsch.png');
+                }
+                &:nth-of-type(3){
+                    top: 392px;
+                    left: 73px;
+                    background-image: url('../img/im_bg_xxaq.png');
+                }
+                &:nth-of-type(4){
+                    top: -10px;
+                    left: 808px;
+                    background-image: url('../img/im_bg_cwyj.png');
+                }
+                &:nth-of-type(5){
+                    top: 172px;
+                    left: 880px;
+                    background-image: url('../img/im_bg_dyhd.png');
+                }
+                &:nth-of-type(6){
+                    top: 354px;
+                    left: 841px;
+                    background-image: url('../img/im_bg_fxpf.png');
+                }
+            }
+        }
+    }
+    // 大家的选择
+    .choice{
+        h1{
+            text-align: center;
+            color: #fff;
+            padding-top: 50px;
+            span{
+                color: #F5638C;
+            }
+        }
+        .cho-info-wrapper{
+            height: 760px;
+            background: url('../img/im_ds_zgdt_02.png') center no-repeat;
+            .cho-info{
+                color: #fff;
+                .top{
+                    width: 510px;
+                    height: 150px;
+                    background: linear-gradient(90deg, #2d25a8 0%, #02d2cf 100%);
+                    padding: 30px 50px;
+                    margin:50px 0 30px;
+                    h4{
+                        font-size: 25px;
+                    }
+                    h3{
+                        font-size: 35px;
+                    }
+                }
+                ul{
+                    width: 510px;
+                    li{
+                        float: left;
+                        width: 240px;
+                        text-align: center;
+                        margin: 5px;
+                        &:not(:last-of-type){
+                            background: #fff;
+                            color: #898F9A;
+                            img{
+                                padding: 20px 0;
+                            }
+                        }
+                        button{
+                            background: #31C9C6;
+                            border: none;
+                            padding: 15px 50px;
+                            border-radius: 5px;
+                            margin-top: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 新闻
+    .news{
+        h1{
+            text-align: center;
+            color: #fff;
+            margin: -100px 0 50px;
+            span{
+                color: #F5638C;
+            }
+        }
+        .row{
+            h4{
+                background-image: url('../img/im_dljz.png');
+                background-repeat: no-repeat;
+                background: auto 100%;
+                padding: 20px;
+                color: #fff;
+            }
+            ul{
+                background: #fff;
+                padding-top: 100px;
+            }
+        }
+    }
+}
