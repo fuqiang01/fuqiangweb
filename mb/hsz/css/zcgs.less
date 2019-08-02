@@ -1,0 +1,339 @@
+
+.content{
+    background: rgb(10,10,101);
+    // 核名
+    .order{
+        width: 100%;
+        padding-bottom: 100px;
+        h4{
+            color: #fff;
+            padding: 50px 0;
+        }
+        form{
+            position: absolute;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 80px;
+            padding-left:50px;
+            background: #fff;
+            .address{
+                padding: 0 20px;
+                color: #555;
+                cursor: pointer;
+            }
+            .glyphicon{
+                margin-right: 10px;
+                color: #30C8C6;
+                transition: all .3s;
+                cursor: pointer;
+                &.active{
+                    transform: rotate(90deg);
+                }
+            }
+            input{
+                border: none;
+                border-left: 1px solid #ccc;
+                padding: 0 20px;
+                outline: none;
+            }
+            button{
+                border: none;
+                background: #30c8c6;
+                color: #fff;
+                height: 80px;
+                padding: 0 50px;
+                font-size: 18px;
+            }
+            ul{
+                display: none;
+                background: #fff;
+                position: absolute;
+                border: 1px solid #ccc;
+                border-top: none;
+                top: 60px;
+                left: 0;
+                width: 120px;
+                li{
+                    padding: 5px 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    // 服务优势
+    .advantage{
+        &>div{
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .adv-left{
+                float: left;
+                width: 590px;
+            }
+            .adv-right{
+                float: right;
+                width: 530px;
+                background: #1c1c77;
+                padding: 20px 50px;
+                li{
+                    margin: 30px 0;
+                    position: relative;
+                    img{
+                        position: absolute;
+                        vertical-align: middle;
+                    }
+                    .text{
+                        padding-left: 70px;
+                        h4{
+                            color: #30c8c6;
+                        }
+                        p{
+                            color: #b3bbc8;
+                        }
+                    }
+                }
+            }
+        }
+        &>ul{
+            background: #fff;
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            li{
+                display: inline-block;
+                padding: 0 60px;
+                p{
+                    color: #555;
+                    padding: 15px 0;
+                    margin: 0;
+                }
+                &:not(:last-of-type){
+                    border-right: 1px solid #eee;
+                }
+            }
+        }
+    }
+    // 需要的资料
+    .data{
+        ul{
+            text-align: center;
+            li{
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 20px;
+                p{
+                    color: #fff;
+                    padding: 15px 0;
+                }
+            }
+        }
+    }
+    // 注册流程
+    .process{
+        ul{
+            text-align: center;
+            li{
+                display: inline-block;
+                background: #fff;
+                width: 210px;
+                margin: 0 5px;
+                height: 210px;
+                padding: 30px 10px;
+                border-radius: 5px;
+                .img{
+                    height: 50px;
+                }
+                h4{
+                    padding: 10px 0;
+                }
+                p{
+                    color: #777;
+                }
+                &:nth-of-type(1){
+                    .img{
+                        background: url('../img/icon_nor_hmcx.png') center no-repeat;
+                    }   
+                }
+                &:nth-of-type(2){
+                    .img{
+                        background: url('../img/icon_tjcl_nor.png') center no-repeat;
+                    }   
+                }
+                &:nth-of-type(3){
+                    .img{
+                        background: url('../img/icon_lqzz_nor.png') center no-repeat;
+                    }   
+                }
+                &:nth-of-type(4){
+                    .img{
+                        background: url('../img/icon_kz_nor.png') center no-repeat;
+                    }   
+                }
+                &:nth-of-type(5){
+                    .img{
+                        background: url('../img/icon_cszx_nor.png') center no-repeat;
+                    }   
+                }
+                &:hover{
+                    background: #30c8c6;
+                    color: #fff;
+                    p{
+                        color: #fff;
+                    }
+                    &:nth-of-type(1){
+                        .img{
+                            background: url('../img/icon_hmcx_chose.png') center no-repeat;
+                        }   
+                    }
+                    &:nth-of-type(2){
+                        .img{
+                            background: url('../img/icon_tjcl_chose.png') center no-repeat;
+                        }   
+                    }
+                    &:nth-of-type(3){
+                        .img{
+                            background: url('../img/icon_lqzz_chose.png') center no-repeat;
+                        }   
+                    }
+                    &:nth-of-type(4){
+                        .img{
+                            background: url('../img/icon_kz_chose.png') center no-repeat;
+                        }   
+                    }
+                    &:nth-of-type(5){
+                        .img{
+                            background: url('../img/im_cxzix_chose.png') center no-repeat;
+                        }   
+                    }
+                }
+            }
+        }
+    }
+    // 您能获得资料
+    .information{
+        ul{
+            text-align: center;
+            li{
+                display: inline-block;
+                margin: 10px;
+                .img{
+                    width: 200px;
+                    height: 265px;
+                    line-height: 225px;
+                    padding: 20px;
+                    background: #1c1c77;
+                    img{
+                        width: 100%;
+                    }
+                }
+                p{
+                    color: #fff;
+                    font-size: 18px;
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+    // 常见问题
+    .problem{
+        ul{
+            li{
+                float: left;
+                width: 510px;
+                margin: 15px 25px;
+                position: relative;
+                background: #fff;
+                padding: 50px 30px 30px;
+                border-radius: 5px;
+                div{
+                    margin-bottom: 20px;
+                    img{
+                        vertical-align: middle;
+                        position: absolute;
+                    }
+                    span{
+                        display: inline-block;
+                        margin-left: 40px;
+                        vertical-align: middle;
+                        color: #555;
+                    }
+                    &:first-of-type{
+                        span{
+                            color: #30c8c6;
+                            font-size: 15px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .problem-btn{
+            width: 250px;
+            background: -webkit-gradient(linear, left top, right top, from(#f7cd6e), to(#ff8f2c));
+            color: #fff;
+            margin: 30px auto;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+    }
+    // 我们还提供
+    .more{
+        ul{
+            text-align: center;
+            padding-bottom: 50px;
+            li{
+                display: inline-block;
+                background: #fff;
+                border-radius: 5px;
+                width: 150px;
+                height: 150px;
+                margin: 0 10px;
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    color: #777;
+                    img{
+                        padding: 25px 0 10px;
+                    }
+                    span{
+                        display: block;
+                    }
+                }
+                &:hover{
+                    a{
+                        color: #fff;
+                    }
+                }
+                &:nth-of-type(1):hover{
+                    background: #f5b200;
+                }
+                &:nth-of-type(2):hover{
+                    background: #ff9c79;
+                }
+                &:nth-of-type(3):hover{
+                    background: #45c678;
+                }
+                &:nth-of-type(4):hover{
+                    background: #6799fd;
+                }
+                &:nth-of-type(5):hover{
+                    background: #28a1f8;
+                }
+                &:nth-of-type(6):hover{
+                    background: #21ceb2;
+                }
+            }
+        }
+    }
+}
+
+
+
+

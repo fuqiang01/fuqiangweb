@@ -1,0 +1,286 @@
+.content {
+  background: #0a0a65;
+}
+.content .order {
+  width: 100%;
+  padding-bottom: 100px;
+}
+.content .order h4 {
+  color: #fff;
+  padding: 50px 0;
+}
+.content .order form {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 80px;
+  padding-left: 50px;
+  background: #fff;
+}
+.content .order form .address {
+  padding: 0 20px;
+  color: #555;
+  cursor: pointer;
+}
+.content .order form .glyphicon {
+  margin-right: 10px;
+  color: #30C8C6;
+  transition: all .3s;
+  cursor: pointer;
+}
+.content .order form .glyphicon.active {
+  transform: rotate(90deg);
+}
+.content .order form input {
+  border: none;
+  border-left: 1px solid #ccc;
+  padding: 0 20px;
+  outline: none;
+}
+.content .order form button {
+  border: none;
+  background: #30c8c6;
+  color: #fff;
+  height: 80px;
+  padding: 0 50px;
+  font-size: 18px;
+}
+.content .order form ul {
+  display: none;
+  background: #fff;
+  position: absolute;
+  border: 1px solid #ccc;
+  border-top: none;
+  top: 60px;
+  left: 0;
+  width: 120px;
+}
+.content .order form ul li {
+  padding: 5px 0;
+  cursor: pointer;
+}
+.content .advantage > div::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.content .advantage > div .adv-left {
+  float: left;
+  width: 590px;
+}
+.content .advantage > div .adv-right {
+  float: right;
+  width: 530px;
+  background: #1c1c77;
+  padding: 20px 50px;
+}
+.content .advantage > div .adv-right li {
+  margin: 30px 0;
+  position: relative;
+}
+.content .advantage > div .adv-right li img {
+  position: absolute;
+  vertical-align: middle;
+}
+.content .advantage > div .adv-right li .text {
+  padding-left: 70px;
+}
+.content .advantage > div .adv-right li .text h4 {
+  color: #30c8c6;
+}
+.content .advantage > div .adv-right li .text p {
+  color: #b3bbc8;
+}
+.content .advantage > ul {
+  background: #fff;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+.content .advantage > ul li {
+  display: inline-block;
+  padding: 0 60px;
+}
+.content .advantage > ul li p {
+  color: #555;
+  padding: 15px 0;
+  margin: 0;
+}
+.content .advantage > ul li:not(:last-of-type) {
+  border-right: 1px solid #eee;
+}
+.content .data ul {
+  text-align: center;
+}
+.content .data ul li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+.content .data ul li p {
+  color: #fff;
+  padding: 15px 0;
+}
+.content .process ul {
+  text-align: center;
+}
+.content .process ul li {
+  display: inline-block;
+  background: #fff;
+  width: 210px;
+  margin: 0 5px;
+  height: 210px;
+  padding: 30px 10px;
+  border-radius: 5px;
+}
+.content .process ul li .img {
+  height: 50px;
+}
+.content .process ul li h4 {
+  padding: 10px 0;
+}
+.content .process ul li p {
+  color: #777;
+}
+.content .process ul li:nth-of-type(1) .img {
+  background: url('../img/icon_nor_hmcx.png') center no-repeat;
+}
+.content .process ul li:nth-of-type(2) .img {
+  background: url('../img/icon_tjcl_nor.png') center no-repeat;
+}
+.content .process ul li:nth-of-type(3) .img {
+  background: url('../img/icon_lqzz_nor.png') center no-repeat;
+}
+.content .process ul li:nth-of-type(4) .img {
+  background: url('../img/icon_kz_nor.png') center no-repeat;
+}
+.content .process ul li:nth-of-type(5) .img {
+  background: url('../img/icon_cszx_nor.png') center no-repeat;
+}
+.content .process ul li:hover {
+  background: #30c8c6;
+  color: #fff;
+}
+.content .process ul li:hover p {
+  color: #fff;
+}
+.content .process ul li:hover:nth-of-type(1) .img {
+  background: url('../img/icon_hmcx_chose.png') center no-repeat;
+}
+.content .process ul li:hover:nth-of-type(2) .img {
+  background: url('../img/icon_tjcl_chose.png') center no-repeat;
+}
+.content .process ul li:hover:nth-of-type(3) .img {
+  background: url('../img/icon_lqzz_chose.png') center no-repeat;
+}
+.content .process ul li:hover:nth-of-type(4) .img {
+  background: url('../img/icon_kz_chose.png') center no-repeat;
+}
+.content .process ul li:hover:nth-of-type(5) .img {
+  background: url('../img/im_cxzix_chose.png') center no-repeat;
+}
+.content .information ul {
+  text-align: center;
+}
+.content .information ul li {
+  display: inline-block;
+  margin: 10px;
+}
+.content .information ul li .img {
+  width: 200px;
+  height: 265px;
+  line-height: 225px;
+  padding: 20px;
+  background: #1c1c77;
+}
+.content .information ul li .img img {
+  width: 100%;
+}
+.content .information ul li p {
+  color: #fff;
+  font-size: 18px;
+  padding: 20px 0;
+}
+.content .problem ul li {
+  float: left;
+  width: 510px;
+  margin: 15px 25px;
+  position: relative;
+  background: #fff;
+  padding: 50px 30px 30px;
+  border-radius: 5px;
+}
+.content .problem ul li div {
+  margin-bottom: 20px;
+}
+.content .problem ul li div img {
+  vertical-align: middle;
+  position: absolute;
+}
+.content .problem ul li div span {
+  display: inline-block;
+  margin-left: 40px;
+  vertical-align: middle;
+  color: #555;
+}
+.content .problem ul li div:first-of-type span {
+  color: #30c8c6;
+  font-size: 15px;
+}
+.content .problem .problem-btn {
+  width: 250px;
+  background: -webkit-gradient(linear, left top, right top, from(#f7cd6e), to(#ff8f2c));
+  color: #fff;
+  margin: 30px auto;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.content .more ul {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.content .more ul li {
+  display: inline-block;
+  background: #fff;
+  border-radius: 5px;
+  width: 150px;
+  height: 150px;
+  margin: 0 10px;
+}
+.content .more ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #777;
+}
+.content .more ul li a img {
+  padding: 25px 0 10px;
+}
+.content .more ul li a span {
+  display: block;
+}
+.content .more ul li:hover a {
+  color: #fff;
+}
+.content .more ul li:nth-of-type(1):hover {
+  background: #f5b200;
+}
+.content .more ul li:nth-of-type(2):hover {
+  background: #ff9c79;
+}
+.content .more ul li:nth-of-type(3):hover {
+  background: #45c678;
+}
+.content .more ul li:nth-of-type(4):hover {
+  background: #6799fd;
+}
+.content .more ul li:nth-of-type(5):hover {
+  background: #28a1f8;
+}
+.content .more ul li:nth-of-type(6):hover {
+  background: #21ceb2;
+}

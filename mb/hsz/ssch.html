@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/ssch.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="container">
+        <div class="logo">
+            <a href="/">
+                <img src="./img/logo.jpg" alt="logo">
+            </a>
+        </div>
+        <ul>
+            <li class="active">
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">代理记账</a>
+            </li>
+            <li>
+                <a href="#">公司注册</a>
+            </li>
+            <li>
+                <a href="#">公司审计</a>
+            </li>
+            <li>
+                <a href="#">税收筹划</a>
+            </li>
+            <li>
+                <a href="#">财税咨询</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">服务热线:111-111-111</a>
+            </li>
+        </ul>
+    </header>
+    <!-- banner -->
+    <div class="banner">
+        <img src="./img/ssch_banner.jpg" alt="">
+        <div class="banner-form">
+            <h2>定制节税筹划方案</h2>
+            <input type="text" placeholder="怎么称呼您,如:王先生">
+            <input type="text" placeholder="请输入您的联系方式">
+            <p class="banner-btn">一键获取</p>
+        </div>
+    </div>
+    <!-- content -->
+    <div class="content">
+        <!-- 定制方案 -->
+        <div class="custom container">
+            <h1>定制<span>税收筹划方案</span></h1>
+            <div class="custom-info">
+                <div class="custom-item">
+                    <div class="title">
+                        <h3>个人税收筹划</h3>
+                        <p>可根据实际情况提供个税筹划方案，在合规合法的情况下，减少个人所得税纳税额，合理节税</p>
+                    </div>
+                    <ul>
+                        <li>高新纳税筹划</li>
+                        <li>大额佣金筹划</li>
+                        <li>项目奖金筹划</li>
+                        <li>年终奖筹划</li>
+                        <li>股份分红筹划</li>
+                        <li>知识产权报酬筹划</li>
+                        <li>财产租赁收入筹划</li>
+                        <li>网红收入筹划</li>
+                        <li>其他大额收入筹划</li>
+                    </ul>
+                </div>
+                <div class="custom-item">
+                    <div class="title">
+                        <h3>企业税收筹划</h3>
+                        <p>企业需要按照相应的法律法规缴纳如：企业所得税、增值税等，通过合理的税收筹划，可以帮企业节税并享受相关福利：</p>
+                    </div>
+                    <ul>
+                        <li>税惠地选择</li>
+                        <li>经营研发费用筹划</li>
+                        <li>重大涉税项目筹划</li>
+                        <li>纳税主体选择筹划</li>
+                        <li>营收分配筹划</li>
+                        <li>税惠政策选择</li>
+                        <li>股权转让税务筹划</li>
+                        <li>其他类型</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 筹划方案 -->
+        <div class="planning container">
+            <h1>湖北楚威<span>税务筹划方案</span></h1>
+            <div class="planning-info">
+                <div class="pla-left">
+                    <p id="geren" class="active">个人所得税税后筹划</p>
+                    <p id="qiye">企业所得税税收筹划</p>
+                </div>
+                <div class="pla-right">
+                    <div class="geren active">
+                        <h3>某公司高管</h3>
+                        <p>王先生为某互联网公司总经理 , <span class="line"><span>年收入为400万元，不考虑缴纳社保及公积金计算王先生应缴纳的个税.</span></span></p>
+                        <ul>
+                            <li>
+                                <h4>税务筹划前:</h4>
+                                <p>年缴纳个人所得税：</p>
+                                <p class="flag"><span class="line"><span>13.5*12=162万元</span></span></p>
+                                <p class="flag">税后收入:<span class="line"><span>400-162=238万元</span></span> </p>
+                            </li>
+                            <li>
+                                <h4>税务筹划后:</h4>
+                                <p>年缴纳个人所得税：</p>
+                                <p class="flag"><span class="line"><span>400*10%*35%-1.475=12.5万元</span></span></p>
+                                <p class="flag">税后收入:<span class="line"><span>400-12.5=387.5万元</span></span> </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="qiye">
+                            <h3>某咨询有限公司</h3>
+                            <p>某咨询有限公司为提供咨询服务， <span class="line"><span>2018年收入为3亿元，费用成本1亿元，利润为2亿元.</span></span></p>
+                            <ul>
+                                <li>
+                                    <h4>税务筹划前:</h4>
+                                    <p>缴纳企业所得税：</p>
+                                    <p class="flag"><span class="line"><span>2亿*25%=5000万元</span></span></p>
+                                </li>
+                                <li>
+                                    <h4>税务筹划后:</h4>
+                                    <p>缴纳企业所得税：</p>
+                                    <p class="flag"><span class="line"><span>享受企业所得税相关政策，企业所得税为0</span></span></p>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+            <p>*筹划案例仅供参考，实际筹划问题请咨询客服</p>
+            <div class="pla-img">
+                <img src="./img/im_banner_ljfw.jpg" alt="">
+            </div>
+        </div>
+        <!-- 服务流程 -->
+        <div class="process container">
+            <h1>服务<span>流程</span></h1>
+            <div class="pro-info">
+                <div class="pro-item">
+                    <h3>筹划咨询</h3>
+                    <p>确定您需要的个税筹划或企税筹划的服务和意向</p>
+                </div>
+                <div class="pro-item">
+                    <h3>分析业务</h3>
+                    <p>拆解需求，根据需求定制税务筹划方案</p>
+                </div>
+                <div class="pro-item">
+                    <h3>签署合同</h3>
+                    <p>确保数据保密及其他客户享有的权利得到保障</p>
+                </div>
+                <div class="pro-item">
+                    <h3>材料交接</h3>
+                    <p>进行材料的交接，税务筹划团队准备落地筹划方案</p>
+                </div>
+                <div class="pro-item">
+                    <h3>开始节税</h3>
+                    <p>开始节税，筹划团队和财税专家全程跟进解决问题</p>
+                </div>
+                <div class="pro-item">
+                    <h3>售后服务</h3>
+                    <p>7*24小时在线客服，保证售后无忧</p>
+                </div>
+            </div>
+        </div>
+        <!-- 常见问题 -->
+        <div class="problem">
+            <h1>代理记账常见<span>问题</span></h1>
+            <ul class="container">
+                <li>
+                    <div>
+                        <img src="./img/im_quetsion.png" alt="">
+                        <span>企业所得税税收筹划合法吗？</span>
+                    </div>
+                    <div>
+                        <img src="./img/im_answer.png" alt="">
+                        <span>慧算账做的所有税务筹划相关的业务都是在合法合规的前提下，通过不同的筹划方案帮助客户实现节税降负，节税筹划并不是偷税漏税，所以是合法的。</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="./img/im_quetsion.png" alt="">
+                        <span>网红、自由职业者的个人所得税税收筹划可以做吗？</span>
+                    </div>
+                    <div>
+                        <img src="./img/im_answer.png" alt="">
+                        <span>可以的，可根据自由职业者的收入类型以及是否有注册公司等情况具体的做税务筹划方案，通过方案的落地帮助客户在合法合规的前提下，降低税负。</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="./img/im_quetsion.png" alt="">
+                        <span>个人所得税税收筹划一般的费用是多少？</span>
+                    </div>
+                    <div>
+                        <img src="./img/im_answer.png" alt="">
+                        <span>个税筹划的费用要根据客户的需要做筹划方案的收入类型和实际筹划额及其他因素来决定，您可以报名或咨询在线客服了解。我们会安排您所在地区的财税顾问第一时间联系到您</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="./img/im_quetsion.png" alt="">
+                        <span>税收筹划业务是限地区还是全国都可以？</span>
+                    </div>
+                    <div>
+                        <img src="./img/im_answer.png" alt="">
+                        <span>全国都可以做的，您可以选择报名或在线客服咨询，我们会安排您所在地区的财税顾问第一时间联系到您，明确需求后，由税筹团队根据需要做税收筹划方案，开始帮您节税。</span>
+                    </div>
+                </li>
+            </ul>
+            <p class="problem-btn">咨询更多问题</p>
+        </div>
+        <!-- 我们还提供 -->
+        <div class="more container">
+            <h1>我们还<span>提供</span></h1>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./img/icon_gszc (1).png" alt="">
+                        <span>公司注册</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/icon_gssj (1).png" alt="">
+                        <span>公司审计</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/icon_ckts.png" alt="">
+                        <span>出口退税</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/icon_gshz.png" alt="">
+                        <span>工商换照</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/icon_gsnj.png" alt="">
+                        <span>工商年检</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/icon_qingchu.png" alt="">
+                        <span>汇算清缴</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--页尾-->
+    <div class="footer">
+        <!--优点-->
+        <div class="footer-benefit container">
+            <ul>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="./img/benefit1_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>品质保证</h4>
+                        <p>15年以上财税经验积累</p>
+                        <p>国内获IDG投资互联网财税企业</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="./img/benefit2_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>专业实力</h4>
+                        <p>资深财税团队</p>
+                        <p>专业会计团队</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="./img/benefit3_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>安全无忧</h4>
+                        <p>2048位顶级证书</p>
+                        <p>银行级别的系统安全</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="benefit-icon">
+                        <img src="./img/benefit4_bg.png">
+                    </div>
+                    <div class="benefit-right">
+                        <h4>多元服务</h4>
+                        <p>工商注册公司托管、税务代办</p>
+                        <p>财务规划和咨询等增值服务</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--列表-->
+        <div class="footer-list-wrapper">
+            <div class="footer-list container">
+                <div class="fList-left col-md-5 col-sm-5 col-xs-5">
+                    <h4>财税服务</h4>
+                    <a href="#">代理记账</a>
+                    <a href="#">公司注册</a>
+                    <a href="#">公司审计</a>
+                    <a href="#">税收筹划</a>
+                    <a href="#">财税资讯</a>
+                </div>
+                <div class="fList-center col-md-2 col-sm-2 col-xs-2">
+                    <img src="./img/wx_code.jpg" alt="">
+                    <p>湖北楚威官方微信</p>
+                </div>
+                <ul class="fList-right col-md-5 col-sm-5 col-xs-5">
+                    <li>
+                        <div>
+                            <img src="./img/hot_line_icon2.png" alt="">
+                            <span>18855556666</span>
+                        </div>
+                        <p>24小时咨询热线</p>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./img/hot_line_icon3.png" alt="">
+                            <span>08:30-17:30</span>
+                        </div>
+                        <p>服务时间</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="link container">
+                <span>友情链接 :</span>
+                <a href="#">哈哈哈哈哈</a>
+                <a href="#">哈哈哈哈哈</a>
+                <a href="#">哈哈哈哈哈</a>
+                <a href="#">哈哈哈哈哈</a>
+                <a href="#">哈哈哈哈哈</a>
+                <a href="#">哈哈哈哈哈</a>
+            </div>
+            <div class="beian container">
+                <p>
+                    © Copyright 2016-2018， 鄂ICP备19006077号-1 ，Inc.All Right Reserved.
+                    <a href="#">湖北楚威企业登记代理有限公司</a>
+                    50973058@qq.com
+                    <a href="#">网站地图</a>
+                    <a href="#">站长统计</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边栏 -->
+    <div class="rightBar">
+        <ul>
+            <li id="phone">
+                <img src="./img/rightNav_phone.png" alt="">
+            </li>
+            <li id="kf">
+                <img src="./img/rightNav_kf.png" alt="">
+            </li>
+            <li id="wx">
+                <img src="./img/rightNav_wx.png" alt="">
+            </li>
+            <li class="goTop">
+                <img src="./img/rightNav_db.png" alt="">
+            </li>
+
+        </ul>
+        <div class="phone">
+            <p>24小时服务热线:</p>
+            <p>13233332222</p>
+        </div>
+        <div class="kf">
+            <p>请在下方输入您的联系方式,我们将尽快联系您</p>
+            <div>
+                <label for="name"><span class="glyphicon glyphicon-user"></span></label>
+                <input type="text" class="name" id="name" placeholder="请输入称呼,例:陈先生" data-toggle="popover"
+                    data-placement="bottom" data-content="请输入2-6位字符" autocomplete="off">
+            </div>
+            <div>
+                <label for="phoneNum"><span class="glyphicon glyphicon-earphone"></span></label>
+                <input type="text" class="phoneNum" id="phoneNum" placeholder="请输入您的手机号码" data-toggle="popover"
+                    data-placement="bottom" data-content="请输入正确的电话号码" autocomplete="off">
+            </div>
+            <p class="kf-btn">确认提交</p>
+        </div>
+        <div class="wx">
+            <p>QQ联系我们:</p>
+            <p>55555555</p>
+            <p>微信联系我们:</p>
+            <p>13233332222</p>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/ssch.js"></script>
+</body>
+
+</html>

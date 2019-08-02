@@ -11,8 +11,28 @@ a:hover {
   text-decoration: none;
   color: #222;
 }
+html,
+body {
+  min-width: 1800px;
+}
+.container {
+  width: 1150px!important;
+}
+h1 {
+  color: #fff;
+  text-align: center;
+  padding: 80px 0;
+  font-size: 44px;
+  margin: 0;
+}
+h1 span {
+  color: #f5638c;
+}
+.banner img {
+  width: 100%;
+}
 header {
-  margin: 5px 0;
+  margin: 5px 0 0;
 }
 header .logo {
   float: left;
@@ -22,6 +42,7 @@ header .logo img {
 }
 header ul {
   float: right;
+  margin-bottom: 0;
 }
 header ul li {
   float: left;
@@ -45,4 +66,178 @@ header ul li:not(:last-of-type):hover a {
 }
 header ul li a {
   font-size: 16px;
+}
+/*页尾部分*/
+.footer {
+  padding-top: 50px;
+  /*优点*/
+  /*列表*/
+}
+.footer .footer-benefit {
+  margin-bottom: 30px;
+}
+.footer .footer-benefit ul {
+  padding-left: 0;
+}
+.footer .footer-benefit ul li {
+  float: left;
+  width: 280px;
+  height: 100px;
+}
+.footer .footer-benefit ul li .benefit-icon {
+  width: 100px;
+  float: left;
+}
+.footer .footer-benefit ul li .benefit-icon img {
+  width: 60px;
+  margin-top: 20px;
+  box-sizing: content-box;
+  padding-left: 20px;
+}
+.footer .footer-benefit ul li:not(:first-of-type) .benefit-icon img {
+  border-left: 1px solid #eee;
+}
+.footer .footer-benefit ul li .benefit-right {
+  width: 180px;
+  float: left;
+}
+.footer .footer-benefit ul li .benefit-right p {
+  color: #999999;
+  font-size: 12px;
+}
+.footer .footer-list-wrapper {
+  background-color: #252526;
+}
+.footer .footer-list-wrapper .footer-list .fList-left h4 {
+  color: #fff;
+  padding: 30px 0;
+}
+.footer .footer-list-wrapper .footer-list .fList-left a {
+  display: inline-block;
+  background: #1b1b1b;
+  color: #737373;
+  padding: 5px 10px;
+}
+.footer .footer-list-wrapper .footer-list .fList-left a:hover {
+  background: #30c8c6;
+  color: #fff;
+}
+.footer .footer-list-wrapper .footer-list .fList-center img {
+  width: 100%;
+  padding: 30px 30px 10px;
+}
+.footer .footer-list-wrapper .footer-list .fList-center p {
+  text-align: center;
+  color: #fff;
+}
+.footer .footer-list-wrapper .footer-list .fList-right {
+  color: #fff;
+  padding-top: 50px;
+}
+.footer .footer-list-wrapper .footer-list .fList-right li {
+  float: left;
+  padding: 0 20px;
+}
+.footer .footer-list-wrapper .footer-list .fList-right li div img {
+  vertical-align: middle;
+}
+.footer .footer-list-wrapper .footer-list .fList-right li div span {
+  font-size: 18px;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+.footer .footer-list-wrapper .footer-list .fList-right li p {
+  color: #6b6b6b;
+  padding-left: 43px;
+}
+.footer .footer-list-wrapper .link {
+  border-top: 1px solid #2c2c2e;
+  border-bottom: 1px solid #2c2c2e;
+  padding: 25px 0;
+  color: #7c7c7c;
+}
+.footer .footer-list-wrapper .link a {
+  color: #7c7c7c;
+}
+.footer .footer-list-wrapper .beian {
+  color: #7c7c7c;
+  padding: 8px 0;
+}
+.footer .footer-list-wrapper .beian a {
+  color: #7c7c7c;
+}
+/* 侧边栏 */
+div.rightBar {
+  position: fixed;
+  bottom: 200px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+div.rightBar ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+div.rightBar ul li img {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+div.rightBar ul li:hover {
+  background-color: #2faaff;
+}
+div.rightBar > div {
+  display: none;
+  position: absolute;
+  left: -155px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+div.rightBar > div::after {
+  content: '';
+  position: absolute;
+  border: 10px solid transparent;
+  border-left-color: rgba(0, 0, 0, 0.5);
+  right: -20px;
+}
+div.rightBar > div.phone {
+  top: -25px;
+}
+div.rightBar > div.phone::after {
+  top: 41px;
+}
+div.rightBar > div.kf {
+  top: 26px;
+  left: -335px;
+}
+div.rightBar > div.kf::after {
+  top: 41px;
+}
+div.rightBar > div.kf div {
+  background-color: #fff;
+  margin: 10px 0;
+  color: #777;
+  padding: 8px 15px 5px;
+  border-radius: 10px;
+}
+div.rightBar > div.kf div input {
+  border: none;
+  outline: none;
+}
+div.rightBar > div.kf .kf-btn {
+  text-align: center;
+  padding: 8px;
+  background-color: #2faaff;
+  border-radius: 10px;
+}
+div.rightBar > div.wx {
+  top: 97px;
+  left: -141px;
+}
+div.rightBar > div.wx::after {
+  top: 18px;
+}
+div.rightBar > div.wx p:nth-of-type(2n+1) {
+  margin-bottom: 0;
 }
