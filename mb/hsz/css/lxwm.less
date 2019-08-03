@@ -35,13 +35,14 @@
     }
 }
 .content{
-    padding: 50px 0;
+    padding-top: 50px;
     .title{
         text-align: center;
     }
     .map-wrapper{
         background-image: url('../img/bg-map.png');
         background-size: 100% 100%;
+        margin-bottom: 30px;
         .map{
             position: relative;
             .map-left{
@@ -57,15 +58,19 @@
                     box-sizing: content-box;
                     border: 5px solid rgba(255,255,255,.6);
                     animation: scaleRun .7s alternate infinite;
-                    &.hubei{
-                        top: 396px;
-                        left: 515px;
+                    &#suizhou{
+                        top: 385px;
+                        left: 523px;
                     }
-                    &.shanghai{
+                    &#wuhan{
+                        top: 404px;
+                        left: 544px;
+                    }
+                    &#shanghai{
                         top: 392px;
                         left: 644px;
                     }
-                    &.jiangsu{
+                    &#jiangsu{
                         top: 362px;
                         left: 621px;
                     }
@@ -79,27 +84,69 @@
                 background: #fff;
                 box-shadow: 0 0 10px rgba(0,0,0,.3);
                 padding: 20px;
-                img{
-                    width: 100%;
-                }
-                p{
-                    color: #555;
-                    margin: 20px 0;
-                    font-size: 16px;
-                    span{
-                        margin-right: 10px;
-                        color: #999;
+                &>div{
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                    img{
+                        width: 100%;
+                        height: 190px;
+                    }
+                    p{
+                        color: #555;
+                        margin: 20px 0;
+                        font-size: 16px;
+                        padding-left: 30px;
+                        span{
+                            margin-left: -30px;
+                            margin-right: 14px;
+                            color: #999;
+                        }
                     }
                 }
             }
         }
     }
-}
-
-
-
-
-
-.footer{
-    background: #f5f5f5;
+    .serviceHotline{
+        .ser-left{
+            background: #f7f8fa url('../img/lxwm_bg.png') no-repeat 630px 30px;
+            float: left;
+            width: 800px;
+            height: 190px;
+            margin-right: 20px;
+            padding: 20px 50px;
+            h2{
+                color: #ff672b;
+                font-size: 36px;
+                font-weight: bold;
+            }
+            p{
+                font-size: 18px;
+                color: #777;
+                margin: 20px 0;
+                span{
+                    color: #000;
+                }
+            }
+        }
+        .ser-right{
+            float: left;
+            width: 300px;
+            height: 190px;
+            border: 1px solid #ccc;
+            padding: 30px;
+            .text{
+                color: #777;
+                margin: 15px 0;
+            }
+            .ser-btn{
+                width: 100%;
+                color: #fff;
+                background: #2aa2ff;
+                padding: 10px 0;
+                text-align: center;
+            }
+        }
+    }
 }

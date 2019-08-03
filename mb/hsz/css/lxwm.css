@@ -29,7 +29,7 @@
   min-height: 600px;
 }
 .content {
-  padding: 50px 0;
+  padding-top: 50px;
 }
 .content .title {
   text-align: center;
@@ -37,6 +37,7 @@
 .content .map-wrapper {
   background-image: url('../img/bg-map.png');
   background-size: 100% 100%;
+  margin-bottom: 30px;
 }
 .content .map-wrapper .map {
   position: relative;
@@ -56,15 +57,19 @@
   border: 5px solid rgba(255, 255, 255, 0.6);
   animation: scaleRun .7s alternate infinite;
 }
-.content .map-wrapper .map .map-left span.hubei {
-  top: 396px;
-  left: 515px;
+.content .map-wrapper .map .map-left span#suizhou {
+  top: 385px;
+  left: 523px;
 }
-.content .map-wrapper .map .map-left span.shanghai {
+.content .map-wrapper .map .map-left span#wuhan {
+  top: 404px;
+  left: 544px;
+}
+.content .map-wrapper .map .map-left span#shanghai {
   top: 392px;
   left: 644px;
 }
-.content .map-wrapper .map .map-left span.jiangsu {
+.content .map-wrapper .map .map-left span#jiangsu {
   top: 362px;
   left: 621px;
 }
@@ -77,18 +82,63 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding: 20px;
 }
-.content .map-wrapper .map .map-right img {
-  width: 100%;
+.content .map-wrapper .map .map-right > div {
+  display: none;
 }
-.content .map-wrapper .map .map-right p {
+.content .map-wrapper .map .map-right > div.active {
+  display: block;
+}
+.content .map-wrapper .map .map-right > div img {
+  width: 100%;
+  height: 190px;
+}
+.content .map-wrapper .map .map-right > div p {
   color: #555;
   margin: 20px 0;
   font-size: 16px;
+  padding-left: 30px;
 }
-.content .map-wrapper .map .map-right p span {
-  margin-right: 10px;
+.content .map-wrapper .map .map-right > div p span {
+  margin-left: -30px;
+  margin-right: 14px;
   color: #999;
 }
-.footer {
-  background: #f5f5f5;
+.content .serviceHotline .ser-left {
+  background: #f7f8fa url('../img/lxwm_bg.png') no-repeat 630px 30px;
+  float: left;
+  width: 800px;
+  height: 190px;
+  margin-right: 20px;
+  padding: 20px 50px;
+}
+.content .serviceHotline .ser-left h2 {
+  color: #ff672b;
+  font-size: 36px;
+  font-weight: bold;
+}
+.content .serviceHotline .ser-left p {
+  font-size: 18px;
+  color: #777;
+  margin: 20px 0;
+}
+.content .serviceHotline .ser-left p span {
+  color: #000;
+}
+.content .serviceHotline .ser-right {
+  float: left;
+  width: 300px;
+  height: 190px;
+  border: 1px solid #ccc;
+  padding: 30px;
+}
+.content .serviceHotline .ser-right .text {
+  color: #777;
+  margin: 15px 0;
+}
+.content .serviceHotline .ser-right .ser-btn {
+  width: 100%;
+  color: #fff;
+  background: #2aa2ff;
+  padding: 10px 0;
+  text-align: center;
 }

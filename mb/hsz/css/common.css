@@ -47,12 +47,10 @@ header ul {
 header ul li {
   float: left;
   line-height: 70px;
-}
-header ul li:not(:last-of-type) {
   margin-right: 45px;
 }
-header ul li:not(:last-of-type).active:after,
-header ul li:not(:last-of-type):hover:after {
+header ul li.active:after,
+header ul li:hover:after {
   content: '';
   display: block;
   width: 20px;
@@ -60,8 +58,8 @@ header ul li:not(:last-of-type):hover:after {
   background-color: #30c8c6;
   margin: 0 auto;
 }
-header ul li:not(:last-of-type).active a,
-header ul li:not(:last-of-type):hover a {
+header ul li.active a,
+header ul li:hover a {
   color: #30c8c6;
 }
 header ul li a {

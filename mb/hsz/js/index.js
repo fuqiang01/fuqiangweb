@@ -19,6 +19,7 @@ $('.banner-form ul').on('click', 'li', function () {
     var text = $(this).text();
     $('.banner-form .address').text(text);
     $(this).parent().slideUp();
+    $('.banner-form .glyphicon').removeClass('active');
 })
 
 $('.banner-form button').on('click', function () {
