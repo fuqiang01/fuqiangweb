@@ -1,0 +1,50 @@
+.banner {
+  height: 170px;
+  background-image: url('../img/banner_bg.jpg');
+  background-size: 100% 100%;
+  padding-top: 80px;
+}
+.banner h3 {
+  color: #fff;
+  border-left: 3px solid #fff;
+}
+.content-wrapper {
+  background: #f5f5f5;
+  padding-bottom: 30px;
+}
+.content-wrapper .content .service-list {
+  float: left;
+  width: 260px;
+  text-align: center;
+  background-color: #fff;
+  padding: 30px 0;
+  margin-right: 15px;
+}
+.content-wrapper .content .service-list li {
+  padding: 18px 0;
+  margin: 2px 0;
+  color: #333;
+  cursor: pointer;
+}
+.content-wrapper .content .service-list li.active,
+.content-wrapper .content .service-list li:hover {
+  background: #2c9dff;
+  color: #fff;
+}
+.content-wrapper .content .service-content {
+  width: 1045px;
+  float: right;
+  background: #fff;
+  padding: 30px;
+}
+.content-wrapper .content .service-content .title {
+  font-size: 18px;
+  border-bottom: 1px solid #ededed;
+  padding: 10px 0;
+}
+.content-wrapper .content .service-content .info p {
+  color: #555;
+}
+.content-wrapper .content .service-content .info img {
+  max-width: 100%;
+}

@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a,
+a:link,
+a:hover {
+  text-decoration: none;
+  color: #777;
+}
+html,
+body {
+  min-width: 1800px;
+}
+.container {
+  width: 1350px!important;
+}
+.banner img {
+  width: 100%;
+}
+header {
+  margin: 5px 0 0;
+}
+header .logo {
+  float: left;
+}
+header .logo img {
+  height: 70px;
+}
+header ul {
+  float: right;
+  margin-bottom: 0;
+}
+header ul li {
+  float: left;
+  line-height: 70px;
+  margin-right: 45px;
+}
+header ul li.active:after,
+header ul li:hover:after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: #2f9dfa;
+  margin: 0 auto;
+}
+header ul li.active a,
+header ul li:hover a {
+  color: #2f9dfa;
+}
+header ul li a {
+  font-size: 16px;
+}
+/*页尾部分*/
+.footer {
+  padding-top: 30px;
+}
+.footer .footer-benefit {
+  text-align: justify;
+  border-bottom: 1px solid #ededed;
+}
+.footer .footer-benefit li {
+  display: inline-block;
+  width: 200px;
+}
+.footer .footer-benefit li span {
+  font-size: 16px;
+  padding-left: 15px;
+}
+.footer .footer-benefit li p {
+  padding-left: 45px;
+  color: #999;
+}
+.footer .footer-benefit::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.footer .footer-list {
+  padding: 50px 0 10px;
+}
+.footer .footer-list .fList-left {
+  float: left;
+  width: 600px;
+}
+.footer .footer-list .fList-left dl {
+  float: left;
+  margin: 0 15px;
+  padding-right: 80px;
+}
+.footer .footer-list .fList-left dl dt {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 15px 0;
+}
+.footer .footer-list .fList-left dl dd {
+  padding: 5px 0;
+  font-size: 12px;
+}
+.footer .footer-list .fList-center {
+  float: left;
+  width: 400px;
+  padding-left: 80px;
+  border-left: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+}
+.footer .footer-list .fList-center h3 {
+  font-size: 22px;
+}
+.footer .footer-list .fList-center h2 {
+  font-size: 30px;
+  color: #2f9dfa;
+}
+.footer .footer-list .fList-center p {
+  color: #999;
+}
+.footer .footer-list .fList-right {
+  float: left;
+  width: 320px;
+  text-align: center;
+}
+.footer .footer-list .fList-right img {
+  width: 130px;
+  height: 130px;
+}
+.footer .footer-list .fList-right p {
+  color: #999;
+}
+.footer .link {
+  padding-bottom: 30px;
+}
+.footer .beian-wrapper {
+  background: #DFDFDF;
+  text-align: center;
+  padding: 20px 0;
+  color: #777;
+}
+.footer .beian-wrapper a {
+  color: #777;
+}
+.footer .beian-wrapper p {
+  margin: 0;
+}
+/* 侧边栏 */
+div.rightBar {
+  position: fixed;
+  bottom: 200px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+div.rightBar ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+div.rightBar ul li img {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+div.rightBar ul li:hover {
+  background-color: #2faaff;
+}
+div.rightBar > div {
+  display: none;
+  position: absolute;
+  left: -155px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+div.rightBar > div::after {
+  content: '';
+  position: absolute;
+  border: 10px solid transparent;
+  border-left-color: rgba(0, 0, 0, 0.5);
+  right: -20px;
+}
+div.rightBar > div.phone {
+  top: -25px;
+}
+div.rightBar > div.phone::after {
+  top: 41px;
+}
+div.rightBar > div.kf {
+  top: 26px;
+  left: -335px;
+}
+div.rightBar > div.kf::after {
+  top: 41px;
+}
+div.rightBar > div.kf div {
+  background-color: #fff;
+  margin: 10px 0;
+  color: #777;
+  padding: 8px 15px 5px;
+  border-radius: 10px;
+}
+div.rightBar > div.kf div input {
+  border: none;
+  outline: none;
+}
+div.rightBar > div.kf .kf-btn {
+  text-align: center;
+  padding: 8px;
+  background-color: #2faaff;
+  border-radius: 10px;
+}
+div.rightBar > div.wx {
+  top: 97px;
+  left: -141px;
+}
+div.rightBar > div.wx::after {
+  top: 18px;
+}
+div.rightBar > div.wx p:nth-of-type(2n+1) {
+  margin-bottom: 0;
+}

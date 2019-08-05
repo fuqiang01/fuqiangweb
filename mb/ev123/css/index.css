@@ -1,0 +1,271 @@
+.carousel-indicators {
+  bottom: 120px;
+}
+.banner_bot {
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+}
+.banner_bot > div {
+  padding-top: 20px;
+}
+.banner_bot > div ul {
+  float: left;
+}
+.banner_bot > div ul li {
+  float: left;
+  padding: 0 100px;
+}
+.banner_bot > div ul li p {
+  font-size: 18px;
+  margin: 0;
+}
+.banner_bot > div ul li p span {
+  font-size: 30px;
+}
+.banner_bot > div ul li div span {
+  color: #888;
+}
+.banner_bot > div ul li.line {
+  width: 1px;
+  height: 60px;
+  transform: rotate(15deg);
+  background: #dedede;
+  padding: 0;
+  margin: 10px 0;
+}
+.banner_bot > div .right {
+  float: right;
+  padding-top: 15px;
+}
+.banner_bot > div .right p {
+  font-size: 26px;
+  color: #2f9dfa;
+}
+.content {
+  padding: 50px 0;
+}
+.content .hot {
+  margin-bottom: 30px;
+}
+.content .hot .title {
+  margin: 0 10px;
+}
+.content .hot .title a {
+  float: right;
+  color: #777;
+}
+.content .hot .title span {
+  font-size: 24px;
+  color: #333;
+  vertical-align: middle;
+  font-weight: bold;
+  padding-left: 15px;
+}
+.content .hot .title img {
+  vertical-align: middle;
+}
+.content .hot ul li {
+  text-align: center;
+  float: left;
+  width: 310px;
+  margin: 10px;
+  border: 2px solid #ededed;
+  transition: all .3s;
+}
+.content .hot ul li .hot-service {
+  font-size: 18px;
+  color: #333;
+  padding-top: 20px;
+}
+.content .hot ul li .price {
+  color: #2f9dfa;
+  font-size: 18px;
+}
+.content .hot ul li .img {
+  position: relative;
+}
+.content .hot ul li .img > img {
+  width: 100%;
+  height: 175px;
+}
+.content .hot ul li .img .hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 175px;
+  transition: all .3s;
+}
+.content .hot ul li .img .hover img {
+  transform: scale(0);
+  transition: all .3s;
+}
+.content .hot ul li:hover {
+  border-color: #2f9dfa;
+}
+.content .hot ul li:hover .hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.content .hot ul li:hover .hover img {
+  transform: scale(1);
+}
+.content .service {
+  margin-bottom: 30px;
+}
+.content .service .title {
+  margin: 0 10px;
+}
+.content .service .title ul {
+  float: right;
+}
+.content .service .title ul li {
+  float: left;
+  padding: 0 10px;
+  position: relative;
+}
+.content .service .title ul li:not(:last-of-type)::after {
+  content: '';
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  border-right: 1px solid #ddd;
+  top: 25%;
+  left: 0;
+}
+.content .service .title h2 {
+  border-left: 5px solid #36b0f3;
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+.content .service dl {
+  text-align: center;
+}
+.content .service dl dt,
+.content .service dl dd {
+  width: 310px;
+  margin: 10px;
+  border: 1px solid #ededed;
+  float: left;
+  position: relative;
+}
+.content .service dl dt h2,
+.content .service dl dd h2,
+.content .service dl dt p,
+.content .service dl dd p,
+.content .service dl dt h3,
+.content .service dl dd h3 {
+  position: relative;
+  z-index: 1;
+}
+.content .service dl dt p,
+.content .service dl dd p {
+  color: #777;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 15px 0;
+  line-height: 25px;
+}
+.content .service dl dt img,
+.content .service dl dd img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.content .service dl dt {
+  height: 600px;
+  padding: 50px 30px;
+}
+.content .service dl dt h2 {
+  font-size: 30px;
+  color: #2f9dfa;
+  font-weight: bold;
+}
+.content .service dl dd {
+  height: 290px;
+  padding: 30px;
+}
+.content .service dl dd h3:hover {
+  color: #36b0f3;
+}
+.content .service dl .f-2 {
+  width: 475px;
+}
+.content .service dl .f-2.left {
+  padding: 100px 200px 100px 50px;
+  text-align: left;
+}
+.content .news-wrapper {
+  background-color: #fcfcfc;
+  padding: 50px 0;
+}
+.content .news-wrapper .news .left,
+.content .news-wrapper .news .right {
+  width: 640px;
+  margin: 10px;
+  float: left;
+  border: 1px solid #ededed;
+}
+.content .news-wrapper .news .left .img,
+.content .news-wrapper .news .right .img {
+  float: left;
+  width: 260px;
+  height: 160px;
+}
+.content .news-wrapper .news .left .img img,
+.content .news-wrapper .news .right .img img {
+  width: 100%;
+  height: 100%;
+}
+.content .news-wrapper .news .left .text,
+.content .news-wrapper .news .right .text {
+  padding: 10px 10px 10px 280px;
+}
+.content .news-wrapper .news .left .text .title h3,
+.content .news-wrapper .news .right .text .title h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+.content .news-wrapper .news .left .text .title h3 span,
+.content .news-wrapper .news .right .text .title h3 span {
+  color: #36b0f3;
+}
+.content .news-wrapper .news .left .text .title a,
+.content .news-wrapper .news .right .text .title a {
+  float: right;
+}
+.content .news-wrapper .news .left .text > a,
+.content .news-wrapper .news .right .text > a {
+  display: block;
+  margin: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.content .contact {
+  text-align: center;
+  height: 180px;
+  line-height: 180px;
+  background: url('../img/footer_banner_bg.jpg') center no-repeat;
+  color: #fff;
+  font-size: 18px;
+}
+.content .contact span {
+  vertical-align: middle;
+}
+.content .contact .contact-kf {
+  font-size: 14px;
+  background: #2f9dfa;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+.content .contact .contact-kf img {
+  vertical-align: middle;
+}
+.content .contact .contact-kf span {
+  vertical-align: middle;
+  margin-left: 5px;
+}
