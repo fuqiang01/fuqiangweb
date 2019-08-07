@@ -1,3 +1,9 @@
+@keyframes run {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .banner {
   height: 170px;
   background-image: url('../img/banner_bg.jpg');
@@ -21,13 +27,16 @@
   margin-right: 15px;
 }
 .content-wrapper .content .service-list li {
-  padding: 18px 0;
   margin: 2px 0;
-  color: #333;
-  cursor: pointer;
 }
-.content-wrapper .content .service-list li.active,
-.content-wrapper .content .service-list li:hover {
+.content-wrapper .content .service-list li a {
+  color: #333;
+  width: 100%;
+  display: inline-block;
+  padding: 18px 0;
+}
+.content-wrapper .content .service-list li.active a,
+.content-wrapper .content .service-list li:hover a {
   background: #2c9dff;
   color: #fff;
 }
@@ -36,6 +45,9 @@
   float: right;
   background: #fff;
   padding: 30px;
+  transform: translateX(500px);
+  opacity: 0;
+  animation: run .5s forwards ;
 }
 .content-wrapper .content .service-content .title {
   font-size: 18px;

@@ -19,6 +19,8 @@ http://www.cwzcgs.com/
 
 	web页面 : 98fda6f87a3ee41aecec4699e373ee32
 	微信小程序 : 3431219bdcd1e60359342cb05d7fdd26
+
+vue开发版本: <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	
 swiper: 
 

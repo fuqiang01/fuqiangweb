@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+html{
+    overflow-y: scroll; 
+}
+#swiper{
+    width: 1000px;
+    height: 600px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+.img-wrapper{
+    position: relative;
+}
+.img-wrapper li{
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+}
