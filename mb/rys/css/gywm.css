@@ -1,0 +1,210 @@
+@keyframes dotRun {
+  100% {
+    transform: scale(1.3);
+  }
+}
+.banner {
+  background-image: url('../img/banner_gywm.png');
+  background-size: 100% 100%;
+  height: 500px;
+  text-align: center;
+  color: #fff;
+  padding-top: 200px;
+  box-sizing: border-box;
+}
+.banner-bot {
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  height: 60px;
+}
+.banner-bot li {
+  padding: 0 30px;
+  line-height: 60px;
+  display: inline-block;
+  cursor: pointer;
+}
+.banner-bot li.active {
+  border-bottom: 1px solid #4A8AFF;
+}
+.content {
+  text-align: center;
+  padding: 80px 0;
+}
+.content .gywm {
+  display: none;
+}
+.content .gywm > p {
+  text-align: left;
+  text-indent: 2em;
+  line-height: 35px;
+  padding: 50px 0;
+  color: #444;
+}
+.content .gywm ul {
+  text-align: left;
+  padding-left: 30px;
+  border-left: 3px solid #329bf0;
+  position: relative;
+}
+.content .gywm ul li span {
+  font-size: 14px;
+  color: #333;
+}
+.content .gywm ul li span:first-of-type {
+  font-size: 18px;
+  color: #9398a5;
+  font-weight: bold;
+}
+.content .gywm ul li:not(:last-of-type) {
+  padding-bottom: 40px;
+}
+.content .gywm ul .dot {
+  width: 19px;
+  height: 19px;
+  box-shadow: inset 0 0 5px#00a4ff;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  left: -11px;
+  top: -10px;
+  animation: dotRun .8s infinite alternate;
+}
+.content .gywm ul .dot span {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #018cf8;
+  border-radius: 50%;
+  margin-bottom: 3px;
+}
+.content .lxwm .title {
+  text-align: center;
+}
+.content .lxwm .map-wrapper {
+  background-image: url('../img/bg-map.png');
+  background-size: 100% 100%;
+  margin-bottom: 30px;
+}
+.content .lxwm .map-wrapper .map {
+  position: relative;
+}
+.content .lxwm .map-wrapper .map .map-left {
+  width: 840px;
+  position: relative;
+}
+.content .lxwm .map-wrapper .map .map-left span {
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.8);
+  box-sizing: content-box;
+  border: 6px solid rgba(255, 255, 255, 0.6);
+  animation: scaleRun .7s alternate infinite;
+}
+.content .lxwm .map-wrapper .map .map-left span#suizhou {
+  top: 385px;
+  left: 523px;
+}
+.content .lxwm .map-wrapper .map .map-left span#wuhan {
+  top: 404px;
+  left: 544px;
+}
+.content .lxwm .map-wrapper .map .map-left span#shanghai {
+  top: 392px;
+  left: 644px;
+}
+.content .lxwm .map-wrapper .map .map-left span#jiangsu {
+  top: 362px;
+  left: 621px;
+}
+.content .lxwm .map-wrapper .map .map-right {
+  position: absolute;
+  width: 300px;
+  box-sizing: border-box;
+  top: 80px;
+  left: 900px;
+  text-align: left;
+}
+.content .lxwm .map-wrapper .map .map-right > div {
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  position: absolute;
+  opacity: 0;
+  transition: all .3s;
+}
+.content .lxwm .map-wrapper .map .map-right > div.active {
+  opacity: 1;
+}
+.content .lxwm .map-wrapper .map .map-right > div h4 {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+.content .lxwm .map-wrapper .map .map-right > div > img {
+  width: 100%;
+  height: 190px;
+}
+.content .lxwm .map-wrapper .map .map-right > div p {
+  color: #555;
+  margin: 20px 0;
+  font-size: 16px;
+}
+.content .lxwm .map-wrapper .map .map-right > div p img {
+  float: left;
+  padding-top: 5px;
+}
+.content .lxwm .map-wrapper .map .map-right > div p span {
+  display: block;
+  padding-left: 30px;
+  line-height: 25px;
+}
+.content .lxwm .serviceHotline::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.content .lxwm .serviceHotline .ser-left {
+  background: #f7f8fa url('../img/lxwm_bg.png') no-repeat 630px 30px;
+  float: left;
+  width: 800px;
+  height: 190px;
+  margin-right: 20px;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.content .lxwm .serviceHotline .ser-left h2 {
+  color: #ff672b;
+  font-size: 36px;
+  font-weight: bold;
+}
+.content .lxwm .serviceHotline .ser-left p {
+  font-size: 18px;
+  color: #777;
+  margin: 20px 0;
+}
+.content .lxwm .serviceHotline .ser-left p span {
+  color: #000;
+}
+.content .lxwm .serviceHotline .ser-right {
+  float: left;
+  width: 300px;
+  height: 190px;
+  border: 1px solid #ccc;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.content .lxwm .serviceHotline .ser-right .text {
+  color: #777;
+  margin: 15px 0;
+}
+.content .lxwm .serviceHotline .ser-right .ser-btn {
+  width: 100%;
+  color: #fff;
+  background: #2aa2ff;
+  padding: 10px 0;
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a,
+a:link,
+a:hover {
+  text-decoration: none;
+}
+.container {
+  width: 1350px;
+}
+.top-bar-wrapper {
+  background: #f7f1f1;
+  color: #707580;
+}
+.top-bar-wrapper .left {
+  float: left;
+  padding-top: 10px;
+}
+.top-bar-wrapper .right {
+  float: right;
+  padding-top: 10px;
+}
+.top-bar-wrapper .right span {
+  margin: 0 10px;
+}
+.top-bar-wrapper .right span:last-of-type {
+  border-left: 1px solid #ccc;
+  padding-left: 20px;
+  color: #fd3d2a;
+}

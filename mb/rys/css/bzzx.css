@@ -1,0 +1,66 @@
+.banner {
+  background: url('../img/banner_bzzx.png') top no-repeat;
+  padding-bottom: 50px;
+}
+.banner .banner-content {
+  padding-top: 150px;
+}
+.banner .banner-content::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.banner .banner-content .banner-list {
+  width: 300px;
+  float: left;
+  margin-right: 50px;
+}
+.banner .banner-content .banner-list dt {
+  padding: 0 30px;
+  color: #fff;
+  border-left: 4px solid #449CFF;
+  margin-bottom: 15px;
+}
+.banner .banner-content .banner-list dd {
+  margin: 5px 0;
+  width: 100%;
+}
+.banner .banner-content .banner-list dd a {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 30px;
+  background: #f7f7f6;
+  color: #307acd;
+}
+.banner .banner-content .banner-list dd.active a,
+.banner .banner-content .banner-list dd:hover a {
+  background: #3795FF;
+  color: #fff;
+}
+.banner .banner-content .banner-info {
+  float: left;
+  width: 1000px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 30px;
+}
+.banner .banner-content .banner-info h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.banner .banner-content .banner-info h2 img,
+.banner .banner-content .banner-info h2 span {
+  vertical-align: middle;
+}
+.banner .banner-content .banner-info .text {
+  padding: 30px 20px;
+  color: #555;
+}
+.banner .banner-content .banner-info .text p {
+  padding: 5px 0;
+}
+.banner .banner-content .banner-info .text p img {
+  max-width: 100%;
+}

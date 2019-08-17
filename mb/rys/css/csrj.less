@@ -1,0 +1,159 @@
+@keyframes imgRotate {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes lineRun {
+    100%{
+        opacity: 0;
+    }
+}
+
+// banner
+.banner{
+    overflow: hidden;
+    text-align: center;
+    background-image: url('../img/csbanner.png');
+    background-size: 100% 100%;
+    color: #fff;
+    padding-top: 150px;
+    h1{
+        font-size: 48px;
+        .banner-title-text{
+            color: #ffe21e;
+        }
+        .line{
+            display: inline-block;
+            width: 8px;
+            height: 60px;
+            background-color: #fff;
+            vertical-align: bottom;
+            margin-left: 10px;
+            animation: lineRun .3s linear infinite;
+        }
+    }
+    &>p{
+        padding: 30px 0 50px;
+        font-size: 20px;
+    }
+    .tiyan{
+        display: inline-block;
+        background: #fff;
+        color: #2b4df1;
+        padding: 12px 40px;
+        border-radius: 30px;
+        font-size: 20px;
+    }
+    .banner-info{
+        padding: 100px 0;
+        position: relative;
+        .two-img-r,.two-img-l{
+            position: absolute;
+            width: 400px;
+            height: 100px;
+            h4{
+                padding: 20px 0 15px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+        .two-img-r{
+            color: #fff;
+            img{
+                float: right;
+            }
+            .text{
+                text-align: right;
+                padding-right: 100px;
+            }
+        }
+        .two-img-l{
+            color: #333;
+            img{
+                float: left;
+            }
+            .text{
+                text-align: left;
+                padding-left: 100px;
+            }
+        }
+        .banner-info-a{
+            left: 0;
+            top: 0;
+        }
+        .banner-info-b{
+            left: -170px;
+            top: 523px;
+        }
+        .banner-info-c{
+            right: -186px;
+            bottom: 500px;
+        }
+        .banner-info-d{
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+// content
+.content{
+    overflow: hidden;
+    // 支出跟踪
+    .tracking-wrapper{
+        background: url('../img/csbg1.png') 1000px 0 no-repeat;
+        padding: 200px 0;
+        .tracking{
+            img{
+                float: right;
+                margin-right: 100px;
+            }
+            .text{
+                padding:100px 800px 0 200px;
+                h1{
+                    font-size: 30px;
+                    color: #333;
+                }
+                p{
+                    color: #777;
+                    padding-top: 50px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+    // 存货管理
+    .management{
+        position: relative;
+        padding: 100px 0;
+        &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        &>img{
+            float: left;
+            margin-left: 100px;
+        }
+        .text{
+            position: relative;
+            z-index: 3;
+            padding:100px 200px 0 800px;
+            h1{
+                font-size: 30px;
+                color: #333;
+            }
+            p{
+                color: #777;
+                padding-top: 50px;
+                line-height: 40px;
+            }
+        }
+        .rotate-img{
+            position: absolute;
+            right: -30px;
+            top: 0;
+            animation: imgRotate 10s linear infinite;
+        }
+    }
+}

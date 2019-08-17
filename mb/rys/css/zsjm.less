@@ -1,0 +1,355 @@
+@keyframes scaleRun{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+// banner
+.banner{
+    background-image: url('../img/banner_zsjm.png');
+    background-size: 100% 100%;
+    height: 550px;
+    text-align: center;
+    color: #fff;
+    h1{
+        padding: 150px 0 50px;
+        font-size: 38px;
+    }
+    p{
+        font-size: 20px;
+        margin-bottom: 80px;
+    }
+    a{
+        background: linear-gradient(90deg, #00a1ff, #0b61ff);
+        box-shadow: 0px 3px 35px 0px rgba(1, 153, 255, 0.49);
+        color: #fff;
+        padding: 12px 50px;
+        border-radius: 25px;
+    }
+}
+// content
+.content{
+    // 加盟
+    .jiameng{
+        padding-top: 80px;
+        &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .left{
+            float: left;
+            width: 50%;
+            h1{
+                font-size: 40px;
+            }
+            p{
+                color: #999;
+                padding: 10px 0;
+                font-size: 24px;
+                span{
+                    color: #ff761b;
+                    font-size: 38px;
+                    font-weight: bold;
+                }
+                &.city{
+                    span{
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+        .right{
+            float: left;
+            width: 50%;
+            text-align: right;
+            p{
+                font-size: 20px;
+                padding-bottom: 50px;
+            }
+            a{
+                background: linear-gradient(90deg, #0b61ff, #00a1ff);
+                color: #fff;
+                padding: 12px 50px;
+                border-radius: 25px;
+                font-size: 16px;
+            }
+        }
+    }
+    // 地图
+    .map-wrapper{
+        background-image: url('../img/bg-map.png');
+        background-size: 100% 100%;
+        margin-bottom: 30px;
+        .map{
+            position: relative;
+            .map-left{
+                width: 840px;
+                position: relative;
+                span{
+                    display: block;
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: rgba(255,0,0,.8);
+                    box-sizing: content-box;
+                    border: 6px solid rgba(255,255,255,.6);
+                    animation: scaleRun .7s alternate infinite;
+                    &#suizhou{
+                        top: 385px;
+                        left: 523px;
+                    }
+                    &#wuhan{
+                        top: 404px;
+                        left: 544px;
+                    }
+                    &#shanghai{
+                        top: 392px;
+                        left: 644px;
+                    }
+                    &#jiangsu{
+                        top: 362px;
+                        left: 621px;
+                    }
+                }
+            }
+            .map-right{
+                position: absolute;
+                width: 300px;
+                box-sizing: border-box;
+                top: 80px;
+                left: 900px;
+                &>div{
+                    padding: 20px;
+                    background: #fff;
+                    box-shadow: 0 0 10px rgba(0,0,0,.3);
+                    border-radius: 5px;
+                    position: absolute;
+                    opacity: 0;
+                    transition: all .3s;
+                    &.active{
+                        opacity: 1;
+                    }
+                    h4{
+                        font-size: 18px;
+                        padding-bottom: 15px;
+                    }
+                    &>img{
+                        width: 100%;
+                        height: 190px;
+                    }
+                    p{
+                        color: #555;
+                        margin: 20px 0;
+                        font-size: 16px;
+                        img{
+                            float: left;
+                            padding-top: 5px;
+                        }
+                        span{
+                            display: block;
+                            padding-left: 30px;
+                            line-height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 问题
+    .problem-wrapper{
+        background-image: url('../img/gszc_nav_bg.png');
+        .problem{
+            text-align: center;
+            h2{
+                font-size: 30px;
+                padding: 50px;
+            }
+            ul{
+                li{
+                    display: inline-block;
+                    width: 280px;
+                    text-align: left;
+                    margin: 0 20px;
+                    padding-bottom: 50px;
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                    h5{
+                        font-size: 18px;
+                        font-weight: normal;
+                        padding: 10px;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: #999;
+                        padding-left: 10px;
+                    }
+                    .num{
+                        position: absolute;
+                        left: 210px;
+                        top: 155px;
+                        background: #fff;
+                        color: #666;
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-radius: 50%;
+                        font-size: 22px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    // 优势
+    .advantage-wrapper{
+        background: url('../img/bg-news.png') bottom no-repeat;
+        .advantage{
+            text-align: center;
+            padding: 80px 0;
+            h2{
+                padding-bottom: 50px;
+                font-size: 30px;
+            }
+            ul{
+                &::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                li{
+                    width: 225px;
+                    float: left;
+                    .img{
+                        width: 86px;
+                        height: 86px;
+                        display: inline-block;
+                        background-image: url('../img/zsjm_icon_bg.png');
+                        background-size: 100% 100%;
+                        img{
+                            padding-top: 13px;
+                        }
+                    }
+                    p{
+                        padding: 30px 0 50px;
+                    }
+                }
+            }
+        }
+    }
+    // 价值
+    .worth-wrapper{
+        background-image: url('../img/zsjm_worth_bg.png');
+        background-size: 100% 100%;
+        .worth{
+            padding: 80px 0;
+            color: #fff;
+            text-align: center;
+            &>p{
+                font-size: 30px;
+                margin-bottom: 80px;
+            }
+            ul{
+                li{
+                    width: 250px;
+                    display: inline-block;
+                    margin: 0 80px;
+                    .title{
+                        color: #a7c8ff;
+                        font-size: 18px;
+                    }
+                    .num{
+                        font-size: 29px;
+                        position: relative;
+                        span{
+                            font-size: 82px;
+                        }
+                        &::after{
+                            content: '';
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            background-image: url('../img/zsjm_arrow_top.png');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                        }
+                    }
+                    &:nth-of-type(1){
+                        .num{
+                            &::after{
+                                background-image: url('../img/zsjm_arrow_bot.png');
+                            }
+                        }
+                    }
+                    &:nth-of-type(2){
+                        .num{
+                            span{
+                                color: #FFE00C;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 流程
+    .process-wrapper{
+        background-image: url('../img/gszc_nav_bg.png');
+        padding: 80px 0;
+        h2{
+            font-size: 30px;
+            font-weight: normal;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        ul{
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            li{
+                width: 270px;
+                height: 170px;
+                float: left;
+                box-sizing: border-box;
+                padding: 30px 40px 0 20px;
+                background-color: #fff;
+                &:not(:last-of-type){
+                    background: #fff url('../img/video-strp-arrow2.png') right no-repeat;
+                }
+                h3{
+                    font-size: 22px;
+                    img,span{
+                        vertical-align: middle;
+                    }
+                }
+                p{
+                    font-size: 14px;
+                    color: #666;
+                    height: 38px;
+                }
+                div{
+                    text-align: right;
+                    span{
+                        font-size: 60px;
+                        color: #f5f5f5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

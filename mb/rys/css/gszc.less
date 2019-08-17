@@ -1,0 +1,505 @@
+// banner
+.banner{
+    background-image: url('../img/gszc-banner_bg.png');
+    background-size: 100% 100%;
+    color: #fff;
+    height: 500px;
+    padding-top: 100px;
+    box-sizing: border-box;
+    .banner-info{
+        width: 1100px;
+        margin: 0 auto;
+        .left{
+            float: left;
+            p{
+                padding: 30px 0 120px;
+            }
+            span{
+                border: 1px solid #fff;
+                border-radius: 20px;
+                padding: 8px 30px;
+                cursor: pointer;
+            }
+        }
+        .right{
+            float: right;
+        }
+    }
+}
+.banner-bottom{
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(235, 235, 235, 0.6);
+    width: 745px;
+    height: 55px;
+    line-height: 55px;
+    margin: -30px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    input{
+        border: none;
+        padding: 0px 20px;
+        outline: none;
+        &:not(:first-of-type){
+            border-left: 1px solid #ccc;
+        }
+    }
+    span{
+        background-color: #1b5eff;
+        color: #fff;
+        float: right;
+        height: 55px;
+        padding: 0 20px;
+        cursor: pointer;
+    }
+}
+// content
+.content{
+    // 导航
+    .con-nav{
+        padding: 100px 0;
+        background: url('../img/gszc_nav_bg.png');
+        ul{
+            text-align: center;
+            li{
+                display: inline-block;
+                width: 260px;
+                height: 336px;
+                margin: 0 30px;
+                background: #fff;
+                border-radius: 5px;
+                overflow: hidden;
+                box-sizing: border-box;
+                position: relative;
+                &>img{
+                    width: 100%;
+                }
+                h3{
+                    padding: 50px 0 20px;
+                }
+                &>p{
+                    color: #ccc;
+                }
+                .img{
+                    position: absolute;
+                    box-shadow: 0px 6px 17px 1px rgba(235, 235, 235, 0.61);
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    top: 165px;
+                    left: 50%;
+                    margin-left: -25px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: #fff;
+                }
+                &:nth-of-type(1){
+                    .img{
+                        background-image: url('../img/gszc_nav_11.png');
+                    }
+                }
+                &:nth-of-type(2){
+                    .img{
+                        background-image: url('../img/gszc_nav_22.png');
+                    }
+                }
+                &:nth-of-type(3){
+                    .img{
+                        background-image: url('../img/gszc_nav_33.png');
+                    }
+                }
+                &:nth-of-type(4){
+                    .img{
+                        background-image: url('../img/gszc_nav_44.png');
+                    }
+                }
+                &:hover{
+                    border-bottom: 2px solid #3E75F7;
+                }
+                &:nth-of-type(1):hover{
+                    .img{
+                        background-image: url('../img/gszc_nav_111.png');
+                    }
+                }
+                &:nth-of-type(2):hover{
+                    .img{
+                        background-image: url('../img/gszc_nav_222.png');
+                    }
+                }
+                &:nth-of-type(3):hover{
+                    .img{
+                        background-image: url('../img/gszc_nav_333.png');
+                    }
+                }
+                &:nth-of-type(4):hover{
+                    .img{
+                        background-image: url('../img/gszc_nav_444.png');
+                    }
+                }
+            }
+        }
+    }
+    // 公司注册
+    .company-wrapper{
+        background-image: url('../img/gszc_company_bg.png');
+        background-size: 100% 100%;
+        color: #fff;
+        height: 700px;
+        .company{
+            .left{
+                float: left;
+                width: 300px;
+                background: rgba(0, 0, 0, .5);
+                height: 700px;
+                padding: 100px 0;
+                box-sizing: border-box;
+                li{
+                    padding: 35px 40px 0;
+                    height: 130px;
+                    box-sizing: border-box;
+                    cursor: default;
+                    p{
+                        padding: 20px 0 30px;
+                    }
+                    &:not(:last-of-type){
+                        p{
+                            border-bottom: 1px solid #323232;
+                        }
+                    }
+                    &.active{
+                        background: rgb(1,154,255);
+                        p{
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            .right{
+                float: left;
+                width: 1050px;
+                position: relative;
+                ul{
+                    position: absolute;
+                    padding: 30px 100px;
+                    opacity: 0;
+                    transition: all .5s;
+                    &.active{
+                        opacity: 1;
+                    }
+                    li{
+                        padding: 50px 30px 10px;
+                        border-bottom: 1px solid #323232;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 20px;
+                            height: 20px;
+                            background: url('../img/gszc_company_1.png') center no-repeat;
+                            position: absolute;
+                            left: 0px;
+                        }
+                        .text{
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 500px;
+                            h4{
+                                padding-bottom: 20px;
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                        .price{
+                            vertical-align: middle;
+                            span{
+                                font-size: 30px;
+                                font-weight: bold;
+                            }
+                        }
+                        .item-btn{
+                            color: #fff;
+                            vertical-align: middle;
+                            border: 1px solid #fff;
+                            padding: 7px 20px;
+                            font-size: 14px;
+                            margin-left: 50px;
+                            &:hover{
+                                background: #1b5eff;
+                                border-color: #1b5eff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 优势
+    .advantage-wrapper{
+        background: #F7F8FC;
+        .advantage{
+           h2{
+               text-align: center;
+               padding: 80px 0 50px;
+               font-size: 30px;
+           }
+           .adv-top{
+                .left{
+                    float: left;
+                    width: 750px;
+                    background: linear-gradient(91deg, #bf5aff, #0096ff);
+                    color: #fff;
+                    text-align: right;
+                    font-size: 22px;
+                    padding: 15px 0;
+                    span{
+                        padding:0 5px 0 100px;
+                        font-weight: bold;
+                    }
+                }
+                .right{
+                    font-size: 22px;
+                    padding: 15px 0;
+                    background: #E9E9E9;
+                    float: left;
+                    width: 600px;
+                    span{
+                        color: #549CFF;
+                        padding:0 100px 0 5px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .adv-info{
+                background: #fff;
+                &::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                ul{
+                    float: left;
+                    padding: 50px 30px 0;
+                    box-sizing: border-box;
+                    li{
+                        height: 80px;
+                        img{
+                            vertical-align: middle;
+                        }
+                        span{
+                            vertical-align: middle;
+                            padding: 0 10px;
+                        }
+                    }
+                }
+                .left{
+                    width: 150px;
+                    text-align: center;
+                    background: #1F222B;
+                    color: #fff;
+                }
+                .center{
+                    width: 600px;
+                    text-align: right;
+                }
+                .right{
+                    width: 600px;
+
+                }
+            }
+            .zixun-btn-wrapper{
+                text-align: center;
+                padding-top: 80px;
+                .zixun-btn{
+                    background: linear-gradient(90deg, #6a38e8 0%, #1b5eff 100%);
+                    box-shadow: 0px 5px 13px 0px rgba(28, 93, 255, 0.27);
+                    color: #fff;
+                    padding: 10px 40px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    // 注册流程
+    .process-wrapper{
+        background-image: url('../img/bg-process.png');
+        background-size: 100% 100%;
+        text-align: center;
+        .process{
+            h2{
+                font-size: 30px;
+                padding: 80px 0 50px; 
+            }
+            ul{
+                padding-bottom: 100px;
+                li{
+                    display: inline-block;
+                    margin: 0 5px;
+                    vertical-align: middle;
+                    padding-bottom: 36px;
+                    img{
+                        vertical-align: middle;
+                    }
+                    &.info{
+                        padding-bottom: 0;
+                        .img{
+                            width: 100px;
+                            height: 100px;
+                            line-height: 100px;
+                            background-image: url('../img/gszc_process_bg.png');
+                            background-size: 100% 100%;
+                        }
+                        p{
+                            padding-top: 15px;
+                        }
+                    }   
+                }
+            }
+        }
+    }
+    // 您能得到的资料
+    .data-wrapper{
+        background: url('../img/gszc_nav_bg.png');
+        text-align: center;
+        .data{
+            h2{
+                font-size: 30px;
+                padding: 80px 0 20px;
+                span{
+                    color: #1E5CFE;
+                }
+            }
+            &>p{
+                color: #777;
+            }
+            ul{
+                padding: 80px 0;
+                li{
+                    display: inline-block;
+                    margin: 0 20px;
+                    .img{
+                        width: 200px;
+                        height: 285px;
+                        background-image: url('../img/huak.png');
+                        background-size: 100% 100%;
+                        padding-top: 20px;
+                        box-sizing: border-box;
+                    }
+                    p{
+                        padding-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+    // 我们还提供
+    .service{
+        text-align: center;
+        h2{
+            font-size: 30px;
+            padding: 80px 0 20px;
+            span{
+                color: #1E5CFE;
+            }
+        }
+        &>p{
+            color: #777;
+        }
+        ul{
+            padding: 80px 0;
+            li{
+                display: inline-block;
+                margin: 0 20px;
+                position: relative;
+                .bg{
+                    width: 250px;
+                    height: 200px;
+                    background: #E5F2FF;
+                    position: absolute;
+                    left: 10px;
+                    top: -10px;
+                }
+                .item{
+                    position: relative;
+                    z-index: 3;
+                    background: #fff;
+                    box-shadow: 0px 0px 8px rgba(194, 194, 194, 0.27);
+                    padding: 30px;
+                    width: 250px;
+                    height: 200px;
+                    box-sizing: border-box;
+                    .top{
+                        .img{
+                            float: left;
+                            width: 50px;
+                            height: 50px;
+                            background-color: #E5F2FF;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            border-radius: 50%;
+                        }
+                        .text{
+                            float: left;
+                            width: 140px;
+                            box-sizing: border-box;
+                            padding-left: 15px;
+                            text-align: left;
+                            h3{
+                                font-size: 18px;
+                                color: #333;
+                            }
+                            p{
+                                font-size: 12px;
+                                color: #999;
+                            }
+                        }
+                    }
+                    &>p{
+                        margin-top: 80px;
+                        box-shadow: 0px 0px 8px rgba(194, 194, 194, 0.27);
+                        font-size: 12px;
+                        text-align: left;
+                        color: #777;
+                    }
+                }
+                &:nth-of-type(1){
+                    .img{
+                        background-image: url('../img/gszc_service_1.png');
+                    }
+                }
+                &:nth-of-type(2){
+                    .img{
+                        background-image: url('../img/gszc_service_2.png');
+                    }
+                }
+                &:nth-of-type(3){
+                    .img{
+                        background-image: url('../img/gszc_service_3.png');
+                    }
+                }
+                &:hover{
+                    .bg{
+                        background: #1b81ff;
+                    }
+                }
+                &:nth-of-type(1):hover{
+                    .img{
+                        background-image: url('../img/gszc_service_11.png');
+                    }
+                }
+                &:nth-of-type(2):hover{
+                    .img{
+                        background-image: url('../img/gszc_service_22.png');
+                    }
+                }
+                &:nth-of-type(3):hover{
+                    .img{
+                        background-image: url('../img/gszc_service_33.png');
+                    }
+                }
+            }
+        }
+    }
+}
+

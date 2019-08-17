@@ -1,0 +1,449 @@
+.banner {
+  background-image: url('../img/gszc-banner_bg.png');
+  background-size: 100% 100%;
+  color: #fff;
+  height: 500px;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+.banner .banner-info {
+  width: 1100px;
+  margin: 0 auto;
+}
+.banner .banner-info .left {
+  float: left;
+}
+.banner .banner-info .left p {
+  padding: 30px 0 120px;
+}
+.banner .banner-info .left span {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 8px 30px;
+  cursor: pointer;
+}
+.banner .banner-info .right {
+  float: right;
+}
+.banner-bottom {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(235, 235, 235, 0.6);
+  width: 745px;
+  height: 55px;
+  line-height: 55px;
+  margin: -30px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.banner-bottom input {
+  border: none;
+  padding: 0px 20px;
+  outline: none;
+}
+.banner-bottom input:not(:first-of-type) {
+  border-left: 1px solid #ccc;
+}
+.banner-bottom span {
+  background-color: #1b5eff;
+  color: #fff;
+  float: right;
+  height: 55px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.content .con-nav {
+  padding: 100px 0;
+  background: url('../img/gszc_nav_bg.png');
+}
+.content .con-nav ul {
+  text-align: center;
+}
+.content .con-nav ul li {
+  display: inline-block;
+  width: 260px;
+  height: 336px;
+  margin: 0 30px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.content .con-nav ul li > img {
+  width: 100%;
+}
+.content .con-nav ul li h3 {
+  padding: 50px 0 20px;
+}
+.content .con-nav ul li > p {
+  color: #ccc;
+}
+.content .con-nav ul li .img {
+  position: absolute;
+  box-shadow: 0px 6px 17px 1px rgba(235, 235, 235, 0.61);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 165px;
+  left: 50%;
+  margin-left: -25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+}
+.content .con-nav ul li:nth-of-type(1) .img {
+  background-image: url('../img/gszc_nav_11.png');
+}
+.content .con-nav ul li:nth-of-type(2) .img {
+  background-image: url('../img/gszc_nav_22.png');
+}
+.content .con-nav ul li:nth-of-type(3) .img {
+  background-image: url('../img/gszc_nav_33.png');
+}
+.content .con-nav ul li:nth-of-type(4) .img {
+  background-image: url('../img/gszc_nav_44.png');
+}
+.content .con-nav ul li:hover {
+  border-bottom: 2px solid #3E75F7;
+}
+.content .con-nav ul li:nth-of-type(1):hover .img {
+  background-image: url('../img/gszc_nav_111.png');
+}
+.content .con-nav ul li:nth-of-type(2):hover .img {
+  background-image: url('../img/gszc_nav_222.png');
+}
+.content .con-nav ul li:nth-of-type(3):hover .img {
+  background-image: url('../img/gszc_nav_333.png');
+}
+.content .con-nav ul li:nth-of-type(4):hover .img {
+  background-image: url('../img/gszc_nav_444.png');
+}
+.content .company-wrapper {
+  background-image: url('../img/gszc_company_bg.png');
+  background-size: 100% 100%;
+  color: #fff;
+  height: 700px;
+}
+.content .company-wrapper .company .left {
+  float: left;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.5);
+  height: 700px;
+  padding: 100px 0;
+  box-sizing: border-box;
+}
+.content .company-wrapper .company .left li {
+  padding: 35px 40px 0;
+  height: 130px;
+  box-sizing: border-box;
+  cursor: default;
+}
+.content .company-wrapper .company .left li p {
+  padding: 20px 0 30px;
+}
+.content .company-wrapper .company .left li:not(:last-of-type) p {
+  border-bottom: 1px solid #323232;
+}
+.content .company-wrapper .company .left li.active {
+  background: #019aff;
+}
+.content .company-wrapper .company .left li.active p {
+  border-bottom: none;
+}
+.content .company-wrapper .company .right {
+  float: left;
+  width: 1050px;
+  position: relative;
+}
+.content .company-wrapper .company .right ul {
+  position: absolute;
+  padding: 30px 100px;
+  opacity: 0;
+  transition: all .5s;
+}
+.content .company-wrapper .company .right ul.active {
+  opacity: 1;
+}
+.content .company-wrapper .company .right ul li {
+  padding: 50px 30px 10px;
+  border-bottom: 1px solid #323232;
+  position: relative;
+}
+.content .company-wrapper .company .right ul li::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url('../img/gszc_company_1.png') center no-repeat;
+  position: absolute;
+  left: 0px;
+}
+.content .company-wrapper .company .right ul li .text {
+  display: inline-block;
+  vertical-align: middle;
+  width: 500px;
+}
+.content .company-wrapper .company .right ul li .text h4 {
+  padding-bottom: 20px;
+}
+.content .company-wrapper .company .right ul li .text p {
+  font-size: 14px;
+}
+.content .company-wrapper .company .right ul li .price {
+  vertical-align: middle;
+}
+.content .company-wrapper .company .right ul li .price span {
+  font-size: 30px;
+  font-weight: bold;
+}
+.content .company-wrapper .company .right ul li .item-btn {
+  color: #fff;
+  vertical-align: middle;
+  border: 1px solid #fff;
+  padding: 7px 20px;
+  font-size: 14px;
+  margin-left: 50px;
+}
+.content .company-wrapper .company .right ul li .item-btn:hover {
+  background: #1b5eff;
+  border-color: #1b5eff;
+}
+.content .advantage-wrapper {
+  background: #F7F8FC;
+}
+.content .advantage-wrapper .advantage h2 {
+  text-align: center;
+  padding: 80px 0 50px;
+  font-size: 30px;
+}
+.content .advantage-wrapper .advantage .adv-top .left {
+  float: left;
+  width: 750px;
+  background: linear-gradient(91deg, #bf5aff, #0096ff);
+  color: #fff;
+  text-align: right;
+  font-size: 22px;
+  padding: 15px 0;
+}
+.content .advantage-wrapper .advantage .adv-top .left span {
+  padding: 0 5px 0 100px;
+  font-weight: bold;
+}
+.content .advantage-wrapper .advantage .adv-top .right {
+  font-size: 22px;
+  padding: 15px 0;
+  background: #E9E9E9;
+  float: left;
+  width: 600px;
+}
+.content .advantage-wrapper .advantage .adv-top .right span {
+  color: #549CFF;
+  padding: 0 100px 0 5px;
+  font-weight: bold;
+}
+.content .advantage-wrapper .advantage .adv-info {
+  background: #fff;
+}
+.content .advantage-wrapper .advantage .adv-info::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.content .advantage-wrapper .advantage .adv-info ul {
+  float: left;
+  padding: 50px 30px 0;
+  box-sizing: border-box;
+}
+.content .advantage-wrapper .advantage .adv-info ul li {
+  height: 80px;
+}
+.content .advantage-wrapper .advantage .adv-info ul li img {
+  vertical-align: middle;
+}
+.content .advantage-wrapper .advantage .adv-info ul li span {
+  vertical-align: middle;
+  padding: 0 10px;
+}
+.content .advantage-wrapper .advantage .adv-info .left {
+  width: 150px;
+  text-align: center;
+  background: #1F222B;
+  color: #fff;
+}
+.content .advantage-wrapper .advantage .adv-info .center {
+  width: 600px;
+  text-align: right;
+}
+.content .advantage-wrapper .advantage .adv-info .right {
+  width: 600px;
+}
+.content .advantage-wrapper .advantage .zixun-btn-wrapper {
+  text-align: center;
+  padding-top: 80px;
+}
+.content .advantage-wrapper .advantage .zixun-btn-wrapper .zixun-btn {
+  background: linear-gradient(90deg, #6a38e8 0%, #1b5eff 100%);
+  box-shadow: 0px 5px 13px 0px rgba(28, 93, 255, 0.27);
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.content .process-wrapper {
+  background-image: url('../img/bg-process.png');
+  background-size: 100% 100%;
+  text-align: center;
+}
+.content .process-wrapper .process h2 {
+  font-size: 30px;
+  padding: 80px 0 50px;
+}
+.content .process-wrapper .process ul {
+  padding-bottom: 100px;
+}
+.content .process-wrapper .process ul li {
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: middle;
+  padding-bottom: 36px;
+}
+.content .process-wrapper .process ul li img {
+  vertical-align: middle;
+}
+.content .process-wrapper .process ul li.info {
+  padding-bottom: 0;
+}
+.content .process-wrapper .process ul li.info .img {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background-image: url('../img/gszc_process_bg.png');
+  background-size: 100% 100%;
+}
+.content .process-wrapper .process ul li.info p {
+  padding-top: 15px;
+}
+.content .data-wrapper {
+  background: url('../img/gszc_nav_bg.png');
+  text-align: center;
+}
+.content .data-wrapper .data h2 {
+  font-size: 30px;
+  padding: 80px 0 20px;
+}
+.content .data-wrapper .data h2 span {
+  color: #1E5CFE;
+}
+.content .data-wrapper .data > p {
+  color: #777;
+}
+.content .data-wrapper .data ul {
+  padding: 80px 0;
+}
+.content .data-wrapper .data ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+.content .data-wrapper .data ul li .img {
+  width: 200px;
+  height: 285px;
+  background-image: url('../img/huak.png');
+  background-size: 100% 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+.content .data-wrapper .data ul li p {
+  padding-top: 15px;
+}
+.content .service {
+  text-align: center;
+}
+.content .service h2 {
+  font-size: 30px;
+  padding: 80px 0 20px;
+}
+.content .service h2 span {
+  color: #1E5CFE;
+}
+.content .service > p {
+  color: #777;
+}
+.content .service ul {
+  padding: 80px 0;
+}
+.content .service ul li {
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.content .service ul li .bg {
+  width: 250px;
+  height: 200px;
+  background: #E5F2FF;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+.content .service ul li .item {
+  position: relative;
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0px 0px 8px rgba(194, 194, 194, 0.27);
+  padding: 30px;
+  width: 250px;
+  height: 200px;
+  box-sizing: border-box;
+}
+.content .service ul li .item .top .img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: #E5F2FF;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+.content .service ul li .item .top .text {
+  float: left;
+  width: 140px;
+  box-sizing: border-box;
+  padding-left: 15px;
+  text-align: left;
+}
+.content .service ul li .item .top .text h3 {
+  font-size: 18px;
+  color: #333;
+}
+.content .service ul li .item .top .text p {
+  font-size: 12px;
+  color: #999;
+}
+.content .service ul li .item > p {
+  margin-top: 80px;
+  box-shadow: 0px 0px 8px rgba(194, 194, 194, 0.27);
+  font-size: 12px;
+  text-align: left;
+  color: #777;
+}
+.content .service ul li:nth-of-type(1) .img {
+  background-image: url('../img/gszc_service_1.png');
+}
+.content .service ul li:nth-of-type(2) .img {
+  background-image: url('../img/gszc_service_2.png');
+}
+.content .service ul li:nth-of-type(3) .img {
+  background-image: url('../img/gszc_service_3.png');
+}
+.content .service ul li:hover .bg {
+  background: #1b81ff;
+}
+.content .service ul li:nth-of-type(1):hover .img {
+  background-image: url('../img/gszc_service_11.png');
+}
+.content .service ul li:nth-of-type(2):hover .img {
+  background-image: url('../img/gszc_service_22.png');
+}
+.content .service ul li:nth-of-type(3):hover .img {
+  background-image: url('../img/gszc_service_33.png');
+}

@@ -1,0 +1,155 @@
+@keyframes imgRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes lineRun {
+  100% {
+    opacity: 0;
+  }
+}
+.banner {
+  overflow: hidden;
+  text-align: center;
+  background-image: url('../img/csbanner.png');
+  background-size: 100% 100%;
+  color: #fff;
+  padding-top: 150px;
+}
+.banner h1 {
+  font-size: 48px;
+}
+.banner h1 .banner-title-text {
+  color: #ffe21e;
+}
+.banner h1 .line {
+  display: inline-block;
+  width: 8px;
+  height: 60px;
+  background-color: #fff;
+  vertical-align: bottom;
+  margin-left: 10px;
+  animation: lineRun .3s linear infinite;
+}
+.banner > p {
+  padding: 30px 0 50px;
+  font-size: 20px;
+}
+.banner .tiyan {
+  display: inline-block;
+  background: #fff;
+  color: #2b4df1;
+  padding: 12px 40px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+.banner .banner-info {
+  padding: 100px 0;
+  position: relative;
+}
+.banner .banner-info .two-img-r,
+.banner .banner-info .two-img-l {
+  position: absolute;
+  width: 400px;
+  height: 100px;
+}
+.banner .banner-info .two-img-r h4,
+.banner .banner-info .two-img-l h4 {
+  padding: 20px 0 15px;
+}
+.banner .banner-info .two-img-r p,
+.banner .banner-info .two-img-l p {
+  font-size: 14px;
+}
+.banner .banner-info .two-img-r {
+  color: #fff;
+}
+.banner .banner-info .two-img-r img {
+  float: right;
+}
+.banner .banner-info .two-img-r .text {
+  text-align: right;
+  padding-right: 100px;
+}
+.banner .banner-info .two-img-l {
+  color: #333;
+}
+.banner .banner-info .two-img-l img {
+  float: left;
+}
+.banner .banner-info .two-img-l .text {
+  text-align: left;
+  padding-left: 100px;
+}
+.banner .banner-info .banner-info-a {
+  left: 0;
+  top: 0;
+}
+.banner .banner-info .banner-info-b {
+  left: -170px;
+  top: 523px;
+}
+.banner .banner-info .banner-info-c {
+  right: -186px;
+  bottom: 500px;
+}
+.banner .banner-info .banner-info-d {
+  right: 0;
+  bottom: 0;
+}
+.content {
+  overflow: hidden;
+}
+.content .tracking-wrapper {
+  background: url('../img/csbg1.png') 1000px 0 no-repeat;
+  padding: 200px 0;
+}
+.content .tracking-wrapper .tracking img {
+  float: right;
+  margin-right: 100px;
+}
+.content .tracking-wrapper .tracking .text {
+  padding: 100px 800px 0 200px;
+}
+.content .tracking-wrapper .tracking .text h1 {
+  font-size: 30px;
+  color: #333;
+}
+.content .tracking-wrapper .tracking .text p {
+  color: #777;
+  padding-top: 50px;
+  line-height: 40px;
+}
+.content .management {
+  position: relative;
+  padding: 100px 0;
+}
+.content .management::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.content .management > img {
+  float: left;
+  margin-left: 100px;
+}
+.content .management .text {
+  position: relative;
+  z-index: 3;
+  padding: 100px 200px 0 800px;
+}
+.content .management .text h1 {
+  font-size: 30px;
+  color: #333;
+}
+.content .management .text p {
+  color: #777;
+  padding-top: 50px;
+  line-height: 40px;
+}
+.content .management .rotate-img {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  animation: imgRotate 10s linear infinite;
+}
