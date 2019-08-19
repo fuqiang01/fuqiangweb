@@ -20,9 +20,9 @@
             </a>
         </div>
         <ul class="nav">
-            <li class="active"><a href="#">首页</a></li>
+            <li class="active"><a href="./index.html">首页</a></li>
             <li class="nav-list">
-                <a href="#">工商注册</a>
+                <a href="./gszc.html">工商注册</a>
                 <div class="nav-gszc">
                     <a href="#">公司注册</a>
                     <a href="#">公司注销</a>
@@ -36,9 +36,9 @@
                     <a href="#">其他资质</a>
                 </div>
             </li>
-            <li><a href="#">财税软件</a></li>
+            <li><a href="./csrj.html">财税软件</a></li>
             <li class="nav-list">
-                <a href="#">代理记账</a>
+                <a href="./dljz.html">代理记账</a>
                 <div class="nav-dljz">
                     <a href="#">小规模代理记账</a>
                     <a href="#">税收筹划</a>
@@ -47,10 +47,10 @@
                     <a href="#">社保服务</a>
                 </div>
             </li>
-            <li><a href="#">招商加盟</a></li>
-            <li><a href="#">财税学院</a></li>
-            <li><a href="#">帮助中心</a></li>
-            <li><a href="#">关于我们</a></li>
+            <li><a href="./zsjm.html">招商加盟</a></li>
+            <li><a href="./csxy.html">财税学院</a></li>
+            <li><a href="./bzzx.html">帮助中心</a></li>
+            <li><a href="./gywm.html">关于我们</a></li>
         </ul>
     </header>
     <!-- banner -->
@@ -110,7 +110,7 @@
                 <p>我们与各区域物业、孵化器、政府园区有合作关系，为电商客户提供免费的注册地址，远程办理，线上获取电子执照，为用户省去众多中间环节，足不出户就能办理。</p>
                 <div class="btn-wrapper">
                     <a href="#" class="bl">马上办理</a>
-                    <a href='#' class="zx">在线咨询</a>
+                    <a href='#' class="zx f-contactUs-btn">在线咨询</a>
                 </div>
                 <ul class="package-info">
                     <li>
@@ -157,7 +157,7 @@
                 <p>从工商注册、税务办理，全程代理，帮助创业者轻松解决前期公司开办问题。</p>
                 <div class="btn-wrapper">
                     <a href="#" class="bl">马上办理</a>
-                    <a href='#' class="zx">在线咨询</a>
+                    <a href='#' class="zx f-contactUs-btn">在线咨询</a>
                 </div>
                 <ul class="cy-info">
                     <li class="active">
@@ -196,7 +196,7 @@
             <p>全权委托会计核算工作，为企业提供专业的记账报税服务，帮助你在财务上做到省时、省钱、省力更为重要的是我公司可以为你规避各种财务风险</p>
             <div class="btn-wrapper">
                 <a href="#" class="bl">立即代帐</a>
-                <a href='#' class="zx">在线咨询</a>
+                <a href='#' class="zx f-contactUs-btn">在线咨询</a>
             </div>
             <ul class="dljz-info">
                 <li class="f-left">
@@ -308,7 +308,7 @@
             <div class="right">
                 <div class="btn-wrapper">
                     <a href="#" class="bl">马上办理</a>
-                    <a href='#' class="zx">在线咨询</a>
+                    <a href='#' class="zx f-contactUs-btn">在线咨询</a>
                 </div>
                 <div class="gs-info">
                     <div class="shanghai show">
@@ -360,7 +360,7 @@
             <p>实时热门财税新闻,帮助企业了解最新财税动态</p>
             <div class="btn-wrapper">
                 <a href="#" class="bl">查看更多</a>
-                <a href='#' class="zx">在线咨询</a>
+                <a href='#' class="zx f-contactUs-btn">在线咨询</a>
             </div>
             <div class="swiper-news">
                 <div class="swiper-wrapper">
@@ -544,54 +544,20 @@
             <img src="./img/right_bar5.png" alt="">
         </div>
     </div>
-
+    <!-- 弹窗 -->
+    <div class="popupWindow-wrapper">
+        <div class="poruoWindow">
+            <p>24小时服务热线: <span>12312312311</span></p>
+            <p>留下您的联系方式我们将尽快联系您</p>
+            <input type="text" placeholder="请输入您的称呼,如王先生">
+            <input type="text" placeholder="请输入您的手机号码">
+            <div class="popW-btn">确认提交</div>
+            <span class="popW-shut-btn">✖</span>
+        </div>
+    </div>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/index.js"></script>
-    <script>
-        //轮播图初始化
-        var mySwiper = new Swiper('.swiper-container', {
-            loop: true, // 循环模式选项
-        })
-
-        var certifySwiper = new Swiper('.swiper-news', {
-            watchSlidesProgress: true,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            loop: true,
-            loopedSlides: 5,
-            // autoplay: true,
-            on: {
-                progress: function (progress) {
-                    for (i = 0; i < this.slides.length; i++) {
-                        var slide = this.slides.eq(i);
-                        var slideProgress = this.slides[i].progress;
-
-                        modify = 1;
-                        if (Math.abs(slideProgress) > 1) {
-                            modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
-                        }
-                        translate = slideProgress * modify * 200 + 'px';
-                        scale = 1 - Math.abs(slideProgress) / 5;
-                        zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
-                        slide.transform('translateX(' + translate + ') scale(' + scale + ')');
-                        slide.css('zIndex', zIndex);
-                        slide.css('opacity', 1);
-                        if (Math.abs(slideProgress) > 3) {
-                            slide.css('opacity', 0);
-                        }
-                    }
-                },
-                setTransition: function (transition) {
-                    for (var i = 0; i < this.slides.length; i++) {
-                        var slide = this.slides.eq(i)
-                        slide.transition(transition);
-                    }
-                }
-            }
-        })
-    </script>
 </body>
-
 </html>

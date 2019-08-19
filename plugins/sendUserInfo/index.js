@@ -4,9 +4,9 @@ var newUserInformationAjax = throttleFun(userInformationAjax, 30000);
 var sendUrl = 'https://smapp.shyccw.com/tel';
 
 //用户信息提交函数
-function userInformationAjax(data) {
+function userInformationAjax(url, data) {
     $.ajax({
-        url: sendUrl,
+        url: url,
         type: "POST",
         data: data,
         dataType: "json",
@@ -81,7 +81,9 @@ function sendUserInfo(dom) {
             { "name": "xiazaitel", "value": phoneNum }
         ];
 
-        newUserInformationAjax(data);
+        return function ( url) {
+            newUserInformationAjax(url, data);
+        };
 
     } else {
 

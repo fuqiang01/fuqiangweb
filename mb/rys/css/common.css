@@ -322,3 +322,58 @@ footer .beian a {
   bottom: 0;
   display: none;
 }
+.popupWindow-wrapper {
+  position: fixed;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.popupWindow-wrapper .poruoWindow {
+  background: #fff;
+  width: 500px;
+  margin: 200px auto;
+  padding: 50px 90px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+  background-image: url('../img/popup_window.jpg');
+  background-size: 100% 100%;
+}
+.popupWindow-wrapper .poruoWindow p {
+  padding: 10px 0;
+  font-size: 20px;
+  color: #444;
+}
+.popupWindow-wrapper .poruoWindow p span {
+  color: #ff672b;
+  font-weight: bold;
+}
+.popupWindow-wrapper .poruoWindow input {
+  padding: 10px 20px;
+  margin: 10px 0;
+  outline: none;
+}
+.popupWindow-wrapper .poruoWindow .popW-btn {
+  background: #297bf6;
+  color: #fff;
+  padding: 10px 0;
+  width: 213px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.popupWindow-wrapper .poruoWindow .popW-shut-btn {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  color: #999;
+  cursor: pointer;
+}
+.popupWindow-wrapper .poruoWindow .popW-shut-btn:hover {
+  color: #333;
+}

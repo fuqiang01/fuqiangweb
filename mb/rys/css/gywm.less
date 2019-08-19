@@ -6,11 +6,15 @@
 .banner{
     background-image: url('../img/banner_gywm.png');
     background-size: 100% 100%;
-    height: 500px;
+    height: 400px;
     text-align: center;
     color: #fff;
-    padding-top: 200px;
+    padding-top: 150px;
     box-sizing: border-box;
+    h1{
+        font-size: 36px;
+        font-weight: normal;
+    }
 }
 .banner-bot{
     border-bottom: 1px solid #ccc;
@@ -31,7 +35,6 @@
     text-align: center;
     padding: 80px 0;
     .gywm{
-        display: none;
         &>p{
             text-align: left;
             text-indent: 2em;
@@ -80,6 +83,7 @@
         }
     }
     .lxwm{
+        display: none;
         .title{
             text-align: center;
         }
@@ -101,7 +105,7 @@
                         background: rgba(255,0,0,.8);
                         box-sizing: content-box;
                         border: 6px solid rgba(255,255,255,.6);
-                        animation: scaleRun .7s alternate infinite;
+                        animation: dotRun .7s alternate infinite;
                         &#suizhou{
                             top: 385px;
                             left: 523px;
@@ -171,18 +175,23 @@
                 clear: both;
             }
             .ser-left{
-                background: #f7f8fa url('../img/lxwm_bg.png') no-repeat 630px 30px;
+                background: #f7f8fa url('../img/lxwm_bg.png') no-repeat 715px 70px;
                 float: left;
-                width: 800px;
-                height: 190px;
+                width: 880px;
+                height: 230px;
                 margin-right: 20px;
-                padding: 20px 50px;
+                padding: 20px 60px;
                 box-sizing: border-box;
                 text-align: left;
+                h4{
+                    font-size: 20px;
+                    font-weight: normal;
+                    padding: 15px 0;
+                }
                 h2{
                     color: #ff672b;
                     font-size: 36px;
-                    font-weight: bold;
+                    padding: 15px 0;
                 }
                 p{
                     font-size: 18px;
@@ -195,14 +204,22 @@
             }
             .ser-right{
                 float: left;
-                width: 300px;
-                height: 190px;
+                text-align: left;
+                width: 350px;
+                height: 230px;
                 border: 1px solid #ccc;
-                padding: 30px;
+                padding: 30px 40px;
                 box-sizing: border-box;
+                h4{
+                    font-weight: normal;
+                    font-size: 20px;
+                    padding: 10px 0;
+                }
                 .text{
                     color: #777;
-                    margin: 15px 0;
+                    padding: 15px 0;
+                    font-size: 14px;
+                    line-height: 25px;
                 }
                 .ser-btn{
                     width: 100%;
@@ -210,6 +227,26 @@
                     background: #2aa2ff;
                     padding: 10px 0;
                     text-align: center;
+                }
+            }
+        }
+        &>ul{
+            text-align: center;
+            padding-top: 50px;
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            li{
+                float: left;
+                width: 280px;
+                margin-right: 50px;
+                img{
+                    width: 100%;
+                }
+                p{
+                    padding-top: 15px;
                 }
             }
         }

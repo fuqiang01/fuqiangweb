@@ -25,6 +25,22 @@ function bindEvent() {
         $('.show-box').fadeIn();
     })
 
+    // 弹窗
+    $('.f-contactUs-btn').on('click', function () {
+        $('.popupWindow-wrapper').fadeIn();
+        return false;
+    })
+    $('.popupWindow-wrapper').on('click', function ( e ) {
+        if ( e.target !== this ) {
+            return;
+        }
+        $('.popupWindow-wrapper').fadeOut();
+        return false;
+    })
+    $('.popW-shut-btn').click( function () {
+        $('.popupWindow-wrapper').fadeOut();
+    })
+
     //滚动条监听
     $(window).scroll(function () {
 
@@ -50,15 +66,14 @@ function getShowInActive() {
             //看看是不是主页的那一条直线
             $(ele).hasClass('f-line') ?  $(ele).addClass('go') : addShowInActive($(ele));
         }
-        if (hasFlag && domtop < (scrollTop - domHeight) || (domtop > (windowHeight + scrollTop))) {
+        // 用来恢复已经执行过动画的元素不可再执行
+        // if (hasFlag && domtop < (scrollTop - domHeight) || (domtop > (windowHeight + scrollTop))) {
 
-            $(ele).removeClass('f-flag');
-            $(ele).hasClass('f-line') ? $(ele).removeClass('go') : $(ele).removeClass('f-aniIn');
-        }
+        //     $(ele).removeClass('f-flag');
+        //     $(ele).hasClass('f-line') ? $(ele).removeClass('go') : $(ele).removeClass('f-aniIn');
+        // }
     })
 }
-
-
 
 //防抖函数,如果100毫秒以内触发了多个需要添加动态的元素,给他们加个延迟,免得一块显示不好看
 function getDelay() {

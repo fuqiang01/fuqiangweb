@@ -6,11 +6,15 @@
 .banner {
   background-image: url('../img/banner_gywm.png');
   background-size: 100% 100%;
-  height: 500px;
+  height: 400px;
   text-align: center;
   color: #fff;
-  padding-top: 200px;
+  padding-top: 150px;
   box-sizing: border-box;
+}
+.banner h1 {
+  font-size: 36px;
+  font-weight: normal;
 }
 .banner-bot {
   border-bottom: 1px solid #ccc;
@@ -29,9 +33,6 @@
 .content {
   text-align: center;
   padding: 80px 0;
-}
-.content .gywm {
-  display: none;
 }
 .content .gywm > p {
   text-align: left;
@@ -77,6 +78,9 @@
   border-radius: 50%;
   margin-bottom: 3px;
 }
+.content .lxwm {
+  display: none;
+}
 .content .lxwm .title {
   text-align: center;
 }
@@ -101,7 +105,7 @@
   background: rgba(255, 0, 0, 0.8);
   box-sizing: content-box;
   border: 6px solid rgba(255, 255, 255, 0.6);
-  animation: scaleRun .7s alternate infinite;
+  animation: dotRun .7s alternate infinite;
 }
 .content .lxwm .map-wrapper .map .map-left span#suizhou {
   top: 385px;
@@ -167,19 +171,24 @@
   clear: both;
 }
 .content .lxwm .serviceHotline .ser-left {
-  background: #f7f8fa url('../img/lxwm_bg.png') no-repeat 630px 30px;
+  background: #f7f8fa url('../img/lxwm_bg.png') no-repeat 715px 70px;
   float: left;
-  width: 800px;
-  height: 190px;
+  width: 880px;
+  height: 230px;
   margin-right: 20px;
-  padding: 20px 50px;
+  padding: 20px 60px;
   box-sizing: border-box;
   text-align: left;
+}
+.content .lxwm .serviceHotline .ser-left h4 {
+  font-size: 20px;
+  font-weight: normal;
+  padding: 15px 0;
 }
 .content .lxwm .serviceHotline .ser-left h2 {
   color: #ff672b;
   font-size: 36px;
-  font-weight: bold;
+  padding: 15px 0;
 }
 .content .lxwm .serviceHotline .ser-left p {
   font-size: 18px;
@@ -191,15 +200,23 @@
 }
 .content .lxwm .serviceHotline .ser-right {
   float: left;
-  width: 300px;
-  height: 190px;
+  text-align: left;
+  width: 350px;
+  height: 230px;
   border: 1px solid #ccc;
-  padding: 30px;
+  padding: 30px 40px;
   box-sizing: border-box;
+}
+.content .lxwm .serviceHotline .ser-right h4 {
+  font-weight: normal;
+  font-size: 20px;
+  padding: 10px 0;
 }
 .content .lxwm .serviceHotline .ser-right .text {
   color: #777;
-  margin: 15px 0;
+  padding: 15px 0;
+  font-size: 14px;
+  line-height: 25px;
 }
 .content .lxwm .serviceHotline .ser-right .ser-btn {
   width: 100%;
@@ -207,4 +224,24 @@
   background: #2aa2ff;
   padding: 10px 0;
   text-align: center;
+}
+.content .lxwm > ul {
+  text-align: center;
+  padding-top: 50px;
+}
+.content .lxwm > ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.content .lxwm > ul li {
+  float: left;
+  width: 280px;
+  margin-right: 50px;
+}
+.content .lxwm > ul li img {
+  width: 100%;
+}
+.content .lxwm > ul li p {
+  padding-top: 15px;
 }
