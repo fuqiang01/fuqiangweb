@@ -1,0 +1,160 @@
+@keyframes kefuBtn{
+    90%{
+        bottom: 20px;
+    }
+    100%{
+        bottom: 20px;
+    }
+}
+
+.content{
+    .btn{
+        background: #E50112;
+        color: #fff;
+        padding: 5px 30px;
+        border-radius: 20px;
+    }
+    .kefu-btn{
+        display: inline-block;
+        border: 2px solid #4a9bff;
+        border-radius: 10px;
+        padding: 15px 30px 15px 100px;
+        position: relative;
+        cursor: pointer;
+        &::before{
+            content: '';
+            position: absolute;
+            background: url('../img/person.png') center no-repeat;
+            width: 80px;
+            height: 80px;
+            left: 20px;
+            bottom: 0;
+            animation: kefuBtn 1s infinite alternate;
+        }
+    }
+    // 精选服务专区
+    .select{
+        text-align: center;
+        padding: 80px 0;
+        ul{
+            padding-top: 50px;
+            li{
+                float: left;
+                width: 280px;
+                margin: 25px;
+                padding-bottom: 30px;
+                img{
+                    width: 100%;
+                }
+                h3{
+                    font-size: 18px;
+                    padding-top: 20px;
+                    font-weight: bold;
+                }
+                .vice-title{
+                    color: #666;
+                }
+                .price{
+                    color: #E50112;
+                    span{
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                }
+                &:hover{
+                    box-shadow: 0 0 10px rgba(0,0,0,.1);
+                }
+            }
+        }
+    }
+    // 要准备的
+    .prepare{
+        background: #f5f5f5;
+        padding: 80px 0;
+        text-align: center;
+        ul{
+            padding: 80px 0;
+            li{
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 20px;
+                font-weight: bold;
+                font-size: 20px;
+                color: #666;
+                &.img{
+                    h4{
+                        font-weight: bold;
+                        padding-top: 15px;
+                    }
+                }
+                &.plus{
+                    margin-top: -35px;
+                }
+            }
+        }
+    }
+    // 流程
+    .process{
+        padding: 80px 0;
+        text-align: center;
+        ul{
+            padding: 80px 0;
+            li{
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 20px;
+                h4{
+                    font-weight: bold;
+                    padding-top: 20px;
+                }
+                &.arrow{
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+    // 得到的资料
+    .data{
+        background: #f5f5f5;
+        text-align: center;
+        padding: 80px 0;
+        .img-wrapper{
+            padding-top: 80px;
+            img{
+                width: 300px;
+                margin: 0 10px;
+                transition: all .5s;
+                &:hover{
+                    transform: scale(1.1) translateY(-14px);
+                }
+            }
+        }
+    }
+    // 优势
+    .advantage{
+        padding: 80px 0 10px;
+        text-align: center;
+        .info{
+            margin-left: 150px;
+            padding-top: 100px;
+            img{
+                float: left;
+            }
+            ul{
+                padding-left: 600px;
+                text-align: left;
+                li{
+                    padding: 5px 0 32px;
+                    h4{
+                        font-weight: bold;
+                        color: #333;
+                    }
+                    p{
+                        color: #777;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

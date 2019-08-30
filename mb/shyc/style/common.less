@@ -1,0 +1,368 @@
+//初始化
+a,a:link{
+    text-decoration: none;
+    color: #222;
+}
+.container{
+    width: 1350px!important;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+// topbar
+.topbar{
+    background: #f5f5f5;
+    line-height: 30px;
+    .left{
+        float: left;
+        margin: 0;
+    }
+    .right{
+        float: right;
+        .phone{
+            float: left;
+            margin: 0;
+        }
+        .wx{
+            float: left;
+            position: relative;
+            margin-left: 10px;
+            .wx-hover{
+                position: absolute;
+                text-align: center;
+                margin-left: -50px;
+                background: #fff;
+                padding: 0 10px;
+                box-shadow: 0 0 5px #eee;
+                opacity: 0;
+                z-index: 0;
+                transition: all .3s;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            &:hover{
+                .wx-hover{
+                    opacity: 1;
+                    z-index: 3;
+                }
+            }
+        }
+        .glyphicon{
+            color: #E50112;
+        }
+    }
+}
+// header
+header{
+    z-index: 30;
+    background: #fff;
+    width: 100%;
+    padding: 5px 0;
+    &.header-fixed{
+        position: fixed;
+        top: 0px;
+        box-shadow:5px 0 5px rgba(11, 11, 11, 0.16);
+    }
+    .logo{
+        float: left;
+        img{
+            height: 80px;
+        }
+    }
+    .header-nav{
+        float: right;
+        margin: 0;
+        li{
+            float: left;
+            margin: 0 20px;
+            a{
+                display: inline-block;
+                line-height: 80px;
+                font-size: 16px;
+                &:hover{
+                    color: #E50112;
+                }
+            }
+        }
+    }
+}
+// footer
+footer{
+    // 一站式服务
+    .footer-advantage{
+        text-align: center;
+        padding: 80px 0;
+        background: linear-gradient(to right, #157db7, #2ed3df);
+        ul{
+            padding-top: 50px;
+            li{
+                float: left;
+                width: 330px;
+                img{
+                    float: left;
+                    padding-top: 10px;
+                }
+                .text{
+                    text-align: left;
+                    padding-left: 60px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    // 友情链接
+    .footer-link{
+        border-bottom: 1px dotted #90bfc9;
+        padding: 30px 0 10px;
+        p{
+            font-size: 16px;
+            color: #333;
+        }
+        a{
+            color: #777;
+            margin: 0 10px;
+        }
+    }
+    .footer-list{
+        .left{
+            float: left;
+            padding: 20px 0;
+            .service-list{
+                padding-bottom: 20px;
+                a{
+                    margin: 0 10px;
+                }
+            }
+            .beian{
+                color: #ccc;
+                a{
+                    color: #ccc;
+                }
+            }
+        }
+        .right{
+            float: right;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
+//侧边框
+.right-bar{
+    position: fixed;
+    right: 5px;
+    bottom: 200px;
+    color: #fff;
+    z-index: 30;
+    cursor: pointer;
+    .show-box{
+        &>div{
+            width: 70px;
+            background: #E50112;
+            margin: 3px 0;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 5px;
+            position: relative;
+            p{
+                font-size: 12px;
+                margin: 0;
+            }
+            &>.hover-show{
+                position: absolute;
+                left: -220px;
+                top: 0;
+                background: #fff;
+                width: 170px;
+                box-sizing: content-box;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                padding: 20px;
+                display: none;
+                &::after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border: 10px solid transparent;
+                    border-left-color: #fff;
+                    right: -20px;
+                    top: 29px;
+
+                }
+                p{
+                    color: #4888f1;
+                    text-align: left;
+                    font-size: 16px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #ccc;
+                }
+                h2{
+                    color: #f97316;
+                    text-align: left;
+                    padding-top: 10px;
+                }
+                img{
+                    padding-top: 20px;
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+            &:hover{
+                background: #C40D19;
+                &>.hover-show{
+                    display: block;
+                }
+            }
+        }
+        .goTop{
+            display: none;
+            img{
+                width: 25px;
+            }
+        }
+        .footer-hidden{
+            padding: 3px 0 8px;;
+            span{
+                font-size: 12px;
+                vertical-align: middle;
+            }
+            img{
+                vertical-align: middle;
+            }
+        }
+    }
+    .hidden-box{
+        background: #3289ff;
+        text-align: center;
+        padding: 15px 0;
+        width: 20px;
+        border-radius: 5px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: none;
+    }
+}
+// 弹窗
+.popupWindow-wrapper{
+    position: fixed;
+    z-index: 30;
+    background: rgba(0,0,0,.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    .poruoWindow{
+        background: #fff;
+        width: 500px;
+        margin: 200px auto;
+        padding: 50px 90px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        position: relative;
+        background-image: url('../img/popup_window.jpg');
+        background-size: 100% 100%;
+        p{
+            padding: 10px 0;
+            font-size: 20px;
+            color: #444;
+            span{
+                color: #ff672b;
+                font-weight: bold;
+            }
+        }
+        input{
+            padding: 10px 20px;
+            margin: 10px 0;
+            outline: none;
+        }
+        .popW-btn{
+            background: #E50112;
+            color: #fff;
+            padding: 10px 0;
+            width: 213px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .popW-shut-btn{
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            color: #999;
+            cursor: pointer;
+            &:hover{
+                color: #333;
+            }
+        }
+    }
+}
+// 底边栏
+.buttomBar{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 30;
+    &>p{
+        background: -webkit-gradient(linear, left top, right top, from(#ff8283), to(#E50112));
+        color: #fff;
+        font-size: 20px;
+        padding: 20px 0;
+        text-align: center;
+        margin: 0;
+        border-radius: 0 80px 80px 0;
+        font-weight: bold;
+        width: 150px;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+    }
+    &>div{
+        position: absolute;
+        background: url('../img/fixed_bg.png') center no-repeat;
+        width: 100%;
+        height: 150px;
+        color: #fff;
+        bottom: 0;
+        left: -100%;
+        &>div{
+            float: left;
+        }
+        .title{
+            margin-left: 300px;
+            padding-top: 20px;
+        }
+        .input{
+            margin-top: 50px;
+            margin-left: 100px;
+            form{
+                // border: 1px solid #E50112;
+                background: #fff;
+                height: 60px;
+                padding-left: 20px;
+                input{
+                    padding: 0 20px;
+                    border: none;
+                    border-left: 1px solid #ccc;
+                }
+                button{
+                    height: 60px;
+                    border: none;
+                    background: #E50112;
+                    padding: 0 20px;
+                }
+            }
+        }
+        .shutDown{
+            margin: 60px 80px 0;
+        }
+    }
+}

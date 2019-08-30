@@ -1,0 +1,186 @@
+.content .hot {
+  padding: 80px 0;
+}
+.content .hot h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.content .hot h3::after {
+  content: '';
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  height: 3px;
+  background: #E50112;
+}
+.content .hot ul li {
+  float: left;
+  width: 660px;
+  padding: 20px;
+}
+.content .hot ul li .img {
+  width: 300px;
+  height: 250px;
+  float: left;
+  overflow: hidden;
+}
+.content .hot ul li .img img {
+  width: 100%;
+  height: 100%;
+  transition: transform .5s;
+}
+.content .hot ul li .img:hover {
+  border: 2px solid #E50112;
+}
+.content .hot ul li .img:hover img {
+  transform: scale(1.1);
+}
+.content .hot ul li .text {
+  padding-left: 320px;
+}
+.content .hot ul li .text h4 {
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.content .hot ul li .text .vice-title {
+  color: #777;
+}
+.content .hot ul li .text .price {
+  color: #E50112;
+  padding: 15px 0;
+  font-size: 16px;
+  height: 60px;
+}
+.content .hot ul li .text .price span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.content .hot ul li .text .btn {
+  padding: 10px 40px;
+  border-color: #E50112;
+}
+.content .hot ul li .text .btn:hover {
+  background: #E50112;
+  color: #fff;
+}
+.content .server-info {
+  padding: 80px 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+.content .server-info h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.content .server-info h3::after {
+  content: '';
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  height: 3px;
+  background: #E50112;
+}
+.content .server-info .info {
+  margin: 0 90px;
+}
+.content .server-info .info .left {
+  float: left;
+  width: 200px;
+  height: 455px;
+  border: 1px solid #eee;
+  background: #fff;
+}
+.content .server-info .info .left li {
+  text-align: center;
+  line-height: 91px;
+  padding-right: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.content .server-info .info .left li:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+.content .server-info .info .left li.active {
+  background: #E50112;
+  color: #fff;
+  z-index: 3;
+  box-shadow: 0 0 10px #E50112;
+  border-color: #E50112;
+}
+.content .server-info .info .right {
+  float: left;
+  width: 940px;
+  margin-left: -20px;
+  position: relative;
+}
+.content .server-info .info .right div {
+  position: absolute;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.content .server-info .info .right div.active {
+  opacity: 1;
+}
+.content .server-info .btn {
+  padding: 15px 50px;
+  background: #E50112;
+  color: #fff;
+  margin-top: 30px;
+}
+.content .more-server {
+  padding: 80px 0;
+  text-align: center;
+}
+.content .more-server h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.content .more-server h3::after {
+  content: '';
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  height: 3px;
+  background: #E50112;
+}
+.content .more-server ul li {
+  display: inline-block;
+  width: 200px;
+  padding: 30px 0;
+}
+.content .more-server ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.content .more-server ul li .img {
+  width: 108px;
+  height: 100px;
+  background-image: url('../img/little.png');
+  margin: 0 auto;
+}
+.content .more-server ul li h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.content .more-server ul li p {
+  color: #777;
+}
+.content .more-server ul li:nth-of-type(1) .img {
+  background-position: 14px 0px;
+}
+.content .more-server ul li:nth-of-type(2) .img {
+  background-position: 20px 100px;
+}
+.content .more-server ul li:nth-of-type(3) .img {
+  background-position: 7px 200px;
+}
+.content .more-server ul li:nth-of-type(4) .img {
+  background-position: 14px 300px;
+}
+.content .more-server ul li:nth-of-type(5) .img {
+  background-position: 5px 400px;
+}
+.content .more-server ul li:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

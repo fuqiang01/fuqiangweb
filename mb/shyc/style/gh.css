@@ -1,0 +1,51 @@
+.content {
+  padding: 80px 0;
+}
+.content .left {
+  float: left;
+  width: 250px;
+  margin-right: 20px;
+}
+.content .left dt {
+  line-height: 40px;
+  background: #E50112;
+  color: #fff;
+  padding: 0 20px;
+}
+.content .left dt:not(:first-of-type) {
+  margin-top: 1px;
+}
+.content .left dt span {
+  float: right;
+  line-height: 40px;
+  transition: all .5s;
+}
+.content .left dd {
+  display: none;
+}
+.content .left dd a {
+  display: inline-block;
+  padding: 0 35px;
+  line-height: 40px;
+  background: #dea8a8;
+  color: #fff;
+  width: 100%;
+}
+.content .left dd a:hover {
+  background: #ca4f4f;
+}
+.content .right {
+  float: left;
+  width: 1080px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+}
+.content .right h3 {
+  border-bottom: 1px solid #E50112;
+  padding-bottom: 20px;
+}
+.content .right .text p img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}

@@ -1,0 +1,172 @@
+.content{
+    // 商标早知道
+    .know{
+        padding: 80px 0;
+        text-align: center;
+        h3{
+            background: url('../img/border1.png') center no-repeat;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+    }
+    // 如何收费
+    .charge{
+        padding: 80px 0;
+        background: #f5f5f5;
+        text-align: center;
+        h3{
+            background: url('../img/border2.png') center no-repeat;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+        ul{
+            li{
+                display: inline-block;
+                width: 200px;
+                background: #fff;
+                border-radius: 5px;
+                padding: 40px 20px 30px;
+                margin: 0 20px;
+                h4{
+                    font-weight: bold;
+                    padding-top: 10px;
+                }
+                .vice-title{
+                    color: #777;
+                }
+                .price{
+                    color: #E50112;
+                    span{
+                        font-size: 18px;
+                        font-weight: bolder;
+                    }
+                }
+                .btn{
+                    border: 1px solid #ccc;
+                    &:hover{
+                        background: #E50112;
+                        border-color: #E50112;
+                        color: #fff;
+                    }
+                }
+                &:hover{
+                    box-shadow: 0 0 10px 5px #d6d6d6;
+                }
+            }
+        }
+    }
+    // 流程
+    .process{
+        padding: 80px 0;
+        text-align: center;
+        h3{
+            background: url('../img/border4.png') center no-repeat;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+    }
+    // 为什么选择我们
+    .why{
+        padding: 80px 0;
+        text-align: center;
+        background: #f5f5f5;
+        h3{
+            background: url('../img/border5.png') center no-repeat;
+            padding: 20px;
+            margin-bottom: 60px;
+        }
+        ul{
+            li{
+                display: inline-block;
+                margin: 0 50px;
+                img{
+                    padding-bottom: 15px;
+                }
+            }
+        }
+        .btn{
+            background: #E50112;
+            color: #fff;
+            margin-top: 30px;
+            font-size: 20px;
+            padding: 10px 50px;
+        }
+    }
+    // 常见问题
+    .problem{
+        padding: 80px 0;
+        text-align: center;
+        h3{
+            background: url('../img/border6.png') center no-repeat;
+            padding: 20px;
+            margin-bottom: 60px;
+        }
+        .left{
+            margin-left: 50px;
+            float: left;
+            width: 950px;
+            height: 300px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: left;
+            padding: 30px 40px;
+            li{
+                padding-left: 30px;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    left: 0;
+                }
+                &.q{
+                    font-weight: bold;
+                    padding-top: 10px;
+                    padding-bottom: 5px;
+                    &::before{
+                        background: url('../img/question.png') center no-repeat;
+                    }
+                }
+                &.a{
+                    color: #777;
+                    padding-bottom: 10px;
+                    &::before{
+                        background: url('../img/answer.png') center no-repeat;
+                    }
+                }
+            }
+        }
+        .right{
+            float: left;
+            width: 280px;
+            height: 300px;
+            background: #f6f6f6;
+            padding: 20px;
+            margin-left: 20px;
+            .title{
+                font-size: 16px;
+            }
+            img{
+                padding: 15px 0 20px;
+            }
+            .phone{
+                font-size: 20px;
+                font-weight: bold;
+                color: #E50112;
+            }
+            .date{
+                color: #777;
+                margin-bottom: 20px;
+            }
+            .btn{
+                color: #E50112;
+                border-color: #E50112;
+                &:hover{
+                    background: #E50112;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

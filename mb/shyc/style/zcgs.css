@@ -1,0 +1,150 @@
+@keyframes kefuBtn {
+  90% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+.content .btn {
+  background: #E50112;
+  color: #fff;
+  padding: 5px 30px;
+  border-radius: 20px;
+}
+.content .kefu-btn {
+  display: inline-block;
+  border: 2px solid #4a9bff;
+  border-radius: 10px;
+  padding: 15px 30px 15px 100px;
+  position: relative;
+  cursor: pointer;
+}
+.content .kefu-btn::before {
+  content: '';
+  position: absolute;
+  background: url('../img/person.png') center no-repeat;
+  width: 80px;
+  height: 80px;
+  left: 20px;
+  bottom: 0;
+  animation: kefuBtn 1s infinite alternate;
+}
+.content .select {
+  text-align: center;
+  padding: 80px 0;
+}
+.content .select ul {
+  padding-top: 50px;
+}
+.content .select ul li {
+  float: left;
+  width: 280px;
+  margin: 25px;
+  padding-bottom: 30px;
+}
+.content .select ul li img {
+  width: 100%;
+}
+.content .select ul li h3 {
+  font-size: 18px;
+  padding-top: 20px;
+  font-weight: bold;
+}
+.content .select ul li .vice-title {
+  color: #666;
+}
+.content .select ul li .price {
+  color: #E50112;
+}
+.content .select ul li .price span {
+  font-size: 18px;
+  font-weight: bold;
+}
+.content .select ul li:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.content .prepare {
+  background: #f5f5f5;
+  padding: 80px 0;
+  text-align: center;
+}
+.content .prepare ul {
+  padding: 80px 0;
+}
+.content .prepare ul li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 20px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #666;
+}
+.content .prepare ul li.img h4 {
+  font-weight: bold;
+  padding-top: 15px;
+}
+.content .prepare ul li.plus {
+  margin-top: -35px;
+}
+.content .process {
+  padding: 80px 0;
+  text-align: center;
+}
+.content .process ul {
+  padding: 80px 0;
+}
+.content .process ul li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+.content .process ul li h4 {
+  font-weight: bold;
+  padding-top: 20px;
+}
+.content .process ul li.arrow {
+  padding-bottom: 50px;
+}
+.content .data {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 80px 0;
+}
+.content .data .img-wrapper {
+  padding-top: 80px;
+}
+.content .data .img-wrapper img {
+  width: 300px;
+  margin: 0 10px;
+  transition: all .5s;
+}
+.content .data .img-wrapper img:hover {
+  transform: scale(1.1) translateY(-14px);
+}
+.content .advantage {
+  padding: 80px 0 10px;
+  text-align: center;
+}
+.content .advantage .info {
+  margin-left: 150px;
+  padding-top: 100px;
+}
+.content .advantage .info img {
+  float: left;
+}
+.content .advantage .info ul {
+  padding-left: 600px;
+  text-align: left;
+}
+.content .advantage .info ul li {
+  padding: 5px 0 32px;
+}
+.content .advantage .info ul li h4 {
+  font-weight: bold;
+  color: #333;
+}
+.content .advantage .info ul li p {
+  color: #777;
+  font-size: 16px;
+}

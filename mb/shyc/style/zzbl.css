@@ -1,0 +1,199 @@
+.content .zizhi-list {
+  padding: 80px 15px;
+  text-align: center;
+}
+.content .zizhi-list h3 {
+  margin-bottom: 50px;
+}
+.content .zizhi-list h3::after {
+  content: '';
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  height: 3px;
+  background: #E50112;
+}
+.content .zizhi-list .item {
+  margin-bottom: 20px;
+}
+.content .zizhi-list .item .title {
+  background: #f0f0f0;
+  height: 40px;
+  line-height: 40px;
+}
+.content .zizhi-list .item .title h4 {
+  line-height: 40px;
+  float: left;
+  text-align: left;
+  background: #E50112;
+  color: #fff;
+  margin: 0;
+  padding: 0 20px;
+  position: relative;
+}
+.content .zizhi-list .item .title h4::after {
+  content: '';
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-image: url('../img/zz_arrow.png');
+  background-size: 100% 100%;
+  right: -42px;
+  top: -2px;
+}
+.content .zizhi-list .item .title a {
+  float: right;
+  position: relative;
+  color: #777;
+  margin-right: 20px;
+}
+.content .zizhi-list .item .title a:hover {
+  color: #E50112;
+}
+.content .zizhi-list .item ul li {
+  float: left;
+  width: 300px;
+  margin: 15px;
+  position: relative;
+}
+.content .zizhi-list .item ul li .img {
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+}
+.content .zizhi-list .item ul li .img img {
+  width: 100%;
+  transition: all .5s;
+}
+.content .zizhi-list .item ul li h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+.content .zizhi-list .item ul li .btn-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 300px;
+  height: 170px;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: all .5s;
+}
+.content .zizhi-list .item ul li .btn-wrapper .btn {
+  background: #fff;
+  margin-top: 70px;
+  color: #E50112;
+}
+.content .zizhi-list .item ul li:hover img {
+  transform: scale(1.1);
+}
+.content .zizhi-list .item ul li:hover .btn-wrapper {
+  opacity: 1;
+}
+.content .process {
+  padding: 80px 0;
+  text-align: center;
+  background: #f5f5f5;
+}
+.content .process h3 {
+  margin-bottom: 50px;
+}
+.content .process h3::after {
+  content: '';
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  height: 3px;
+  background: #E50112;
+}
+.content .process .btn {
+  padding: 16px 70px;
+  font-size: 18px;
+  background: #E50112;
+  color: #fff;
+  margin-top: 40px;
+}
+.content .problem {
+  padding: 80px 0;
+  text-align: center;
+}
+.content .problem h3 {
+  margin-bottom: 50px;
+}
+.content .problem h3::after {
+  content: '';
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  height: 3px;
+  background: #E50112;
+}
+.content .problem .left {
+  margin-left: 50px;
+  float: left;
+  width: 950px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: left;
+  padding: 30px 40px;
+}
+.content .problem .left li {
+  padding-left: 30px;
+  position: relative;
+}
+.content .problem .left li::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+}
+.content .problem .left li.q {
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.content .problem .left li.q::before {
+  background: url('../img/question.png') center no-repeat;
+}
+.content .problem .left li.a {
+  color: #777;
+  padding-bottom: 10px;
+}
+.content .problem .left li.a::before {
+  background: url('../img/answer.png') center no-repeat;
+}
+.content .problem .right {
+  float: left;
+  width: 280px;
+  height: 300px;
+  background: #f6f6f6;
+  padding: 20px;
+  margin-left: 20px;
+}
+.content .problem .right .title {
+  font-size: 16px;
+}
+.content .problem .right img {
+  padding: 15px 0 20px;
+}
+.content .problem .right .phone {
+  font-size: 20px;
+  font-weight: bold;
+  color: #E50112;
+}
+.content .problem .right .date {
+  color: #777;
+  margin-bottom: 20px;
+}
+.content .problem .right .btn {
+  color: #E50112;
+  border-color: #E50112;
+}
+.content .problem .right .btn:hover {
+  background: #E50112;
+  color: #fff;
+}

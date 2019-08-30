@@ -12,8 +12,11 @@ http://www.cwzcgs.com/
 第二套模板:http://www.dlgsi.com/
 第三套模板:http://www.zcegs.com/
 武汉易创:  http://www.swzcr.com/
+上海易创:  http://www.shyccw.cn/
 
 电话号码提交接口:https://smapp.shyccw.com/tel
+
+字体图标: <script src="https://use.fontawesome.com/d3bc97cae6.js"></script>
 
 高德地图key:
 

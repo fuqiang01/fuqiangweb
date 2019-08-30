@@ -1,0 +1,205 @@
+.content{
+    // 热门服务
+    .hot{
+        padding: 80px 0;
+        h3{
+            text-align: center;
+            margin-bottom: 50px;
+            &::after{
+                content: '';
+                display: block;
+                margin: 10px auto;
+                width: 50px;
+                height: 3px;
+                background: #E50112;
+            }
+        }
+        ul{
+            li{
+                float: left;
+                width: 660px;
+                padding: 20px;
+                .img{
+                    width: 300px;
+                    height: 250px;
+                    float: left;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        transition: transform .5s;
+                    }
+                    &:hover{
+                        border: 2px solid #E50112;
+                        img{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                .text{
+                    padding-left: 320px;
+                    h4{
+                        font-weight: bold;
+                        padding-bottom: 15px;
+                    }
+                    .vice-title{
+                        color: #777;
+                    }
+                    .price{
+                        color: #E50112;
+                        padding: 15px 0;
+                        font-size: 16px;
+                        height: 60px;
+                        span{
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                    }
+                    .btn{
+                        padding: 10px 40px;
+                        border-color: #E50112;
+                        &:hover{
+                            background: #E50112;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 服务介绍
+    .server-info{
+        padding: 80px 0;
+        background: #f5f5f5;
+        text-align: center;
+        h3{
+            text-align: center;
+            margin-bottom: 50px;
+            &::after{
+                content: '';
+                display: block;
+                margin: 10px auto;
+                width: 50px;
+                height: 3px;
+                background: #E50112;
+            }
+        }
+        .info{
+            margin: 0 90px;
+            .left{
+                float: left;
+                width: 200px;
+                height: 455px;
+                border: 1px solid #eee;
+                background: #fff;
+                li{
+                    text-align: center;
+                    line-height: 91px;
+                    padding-right: 20px;
+                    position: relative;
+                    cursor: pointer;
+                    &:not(:last-of-type){
+                        border-bottom: 1px solid #eee;
+                    }
+                    &.active{
+                        background: #E50112;
+                        color: #fff;
+                        z-index: 3;
+                        box-shadow: 0 0 10px #E50112;
+                        border-color: #E50112;
+                    }
+                }
+            }
+            .right{
+                float: left;
+                width: 940px;
+                margin-left: -20px;
+                position: relative;
+                div{
+                    position: absolute;
+                    opacity: 0;
+                    transition: opacity .3s;
+                    &.active{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .btn{
+            padding: 15px 50px;
+            background: #E50112;
+            color: #fff;
+            margin-top: 30px;
+        }
+    }
+    // 其他服务
+    .more-server{
+        padding: 80px 0;
+        text-align: center;
+        h3{
+            text-align: center;
+            margin-bottom: 50px;
+            &::after{
+                content: '';
+                display: block;
+                margin: 10px auto;
+                width: 50px;
+                height: 3px;
+                background: #E50112;
+            }
+        }
+        ul{
+            li{
+                display: inline-block;
+                width: 200px;
+                padding: 30px 0;
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                .img{
+                    width: 108px;
+                    height: 100px;
+                    background-image: url('../img/little.png');
+                    margin: 0 auto;
+                }
+                h4{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                p{
+                    color: #777;
+                }
+                &:nth-of-type(1){
+                    .img{
+                        background-position: 14px 0px;
+                    }
+                }
+                &:nth-of-type(2){
+                    .img{
+                        background-position: 20px 100px;
+                    }
+                }
+                &:nth-of-type(3){
+                    .img{
+                        background-position: 7px 200px;
+                    }
+                }
+                &:nth-of-type(4){
+                    .img{
+                        background-position: 14px 300px;
+                    }
+                }
+                &:nth-of-type(5){
+                    .img{
+                        background-position: 5px 400px;
+                    }
+                }
+                &:hover{
+                    box-shadow: 0 0 10px rgba(0,0,0,.1);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+.content .why {
+  padding: 80px 15px;
+  text-align: center;
+}
+.content .why ul li {
+  float: left;
+  width: 280px;
+  height: 350px;
+  margin: 25px;
+  background-size: 100% 100%;
+  font-size: 16px;
+  padding-top: 270px;
+}
+.content .why ul li:nth-of-type(1) {
+  background-image: url('../img/w1.png');
+}
+.content .why ul li:nth-of-type(2) {
+  background-image: url('../img/w2.png');
+}
+.content .why ul li:nth-of-type(3) {
+  background-image: url('../img/w3.png');
+}
+.content .why ul li:nth-of-type(4) {
+  background-image: url('../img/w4.png');
+}
+.content .why ul li:nth-of-type(5) {
+  background-image: url('../img/w5.png');
+}
+.content .why ul li:nth-of-type(6) {
+  background-image: url('../img/w6.png');
+}
+.content .why ul li:nth-of-type(7) {
+  background-image: url('../img/w7.png');
+}
+.content .why ul li:nth-of-type(8) {
+  background-image: url('../img/w1.png');
+}
+.content .why ul li:hover {
+  font-size: 18px;
+  font-weight: bold;
+}
+.content .conditions {
+  padding: 80px 0;
+  text-align: center;
+  background: #f5f5f5;
+}
+.content .conditions .info {
+  padding: 50px 0;
+}
+.content .conditions .info > ul {
+  float: left;
+  width: 620px;
+  margin: 0 20px;
+}
+.content .conditions .info > ul li {
+  height: 121px;
+  line-height: 121px;
+  color: #fff;
+  font-size: 16px;
+  background-repeat: no-repeat;
+}
+.content .conditions .info .left li {
+  padding-left: 130px;
+  background-position: right;
+}
+.content .conditions .info .left li:nth-of-type(1) {
+  background-image: url('../img/c1.png');
+}
+.content .conditions .info .left li:nth-of-type(2) {
+  background-image: url('../img/c3.png');
+}
+.content .conditions .info .left li:nth-of-type(3) {
+  background-image: url('../img/c5.png');
+}
+.content .conditions .info .left li:nth-of-type(4) {
+  background-image: url('../img/c7.png');
+}
+.content .conditions .info .right li {
+  padding-right: 130px;
+  background-position: left;
+}
+.content .conditions .info .right li:nth-of-type(1) {
+  background-image: url('../img/c2.png');
+}
+.content .conditions .info .right li:nth-of-type(2) {
+  background-image: url('../img/c4.png');
+}
+.content .conditions .info .right li:nth-of-type(3) {
+  background-image: url('../img/c6.png');
+}
+.content .conditions .info .right li:nth-of-type(4) {
+  background-image: url('../img/c8.png');
+}
+.content .conditions .zixun-btn {
+  display: inline-block;
+  padding: 10px 50px 10px 40px;
+  color: #fff;
+  background-image: url('../img/c-btn1.png');
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.content .standard {
+  padding: 80px 0;
+  text-align: center;
+}
+.content .standard p {
+  font-size: 16px;
+  padding: 20px 0 50px;
+}
+.content .process {
+  padding: 80px 0;
+  text-align: center;
+  background: #f8f6f7;
+}
+.content .process p {
+  font-size: 16px;
+  padding: 20px 0 50px;
+}
+.content .process .img {
+  background: url('../img/process.png') center no-repeat;
+}
+.content .advantage {
+  padding: 80px 0 30px;
+  text-align: center;
+}
+.content .advantage ul {
+  padding-top: 50px;
+}
+.content .advantage ul li {
+  display: inline-block;
+  margin: 15px 0;
+  width: 949px;
+  height: 108px;
+  text-align: left;
+  color: #fff;
+  padding-left: 210px;
+}
+.content .advantage ul li h4 {
+  font-weight: bold;
+  padding: 25px 0 5px;
+}
+.content .advantage ul li:nth-of-type(1) {
+  background: url('../img/ce1.png');
+}
+.content .advantage ul li:nth-of-type(2) {
+  background: url('../img/ce2.png');
+}
+.content .advantage ul li:nth-of-type(3) {
+  background: url('../img/ce3.png');
+}
+.content .advantage ul li:nth-of-type(4) {
+  background: url('../img/ce4.png');
+}
+.content .advantage .zixun-btn {
+  display: inline-block;
+  padding: 18px 70px 18px 40px;
+  color: #fff;
+  background-image: url('../img/c-btn1.png');
+  background-size: 100% 100%;
+  cursor: pointer;
+}

@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a,
+a:link,
+a:hover {
+  text-decoration: none;
+}
+html {
+  overflow-x: hidden;
+}
+header {
+  line-height: 70px;
+  padding: 40px;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  min-width: 1350px;
+  box-sizing: border-box;
+  transition: all .5s;
+}
+header.header-hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0px 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+header .logo {
+  float: left;
+}
+header .logo a img {
+  vertical-align: middle;
+}
+header nav {
+  float: right;
+}
+header nav ul li {
+  float: left;
+  margin: 0 10px;
+}
+header nav ul li a {
+  color: #fff;
+}
