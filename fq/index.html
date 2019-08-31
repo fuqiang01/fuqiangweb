@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.5/css/swiper.min.css">
+</head>
+
+<body>
+    <div class="content">
+        <!-- 大图 -->
+        <div class="item item-bigImg">
+            <div class="flag-img">
+                <img src="./img/music.png" alt="">
+            </div>
+            <h3><a href="#">标题标题标题标题标题标题标题标题标题标题</a></h3>
+            <div class="info">
+                <img src="./img/home_bg.jpg" alt="">
+                <p class="text">
+                    <a href="#">一、先说下Linux内核非常庞大，我说的非常大并不是为了吓唬大家，确实是非常多的代码，超过600万行的代码，所以我写文章介绍Linux内核，也不可能每一行代码去分析，但是我会提炼其中的重点出来，告诉大家，Linux内核的构成，包含哪些东西，我们不管学习什么，最关键的是学会其中的思想，但是我们如果什么都还不会的时候，可以学着由表
+                        [...]</a>
+                </p>
+            </div>
+            <div class="footer">
+                <span>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    2019年08月31号
+                </span>
+                <span>
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                    28马克了
+                </span>
+                <span>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    5人留言
+                </span>
+            </div>
+        </div>
+        <!-- 九图 -->
+        <div class="item item-nineImg">
+            <div class="flag-img">
+                <img src="./img/music.png" alt="">
+            </div>
+            <div class="click-view">
+                <div class="swiper-big">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/home_bg.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/home_bg.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/home_bg.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="img-small">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                    <img src="./img/home_bg.jpg" alt="">
+                </div>
+            </div>
+            <h3><a href="#">标题标题标题标题标题标题标题标题标题标题</a></h3>
+            <div class="info">
+                <img src="./img/home_bg.jpg" alt="">
+                <p class="text">
+                    <a href="#">一、先说下Linux内核非常庞大，我说的非常大并不是为了吓唬大家，确实是非常多的代码，超过600万行的代码，所以我写文章介绍Linux内核，也不可能每一行代码去分析，但是我会提炼其中的重点出来，告诉大家，Linux内核的构成，包含哪些东西，我们不管学习什么，最关键的是学会其中的思想，但是我们如果什么都还不会的时候，可以学着由表
+                        [...]</a>
+                </p>
+            </div>
+            <div class="footer">
+                <span>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    2019年08月31号
+                </span>
+                <span>
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                    28马克了
+                </span>
+                <span>
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    5人留言
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.5/js/swiper.min.js"></script>
+    <script>
+        var bigSwiper = new Swiper('.swiper-big', {
+            loop: true, // 循环模式选项
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
+        var smallSwiper = new Swiper('.swiper-big', {
+            loop: true, // 循环模式选项
+
+        })      
+    </script>
+
+</body>
+
+</html>
