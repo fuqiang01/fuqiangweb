@@ -62,7 +62,7 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
 }
 .content .item .footer span {
-  margin: 0 20px;
+  margin-right: 20px;
   color: #eee;
   font-size: 14px;
 }
@@ -73,28 +73,136 @@ body::-webkit-scrollbar {
 .content .item.item-nineImg .click-view {
   padding-top: 30px;
   box-sizing: border-box;
+  display: none;
 }
 .content .item.item-nineImg .click-view .swiper-big {
   width: 1450px;
+  height: 818px;
   overflow: hidden;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-.content .item.item-nineImg .click-view .swiper-big .swiper-wrapper .swiper-slide img {
-  width: 100%;
+.content .item.item-nineImg .click-view .swiper-big .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.content .item.item-nineImg .click-view .img-small {
+.content .item.item-nineImg .click-view .swiper-big .swiper-wrapper .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.content .item.item-nineImg .click-view .swper-big-btn .swper-big-btn-left,
+.content .item.item-nineImg .click-view .swper-big-btn .swper-big-btn-right {
+  position: absolute;
+  top: 377px;
+}
+.content .item.item-nineImg .click-view .swper-big-btn .swper-big-btn-left {
+  left: 80px;
+}
+.content .item.item-nineImg .click-view .swper-big-btn .swper-big-btn-right {
+  right: 80px;
+}
+.content .item.item-nineImg .click-view .swiper-small {
   position: absolute;
   left: 0;
-  bottom: 0;
-  height: 100px;
-  background: rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-around;
+  bottom: 0px;
+  height: 102px;
+  background: rgba(0, 0, 0, 0.9);
   width: 100%;
-  overflow: auto;
 }
-.content .item.item-nineImg .click-view .img-small img {
+.content .item.item-nineImg .click-view .swiper-small::-webkit-scrollbar {
+  display: none;
+}
+.content .item.item-nineImg .click-view .swiper-small .swiper-slide {
+  width: auto;
+  /*根据内容调整宽度*/
+  height: 100px;
+  border: 1px solid transparent;
+}
+.content .item.item-nineImg .click-view .swiper-small .swiper-slide.swiper-slide-active {
+  border-color: #fff;
+}
+.content .item.item-nineImg .click-view .swiper-small .swiper-slide img {
+  height: 100px;
+}
+.content .item.item-music .info {
+  padding-bottom: 30px;
+}
+.content .item.item-music .info .left {
+  float: left;
+}
+.content .item.item-music .info .left .img {
+  float: left;
+  width: 180px;
+  height: 180px;
+  position: relative;
+}
+.content .item.item-music .info .left .img img {
+  width: 100%;
   height: 100%;
+}
+.content .item.item-music .info .left .img .play-btn-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: .5s;
+}
+.content .item.item-music .info .left .img .play-btn-wrapper .audio-play-btn {
+  width: 64px;
+  height: 64px;
+  background-image: url('../img/stop.png');
+  cursor: pointer;
+}
+.content .item.item-music .info .left .img:hover .play-btn-wrapper {
+  transform: scale(1);
+}
+.content .item.item-music .info .left .text {
+  height: 180px;
+  width: 300px;
+  padding: 0 30px 0 190px;
+}
+.content .item.item-music .info .left .text h4 {
+  font-size: 20px;
+}
+.content .item.item-music .info .left .text p {
+  color: #777;
+  padding: 7px 0;
+}
+.content .item.item-music .info .left .text p.hot {
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.content .item.item-music .info .left .text p.author {
+  text-align: right;
+}
+.content .item.item-music .info .right {
+  text-align: center;
+  float: left;
+  width: 670px;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+.content .item.item-music .info .right ul {
+  position: absolute;
+  width: 100%;
+  top: 65px;
+  transition: all .3s;
+}
+.content .item.item-music .info .right ul li {
+  font-size: 18px;
+  line-height: 50px;
+}
+.content .item.item-music .info .right ul li.active {
+  color: #f45d5d;
+  transform: scale(1.2);
 }
