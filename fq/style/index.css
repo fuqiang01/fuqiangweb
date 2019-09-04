@@ -22,8 +22,8 @@ body::-webkit-scrollbar {
 }
 .content .item .flag-img {
   position: absolute;
-  left: -30px;
-  top: 30px;
+  left: 20px;
+  top: 10px;
 }
 .content .item .click-view {
   position: fixed;
@@ -36,6 +36,7 @@ body::-webkit-scrollbar {
 }
 .content .item h3 {
   padding-bottom: 20px;
+  padding-left: 20px;
 }
 .content .item h3 a {
   font-size: 28px;
@@ -205,4 +206,7 @@ body::-webkit-scrollbar {
 .content .item.item-music .info .right ul li.active {
   color: #f45d5d;
   transform: scale(1.2);
+}
+.content .item.item-video .info video {
+  width: 100%;
 }

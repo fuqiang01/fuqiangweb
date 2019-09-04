@@ -16,7 +16,7 @@ function AudioLrc(lrcUrl, audio, $RenderDom, delay) {
 }
 
 AudioLrc.prototype.init = function () {
-    var self = this;
+    const self = this;
 
     $.ajax({
         url: this.lrcUrl,
@@ -32,33 +32,33 @@ AudioLrc.prototype.init = function () {
         self.noRollLrc();
     }
     this.audio.onended = function () {
+        self.noRollLrc();
         $(this)
             .siblings('.audio-play-btn')
             .css('backgroundImage', 'url("../img/stop.png")');
-        $RenderDom.position().top = this.renderDomTop;
+        self.$RenderDom.css('top', self.renderDomTop);
     }
 }
 
 
 
 AudioLrc.prototype.parsingLrc = function (lrc) {
-    var self = this;
-    var lrcLineArr = lrc.split('\n');//把每一行都分割开成数组
-    var lrcObj = {};//储存处理好的数据{时间:歌词}
-    var reg = /\[\d*:\d*\.\d*\]/g;
+    const self = this;
+    const lrcLineArr = lrc.split('\n');//把每一行都分割开成数组
+    const reg = /\[\d*:\d*\.\d*\]/g;
     // console.log(lrcLineArr)
 
     lrcLineArr.forEach(ele => {
 
         // console.log(ele.match(reg))
-        var timeArr = ele.match(reg);//当前行时间数组
-        var content = ele.replace(reg, '');//当前行歌词
+        const timeArr = ele.match(reg);//当前行时间数组
+        const content = ele.replace(reg, '');//当前行歌词
         // console.log(content)
         if (timeArr) {
             timeArr.forEach(ele => {
-                var min = ele.match(/\[\d*/)[0].slice(1) * 60;
-                var sec = ele.match(/:\d*\.\d*/)[0].slice(1);
-                var time = parseInt(min) + parseInt(sec);
+                const min = ele.match(/\[\d*/)[0].slice(1) * 60;
+                const sec = ele.match(/:\d*\.\d*/)[0].slice(1);
+                const time = parseInt(min) + parseInt(sec);
                 self.lrcArr.push([time, content]);
                 // console.log(lrcObj);
             })
