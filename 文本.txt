@@ -1,5 +1,9 @@
 样式图片地址: http://demo.cwgszc.com/
+
 本地测试地址: www.hbcw.cms
+
+微信小程序AppID: wx65c9ec263c1331ef
+
 四个网址: http://www.cwcwdl.com/
  
    	  http://www.cwgsdl.com/ 

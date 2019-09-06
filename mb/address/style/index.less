@@ -1,0 +1,116 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+html
+.content{
+    padding-top: 100px;
+    .hot{
+        font-size: 14px;
+        span{
+            color: #ff552e;
+        }
+        a{
+            margin-left: 15px;
+            color: #777;
+        }
+    }
+    .choose{
+        padding: 30px 0;
+        p,div{
+            float: left;
+        }
+        p{
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        .sheng,.shi{
+            border: 1px solid #ccc;
+            position: relative;
+            cursor: pointer;
+            .show{
+                height: 25px;
+                span{
+                    vertical-align: middle;
+                    line-height: 25px;
+                    padding: 0 40px 0 10px;
+                    color: #777;
+                }
+                img{
+                    vertical-align: middle;
+                }
+            }
+            ul{
+                position: absolute;
+                top: 25px;
+                border: 1px solid #ccc;
+                width: calc(100% + 2px);
+                box-sizing: border-box;
+                margin-left: -1px;
+                padding-left: 10px;
+                max-height: 100px;
+                overflow: auto;
+                background: #fff;
+                display: none;
+                li{
+                    color: #999;
+                    padding: 5px 0;
+                }
+            }
+        }
+        .sheng{
+            margin-left: 20px;
+        }
+        .shi{
+            margin: 0 50px 0 10px;
+        }
+        .input-wrapper{
+            border: 1px solid #ccc;
+            margin-left: 20px;
+            input{
+                border: none;
+                outline: none;
+                height: 25px;
+                padding-left: 10px;
+            }
+            span{
+                display: inline-block;
+                padding: 0 15px;
+                color: #555;
+                background-color: #eee;
+                line-height: 27px;
+                border-left: 1px solid #ccc;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+    .table-wrapper{
+        border: 1px solid #ccc;
+        padding: 30px 50px;
+        h3{
+            padding-bottom: 30px;
+            font-size: 20px;
+        }
+        .table-item{
+            margin-bottom: 20px;
+            p{
+                float: left;
+                width: 40px;
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 30px;
+            }
+            ul{
+                padding-left: 40px;
+                li{
+                    float: left;
+                    line-height: 30px;
+                    font-size: 14px;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}

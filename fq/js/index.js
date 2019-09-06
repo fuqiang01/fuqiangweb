@@ -13,7 +13,7 @@ $('.click-view').click(function (e) {
     }
 })
 
-
+//音频文件初始化
 $('audio').each(function (index, ele) {
     
     const url = $(this).data('url');
@@ -28,7 +28,7 @@ $('audio').each(function (index, ele) {
 
 // 音频播放
 $('.audio-play-btn').on('click', function () {
-    var audio = $(this).siblings('audio')[0];
+    const audio = $(this).siblings('audio')[0];
 
     if (audio.paused) {
         audio.play();

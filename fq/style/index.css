@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
 .content .item {
   background: #fff;
   box-sizing: border-box;
-  padding: 50px 80px;
+  padding: 50px 80px 80px;
   margin-bottom: 50px;
   position: relative;
 }
@@ -44,6 +44,7 @@ body::-webkit-scrollbar {
 }
 .content .item .info img {
   max-width: 100%;
+  max-height: 670px;
 }
 .content .item .info .text {
   padding-top: 10px;
@@ -126,9 +127,6 @@ body::-webkit-scrollbar {
 }
 .content .item.item-nineImg .click-view .swiper-small .swiper-slide img {
   height: 100px;
-}
-.content .item.item-music .info {
-  padding-bottom: 30px;
 }
 .content .item.item-music .info .left {
   float: left;

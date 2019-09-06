@@ -1,0 +1,122 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+html .content {
+  padding-top: 100px;
+}
+html .content .hot {
+  font-size: 14px;
+}
+html .content .hot span {
+  color: #ff552e;
+}
+html .content .hot a {
+  margin-left: 15px;
+  color: #777;
+}
+html .content .choose {
+  padding: 30px 0;
+}
+html .content .choose p,
+html .content .choose div {
+  float: left;
+}
+html .content .choose p {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+}
+html .content .choose .sheng,
+html .content .choose .shi {
+  border: 1px solid #ccc;
+  position: relative;
+  cursor: pointer;
+}
+html .content .choose .sheng .show,
+html .content .choose .shi .show {
+  height: 25px;
+}
+html .content .choose .sheng .show span,
+html .content .choose .shi .show span {
+  vertical-align: middle;
+  line-height: 25px;
+  padding: 0 40px 0 10px;
+  color: #777;
+}
+html .content .choose .sheng .show img,
+html .content .choose .shi .show img {
+  vertical-align: middle;
+}
+html .content .choose .sheng ul,
+html .content .choose .shi ul {
+  position: absolute;
+  top: 25px;
+  border: 1px solid #ccc;
+  width: calc(102%);
+  box-sizing: border-box;
+  margin-left: -1px;
+  padding-left: 10px;
+  max-height: 100px;
+  overflow: auto;
+  background: #fff;
+  display: none;
+}
+html .content .choose .sheng ul li,
+html .content .choose .shi ul li {
+  color: #999;
+  padding: 5px 0;
+}
+html .content .choose .sheng {
+  margin-left: 20px;
+}
+html .content .choose .shi {
+  margin: 0 50px 0 10px;
+}
+html .content .choose .input-wrapper {
+  border: 1px solid #ccc;
+  margin-left: 20px;
+}
+html .content .choose .input-wrapper input {
+  border: none;
+  outline: none;
+  height: 25px;
+  padding-left: 10px;
+}
+html .content .choose .input-wrapper span {
+  display: inline-block;
+  padding: 0 15px;
+  color: #555;
+  background-color: #eee;
+  line-height: 27px;
+  border-left: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+html .content .table-wrapper {
+  border: 1px solid #ccc;
+  padding: 30px 50px;
+}
+html .content .table-wrapper h3 {
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+html .content .table-wrapper .table-item {
+  margin-bottom: 20px;
+}
+html .content .table-wrapper .table-item p {
+  float: left;
+  width: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+}
+html .content .table-wrapper .table-item ul {
+  padding-left: 40px;
+}
+html .content .table-wrapper .table-item ul li {
+  float: left;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 10px;
+}
