@@ -64,6 +64,7 @@ html .content .choose-wrapper .choose .shi ul {
   overflow: auto;
   background: #fff;
   display: none;
+  z-index: 5;
 }
 html .content .choose-wrapper .choose .sheng ul li,
 html .content .choose-wrapper .choose .shi ul li,
@@ -116,6 +117,7 @@ html .content .choose-wrapper .choose .input-wrapper .inputedResults li {
 }
 html .content .table-wrapper {
   border: 1px solid #ccc;
+  box-sizing: border-box;
   padding: 30px 45px;
 }
 html .content .table-wrapper h3 {
@@ -123,39 +125,87 @@ html .content .table-wrapper h3 {
   font-size: 20px;
 }
 html .content .table-wrapper .table-item {
-  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  box-sizing: border-box;
 }
-html .content .table-wrapper .table-item p {
+html .content .table-wrapper .table-item:last-of-type {
+  border-bottom: 1px solid #ccc;
+}
+html .content .table-wrapper .table-item .letter {
   float: left;
   width: 40px;
   font-size: 18px;
   font-weight: bold;
-  line-height: 30px;
+  background: #f5f5f5;
+  color: #999;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  z-index: 3;
 }
-html .content .table-wrapper .table-item ul {
+html .content .table-wrapper .table-item .item {
   padding-left: 40px;
+  height: 50px;
+  box-sizing: border-box;
+  position: relative;
 }
-html .content .table-wrapper .table-item ul li {
+html .content .table-wrapper .table-item .item:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+}
+html .content .table-wrapper .table-item .item::before {
+  content: '';
+  position: absolute;
+  border: 5px solid transparent;
+  border-left-color: #ff552e;
+  top: 50%;
+  margin-top: -5px;
+  display: none;
+}
+html .content .table-wrapper .table-item .item .sheng {
   float: left;
+  width: 60px;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: center;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
-html .content .table-wrapper .table-item ul li a {
+html .content .table-wrapper .table-item .item .shi {
+  float: left;
+  width: 1000px;
+  height: 50px;
+  position: relative;
+}
+html .content .table-wrapper .table-item .item .shi .a-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+html .content .table-wrapper .table-item .item .shi .a-wrapper a {
   display: inline-block;
-  line-height: 30px;
-  font-size: 14px;
-  padding: 0 10px;
+  padding: 0 8px;
+  line-height: 25px;
 }
-html .content .table-wrapper .table-item ul li a.red {
+html .content .table-wrapper .table-item .item .shi .a-wrapper a.red {
   color: red;
 }
-html .content .table-wrapper .table-item ul li a.maroon {
+html .content .table-wrapper .table-item .item .shi .a-wrapper a.maroon {
   color: maroon;
 }
-html .content .table-wrapper .table-item ul li a.blue {
+html .content .table-wrapper .table-item .item .shi .a-wrapper a.blue {
   color: #049;
 }
-html .content .table-wrapper .table-item ul li a.gray {
+html .content .table-wrapper .table-item .item .shi .a-wrapper a.gray {
   color: gray;
 }
-html .content .table-wrapper .table-item ul li a:hover {
+html .content .table-wrapper .table-item .item .shi .a-wrapper a:hover {
   color: #04cf04;
+}
+html .content .table-wrapper .table-item .item:hover::before {
+  display: block;
+}
+html .content .table-wrapper .table-item:hover .letter {
+  background: #ff552e;
+  color: #fff;
 }
