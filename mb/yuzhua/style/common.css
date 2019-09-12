@@ -1,0 +1,214 @@
+.container {
+  width: 1200px !important;
+  max-width: 1200px !important;
+  margin: 0 auto;
+}
+
+.topbar {
+  background: #f5f5f5;
+  line-height: 35px;
+}
+
+.topbar, .topbar a {
+  color: #999;
+}
+
+.topbar .left {
+  float: left;
+}
+
+.topbar .left .flag {
+  color: #3573ec;
+  font-weight: bold;
+}
+
+.topbar .left .login-wrapper {
+  margin-left: 20px;
+}
+
+.topbar .left .login-wrapper .login {
+  color: #ffa200;
+  font-weight: bold;
+}
+
+.topbar .right {
+  float: right;
+}
+
+.topbar .right .address-list a {
+  padding: 0 5px;
+}
+
+.topbar .right .tel {
+  font-weight: bold;
+  color: #696969;
+}
+
+.logo-wrapper {
+  height: 100px;
+}
+
+.logo-wrapper .logo {
+  float: left;
+}
+
+.logo-wrapper .logo img {
+  height: 60px;
+  padding-top: 20px;
+  box-sizing: content-box;
+}
+
+.logo-wrapper .input-wrapper {
+  float: right;
+  width: 700px;
+  padding-top: 35px;
+}
+
+.logo-wrapper .input-wrapper .top .input-right {
+  float: right;
+  height: 35px;
+  background: #333;
+}
+
+.logo-wrapper .input-wrapper .top .input-right a {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  padding: 0 60px 0 20px;
+  height: 100%;
+  line-height: 35px;
+  font-size: 16px;
+}
+
+.logo-wrapper .input-wrapper .top .input-right a img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.logo-wrapper .input-wrapper .top .input {
+  border: 2px solid #2667e9;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 15px;
+  width: 530px;
+}
+
+.logo-wrapper .input-wrapper .top .input .glyphicon {
+  color: #999;
+}
+
+.logo-wrapper .input-wrapper .top .input input {
+  border: none;
+  outline: none;
+  color: #999;
+}
+
+.logo-wrapper .input-wrapper .top .input .input-btn {
+  background: #2667e9;
+  color: #fff;
+  display: inline-block;
+  transform: translateY(-2px);
+  line-height: 35px;
+  padding: 0 30px;
+  font-size: 16px;
+  float: right;
+}
+
+.logo-wrapper .input-wrapper .bot {
+  padding: 5px 0;
+}
+
+.logo-wrapper .input-wrapper .bot a {
+  color: #999;
+  padding: 0 5px;
+}
+
+.nav-bar {
+  background: #abcdef;
+}
+
+.nav-bar ul li {
+  float: left;
+  position: relative;
+}
+
+.nav-bar ul li > a {
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 15px;
+}
+
+.nav-bar ul li > a .glyphicon {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.nav-bar ul li > img {
+  position: absolute;
+  left: 26px;
+  top: -7px;
+}
+
+.nav-bar ul li .hover-show {
+  position: absolute;
+  border: 2px solid #2667e9;
+}
+
+.nav-bar ul li .hover-show::before {
+  content: '';
+  display: block;
+  width: 11px;
+  height: 6px;
+  background: url("../img/icon_arrowtop.png");
+  position: absolute;
+  top: -6px;
+}
+
+.nav-bar ul li .hover-show.hover-a {
+  width: 650px;
+  padding: 30px;
+  left: -91px;
+}
+
+.nav-bar ul li .hover-show.hover-a::before {
+  left: 131px;
+}
+
+.nav-bar ul li .hover-show.hover-a dl {
+  margin-bottom: 30px;
+}
+
+.nav-bar ul li .hover-show.hover-a dl dt {
+  color: #595959;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.nav-bar ul li .hover-show.hover-a dl dd {
+  float: left;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.nav-bar ul li .hover-show.hover-a dl dd a {
+  color: #777;
+}
+
+.nav-bar ul li .hover-show.hover-a dl dd.hover-hot a {
+  color: #ff8400;
+}
+
+.nav-bar ul li .hover-show.hover-a dl dd.hover-hot::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 9px;
+  background: url("../img/icon_hot4.png") center no-repeat;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -4px;
+}

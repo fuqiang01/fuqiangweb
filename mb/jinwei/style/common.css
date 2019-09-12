@@ -1,0 +1,61 @@
+.container {
+  width: 1200px!important;
+  max-width: 1200px!important;
+  min-width: 1200px!important;
+}
+header {
+  height: 115px;
+  padding: 20px 0 35px;
+}
+header .right {
+  float: right;
+  width: 260px;
+}
+header .right .img {
+  width: 60px;
+  height: 60px;
+  background: #ee7800;
+  float: left;
+  border-radius: 50%;
+  padding: 6px;
+}
+header .right .text {
+  padding-left: 70px;
+}
+header .right .text h2,
+header .right .text p {
+  font-size: 20px;
+  font-weight: bold;
+}
+header .right .text h2 {
+  padding: 5px 0;
+}
+header .right .text p {
+  color: #ee7800;
+}
+nav {
+  background: #006CC6;
+  height: 60px;
+}
+nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  height: 80px;
+  transform: translateY(-15px);
+}
+nav a span {
+  display: inline-block;
+  height: 80px;
+  line-height: 60px;
+  padding: 15px 39px 0;
+}
+nav a.active,
+nav a:hover {
+  background: url('../img/nav_bg01.png') left no-repeat;
+  color: #fff;
+}
+nav a.active span,
+nav a:hover span {
+  background: url('../img/nav_bg02.png') right no-repeat;
+}

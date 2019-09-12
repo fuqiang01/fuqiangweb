@@ -1,0 +1,189 @@
+.container{
+    width: 1200px!important;
+    max-width: 1200px!important;
+    margin: 0 auto;
+}
+
+// topbar
+.topbar{
+    background: #f5f5f5;
+    line-height: 35px;
+    &,& a{
+        color: #999;
+    }
+    .left{
+        float: left;
+        .flag{
+            color: #3573ec;
+            font-weight: bold;
+        }
+        .login-wrapper{
+            margin-left: 20px;
+            .login{
+                color: #ffa200;
+                font-weight: bold;
+            }
+        }
+    }
+    .right{
+        float: right;
+        .address-list{
+            a{
+                padding: 0 5px;
+            }
+        }
+        .tel{
+            font-weight: bold;
+            color: #696969;
+        }
+    }
+}
+// logoWrapper
+.logo-wrapper{
+    height: 100px;
+    .logo{
+        float: left;
+        img{
+            height: 60px;
+            padding-top: 20px;
+            box-sizing: content-box;
+        }
+    }
+    .input-wrapper{
+        float: right;
+        width: 700px;
+        padding-top: 35px;
+        .top{
+            .input-right{
+                float: right;
+                height: 35px;
+                background: #333;
+                a{ 
+                    position: relative;
+                    display: inline-block;
+                    color: #fff;
+                    padding: 0 60px 0 20px;
+                    height: 100%;
+                    line-height: 35px;
+                    font-size: 16px;
+                    img{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+            .input{
+                border: 2px solid #2667e9;
+                height: 35px;
+                line-height: 35px;
+                padding-left: 15px;
+                width: 530px;
+                .glyphicon{
+                    color: #999;
+                }
+                input{
+                    border: none;
+                    outline: none;
+                    color: #999;
+                }
+                .input-btn{
+                    background: #2667e9;
+                    color: #fff;
+                    display: inline-block;
+                    transform: translateY(-2px);
+                    line-height: 35px;
+                    padding: 0 30px;
+                    font-size: 16px;
+                    float: right;
+                }
+            }
+        }
+        .bot{
+            padding: 5px 0;
+            a{
+                color: #999;
+                padding: 0 5px;
+            }
+        }
+    }
+}
+// navbar
+.nav-bar{
+    background: #abcdef;
+    ul{
+        li{
+            float: left;
+            position: relative;
+            >a{
+                font-size: 16px;
+                font-weight: bold;
+                display: inline-block;
+                line-height: 40px;
+                padding: 0 15px;
+                .glyphicon{
+                    font-size: 10px;
+                    font-weight: normal;
+                }
+            }
+            >img{
+                position: absolute;
+                left: 26px;
+                top: -7px;
+            }
+            .hover-show{
+                position: absolute;
+                border: 2px solid #2667e9;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 11px;
+                    height: 6px;
+                    background: url('../img/icon_arrowtop.png');
+                    position: absolute;
+                    top: -6px;
+                }
+                &.hover-a{
+                    width: 650px;
+                    padding: 30px;
+                    left: -91px;
+                    &::before{
+                        left: 131px;
+                    }
+                    dl{
+                        margin-bottom: 30px;
+                        dt{
+                            color: #595959;
+                            font-size: 14px;
+                            padding-bottom: 10px;
+                        }
+                        dd{
+                            float: left;
+                            padding: 5px 10px;
+                            position: relative;
+                            a{
+                                color: #777;
+                            }
+                            &.hover-hot{
+                                a{
+                                    color: #ff8400;
+                                }
+                                &::before{
+                                    content: '';
+                                    display: block;
+                                    width: 15px;
+                                    height: 9px;
+                                    background: url('../img/icon_hot4.png') center no-repeat;
+                                    position: absolute;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    top: -4px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
