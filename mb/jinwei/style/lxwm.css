@@ -1,0 +1,134 @@
+.banner img {
+  width: 100%;
+}
+.content {
+  padding: 30px 0;
+  text-align: center;
+}
+.content .top {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.content .title {
+  display: inline-block;
+  padding-top: 30px;
+}
+.content .title a {
+  font-size: 14px;
+  float: left;
+  width: 120px;
+  line-height: 50px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+}
+.content .title a:not(:last-of-type) {
+  border-right: none;
+}
+.content .title a.active {
+  color: #fff;
+  border-bottom-color: #fff;
+  background: #006cc6 url('../img/p16-icon6.png') bottom center no-repeat;
+}
+.content .info {
+  padding-top: 50px;
+}
+.content .info .info-top {
+  height: 200px;
+}
+.content .info .info-top img {
+  float: left;
+}
+.content .info .info-top .text {
+  text-align: left;
+  padding-left: 200px;
+}
+.content .info .info-top .text h2 {
+  display: inline-block;
+  font-size: 24px;
+  color: #006cc6;
+  border-bottom: 2px solid #006cc6;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.content .info .info-top .text h2 span {
+  color: #999;
+  font-size: 20px;
+  font-weight: 100;
+}
+.content .info .info-top .text p {
+  font-size: 14px;
+  color: #444;
+  line-height: 30px;
+  padding-top: 30px;
+}
+.content .info .info-bot {
+  padding-top: 50px;
+}
+.content .info .info-bot .left {
+  float: left;
+  width: 400px;
+  height: 500px;
+  background: #f5f5f5;
+}
+.content .info .info-bot .left dt {
+  line-height: 80px;
+  background: #006cc6;
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+}
+.content .info .info-bot .left dd {
+  text-align: left;
+  color: #666;
+  padding: 30px 30px 0;
+  font-size: 14px;
+}
+.content .info .info-bot .right {
+  float: left;
+  width: 750px;
+  border: 1px solid #ccc;
+  height: 500px;
+  margin-left: 50px;
+  /*map*/
+  /*map end*/
+}
+.content .info .info-bot .right .custom-input-card {
+  width: 22rem;
+}
+.content .info .info-bot .right .amap-overlays {
+  z-index: 98;
+}
+.content .info .info-bot .right .custom-input-card .btn {
+  margin-right: 1rem;
+}
+.content .info .info-bot .right .custom-input-card .btn:last-child {
+  margin-right: 0;
+}
+.content .info .info-bot .right .info-title {
+  color: white;
+  font-size: 14px;
+  background-color: #25A5F7;
+  line-height: 26px;
+  padding: 0px 0 0 6px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+.content .info .info-bot .right .info-content {
+  font: 12px Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '寰蒋闆呴粦', Arial;
+  padding: 4px;
+  color: #666666;
+  line-height: 23px;
+}
+.content .info .info-bot .right .info-content p {
+  white-space: nowrap;
+}
+.content .info .info-bot .right .info-content p span {
+  color: red;
+  font-weight: bold;
+}
+.content .info .info-bot .right .amap-info-combo .keyword-input {
+  height: 25px;
+  border-radius: 2px 0 0 2px;
+}

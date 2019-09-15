@@ -345,6 +345,7 @@
     // 客户见证
     .witness{
         text-align: center;
+        padding-bottom: 80px;
         ul{
             padding-top: 50px;
             li{
@@ -380,10 +381,15 @@
     .process{
         height: 747px;
         background: url('../img/liuc_bg.jpg');
-        padding: 288px 0 0 714px;
+        padding: 150px 0 0 0;
+        text-align: center;
         overflow: hidden;
         ul{
             width: 830px;
+            padding-top: 56px;
+            padding-left: 362px;
+            text-align: left;
+            box-sizing: content-box;
             li{
                 float: left;
                 width: 138px;
@@ -418,6 +424,31 @@
                 &.pro-12:hover{
                     background-position: -690px -121px;
                 }
+            }
+        }
+        .phone-wrapper{
+            img{
+                vertical-align: middle;
+            }
+            span{
+                vertical-align: middle;
+                font-size: 14px;
+                &.phone{
+                    color: #ee7800;
+                    font-size: 30px;
+                }
+            }
+            a{
+                display: inline-block;
+                padding: 10px 40px;
+                background: #006cc6;
+                color: #fff;
+                font-size: 14px;
+                border-radius: 20px;
+                margin-left: 50px;
+                &:hover{
+                    background: #ee7800;
+                } 
             }
         }
     }
@@ -583,6 +614,96 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    // 关于我们
+    .about{
+        padding: 80px 0;
+        text-align: center;
+        .info{
+            padding-top: 50px;
+            text-align: left;
+            .left{
+                float: left;
+                width: 480px;
+                margin-right: 30px;
+                h1{
+                    font-size: 52px;
+                    color: #f0f0f0;
+                    text-transform: uppercase;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                h3{
+                    font-size: 20px;
+                    color: #333;
+                    padding: 30px 0 10px;
+                }
+                h5{
+                    font-size: 14px;
+                    color: #e0e0e0;
+                    text-transform: uppercase;
+                    border-top: 1px solid #d9d9d9;
+                    letter-spacing: 2px;
+                }
+                >p{
+                    color: #666;
+                    font-size: 14px;
+                    padding: 30px 0 40px;
+                }
+                >a{
+                    display: inline-block;
+                    padding: 10px 40px;
+                    background: #006cc6;
+                    color: #fff;
+                    font-size: 14px;
+                    border-radius: 20px;
+                    &:hover{
+                        background: #ee7800;
+                    } 
+                }
+                ul{
+                    padding-top: 35px;
+                    li{
+                        float: left;
+                        width: 160px;
+                        text-align: center;
+                        padding: 20px 0;
+                        a{
+                            display: block;
+                            .img{
+                                width: 30px;
+                                height: 30px;
+                                overflow: hidden;
+                                display: inline-block;
+                                position: relative;
+                                img{
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0;
+                                }
+                            }
+                            p{
+                                font-size: 16px;
+                            }
+                        }
+                        &:hover{
+                            box-shadow: 0 3px 10px 3px #d0d0d0;
+                            img{
+                                top: -30px!important;
+                            }
+                            p{
+                                color: #ee7800;
+                            }
+                        }
+                    }
+                }
+            }
+            .right{
+                float: left;
+                width: 660px;
+                padding-top: 30px;
+                background: url('../img/ab_ddbg.gif');
             }
         }
     }

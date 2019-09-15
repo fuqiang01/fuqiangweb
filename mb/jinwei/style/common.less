@@ -59,3 +59,254 @@ nav{
         }
     }
 }
+// footer
+footer{
+    // 友情链接
+    .link{
+        background: #f5f5f5;
+        padding: 40px 0;
+        h3{
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+            position: relative;
+            &::after{
+                content: "";
+                display: block;
+                width: 80px;
+                height: 1px;
+                background: #ee7800;
+                position: absolute;
+                top: 34px;
+            }
+            span{
+                color: #cacaca;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: 100;
+            }
+        }
+        div{
+            padding-top: 20px;
+            a{
+                font-size: 14px;
+                color: #999;
+                margin-right: 10px;
+            }
+        }
+    }
+    .footer-list{
+        background: url('../img/f_bg.gif') top no-repeat;
+        padding-top: 50px;
+        height: 340px;
+        color: #fff;
+        .left{
+            float: left;
+            width: 320px;
+            padding: 60px 0 0 50px;
+        }
+        .center{
+            float: left;
+            width: 530px;
+            padding: 10px 50px;
+            font-size: 14px;
+            line-height: 30px;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+            a{
+                color: #fff;
+            }
+        }
+        .right{
+            float: left;
+            width: 290px;
+            background: url('../img/f_erbg.png') top left no-repeat;
+            padding: 4px 0 10px 98px;
+            margin: 30px 0 0 30px;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+            p{
+                width: 100px;
+                text-align: center;
+                padding-top: 15px;
+            }
+        }
+        .footer-nav{
+            padding-top: 240px;
+            .title{
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .vice-title{
+                font-size: 16px;
+                color: #74a1d8;
+                text-transform: uppercase;
+                vertical-align: middle;
+                margin-right: 30px;
+            }
+            a{
+                vertical-align: middle;
+                color: #fff;
+                padding: 0 25px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+//侧边框
+.right-bar{
+    position: fixed;
+    right: 5px;
+    bottom: 200px;
+    color: #fff;
+    z-index: 30;
+    cursor: pointer;
+    .show-box{
+        &>div{
+            width: 70px;
+            background: #3289ff;
+            margin: 3px 0;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 5px;
+            position: relative;
+            p{
+                font-size: 12px;
+            }
+            &>.hover-show{
+                position: absolute;
+                left: -220px;
+                top: 0;
+                background: #fff;
+                width: 170px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                padding: 20px;
+                display: none;
+                box-sizing: content-box;
+                &::after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border: 10px solid transparent;
+                    border-left-color: #fff;
+                    right: -20px;
+                    top: 29px;
+
+                }
+                p{
+                    color: #4888f1;
+                    text-align: left;
+                    font-size: 16px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #ccc;
+                }
+                h2{
+                    color: #f97316;
+                    text-align: left;
+                    padding-top: 10px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                img{
+                    padding-top: 20px;
+                    width: 120px;
+                    height: 120px;
+                    box-sizing: content-box;
+                }
+            }
+            &:hover{
+                background: #ffa123;
+                &>.hover-show{
+                    display: block;
+                }
+            }
+        }
+        .goTop{
+            display: none;
+            img{
+                width: 25px;
+            }
+        }
+        .rb-hidden{
+            padding: 3px 0 8px;;
+            span{
+                font-size: 12px;
+                vertical-align: middle;
+            }
+            img{
+                vertical-align: middle;
+            }
+        }
+    }
+    .hidden-box{
+        background: #3289ff;
+        text-align: center;
+        padding: 15px 0;
+        width: 20px;
+        border-radius: 5px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: none;
+    }
+}
+// 弹窗
+.popupWindow-wrapper{
+    position: fixed;
+    z-index: 30;
+    background: rgba(0,0,0,.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    .poruoWindow{
+        background: #fff;
+        width: 500px;
+        margin: 200px auto;
+        padding: 50px 90px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        position: relative;
+        background-image: url('../img/popup_window.jpg');
+        background-size: 100% 100%;
+        p{
+            padding: 10px 0;
+            font-size: 20px;
+            color: #444;
+            span{
+                color: #ff672b;
+                font-weight: bold;
+            }
+        }
+        input{
+            padding: 10px 20px;
+            margin: 10px 0;
+            outline: none;
+        }
+        .popW-btn{
+            background: #297bf6;
+            color: #fff;
+            padding: 10px 0;
+            width: 213px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .popW-shut-btn{
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            color: #999;
+            cursor: pointer;
+            &:hover{
+                color: #333;
+            }
+        }
+    }
+}
