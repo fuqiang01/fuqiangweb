@@ -6,7 +6,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.5/css/swiper.min.css">
-    <link rel="stylesheet" href="https://demo.cwgszc.com/plugins/style/reset.css">
+    <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/index.css">
     <title>Document</title>
@@ -688,424 +688,893 @@
     <div class="content">
         <!-- 热门服务 -->
         <div class="hot-server container">
-            <div class="title">
-                <img src="./img/hot.png" alt="">
-                <span class="t-flag">热门服务</span>
-                <span>金税通商标服务 品牌保护第一步</span>
+            <div class="hot-yuyue">
+                <ul class="title clearfloat">
+                    <li class="active" id="yugw">预约服务顾问</li>
+                    <li id="zchm">公司注册核名</li>
+                    <li id="zzscs">增值税测算</li>
+                    <li id="jsjsq">节税计算器</li>
+                    <li id="qysdscs">企业所得税测算</li>
+                </ul>
+                <div class="info">
+                    <!-- 预约服务顾问 -->
+                    <div class="yugw active">
+                        <div class="drop-down">
+                            <p><span>选择您需要的服务</span><img src="./img/arrow_b.png" alt=""></p>
+                            <dl class="drop-down-box">
+                                <dd>公司注册</dd>
+                                <dd>公司变更</dd>
+                                <dd>代理记账</dd>
+                                <dd>购买公司</dd>
+                                <dd>购买资质</dd>
+                                <dd>许可证代办</dd>
+                                <dd>其他服务</dd>
+                            </dl>
+                        </div>
+                        <div class="input-wrapper">
+                            <img src="./img/icon_name.png" alt="">
+                            <input type="text" placeholder="您的姓名">
+                        </div>
+                        <div class="input-wrapper">
+                            <img src="./img/icon_phone (2).png" alt="">
+                            <input type="text" placeholder="请输入手机号码">
+                        </div>
+                        <p class="info-btn"><span>免费预约</span></p>
+                    </div>
+                    <!-- 公司注册核名 -->
+                    <div class="zchm">
+                        <div class="drop-down address">
+                            <p><span>成都</span><img src="./img/arrow_b.png" alt=""></p>
+                            <dl class="drop-down-box">
+                                <dd>北京</dd>
+                                <dd>上海</dd>
+                                <dd>随州</dd>
+                                <dd>武汉</dd>
+                                <dd>重庆</dd>
+                                <dd>天津</dd>
+                                <dd>长春</dd>
+                                <dd>长沙</dd>
+                                <dd>成都</dd>
+                                <dd>大连</dd>
+                                <dd>东莞</dd>
+                                <dd>佛山</dd>
+                                <dd>广州</dd>
+                                <dd>贵阳</dd>
+                                <dd>海口</dd>
+                                <dd>杭州</dd>
+                                <dd>合肥</dd>
+                                <dd>呼和浩特</dd>
+                                <dd>济南</dd>
+                                <dd>昆明</dd>
+                                <dd>拉萨</dd>
+                                <dd>南昌</dd>
+                                <dd>南京</dd>
+                                <dd>宁波</dd>
+                                <dd>青岛</dd>
+                                <dd>苏州</dd>
+                                <dd>汕头</dd>
+                                <dd>深圳</dd>
+                                <dd>沈阳</dd>
+                                <dd>石家庄</dd>
+                                <dd>温州</dd>
+                                <dd>乌鲁木齐</dd>
+                                <dd>西安</dd>
+                                <dd>郑州</dd>
+                            </dl>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="请输入企业字号">
+                        </div>
+                        <div class="drop-down industry">
+                            <p><span>所属行业</span><img src="./img/arrow_b.png" alt=""></p>
+                            <div class="drop-down-box">
+                                <dl class="clearfloat">
+                                    <dt>科技类</dt>
+                                    <dd>网络科技</dd>
+                                    <dd>生物医药科技</dd>
+                                    <dd>信息科技</dd>
+                                    <dd>通信科技</dd>
+                                    <dd>新能源科技</dd>
+                                    <dd>自动化科技</dd>
+                                    <dd>激光科技</dd>
+                                    <dd>新材料</dd>
+                                    <dd>游戏科技</dd>
+                                    <dd>海洋科技</dd>
+                                    <dd>其他科技</dd>
+                                </dl>
+                                <dl class="clearfloat">
+                                    <dt>服务类</dt>
+                                    <dd>生活服务</dd>
+                                    <dd>企业服务</dd>
+                                    <dd>翻译服务</dd>
+                                    <dd>礼仪服务</dd>
+                                    <dd>劳动服务</dd>
+                                    <dd>教育服务</dd>
+                                    <dd>旅游服务</dd>
+                                    <dd>运输服务</dd>
+                                    <dd>居民服务</dd>
+                                    <dd>租赁服务</dd>
+                                    <dd>其他服务</dd>
+                                </dl>
+                                <dl class="clearfloat">
+                                    <dt>科技类</dt>
+                                    <dd>网络科技</dd>
+                                    <dd>生物医药科技</dd>
+                                    <dd>信息科技</dd>
+                                    <dd>通信科技</dd>
+                                    <dd>新能源科技</dd>
+                                    <dd>自动化科技</dd>
+                                    <dd>激光科技</dd>
+                                    <dd>新材料</dd>
+                                    <dd>游戏科技</dd>
+                                    <dd>海洋科技</dd>
+                                    <dd>其他科技</dd>
+                                </dl>
+                                <dl class="clearfloat">
+                                    <dt>管理类</dt>
+                                    <dd>企业管理</dd>
+                                    <dd>酒店管理</dd>
+                                    <dd>投资管理</dd>
+                                    <dd>餐饮管理</dd>
+                                    <dd>物业管理</dd>
+                                    <dd>人力资源管理</dd>
+                                    <dd>商业管理</dd>
+                                </dl>
+                                <dl class="clearfloat">
+                                    <dt>咨询类</dt>
+                                    <dd>战略咨询</dd>
+                                    <dd>IT咨询</dd>
+                                    <dd>创新设计咨询</dd>
+                                    <dd>财务咨询</dd>
+                                    <dd>技术咨询</dd>
+                                    <dd>商务咨询</dd>
+                                </dl>
+                                <dl class="clearfloat">
+                                    <dt>其 他</dt>
+                                    <dd>建筑装潢</dd>
+                                    <dd>实业</dd>
+                                    <dd>贸易</dd>
+                                    <dd>软件开发</dd>
+                                    <dd>批发采购</dd>
+                                    <dd>农林牧渔</dd>
+                                    <dd>工程</dd>
+                                    <dd>采矿业</dd>
+                                    <dd>生产和供应业</dd>
+                                    <dd>创新设计咨询</dd>
+                                    <dd>财务咨询</dd>
+                                    <dd>技术咨询</dd>
+                                    <dd>商务咨询</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="drop-down company-type">
+                            <p><span>有限公司</span><img src="./img/arrow_b.png" alt=""></p>
+                            <dl class="drop-down-box">
+                                <dd>有限公司</dd>
+                                <dd>股份有限公司</dd>
+                                <dd>合伙企业</dd>
+                                <dd>有限公司</dd>
+                            </dl>
+                        </div>
+                        <p class="info-btn"><span>免费核名</span></p>
+                    </div>
+                    <!-- 增值税测算 -->
+                    <div class="zzscs">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="含税销售额(元)">
+                        </div>
+                        <div class="drop-down">
+                            <p><span>16%</span><img src="./img/arrow_b.png" alt=""></p>
+                            <dl class="drop-down-box">
+                                <dd>16%</dd>
+                                <dd>10%</dd>
+                                <dd>6%</dd>
+                            </dl>
+                        </div>
+                        <p class="info-btn"><span>开始计算</span></p>
+                    </div>
+                    <!-- 节税计算器 -->
+                    <div class="jsjsq">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="年销售额">
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="年净利润(元)">
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="分红(选填)">
+                        </div>
+                        <div class="drop-down">
+                            <p><span>小规模纳税人</span><img src="./img/arrow_b.png" alt=""></p>
+                            <dl class="drop-down-box">
+                                <dd>小规模纳税人</dd>
+                                <dd>一般纳税人</dd>
+                            </dl>
+                        </div>
+                        <p class="info-btn"><span>开始计算</span></p>
+                    </div>
+                    <!-- 增值税测算 -->
+                    <div class="qysdscs">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="含税销售额(元)">
+                        </div>
+                        <div class="drop-down">
+                            <p><span>普通居民企业</span><img src="./img/arrow_b.png" alt=""></p>
+                            <dl class="drop-down-box">
+                                <dd>普通居民企业</dd>
+                                <dd>小型微利企业</dd>
+                                <dd>高新企业</dd>
+                                <dd>其他</dd>
+                            </dl>
+                        </div>
+                        <p class="info-btn"><span>开始计算</span></p>
+                    </div>
+                </div>
             </div>
-            <ul class="info clearfloat">
-                <li class="active">
-                    <h3>商标注册</h3>
-                    <p class="line"></p>
-                    <p class="vice-title">专业顾问一对一服务,快速网申</p>
-                    <p class="price">780元起</p>
-                    <a href="#">了解详情</a>
+            <div class="hot-jinxuan">
+                <div class="title">
+                    <div class="right">
+                        <img src="./img/arrow_l.png" class="jinxuan-left">
+                        <img src="./img/arrow_r_1.png" class="jinxuan-right">
+                        <a href="#"><img src="./img/icon_customerserver.png" alt="">更多咨询</a>
+                    </div>
+                    <img src="./img/icon_hotserver.png" alt="">
+                    <span class="flag">精选服务</span>
+                    <span>百里挑一,优质品牌,助您前行</span>
+                </div>
+                <div class="swiper-jinxuan">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide hot">
+                            <a href="#">
+                                <h3>有限公司注册</h3>
+                                <p class="vice-title">专业代办,少花钱,少跑路</p>
+                                <p class="line"></p>
+                                <p class="price">598.00元起</p>
+                                <img src="./img/arrow_r_1.png" alt="">
+                                <img src="./img/pic_yxzrgszc.png" alt="" class="float-img">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <h3>经营范围变更</h3>
+                                <p class="vice-title">及时变更，规避逾期罚款</p>
+                                <p class="line"></p>
+                                <p class="price">998.00元起</p>
+                                <img src="./img/arrow_r_1.png" alt="">
+                                <img src="./img/pic_gsbg.png" alt="" class="float-img">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <h3>食品流通许可证</h3>
+                                <p class="vice-title">专业顾问，审核发证全程跟进</p>
+                                <p class="line"></p>
+                                <p class="price">3500.00元起</p>
+                                <img src="./img/arrow_r_1.png" alt="">
+                                <img src="./img/pic_spjyxkzdb.png" alt="" class="float-img">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <h3>网络文化经营许可证</h3>
+                                <p class="vice-title">拿证快人一步，助力企业新突破</p>
+                                <p class="line"></p>
+                                <p class="price">25000.00元起</p>
+                                <img src="./img/arrow_r_1.png" alt="">
+                                <img src="./img/pic_dlysxkzdb.png" alt="" class="float-img">
+                            </a>
+                        </div>
+                        <div class="swiper-slide hot">
+                            <a href="#">
+                                <h3>代理记账</h3>
+                                <p class="vice-title">资深团队，服务一步到位</p>
+                                <p class="line"></p>
+                                <p class="price">4800.00元起</p>
+                                <img src="./img/arrow_r_1.png" alt="">
+                                <img src="./img/pic_yxzrgszc.png" alt="" class="float-img">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <h3>税控申报</h3>
+                                <p class="vice-title">快速申请，一对一急速响应</p>
+                                <p class="line"></p>
+                                <p class="price">628.00元起</p>
+                                <img src="./img/arrow_r_1.png" alt="">
+                                <img src="./img/pic_sksb.png" alt="" class="float-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 交易市场 -->
+        <div class="trading-market container clearfloat">
+            <div class="left">
+                <h1>交易市场</h1>
+                <p class="vice-title">拒绝虚假交易</p>
+                <p class="type">企业转让</p>
+                <div class="item">
+                    <p>行业类别<img src="./img/icon_market_arrow_hover.png" alt=""></p>
+                    <a href="#">贸易</a>
+                    <a href="#">工程</a>
+                    <a href="#">材料</a>
+                    <a href="#">设计</a>
+                    <a href="#">企划</a>
+                    <a href="#">服务</a>
+                    <a href="#">管理</a>
+                    <a href="#">产品</a>
+                    <div class="bot-wrapper">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <p>附带资产<img src="./img/icon_market_arrow_hover.png" alt=""></p>
+                    <a href="#">网站网店</a>
+                    <a href="#">商标专利</a>
+                    <a href="#">资质批文</a>
+                    <a href="#">渠道资源</a>
+                    <a href="#">带车牌</a>
+                    <a href="#">带商标</a>
+                    <a href="#">带资质</a>
+                    <div class="bot-wrapper">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <ul class="right">
+                <li>
+                    <h3><img src="./img/icon_market_qy.png" alt=""> 深圳**文化传媒有限公司</h3>
+                    <h5>企业行业:设计/策划类</h5>
+                    <p class="line1"></p>
+                    <p class="capital">
+                        <img src="./img/icon_market_price.png" alt="">注册资本: 500-1000万
+                    </p>
+                    <p class="date">
+                        <img src="./img/icon_market_time.png" alt="">成立时间: 3年以上
+                    </p>
+                    <p class="line2"></p>
+                    <div class="price-wrapper">
+                        <p class="price">
+                            <img src="./img/icon_market_arrow2.png" alt="">
+                            <span>价格:</span>
+                            <span class="flag">¥6.25万</span>
+                        </p>
+                        <a href="#">查看详情<img src="./img/arrow_r.png" alt=""> </a>
+                    </div>
                 </li>
                 <li>
-                    <h3>商标注册</h3>
-                    <p class="line"></p>
-                    <p class="vice-title">专业顾问一对一服务,快速网申</p>
-                    <p class="price">780元起</p>
-                    <a href="#">了解详情</a>
+                    <h3><img src="./img/icon_market_qy.png" alt=""> 深圳**文化传媒有限公司</h3>
+                    <h5>企业行业:设计/策划类</h5>
+                    <p class="line1"></p>
+                    <p class="capital">
+                        <img src="./img/icon_market_price.png" alt="">注册资本: 500-1000万
+                    </p>
+                    <p class="date">
+                        <img src="./img/icon_market_time.png" alt="">成立时间: 3年以上
+                    </p>
+                    <p class="line2"></p>
+                    <div class="price-wrapper">
+                        <p class="price">
+                            <img src="./img/icon_market_arrow2.png" alt="">
+                            <span>价格:</span>
+                            <span class="flag">¥6.25万</span>
+                        </p>
+                        <a href="#">查看详情<img src="./img/arrow_r.png" alt=""> </a>
+                    </div>
                 </li>
                 <li>
-                    <h3>商标注册</h3>
-                    <p class="line"></p>
-                    <p class="vice-title">专业顾问一对一服务,快速网申</p>
-                    <p class="price">780元起</p>
-                    <a href="#">了解详情</a>
+                    <h3><img src="./img/icon_market_qy.png" alt=""> 深圳**文化传媒有限公司</h3>
+                    <h5>企业行业:设计/策划类</h5>
+                    <p class="line1"></p>
+                    <p class="capital">
+                        <img src="./img/icon_market_price.png" alt="">注册资本: 500-1000万
+                    </p>
+                    <p class="date">
+                        <img src="./img/icon_market_time.png" alt="">成立时间: 3年以上
+                    </p>
+                    <p class="line2"></p>
+                    <div class="price-wrapper">
+                        <p class="price">
+                            <img src="./img/icon_market_arrow2.png" alt="">
+                            <span>价格:</span>
+                            <span class="flag">¥6.25万</span>
+                        </p>
+                        <a href="#">查看详情<img src="./img/arrow_r.png" alt=""> </a>
+                    </div>
                 </li>
                 <li>
-                    <h3>商标注册</h3>
-                    <p class="line"></p>
-                    <p class="vice-title">专业顾问一对一服务,快速网申</p>
-                    <p class="price">780元起</p>
-                    <a href="#">了解详情</a>
+                    <h3><img src="./img/icon_market_qy.png" alt=""> 深圳**文化传媒有限公司</h3>
+                    <h5>企业行业:设计/策划类</h5>
+                    <p class="line1"></p>
+                    <p class="capital">
+                        <img src="./img/icon_market_price.png" alt="">注册资本: 500-1000万
+                    </p>
+                    <p class="date">
+                        <img src="./img/icon_market_time.png" alt="">成立时间: 3年以上
+                    </p>
+                    <p class="line2"></p>
+                    <div class="price-wrapper">
+                        <p class="price">
+                            <img src="./img/icon_market_arrow2.png" alt="">
+                            <span>价格:</span>
+                            <span class="flag">¥6.25万</span>
+                        </p>
+                        <a href="#">查看详情<img src="./img/arrow_r.png" alt=""> </a>
+                    </div>
                 </li>
                 <li>
-                    <h3>商标注册</h3>
-                    <p class="line"></p>
-                    <p class="vice-title">专业顾问一对一服务,快速网申</p>
-                    <p class="price">780元起</p>
-                    <a href="#">了解详情</a>
+                    <h3><img src="./img/icon_market_qy.png" alt=""> 深圳**文化传媒有限公司</h3>
+                    <h5>企业行业:设计/策划类</h5>
+                    <p class="line1"></p>
+                    <p class="capital">
+                        <img src="./img/icon_market_price.png" alt="">注册资本: 500-1000万
+                    </p>
+                    <p class="date">
+                        <img src="./img/icon_market_time.png" alt="">成立时间: 3年以上
+                    </p>
+                    <p class="line2"></p>
+                    <div class="price-wrapper">
+                        <p class="price">
+                            <img src="./img/icon_market_arrow2.png" alt="">
+                            <span>价格:</span>
+                            <span class="flag">¥6.25万</span>
+                        </p>
+                        <a href="#">查看详情<img src="./img/arrow_r.png" alt=""> </a>
+                    </div>
+                </li>
+                <li>
+                    <h3><img src="./img/icon_market_qy.png" alt=""> 深圳**文化传媒有限公司</h3>
+                    <h5>企业行业:设计/策划类</h5>
+                    <p class="line1"></p>
+                    <p class="capital">
+                        <img src="./img/icon_market_price.png" alt="">注册资本: 500-1000万
+                    </p>
+                    <p class="date">
+                        <img src="./img/icon_market_time.png" alt="">成立时间: 3年以上
+                    </p>
+                    <p class="line2"></p>
+                    <div class="price-wrapper">
+                        <p class="price">
+                            <img src="./img/icon_market_arrow2.png" alt="">
+                            <span>价格:</span>
+                            <span class="flag">¥6.25万</span>
+                        </p>
+                        <a href="#">查看详情<img src="./img/arrow_r.png" alt=""> </a>
+                    </div>
                 </li>
             </ul>
         </div>
-        <div class="container b-one">
-            <img src="./img/blockad.png" alt="">
-        </div>
-        <!-- 知产交易 -->
-        <div class="chanquan container clearfloat">
-            <div class="left">
-                <div class="title">
-                    <h1>知产交易</h1>
-                    <p>拒绝虚假交易</p>
-                    <img src="./img/go3.png" alt="">
-                </div>
-                <ul>
-                    <li class="active" id="sbjy">
-                        <p class="flag">商标交易</p>
-                        <p><a href="#">服装鞋帽</a></p>
-                        <p><a href="#">日化用品</a></p>
-                        <p><a href="#">科学仪器</a></p>
-                        <p><a href="#">服务类行业</a></p>
-                    </li>
-                    <li id="zljy">
-                        <p class="flag">专利交易</p>
-                        <p><a href="#">农林牧业</a></p>
-                        <p><a href="#">家具用品</a></p>
-                        <p><a href="#">新能源</a></p>
-                        <p><a href="#">仪器仪表</a></p>
-                    </li>
-                    <li id="bqjy">
-                        <p class="flag">版权交易</p>
-                        <p><a href="#">小说作品</a></p>
-                        <p><a href="#">剧本作品</a></p>
-                        <p><a href="#">人文社科</a></p>
-                        <p><a href="#">软件产品</a></p>
-                    </li>
-                </ul>
-            </div>
-            <div class="right">
-                <ul class="sbjy active">
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>商标交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>商标交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>商标交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>商标交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>商标交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>商标交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>商标交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>商标交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="zljy">
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>专利交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>专利交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>专利交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>专利交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>专利交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>专利交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>专利交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>专利交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="bqjy">
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>版权交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>版权交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>版权交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>版权交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>版权交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>版权交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>版权交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="./img/hz3.jpg" alt="">
-                        <h4>版权交易</h4>
-                        <p>/独家</p>
-                        <div>
-                            <span class="s1">￥2.01万</span>
-                            <span class="s2">￥2.40万</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- 商标服务 -->
-        <div class="shangbiao-server">
-            <div class="container">
-                <div class="title">
-                    <img src="./img/i5.png" alt="">
-                    <span>商标服务</span>
-                    <img src="./img/i6.png" alt="">
-                </div>
-                <p class="vice-title">我们已踏遍祖国大部分疆土，只为能够使您的企业达到聚焦核心业务，缩减冗余人力和时间成本</p>
-                <div class="info clearfloat">
-                    <div class="left">
-                        <div class="title">
-                            <h1>商标注册</h1>
-                            <p>热门行业</p>
-                            <img src="./img/go3.png" alt="">
-                        </div>
-                        <ul>
-                            <li>
-                                <p class="p1">服装行业</p>
-                                <p class="p2">clothing</p>
-                            </li>
-                            <li>
-                                <p class="p1">电子行业</p>
-                                <p class="p2">electron</p>
-                            </li>
-                            <li>
-                                <p class="p1">食品行业</p>
-                                <p class="p2">food</p>
-                            </li>
-                            <li>
-                                <p class="p1">旅游行业</p>
-                                <p class="p2">tour</p>
-                            </li>
-                            <li>
-                                <p class="p1">餐饮行业</p>
-                                <p class="p2">restaurant</p>
-                            </li>
+        <!-- 工商服务 -->
+        <div class="server container">
+            <h1>工商服务</h1>
+            <p class="vice-title">业务范围覆盖全国，帮助企业解决经营问题</p>
+            <div class="info clearfloat">
+                <div class="left">
+                    <div class="title">
+                        <a href="#">更多工商服务<img src="./img/arrow_r_3.png" alt=""></a>
+                        <ul class="clearfloat">
+                            <li class="active" id="server-gszc">工商注册</li>
+                            <li id="server-gsbg">工商变更</li>
+                            <li id="server-gskh">公司开户</li>
                         </ul>
                     </div>
-                    <div class="center">
-                        <div class="center-title">
-                            <p>热门行业类别自选,方便快捷 <img src="./img/go4.png" alt=""> </p>
-                            <h4>请选择您要注册的行业及类别</h4>
+                    <div class="left-con">
+                        <div class="server-gszc active">
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <div class="item-i">
+                                    <h4>股份有限公司注册</h4>
+                                    <h5>合理运用税收杠杆 , 匹配注册资金方案</h5>
+                                    <p class="price">699元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="center-item">
-                            <h3>商标注册</h3>
-                            <p class="line"></p>
-                            <p class="vice-title">重点保护产权让您品牌知产无忧</p>
-                            <ul>
-                                <li>广告销售</li>
-                                <li>食品餐饮</li>
-                                <li>服装鞋帽</li>
-                                <li>设备器具</li>
-                                <li>皮革皮具</li>
-                                <li>科学仪器</li>
-                                <li>饲料蔬菜</li>
-                            </ul>
+                        <div class="server-gsbg">
+                            <div class="left-con-item">
+                                <h4>公司名称变更</h4>
+                                <h5>不同阶段需要更好的名称来匹配发展步伐</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="center-item">
-                            <h3>商标注册</h3>
-                            <p class="line"></p>
-                            <p class="vice-title">重点保护产权让您品牌知产无忧</p>
-                            <ul>
-                                <li>广告销售</li>
-                                <li>食品餐饮</li>
-                                <li>服装鞋帽</li>
-                                <li>设备器具</li>
-                                <li>皮革皮具</li>
-                                <li>科学仪器</li>
-                                <li>饲料蔬菜</li>
-                            </ul>
-                        </div>
-                        <div class="center-btn-wrapper">
-                            <span>立即注册商标</span>
+                        <div class="server-gskh">
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <ul class="right">
+                </div>
+                <div class="right">
+                    <div class="title">
+                        <a href="#"><img src="./img/arrow_r_3.png" alt=""></a>
+                        <img src="./img/icon_answer.png" alt="">
+                        <span>工商疑难解答</span>
+                    </div>
+                    <ul class="right-con">
                         <li>
-                            <h4>商标注册</h4>
-                            <p class="vice-title">重点保护产权让您品牌知产无忧</p>
-                            <p class="line"></p>
-                            <div>
-                                <a href="#">商标普通注册</a>
-                                <a href="#">商标无忧注册</a>
-                            </div>
-                            <p class="price">780元起</p>
+                            <a href="#">
+                                <h3>公司注册流程?</h3>
+                                <p>公司注册是开始创业的第一步。一般来说，公司注册的流程包...</p>
+                                <img src="./img/icon_arrowright_gray.png" alt="">
+                            </a>
                         </li>
                         <li>
-                            <h4>商标注册</h4>
-                            <p class="vice-title">重点保护产权让您品牌知产无忧</p>
-                            <p class="line"></p>
-                            <div>
-                                <a href="#">商标普通注册</a>
-                                <a href="#">商标无忧注册</a>
-                            </div>
-                            <p class="price">780元起</p>
-                        </li>
-                        <li>
-                            <h4>商标注册</h4>
-                            <p class="vice-title">重点保护产权让您品牌知产无忧</p>
-                            <p class="line"></p>
-                            <div>
-                                <a href="#">商标普通注册</a>
-                                <a href="#">商标无忧注册</a>
-                            </div>
-                            <p class="price">780元起</p>
+                            <a href="#">
+                                <h3>公司注册流程?</h3>
+                                <p>公司注册是开始创业的第一步。一般来说，公司注册的流程包...</p>
+                                <img src="./img/icon_arrowright_gray.png" alt="">
+                            </a>
                         </li>
                     </ul>
+                    <div class="btn-wrapper">
+                        <a href="#">资讯顾问</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 财税服务 -->
+        <div class="caishui server container">
+            <h1>财税服务</h1>
+            <p class="vice-title">解决您的记账问题，保证精确无误金税通致力做得更好</p>
+            <div class="info clearfloat">
+                <div class="left">
+                    <div class="title">
+                        <a href="#">更多工商服务<img src="./img/arrow_r_3.png" alt=""></a>
+                        <ul class="clearfloat">
+                            <li class="active" id="server-ybnsr">一般纳税人代记账</li>
+                            <li id="server-xgmdljz">小规模代记账</li>
+                            <li id="server-gscwfd">公司财务辅导</li>
+                            <li id="server-swbl">税务办理</li>
+                        </ul>
+                    </div>
+                    <div class="left-con">
+                        <div class="server-ybnsr active">
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="server-xgmdljz">
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="server-gscwfd">
+                            <div class="left-con-item">
+                                <h4>公司名称变更</h4>
+                                <h5>不同阶段需要更好的名称来匹配发展步伐</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="server-swbl">
+                            <div class="left-con-item">
+                                <h4>有限责任公司注册</h4>
+                                <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                <p class="price">599元起</p>
+                                <div>
+                                    <a href="#">查看详情</a>
+                                    <img src="./img/arrow_r_4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left-con-item">
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item-i">
+                                    <h4>有限责任公司注册</h4>
+                                    <h5>大幅降低运营成本 , 显著提高营业利润</h5>
+                                    <p class="price">599元起</p>
+                                    <div>
+                                        <a href="#">查看详情</a>
+                                        <img src="./img/arrow_r_4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title">
+                        <a href="#"><img src="./img/arrow_r_3.png" alt=""></a>
+                        <img src="./img/icon_answer.png" alt="">
+                        <span>工商疑难解答</span>
+                    </div>
+                    <ul class="right-con">
+                        <li>
+                            <a href="#">
+                                <h3>公司注册流程?</h3>
+                                <p>公司注册是开始创业的第一步。一般来说，公司注册的流程包...</p>
+                                <img src="./img/icon_arrowright_gray.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h3>公司注册流程?</h3>
+                                <p>公司注册是开始创业的第一步。一般来说，公司注册的流程包...</p>
+                                <img src="./img/icon_arrowright_gray.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="btn-wrapper">
+                        <a href="#">资讯顾问</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.5/js/swiper.min.js"></script>
-    <script src="https://demo.cwgszc.com/plugins/getactive/getactive.js"></script>
+    <script src="./js/getactive.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/index.js"></script>
 </body>

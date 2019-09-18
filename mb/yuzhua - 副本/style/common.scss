@@ -1,0 +1,254 @@
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+// topbar
+.topbar{
+    background: #f5f5f5;
+    line-height: 35px;
+    &,& a{
+        color: #999;
+    }
+    .left{
+        float: left;
+        .flag{
+            color: #3573ec;
+            font-weight: bold;
+        }
+        .login-wrapper{
+            margin-left: 20px;
+            .login{
+                color: #ffa200;
+                font-weight: bold;
+            }
+        }
+    }
+    .right{
+        float: right;
+        .address-list{
+            a{
+                padding: 0 5px;
+            }
+        }
+        .tel{
+            font-weight: bold;
+            color: #696969;
+        }
+    }
+}
+// logoWrapper
+.logo-wrapper{
+    height: 100px;
+    .logo{
+        float: left;
+        img{
+            height: 60px;
+            padding-top: 20px;
+            box-sizing: content-box;
+        }
+    }
+    .input-wrapper{
+        box-sizing: border-box;
+        float: right;
+        width: 700px;
+        padding-top: 35px;
+        background: url('../img/icon_search.png') 10px 48px no-repeat;
+        .top{
+            .input-right{
+                float: right;
+                height: 39px;
+                background: #333;
+                a{ 
+                    position: relative;
+                    display: inline-block;
+                    color: #fff;
+                    padding: 0 60px 0 20px;
+                    height: 100%;
+                    line-height: 39px;
+                    font-size: 16px;
+                    img{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+            .input{
+                border: 2px solid #2667e9;
+                height: 35px;
+                line-height: 35px;
+                padding-left: 35px;
+                width: 515px;
+                .glyphicon{
+                    color: #999;
+                }
+                input{
+                    border: none;
+                    outline: none;
+                    color: #999;
+                }
+                .input-btn{
+                    background: #2667e9;
+                    color: #fff;
+                    display: inline-block;
+                    transform: translateY(-2px);
+                    line-height: 37px;
+                    padding: 0 30px;
+                    font-size: 16px;
+                    float: right;
+                }
+            }
+        }
+        .bot{
+            padding: 5px 0;
+            a{
+                color: #999;
+                padding: 0 5px;
+            }
+        }
+    }
+}
+// navbar
+.nav-bar{
+    ul{
+        li{
+            float: left;
+            position: relative;
+            padding-right: 10px;
+            >a{
+                font-size: 16px;
+                font-weight: bold;
+                display: inline-block;
+                line-height: 40px;
+                padding: 0 10px 0 20px;
+                vertical-align: middle;
+                &.flag-list{
+                    background: url('../img/icon_arrowdown.png') right center no-repeat;
+                }
+            }
+            &.flag-home{
+                background: #3573ec;
+                padding-left: 20px;
+                border-radius: 5px 5px 0 0;
+                >a{
+                    line-height: 42px;
+                    color: #fff;
+                    background: url('../img/icon_home_hover.png') left center no-repeat;
+                }
+            }
+            >img{
+                position: absolute;
+                left: 41px;
+                top: -7px;
+            }
+            .hover-show{
+                position: absolute;
+                border: 2px solid #2667e9;
+                padding: 30px;
+                display: none;
+                background: #fff;
+                z-index: 5;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 11px;
+                    height: 6px;
+                    background: url('../img/icon_arrowtop.png');
+                    position: absolute;
+                    top: -6px;
+                }
+                dl{
+                    dt{
+                        color: #595959;
+                        font-size: 14px;
+                        padding-bottom: 10px;
+                        font-weight: bold;
+                    }
+                    dd{
+                        padding: 5px 10px;
+                        position: relative;
+                        font-size: 14px;
+                        a{
+                            color: #777;
+                        }
+                        &.hover-hot{
+                            a{
+                                color: #ff8400;
+                            }
+                        }
+                        &:hover{
+                            a{
+                                color: #2667e9;
+                            }
+                        }
+                    }
+                }
+                &.hover-a{
+                    width: 650px;
+                    left: -94px;
+                    &::before{
+                        left: 144px;
+                    }
+                    dl{
+                        margin-bottom: 10px;
+                        dd{
+                            float: left;
+                            &.hover-hot{
+                                &::before{
+                                    content: '';
+                                    display: block;
+                                    width: 15px;
+                                    height: 9px;
+                                    background: url('../img/icon_hot4.png') center no-repeat;
+                                    position: absolute;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    top: -4px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.hover-b,
+                &.hover-c{
+                    width: 480px;
+                    left: -202px;
+                    &::before{
+                        left: 247px;
+                    }
+                    dl{
+                        float: left;
+                        width: 160px;
+                        dd{
+                            padding-left: 0;
+                            &.hover-hot{
+                                a{
+                                    img{
+                                        padding-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.hover-c{
+                    width: 640px;
+                    left: -310px;
+                    &::before{
+                        left: 357px;
+                    }
+                }
+            }
+            &.active,
+            &:not(:first-of-type):hover{
+                >a{
+                    color: #2c6bea;
+                    &.flag-list{
+                        background: url('../img/icon_arrowdown_hover.png') right center no-repeat;
+                    }
+                }
+                
+            }
+        }
+    }
+}
