@@ -81,6 +81,14 @@ function bindEvent() {
     }, function () {
 
     })
+
+    // 新闻资讯
+    $('.news-wrapper .left .title li').hover( function () {
+        $(this).getActive();
+        $('.' + this.id).getActive();
+    }, function () {
+
+    })
 }
 
 

@@ -1669,6 +1669,10 @@
   padding: 5px 0;
 }
 
+.content .evaluation {
+  padding-bottom: 30px;
+}
+
 .content .evaluation > h1 {
   background: url("../img/commontitle_bg.png") center no-repeat;
   font-size: 30px;
@@ -1680,10 +1684,490 @@
   color: #aaa;
   text-align: center;
   font-weight: 100;
+  margin-bottom: 30px;
 }
 
 .content .evaluation .info .left {
   float: left;
   width: 515px;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  margin-right: 15px;
+}
+
+.content .evaluation .info .left .l-t {
   text-align: right;
+  background-image: url("../img/img_11.jpg");
+  background-size: 100% 100%;
+  padding: 30px 395px 0px 30px;
+  height: 280px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.content .evaluation .info .left .l-t > div {
+  border: 1px solid #fff;
+  font-size: 18px;
+  padding-right: 1px;
+}
+
+.content .evaluation .info .left .l-t > div .s1 {
+  display: inline-block;
+  color: #fff;
+  line-height: 25px;
+}
+
+.content .evaluation .info .left .l-t > div .s2 {
+  background: #fff;
+  color: #676767;
+  line-height: 25px;
+  display: inline-block;
+  padding: 0 3px;
+}
+
+.content .evaluation .info .left .l-t .line {
+  display: inline-block;
+  width: 15px;
+  height: 1px;
+  background: #97999c;
+}
+
+.content .evaluation .info .left .l-t .p1 {
+  margin-left: 15px;
+  color: #e6e6e6;
+  border-bottom: 1px solid #97999c;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+.content .evaluation .info .left .l-t .p2 {
+  color: #bababa;
+}
+
+.content .evaluation .info .left .l-t .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.content .evaluation .info .left .l-b {
+  background: #fff;
+  padding: 20px 0 20px 30px;
+}
+
+.content .evaluation .info .left .l-b h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #515151;
+}
+
+.content .evaluation .info .left .l-b .vice-title {
+  color: #a4a4a4;
+  padding: 5px 0;
+}
+
+.content .evaluation .info .left .l-b .line {
+  width: 25px;
+  height: 1px;
+  background-color: #cfcfcf;
+}
+
+.content .evaluation .info .left .l-b .date {
+  color: #cfcfcf;
+  padding-top: 5px;
+}
+
+.content .evaluation .info .left .l-b .dot span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #cfcfcf;
+  border-radius: 50%;
+}
+
+.content .evaluation .info .right {
+  float: left;
+  width: 670px;
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid #eaeaea;
+}
+
+.content .evaluation .info .right li {
+  height: 138px;
+  box-sizing: border-box;
+}
+
+.content .evaluation .info .right li:not(:last-of-type) {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.content .evaluation .info .right li .r-img {
+  float: right;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 19px;
+  margin-right: 20px;
+}
+
+.content .evaluation .info .right li .r-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.content .evaluation .info .right li .r-t {
+  padding-right: 130px;
+}
+
+.content .evaluation .info .right li .r-t .r-l {
+  float: left;
+  width: 140px;
+  height: 138px;
+  border-right: 1px solid #eaeaea;
+}
+
+.content .evaluation .info .right li .r-t .r-l .p1 {
+  color: #a8a8a8;
+  padding: 5px 0 0 10px;
+}
+
+.content .evaluation .info .right li .r-t .r-l .p2 {
+  font-size: 14px;
+  color: #898989;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.content .evaluation .info .right li .r-t .r-l .p2 span {
+  font-size: 26px;
+  color: #333;
+  font-weight: bold;
+}
+
+.content .evaluation .info .right li .r-t .r-r {
+  float: left;
+  width: 388px;
+  box-sizing: border-box;
+  padding: 20px 0 0 20px;
+}
+
+.content .evaluation .info .right li .r-t .r-r h4 {
+  font-size: 18px;
+}
+
+.content .evaluation .info .right li .r-t .r-r .line {
+  width: 30px;
+  height: 1px;
+  background: #a2a2a2;
+  margin-top: 5px;
+}
+
+.content .evaluation .info .right li .r-t .r-r .text {
+  color: #a2a2a2;
+  line-height: 20px;
+  padding-top: 5px;
+}
+
+.content .evaluation .info .right li:hover {
+  background: #fafafa;
+}
+
+.content .evaluation .info .right li:hover .r-l {
+  border-right-color: #dde7fc;
+}
+
+.content .news-wrapper {
+  background: #fff;
+  padding: 30px 0;
+}
+
+.content .news-wrapper h1 {
+  background: url("../img/commontitle_bg.png") center no-repeat;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content .news-wrapper h6 {
+  color: #aaa;
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+.content .news-wrapper .left {
+  float: left;
+  width: 860px;
+  box-sizing: border-box;
+  border: 1px solid #e8e8e8;
+}
+
+.content .news-wrapper .left .title {
+  border-bottom: 1px dashed #eaeaea;
+  background-color: #f6f6f6;
+}
+
+.content .news-wrapper .left .title > a {
+  float: right;
+  display: inline-block;
+  line-height: 65px;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+.content .news-wrapper .left .title > a::after {
+  content: '';
+  border: 5px solid transparent;
+  display: inline-block;
+  border-left-color: #777;
+  margin-left: 5px;
+}
+
+.content .news-wrapper .left .title ul li {
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 65px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.content .news-wrapper .left .title ul li span {
+  float: left;
+}
+
+.content .news-wrapper .left .title ul li .img {
+  display: inline-block;
+  width: 16px;
+  margin-left: 5px;
+  margin-top: 25px;
+  height: 16px;
+  background: url("../img/arrow_r_4.png") center no-repeat;
+  transition: transform .5s;
+}
+
+.content .news-wrapper .left .title ul li img {
+  margin-left: 5px;
+  margin-top: 25px;
+}
+
+.content .news-wrapper .left .title ul li.active .s1 {
+  color: #165fcb;
+}
+
+.content .news-wrapper .left .title ul li.active .img {
+  background-image: url("../img/arrow_r_3.png");
+  transform: rotate(90deg);
+}
+
+.content .news-wrapper .left .news-con {
+  position: relative;
+  height: 372px;
+}
+
+.content .news-wrapper .left .news-con > div {
+  opacity: 0;
+  position: absolute;
+}
+
+.content .news-wrapper .left .news-con > div.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.content .news-wrapper .left .news-con > div dl {
+  float: left;
+  width: 429px;
+  box-sizing: border-box;
+}
+
+.content .news-wrapper .left .news-con > div dl dt {
+  background: #f6f6f6;
+  padding: 25px;
+}
+
+.content .news-wrapper .left .news-con > div dl dt .title-img {
+  float: left;
+  width: 160px;
+  height: 100px;
+}
+
+.content .news-wrapper .left .news-con > div dl dt .text {
+  padding-left: 170px;
+}
+
+.content .news-wrapper .left .news-con > div dl dt .text h5 {
+  font-size: 16px;
+  font-weight: 100;
+  color: #777;
+  padding: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content .news-wrapper .left .news-con > div dl dt .text .line {
+  width: 20px;
+  height: 1px;
+  background: #ccc;
+}
+
+.content .news-wrapper .left .news-con > div dl dt .text .date {
+  color: #ccc;
+  padding: 5px 0;
+}
+
+.content .news-wrapper .left .news-con > div dl dt .text .text-con {
+  color: #aaa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content .news-wrapper .left .news-con > div dl dd {
+  padding: 0 35px;
+  position: relative;
+}
+
+.content .news-wrapper .left .news-con > div dl dd a {
+  font-size: 14px;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0;
+  color: #909090;
+}
+
+.content .news-wrapper .left .news-con > div dl dd a .date {
+  float: right;
+  color: #aaa;
+}
+
+.content .news-wrapper .left .news-con > div dl dd a p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content .news-wrapper .left .news-con > div dl dd::before {
+  content: '';
+  border: 5px solid transparent;
+  display: inline-block;
+  border-left-color: #777;
+  position: absolute;
+  left: 20px;
+  top: 21px;
+}
+
+.content .news-wrapper .left .news-con > div dl dd:not(:last-of-type) a {
+  border-bottom: 1px dashed #ccc;
+}
+
+.content .news-wrapper .right {
+  float: right;
+  width: 320px;
+  box-sizing: border-box;
+  border: 1px solid #e8e8e8;
+}
+
+.content .news-wrapper .right .title {
+  border-bottom: 1px dashed #eaeaea;
+  padding-left: 20px;
+}
+
+.content .news-wrapper .right .title > a {
+  float: right;
+  display: inline-block;
+  line-height: 65px;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+.content .news-wrapper .right .title > a::after {
+  content: '';
+  border: 5px solid transparent;
+  display: inline-block;
+  border-left-color: #777;
+  margin-left: 5px;
+}
+
+.content .news-wrapper .right .title span {
+  line-height: 65px;
+  font-size: 15px;
+  vertical-align: middle;
+  color: #515151;
+}
+
+.content .news-wrapper .right .title img {
+  vertical-align: middle;
+}
+
+.content .news-wrapper .right dl .num {
+  font-size: 14px;
+  float: left;
+  background: #5b90de;
+  color: #fff;
+  line-height: 22px;
+  width: 22px;
+  text-align: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.content .news-wrapper .right dl .num::after {
+  content: '';
+  display: block;
+  border: 5px solid transparent;
+  border-left-color: #5b90de;
+  position: absolute;
+  right: -8px;
+  bottom: 4px;
+}
+
+.content .news-wrapper .right dl .text {
+  padding-left: 30px;
+}
+
+.content .news-wrapper .right dl dt {
+  padding: 11px 15px;
+}
+
+.content .news-wrapper .right dl dt .text h2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.content .news-wrapper .right dl dt .text .line {
+  background: #ccc;
+  width: 20px;
+  height: 1px;
+}
+
+.content .news-wrapper .right dl dt .text .text-a {
+  line-height: 25px;
+  color: #909090;
+}
+
+.content .news-wrapper .right dl dd {
+  padding: 15px;
+  border-top: 1px dashed #ccc;
+  font-size: 14px;
+}
+
+.content .news-wrapper .right dl dd a {
+  display: block;
+  color: #909090;
+}
+
+.content .news-wrapper .right dl dd .num {
+  background: #a2c285;
+}
+
+.content .news-wrapper .right dl dd .num::after {
+  border-left-color: #a2c285;
 }
