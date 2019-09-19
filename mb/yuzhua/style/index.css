@@ -1122,6 +1122,7 @@
   position: absolute;
   height: 173px;
   background-image: url("../img/business_contact_bg.png");
+  background-repeat: no-repeat;
   bottom: 0;
   left: 10px;
   width: 270px;
@@ -1237,4 +1238,452 @@
 
 .content .caishui .info .right .btn-wrapper {
   background-image: url("../img/finance_contact_bg.png");
+}
+
+.content .guwen-team {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.content .guwen-team > h1 {
+  background: url("../img/commontitle_bg.png") center no-repeat;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content .guwen-team .title {
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+}
+
+.content .guwen-team .title li {
+  float: left;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #747474;
+  background: #fff;
+  cursor: pointer;
+}
+
+.content .guwen-team .title li:not(:last-of-type) {
+  border-right: none;
+}
+
+.content .guwen-team .title li.active {
+  color: #3573ec;
+  border-top: 2px solid #3573ec;
+}
+
+.content .guwen-team .info {
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.content .guwen-team .info .left {
+  float: left;
+  width: 870px;
+  position: relative;
+}
+
+.content .guwen-team .info .left dl {
+  width: 870px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.content .guwen-team .info .left dl.active {
+  z-index: 3;
+  opacity: 1;
+}
+
+.content .guwen-team .info .left dl dt {
+  float: left;
+  width: 290px;
+  height: 160px;
+  background: #f1f1f1;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 20px 0 0 30px;
+  position: relative;
+}
+
+.content .guwen-team .info .left dl dt::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid #ff9535;
+  border-top: 2px solid #ff9535;
+  left: 10px;
+  top: 10px;
+}
+
+.content .guwen-team .info .left dl dt a h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content .guwen-team .info .left dl dt a h3 img {
+  padding-left: 5px;
+}
+
+.content .guwen-team .info .left dl dt a h6 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #bcbcbc;
+}
+
+.content .guwen-team .info .left dl dt a .line {
+  border-bottom: 1px dashed #ccc;
+  width: 30px;
+  margin: 5px 0;
+}
+
+.content .guwen-team .info .left dl dt a .slogan {
+  color: #9f9f9f;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.content .guwen-team .info .left dl dt a .team-btn {
+  background: #fff;
+  padding: 0px 10px 3px;
+  color: #aaa;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.content .guwen-team .info .left dl dt:hover .team-btn {
+  color: #ff9535;
+  border-color: #ff9535;
+}
+
+.content .guwen-team .info .left dl dd {
+  width: 145px;
+  height: 160px;
+  float: left;
+}
+
+.content .guwen-team .info .left dl dd a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.content .guwen-team .info .left dl dd a img {
+  width: 100%;
+  height: 100%;
+}
+
+.content .guwen-team .info .left dl dd a .hover-show {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  padding-top: 80px;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.content .guwen-team .info .left dl dd a .hover-show h4 {
+  color: #616161;
+  line-height: 40px;
+  width: 130px;
+  margin: 0 auto;
+  background: #fff;
+  border-bottom: 1px dashed #ccc;
+  border-radius: 5px 5px 0 0;
+}
+
+.content .guwen-team .info .left dl dd a .hover-show p {
+  color: #ff8400;
+  font-weight: bold;
+  line-height: 30px;
+  width: 130px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+}
+
+.content .guwen-team .info .left dl dd:hover .hover-show {
+  opacity: 1;
+}
+
+.content .guwen-team .info .right {
+  float: right;
+  width: 290px;
+  height: 320px;
+  background: #F1F1F1;
+}
+
+.content .guwen-team .info .right li {
+  width: 145px;
+  height: 106px;
+  float: left;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.content .guwen-team .info .right li a {
+  color: #444;
+}
+
+.content .guwen-team .info .right li a .img {
+  height: 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content .guwen-team .info .right li:hover a {
+  color: #ff8400;
+}
+
+.content .guwen-team .info .right li:nth-of-type(1) {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.content .guwen-team .info .right li:nth-of-type(1) .img {
+  background-image: url("../img/icon_loc2.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(1):hover .img {
+  background-image: url("../img/icon_loc2_hover.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(2) {
+  border-bottom: 1px solid #ccc;
+}
+
+.content .guwen-team .info .right li:nth-of-type(2) .img {
+  background-image: url("../img/icon_loc3.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(2):hover .img {
+  background-image: url("../img/icon_loc3_hover.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(3) {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.content .guwen-team .info .right li:nth-of-type(3) .img {
+  background-image: url("../img/icon_loc4.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(3):hover .img {
+  background-image: url("../img/icon_loc4_hover.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(4) {
+  border-bottom: 1px solid #ccc;
+}
+
+.content .guwen-team .info .right li:nth-of-type(4) .img {
+  background-image: url("../img/icon_loc5.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(4):hover .img {
+  background-image: url("../img/icon_loc5_hover.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(5) {
+  border-right: 1px solid #ccc;
+}
+
+.content .guwen-team .info .right li:nth-of-type(5) .img {
+  background-image: url("../img/icon_loc6.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(5):hover .img {
+  background-image: url("../img/icon_loc6_hover.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(6) .img {
+  background-image: url("../img/icon_loc7.png");
+}
+
+.content .guwen-team .info .right li:nth-of-type(6):hover .img {
+  background-image: url("../img/icon_loc7_hover.png");
+}
+
+.content .server-city {
+  padding-bottom: 30px;
+}
+
+.content .server-city > h1 {
+  background: url("../img/commontitle_bg.png") center no-repeat;
+  background-size: 300px 15px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content .server-city > h6 {
+  color: #aaa;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content .server-city > .title {
+  box-shadow: 0px 0px 15px 5px rgba(52, 27, 21, 0.06);
+  position: relative;
+  z-index: 3;
+}
+
+.content .server-city > .title li {
+  float: left;
+  width: 300px;
+  background: #fff;
+  text-align: center;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+
+.content .server-city > .title li:not(:last-of-type) {
+  border-right: 1px solid #e8e8e8;
+}
+
+.content .server-city > .title li .big {
+  font-size: 50px;
+  vertical-align: top;
+}
+
+.content .server-city > .title li .small {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.content .server-city > .title li p {
+  font-size: 14px;
+  color: #919191;
+}
+
+.content .server-city .map-wrapper {
+  width: 100%;
+  position: relative;
+  height: 620px;
+  transform: translateY(-80px);
+}
+
+.content .server-city .map-wrapper #map {
+  width: 100%;
+  height: 700px;
+}
+
+.content .server-city .map-wrapper .search-wrapper {
+  position: absolute;
+  width: 330px;
+  top: 110px;
+  left: 355px;
+  background: #fff;
+  padding: 20px;
+}
+
+.content .server-city .map-wrapper .search-wrapper .search-box {
+  border: 1px solid #e2e2e2;
+  display: flex;
+}
+
+.content .server-city .map-wrapper .search-wrapper .search-box input {
+  flex-grow: 1;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+}
+
+.content .server-city .map-wrapper .search-wrapper .search-box input::placeholder {
+  color: #ccc;
+}
+
+.content .server-city .map-wrapper .search-wrapper .search-box span {
+  font-size: 16px;
+  color: #fff;
+  line-height: 35px;
+  padding: 0 25px;
+  background: linear-gradient(14deg, #ff734e, #ff8565);
+}
+
+.content .server-city .map-wrapper .search-wrapper > p {
+  color: #aaa;
+  padding: 10px 0 20px;
+}
+
+.content .server-city .map-wrapper .search-wrapper > ul li {
+  float: left;
+  border: 1px solid transparent;
+  border-bottom-color: #e2e2e2;
+  padding: 3px 10px 1px;
+  color: #cc5656;
+}
+
+.content .server-city .map-wrapper .search-wrapper > ul li.active {
+  border-color: #e2e2e2;
+  border-bottom-color: transparent;
+}
+
+.content .server-city .map-wrapper .search-wrapper .info {
+  padding: 20px 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.content .server-city .map-wrapper .search-wrapper .info ul {
+  height: 180px;
+}
+
+.content .server-city .map-wrapper .search-wrapper .info ul li {
+  float: left;
+  line-height: 30px;
+  padding: 0 15px;
+  color: #7c7c7c;
+}
+
+.content .server-city .map-wrapper .search-wrapper .Introduction {
+  padding-top: 30px;
+}
+
+.content .server-city .map-wrapper .search-wrapper .Introduction h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.content .server-city .map-wrapper .search-wrapper .Introduction .line {
+  width: 30px;
+  border-bottom: 1px dashed #e2e2e2;
+  margin: 15px 0;
+}
+
+.content .server-city .map-wrapper .search-wrapper .Introduction .text {
+  color: #aaa;
+  padding: 5px 0;
+}
+
+.content .evaluation > h1 {
+  background: url("../img/commontitle_bg.png") center no-repeat;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content .evaluation h6 {
+  color: #aaa;
+  text-align: center;
+  font-weight: 100;
+}
+
+.content .evaluation .info .left {
+  float: left;
+  width: 515px;
+  text-align: right;
 }

@@ -73,6 +73,14 @@ function bindEvent() {
     }, function () {
 
     })
+
+    // 顾问团队
+    $('.guwen-team .title li').hover( function () {
+        $(this).getActive();
+        $('.' + this.id).getActive();
+    }, function () {
+
+    })
 }
 
 

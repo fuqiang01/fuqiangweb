@@ -1034,6 +1034,7 @@
                     position: absolute;
                     height: 173px;
                     background-image: url('../img/business_contact_bg.png');
+                    background-repeat: no-repeat;
                     bottom: 0;
                     left: 10px;
                     width: 270px;
@@ -1151,6 +1152,409 @@
                 .btn-wrapper{
                     background-image: url('../img/finance_contact_bg.png');
                 }
+            }
+        }
+    }
+    // 顾问团队
+    .guwen-team{
+        text-align: center;
+        padding-bottom: 30px;
+        >h1{
+            background: url('../img/commontitle_bg.png') center no-repeat;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .title{
+            display: inline-block;
+            border-bottom: 1px solid #ccc;
+            li{
+                float: left;
+                border: 1px solid #ccc;
+                border-bottom: none;
+                padding: 10px 20px;
+                font-size: 14px;
+                color: #747474;
+                background: #fff;
+                cursor: pointer;
+                &:not(:last-of-type){
+                    border-right: none;
+                }
+                &.active{
+                    color: #3573ec;
+                    border-top: 2px solid #3573ec;
+                }
+            }
+        }
+        .info{
+            background: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            .left{
+                float: left;
+                width: 870px;
+                position: relative;
+                dl{
+                    width: 870px;
+                    position: absolute;
+                    opacity: 0;
+                    transition: opacity .5s;
+                    &.active{
+                        z-index: 3;
+                        opacity: 1;
+                    }
+                    dt{
+                        float: left;
+                        width: 290px;
+                        height: 160px;
+                        background: #f1f1f1;
+                        text-align: left;
+                        box-sizing: border-box;
+                        padding: 20px 0 0 30px;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            width: 8px;
+                            height: 8px;
+                            border-left: 2px solid #ff9535;
+                            border-top: 2px solid #ff9535;
+                            left: 10px;
+                            top: 10px;
+                        }
+                        a{
+                            h3{
+                                font-size: 20px;
+                                font-weight: bold;
+                                img{
+                                    padding-left: 5px;
+                                }
+                            }
+                            h6{
+                                font-weight: 100;
+                                text-transform: uppercase;
+                                color: #bcbcbc;
+                            }
+                            .line{
+                                border-bottom: 1px dashed #ccc;
+                                width: 30px;
+                                margin: 5px 0;
+                            }
+                            .slogan{
+                                color: #9f9f9f;
+                                font-size: 14px;
+                                padding-bottom: 10px;
+                            }
+                            .team-btn{
+                                background: #fff;
+                                padding: 0px 10px 3px;
+                                color: #aaa;
+                                border-radius: 10px;
+                                border: 1px solid #e0e0e0;
+                            }
+                        }
+                        &:hover{
+                            .team-btn{
+                                color: #ff9535;
+                                border-color: #ff9535;
+                            }
+                        }
+                    }
+                    dd{
+                        width: 145px;
+                        height: 160px;
+                        float: left;
+                        a{
+                            position: relative;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                            .hover-show{
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: 0;
+                                right: 0;
+                                background: rgba(0,0,0,.3);
+                                padding-top: 80px;
+                                opacity: 0;
+                                transition: all .5s;
+                                h4{
+                                    color: #616161;
+                                    line-height: 40px;
+                                    width: 130px;
+                                    margin: 0 auto;
+                                    background: #fff;
+                                    border-bottom: 1px dashed #ccc;
+                                    border-radius: 5px 5px 0 0;
+                                }
+                                p{
+                                    color: #ff8400;
+                                    font-weight: bold;
+                                    line-height: 30px;
+                                    width: 130px;
+                                    margin: 0 auto;
+                                    background: #fff;
+                                    border-radius: 0 0 5px 5px;
+                                }
+                            }
+                        }
+                        &:hover{
+                            .hover-show{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            .right{
+                float: right;
+                width: 290px;
+                height: 320px;
+                background: #F1F1F1;
+                li{
+                    width: 145px;
+                    height: 106px;
+                    float: left;
+                    box-sizing: border-box;
+                    padding-top: 20px;
+                    a{
+                        color: #444;
+                        .img{
+                            height: 45px;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                    &:hover{
+                        a{
+                            color: #ff8400;
+                        }
+                    }
+                    &:nth-of-type(1){
+                        border-bottom: 1px solid #ccc;
+                        border-right: 1px solid #ccc;
+                        .img{
+                            background-image: url('../img/icon_loc2.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon_loc2_hover.png');
+                            }
+                        }
+                    }
+                    &:nth-of-type(2){
+                        border-bottom: 1px solid #ccc;
+                        .img{
+                            background-image: url('../img/icon_loc3.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon_loc3_hover.png');
+                            }
+                        }
+                    }
+                    &:nth-of-type(3){
+                        border-bottom: 1px solid #ccc;
+                        border-right: 1px solid #ccc;
+                        .img{
+                            background-image: url('../img/icon_loc4.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon_loc4_hover.png');
+                            }
+                        }
+                    }
+                    &:nth-of-type(4){
+                        border-bottom: 1px solid #ccc;
+                        .img{
+                            background-image: url('../img/icon_loc5.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon_loc5_hover.png');
+                            }
+                        }
+                    }
+                    &:nth-of-type(5){
+                        border-right: 1px solid #ccc;
+                        .img{
+                            background-image: url('../img/icon_loc6.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon_loc6_hover.png');
+                            }
+                        }
+                    }
+                    &:nth-of-type(6){
+                        .img{
+                            background-image: url('../img/icon_loc7.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon_loc7_hover.png');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 服务城市
+    .server-city{
+        padding-bottom: 30px;
+        >h1{
+            background: url('../img/commontitle_bg.png') center no-repeat;
+            background-size: 300px 15px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+        >h6{
+            color: #aaa;
+            font-weight: 100;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        >.title{
+            box-shadow: 0px 0px 15px 5px rgba(52, 27, 21, 0.06);
+            position: relative;
+            z-index: 3;
+            li{
+                float: left;
+                width: 300px;
+                background: #fff;
+                text-align: center;
+                padding: 30px 0;
+                box-sizing: border-box;
+                &:not(:last-of-type){
+                    border-right: 1px solid #e8e8e8;
+                }
+                .big{
+                    font-size: 50px;
+                    vertical-align: top;
+                }
+                .small{
+                    font-size: 14px;
+                    font-weight: bold
+                }
+                p{
+                    font-size: 14px;
+                    color: #919191;
+                }
+            }
+        }
+        .map-wrapper{
+            width: 100%;
+            position: relative;
+            height: 620px;
+            transform: translateY(-80px);
+            #map{
+                width: 100%;
+                height: 700px;
+            }
+            .search-wrapper{
+                position: absolute;
+                width: 330px;
+                top: 110px;
+                left: 355px;
+                background: #fff;
+                padding: 20px;
+                .search-box{
+                    border: 1px solid #e2e2e2;
+                    display: flex;
+                    input{
+                        flex-grow: 1;
+                        padding-left: 20px;
+                        border: none;
+                        outline: none;
+                        &::placeholder{
+                            color: #ccc;
+                        }
+                    }
+                    span{
+                        font-size: 16px;
+                        color: #fff;
+                        line-height: 35px;
+                        padding: 0 25px;
+                        background: linear-gradient(14deg, #ff734e, #ff8565);
+                    }
+                }
+                >p{
+                    color: #aaa;
+                    padding: 10px 0 20px;
+                }
+                >ul{
+                    li{
+                        float: left;
+                        border: 1px solid transparent;
+                        border-bottom-color: #e2e2e2;
+                        padding: 3px 10px 1px;
+                        color: #cc5656;
+                        &.active{
+                            border-color: #e2e2e2;
+                            border-bottom-color: transparent;
+                        }
+                    }
+                }
+                .info{
+                    padding: 20px 0;
+                    border-bottom: 1px solid #e2e2e2;
+                    ul{
+                        height: 180px;
+                        li{
+                            float: left;
+                            line-height: 30px;
+                            padding: 0 15px;
+                            color: #7c7c7c;
+                        }
+                    }
+                }
+                .Introduction{
+                    padding-top: 30px;
+                    h3{
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                    .line{
+                        width: 30px;
+                        border-bottom: 1px dashed #e2e2e2;
+                        margin: 15px 0;
+                    }
+                    .text{
+                        color: #aaa;
+                        padding: 5px 0;
+                    }
+                }
+            }
+        }
+        
+    }
+    // 售后采访
+    .evaluation{
+        >h1{
+            background: url('../img/commontitle_bg.png') center no-repeat;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+        h6{
+            color: #aaa;
+            text-align: center;
+            font-weight: 100;
+        }
+        .info{
+            .left{
+                float: left;
+                width: 515px;
+                text-align: right;
             }
         }
     }
