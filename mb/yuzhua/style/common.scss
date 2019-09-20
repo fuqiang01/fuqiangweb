@@ -294,9 +294,10 @@ footer{
                     position: absolute;
                     top: -100px;
                     left: -105px;
-                    z-index: 3;
+                    z-index: -1;
                     opacity: 0;
                     transition: all .5s;
+                    // display: none;
                     &::before{
                         content: '';
                         display: block;
@@ -339,6 +340,7 @@ footer{
                             padding: 10px 0 5px;
                             a{
                                 float: right;
+                                color: #aaa;
                                 img{
                                     vertical-align: middle;
                                 }
@@ -382,6 +384,7 @@ footer{
                     .hover-show{
                         transform: translateY(20px);
                         opacity: 1;
+                        z-index: 3;
                     }
                     
                 }
@@ -454,6 +457,183 @@ footer{
         .beian{
             text-align: center;
             line-height: 50px;
+        }
+    }
+}
+//侧边框
+aside{
+    position: fixed;
+    right: 2px;
+    bottom: 300px;
+    z-index: 3;
+    >div{
+        width: 40px;
+        height: 40px;
+        position: relative;
+        margin-bottom: 2px;
+        border-radius: 5px;
+        .hover-show{
+            position: absolute;
+            right: 50px;
+            display: none;
+        }
+        &:hover{
+            .hover-show{
+                display: block;
+            }
+        }
+        &.kf{
+            background: #E1E1E1 url('../img/kefuzixun.png') center no-repeat;
+            .hover-show{
+                right: 40px;
+                a{
+                    display: block;
+                    background: #EF1E25;
+                    color: #fff;
+                    width: 100px;
+                    line-height: 40px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-align: center;
+                    border-radius: 5px;
+                }
+            }
+            &:hover{
+                background: #EF1E25 url('../img/kefuzixun_h.png') center no-repeat;
+            }
+        }
+        &.phone,
+        &.wx-code{
+            .hover-show{
+                border: 2px solid #EF1E25;
+                background: #fff;
+                border-radius: 5px;
+                &::before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border: 5px solid transparent;
+                    border-left-color: #fff;
+                    top: 50%;
+                    margin-top: -2px;
+                    right: -10px;
+                    z-index: 3;
+                }
+                &::after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    border: 7px solid transparent;
+                    border-left-color: #EF1E25;
+                    top: 50%;
+                    margin-top: -4px;
+                    right: -15px;
+                }
+            }
+        }
+        &.phone{
+            background: #E1E1E1 url('../img/zhenjiakefu.png') center no-repeat;
+            .hover-show{
+                width: 150px;
+                top: -45px;
+                padding: 30px;
+                h3{
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: #EF1E25;
+                }
+                p{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #666;
+                    padding-top: 10px;
+                }
+            }
+            &:hover{
+                background: #EF1E25 url('../img/zhenjiakefu_h.png') center no-repeat;
+            }
+        }
+        &.wx-code{
+            background: #E1E1E1 url('../img/guanzhu.png') center no-repeat;
+            .hover-show{
+                top: -65px;
+                text-align: center;
+                padding:20px 30px 10px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+                p{
+                    font-size: 16px;
+                    color: #777;
+                }
+            }
+            &:hover{
+                background: #EF1E25 url('../img/guanzhu_h.png') center no-repeat;
+            }
+        }
+        &.go-top{
+            background: #E1E1E1 url('../img/huidaodingbu.png') center no-repeat;
+            &:hover{
+                background: #EF1E25 url('../img/huidaodingbu_h.png') center no-repeat;
+            }
+        }
+        
+    }
+}
+// 弹窗
+.popupWindow-wrapper{
+    position: fixed;
+    z-index: 30;
+    background: rgba(0,0,0,.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    .poruoWindow{
+        background: #fff;
+        width: 500px;
+        margin: 200px auto;
+        padding: 50px 90px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        position: relative;
+        background-image: url('../img/popup_window.jpg');
+        background-size: 100% 100%;
+        p{
+            padding: 10px 0;
+            font-size: 20px;
+            color: #444;
+            span{
+                color: #ff672b;
+                font-weight: bold;
+            }
+        }
+        input{
+            padding: 10px 20px;
+            margin: 10px 0;
+            outline: none;
+        }
+        .popW-btn{
+            background: #297bf6;
+            color: #fff;
+            padding: 10px 0;
+            width: 213px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .popW-shut-btn{
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            color: #999;
+            cursor: pointer;
+            &:hover{
+                color: #333;
+            }
         }
     }
 }

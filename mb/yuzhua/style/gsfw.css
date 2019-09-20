@@ -1,0 +1,172 @@
+.banner {
+  height: 402px;
+  background: url("../img/banner_bg_gsfw.jpg");
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 60px;
+}
+
+.banner > h3 {
+  font-size: 20px;
+  color: #666;
+}
+
+.banner > h6 {
+  margin: 10px 0 20px;
+}
+
+.banner > p {
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 19px;
+  color: #fff;
+  background: #4f68d4;
+  border-radius: 25px;
+}
+
+.banner > p span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0 15px;
+}
+
+.banner .heming {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.13);
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.banner .heming .top {
+  background: url("../img/banner_blcok_bg.png");
+  padding: 30px 0 15px;
+}
+
+.banner .heming .top .t-wrapper {
+  background-color: #fff;
+  display: inline-block;
+  text-align: left;
+}
+
+.banner .heming .top .t-wrapper > div,
+.banner .heming .top .t-wrapper > p {
+  float: left;
+}
+
+.banner .heming .top .t-wrapper .drop-down {
+  position: relative;
+}
+
+.banner .heming .top .t-wrapper .drop-down > div {
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+.banner .heming .top .t-wrapper .drop-down > div img {
+  vertical-align: middle;
+}
+
+.banner .heming .top .t-wrapper .drop-down > div span {
+  line-height: 46px;
+  display: inline-block;
+  width: 120px;
+  padding-left: 5px;
+}
+
+.banner .heming .top .t-wrapper .drop-down > ul {
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 5px;
+  background: #fff;
+  z-index: 3;
+  width: 170px;
+  padding: 10px;
+  box-shadow: 0 6px 30px 0 rgba(106, 109, 141, 0.1);
+  border-radius: 5px;
+}
+
+.banner .heming .top .t-wrapper .drop-down > ul li {
+  padding: 5px 10px;
+  color: #666;
+  cursor: pointer;
+}
+
+.banner .heming .top .t-wrapper .drop-down > ul li:hover {
+  background: #eef4ff;
+  color: #64a6fe;
+}
+
+.banner .heming .top .t-wrapper .input {
+  border-right: 1px solid #e0e0e0;
+  padding: 8px 20px;
+}
+
+.banner .heming .top .t-wrapper .input.border-l {
+  border-left: 1px solid #e0e0e0;
+}
+
+.banner .heming .top .t-wrapper .input img {
+  vertical-align: middle;
+}
+
+.banner .heming .top .t-wrapper .input input {
+  line-height: 30px;
+  border: none;
+  outline: none;
+}
+
+.banner .heming .top .t-wrapper > p {
+  line-height: 46px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  padding: 0 30px;
+}
+
+.banner .heming .top .t-wrapper > p.btn1 {
+  background-color: #2ba8ff;
+}
+
+.banner .heming .top .t-wrapper > p.btn2 {
+  background-color: #ffa800;
+}
+
+.banner .heming .top > p {
+  color: #fff;
+  font-size: 14px;
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+.banner .heming .bot li {
+  float: left;
+  width: 290px;
+  text-align: left;
+}
+
+.banner .heming .bot li img {
+  float: left;
+}
+
+.banner .heming .bot li .text {
+  padding-left: 80px;
+}
+
+.banner .heming .bot li .text h3 {
+  font-size: 16px;
+  color: #2a2a2a;
+}
+
+.banner .heming .bot li .text p {
+  color: #929292;
+}
+
+.content {
+  padding-top: 300px;
+  background: url("../img/register_bg.jpg");
+}
