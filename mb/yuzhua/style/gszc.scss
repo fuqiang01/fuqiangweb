@@ -1,0 +1,490 @@
+// banner
+.banner{
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+
+// content
+.content{
+    // 查询窗口
+    .query-window{
+        background: url('../img/bg01.jpg');
+        .query{
+            background: url('../img/bg01-1.png');
+            background-size: 100% 100%;
+            padding: 30px 50px;
+            box-sizing: border-box;
+            margin-top: -80px;
+            position: relative;
+            .btn-wrapper{
+                text-align: center;
+                .btn1{
+                    width: 369px;
+                    height: 153px;
+                    background: url('../img/server01.png');
+                }
+                .btn2{
+                    width: 309px;
+                    height: 152px;
+                    background: url('../img/server02.png');
+                }
+                >div{
+                    display: inline-block;
+                    box-sizing: border-box;
+                    padding: 73px 0 0 22px;
+                    margin: 0 20px;
+                    a{
+                        font-size: 24px;
+                        padding: 15px 70px 15px 120px;
+                        color: #fff;
+                    }
+                }
+            }
+            .input-wrapper{
+                border: 1px solid #dcdcdc;
+                height: 45px;
+                background: #fff;
+                margin: 0 100px;
+                .drop-down{
+                    position: relative;
+                    padding: 0 20px;
+                    width: 120px;
+                    display: inline-block;
+                    p{
+                        line-height: 45px;
+                        color: #666;
+                        font-size: 14px;
+                        img{
+                            padding-top: 14px;
+                            float: right;
+                        }
+                    }
+                    ul{
+                        position: absolute;
+                        width: 150px;
+                        padding: 10px;
+                        background: #fff;
+                        box-shadow: 0 6px 30px 0 rgba(106, 109, 141, 0.1);
+                        border-radius: 5px;
+                        left: 0px;
+                        top: 50px;
+                        display: none;
+                        li{
+                            padding: 5px 10px;
+                            font-size: 14px;
+                            color: #666;
+                            cursor: pointer;
+                            &:hover{
+                                background: #eef4ff;
+                                color: #64a6fe;
+                            }
+                        }
+                    }
+                }
+                input{
+                    border: none;
+                    outline: none;
+                    border-left: 1px solid #dcdcdc;
+                    height: 39px;
+                    width: 493px;
+                    padding: 0px 20px;
+                }
+                .query-btn{
+                    line-height: 45px;
+                    background: #0a6ce8;
+                    color: #fff;
+                    font-size: 16px;
+                    display: inline-block;
+                    font-weight: bold;
+                    padding: 0 30px;
+                }
+            }
+            .dynamic{
+                padding-top: 50px;
+                >span{
+                    font-size: 16px;
+                    font-weight: bold;
+                    float: left;
+                    display: inline-block;
+                    line-height: 30px;
+                }
+                .swiper-dynamic{
+                    padding-left: 50px;
+                    overflow: hidden;
+                    height: 30px;
+                    .swiper-slide{
+                        span{
+                            color: #888;
+                            line-height: 30px;
+                            margin-right: 45px;
+                            i{
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 公司注册类型
+        .type{
+            padding: 50px 0;
+            .title{
+                .t-left{
+                    display: inline-block;
+                    transform: translateY(-20px);
+                }
+                .t-center{
+                    display: inline-block;
+                    padding: 0 38px;
+                    img{
+                        float: left;
+                    }
+                    .text{
+                        padding-left: 100px;
+                        text-align: center;
+                        h2{
+                            font-size: 24px;
+                            font-weight: bold;
+                            color: #fff;
+                        }
+                        .vice-title{
+                            color: #12519a;
+                        }
+                    }
+                }
+                .t-right{
+                    display: inline-block;
+                    transform: translateY(-20px);
+                }
+                .line{
+                    display: inline-block;
+                    width: 400px;
+                    height: 1px;
+                    background: #12519a;
+                    transform: translateY(-3px);
+                }
+                .circle{
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border: 2px solid #12519a;
+                    border-radius: 50%;
+                }
+            }
+            .info{
+                padding-top: 50px;
+                li{
+                    border-radius: 5px;
+                    background-color: #fff;
+                    float: left;
+                    width: 261px;
+                    height: 355px;
+                    transition: width .5s;
+                    &:not(:last-of-type){
+                        margin-right: 1px;
+                    }
+                    .num{
+                        text-align: right;
+                        font-size: 72px;
+                        font-weight: bold;
+                        color: rgba(0,0,0,.1);
+                        padding-right: 20px;
+                    }
+                    >div{
+                        padding: 0 20px;
+                        .title{
+                            font-size: 18px;
+                            color: #6f6f6f;
+                            font-weight: bold;
+                            border-bottom: 1px dashed #535353;
+                            padding: 5px 0 5px 20px;
+                            background: url('../img/icon_02.png') left center no-repeat;
+                        }
+                        .text{
+                            color: #ababab;
+                            line-height: 25px;
+                            height: 100px;
+                            padding: 20px 0;
+                        }
+                        a{
+                            color: #ababab;
+                            border: 1px solid #ababab;
+                            display: inline-block;
+                            padding: 5px 15px;
+                            border-radius: 5px;
+                            span{
+                                padding-left: 20px;
+                            }
+                            &:hover{
+                                background: #0a6ce8;
+                                color: #fff;
+                                border-color: #0a6ce8;
+                            }
+                        }
+                    }
+                    &:nth-of-type(1).active{
+                        background: url('../img/bg01-2-01.png');
+                    }
+                    &:nth-of-type(2).active{
+                        background: url('../img/bg01-2-02.png');
+                    }
+                    &:nth-of-type(3).active{
+                        background: url('../img/bg01-2-03.png');
+                    }
+                    &:nth-of-type(4).active{
+                        background: url('../img/bg01-2-04.png');
+                    }
+                    &.active{
+                        width: 414px;
+                        .num{
+                            color: rgba(255,255,255,.1);
+                        }
+                        >div{
+                            padding: 0 50px;
+                            .title{
+                                color: #fff;
+                                border-bottom-style: solid;
+                                background-image: url('../img/icon_01.png');
+                            }
+                            .text{
+                                color: #ababab;
+                                padding: 20px 0;
+                            }
+                            a{
+                                color: #fff;
+                                border-color: #fff;
+                                &:hover{
+                                    border-color: #0a6ce8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 为什么注册公司
+    .why{
+        padding-top: 50px;
+        height: 500px;
+        .title{
+            .t-left{
+                display: inline-block;
+                transform: translateY(-20px);
+            }
+            .t-center{
+                display: inline-block;
+                padding: 0 38px;
+                img{
+                    float: left;
+                }
+                .text{
+                    padding-left: 150px;
+                    text-align: center;
+                    h2{
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: #828282;
+                    }
+                    .vice-title{
+                        color: #828282;
+                    }
+                }
+            }
+            .t-right{
+                display: inline-block;
+                transform: translateY(-20px);
+            }
+            .line{
+                display: inline-block;
+                width: 407px;
+                height: 1px;
+                background: #e5e5e5;
+                transform: translateY(-3px);
+            }
+            .circle{
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                border: 2px solid #e5e5e5;
+                border-radius: 50%;
+            }
+        }
+        .info{
+            ul{
+                text-align: center;
+                li{
+                    display: inline-block;
+                    width: 236px;
+                    height: 266px;
+                    background: url('../img/bg02.png') center no-repeat;
+                    box-sizing: border-box;
+                    padding-top: 80px;
+                    transition: all .5s;
+                    .img{
+                        height: 70px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    p{
+                        font-size: 16px;
+                        color: #828282;
+                        padding-top: 10px;
+                        transition: all .5s;
+                    }
+                    &.flag{
+                        height: 349px;
+                        vertical-align: bottom;
+                        background: url('../img/bg02-01.png') center no-repeat;
+                    }
+                    &:hover{
+                        p{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .top{
+                li{
+                    &:nth-of-type(1){
+                        .img{
+                            background-image: url('../img/icon05.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon05-hover.png');
+                            }
+                            background-image: url('../img/bg02-hover01.png');
+                        }
+                    }
+                    &:nth-of-type(2){
+                        .img{
+                            background-image: url('../img/icon06.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon06-hover.png');
+                            }
+                            background-image: url('../img/bg02-hover02.png');
+                        }
+                    }
+                    &:nth-of-type(3){
+                        .img{
+                            background-image: url('../img/icon07.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon07-hover.png');
+                            }
+                            background-image: url('../img/bg02-hover03.png');
+                        }
+                    }
+                }
+            }
+            .bot{
+                margin-top: -50px;
+                li{
+                    &:nth-of-type(1){
+                        .img{
+                            background-image: url('../img/icon08.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon08-hover.png');
+                            }
+                            background-image: url('../img/bg02-hover04.png');
+                        }
+                    }
+                    &:nth-of-type(2){
+                        .img{
+                            background-image: url('../img/icon09.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon09-hover.png');
+                            }
+                            background-image: url('../img/bg02-hover05.png');
+                        }
+                    }
+                    &:nth-of-type(3){
+                        .img{
+                            background-image: url('../img/icon10.png');
+                        }
+                        &:hover{
+                            .img{
+                                background-image: url('../img/icon10-hover.png');
+                            }
+                            background-image: url('../img/bg02-hover06.png');
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 注册流程
+    .process{
+        background: url('../img/bg03.png');
+        padding: 200px 0 50px;
+        .title{
+            border-bottom: 1px solid #626262;
+            padding: 5px 20px;
+            .text{
+                display: inline-block;
+                text-align: right;
+                h2{
+                    font-size: 22px;
+                    color: #fff;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        width: 10px;
+                        height: 3px;
+                        background: #0A6CDD;
+                        display: block;
+                        position: absolute;
+                        top: 10px;
+                    }
+                }
+                p{
+                    color: #828282;
+                    padding-bottom: 10px;
+                }
+            }
+            img{
+                transform: translateY(10px);
+            }
+        }
+        .info{
+            padding-top: 50px;
+            li{
+                display: inline-block;
+                width: 154px;
+                height: 257px;
+                background: #fff;
+                border-radius: 5px;
+                margin-right: 10px;
+                &.active{
+                    width: 210px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
