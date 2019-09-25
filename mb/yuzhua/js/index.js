@@ -130,7 +130,7 @@ function swiperInit() {
     new Swiper('.swiper-jinxuan', {
         loop: true, // 循环模式选项
         slidesPerView: 'auto',//根据slide的宽度自动调整展示数量。
-        spaceBetween: 10,//每个slide的间距
+        spaceBetween: 0,//每个slide的间距
         // 如果需要前进后退按钮
         navigation: {
             nextEl: '.jinxuan-right',
