@@ -3,9 +3,12 @@
 function init() {
     swiperInit();
     bindEvent();
+    mapInit();
+    renderMapAddress();
 }
 init();
 
+// 事件绑定
 function bindEvent() {
     var lock1 = true;
     var lock2 = true;
@@ -89,8 +92,14 @@ function bindEvent() {
     }, function () {
 
     })
-}
 
+    //服务城市
+    $('.server-city .city-wrapper').on('click', 'li', function() {
+        console.log( $(this).data('coordinates') )
+        var coordinates = $(this).data('coordinates')
+        mapInit(coordinates);
+    })
+}
 
 // 轮播图初始化
 function swiperInit() {
@@ -137,6 +146,45 @@ function swiperInit() {
             prevEl: '.jinxuan-left',
         },
     })
+}
+
+//mapData渲染
+function renderMapAddress( index){
+    var data = [];
+    var $domWrapper = $('.map-wrapper .info .city-wrapper');
+    $domWrapper.empty();
+    if( !index) {
+        for( var i = 0; i < addressMapData.length; i++ ) {
+            data = data.concat(addressMapData[i] );
+        }
+    } else{
+        data = addressMapData[index];
+    }
+    data.forEach( function(ele, index) {
+        $('<li/>')
+            .text( ele.address)
+            .data({'coordinates' :  ele.coordinates})
+            .appendTo( $domWrapper)
+    })
+}
+
+//map初始化
+function mapInit( coordinates ){
+    var coordinates = coordinates || [113.365922, 31.719517];
+        //基本地图加载
+        var map = new AMap.Map("map", {
+            mapStyle: 'amap://styles/whitesmoke',
+            resizeEnable: true,
+            center: coordinates, //地图中心点
+            zoom: 7,//地图显示的缩放级别
+            zoomEnable: false, //地图是否可缩放
+        });
+
+        //标记
+        var marker = new AMap.Marker({
+            position: coordinates //位置
+        })
+        map.add(marker);
 }
 
 

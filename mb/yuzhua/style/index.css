@@ -479,6 +479,7 @@
   left: 0px;
   top: 50px;
   display: none;
+  z-index: 3;
 }
 
 .content .hot-server .hot-yuyue .info > div .drop-down .drop-down-box dd {
