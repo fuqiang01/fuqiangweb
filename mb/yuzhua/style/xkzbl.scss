@@ -410,6 +410,326 @@
                 height: 185px;
                 background: #fff;
                 text-align: center;
+                padding-top: 40px;
+                transition: padding .5s;
+                .p1{
+                    font-size: 20px;
+                    color: #0f2149;
+                    padding: 10px 0 5px;
+                }
+                .p2{
+                    font-size: 14px;
+                    color: #898e99;
+                }
+                &:hover{
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+    // 拿证步骤
+    .steps{
+        padding: 50px 0;
+        text-align: center;
+        background: url('../img/bg4.jpg');
+        .title{
+            font-size: 32px;
+            font-weight: bold;
+            color: #5b5d66;
+            padding: 10px 80px;
+            border-bottom: 1px solid #E6E6E6;
+            span{
+                color: #135FBB;
+            }
+        }
+        .vice-title{
+            font-size: 18px;
+            color: #999;
+            padding: 10px 0 100px;
+        }
+        ul{
+            li{
+                float: left;
+                width: 240px;
+                box-sizing: border-box;
+                position: relative;
+                &:not(:last-of-type){
+                    border-right: 1px dotted #ccc;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 22px;
+                        height: 10px;
+                        position: absolute;
+                        background: url('../img/i2.jpg') center no-repeat;
+                        right: -22px;
+                        top: 90px;
+                        transition: all .5s;
+                    }
+                }
+                img{
+                    margin-top: -50px;
+                    transition: all .5s;
+                }
+                h3{
+                    font-size: 18px;
+                    color: #5d5d5d;
+                    padding-top: 20px;
+                }
+                .bot-box{
+                    span{
+                        display: inline-block;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background: #898E99;
+                    }
+                }
+                .text{
+                    color: #898E99;
+                    font-size-adjust: 14px;
+                    padding: 10px 0 30px;
+                    transition: all .5s;
+                }
+                &:hover{
+                    &::after{
+                        top: 70px;
+                    }
+                    img{
+                        margin-top: -70px;
+                    }
+                    .text{
+                        padding-bottom: 50px;
+                    }
+                }
+            }
+        }
+        .steps-btn{
+            padding-top: 50px;
+            a{
+                display: inline-block;
+                color: #fff;
+                font-size: 16px;
+                background: #FF734D;
+                padding: 8px 50px;
+            }
+        }
+    }
+    // 实力展示
+    .strength-shows{
+        padding: 50px 0;
+        text-align: center;
+        .title{
+            color: #5B5D66;
+            font-size: 32px;
+            font-weight: bold;
+            display: inline-block;
+            border-bottom: 1px solid #E6E6E6;
+            padding: 10px 0;
+        }
+        .vice-title{
+            font-size: 18px;
+            color: #999;
+            padding: 10px 0 50px;
+        }
+        .info{
+            position: relative;
+            height: 685px;
+            background: url('../img/map.png') right center no-repeat;
+            >div{
+                position: absolute;
+                background: #fff;
+                box-shadow: rgba(0,0,0,0.15) 1px 1px 10px;
+                padding: 5px;
+                transition: transform .5s; 
+                &:hover{
+                    transform: translateY(-5px);
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+                &.img1{
+                    width: 270px;
+                    height: 500px;
+                    left: 0;
+                    top: 20px;
+                    z-index: 9;
+                }
+                &.img2{
+                    width: 240px;
+                    height: 120px;
+                    left: 250px;
+                    top: 80px;
+                    z-index: 10;
+                }
+                &.img3{
+                    width: 300px;
+                    height: 170px;
+                    left: 250px;
+                    top: 260px;
+                    z-index: 10;
+                }
+                &.img4{
+                    width: 165px;
+                    height: 115px;
+                    left: 140px;
+                    top: 520px;
+                    opacity: 0.8;
+                }
+                &.img5{
+                    width: 310px;
+                    height: 160px;
+                    left: 330px;
+                    top: 180px;
+                    z-index: 8;
+                    opacity: 0.6;
+                }
+                &.img6{
+                    width: 280px;
+                    height: 200px;
+                    left: 330px;
+                    top: 410px;
+                }
+                &.img7{
+                    width: 200px;
+                    height: 155px;
+                    right: 0;
+                    top: 0;
+                }
+                &.img8{
+                    width: 130px;
+                    height: 60px;
+                    right: 137px;
+                    bottom: 130px;
+                    opacity: 0.8;
+                }
+                &.img9{
+                    width: 180px;
+                    height: 140px;
+                    left: 580px;
+                    top: 120px;
+                }
+            }
+        }
+    }
+    // 合作品牌
+    .cooperation{
+        text-align: center;
+        padding: 50px 0;
+        background: url('../img/bg6.jpg');
+        .title{
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            padding: 10px 80px;
+            border-bottom: 1px solid #658ECA;
+        }
+        .vice-title{
+            color: #658ECA;
+            padding: 10px 0 50px;
+            font-size: 18px;
+        }
+        .img-wrapper{
+            img{
+                float: left;
+                margin: 5px;
+            }
+        }
+        .cooperation-btn{
+            padding-top: 50px;
+            a{
+                display: inline-block;
+                color: #fff;
+                font-size: 16px;
+                background: #FF734D;
+                padding: 8px 50px;
+            }
+        }
+    }
+    // 在线问答
+    .question{
+        padding: 50px 0;
+        text-align: center;
+        .title{
+            font-size: 32px;
+            font-weight: bold;
+            color: #5b5d66;
+            padding: 10px 80px;
+            border-bottom: 1px solid #E6E6E6;
+        }
+        .vice-title{
+            font-size: 18px;
+            color: #999;
+            padding: 10px 0 50px;
+        }
+        .info{
+            .left{
+                float: left;
+                width: 460px;
+                height: 313px;
+                position: relative;
+                background: #4B9BFC;
+                img{
+                    position: absolute;
+                    bottom: -25px;
+                    right: -20px;
+                }
+            }
+            .right{
+                float: left;
+                width: 740px;
+                text-align: left;
+                box-shadow: rgba(0,0,0,0.15) 1px 1px 10px;
+                li{
+                    height: 65px;
+                    transition: height .5s;
+                    overflow: hidden;
+                    &:not(:last-of-type){
+                        border-bottom: 1px dotted #E6E6E6;
+                    }
+                    h3{
+                        font-size: 16px;
+                        line-height: 65px;
+                        font-weight: 100;
+                        padding: 0 60px;
+                        background: url('../img/i.png') 40px center no-repeat;
+                        overflow:hidden;
+                        white-space:nowrap;
+                        text-overflow:ellipsis;
+                        color: #5F6066;
+                    }
+                    p{
+                        padding: 0px 60px;
+                        line-height: 25px;
+                        color: #999;
+                        font-size: 14px;
+                        white-space: normal;
+                        -webkit-line-clamp: 2;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                    &.active{
+                        height: 140px;
+                        background: #F2F5FA;
+                        h3{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .question-btn{
+            padding-top: 50px;
+            a{
+                display: inline-block;
+                color: #fff;
+                font-size: 16px;
+                background: #FF734D;
+                padding: 8px 50px;
             }
         }
     }

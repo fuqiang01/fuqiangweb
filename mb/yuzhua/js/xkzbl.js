@@ -4,3 +4,8 @@ $('.necessary .left li').hover( function () {
         .add('.' + this.id)    
         .getActive();
 }, function () {})
+
+// 在线问答
+$('.question li').hover(function () {
+    $(this).getActive();
+}, function () {})
