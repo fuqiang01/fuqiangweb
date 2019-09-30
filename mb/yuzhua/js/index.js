@@ -1,9 +1,8 @@
-
-
+var map;
 function init() {
     swiperInit();
-    bindEvent();
     mapInit();
+    bindEvent();
     renderMapAddress();
 }
 init();
@@ -70,7 +69,7 @@ function bindEvent() {
     })
 
     // 工商服务
-    $('.server .left li').hover( function () {
+    $('.server .left li').hover(function () {
         $(this).getActive();
         $('.' + this.id).getActive();
     }, function () {
@@ -78,7 +77,7 @@ function bindEvent() {
     })
 
     // 顾问团队
-    $('.guwen-team .title li').hover( function () {
+    $('.guwen-team .title li').hover(function () {
         $(this).getActive();
         $('.' + this.id).getActive();
     }, function () {
@@ -86,7 +85,7 @@ function bindEvent() {
     })
 
     // 新闻资讯
-    $('.news-wrapper .left .title li').hover( function () {
+    $('.news-wrapper .left .title li').hover(function () {
         $(this).getActive();
         $('.' + this.id).getActive();
     }, function () {
@@ -94,10 +93,13 @@ function bindEvent() {
     })
 
     //服务城市
-    $('.server-city .city-wrapper').on('click', 'li', function() {
-        console.log( $(this).data('coordinates') )
-        var coordinates = $(this).data('coordinates')
-        mapInit(coordinates);
+    $('.server-city .letter-wrapper').on('click', 'li', function () {
+        var index = $(this).index() - 1;
+        renderMapAddress(index);
+    })
+    $('.server-city .city-wrapper').on('click', 'li', function () {
+        var coordinates = $(this).data('coordinates');
+        markPointsToCenter (coordinates);
     })
 }
 
@@ -149,44 +151,69 @@ function swiperInit() {
 }
 
 //mapData渲染
-function renderMapAddress( index){
+function renderMapAddress(index) {
     var data = [];
     var $domWrapper = $('.map-wrapper .info .city-wrapper');
     $domWrapper.empty();
-    if( !index) {
-        for( var i = 0; i < addressMapData.length; i++ ) {
-            data = data.concat(addressMapData[i] );
-        }
-    } else{
+
+    if (index >= 0 && index <= 4) {
         data = addressMapData[index];
+    } else {
+        for (var i = 0; i < addressMapData.length; i++) {
+            data = data.concat(addressMapData[i]);
+        }
     }
-    data.forEach( function(ele, index) {
+
+    data.forEach(function (ele, index) {
         $('<li/>')
-            .text( ele.address)
-            .data({'coordinates' :  ele.coordinates})
-            .appendTo( $domWrapper)
+            .text(ele.address)
+            .data({ 'coordinates': ele.coordinates })
+            .appendTo($domWrapper)
     })
 }
 
 //map初始化
-function mapInit( coordinates ){
-    var coordinates = coordinates || [113.365922, 31.719517];
-        //基本地图加载
-        var map = new AMap.Map("map", {
-            mapStyle: 'amap://styles/whitesmoke',
-            resizeEnable: true,
-            center: coordinates, //地图中心点
-            zoom: 7,//地图显示的缩放级别
-            zoomEnable: false, //地图是否可缩放
-        });
-
-        //标记
-        var marker = new AMap.Marker({
-            position: coordinates //位置
+function mapInit() {
+    //基本地图加载
+    map = new AMap.Map("map", {
+        mapStyle: 'amap://styles/whitesmoke',
+        resizeEnable: true,
+        center: [113.365922, 31.719517], //地图中心点
+        zoom: 7,//地图显示的缩放级别
+        zoomEnable: false, //地图是否可缩放
+    });
+    //添加标记点
+    addressMapData.forEach(function (ele) {
+        ele.forEach(function (ele, i) {
+            var marker = new AMap.Marker({
+                position: ele.coordinates
+            })
+            map.add(marker);
+            marker.on('click', function(e){
+                markPointsToCenter( [e.lnglat.Q, e.lnglat.P] );
+            });
         })
-        map.add(marker);
+    })
+    //打开信息窗体
+    openInfo([113.365922, 31.719517]);
 }
 
+function openInfo(coordinates) {
+    //构建信息窗体中显示的内容
+    var info = [];
+    info.push("<p style='text-align:center;font-size:20px;font-weight:bold;padding:5px 20px;'>金税通</p>")
+    info.push("<p style='font-size:14px;padding:5px 20px;'>电话 : 010-84107000");
+    info.push("<p style='padding:5px 20px;text-align:center;'><a href='#' style='background-color:#cc5656;padding: 5px 15px;display:inline-block;'>联系我们</a></p>");
 
+    var infoWindow = new AMap.InfoWindow({
+        content: info.join("")  //使用默认信息窗体框样式，显示信息内容
+    });
 
+    infoWindow.open(map, coordinates);
+}
 
+//让指定坐标开启窗体并居中
+function markPointsToCenter (coordinates) {
+    map.setZoomAndCenter(7, coordinates); //居中
+    openInfo(coordinates); //开启窗体
+}
