@@ -2,11 +2,13 @@
 $('.team .title li')
     .add('.mien .title li')
     .add('.news-wrapper .left .title li')
-    .hover( function () {
+    .hover(function () {
         $(this).getActive();
         $('.' + this.id).getActive();
     }, function () {
 
     })
 
-  
+$('.team .heming > div').on('click', function () {
+    $(this).getActive();
+})

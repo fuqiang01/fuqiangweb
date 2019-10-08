@@ -13,6 +13,27 @@ new Swiper('.swiper-case', {
         nextEl: '.case-btn-next',
         prevEl: '.case-btn-prev',
     },
+    on: {
+        slideChangeTransitionEnd: function () {
+            var dom = this.slides[this.activeIndex];
+            var date = $(dom).find('h4').text();
+            var text = $(dom).find('p').text();
+            var y = date.substr(0,2);
+            var m = date.substr(2,2);
+            var d = date.substr(4,2);
+            $('.case-show')
+                .find('.p3')
+                .find('span')
+                .text( '20' + y)
+                .end()
+                .end()
+                .find('.p4')
+                .text( m + '-' + d)
+                .end()
+                .find('.p5')
+                .text(text);
+        },
+    },
 })
 
 // 公司注册类型&注册流程
@@ -21,3 +42,23 @@ $('.type .info li')
     .hover(function () {
         $(this).getActive();
     }, function () { })
+
+
+
+
+//下拉栏
+$('.query-window .drop-down > p').on('click', function () { //下拉栏点击展开
+    $(this)
+        .parents('.drop-down')
+        .find('ul')
+        .slideToggle();
+})
+$('.query-window .drop-down li').on('click', function () { //下拉选项点击显示
+    var val = $(this).text();
+    $(this)
+        .parents('.drop-down')
+        .find('p')
+        .find('span')
+        .text(val)
+    $(this).parents('ul').slideUp();
+})

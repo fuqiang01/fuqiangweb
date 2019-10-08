@@ -93,6 +93,10 @@
   padding: 0 15px;
 }
 
+.banner .screening .left .l-info dl dd .i-wrapper a.active {
+  color: #649be8;
+}
+
 .banner .screening .left .l-info dl dd .i-wrapper .drop-down {
   margin-left: 15px;
   height: 28px;
@@ -282,7 +286,7 @@
   background: url("../img/icon31.png") center no-repeat;
 }
 
-.content .sorting .arrangement .art-one.active {
+.content .sorting .arrangement .art-one.active, .content .sorting .arrangement .art-one:hover {
   background-image: url("../img/icon28.png");
 }
 
@@ -353,6 +357,9 @@
   font-weight: bold;
   color: #666;
   padding: 0 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .content .show-list .type-one li .price {
