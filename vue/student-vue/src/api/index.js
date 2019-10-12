@@ -9,7 +9,7 @@ const myAjax = Axios.create( {
         appkey
     }
 });
-const size = 10;
+const size = 5;
 
 export default {
     

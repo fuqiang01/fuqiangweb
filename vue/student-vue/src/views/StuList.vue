@@ -46,34 +46,28 @@ export default {
     },
     methods: {
         ...mapActions(['getStuList']),
-        ...mapMutations(['setModifyingStu', 'setShowFrom', 'setStuList']),
+        ...mapMutations(['setModifyingStu', 'setShowFrom', 'setStuList', 'setSearchText','setNowPage']),
         onModify(stuData) {
             this.setModifyingStu(stuData);
             this.setShowFrom(true);
         },
         onDel( sNo, index) {
+            if ( this.stuList.length === 1 && this.nowPage !== 1) {
+                this.setNowPage( this.nowPage - 1)
+            }
             api.delBySno( sNo)
                 .then( res => {
                     alert(res.data.msg);
-                    this.stuList.splice( index, 1);
                 })
                 .catch( err => {
                     alert(err.data.msg);
                 })
+            this.getStuList();
         },
         onSearch() {
-            if ( !this.searchText ) {
-                this.getStuList();
-                return;
-            }
-            api.searchStudent( this.searchText )
-                .then( res => {
-                    console.log(res)
-                    this.setStuList(res.data.data.searchList);
-                })
-                .catch( err => {
-                    console.log(err)
-                })
+            this.setSearchText(this.searchText);
+            this.setNowPage(1);
+            this.getStuList();
         }
     },
     created() {
@@ -85,8 +79,8 @@ export default {
         }
     },
     computed: {
-        ...mapState(['stuList'])
-    }
+        ...mapState(['stuList','nowPage'])
+    },
 }
 </script>
 
@@ -114,6 +108,7 @@ export default {
                 vertical-align: middle;
                 text-align: center;
                 padding: 0 25px;
+                cursor: pointer;
             }
         }
         table{
@@ -137,9 +132,11 @@ export default {
                         color: #fff;
                         &.modify{
                             background: green;
+                            cursor: pointer;
                         }
                         &.del{
                             background: red;
+                            cursor: pointer;
                         }
                     }
                 }
