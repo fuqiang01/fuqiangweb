@@ -1,0 +1,116 @@
+.topbar{
+    background: #F8F8F8;
+    color: #999;
+    .left{
+        line-height: 40px;
+        .table-city{
+            background: #F4F4F4;
+            border: 1px solid #e5e5e5;
+            border-radius: 2px;
+            padding: 0 2px;
+            color: #666;
+        }
+        .city-list{
+            a{
+                padding: 0 5px;
+                color: #999;
+            }
+        }
+        .login{
+            color: #FE8C00;
+            padding: 0 5px;
+        }
+        .registered{
+            padding: 0 5px;
+        }
+    }
+    .right{
+        text-align: right;
+        ul{
+            li{
+                display: inline-block;
+                line-height: 40px;
+                padding: 0 15px;
+                position: relative;
+                border-left: 1px solid transparent;
+                border-right: 1px solid transparent;
+                a{
+                    color: #999;
+                    &:hover{
+                        color: #FE8C00;
+                    }
+                }
+                .hover-show{
+                    display: none;
+                    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.1);
+                    position: absolute;
+                    text-align: center;
+                    min-width: 100%;
+                    right: -1px;
+                    top: 95%;
+                    line-height: 30px;
+                    border: 1px solid #e5e5e5;
+                    z-index: 999;
+                    &::before{
+                        content:'';
+                        width: 78px;
+                        height: 3px;
+                        display: block;
+                        background: #fff;
+                        position: absolute;
+                        top: -1px;
+                        right: 0;
+                    }
+                    >a{
+                        display: inline-block;
+                        white-space: nowrap;
+                        padding: 0 5px;
+                    }
+                }
+                &.phone-app:hover{
+                    border-color: transparent;
+                    box-shadow: none;
+                    background-color: transparent;
+                }
+                &.web-nav{
+                    .hover-show{
+                        width: 1200px;
+                        right: 9px;
+                        dl{
+                            padding: 30px 0;
+                            dt{
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: #222;
+                                padding-bottom: 20px;
+                            }
+                            dd{
+                                float: left;
+                                width: 86px;
+                                &:hover{
+                                    color: #FE8C00;
+                                    cursor: pointer;
+                                }
+                            }
+                            &.app{
+                                dd{
+                                    width: 100px;
+                                    display: inline-block;
+                                    float: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    border-color: #e5e5e5;
+                    box-shadow: 0 -3px 5px 0 rgba(0,0,0,0.1);
+                    background: #fff;
+                    .hover-show{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

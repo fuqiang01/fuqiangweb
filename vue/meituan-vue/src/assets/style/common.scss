@@ -20,3 +20,9 @@ a,a:hover{
 ul{
     list-style: none;
 }
+
+.clearfloat::after{
+    content: '';
+    display: block;
+    clear: both;
+}
