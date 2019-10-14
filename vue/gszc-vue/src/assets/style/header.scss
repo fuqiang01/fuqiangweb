@@ -1,0 +1,39 @@
+header{
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+    .logo{
+        float: left;
+        img{
+            height: 70px;
+        }
+    }
+    ul{
+        float: right;
+        margin-bottom: 0;
+        li{
+            float: left;
+            line-height: 70px;
+            margin-right: 45px;
+            &.active,&:hover{
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 3px;
+                    background-color: #2f9dfa;
+                    margin: 0 auto;
+                }
+                a{
+                    color: #2f9dfa;
+                }
+            }
+            a{
+                font-size: 16px;
+            }
+            
+        }
+    }
+}

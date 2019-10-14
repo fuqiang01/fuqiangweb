@@ -1,0 +1,24 @@
+.contact{
+    text-align: center;
+    height: 180px;
+    line-height: 180px;
+    background: url('https://demo.cwgszc.com/cwgszc/img/footer_banner_bg.jpg') center no-repeat;
+    color: #fff;
+    font-size: 18px;
+    span{
+        vertical-align: middle;
+    }
+    .contact-kf{
+        font-size: 14px;
+        background: #2f9dfa;
+        padding: 15px 30px;
+        border-radius: 5px;
+        img{
+            vertical-align: middle;
+        }
+        span{
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+    }
+}
