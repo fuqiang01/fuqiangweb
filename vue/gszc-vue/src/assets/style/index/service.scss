@@ -11,12 +11,12 @@
                 &:not(:last-of-type){
                     &::after{
                         content: '';
-                        width: 100%;
+                        width: 1px;
                         height: 50%;
                         position: absolute;
-                        border-right: 1px solid #ddd;
                         top: 25%;
-                        left: 0;
+                        right: 0;
+                        background: #ccc;
                     }
                 }
             }

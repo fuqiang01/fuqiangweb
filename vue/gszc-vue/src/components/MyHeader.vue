@@ -7,34 +7,53 @@
         </a>
       </div>
       <ul>
-        <li class="nav-item active">
-          <a href="/">首页</a>
-        </li>
-        <li class="nav-item">
-          <a href="/dljz.html">工商代理</a>
-        </li>
-        <li class="nav-item">
-          <a href="/zcgs.html">会计服务</a>
-        </li>
-        <li class="nav-item">
-          <a href="/gssj.html">知识产权</a>
-        </li>
-        <li class="nav-item">
-          <a href="/ssch.html">社保服务</a>
-        </li>
-        <li class="nav-item">
-          <a href="/cszx.html">顾问团队</a>
-        </li>
-        <li class="nav-item">
-          <a href="/lxwm.html">关于我们</a>
-        </li>
+        <router-link v-for="(item,index) in navData"
+                      :key="index"
+                      :to="{name: item.url}"
+                      tag="li" 
+                      class="nav-item">{{ item.title }}</router-link>
       </ul>
     </div>
   </header>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      navData: [
+        {
+          title: '首页',
+          url: 'index'
+        },
+        {
+          title: '工商代理',
+          url: 'gsdl'
+        },
+        {
+          title: '会计服务',
+          url: 'kjfw'
+        },
+        {
+          title: '知识产权',
+          url: 'zscq'
+        },
+        {
+          title: '顾问团队',
+          url: 'gwtd'
+        },
+        {
+          title: '财税资讯',
+          url: 'cszx'
+        },
+        {
+          title: '关于我们',
+          url: 'lxwm'
+        }
+      ]
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

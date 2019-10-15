@@ -1,0 +1,51 @@
+.footer-list{
+    padding: 50px 0 10px;
+    .fList-left{
+        float: left;
+        width: 600px;
+        dl{
+            float: left;
+            margin: 0 15px;
+            padding-right: 80px;
+            dt{
+                font-size: 16px;
+                font-weight: normal;
+                padding: 15px 0;
+            }
+            dd{
+                padding: 5px 0;
+                font-size: 12px;
+            }
+        }
+    }
+    .fList-center{
+        float: left;
+        width: 400px;
+        padding-left: 80px;
+        border-left: 1px solid #ededed;
+        border-right: 1px solid #ededed;
+        box-sizing: border-box;
+        h3{
+            font-size: 22px;
+        }
+        h2{
+            font-size: 30px;
+            color: #2f9dfa;
+        }
+        p{
+            color: #999;
+        }
+    }
+    .fList-right{
+        float: left;
+        width: 320px;
+        text-align: center;
+        img{
+            width: 130px;
+            height: 130px;
+        }
+        p{
+            color: #999;
+        }
+    }
+}

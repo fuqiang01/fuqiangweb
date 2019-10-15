@@ -4,7 +4,7 @@
       <ul>
         <li>
           <p>
-            <span class="yonghu">386902</span>万
+            <span class="yonghu">{{ yonghu }}</span>万
           </p>
           <div>
             <img src="@/assets/img/banner_bot_1.png" alt />
@@ -14,7 +14,7 @@
         <li class="line"></li>
         <li>
           <p>
-            <span class="qiye">2889</span>家
+            <span class="qiye">{{ qiye }}</span>家
           </p>
           <div>
             <img src="@/assets/img/banner_bot_1.png" alt />
@@ -24,7 +24,7 @@
         <li class="line"></li>
         <li>
           <p>
-            <span class="zhuanli">374000</span>万
+            <span class="zhuanli">{{ zhuanli }}</span>万
           </p>
           <div>
             <img src="@/assets/img/banner_bot_1.png" alt />
@@ -37,11 +37,44 @@
           <img src="@/assets/img/banner_bot_4.png" alt />
           <span>服务热线</span>
         </div>
-        <p>13132131313131</p>
+        <p>{{ phoneNum }}</p>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import { mapState } from 'vuex'
+export default {
+  data() {
+    return {
+      yonghu: 390000,
+      qiye: 0,
+      zhuanli: 370000
+    }
+  },
+  computed: {
+    ...mapState(['phoneNum'])
+  },
+  methods: {
+    animateNum( data, maxNum) {
+      const temp = setInterval(_ => {
+        if ( this[data] <= maxNum ) {
+          this[data] += 7;
+        } else {
+          clearInterval( temp);
+          this[data] = maxNum;
+        }
+      },1)
+    }
+  },
+  created() {
+    this.animateNum( 'yonghu', 396902);
+    this.animateNum( 'qiye', 2889);
+    this.animateNum( 'zhuanli', 374000)
+  }
+}
+</script>
 
 
 <style lang="scss" scoped>

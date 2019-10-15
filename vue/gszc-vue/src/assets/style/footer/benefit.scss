@@ -1,0 +1,26 @@
+.footer-benefit{
+    padding: 20px 50px;
+    border-bottom: 1px solid #ededed;
+    box-sizing: border-box;
+    li{
+        float: left;
+        width: 200px;
+        >div{
+            span{
+                font-size: 16px;
+                padding-left: 15px;
+            }
+            img{
+                vertical-align: middle;
+            }
+        }
+        
+        p{
+            padding-left: 45px;
+            color: #999;
+        }
+        &:not(:last-of-type){
+            margin-right: 140px;
+        }
+    }
+}

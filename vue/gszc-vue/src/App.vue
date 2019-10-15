@@ -8,7 +8,7 @@
 
 <script>
 import MyHeader from "@/components/MyHeader";
-import MyFooter from "@/components/MyFooter";
+import MyFooter from "@/components/footer/MyFooter";
 
 export default {
   components: {

@@ -1,0 +1,26 @@
+.service-content{
+    width: 1045px;
+    float: left;
+    background: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    .title{
+        font-size: 18px;
+        border-bottom: 1px solid #ededed;
+        padding: 10px 0;
+    }
+    .info{
+        p{
+            color: #555;
+            line-height: 25px;
+        }
+        img{
+         max-width: 100%; 
+         display: block;
+         margin: 0 auto;
+        }
+        table{
+            max-width: 985px;
+        }
+    }
+}
