@@ -9,13 +9,11 @@
           <div class="title">
             <a href="#">更多 &gt;</a>
             <h3>
-              媒体报道
+              热门报道
               <span class="glyphicon glyphicon-triangle-right"></span>
             </h3>
           </div>
-          <a href="#">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
-          <a href="#">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
-          <a href="#">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
+          <router-link v-for="item in hotNews" :key="item.id" :to="{name: 'news',params:{id:item.id}}">{{ item.title }}</router-link>
         </div>
       </div>
       <div class="right">
@@ -26,18 +24,53 @@
           <div class="title">
             <a href="#">更多 &gt;</a>
             <h3>
-              媒体报道
+              最新报道
               <span class="glyphicon glyphicon-triangle-right"></span>
             </h3>
           </div>
-          <a href="#">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
-          <a href="#">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
-          <a href="#">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
+          <router-link v-for="item in newNews" :key="item.id" :to="{name: 'news',params:{id:item.id}}">{{ item.title }}</router-link>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      hotNews: [
+        {
+          id: "123",
+          title: "注册公司需要什么步骤?"
+        },
+        {
+          id: "124",
+          title: "注册公司需要什么步骤?"
+        },
+        {
+          id: "125",
+          title: "注册公司需要什么步骤?"
+        }
+      ],
+      newNews: [
+        {
+          id: "223",
+          title: "代理记账的流程?"
+        },
+        {
+          id: "224",
+          title: "代理记账的流程?"
+        },
+        {
+          id: "225",
+          title: "代理记账的流程?"
+        }
+      ],
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
     @import '../../assets/style/index/news'

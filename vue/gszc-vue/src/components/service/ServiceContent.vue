@@ -1,25 +1,19 @@
 <template>
   <div class="service-content">
-    <p class="title">注册公司</p>
-    <div class="info">
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-      <p>adfakjs hakjsdhf akjsdfha skdfh akshk</p>
-    </div>
+    <p class="title">{{ serviceConItem.title }}</p>
+    <div class="info" v-html="serviceConItem.innerHtml"></div>
   </div>
 </template>
 
+<script>
+import { mapState } from 'vuex'
+export default {
+  computed: {
+    ...mapState(['serviceConItem'])
+  }
+};
+</script>
+
 <style lang="scss" scoped>
-    @import '@/assets/style/service/servicecontent';
+@import "@/assets/style/service/servicecontent";
 </style>

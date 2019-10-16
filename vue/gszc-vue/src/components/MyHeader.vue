@@ -9,7 +9,7 @@
       <ul>
         <router-link v-for="(item,index) in navData"
                       :key="index"
-                      :to="{name: item.url}"
+                      :to="{name: item.url,params: item.id ? {id : item.id} : ''}"
                       tag="li" 
                       class="nav-item">{{ item.title }}</router-link>
       </ul>
@@ -28,11 +28,13 @@ export default {
         },
         {
           title: '工商代理',
-          url: 'gsdl'
+          url: 'gsdl',
+          id: 11
         },
         {
           title: '会计服务',
-          url: 'kjfw'
+          url: 'kjfw',
+          id: 21
         },
         {
           title: '知识产权',

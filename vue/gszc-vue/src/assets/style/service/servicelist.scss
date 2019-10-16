@@ -7,17 +7,14 @@
     margin-right: 15px;
     li{
         margin: 2px 0;
-        a{
-            color: #333;
-            width: 100%;
-            display: inline-block;
-            padding: 18px 0;
-        }
+        color: #333;
+        width: 100%;
+        padding: 18px 0;
+        cursor: pointer;
+        user-select: none;
         &.active,&:hover{
-            a{
-                background: rgb(44, 157, 255);
-                color: #fff;
-            }
+            background: rgb(44, 157, 255);
+            color: #fff;
         }
     }
 }

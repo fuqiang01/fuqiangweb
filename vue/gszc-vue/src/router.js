@@ -15,12 +15,12 @@ export default new Router({
       component: Index
     },
     {
-      path: '/gsdl',
+      path: '/gsdl/:id',
       name: 'gsdl',
-      component: () => import('./views/Gsdl.vue')
+      component: () => import('./views/Gsdl.vue'),
     },
     {
-      path: '/kjfw',
+      path: '/kjfw/:id',
       name: 'kjfw',
       component: () => import('./views/Kjfw.vue')
     },
@@ -43,6 +43,11 @@ export default new Router({
       path: '/lxwm',
       name: 'lxwm',
       component: () => import('./views/Lxwm.vue')
+    },
+    {
+      path: '/news/:id',
+      name: 'news',
+      component: () => import('./views/News.vue')
     }
   ]
 })
