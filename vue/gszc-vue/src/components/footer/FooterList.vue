@@ -10,11 +10,11 @@
     </div>
     <div class="fList-center">
       <h3>客服热线</h3>
-      <h2>{{ phoneNum }}</h2>
+      <h2>{{ model.phone }}</h2>
       <p>周一至周五 08:30-17:30</p>
     </div>
     <div class="fList-right">
-      <img :src="wxCodeSrc" alt />
+      <img :src="model.wxCode" alt />
       <p>湖北楚威官方微信</p>
     </div>
   </div>
@@ -77,7 +77,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['phoneNum','wxCodeSrc'])
+    ...mapState(['model'])
   }
 }
 </script>

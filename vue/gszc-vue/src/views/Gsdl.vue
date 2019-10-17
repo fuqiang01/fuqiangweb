@@ -1,6 +1,6 @@
 <template>
   <div class="gsdl">
-    <Banner />
+    <Banner :title="title" />
     <Content :list="list" />
   </div>
 </template>
@@ -12,6 +12,7 @@ import { mapState, mapMutations } from "vuex";
 export default {
   data() {
     return {
+      title: "工商代理",
       list: [
         {
           id: "11",
@@ -36,20 +37,14 @@ export default {
     Content
   },
   methods: {
-    ...mapMutations(["setServiceConItem"]),
-    getData(id) {
-      var arr = this.serviceCon.filter(function(ele) {
-        return ele.id == id;
-      });
-      this.setServiceConItem(arr[0]);
-    }
+    ...mapMutations(["setServiceConItem"])
   },
   mounted() {
     const id = this.$route.params.id;
-    this.getData(id);
+    this.setServiceConItem(id);
   },
   beforeRouteUpdate(to, from, next) {
-    this.getData(to.params.id);
+    this.setServiceConItem(to.params.id);
     next();
   }
 };

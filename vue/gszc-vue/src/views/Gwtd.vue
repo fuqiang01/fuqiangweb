@@ -1,6 +1,6 @@
 <template>
     <div class="gwtd">
-        <Banner />
+        <Banner :title="title" />
         <Content />
     </div>
 </template>
@@ -9,6 +9,11 @@
 import Banner from '@/components/service/Banner'
 import Content from '@/components/team/Content'
 export default {
+    data(){
+        return{
+            title: '顾问团队'
+        }
+    },
     components: {
         Banner,
         Content

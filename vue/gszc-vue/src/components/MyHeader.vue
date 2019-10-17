@@ -38,7 +38,8 @@ export default {
         },
         {
           title: '知识产权',
-          url: 'zscq'
+          url: 'zscq',
+          id: 31
         },
         {
           title: '顾问团队',
@@ -50,7 +51,8 @@ export default {
         },
         {
           title: '关于我们',
-          url: 'lxwm'
+          url: 'lxwm',
+          id: 1
         }
       ]
     }

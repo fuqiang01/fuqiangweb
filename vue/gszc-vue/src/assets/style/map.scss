@@ -1,0 +1,19 @@
+.amap-page-container {
+    height: 500px;
+}
+
+.map-info-wrapper{
+    background: #fff;
+    padding: 30px;
+    color: #555;
+    p{
+        line-height: 30px;
+        white-space: nowrap;
+        font-size: 14px;
+        &.p1{
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+    
+}

@@ -1,0 +1,102 @@
+.box-enter,
+.box-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.box-enter-active,
+.box-leave-active{
+  transition: all .5s;  
+}
+
+
+.side-box{
+    position: fixed;
+    right: 5px;
+    bottom: 25%;
+    z-index: 900;
+    li{
+        position: relative;
+        margin-bottom: 2px;
+        .img{
+            background: rgba(0,0,0,.3);
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            img{
+                width: 30px;
+                height: 30px;
+                display: block;
+            }
+        }
+        .hover-show{
+            position: absolute;
+            top: -10px;
+            border: 10px solid transparent;
+            // display: none;
+            .box-wrapper{
+                background: #fff;
+                box-shadow: 0 0 5px rgba(0,0,0,.3);
+                padding: 20px;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            &.phone{
+                width: 200px;
+                left: -220px;
+                .box-wrapper{
+                    .p1{
+                        padding: 5px 0;
+                    }
+                    .p2{
+                        font-size: 18px;
+                        color: #2f9dfa;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &.kf{
+                width: 290px;
+                left: -310px;
+                .title{
+                    font-size: 15px;
+                    padding-bottom: 10px;
+                }
+                input{
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 8px 20px;
+                    margin: 5px 0;
+                }
+                .kf-btn{
+                    background: #2f9dfa;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 35px;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                }
+            }
+            &.wx{
+                width: 140px;
+                left: -160px;
+                img{
+                    width: 100px;
+                }
+                p{
+                    font-size: 13px;
+                    color: #777;
+                    text-align: center;
+                }
+            }
+        }
+        
+        &:hover{
+            .img{
+                background: rgba(0,107,200,.3);
+            }
+            .hover-show{
+                display: block;
+            }
+        }
+    }
+}

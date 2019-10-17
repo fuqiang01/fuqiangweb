@@ -25,7 +25,7 @@ export default new Router({
       component: () => import('./views/Kjfw.vue')
     },
     {
-      path: '/zscq',
+      path: '/zscq/:id',
       name: 'zscq',
       component: () => import('./views/Zscq.vue')
     },
@@ -40,7 +40,7 @@ export default new Router({
       component: () => import('./views/Cszx.vue')
     },
     {
-      path: '/lxwm',
+      path: '/lxwm/:id',
       name: 'lxwm',
       component: () => import('./views/Lxwm.vue')
     },

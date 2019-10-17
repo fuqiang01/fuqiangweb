@@ -37,7 +37,7 @@
           <img src="@/assets/img/banner_bot_4.png" alt />
           <span>服务热线</span>
         </div>
-        <p>{{ phoneNum }}</p>
+        <p>{{ model.phone }}</p>
       </div>
     </div>
   </div>
@@ -54,7 +54,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['phoneNum'])
+    ...mapState(['model'])
   },
   methods: {
     animateNum( data, maxNum) {

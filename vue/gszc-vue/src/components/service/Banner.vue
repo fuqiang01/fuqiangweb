@@ -1,8 +1,14 @@
 <template>
     <div class="banner">
-        <h3 class="container">工商代理</h3>
+        <h3 class="container">{{ title }}</h3>
     </div>
 </template>
+
+<script>
+export default {
+    props: ['title']
+}
+</script>
 
 <style lang="scss" scoped>
     @import '@/assets/style/service/banner';

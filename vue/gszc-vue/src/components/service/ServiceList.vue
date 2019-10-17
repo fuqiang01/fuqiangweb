@@ -1,6 +1,6 @@
 <template>
   <ul class="service-list">
-    <router-link tag="li" v-for="item in list" :key="item.id" :to="{name: 'gsdl',params:{id:item.id}}">{{ item.title }}</router-link>
+    <router-link tag="li" v-for="item in list" :key="item.id" :to="{name: route,params:{id:item.id}}">{{ item.title }}</router-link>
   </ul>
 </template>
 
@@ -8,10 +8,13 @@
 export default {
   data(){
     return{
-      
+      route: ''
     }
   },
-  props: ['list']
+  props: ['list'],
+  created() {
+    this.route = this.$route.name
+  }
 }
 </script>
 

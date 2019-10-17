@@ -1,6 +1,6 @@
 <template>
     <div class="gwtd">
-        <Banner />
+        <Banner :title="title"/>
         <Content />
     </div>
 </template>
@@ -9,6 +9,11 @@
 import Banner from '@/components/service/Banner'
 import Content from '@/components/news/Content'
 export default {
+    data(){
+        return{
+            title: '财税资讯'
+        }
+    },
     components: {
         Banner,
         Content

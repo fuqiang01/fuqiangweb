@@ -1,13 +1,14 @@
 <template>
   <div class="kjfw">
-    <Banner />
-    <Content />
+    <Banner :title="title" />
+    <Content :list="list"/>
   </div>
 </template>
 
 <script>
 import Banner from "@/components/service/Banner";
 import Content from "@/components/service/Content";
+import { mapState, mapMutations } from "vuex";
 export default {
   components: {
     Banner,
@@ -15,6 +16,7 @@ export default {
   },
   data() {
     return {
+      title: '会计服务',
       list: [
         {
           id: "21",
@@ -36,19 +38,13 @@ export default {
   },
   methods: {
     ...mapMutations(["setServiceConItem"]),
-    getData(id) {
-      var arr = this.serviceCon.filter(function(ele) {
-        return ele.id == id;
-      });
-      this.setServiceConItem(arr[0]);
-    }
   },
   mounted() {
     const id = this.$route.params.id;
-    this.getData(id);
+    this.setServiceConItem(id);
   },
   beforeRouteUpdate(to, from, next) {
-    this.getData(to.params.id);
+    this.setServiceConItem(to.params.id);
     next();
   }
 };
