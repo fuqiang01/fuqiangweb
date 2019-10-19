@@ -1,0 +1,95 @@
+.content{
+    padding: 1.2rem 0 1.3rem;
+    font-size: .4rem;
+    background: #f5f5f5;
+    .wrapper{
+        background-color: #fff;
+        padding: .5rem .3rem;
+        color: #555;
+        margin-bottom: .5rem;
+        p{
+            line-height: .55rem;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        table{
+            width: 100%;
+        }
+    }
+    .after-sales{
+        background-color: #fff;
+        padding: .5rem .3rem;
+        >.title{
+            text-align: center;
+            font-size: .5rem;
+            font-weight: bold;
+            margin-bottom: .5rem;
+        }
+        .info{
+            li{
+                border-top: 1px solid #f1f1f1;
+                padding: .3rem 0;
+                .p1{
+                    font-size: .4rem;
+                    font-weight: bold;
+                    line-height: .7rem;
+                    margin-bottom: .2rem;
+                }
+                .p2{
+                    color: #999;
+                    font-size: .35rem;
+                    line-height: .55rem;
+                }
+                dl{
+                    border-left: 1px dashed #e0e0e0;
+                    margin-left: .3rem;
+                    padding-left: .5rem;
+                    dd{
+                        color: #999;
+                        font-size: .35rem;
+                        line-height: .55rem;
+                        margin-bottom: .4rem;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: .12rem;
+                            height: .12rem;
+                            padding: 0;
+                            border-radius: 50%;
+                            border: .05rem solid #FBBC7B;
+                            left: -.61rem;
+                            top: .15rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.bottom-box{
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    display: flex;
+    width: 100%;
+    a{
+        color: #777;
+        font-size: .4rem;
+        display: inline-block;
+        line-height: 1.2rem;
+        width: 100%;
+        text-align: center;
+        img{
+            vertical-align: middle;
+            margin-right: .1rem;
+        }
+        &.buy{
+            background: linear-gradient(90deg, #dd402e 0%, #ea614a 100%);
+            color: #fff;
+        }
+    }
+}

@@ -1,29 +1,3 @@
-.topbar {
-  position: fixed;
-  top: 0;
-  z-index: 30;
-  background: #fff;
-  width: 100%;
-  height: 1.2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 .3rem;
-  box-sizing: border-box;
-}
-
-.topbar .right img {
-  width: .8rem;
-}
-
-.topbar .logo {
-  margin-top: .2rem;
-}
-
-.topbar .logo img {
-  height: 1rem;
-}
-
 .swiper-banner {
   overflow: hidden;
 }

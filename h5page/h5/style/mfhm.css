@@ -1,7 +1,7 @@
 .content {
   background: #2345c1 url("../img/bg_banner.png") center 1.5rem no-repeat;
   background-size: 100% auto;
-  padding: 7rem .5rem;
+  padding: 6.5rem .5rem 2.5rem;
 }
 
 .content .form-wrapper > div {
@@ -87,6 +87,67 @@
   font-size: .5rem;
 }
 
+.content .attention {
+  padding-top: 1rem;
+}
+
+.content .attention .title {
+  font-size: .5rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: .5rem;
+}
+
+.content .attention .jump {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .attention .jump a {
+  color: #fff;
+  font-size: .4rem;
+  display: inline-block;
+  width: 30%;
+  line-height: 1.2rem;
+  text-align: center;
+  border-radius: .1rem;
+}
+
+.content .attention .jump a:nth-of-type(1) {
+  background-color: #7358ff;
+}
+
+.content .attention .jump a:nth-of-type(2) {
+  background-color: #2cd7fb;
+}
+
+.content .attention .jump a:nth-of-type(3) {
+  background-color: #008dff;
+}
+
+.content .attention .vice-title {
+  font-size: .4rem;
+  color: #fff;
+  border-left: .08rem solid #2ba0ff;
+  margin: .8rem 0 .3rem;
+  padding-left: .3rem;
+}
+
+.content .attention .text-box {
+  background-color: #fff;
+  border-radius: .2rem;
+  padding: .3rem;
+  font-size: .35rem;
+  height: 6rem;
+  overflow-y: scroll;
+  color: #666;
+}
+
+.content .attention .text-box p {
+  line-height: .55rem;
+  padding: .15rem 0;
+}
+
 .fixed-box {
   position: fixed;
   top: 0;
@@ -94,14 +155,16 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 30;
   font-size: .4rem;
+  z-index: -1;
+  transition: all .5s;
 }
 
 .fixed-box .box-wrapper {
   position: absolute;
-  bottom: 0;
+  bottom: -7.5rem;
   width: 100%;
+  transition: bottom .5s;
 }
 
 .fixed-box .box-wrapper .btn-wrapper {
@@ -117,7 +180,8 @@
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: .1rem;
-  padding: .1rem .3rem;
+  padding: 0 .3rem;
+  line-height: .7rem;
 }
 
 .fixed-box .box-wrapper .btn-wrapper span.determine {
@@ -162,4 +226,12 @@
 .fixed-box .box-wrapper .address-box .swiper-sheng .swiper-slide.swiper-slide-active,
 .fixed-box .box-wrapper .address-box .swiper-shi .swiper-slide.swiper-slide-active {
   color: #007aff;
+}
+
+.fixed-box.active {
+  z-index: 30;
+}
+
+.fixed-box.active .box-wrapper {
+  bottom: 0;
 }
