@@ -1,0 +1,271 @@
+// banner
+.banner{
+    background: url('../img/banner.jpg') center no-repeat;
+    height: 500px;
+    box-sizing: border-box;
+    padding: 350px 0 0 380px;
+    img{
+        vertical-align: middle;
+    }
+    a{
+        color: #D1CCC8;
+        line-height: 65px;
+        display: inline-block;
+        font-size: 22px;
+        border-bottom: 1px solid #928481;
+        width: 250px;
+        margin-left: 15px;
+    }
+}
+// content
+.content{
+    .title{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    // 专享服务
+    .exclusive{
+        position: relative;
+        padding: 80px 0;
+        .canvas-wrapper{
+            position: absolute;
+            z-index: -1;
+            top: 0;
+        }
+        .container{
+            .info{
+                background: #fff;
+                dt{
+                    float: left;
+                    a{
+                        display: block;
+                        width: 270px;
+                        height: 180px;
+                        box-sizing: border-box;
+                        text-align: center;
+                        border: 1px solid #e0e0e0;
+                        padding-top: 40px;
+                        h3{
+                            font-size: 20px;
+                        }
+                    }
+                }
+                dd{
+                    float: left;
+                    a{
+                        display: block;
+                        padding: 30px;
+                        width: 310px;
+                        height: 180px;
+                        box-sizing: border-box;
+                        border: 1px solid #e0e0e0;
+                        .top{
+                            border-bottom: 1px solid #f0f0f0;
+                            padding: 10px 0 20px;
+                            img{
+                                float: left;
+                            }
+                            .text{
+                                padding-left: 55px;
+                                .p1{
+                                    font-size: 18px;
+                                }
+                                .p2{
+                                    color: #999;
+                                }
+                            }
+                        }
+                        .price{
+                            color: #777;
+                            padding-top: 10px;
+                            font-size: 13px;
+                            .s1{
+                                color: #2E3784;
+                            }
+                            .s2{
+                                font-size: 28px;
+                                color: #2E3784;
+                            }
+                        }
+                    }
+                }
+                .border-bottom{
+                    a{
+                        border-bottom-color: transparent;
+                    }
+                }
+                .border-left{
+                    a{
+                        border-left-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    // 优质代理人
+    .team{
+        background: url('../img/agentbg.jpg');
+        padding:50px 0;
+        .info{
+            text-align: center;
+            li{
+                display: inline-block;
+                background: #fff;
+                text-align: left;
+                margin: 0 10px;
+                >img{
+                    width: 210px;
+                }
+                .text{
+                    padding: 10px 20px 20px;
+                    .p1{
+                        border-top: 1px solid #e0e0e0;
+                        font-size: 18px;
+                        color: #555;
+                        padding: 5px 0;
+                    }
+                    .p2{
+                        line-height: 25px;
+                        color: #777;
+                    }
+                    .p3{
+                        text-align: center;
+                        line-height: 30px;
+                        border: 1px solid #2E3784;
+                        color: #2E3784;
+                        border-radius: 5px;
+                        margin-top: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    // 新闻
+    .news{
+        position: relative;
+        padding: 80px 0;
+        .canvas-wrapper{
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        .container{
+            .info{
+                dl{
+                    width: 380px;
+                    float: left;
+                    margin: 0 10px;
+                    dt{
+                        background: url('../img/news_bg.png') center no-repeat;
+                        background-size: 100% 100%;
+                        margin-bottom: 15px;
+                        >a{
+                            float: right;
+                            font-size: 14px;
+                            color: #666;
+                            margin-right: 20px;
+                            display: inline-block;
+                            line-height: 30px;
+                        }
+                        p{
+                            line-height: 30px;
+                            color: #fff;
+                            font-size: 16px;
+                            padding-left: 10px;
+                        }
+                    }
+                    dd{
+                        background: #fff;
+                        a{
+                            display: block;
+                            padding: 15px;
+                            border: 1px solid #e0e0e0;
+                            .p1{
+                                font-size: 16px;
+                                color: #333;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+                            .p2{
+                                font-size: 13px;
+                                color: #999;
+                                line-height: 23px;
+                                padding-top: 10px;
+                                height: 46px;
+                                white-space: normal;
+                                -webkit-line-clamp: 2;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                            }
+                        }
+                        &:nth-of-type(1),
+                        &:nth-of-type(2){
+                            a{
+                                border-bottom-color: transparent ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 服务
+    .service{
+        background: url('../img/service_bg.jpg');
+        padding: 80px 0;
+        color: #fff;
+        .top{
+            text-align: center;
+            margin-bottom: 100px;
+            >div{
+                display: inline-block;
+                margin: 0 100px;
+                h3{
+                    font-size: 18px;
+                    border-bottom: 1px solid #f8f8f8;
+                    span{
+                        font-size: 53px;
+                    }
+                }
+                p{
+                    font-size: 14px;
+                    padding-top: 10px;
+                }
+            }
+        }
+        ul{
+            li{
+                float: left;
+                width: 280px;
+                margin: 0 10px;
+                background: rgba(255,255,255,.3);
+                box-sizing: border-box;
+                padding: 30px 50px;
+                text-align: center;
+                h3{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    // 优势
+    .adv{
+        padding: 20px 0;
+        li{
+            float: left;
+            text-align: center;
+            width: 300px;
+            img{
+                vertical-align: middle;
+            }
+            span{
+                font-size: 18px;
+                color: #777;
+            }
+        }
+    }
+}
