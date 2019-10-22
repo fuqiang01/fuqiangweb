@@ -5,6 +5,7 @@
 
 header {
   position: fixed;
+  top: 0;
   background: #fff;
   box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -167,4 +168,77 @@ footer .link-about a {
 .right-box ul li.wx .hover-show p {
   line-height: 25px;
   font-size: 14px;
+}
+
+.popupWindow-wrapper {
+  position: fixed;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.popupWindow-wrapper .poruoWindow {
+  background: #fff;
+  width: 500px;
+  margin: 200px auto;
+  padding: 50px 90px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+  background-image: url("../img/popup_window_bg.jpg");
+  background-size: 100% 100%;
+}
+
+.popupWindow-wrapper .poruoWindow p {
+  padding: 10px 0;
+  font-size: 20px;
+  color: #444;
+}
+
+.popupWindow-wrapper .poruoWindow p span {
+  color: #ff672b;
+  font-weight: bold;
+}
+
+.popupWindow-wrapper .poruoWindow input {
+  padding: 10px 20px;
+  margin: 10px 0;
+  outline: none;
+  width: 213px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+}
+
+.popupWindow-wrapper .poruoWindow input::placeholder {
+  color: #999;
+}
+
+.popupWindow-wrapper .poruoWindow .popW-btn {
+  background: #297bf6;
+  color: #fff;
+  padding: 10px 0;
+  width: 213px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.popupWindow-wrapper .poruoWindow .popW-shut-btn {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  color: #999;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popupWindow-wrapper .poruoWindow .popW-shut-btn:hover {
+  color: #333;
 }

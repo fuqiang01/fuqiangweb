@@ -1,0 +1,177 @@
+.banner{
+    img{
+        width: 100%;
+        min-width: 1200px;
+    }
+}
+.content{
+    padding: 80px 0;
+    // 产品展示
+    .product-show{
+        margin-bottom: 80px;
+        .img{
+            width: 500px;
+            height: 370px;
+            float: left;  
+            margin-left: 100px; 
+            position: relative;
+            .title{
+                width: 100%;
+                position: absolute;
+                text-align: center;
+                top: 150px;
+                font-size: 30px;
+                font-weight: bold;
+                color: #2E3784;
+            }
+        }
+        .text-wrapper{
+            padding: 0 100px 0 680px;
+            h3{
+                font-size: 22px;
+                color: #666;
+                padding: 10px 0 20px;
+            }
+            .vice-title{
+                line-height: 25px;
+                font-size: 13px;
+                color: #999;
+            }
+            .price-wrapper{
+                background: #f8f8f8;
+                color: #999;
+                font-size: 13px;
+                padding: 10px 20px;
+                margin: 20px 0 30px;
+                p{
+                    line-height: 30px;
+                    span{
+                        display: inline-block;
+                    }
+                    .s1{
+                        width: 70px;
+                        text-align: justify;
+                        height: 30px;
+                        vertical-align: middle;
+                        &::after{
+                            content: '';
+                            display: inline-block;
+                            width: 100%;
+                            height: 0;
+                        }
+                    }
+                    .s2{
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: #bc1b19;
+                    }
+                    .s3{
+                        text-decoration: line-through;
+                    }
+                }
+            }
+            .hot{
+                margin-bottom: 30px;
+                span,a{
+                    display: inline-block;
+                    line-height: 25px;
+                    color: #999;
+                }
+                a{
+                    border: 1px solid #ccc;
+                    padding: 0 10px;
+                }
+            }
+            .btn-wrapper{
+                text-align: center;
+                a{
+                    display: inline-block;
+                    float: left;
+                    width: 190px;
+                    line-height: 35px;
+                    font-size: 14px;
+                    border: 1px solid #2E3784;
+                    color: #2E3784;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    &:last-of-type{
+                        margin-left: 40px;
+                        background-color: #2E3784;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    // 产品详情
+    .product-info{
+        background: #fff;
+        .text-wrapper{
+            float: left;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            width: 930px;
+            margin-right: 20px;
+            box-sizing: border-box;
+            padding: 30px;
+            font-size: 15px;
+            color: #666;
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+            table{
+                width: 100%;
+            }
+        }
+        .hot-news{
+            float: left;
+            width: 250px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            box-sizing: border-box;
+            padding: 20px;
+            dt{
+                margin-bottom: 10px;
+                a{
+                    float: right;
+                    display: inline-block;
+                    line-height: 30px;
+                    font-size: 14px;
+                    color: #999;
+                }
+                p{
+                    line-height: 30px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #555;
+                }
+            }
+            dd{
+                &:not(:last-of-type){
+                    border-bottom: 1px dashed #ccc;
+                }
+                a{
+                    display: block;
+                    padding: 10px 0;
+                    h4{
+                        color: #666;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    p{
+                        padding-top: 5px;
+                        color: #999;
+                        line-height: 20px;
+                        font-size: 13px;
+                        white-space: normal;
+                        -webkit-line-clamp: 2;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

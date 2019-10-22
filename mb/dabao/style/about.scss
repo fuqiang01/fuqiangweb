@@ -1,0 +1,73 @@
+.banner{
+    margin-top: 76px;
+    background: url('../img/about.jpg') center no-repeat;
+    background-size: 100% 100%;
+    padding: 45px 0;
+    text-align: center;
+    img{
+        margin-left: 350px;
+    }
+}
+.content{
+    padding: 80px 0;
+    // 关于我们
+    .about-us{
+        margin-bottom: 100px;
+        img{
+            float: right;
+        }
+        .text{
+            padding-right: 700px;
+            font-size: 15px;
+            line-height: 33px;
+            color: #666;
+            h3{
+                font-size: 25px;
+                color: #2E3784;
+                padding: 10px 0 20px;
+            }
+        }
+    }
+    // 我们做什么
+    .we-doing{
+        h3{
+            font-size: 32px;
+            color: #2E3784;
+            margin-bottom: 20px;
+        }
+        .info{
+            background: url('../img/about-do1.jpg') center no-repeat;
+            padding: 59px 0;
+            li{
+                float: left;
+                width: 280px;
+                margin: 0 60px;
+                box-sizing: border-box;
+                text-align: center;
+                padding: 40px;
+                background: #fff;
+                h5{
+                    display: inline-block;
+                    border-bottom: 1px solid #2E3784;
+                    font-size: 16px;
+                    margin: 5px 0 10px;
+                    color: #555;
+                }
+                p{
+                    font-size: 13px;
+                    line-height: 23px;
+                    text-align: left;
+                    color: #777;
+                    height: 161px;
+                }
+                &:nth-of-type(2){
+                    background: #2E3784;
+                    h5,p{
+                        color: #fff;
+                        border-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
