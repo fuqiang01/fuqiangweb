@@ -137,6 +137,10 @@
   color: #666;
 }
 
+.content .product-info .text-wrapper p {
+  margin-bottom: 10px;
+}
+
 .content .product-info .text-wrapper img {
   display: block;
   margin: 0 auto;
