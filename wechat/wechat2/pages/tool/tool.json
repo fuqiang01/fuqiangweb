@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "tool-list": "/components/toollist/cmp"
+  }
+}

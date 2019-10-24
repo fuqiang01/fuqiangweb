@@ -1,0 +1,66 @@
+<!-- banner -->
+<swiper class="banner" indicator-dots="true" indicator-color="rgba(255,255,255,.7)" indicator-active-color="#FF944E" autoplay="true" circular="true">
+  <swiper-item>
+    <image src="/img/banner_1.jpg" />
+  </swiper-item>
+  <swiper-item>
+    <image src="/img/banner_2.jpg" />
+  </swiper-item>
+  <swiper-item>
+    <image src="/img/banner_3.jpg" />
+  </swiper-item>
+</swiper>
+<!-- serverList -->
+<view class="server-list">
+  <view class="item" wx:for="{{serverList}}" wx:key="{{index}}">
+    <image src="{{item.src}}" mode="widthFix" />
+    <text>{{item.info}}</text>
+  </view>
+</view>
+<!-- hotNews -->
+<view class="hot-news">
+  <image class="title" src="/img/hot_news.png" mode="widthFix" />
+  <swiper class="hot-news-swiper" autoplay="true" circular="true" vertical="true">
+    <swiper-item wx:for="{{hotNews}}" data-url="{{item.url}}" wx:key="{{item.url}}">
+      {{item.title}}
+    </swiper-item>
+  </swiper>
+  <image class="arrow" src="/img/arrow_r_s.png" mode="widthFix" />
+</view>
+<!-- serverInfo -->
+<view class="server-info">
+  <view class="title">
+    <text wx:for="{{ serverInfoTitle }}"
+          wx:key="{{ index }}"
+          class="{{ index == activeIndex ? 'active' : '' }}"
+          data-index="{{ index }}"
+          bindtap="serverInfoTitleTap">{{ item }}</text>
+  </view>
+  <view class="line-wrapper">
+    <view class="line" style="left: {{ activeIndex * 180 }}rpx"></view>
+  </view>
+  <swiper class="server-info-swiper" bind:change="serverInfoSwiperChange" current="{{ activeIndex }}">
+    <swiper-item wx:for="{{serverInfoItem}}" wx:key="{{item}}">
+      <view class="item-2" wx:for="{{item.item2}}"  wx:key="{{item}}">
+        <text class="item-title">{{item.title}}</text>
+        <view class="item-container">
+          <view class="text-wrapper">
+            <text class="item-vice-title">{{item.viceTitle}}</text>
+            <text class="item-flag">{{item.itemFlag}}</text>
+          </view>
+          <image src="{{item.src}}" mode="widthFix" />
+        </view>
+      </view>
+      <view class="item-4" wx:for="{{item.item4}}" wx:key="{{item}}">
+        <text class="item-title">{{item.title}}</text>
+        <text class="item-vice-title">{{item.viceTitle}}</text>
+        <image src="{{item.src}}" mode="widthFix" />
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- footer -->
+<view class="footer">
+  <image src="/img/banner_f.png" mode="widthFix" />
+  <text>—————— 我是有底线的 ——————</text>
+</view>

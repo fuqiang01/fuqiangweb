@@ -1,0 +1,6 @@
+<tool-list
+    wx:for="{{ toolList }}"
+    wx:key="{{ index }}"
+    title="{{ item.title }}"
+    info-list="{{ item.infoList }}"></tool-list>
+

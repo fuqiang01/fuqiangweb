@@ -1,0 +1,28 @@
+<view class="us">
+    <text class="title">企业简介</text>
+    <view class="info-text">
+        <text>重庆八戒财云网络科技有限公司（简称八戒财税）是猪八戒网旗下专为中小微企业提供工商注册及代理记账的互联网财税服务平台，是猪八戒网从低频的企业服务向高频的企业服务转变的一个重要的战略级产品和服务，八戒财税行业首创的服务定价模式，运用“互联网+”的思维，将碎片化的需求痛点进行封装，致力于为企业提供安全有保障，高性价比的财税服务，主要业务范围包括：代理记账、工商注册、税务服务、财税咨询、增值服务等。</text>
+    </view>
+    <text class="title">企业环境</text>
+    <view class="info">
+        <view 
+            class="item"
+            wx:for="{{ environmentList }}"
+            wx:key="{{ index }}">
+            <image src="{{ item.imgSrc }}" mode="widthFix" />
+            <text>{{ item.text }}</text>
+        </view>
+    </view>
+    <text class="title">商务合作</text>
+    <view class="info-text">
+        <block 
+            wx:for="{{ cooperationList }}"
+            wx:key="{{ index }}">
+            <text class="t1">{{ item.title }}</text>
+            <text>{{ item.info }}</text>
+        </block>
+    </view>
+    <view class="contact-us">
+        
+    </view>
+</view>

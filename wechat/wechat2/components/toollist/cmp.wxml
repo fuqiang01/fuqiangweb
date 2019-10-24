@@ -1,0 +1,14 @@
+<view class="wrapper">
+    <text class="title">{{ title }}</text>
+    <view class="info">
+        <view class="item"
+              wx:for="{{ infoList }}"
+              wx:key="{{ index }}"
+              data-url="{{ item.url }}">
+            <image class="img" 
+                    src="{{ item.imgSrc }}" 
+                    mode="widthFix" />
+            <text class="text">{{ item.name }}</text>
+        </view>
+    </view>
+</view>

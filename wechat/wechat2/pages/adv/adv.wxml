@@ -1,0 +1,18 @@
+<view class="adv">
+    <text class="title">10秒提交,享受无忧服务</text>
+    <view class="input-wrapper">
+        <image src="/img/input_phone.png" mode="widthFix"/>
+        <input placeholder="请输入您的电话号码" />
+    </view>
+    <textarea placeholder="请描述您的具体需求..."></textarea>
+    <view class="radio-wrapper">
+        <radio value="1" color="#FF852F" />
+        <text class="t1">我已经阅读同意楚威网</text>
+        <text class="t2">《隐私保护政策》</text>
+    </view>
+    <view class="btn">立即咨询</view>
+    <view class="phone">
+        <image src="/img/adv_phone.png" mode="widthFix" />
+        <text>咨询热线:400-123-1234</text>
+    </view>
+</view>

@@ -1,0 +1,46 @@
+.us{
+    margin: 0 20rpx;
+    padding-bottom: 50rpx;
+}
+.title{
+    font-size: 33rpx;
+    font-weight: bold;
+    border-left: 7rpx solid #FF852F;
+    padding-left: 20rpx;
+    display: inline-block;
+    line-height: 30rpx;
+    margin:50rpx 0 30rpx;
+    color: #444;
+}
+.info-text{
+    margin: 0 20rpx;
+    line-height: 40rpx;
+    font-size: 28rpx;
+    color: #666;
+}
+.info-text .t1{
+    display: block;
+    color: #FF852F;
+    margin: 30rpx 0 10rpx;
+}
+.info{
+    margin: 0 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.info .item{
+    width: 30%;
+    margin-bottom: 20rpx;
+}
+.info .item image{
+    width: 100%;
+    border-radius: 5rpx;
+}
+.info .item text{
+    width: 100%;
+    text-align: center;
+    color: #666;
+    font-size: 28rpx;
+    display: inline-block;
+}
