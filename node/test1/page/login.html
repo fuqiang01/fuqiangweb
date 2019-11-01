@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" id="no">
+<input type="text" id="pas">
+<button id="btn">提交</button>
+
+
+</form>
+
+<script>
+    function ajax ( type, url, callback, data, flag ) {
+        var xhr = new XMLHttpRequest() ? new XMLHttpRequest() : new ActiveXObject( 'Microsoft.XMLHttp' );
+        type = type.toUpperCase();    //将type的字母变成大写
+        xhr.onreadystatechange = function () {
+            if ( xhr.readyState == 4 && xhr.status == 200 ) {
+                callback( xhr.responseText )
+            }
+        }
+        if ( type == 'GET' ) {
+            xhr.open( type, url + '?' + data, flag )
+            xhr.send();
+        } else if ( type == 'POST' ) {
+            xhr.open( type, url, flag );
+            xhr.setRequestHeader( 'Content-type' , 'application/x-www-form-urlencoded' );
+            xhr.send( data );
+        }
+    }
+
+    btn.onclick = function () {
+        let stuNum = no.value;
+        let password = pas.value;
+        let data = {
+            stuNum,
+            password
+        };
+        data = JSON.stringify(data);
+        ajax( 'post', '/login', function (res) {
+            if ( res === 'ok' ) {
+                location.replace("http://127.0.0.1:12306/index.html")
+            }
+        }, data, true );
+    }
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -5,32 +5,32 @@
         $("#text1").show();
         $("#span").text();
         $("#span").text("总承包资质");
-        $("#box1").css("background-image", "url(./static/images/bc.png)");
-        $("#box1_img").css({ "background-image": "url(./static/images/bb1.png)" });
+        $("#box1").css("background-image", "url(../images/bc.png)");
+        $("#box1_img").css({ "background-image": "url(../images/bb1.png)" });
     });
     $(".blue").hover(function () {
         $("#text4").show();
         $("#box1").show();
         $("#span").text();
         $("#span").text("工程设计资质");
-        $("#box1").css("background-image", "url(./static/images/bc-1.png)");
-        $("#box1_img").css({ "background-image": "url(./static/images/bb2.png)" });
+        $("#box1").css("background-image", "url(../images/bc-1.png)");
+        $("#box1_img").css({ "background-image": "url(../images/bb2.png)" });
     });
     $(".roseo").hover(function () {
         $("#text2").show();
         $("#box1").show();
         $("#span").text();
         $("#span").text("专业承包资质");
-        $("#box1").css("background-image", "url(./static/images/bc-2.png)");
-        $("#box1_img").css({ "background-image": "url(./static/images/bb3.png)" });
+        $("#box1").css("background-image", "url(../images/bc-2.png)");
+        $("#box1_img").css({ "background-image": "url(../images/bb3.png)" });
     });
     $(".purple").hover(function () {
         $("#text3").show();
         $("#box1").show();
         $("#span").text();
         $("#span").text("工程勘察资质");
-        $("#box1").css("background-image", "url(./static/images/bc-3.png)");            
-        $("#box1_img").css({ "background-image": "url(./static/images/bb4.png)" });
+        $("#box1").css("background-image", "url(../images/bc-3.png)");
+        $("#box1_img").css({ "background-image": "url(../images/bb4.png)" });
     });
     $("#box1").mouseleave(function () {
         $("#box1").hide();
