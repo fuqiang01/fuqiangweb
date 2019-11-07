@@ -1,0 +1,271 @@
+.navbar-default{
+    background-color: transparent;
+    border-color: transparent;
+}
+a,a:hover{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+html,body{
+    overflow-x: hidden;
+}
+// header nav
+header{
+    position: fixed;
+    background: rgba(0,0,0,.8);
+    width: 100%;
+    z-index: 30;
+    .navbar{
+        margin-bottom: 0;
+        height: 80px;
+        .navbar-brand{
+            height: 100%;
+            padding: 5px 15px;
+        }
+        .collapse{
+            background: rgba(0,0,0,.8);
+            .navbar-right{
+                padding-top: 15px;
+                background: rgba(0,0,0,.8);
+                a{
+                    color: #fff;
+                    font-size: 15px;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+        } 
+    }
+}
+// footer
+footer{
+    background: #232323;
+    color: #fff;
+    padding-top: 50px;
+    a{
+        color: #fff;
+    }
+    .footer-list{
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 30px;
+        .left{
+            dt{
+                line-height: 30px;
+                margin-bottom: 20px;
+            }
+            dd{
+                a{
+                    display: inline-block;
+                    line-height: 25px;
+                }
+            }
+        }
+        .center{
+            .title{
+                line-height: 30px;
+                margin-bottom: 20px;
+                a{
+                    display: inline-block;
+                    padding: 0 10px;
+                    &.active{
+                        color: #3e7af2;
+                        border-bottom: 2px solid #3e7af2;
+                    }
+                }
+            }
+            .info{
+                .p2{
+                    img{
+                        vertical-align: middle;
+                    }
+                    span{
+                        color: #3e7af2;
+                        font-size: 28px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        .right{
+            .title{
+                line-height: 30px;
+                margin-bottom: 20px;
+            }
+            .wx-wrap{
+                img{
+                    width: 100px;
+                    height: 100px;
+                    margin-right: 10px;
+                    vertical-align: top;
+                }
+                .text{
+                    display: inline-block;
+                    .flag{
+                        color: #3e7af2;
+                    }
+                }
+            }
+        }
+    }
+    .about-wrap{
+        color: #7d7d7d;
+        padding: 10px 0;
+        text-align: center;
+        a{
+            color: #7d7d7d;
+        }
+    }
+}
+// 侧边框
+aside{
+    position: fixed;
+    right: 5px;
+    bottom: 200px;
+    z-index: 30;
+    ul{
+        border-radius: 5px;
+        background: rgba(0,0,0,.8);
+        li{
+            color: #fff;
+            width: 45px;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            &.gotop{
+                font-size: 16px;
+                font-weight: bold;
+            }
+            img{
+                position: relative;
+                z-index: 3;
+            }
+            .hover-show{
+                position: absolute;
+                background: #284b90;
+                width: 200px;
+                left: 50px;
+                top: 0;
+                line-height: 45px;
+                text-align: left;
+                border-radius: 5px;
+                padding: 0 20px;
+                font-size: 20px;
+                transition: left .5s;
+            }
+            &:hover{
+                .hover-show{
+                    left: -155px;
+                }
+            }
+        }
+    }
+}
+// 弹窗
+.popupWindow-wrapper{
+    position: fixed;
+    z-index: 30;
+    background: rgba(0,0,0,.3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    .poruoWindow{
+        background: #fff;
+        width: 500px;
+        margin: 200px auto;
+        padding: 50px 90px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        position: relative;
+        background-image: url('../img/popup_window.jpg');
+        background-size: 100% 100%;
+        p{
+            padding: 10px 0;
+            font-size: 20px;
+            color: #444;
+            margin-bottom: 0;
+            span{
+                color: #ff672b;
+                font-weight: bold;
+            }
+        }
+        input{
+            padding: 10px 20px;
+            margin: 10px 0;
+            outline: none;
+        }
+        .popW-btn{
+            background: #297bf6;
+            color: #fff;
+            padding: 10px 0;
+            width: 213px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .popW-shut-btn{
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            color: #999;
+            cursor: pointer;
+            &:hover{
+                color: #333;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px ) {
+    //header nav
+    .container-fluid{
+        padding-right: 0;
+        .navbar-brand{
+            padding: 5px 0px!important;
+        }
+        .navbar-right{
+            a{
+                padding: 15px 5px!important;
+            }
+        }
+    }
+    // footer
+    footer{
+        .footer-list{
+            .left{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 768px ) {
+    .navbar{
+        height: 55px!important;
+        .container-fluid{
+            padding-right: 15px;.navbar-brand{
+                height: 55px;
+                img{
+                    height: 45px;
+                }
+            }
+        }
+        
+    }
+    // 弹窗
+    .popupWindow-wrapper{
+        .poruoWindow{
+            width: 350px;
+            padding: 25px;
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+}

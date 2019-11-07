@@ -1,0 +1,296 @@
+.banner{
+    height: 600px;
+    background: url('../img/banner04.jpg') center no-repeat;
+    background-size: cover;
+    color: #fff;
+    .text-wrapper{
+        text-align: center;
+        padding-top: 250px;
+    }
+}
+.content{
+    >div{
+        padding: 50px 0;
+        .title{
+            text-align: center;
+            margin-bottom: 50px;
+            h3{
+                color: #294b92;
+                font-style: italic;
+            }
+            h2{
+                margin: 0;
+            }
+        }
+    }
+    // 热销
+    .hot{
+        text-align: center;
+        .item{
+            background: #f5f5f5;
+            position: relative;
+            max-width: 350px;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 0 5px rgba(0,0,0,.1);
+            img{
+                width: 100%;
+            }
+            .text{
+                position: absolute;
+                bottom: 0;
+                background: #f5f5f5;
+                width: 100%;
+                padding: 15px 10px 0;
+                border-radius: 10px 15px 0 0;
+                color: #999;
+                text-align: left;
+                .p5{
+                    text-align: center;
+                    span{
+                        display: inline-block;
+                        background: #294b92;
+                        color: #fff;
+                        padding: 8px 25px;
+                        border-radius: 30px;
+                    }
+                }
+            }
+        }
+    }
+    // 流程
+    .process{
+        background: #f5f5f5;
+        .info{
+            li{
+                float: left;
+                width: 20%;
+                text-align: center;
+                .img-wrap{
+                    border-bottom: 1px solid #ccc;
+                    height: 139px;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .p1{
+                    margin: 15px 0 5px;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                .p2{
+                    color: #999;
+                }
+            }
+        }
+    }
+    // 好处
+    .benefits{
+        .item{
+            text-align: center;
+            background: url('../img/benefits_bg1.png') bottom center no-repeat;
+            background-size: 100% 350px;
+            height: 400px;
+            max-width: 300px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            .text{
+                padding: 30px 50px 0;
+                .p1{
+                    display: inline-block;
+                    border-bottom: 1px solid #ccc;
+                    width: 35px;
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #294b92;
+                }
+                .p2{
+                    line-height: 30px;
+                    color: #999;
+                }
+            }
+        }
+    }
+    // 标语
+    .slogan{
+        background: url('../img/slogan_bg.jpg');
+        color: #fff;
+        text-align: left;
+        .col-lg-9{
+            .p1{
+                background-color: #fff;
+                color: #284b90;
+                padding: 5px 15px;
+                display: inline-block;
+            }
+            .p2{
+                font-size: 34px;
+                font-weight: bold;
+            }
+        }
+        .col-lg-3{
+            background: url('../img/slogan_bg2.png') left center no-repeat;
+            padding: 20px 15px;
+            .p1{
+                padding-left: 40px;
+                span{
+                    font-weight: bold;
+                }
+            }
+            .p2{
+                padding-left: 90px;
+                span{
+                    background-color: rgba(255,255,255,.5);
+                    font-weight: bold;
+                    padding: 5px 20px;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+    // 注意事项
+    .matters{
+        .col-lg-6:nth-of-type(2n){
+            margin-bottom: 15px;
+        }
+        .img-wrap{
+            // background-size: cover;
+            height: 280px;
+            background-position: center;
+            background-repeat: no-repeat;
+            &.img1{
+                background-image: url('../img/matters_1.jpg');
+            }
+            &.img2{
+                background-image: url('../img/matters_2.jpg');
+            }
+            &.img3{
+                background-image: url('../img/matters_3.jpg');
+            }
+            &.img4{
+                background-image: url('../img/matters_4.jpg');
+            }
+        }
+        .text-wrap{
+            background: #f5f5f5;
+            height: 280px;
+            .text{
+                padding: 50px;
+                .p1{
+                    float: left;
+                    width: 50px;
+                    text-align: center;
+                }
+                .p2{
+                    line-height: 20px;
+                    color: #666;
+                    font-size: 13px;
+                    padding-left: 55px;
+                }
+                .top{
+                    margin-bottom: 20px;
+                    .p1{
+                        background: #284b90;
+                        font-size: 25px;
+                        font-weight: bold;
+                        color: #fff;
+                        line-height: 40px;
+                    }
+                }
+                .bot{
+                    .p1{
+                        line-height: 25px;
+                        color: #284b90;
+                        font-size: 15px;
+                    }
+                    .p2{
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+    // 服务保障
+    .guarantee{
+        .item{
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+            img{
+                max-width: 95%;
+            }
+            .p1{
+                padding-top: 15px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .p2{
+                color: #777;
+                font-size: 13px;
+                line-height: 25px;
+            }
+        }
+    }
+    // 办公环境
+    .environment{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 992px ) {
+    .content{
+        // 注意事项
+        .matters{
+            .text-wrap{
+                .text{
+                    padding: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px ) {
+    // banner
+    .banner{
+        height: 400px;
+        .text-wrapper{
+            padding-top: 150px;
+        }
+    }
+    .content{
+        // 流程
+        .process{
+            .info{
+                li{
+                    .img-wrap{
+                        height: 104px;
+                        img{
+                            max-width: 70px;
+                        }
+                    }
+                }
+            }
+        }
+        // 标语
+        .slogan{
+            .col-lg-9{
+                .p2{
+                    font-size: 24px;
+                }
+            }
+        }
+        // 服务保障
+        .guarantee{
+            .item{
+                .p2{
+                    
+                    height: 100px;
+                }
+            }
+        }
+    }
+}

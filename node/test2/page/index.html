@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="text">
+<input type="file" id="file">
+<input type="button" value="提交" id="btn">
+<a href="#" id="down" download="a.png">点击下载</a>
+<img id="myimg">
+<script>
+    btn.onclick = function () {
+
+        var nameVal = text.value;
+        var fileData = document.getElementById('file').files[0];
+
+        var form = new FormData();
+        form.append('file', fileData);
+        form.append('name', nameVal);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("post", "/upload", true);
+        xhr.send(form);
+
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var path = xhr.responseText;
+                console.log(path);
+                myimg.src = "/getPic?path=" + path;
+                down.href = "/getPic?path=" + path;
+            }
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,475 @@
+.banner{
+    height: 600px;
+    background: url('../img/banner02.jpg') center no-repeat;
+    background-size: cover;
+    color: #fff;
+    .text-wrapper{
+        text-align: center;
+        padding-top: 250px;
+    }
+}
+.content{
+    >div{
+        padding: 50px 0;
+        .title{
+            text-align: center;
+            margin-bottom: 50px;
+            img{
+                margin: 0 10px;
+                width: 30%;
+            }
+            .p1{
+                font-size: 25px;
+                font-weight: bold;
+                span{
+                    color: #254c9b;
+                }
+            }
+            .p2{
+                color: #999;
+                font-size: 13px;
+            }
+        }
+    }
+    // 代理记账
+    .dljz{
+        .item{
+            border: 1px solid #e0e0e0;
+            padding: 20px 10px 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            .p1{
+                font-size: 20px;
+                font-weight: bold;
+                border-bottom: 1px solid #e0e0e0;
+                margin: 0 10px;padding: 10px 0 5px;
+            }
+            .p2{
+                padding: 10px 0 20px;
+                border-bottom: 1px dashed #ccc;
+            }
+            .p3{
+                padding-top: 10px;
+                span{
+                    color: #D3252B;
+                    font-weight: bold;
+                    font-size: 15px;
+                    display: inline-block;
+                    line-height: 25px;
+                    margin-right: 10px;
+                }
+                a{
+                    background: #bababa;
+                    color: #fff;
+                    display: inline-block;
+                    line-height: 25px;
+                    padding: 0 10px;
+                    font-size: 12px;
+                    border-radius: 5px;
+                    &:hover{
+                        background: #254c9b;
+                    }
+                }
+            }
+        }
+    }
+    // 代理记账的意义
+    .meaning{
+        .left,.right{
+            background: #eee;
+            .item{
+                width: 500px;
+                padding: 50px 30px;
+                img{
+                    float: left;
+                    padding-top: 30px;
+                }
+                .text{
+                    padding-left: 140px;
+                    .line{
+                        span{
+                            display: inline-block;
+                            width: 50px;
+                            height: 3px;
+                            background: #254c9b;
+                        }
+                    }
+                    .item-info{
+                        color: #777;
+                        font-size: 13px;
+                        line-height: 25px;
+                        height: 75px;
+                    }
+                }
+            }
+        }
+        .left{
+            background: #f8f8f8;
+            .item{
+                float: right;
+            }
+        }
+    }
+    // 流程
+    .process{
+        .row{
+            text-align: center;
+            .col-lg-3{
+                margin-bottom: 20px;
+                p{
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+    // 资料
+    .data{
+        background: #f5f5f5;
+        .left,.right{
+            h4{
+                font-size: 20px;
+                font-weight: bold;
+                span{
+                    color: #254c9b;
+                }
+            }
+            h5{
+                color: #999;
+                margin-bottom: 20px;
+            }
+        }
+        .left{
+            .data-info{
+                .text-wrap{
+                    float: left;
+                    width: 40%;
+                    padding-top: 60px;
+                    p{
+                        color: #666;
+                    }
+                }
+                img{
+                    width: 60%;
+                    float: left;
+                }
+            }
+        }
+        .right{
+            border-left: 1px solid #ccc;
+            .data-info{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    // 注意事项
+    .attention{
+        .info{
+            li{
+                float: left;
+                width: 20%;
+                color: #fff;
+                padding: 30px;
+                text-align: center;
+                p{
+                    line-height: 30px;
+                    margin-top: 30px;
+                }
+                &:nth-of-type(2n+1){
+                    background: #222;
+                }
+                &:nth-of-type(2n){
+                    background: #2b2b2b;
+                }
+            }
+        }
+    }
+    // 标语
+    .slogan{
+        background: url('../img/slogan_bg.jpg');
+        color: #fff;
+        text-align: left;
+        .col-lg-9{
+            .p1{
+                background-color: #fff;
+                color: #284b90;
+                padding: 5px 15px;
+                display: inline-block;
+            }
+            .p2{
+                font-size: 34px;
+                font-weight: bold;
+            }
+        }
+        .col-lg-3{
+            background: url('../img/slogan_bg2.png') left center no-repeat;
+            padding: 20px 15px;
+            .p1{
+                padding-left: 40px;
+                span{
+                    font-weight: bold;
+                }
+            }
+            .p2{
+                padding-left: 90px;
+                span{
+                    background-color: rgba(255,255,255,.5);
+                    font-weight: bold;
+                    padding: 5px 20px;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+    // 核税资料
+    .material{
+        .item{
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            height: 100px;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            img{
+                float: left;
+            }
+            p{
+                padding-left: 100px;
+                line-height: 25px;
+                margin-bottom: 0;
+                padding-top: 10px;
+                height: 75px;
+                span{
+                    font-weight: bold;
+                    color: #254c9b;
+                    font-size: 16px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    // 苦于选择?
+    .choose{
+        background-color: #f5f5f5;
+        .item{
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            img{
+                float: left;
+                border-radius: 50%;
+                border: 3px solid #294b92;
+                width: 160px;
+                height: 160px;
+            }
+            .text{
+                padding-left: 180px;
+                height: 160px;
+                h5{
+                    margin: 5px 0 15px;
+                    font-weight: bold;
+                }
+                p{
+                    margin: 0;
+                    font-size: 12px;
+                    color: #777;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    // 优势
+    .adv{
+        .item{
+            height: 200px;
+            margin-bottom: 30px;
+            .img{
+                float: left;
+                border-radius: 50% 50% 0 50%;
+                overflow: hidden;
+                width: 200px;
+                height: 200px;
+                img{
+                    width: 200px;
+                    height: 200px;
+                    display: block;
+                }
+                p{
+                    color: #fff;
+                    background: #284b90;
+                    line-height: 40px;
+                    text-align: center;
+                    margin-top: -35px;
+                    position: relative;
+                    text-align: right;
+                    padding-right: 50px;
+                    font-size: 16px;
+                }
+            }
+            .text{
+                margin-left: 200px;
+                padding: 70px 10px 0px 20px;
+                border-bottom: 1px dashed #284b90;
+                position: relative;
+                .p1{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #284b90;
+                    line-height: 25px;
+                }
+                .p2{
+                    color: #666;
+                    line-height: 25px;
+                    height: 50px;
+                }
+                &::after{
+                    content: '';
+                    width: 14px;
+                    height: 14px;
+                    background: #284b90;
+                    display: block;
+                    position: absolute;
+                    background: #284b90;
+                    border-radius: 50%;
+                    right: 0;
+                    bottom: -7px;
+                }
+            }
+        }
+    }
+    // 办公环境
+    .environment{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 992px ) {
+    .content{
+        >div{
+            .title{
+                img{
+                    display: none;
+                }
+            }
+        }
+        // 代理记账的意义
+        .meaning{
+            .left,.right{
+                .item{
+                    width: 100%;
+                }
+            }
+        }
+         // 资料
+        .data{
+            .right{
+                border-left: none;
+                border-top: 1px solid #ccc;
+                margin-top: 50px;
+                padding-top: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px ) and ( max-width: 992px ){
+    .content{
+        // 代理记账的意义
+        .meaning{
+            .left,.right{
+                .item{
+                    img{
+                        display: none;
+                    }
+                    .text{
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }  
+}
+
+@media (max-width: 768px ) {
+    // banner
+    .banner{
+        height: 400px;
+        .text-wrapper{
+            padding-top: 150px;
+        }
+    }
+    .content{
+        // 标语
+        .slogan{
+            .col-lg-9{
+                .p2{
+                    font-size: 24px;
+                }
+            }
+        }
+        // 代理记账的意义
+        .meaning{
+            .left{
+                .item{
+                    float: none;
+                }
+            }
+        }
+        //流程
+        .process{
+            .row{
+                .col-lg-3{
+                    img{
+                        width: 150px;
+                    }
+                }
+            }
+        }
+        //资料
+        .data{
+            .left{
+                .data-info{
+                    .text-wrap{
+                        width: 50%;
+                        padding-top: 10%;
+                    }
+                    img{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        // 注意事项
+        .attention{
+            .info{
+                li{
+                    width: 50%;
+                    p{
+                        height: 60px;
+                    }
+                    &:nth-of-type(1),
+                    &:nth-of-type(4),
+                    &:nth-of-type(5){
+                        background: #222;
+                    }
+                    &:nth-of-type(2),
+                    &:nth-of-type(3){
+                        background: #2b2b2b;
+                    }
+                }
+            }
+        }
+        // 标语
+        .slogan{
+            .col-lg-9{
+                .p2{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
