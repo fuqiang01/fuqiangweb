@@ -1,0 +1,307 @@
+.banner{
+    height: 600px;
+    background: url('../img/banner05.jpg') center no-repeat;
+    background-size: cover;
+    color: #fff;
+    .text-wrapper{
+        text-align: center;
+        padding-top: 250px;
+    }
+}
+.content{
+    >div{
+        padding: 50px 0;
+        .title{
+            text-align: center;
+            margin-bottom: 50px;
+            background: url('../img/swch_title_bg1.png') 0 center no-repeat, url('../img/swch_title_bg2.png') 100% center no-repeat;
+            background-size: 35% auto;
+            h3{
+                span{
+                    color: #284b90;
+                }
+            }
+            h5{
+                color: #999;
+            }
+        }
+    }
+    // 意义
+    .meaning{
+        .info{
+            li{
+                float: left;
+                width: 20%;
+                text-align: center;
+                &:not(:last-of-type){
+                    border-right: 1px dotted #ccc;
+                }
+                img{
+                    max-width: 95%;
+                }
+                p{
+                    font-size: 15px;
+                    font-weight: bold;
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+    // 内容
+    .swch-con{
+        background: #f8f8f8;
+        .item{
+            text-align: center;
+            background: url('../img/swch-con_1.jpg') center no-repeat;
+            color: #fff;
+            padding: 30px 15px;
+            max-width: 330px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            h3{
+                border-top: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                margin: 20px 30px 0;
+                line-height: 35px;
+            }
+            p{
+                line-height: 25px;
+                height: 100px;
+                padding-top: 20px;
+                font-size: 12px;
+            }
+        }
+    }
+    // 种类
+    .type{
+        .item{
+            border: 1px solid #e0e0e0;
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            p{
+                margin: 0;
+                padding-top: 5px;
+                color: #666;
+            }
+        }
+    }
+    // 方法
+    .methods{
+        background: url('../img/methods_bg.jpg') center no-repeat;
+        background-size: cover;
+        .title{
+            color: #fff;
+            background: url('../img/swch_title_bg4.png') 0 center no-repeat, url('../img/swch_title_bg5.png') 100% center no-repeat;
+            h5{
+                color: #ccc;
+            }
+        }
+        .item{
+            color: #fff;
+            border: 1px solid #f8f8f8;
+            border-radius: 5px;
+            padding: 20px 15px;
+            max-width: 350px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            .top{
+                text-align: center;
+                border-bottom: 1px dashed #eee;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                img{
+                    width: 70px;
+                }
+                span{
+                    font-size: 16px;
+                    padding-left: 10px;
+                }
+            }
+            p{
+                line-height: 20px;
+                font-size: 12px;
+                height: 100px;
+            }
+        }
+    }
+    // 服务内容
+    .server-con{
+        .table-wrap{
+            overflow-x: auto;
+            table{
+                td,th{
+                    border: 1px solid #e0e0e0;
+                    background: #f8f8f8;
+                    text-align: center;
+                    padding: 5px 15px;
+                    min-width: 120px;
+                    color: #666;
+                }
+                th{
+                    background: #222;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: bold
+                }
+            }
+        } 
+    }
+    // 流程
+    .process{
+        .item{
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            text-align: center;
+            padding: 10px 0;
+            img{
+                max-width: 95%;
+            }
+            p{
+                padding-top: 10px;
+                font-weight: bold;
+            }
+        }
+    }
+    // 标语
+    .slogan{
+        background: url('../img/slogan_bg.jpg');
+        color: #fff;
+        text-align: left;
+        .col-lg-9{
+            .p1{
+                background-color: #fff;
+                color: #284b90;
+                padding: 5px 15px;
+                display: inline-block;
+            }
+            .p2{
+                font-size: 34px;
+                font-weight: bold;
+            }
+        }
+        .col-lg-3{
+            background: url('../img/slogan_bg2.png') left center no-repeat;
+            padding: 20px 15px;
+            .p1{
+                padding-left: 40px;
+                span{
+                    font-weight: bold;
+                }
+            }
+            .p2{
+                padding-left: 90px;
+                span{
+                    background-color: rgba(255,255,255,.5);
+                    font-weight: bold;
+                    padding: 5px 20px;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
+    // 优势
+    .adv{
+        .item{
+            height: 200px;
+            margin-bottom: 30px;
+            .img{
+                float: left;
+                border-radius: 50% 50% 0 50%;
+                overflow: hidden;
+                width: 200px;
+                height: 200px;
+                img{
+                    width: 200px;
+                    height: 200px;
+                    display: block;
+                }
+                p{
+                    color: #fff;
+                    background: #284b90;
+                    line-height: 40px;
+                    text-align: center;
+                    margin-top: -35px;
+                    position: relative;
+                    text-align: right;
+                    padding-right: 50px;
+                    font-size: 16px;
+                }
+            }
+            .text{
+                margin-left: 200px;
+                padding: 70px 10px 0px 20px;
+                border-bottom: 1px dashed #284b90;
+                position: relative;
+                .p1{
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #284b90;
+                    line-height: 25px;
+                }
+                .p2{
+                    color: #666;
+                    line-height: 25px;
+                    height: 50px;
+                }
+                &::after{
+                    content: '';
+                    width: 14px;
+                    height: 14px;
+                    background: #284b90;
+                    display: block;
+                    position: absolute;
+                    background: #284b90;
+                    border-radius: 50%;
+                    right: 0;
+                    bottom: -7px;
+                }
+            }
+        }
+    }
+    // 办公环境
+    .environment{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media (max-width: 992px ) {
+    .content{
+        
+        
+    }
+}
+@media (min-width: 768px ) and ( max-width: 992px ){
+    .content{
+        
+    }  
+}
+@media (max-width: 768px ) {
+    // banner
+    .banner{
+        height: 400px;
+        .text-wrapper{
+            padding-top: 150px;
+        }
+    }
+    .content{
+        >div{
+            .title{
+                background: none;
+            }
+        }
+        // 标语
+        .slogan{
+            .col-lg-9{
+                .p2{
+                    font-size: 24px;
+                }
+            }
+        }
+        
+    }
+}
