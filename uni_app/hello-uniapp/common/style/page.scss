@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'webfont';
+  font-display: swap;
+  src: url('//at.alicdn.com/t/webfont_8yf4qxdwtub.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_8yf4qxdwtub.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/webfont_8yf4qxdwtub.woff2') format('woff2'),
+  url('//at.alicdn.com/t/webfont_8yf4qxdwtub.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/webfont_8yf4qxdwtub.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/webfont_8yf4qxdwtub.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
+}
+.page{
+	font-family: 'webfont';
+	.item{
+		position: relative;
+		width: 700rpx;
+		margin: 20rpx auto;
+		image{
+			width: 100%;
+			border-radius: 20rpx;
+		}
+		.text{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #FFFFFF;
+			text{
+				display: block;
+				width: 700rpx;
+				text-align: center;
+				font-size: 80rpx;
+				&.topic-num{
+					font-size: 40rpx;
+				}
+			}
+		}
+	}
+}

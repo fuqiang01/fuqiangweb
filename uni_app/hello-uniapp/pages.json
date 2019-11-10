@@ -6,6 +6,14 @@
 				"navigationBarTitleText": "主页"
 			}
 		}
+        ,{
+            "path" : "pages/page/page",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/info/info",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
