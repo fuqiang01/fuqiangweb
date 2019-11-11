@@ -11,9 +11,30 @@ Page({
         arrA: new Array(500),
         isIndex: 0,
         nowaIndex: 0,
+        isTouch: false
     },
-    onChange(e) {
-        console.log(e)
+    // onChange(e){
+    //     if ( e.detail.source != 'touch' ) {
+    //         this.setData({
+    //             isTouch: false
+    //         })
+    //     } else {
+    //         this.setData({
+    //             isTouch: true
+    //         })
+    //     }
+    // },
+    onStart(){
+        this.setData({
+            isTouch: true
+        })
+    },
+    onEnd(){
+        this.setData({
+            isTouch: false
+        })
+    },
+    onFinish(e) {
         if ( e.detail.source != 'touch' ) {
             return false;
         }

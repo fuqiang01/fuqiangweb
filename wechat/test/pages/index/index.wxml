@@ -1,6 +1,12 @@
 <!--index.wxml-->
-<!-- <view class="container">
-    <swiper bindanimationfinish="onChange" current="{{ nowIndex }}">
+<view class="container">
+    <swiper 
+        bindanimationfinish="onFinish" 
+        bindchange="onChange" 
+        current="{{ nowIndex }}" 
+        duration="{{ isTouch ? 500 : 0 }}"
+        bindtouchstart="onStart"
+        bindtouchend="onEnd">
         <block wx:for="{{ arr }}" wx:key="{{ item }}">
             <swiper-item>
                 <text>{{ item }}</text>
@@ -17,7 +23,7 @@
             </swiper-item>
         </block>
     </swiper>
-</view> -->
-<view>
-    <my-swiper />
 </view>
+<!-- <view>
+    <my-swiper />
+</view> -->
