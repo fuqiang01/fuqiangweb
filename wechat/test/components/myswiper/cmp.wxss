@@ -1,0 +1,14 @@
+/* components/myswiper/cmp.wxss */
+.wrapper{
+    background: red;
+    position: relative;
+    width: 100%;
+    /* transition: transform .3s; */
+}
+.wrapper .item{
+    width: 100%;
+    background: #333;
+    text-align: center;
+    color: red;
+    position: absolute;
+}

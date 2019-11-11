@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<!-- <view class="container">
+    <swiper bindanimationfinish="onChange" current="{{ nowIndex }}">
+        <block wx:for="{{ arr }}" wx:key="{{ item }}">
+            <swiper-item>
+                <text>{{ item }}</text>
+                <text>{{ activeIndex }}</text>
+                <text>{{ nowIndex }}</text>
+            </swiper-item>
+        </block>
+    </swiper>
+    <swiper bindanimationfinish="onChangea" current="{{ nowaIndex }}">
+        <block wx:for="{{ arrA }}" wx:key="{{ index }}" wx:if="{{ index < isIndex + 1 && index > isIndex - 1}}" >
+            <swiper-item>
+                <text>{{ index }}</text>
+                <text>{{ isIndex }}</text>
+            </swiper-item>
+        </block>
+    </swiper>
+</view> -->
+<view>
+    <my-swiper />
+</view>
