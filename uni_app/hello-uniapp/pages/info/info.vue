@@ -1,13 +1,18 @@
 <template>
 	<view class="info">
-		<swiper @change='onChange'>
-			<swiper-item 
-				v-for="(item,index) in showArr" 
-				:key='item'>
-				<view >{{ item }}</view>
-			</swiper-item>
+		<swiper 
+			:current='current'
+			@animationfinish="onFinish">
+			<block
+				v-for=" (item, index) in testArr "
+				:key="index"
+				v-if="index <= showIndex + 1 && index >= showIndex - 1">
+				<swiper-item>
+					<view
+						style="background: #007AFF;display: block;border: 50rpx solid #fff; height: 500rpx;text-align: center;">{{ index }}{{ showIndex }}</view>
+				</swiper-item>
+			</block>
 		</swiper>
-		
 	</view>
 </template>
 
@@ -16,31 +21,33 @@
 export default {
 	data(){
 		return{
-			nowIndex: 0,
-			testArr: [0,1,2,3,4,5,6,7,8,9],
-			lastCurrent: 0,
+			testArr: [1,2,3,4,5,6,7,8,9],
+			isTouch: false,
+			showIndex: 0,
+			current: 0,
 		}
 	},
 	computed:{
-		showArr() {
-			if ( this.nowIndex == 0) {
-				return this.testArr.slice(0,3);
-			} else {
-				console.log(this.testArr.slice( this.nowIndex - 1, this.nowIndex + 2))
-				return this.testArr.slice( this.nowIndex - 1, this.nowIndex + 2);
-			}
+		duration(){
+			return ( this.isTouch ? 500 : 0 );
 		}
 	},
 	methods:{
-		onChange(e){
+		onStart() {
+			this.isTouch = true;
+		},
+		onEnd() {
+			this.isTouch = false;
+		},
+		onFinish(e) {
+			if ( e.detail.source !== 'touch' ) return false;
 			let nowCurrent = e.detail.current;
-			if ( nowCurrent - this.lastCurrent > 0 ) {
-				this.nowIndex++;
-			} else{
-				this.nowIndex--;
+			if ( nowCurrent > 0 ) {
+				this.showIndex = this.showIndex >= this.testArr.length - 1 ? this.testArr.length - 1 : this.showIndex + 1;
+			} else {
+				this.showIndex = this.showIndex <= 0 ? 0 : this.showIndex - 1;
 			}
-			this.lastCurrent = nowCurrent;
-			console.log(this.nowIndex)
+			this.current = this.showIndex === 0 ? 0 : 1;
 		},
 	},
 	components:{

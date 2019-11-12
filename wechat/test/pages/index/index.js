@@ -8,22 +8,13 @@ Page({
         activeIndex: 0,
         nowIndex: 0,
         arr: [],
-        arrA: new Array(500),
-        isIndex: 0,
-        nowaIndex: 0,
-        isTouch: false
+        isTouch: false,
+
+        arrA: [1, 2, 3, 4, 5, 6, 7, 8],
+        currentA: 0,
+        nowIndexA: 0,
+        isTouchA: false,
     },
-    // onChange(e){
-    //     if ( e.detail.source != 'touch' ) {
-    //         this.setData({
-    //             isTouch: false
-    //         })
-    //     } else {
-    //         this.setData({
-    //             isTouch: true
-    //         })
-    //     }
-    // },
     onStart(){
         this.setData({
             isTouch: true
@@ -56,10 +47,34 @@ Page({
             nowIndex: nowIndex
         })
     },
-    onChangea(e) {
-        console.log(111)
+    onStartA(){
         this.setData({
-            isIndex: e.detail.current,
+            isTouchA: true
+        })
+    },
+    onEndA(){
+        this.setData({
+            isTouchA: false
+        })
+    },
+    onFinishA(e) {
+        if ( e.detail.source != 'touch') {
+            console.log('触发')
+            return false;
+        }
+        let index = e.detail.current;
+        let nowIndexA;
+        if ( index > 0 ){
+            let temp = this.data.nowIndexA + 1;
+            nowIndexA = temp >= this.data.arrA.length - 1 ? this.data.arrA.length - 1 : temp;
+        } else{
+            let temp = this.data.nowIndexA - 1;
+            nowIndexA = temp <= 0 ? 0 : temp;
+        }
+        let currentA = nowIndexA == 0 ? 0 : 1;
+        this.setData({
+            nowIndexA,
+            currentA
         })
     },
     onLoad: function() {

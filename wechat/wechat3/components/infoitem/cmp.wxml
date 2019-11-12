@@ -1,0 +1,35 @@
+<view class="info-item">
+    <view class="title">
+        <text class="title-type">{{ topicObj.titleType }}</text>
+        <text class="title-text">{{ topicObj.titleText }}</text>
+    </view>
+    <view class="options">
+        <view 
+            class="options-item"
+            wx:for="{{ topicObj.options }}"
+            wx:key="index">
+            <text class="t1">{{ optionT[index] }}</text>
+            <text class="t2">{{ item }}</text>
+        </view>
+    </view>
+    <view class="btn-wrap">
+        <text class="btn" bindtap="submit">确认提交</text>
+    </view>
+    <view class="explain">
+        <text class="explain-title">题目分析</text>
+        <view class="answer">
+            <text >本题答案: </text>
+            <text wx:for="{{ topicObj.answer }}" wx:key="item">{{ answer }}</text>
+        </view>
+        <text class="explain-info">{{ topicObj.explain }}</text>
+    </view>
+</view>
+
+<!--wxml-->
+<wxs module="answer">
+    function answer( item ) {
+        
+    }
+
+module.exports = msg;
+</wxs>

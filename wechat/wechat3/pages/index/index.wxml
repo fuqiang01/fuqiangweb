@@ -1,13 +1,10 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="title">
-    <text>科目一</text>
-    <text>科目四</text>
-  </view>
-  <view class="info">
-    <text>顺章练习</text>
-    <text>随机练习</text>
-    <text>错题练习</text>
-    <text>模拟考试</text>
-  </view>
+<view class="wrapper">
+    <view class="item" bindtap="onTap" data-id="1">
+        <image src="/img/bg1.jpg" mode="widthFix" />
+        <text>科目一</text>
+    </view>
+    <view class="item"  bindtap="onTap" data-id="4">
+        <image src="/img/bg2.jpg" mode="widthFix" />
+        <text>科目四</text>
+    </view>
 </view>

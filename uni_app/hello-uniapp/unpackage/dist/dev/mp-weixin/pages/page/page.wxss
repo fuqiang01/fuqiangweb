@@ -27,35 +27,38 @@
 @font-face {
   font-family: 'webfont';
   font-display: swap;
-  src: url("//at.alicdn.com/t/webfont_4an407qs5xl.eot");
+  src: url("//at.alicdn.com/t/webfont_8yf4qxdwtub.eot");
   /* IE9*/
-  src: url("//at.alicdn.com/t/webfont_4an407qs5xl.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/webfont_4an407qs5xl.woff2") format("woff2"), url("//at.alicdn.com/t/webfont_4an407qs5xl.woff") format("woff"), url("//at.alicdn.com/t/webfont_4an407qs5xl.ttf") format("truetype"), url("//at.alicdn.com/t/webfont_4an407qs5xl.svg#杨任东竹石体-Bold") format("svg");
+  src: url("//at.alicdn.com/t/webfont_8yf4qxdwtub.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/webfont_8yf4qxdwtub.woff2") format("woff2"), url("//at.alicdn.com/t/webfont_8yf4qxdwtub.woff") format("woff"), url("//at.alicdn.com/t/webfont_8yf4qxdwtub.ttf") format("truetype"), url("//at.alicdn.com/t/webfont_8yf4qxdwtub.svg#杨任东竹石体-Bold") format("svg");
   /* iOS 4.1- */
 }
-.content.data-v-a9c40798 {
-  margin-top: 100rpx;
+.page.data-v-240614a4 {
+  font-family: 'webfont';
 }
-.content .item.data-v-a9c40798 {
-    text-align: center;
-    color: #FFFFFF;
+.page .item.data-v-240614a4 {
     position: relative;
     width: 700rpx;
     margin: 20rpx auto;
 }
-.content .item image.data-v-a9c40798 {
+.page .item image.data-v-240614a4 {
       width: 100%;
-      display: block;
       border-radius: 20rpx;
 }
-.content .item text.data-v-a9c40798 {
+.page .item .text.data-v-240614a4 {
       position: absolute;
-      display: inline-block;
       top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      font-size: 80rpx;
-      font-family: 'webfont';
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      color: #FFFFFF;
+}
+.page .item .text text.data-v-240614a4 {
+        display: block;
+        width: 700rpx;
+        text-align: center;
+        font-size: 80rpx;
+}
+.page .item .text text.topic-num.data-v-240614a4 {
+          font-size: 40rpx;
 }
 
