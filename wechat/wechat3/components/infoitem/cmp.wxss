@@ -1,10 +1,12 @@
-.info-item{
+.info-item {
     margin: 0 20rpx;
 }
-.title{
+
+.title {
     margin-bottom: 50rpx;
 }
-.title-type{
+
+.title-type {
     background: #0a7fff;
     color: #fff;
     display: inline-block;
@@ -12,18 +14,22 @@
     border-radius: 8rpx;
     margin-right: 10rpx;
 }
-.title-text{
+
+.title-text {
     line-height: 50rpx;
     color: #333;
 }
-.options{
+
+.options {
     margin: 0 10rpx 50rpx;
 }
-.options-item{
+
+.options-item {
     margin: 30rpx 0;
     display: flex;
 }
-.options-item .t1{
+
+.options-item .t1 {
     flex-grow: 0;
     flex-shrink: 0;
     display: inline-block;
@@ -37,12 +43,44 @@
     margin-right: 15rpx;
     color: #444;
 }
-.options-item .t2{
+
+.options-item .t2 {
     display: inline-block;
     line-height: 50rpx;
     color: #555;
 }
-.btn-wrap .btn{
+
+.options-item.blue .t1 {
+    border-color: #0a7fff;
+    color: #fff;
+    background-color: #0a7fff;
+}
+
+.options-item.blue .t2 {
+    color: #0a7fff;
+}
+
+.options-item.red .t1 {
+    background: #DD524D;
+    border-color: #DD524D;
+    color: #fff;
+}
+
+.options-item.red .t2 {
+    color: #DD524D;
+}
+
+.options-item.green .t1 {
+    background: #4CD964;
+    border-color: #4CD964;
+    color: #fff;
+}
+
+.options-item.green .t2 {
+    color: #4CD964;
+}
+
+.btn-wrap .btn {
     background: #0a7fff;
     color: #fff;
     text-align: center;
@@ -51,7 +89,8 @@
     line-height: 90rpx;
     margin: 0 30rpx 50rpx;
 }
-.explain-title{
+
+.explain-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +98,8 @@
     padding-top: 50rpx;
     margin-bottom: 50rpx;
 }
-.explain-title::before{
+
+.explain-title::before {
     content: '';
     display: inline-block;
     width: 250rpx;
@@ -67,7 +107,8 @@
     background: #ccc;
     margin-right: 20rpx;
 }
-.explain-title::after{
+
+.explain-title::after {
     content: '';
     display: inline-block;
     width: 250rpx;
@@ -75,13 +116,15 @@
     background: #ccc;
     margin-left: 20rpx;
 }
-.explain .answer{
+
+.explain .answer {
     font-weight: bold;
     color: #666;
     line-height: 60rpx;
     margin-bottom: 20rpx;
 }
-.explain .explain-info{
+
+.explain .explain-info {
     display: inline-block;
     line-height: 45rpx;
     font-size: 30rpx;

@@ -1,1 +1,6 @@
-/* pages/info/info.wxss */
+.swiper{
+    height: 100vh;
+}
+.scroll-view{
+    height: 100%;
+}

@@ -1,1 +1,27 @@
-<f-info-item></f-info-item>
+<view class="info">
+    <swiper 
+        class="swiper"
+        current="{{ current }}"
+        duration="{{ isTouch ? 500 : 0 }}"
+        bindanimationfinish="onFinish"
+        bindtouchstart="onStart">
+            <block 
+                wx:for="{{ topicArr }}"
+                wx:key="{{ item.id }}"
+                wx:if="{{ index <= showIndex + 1 && index >= showIndex - 1 }}">
+                <swiper-item class="swiper-item">
+                    <scroll-view
+                        class="scroll-view"
+                        scroll-y="true">
+                        <f-info-item bindtonext="toNext" topicObj="{{ item }}"></f-info-item>
+                    </scroll-view>
+                </swiper-item>
+            </block>
+        </swiper>
+</view>
+
+
+
+
+
+<!-- <f-info-item bindtonext="toNext" topicObj="{{ topicObj }}"></f-info-item> -->
