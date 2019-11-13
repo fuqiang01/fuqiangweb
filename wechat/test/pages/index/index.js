@@ -81,5 +81,19 @@ Page({
         this.setData({
             arr: this.data.testArr.slice(0,2)
         })
+        wx.request({
+            url: 'http://fqiang.co/getTopicAll',
+            data: {
+                type: 1
+            },
+            method: 'GET',
+            dataType: JSON,
+            success( res ) {
+                console.log(res)
+            },
+            fail( err ) {
+                console.log(err)
+            }
+        })
     },
 })
