@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="code-canvas" width="65px" height="30px"></canvas>
+    <script src="./index.js"></script>
+    <script>
+        var codeCanvas = new CodeCanvas ( '.code-canvas' , 4 );
+        console.log(codeCanvas.codeText)
+    </script>
+</body>
+</html>
