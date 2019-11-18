@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+    <title>上海注册公司_注册上海公司</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+    <script src="static/js/jquery-1.7.min.js"></script>
+    <script src="static/js/common.js"></script>
+
+</head>
+<body>
+
+<!--topbar-->
+<div class="top">
+    <div class="w1000">
+        <div class="one"><?=$sys->webname?></div>
+        <div class="two">投诉电话：<?=$sys->phone?><span>热线电话：<?=$sys->tel?></span></div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--header-->
+<div class="head">
+    <div class="w1000">
+        <div class="logo"><a title="昌腾企业中心"></a></div>
+        <div class="menu">
+            <div class="item cur"><a href="#">上海注册公司首页</a></div>
+            <div class="item "><a href="#">免费注册公司</a></div>
+            <div class="item "><a href="#">代理记账</a></div>
+            <div class="item "><a href="#">商标注册</a></div>
+            <div class="item "><a href="#">联系我们</a></div>
+
+            <div class="item"><a href="#" rel="nofollow"><img src="static/picture/navlogo.png"/></a></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="clear"></div>
+<!-- banner-->
+<script type="text/javascript">
+    $(document).ready(function (e) {
+
+        $('#slider li').eq(0).show();
+        var lenThumb = $('#slider li').length;
+        for (var i = 1; i <= lenThumb; i++) {
+            $('#num').append('<span>' + i + '</span>');
+        }
+        $('#num span').eq(0).addClass('on');
+        var len = $('#num span').length;
+        var index = 0;
+
+        $('.w_auto #left').click(function () {
+            if (index <= 0)
+                index = lenThumb - 1;
+            else
+                index--;
+            picShow(index);
+        });
+        $('.w_auto #right').click(function () {
+            if (index >= lenThumb - 1)
+                index = 0;
+            else
+                index++;
+            picShow(index);
+        });
+
+        $('#num span').click(function () {
+            index = $('#num span').index(this);
+            picShow(index);
+        });
+        var playPic = setInterval(function () {
+            picShow(index);
+            index++;
+            if (index == len) {
+                index = 0
+            }
+        }, 3000);
+
+        function picShow(i) {
+            $('#slider li').eq(i).stop(true, true).fadeIn().siblings().fadeOut();
+            $('#num > span').eq(i).addClass('on').siblings().removeClass('on');
+        }
+
+    });
+</script>
+<div class="banner">
+    <ul id="slider">
+        <li style="background:url(static/images/banner.jpg) no-repeat center center"></li>
+    </ul>
+    <div class="w1000">
+        <dl>
+            <dt>注册公司</dt>
+            <dd>
+                <div class="input-box submit-wrapper">
+                    <input class="name" type="text" placeholder="您的称呼"/>
+                    <input class="phoneNum" type="text" size="15" placeholder="您的常用联系电话"/>
+                    <span class="banner-btn submit-btn">立即咨询</span>
+                </div>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="clear"></div>
+<!--content-->
+<div class="servcebox">
+    <div class="w1000">
+        <div class="title_ing">
+            <h2>服务项目</h2>
+            <i></i>
+            <h3>Service Ltems</h3>
+        </div>
+        <ul class="ltems_list">
+            <li>
+                <img src="static/picture/aico1.png"/>
+                <h5>注册公司</h5>
+            </li>
+            <li>
+                <img src="static/picture/aico2.png"/>
+                <h5>代理记账</h5>
+            </li>
+            <li>
+                <img src="static/picture/aico3.png"/>
+                <h5>商标注册</h5>
+            </li>
+            <li>
+                <img src="static/picture/aico4.png"/>
+                <h5>公司变更</h5>
+            </li>
+            <li>
+                <img src="static/picture/aico5.png"/>
+                <h5>税务变更</h5>
+            </li>
+            <li>
+                <img src="static/picture/aico6.png"/>
+                <h5>人事代理</h5>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--优势-->
+<div class="idx02">
+    <dl class="w1000">
+        <dt>我们的优势</dt>
+        <dd>
+            <ul>
+                <li class="li01"><p>放心注册</p>我们为您提供免费的<br/>注册地址</li>
+                <li class="li02"><p>零等待</p>申请当天就上报</li>
+                <li class="li03"><p>专业团队</p>10年从业经验专家</li>
+                <li class="li04"><p>用心服务</p>专属顾问1对1服务</li>
+            </ul>
+            <div class="clear"></div>
+        </dd>
+    </dl>
+</div>
+<div class="idx03"><img src="static/picture/ico07.png"/></div>
+<div class="idx04"><img src="static/picture/ico08.png"/></div>
+<div class="idx03"><img src="static/picture/ico09.png"/></div>
+<!--干货新闻-->
+<div class="idx05">
+    <dl class="w1000">
+        <dt><img src="static/picture/ico13.png"/></dt>
+        <dd>
+            <ul>
+                <li>
+                    <img src="static/picture/ico11.jpg"/>
+                    <p>
+                        <a href="#">新政策：9月1日执行运输业进项税抵扣、个人代开发票等</a>
+                        <span>一、纳税人发生跨境应税行为，按照《国家税务总局关于发布〈营业税改征增值税 ... </span>
+                    </p>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </dd>
+    </dl>
+<!--    友情链接-->
+    <div class="flink w1000">
+        <dl>
+            <dt><span>友情链接</span></dt>
+            <dd>
+                <a href='#' target="_blank">启航无忧</a>
+                <a href='#' target="_blank">启航无忧</a>
+                <a href='#' target="_blank">启航无忧</a>
+                <a href='#' target="_blank">启航无忧</a>
+            </dd>
+        </dl>
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="w1000">
+        <img src="static/images/logo.jpg" class="f_logo" width="100px"/>
+        <p style="margin: 30px 0 0 64px;"><span style="    width: 575px;">Copyright 2002-2030  <a
+                href="http://www.changtengqiye.com/" style="
+    color: #cacaca;">上海注册公司_上海公司注册 </a>版权所有 </span></p>
+
+        <p style="margin:0px 0 0 62px;"><span style="    width: 575px;">联系电话：<?=$sys->tel?> <a
+                href='http://www.beian.miit.gov.cn' style="   color: #cacaca;">沪ICP备09003551号-3</a><a
+                href="http://www.changtengqiye.com/sitemap.xml" style="   color: #cacaca;">网站地图</a></span></p>
+        <img src="static/images/wx.jpg" class="ewm" width="100px"/>
+        <div class="clear"></div>
+    </div>
+</div>
+
+</body>
+</html>

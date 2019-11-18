@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"/>
+    <title>联系我们-湖北楚威公司</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"/>
+    <script src="static/js/jquery-1.7.min.js"></script>
+    <script src="static/js/common.js"></script>
+</head>
+<body>
+<!--topbar-->
+<div class="top">
+    <div class="w1000">
+        <div class="one"><?=$sys->webname?></div>
+        <div class="two">投诉电话：<?=$sys->phone?><span>热线电话：<?=$sys->tel?></span></div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--header-->
+<div class="head">
+    <div class="w1000">
+        <div class="logo"><a title="昌腾企业中心"></a></div>
+        <div class="menu">
+            <div class="item "><a href="#">上海注册公司首页</a></div>
+            <div class="item "><a href="#">免费注册公司</a></div>
+            <div class="item "><a href="#">代理记账</a></div>
+            <div class="item "><a href="#">商标注册</a></div>
+            <div class="item cur"><a href="#">联系我们</a></div>
+
+            <div class="item"><a href="#" rel="nofollow"><img src="static/picture/navlogo.png"/></a></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="clear"></div>
+<!-- banner-->
+<div class="list_banner" style="background:url(static/images/1466703689.jpg) no-repeat center top"></div>
+<!--content-->
+<div class="list_wrap bg">
+    <div class="w1000">
+        <dl>
+            <dt><img src="static/picture/cont.png"/></dt>
+            <dd>
+                <div class="cont">公司名称：<?=$sys->webname?> <br/>
+                    联系方式： <?=$sys->tel?><br/>
+                    在线QQ： <?=$sys->qq?><br/>
+                    地址： <?=$sys->address?><br/>
+                    公司官网：<span style="color:#E53333;">www.cwzcgs.com</span></div>
+                <br/>
+                <script type="text/javascript" src="static/js/64d16c2ec13f4065a466a878dcbbbb28.js"></script>
+                <div style="width:100%;height:510px" id="dituContent"></div>
+                <script type="text/javascript">
+                    //创建和初始化地图函数：
+                    function initMap() {
+                        createMap();//创建地图
+                        setMapEvent();//设置地图事件
+                        addMapControl();//向地图添加控件
+                        addMarker();//向地图中添加marker
+                    }
+
+                    //创建地图函数：
+                    function createMap() {
+                        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                        var point = new BMap.Point(121.474853, 31.250486);//定义一个中心点坐标
+                        map.centerAndZoom(point, 18);//设定地图的中心点和坐标并将地图显示在地图容器中
+                        window.map = map;//将map变量存储在全局
+                    }
+
+                    //地图事件设置函数：
+                    function setMapEvent() {
+                        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                        map.enableKeyboard();//启用键盘上下左右键移动地图
+                    }
+
+                    //地图控件添加函数：
+                    function addMapControl() {
+                        //向地图中添加缩放控件
+                        var ctrl_nav = new BMap.NavigationControl({
+                            anchor: BMAP_ANCHOR_TOP_LEFT,
+                            type: BMAP_NAVIGATION_CONTROL_LARGE
+                        });
+                        map.addControl(ctrl_nav);
+                        //向地图中添加缩略图控件
+                        var ctrl_ove = new BMap.OverviewMapControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 0});
+                        map.addControl(ctrl_ove);
+                        //向地图中添加比例尺控件
+                        var ctrl_sca = new BMap.ScaleControl({anchor: BMAP_ANCHOR_BOTTOM_LEFT});
+                        map.addControl(ctrl_sca);
+                    }
+
+                    //标注点数组
+                    var markerArr = [{
+                        title: "上海财税网",
+                        content: "上海市新静安区海宁路1399号2605室",
+                        point: "121.474997|31.250108",
+                        isOpen: 1,
+                        icon: {w: 23, h: 25, l: 46, t: 21, x: 9, lb: 12}
+                    }
+                    ];
+
+                    //创建marker
+                    function addMarker() {
+                        for (var i = 0; i < markerArr.length; i++) {
+                            var json = markerArr[i];
+                            var p0 = json.point.split("|")[0];
+                            var p1 = json.point.split("|")[1];
+                            var point = new BMap.Point(p0, p1);
+                            var iconImg = createIcon(json.icon);
+                            var marker = new BMap.Marker(point, {icon: iconImg});
+                            var iw = createInfoWindow(i);
+                            var label = new BMap.Label(json.title, {"offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20)});
+                            marker.setLabel(label);
+                            map.addOverlay(marker);
+                            label.setStyle({
+                                borderColor: "#808080",
+                                color: "#333",
+                                cursor: "pointer"
+                            });
+
+                            (function () {
+                                var index = i;
+                                var _iw = createInfoWindow(i);
+                                var _marker = marker;
+                                _marker.addEventListener("click", function () {
+                                    this.openInfoWindow(_iw);
+                                });
+                                _iw.addEventListener("open", function () {
+                                    _marker.getLabel().hide();
+                                })
+                                _iw.addEventListener("close", function () {
+                                    _marker.getLabel().show();
+                                })
+                                label.addEventListener("click", function () {
+                                    _marker.openInfoWindow(_iw);
+                                })
+                                if (!!json.isOpen) {
+                                    label.hide();
+                                    _marker.openInfoWindow(_iw);
+                                }
+                            })()
+                        }
+                    }
+
+                    //创建InfoWindow
+                    function createInfoWindow(i) {
+                        var json = markerArr[i];
+                        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+                        return iw;
+                    }
+
+                    //创建一个Icon
+                    function createIcon(json) {
+                        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w, json.h), {
+                            imageOffset: new BMap.Size(-json.l, -json.t),
+                            infoWindowOffset: new BMap.Size(json.lb + 5, 1),
+                            offset: new BMap.Size(json.x, json.h)
+                        })
+                        return icon;
+                    }
+
+                    initMap();//创建和初始化地图
+                </script>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="clear"></div>
+<!-- footer-->
+<div class="footer">
+    <div class="w1000">
+        <img src="static/images/logo.jpg" class="f_logo" width="100px"/>
+        <p style="margin: 30px 0 0 64px;"><span style="    width: 575px;">Copyright 2002-2030  <a
+                href="http://www.changtengqiye.com/" style="
+    color: #cacaca;">上海注册公司_上海公司注册 </a>版权所有 </span></p>
+
+        <p style="margin:0px 0 0 62px;"><span style="    width: 575px;">联系电话：<?=$sys->tel?> <a
+                href='http://www.beian.miit.gov.cn' style="   color: #cacaca;">沪ICP备09003551号-3</a><a
+                href="http://www.changtengqiye.com/sitemap.xml" style="   color: #cacaca;">网站地图</a></span></p>
+        <img src="static/images/wx.jpg" class="ewm" width="100px"/>
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+</html>
