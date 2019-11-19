@@ -11,19 +11,6 @@ Component({
      * 组件的初始数据
      */
     data: {
-        // topicObj: {
-        //     id: 1,
-        //     titleType: "多选题",
-        //     titleText: "这是题目",
-        //     options: [
-        //         "这是选项一",
-        //         "这是选项二",
-        //         "这是选项三",
-        //         "这是选项四"
-        //     ],
-        //     answer: [1,2],
-        //     explain: '详细解释'
-        // },
         optionT: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G'],
         classList: new Array(10),
         showExplain: false
@@ -55,14 +42,15 @@ Component({
         submitBtnTap(){
             let classList = this.data.classList;
             let showExplain = false;
+            this.data.topicObj.answer.forEach(ele => {
+                if ( classList[ele] != 'blue' ) {
+                    classList[ele] = 'green';
+                    console.log(classList);
+                    showExplain = true;
+                }
+            });
             for ( let i = 0; i < this.data.topicObj.options.length; i++ ) {
-                this.data.topicObj.answer.forEach(ele => {
-                    if ( classList[ele] != 'blue' ) {
-                        classList[ele] = 'green';
-                        showExplain = true;
-                    }
-                });
-                if ( classList[i] == 'blue' && !this.data.topicObj.answer.includes(i)){
+                if ( classList[i] == 'blue' && !this.data.topicObj.answer.includes(i.toString() ) ) {
                     classList[i] = 'red';
                     showExplain = true;
                 }

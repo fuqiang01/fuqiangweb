@@ -3,7 +3,7 @@
         <image src="{{ imgSrc }}" mode="widthFix"/>
         <view class="text-wrap">
             <text class="t1">顺序练习</text>
-            <text class="t2">49 / 500</text>
+            <text class="t2">{{ sumObj.achieve }} / {{ sumObj.allNum }}</text>
         </view>
     </view>
     <view class="item" bindtap="onTap" data-type="test">
@@ -16,7 +16,7 @@
         <image src="{{ imgSrc }}" mode="widthFix"/>
         <view class="text-wrap">
             <text class="t1">错题回顾</text>
-            <text class="t2">500</text>
+            <text class="t2">{{ sumObj.wrong }}</text>
         </view>
     </view>
 </view>

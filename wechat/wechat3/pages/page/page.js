@@ -6,7 +6,8 @@ Page({
      */
     data: {
         imgSrc: '',
-        num: 0
+        num: 0,
+        sumObj: {}
     },
     onTap(e) {
         let type = e.currentTarget.dataset.type;
@@ -19,6 +20,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        let self = this;
         if ( options.num == 1 ) {
             this.setData({
                 imgSrc: '/img/bg1.jpg',
@@ -30,13 +32,29 @@ Page({
                 num: options.num
             })
         }
+        wx.request({
+            url: 'https://www.fqiang.co/getSum',
+            data: {
+                type: options.num
+            },
+            method: 'GET',
+            success(res) {
+                console.log(res)
+                self.setData({
+                    sumObj: res.data
+                })
+            },
+            fail(err) {
+                console.log(err);
+            }
+        })
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+        
     },
 
     /**

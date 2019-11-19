@@ -19,9 +19,3 @@
             </block>
         </swiper>
 </view>
-
-
-
-
-
-<!-- <f-info-item bindtonext="toNext" topicObj="{{ topicObj }}"></f-info-item> -->
