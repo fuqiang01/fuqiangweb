@@ -13,6 +13,5 @@ Page({
     })
   },
   onLoad: function () {
-    
   },
 })

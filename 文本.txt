@@ -3,6 +3,7 @@
 本地测试地址: www.hbcw.cms
 
 微信小程序AppID: wx65c9ec263c1331ef
+	  AppSecret：08df4bdac7c52d6d68b2a687b8db9bd0
 
 四个网址: http://www.cwcwdl.com/
  

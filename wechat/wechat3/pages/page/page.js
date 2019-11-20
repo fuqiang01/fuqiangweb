@@ -1,3 +1,5 @@
+
+const app = getApp()
 // pages/page/page.js
 Page({
 
@@ -20,6 +22,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        console.log(app.globalData)
         let self = this;
         if ( options.num == 1 ) {
             this.setData({
