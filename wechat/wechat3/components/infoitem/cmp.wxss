@@ -19,7 +19,10 @@
     line-height: 50rpx;
     color: #333;
 }
-
+.img-wrap image{
+    width: 100%;
+    border-radius: 10rpx;
+}
 .options {
     margin: 0 10rpx 50rpx;
 }

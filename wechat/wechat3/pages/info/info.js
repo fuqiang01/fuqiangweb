@@ -1,3 +1,4 @@
+const app = getApp()
 // pages/info/info.js
 Page({
 
@@ -5,24 +6,64 @@ Page({
      * 页面的初始数据
      */
     data: {
+        num: '',
+        type: '',
         topicArr: [],
         current: 0,
         showIndex: 0,
         isTouch: false,
         isToNext: false
     },
+    correct(e) {
+        console.log('收到正确题id：' + e.detail.id);
+        wx.request({
+            url: 'https://www.fqiang.co/addYesId',
+            data: {
+                type: this.data.num,
+                topicType: this.data.type,
+                id: e.detail.id,
+                userId: app.globalData.userId
+            },
+            method: 'GET',
+            success(res) {
+                console.log(res)
+            },
+            fail(err) {
+                console.log(err);
+            }
+        })
+        this.toNext();
+    },
     toNext() {
-        console.log('收到跳转下一页信号');
-        if ( this.data.showIndex >= this.data.topicArr.length - 1 ) {
+        if (this.data.showIndex >= this.data.topicArr.length - 1) {
             wx.showToast({
                 title: '已经是最后一题',
                 icon: 'success',
             })
             return;
-        } 
+        }
         this.setData({
             current: this.data.current + 1,
             isToNext: true
+        })
+    },
+    wrong(e) {
+        console.log('收到错误题id：' + e.detail.id);
+        wx.request({
+            url: 'https://www.fqiang.co/addWrongId',
+            data: {
+                type: this.data.num,
+                topicType: this.data.type,
+                id: e.detail.id,
+                userId: app.globalData.userId
+            },
+            method: 'GET',
+            success(res) {
+                console.log(res)
+            },
+            fail(err) {
+                console.log(err);
+            }
         })
     },
     onStart() {
@@ -31,7 +72,7 @@ Page({
         })
     },
     onFinish(e) {
-        if (e.detail.source != 'touch' && !this.data.isToNext ) {
+        if (e.detail.source != 'touch' && !this.data.isToNext) {
             this.setData({
                 isTouch: false
             })
@@ -45,7 +86,6 @@ Page({
             showIndex = showIndex <= 0 ? 0 : showIndex - 1;
         }
         current = showIndex == 0 ? 0 : 1;
-        console.log(current)
         this.setData({
             showIndex,
             current,
@@ -56,14 +96,18 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(options);
+        this.setData({
+            type: options.type,
+            num: options.num
+        })
         let self = this;
         switch (options.type) {
             case 'order':  //顺章练习
                 wx.request({
                     url: 'https://www.fqiang.co/getTopic',
                     data: {
-                        type: options.num
+                        type: options.num,
+                        userId: app.globalData.userId
                     },
                     method: 'GET',
                     success(res) {
@@ -101,7 +145,8 @@ Page({
                 wx.request({
                     url: 'https://www.fqiang.co/getWrongTopic',
                     data: {
-                        type: options.num
+                        type: options.num,
+                        userId: app.globalData.userId
                     },
                     method: 'GET',
                     success(res) {

@@ -1,0 +1,90 @@
+﻿/*about 平台网融资贷款——行业资讯+资讯详情
+ * zyr zw
+ * time：2018-1-31
+ * */
+.orange{color: #ff6c42}
+.bgh{ background:#f1f2f3; }
+/*当前位置 start*/
+.current-address {font-size: 14px;color: #999;line-height: 40px;overflow: hidden;padding-bottom: 5px;}
+.current-address a{color: #999}
+.post-icon{width: 12px;height: 14px;background-position: 0 -54px;position: relative;top: 2px;color: #888;}
+.current-address>a:hover {color: #11bbb8;text-decoration: underline}
+.current-address a:last-child {color: #11bbb8}
+/*当前位置 end*/
+/*左边 start*/
+.news-fl{width: 880px;background: #fff;margin-bottom: 40px;}
+.news-list{width: 100%}
+.news-list li{width: 840px;padding: 20px;border-bottom: 1px solid #f0f0f0;overflow: hidden;line-height: 0;-webkit-transition: all .35s;transition: all .35s;}
+.news-list li:hover{box-shadow:0 0 15px 10px #f0f0f0 }
+.news-img{width: 180px;height: 130px;overflow: hidden;margin-right: 20px;}
+.news-img img,.read-img img{width: 100%;min-height: 100%;-webkit-transition: all .9s;transition: all .9s;}
+.news-list li:hover img,.read-list li a:hover img{-webkit-transform: scale(1.06);transform: scale(1.06);}
+.news-text{display: block;width: 630px;text-align: left;}
+.news-text h3{font-size: 16px;line-height: 28px;padding: 3px 0 10px;color: #333;}
+.news-text h3 span{font-size:13px;width:68px;text-align: center;height: 24px;border-radius: 12px;border: 1px solid #11bbb8;color: #11bbb8;margin-right: 10px;vertical-align: middle;}
+.news-text p{font-size: 14px;color: #666;line-height: 24px;height: 48px;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2; word-break:break-all; /*支持IE，chrome，FF不支持*/word-wrap:break-word;/*支持IE，chrome，FF*/margin-bottom:20px;}
+.news-text>span{font-size: 14px;color: #888;}
+.news-text p font:hover{text-decoration: underline}
+.news-list li:hover .news-text h3{color: #11bbb8}
+.story-list{width: 100%;line-height: 0;vertical-align: middle;}
+.story-list a {font-size: 12px;color: #666;line-height: 31px;text-align: left;text-overflow: ellipsis; white-space: nowrap;  overflow: hidden; width: 230px }
+.story-list a span,.tj-text a span{width: 3px;height: 3px;background: #ff6c42;margin-right: 5px;vertical-align: middle;}
+.story-list a:hover{color:#11bbb8}
+.up-down{margin: 50px auto;text-align: center;}
+.up-down>a{border: 1px solid #c1c1c1;padding: 5px;}
+.up-down>span>a{border: 1px solid #c1c1c1;padding: 5px 10px;}
+.prevPage{color: red;}
+.up-down>span>.on{color:#fff;background-color: orange;border: none;margin: 5px;}
+.up-down>span>.active{color:#fff;background-color: orange;border: none;margin: 5px;}
+.liuyanfr{background:#fff url(../images/ly_top.jpg) no-repeat top center !important; height: 400px; width: 230px}
+.liuyanfr .ly_tit{ color: #fff; font-size: 14px; padding-top: 20px }
+.liuyanfr .ly_tit b{ font-size: 28px;  display: block; padding-bottom: 20px }
+.liuyanfr .ly_tit i{ width: 40px; height: 2px; background: #bfa52e; display: block; margin-bottom: 15px }
+.liuyanbox{ margin-top: 70px }
+.liuyanbox input{ width: 230px; background: #f5f5f5; border: 1px #ddd solid; height: 40px; line-height: 40px; color: #666; text-indent: 20px; margin-top: 10px }
+.liuyanbox .submit { background:#dfca5f; color: #322920; text-align: center; border: 0; border-radius: 3px; margin-top: 20px }
+/*左边 end*/
+
+/*右边 start*/
+.news-fr{width: 280px;}
+.tt-h4{font-size: 16px;color: #333;line-height:22px;padding-left: 10px;border-left: 2px solid #11bbb8;overflow: hidden;margin-bottom: 10px;}
+.fr-box{width: 240px;padding: 20px 20px 10px;background: #fff;margin-bottom: 20px; height: auto; overflow: hidden;}
+.read-list,.read-list li,.read-list li a{width: 100%;}
+.read-list li{line-height: 0}
+.read-list li a{padding: 10px 0;overflow: hidden;}
+.read-img{width: 86px;height: 63px;overflow: hidden;margin-right: 13px;}
+.read-text{width: 140px;text-align: left;}
+.read-text p{font-size: 12px;color: #666;line-height: 20px;height: 60px;overflow: hidden;text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:3; word-break:break-all; /*支持IE，chrome，FF不支持*/word-wrap:break-word;/*支持IE，chrome，FF*/}
+.ad-tag-lists li {margin-right: 10px;margin-bottom: 10px; float: left;}
+.ad-tag-lists li a {display: block;font-size: 12px;color: #333;border: 1px solid #eaeaea;padding: 10px;}
+.ad-tag-lists li a:hover {color: #2faaff;background: #edf8ff;border: 1px solid #2faaff;}
+.newsnav-list li{  text-align: center; width: 94%; margin:0 auto 10px auto; height: 35px; line-height: 35px; border:1px #ddd solid; }
+.newsnav-list li a{ display: block; }
+.newsnav-list li a:hover{background:#11bbb8; color: #fff}
+.newsnav-list .newsfl_sy{background:#11bbb8; color: #fff}
+/*右边 end*/
+/*资讯详情 start*/
+.details-box{padding: 0 20px;background: #fff;margin-bottom: 20px;}
+.details-tt{width: 100%;text-align: left;padding: 20px 0 15px;border-bottom: 1px solid #f0f0f0;}
+.details-tt label{font-size: 12px;color: #666;}
+.details-tt label font{padding-right: 20px}
+.details-tt label font{padding-right: 20px}
+.details-bd{color: #333;line-height: 20px;border-bottom: 1px solid #f0f0f0;}
+.newsfl{ width: 850px; min-height: 500px }
+.newsfr{ width: 230px; }
+
+/*.details-bd{text-align: center;padding-bottom: 40px;border-bottom: 1px solid #f0f0f0}*/
+.details-bd h1{font-size:20px;font-weight: bold;color: #333;line-height: 100px; text-align: center;}
+.details-bd p{font-size: 16px;color: #666;line-height: 26px;padding-bottom: 5px;text-align: left;}
+.details-bd p b{display: block;text-indent: 0;}
+.share-box{overflow:hidden ;padding: 30px 25px 30px 0;}
+.turn-text a{font-size: 14px;color: #333;line-height: 24px;}
+.turn-text a:hover{text-decoration: underline;color: #ff6c42;}
+.bdsharebuttonbox{margin-top: 15px;}
+.details-tt2{width: 100%;border-bottom: 1px solid #f0f0f0;}
+.details-tt2>span{font-size: 22px;color: #033333;border-bottom: 1px solid #11bbb8;top: 2px;padding: 20px 0;}
+.tj-text{width: 100%;overflow: hidden;padding: 10px 0;}
+.tj-text a{display: block;float: left;text-align: left;font-size: 14px;color: #666;line-height: 33px; height: 33px; overflow: hidden; text-overflow:  ellipsis;white-space:nowrap; width: 230px}
+.tj-text a span{margin: 0 5px}
+.tj-text a:hover{text-decoration: underline}
+/*资讯详情 end*/

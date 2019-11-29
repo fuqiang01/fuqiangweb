@@ -1,0 +1,1067 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册公司</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="static/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+    <link rel="stylesheet" href="static/css/animated.css"/>
+    <link rel="stylesheet" href="static/css/layer.css"/>
+    <link rel="stylesheet" href="static/css/layui.css"/>
+    <link rel="stylesheet" href="static/css/citypicker2.css"/>
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+</head>
+<body>
+<!--header start-->
+<header class="header clear">
+    <div class="top">
+        <div class="w1200">
+            <span>
+                <a href="/company">关于我们</a> |
+                <a href="/contact">联系我们</a>  |
+                <a href="/" class="sjwz">
+                    访问手机站
+                    <img src="static/picture/5d267f9ac0d28.jpg" alt="访问手机站">
+                </a>
+            </span>
+            易创企服-您身边的创业好帮手
+        </div>
+    </div>
+    <div class="w1200">
+        <div class="logo fl">
+            <a href="/" titile="">
+                <img src="static/picture/logo.png" alt="易创企服服务">
+            </a>
+        </div>
+        <div class="dqcity fl"><span id="showcity">[ 选择服务城市 ]</span>
+            <div id="topcity">
+                <a href="#" target="_blank">上海</a>
+                <a href="#" target="_blank">广州</a>
+                <a href="#" target="_blank">深圳</a>
+                <a href="#" target="_blank">厦门</a>
+                <a href="#" target="_blank">杭州</a>
+                <a href="#" target="_blank">南京</a>
+                <a href="#" target="_blank">重庆</a>
+                <a href="#" target="_blank">天津</a>
+                <a href="#" target="_blank">武汉</a>
+                <a href="#" target="_blank">济南</a>
+                <a href="#" target="_blank">青岛</a>
+                <a href="#" target="_blank">长沙</a>
+                <a href="#" target="_blank">西安</a>
+                <a href="#" target="_blank">郑州</a>
+                <a href="#" target="_blank">宁波</a>
+                <a href="#" target="_blank">东莞</a>
+                <a href="#" target="_blank">义乌</a>
+                <a href="#" target="_blank">无锡</a>
+                <a href="#" target="_blank">合肥</a>
+                <a href="#" target="_blank">北京</a>
+                <a href="#" target="_blank">贵阳</a>
+                <a href="#" target="_blank">福州</a>
+                <a href="#" target="_blank">温州</a>
+                <a href="#" target="_blank">昆明</a>
+                <a href="#" target="_blank">成都</a>
+                <a href="#" target="_blank">德阳</a>
+                <a href="#" target="_blank">绵阳</a>
+                <a href="#" target="_blank">石家庄</a>
+                <a href="#" target="_blank">佛山</a>
+                <a href="#" target="_blank">南昌</a>
+                <a href="#" target="_blank">太原</a>
+                <a href="#" target="_blank">长春</a>
+                <a href="#" target="_blank">南宁</a>
+            </div>
+        </div>
+        <div class="search fl">
+            <select name="" onchange="javascript:if (this.options[this.selectedIndex].value != '')
+        window.open(this.options[this.selectedIndex].value);this.options[0].selected;">
+                <option value="">请输入您所需的服务项目</option>
+                <option value="#">会计服务</option>
+                <option value="#">代理记账</option>
+                <option value="#">审计验资</option>
+                <option value="#">财税咨询</option>
+                <option value="#">工商服务</option>
+                <option value="#">工商注册</option>
+                <option value="#">公司变更</option>
+                <option value="#">许可证办理</option>
+                <option value="#">增值服务</option>
+                <option value="#">商标注册</option>
+                <option value="#">互联网营销</option>
+            </select>
+        </div>
+        <div class="tel fr">
+            <div class="img dib">
+                <img src="static/picture/tel.png" alt="咨询热线"/>
+            </div>
+            <b class="dib"><span>咨询热线</span><?=$sys->tel?></b>
+        </div>
+    </div>
+</header>
+<!--header end-->
+<!--nav start-->
+<nav class="hearder-nav">
+    <div class="w1200 clear">
+        <div class="other-style fl">
+            <p class="dib">全部产品</p>
+            <i class="dib"></i>
+            <div class="hide-div-nav">
+                <ul>
+                    <li>
+                        <i class="dib one"></i>
+                        <dl class="dib">
+                            <dt>
+                                <a class="dib" href="#">会计服务</a>
+                            </dt>
+                            <dd>
+                                <a class="dib" href="#">代理记账</a>
+                                <a class="dib" href="/">审计验资</a>
+                                <a class="dib" href="#">财税咨询</a>
+                            </dd>
+                        </dl>
+                        <div class="right-nav-hide">
+                            <p>会计服务</p>
+                            <a class="dib clear" href="#">
+                                <div class="fl left">
+                                    <p>代理记账</p>
+                                    <span class="dib">详情咨询</span>
+                                </div>
+                                <i class="fr right"></i>
+                            </a>
+                            <a class="dib clear" href="#">
+                                <div class="fl left">
+                                    <p>审计验资</p>
+                                    <span class="dib">详情咨询</span>
+                                </div>
+                                <i class="fr right"></i>
+                            </a>
+                            <a class="dib clear" href="#">
+                                <div class="fl left">
+                                    <p>财税咨询</p>
+                                    <span class="dib">详情咨询</span>
+                                </div>
+                                <i class="fr right"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="dib two"></i>
+                        <dl class="dib">
+                            <dt>
+                                <a class="dib" href="#">工商服务</a>
+                            </dt>
+                            <dd>
+                                <a class="dib" href="#">工商注册</a>
+                                <a class="dib" href="#">公司变更</a>
+                                <a class="dib" href="#">银行开户</a>
+                                <a class="dib" href="#">许可证办理</a>
+                            </dd>
+                        </dl>
+                        <div class="right-nav-hide">
+                            <p>工商服务</p>
+                            <a class="dib clear" href="#">
+                                <div class="fl left">
+                                    <p>工商注册</p>
+                                    <span class="dib">详情咨询</span>
+                                </div>
+                                <i class="fr right"></i>
+                            </a>
+                            <a class="dib clear" href="#">
+                                <div class="fl left">
+                                    <p>公司变更</p>
+                                    <span class="dib">详情咨询</span>
+                                </div>
+                                <i class="fr right"></i>
+                            </a>
+                            <a class="dib clear" href="#">
+                                <div class="fl left">
+                                    <p>银行开户</p>
+                                    <span class="dib">详情咨询</span>
+                                </div>
+                                <i class="fr right"></i>
+                            </a>
+                            <a class="dib clear" href="#">
+                                <div class="fl left">
+                                    <p>许可证办理</p>
+                                    <span class="dib">详情咨询</span>
+                                </div>
+                                <i class="fr right"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="last">
+                        <i class="dib three"></i>
+                        <dl class="dib">
+                            <dt>
+                                <a class="dib" href="#" target="_blank">增值服务</a>
+                            </dt>
+                            <dd>
+                                <a class="dib" href="#" target="_blank">商标注册</a>
+                                <a class="dib" href="/">资质服务</a>
+                                <a class="dib" href="#">互联网营销</a>
+                            </dd>
+                        </dl>
+                        <div class="right-nav-hide">
+                            <p>增值服务</p>
+                            <a class="dib clear" href="#" target="_blank">
+                                <div class="fl left">
+                                    <p>商标注册</p>
+                                    <span class="dib">详情咨询</span>
+                                </div>
+                                <i class="fr right"></i>
+                            </a>
+                            <a class="dib clear" href="#" target="_blank">
+                                <div class="fl left">
+                                    <p>资质服务</p>
+                                    <span class="dib">详情咨询</span>
+                                </div>
+                                <i class="fr right"></i>
+                            </a>
+                            <a class="dib clear" href="#">
+                                <div class="fl left">
+                                    <p>互联网品牌营销</p>
+                                    <span class="dib">详情咨询</span>
+                                </div>
+                                <i class="fr right"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="cont-list fl">
+            <li class="choose-on">
+                <a class="dib" href="/">首页</a>
+            </li>
+            <li>
+                <a class="dib" href="#">工商注册</a>
+            </li>
+            <li>
+                <a class="dib" href="#">会计代理</a>
+            </li>
+            <li>
+                <a class="dib" href="#">财税咨询</a>
+            </li>
+            <li>
+                <a class="dib" href="#">加盟我们</a>
+            </li>
+            <li>
+                <a class="dib" href="#">工商资讯</a>
+            </li>
+            <li>
+                <a class="dib" href="#">关于我们</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--nav end-->
+
+<!--content start-->
+<div class="page-content">
+    <div class="xdcy-banner-part">
+        <!--banner start-->
+        <div class="banner-mid">
+            <div class="bd">
+                <ul class="clear">
+                    <li>
+                        <a href="" class="dib">
+                            <img src="static/picture/5d5b4febec82e.jpg" alt="公司注册">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.8qifu.com/fuwu/31" class="dib">
+                            <img src="static/picture/5d5b50a2b34a7.jpg" alt="银行对公开户">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.8qifu.com/join/" class="dib">
+                            <img src="static/picture/5d5b4ce098968.jpeg" alt="招商加盟">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="hd clear dib">
+                <li class="on"></li>
+                <li class="on"></li>
+                <li class="on"></li>
+            </ul>
+            <!--表单 start-->
+            <div class="w1200">
+                <div class="greet-dgg">
+                    <div class="img">
+                        <img src="static/picture/form.jpg" alt="易创企服您的创业好帮手"/>
+                    </div>
+                    <div class="banner-form submit-wrapper" id="form1">
+                        <div class="banner-input">
+                            <i class="dib pulics-icons"></i>
+                            <input type="text" name="name" class="name" placeholder="请输入您的称呼"/>
+                        </div>
+                        <div class="banner-input">
+                            <i class="dib pulics-icons tel-icon"></i>
+                            <input type="text" name="tel" class="phoneNum" placeholder="请输入您的手机号码"/>
+                        </div>
+                        <button class="opacity submit-btn">立即办理</button>
+                    </div>
+                </div>
+            </div>
+            <!--表单 end-->
+        </div>
+        <!--banner end-->
+    </div>
+    <!--hot start-->
+    <div class="w1200 hot-discuss">
+        <i class="dib"></i>
+        <b class="dib">热门咨询 : </b>
+        <a class="dib" href="#"><span class="dib">【广汉注册公司】费用流程_广汉注册公司资料以及步骤</span></a>
+        <a class="dib" href="#"><span class="dib">【旌阳区注册公司】流程费用_旌阳区注册公司资料以及步骤</span></a>
+        <a class="dib" href="#"><span class="dib">【犀浦注册公司】费用流程_资料以及步骤</span></a>
+    </div>
+    <!--hot end-->
+    <!--menage start-->
+    <link rel="stylesheet" type="text/css" href="static/css/message.css"/>
+    <div class="add-qy w1200">
+        <div class="tab-catalog-02">
+            <a href="javascript:void(0)" class="dib atthis">极速预约</a>
+            <a href="javascript:void(0)" class="dib">公司核名</a>
+            <a href="javascript:void(0)" class="dib">代理记账</a>
+            <a href="javascript:void(0)" class="dib last">资质代办</a>
+        </div>
+        <div class="qy-cont">
+            <div class="floor" style="display: block;">
+                <div>
+                    <div class="bannerb-input clearfix submit-wrapper">
+                        <div class="banner-input-con fl">
+                            <div class="banner-city fl">
+                                <div id="formCityMock4">成都市</div>
+                                <img src="static/picture/triangle.png" class="banner-city-img">
+                            </div>
+                            <div class="banner-name fl">
+                                <input type="text" id="banner-name-input" class="banner-name-input phoneNum"
+                                       placeholder="请输入您的手机号" value="" name="tel">
+                            </div>
+                            <div class="banner-suffix banner-suffixname fl">
+                                <input type="text" id="banner-suffix-input" class="banner-suffix-input name"
+                                       placeholder="请输入您的称呼" name="name">
+                            </div>
+                        </div>
+                        <button class="banner-btn fl submit-btn">免费预约</button>
+                    </div>
+                </div>
+                <div class="banner-hint"><span class="banner-hint-icon"></span>
+                    网上免费预约更便捷，无需排队！
+                </div>
+            </div>
+            <div class="floor">
+                <div>
+                    <div class="bannerb-input clearfix">
+                        <div class="banner-input-con fl">
+                            <div class="banner-city fl">
+                                <div id="formCityMock4">成都市</div>
+                                <img src="static/picture/triangle.png" class="banner-city-img">
+                            </div>
+                            <div class="banner-name fl">
+                                <input type="text" id="banner-name-input" class="banner-name-input"
+                                       placeholder="请输入企业字号" value="">
+                            </div>
+                            <div class="banner-trade fl">
+                                <input type="text" id="banner-trade-input" class="banner-trade-input" placeholder="所属行业"
+                                       value="">
+                                <img src="static/picture/triangle.png" class="banner-trade-img">
+                            </div>
+                            <div class="banner-suffix fl">
+                                <input type="text" id="banner-suffix-input" class="banner-suffix-input"
+                                       placeholder="有限公司" value="有限公司">
+                                <img src="static/picture/triangle.png" class="banner-suffix-img">
+                            </div>
+                        </div>
+                        <button class="banner-btn fl" onclick="purepop2()">免费核名</button>
+                        <div class="banner-trade-select">
+                            <ul class="lists lists1 clearfix">
+                                <li class="fl actived">科技类</li>
+                                <li class="fl"><a href="javascript:void(0);">网络科技</a></li>
+                                <li class="fl"><a href="javascript:void(0);">生物医药科技</a></li>
+                                <li class="fl"><a href="javascript:void(0);">信息科技</a></li>
+                                <li class="fl"><a href="javascript:void(0);">通信科技</a></li>
+                                <li class="fl"><a href="javascript:void(0);">新能源科技</a></li>
+                                <li class="fl"><a href="javascript:void(0);">自动化科技</a></li>
+                                <li class="fl"><a href="javascript:void(0);">激光科技</a></li>
+                                <li class="fl"><a href="javascript:void(0);">新材料</a></li>
+                                <li class="fl"><a href="javascript:void(0);">游戏科技</a></li>
+                                <li class="fl"><a href="javascript:void(0);">海洋科技</a></li>
+                                <li class="fl"><a href="javascript:void(0);">其他科技</a></li>
+                            </ul>
+                            <ul class="lists lists2 clearfix">
+                                <li class="fl actived">服务类</li>
+                                <li class="fl"><a href="javascript:void(0);">生活服务</a></li>
+                                <li class="fl"><a href="javascript:void(0);">企业服务</a></li>
+                                <li class="fl"><a href="javascript:void(0);">翻译服务</a></li>
+                                <li class="fl"><a href="javascript:void(0);">礼仪服务</a></li>
+                                <li class="fl"><a href="javascript:void(0);">劳动服务</a></li>
+                                <li class="fl"><a href="javascript:void(0);">教育服务</a></li>
+                                <li class="fl"><a href="javascript:void(0);">旅游服务</a></li>
+                                <li class="fl"><a href="javascript:void(0);">运输服务</a></li>
+                                <li class="fl"><a href="javascript:void(0);">居民服务</a></li>
+                                <li class="fl"><a href="javascript:void(0);">租赁服务</a></li>
+                                <li class="fl"><a href="javascript:void(0);">其他服务</a></li>
+                            </ul>
+                            <ul class="lists lists3 clearfix">
+                                <li class="fl actived">管理类</li>
+                                <li class="fl"><a href="javascript:void(0);">企业管理</a></li>
+                                <li class="fl"><a href="javascript:void(0);">酒店管理</a></li>
+                                <li class="fl"><a href="javascript:void(0);">投资管理</a></li>
+                                <li class="fl"><a href="javascript:void(0);">餐饮管理</a></li>
+                                <li class="fl"><a href="javascript:void(0);">物业管理</a></li>
+                                <li class="fl"><a href="javascript:void(0);">人力资源管理</a></li>
+                                <li class="fl"><a href="javascript:void(0);">商业管理</a></li>
+                            </ul>
+                            <ul class="lists lists4 clearfix">
+                                <li class="fl actived">咨询类</li>
+                                <li class="fl"><a href="javascript:void(0);">战略咨询</a></li>
+                                <li class="fl"><a href="javascript:void(0);">IT咨询</a></li>
+                                <li class="fl"><a href="javascript:void(0);">创新设计咨询</a></li>
+                                <li class="fl"><a href="javascript:void(0);">财务咨询</a></li>
+                                <li class="fl"><a href="javascript:void(0);">技术咨询</a></li>
+                                <li class="fl"><a href="javascript:void(0);">商务咨询</a></li>
+                            </ul>
+                            <ul class="lists lists5 clearfix">
+                                <li class="fl actived">其 他</li>
+                                <li class="fl"><a href="javascript:void(0);">建筑装潢</a></li>
+                                <li class="fl"><a href="javascript:void(0);">实业</a></li>
+                                <li class="fl"><a href="javascript:void(0);">贸易</a></li>
+                                <li class="fl"><a href="javascript:void(0);">软件开发</a></li>
+                                <li class="fl"><a href="javascript:void(0);">批发采购</a></li>
+                                <li class="fl"><a href="javascript:void(0);">农林牧渔</a></li>
+                                <li class="fl"><a href="javascript:void(0);">工程</a></li>
+                                <li class="fl"><a href="javascript:void(0);">采矿业</a></li>
+                                <li class="fl"><a href="javascript:void(0);">生产和供应业</a></li>
+                            </ul>
+                            <ul class="lists lists6 clearfix">
+                                <li class="fl hint"><i></i>如果没有找到您想要的行业，可以选择直接输入</li>
+                            </ul>
+                        </div>
+                        <div class="banner-suffix-select">
+                            <ul>
+                                <li>有限责任公司</li>
+                                <li>股份有限公司</li>
+                                <li>合伙企业</li>
+                                <li class="suffix-actived">有限公司</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-hint"><span class="banner-hint-icon"></span>案例提示：成都公瑾科技有限公司----城市区域：北京； 字号：公瑾；
+                    所属行业：科技； 企业类型：有限公司
+                </div>
+            </div>
+            <div class="floor">
+                <div>
+                    <div class="bannerb-input clearfix submit-wrapper">
+                        <div class="banner-input-con fl">
+                            <div class="banner-city fl">
+                                <div id="formCityMock4">成都市</div>
+                                <img src="static/picture/triangle.png" class="banner-city-img">
+                            </div>
+                            <div class="banner-name fl">
+                                <input type="text" id="banner-name-input" class="banner-name-input phoneNum"
+                                       placeholder="请输入您的手机号" value="" name="tel">
+                            </div>
+                            <div class="banner-trade fl">
+                                <input type="text" id="banner-trade-input" class="banner-trade-input name"
+                                       placeholder="请输入您的称呼" value="" name="name">
+                            </div>
+                            <div class="banner-suffix fl">
+                                <input type="text" id="banner-suffix-input" class="banner-suffix-input"
+                                       placeholder="请输入金额" value="" name="money">
+                            </div>
+                        </div>
+                        <button class="banner-btn fl submit-btn">获取代账方案</button>
+                    </div>
+                </div>
+                <div class="banner-hint"><span class="banner-hint-icon"></span>
+                    输入您所需代账金额，免费获取代账方案
+                </div>
+            </div>
+            <div class="floor">
+                <div>
+                    <div class="bannerb-input clearfix submit-wrapper">
+                        <div class="banner-input-con fl">
+                            <div class="banner-city fl">
+                                <div id="formCityMock4">成都市</div>
+                                <img src="static/picture/triangle.png" class="banner-city-img">
+                            </div>
+                            <div class="banner-name fl">
+                                <input type="text" id="banner-name-input" class="banner-name-input phoneNum"
+                                       placeholder="请输入您的手机号" value="" name="tel">
+                            </div>
+                            <div class="banner-trade fl">
+                                <input type="text" id="banner-trade-input" class="banner-trade-input name"
+                                       placeholder="请输入您的称呼" value="" name="name">
+                            </div>
+                            <div class="banner-suffix fl">
+                                <input type="text" id="banner-suffix-input" class="banner-suffix-input"
+                                       placeholder="请填写所需资质" value="" name="honor">
+                            </div>
+                        </div>
+                        <button class="banner-btn fl submit-btn">获取报价</button>
+                    </div>
+                </div>
+                <div class="banner-hint"><span class="banner-hint-icon"></span>
+                    输入您所需代办资质（如：税务证、安全生产许可证、组织机构代码证、食品药品资质等），免费获取报价
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--menage end-->
+
+    <!--sever start-->
+    <div class="hot-work02 w1200">
+        <p>热门服务</p>
+        <ul class="clear">
+            <li class="one wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
+                <p>小规模代记账</p>
+                <span>资深会计请回家</span>
+                <a href="javascript:purepop2()" class="db">立即申请</a>
+            </li>
+            <li class="two wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.7s">
+                <p>一般纳税人代记账</p>
+                <span>专业、省钱</span>
+                <a href="javascript:purepop2()" class="db">立即申请</a>
+            </li>
+            <li class="three wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+                <p>公司注册+代记账</p>
+                <span>创业首选套餐</span>
+                <a href="javascript:purepop2()" class="db">立即申请</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--sever end-->
+
+    <!--代理记账 start-->
+    <div class="why-need02">
+        <div class="w1200">
+            <div class="xdcy-tit_2 dib">
+                <i class="dib"></i>
+                <p class="dib">中小企业为什么需要代理记账</p>
+                <i class="dib"></i>
+            </div>
+            <ul class="clear">
+                <li class="one wow flipInX animated" data-wow-duration="1.5s">
+                    <div class="img">
+                        <img src="static/picture/part02_01.jpg" alt="规避法律风险">
+                    </div>
+                    <p>规避法律风险</p>
+                    <span>《会计法》第36条明群规定：“不具备设置条件的应当委托中介机构代理记账。”</span>
+                </li>
+                <li class="two wow flipInX animated" data-wow-duration="1.5s">
+                    <div class="img">
+                        <img src="static/picture/part02_03.jpg" alt="降低公司成本">
+                    </div>
+                    <p>降低公司成本</p>
+                    <span>代理记账成本不到聘请专职会计的5%，且业务水平远高于专职会计</span>
+                </li>
+                <li class="three wow flipInX animated" data-wow-duration="1.5s">
+                    <div class="img">
+                        <img src="static/picture/part02_05.jpg" alt="提高财务效率">
+                    </div>
+                    <p>提高财务效率</p>
+                    <span>专职会计效率低，易创企服每位客户配备财务顾问、记账会计、外勤及审计</span>
+                </li>
+            </ul>
+            <a href="javascript:purepop2()" class="dib immedate-btn">立即帮我解决</a>
+        </div>
+    </div>
+    <!--代理记账 end-->
+
+    <!--advantage start-->
+    <div class="our-advantage02">
+        <div class="w1200">
+            <div class="xdcy-tit_2 dib">
+                <i class="dib"></i>
+                <p class="dib">代理记账为什么选择易创企服</p>
+                <i class="dib"></i>
+            </div>
+            <ul class="clear">
+                <li class="wow rotateInDownLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <i class="dib one"></i>
+                    <p>权威</p>
+                    <span>4对1专业服务，168名高级会计师团队</span>
+                </li>
+                <li class="wow rotateInDownLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <i class="dib two"></i>
+                    <p>专业</p>
+                    <span>22年服务经验，30万家中小企业的共同选择</span>
+                </li>
+                <li class="wow rotateInDownLeft" data-wow-duration="1s" data-wow-delay="0.7s">
+                    <i class="dib three"></i>
+                    <p>透明</p>
+                    <span>收费合理透明，无隐形收费，赠送财税指导</span>
+                </li>
+                <li class="wow rotateInDownLeft" data-wow-duration="1s" data-wow-delay="0.9s">
+                    <i class="dib four"></i>
+                    <p>智能</p>
+                    <span>自主研发智能财税SaaS平台，记账数据可视化</span>
+                </li>
+                <li class="last wow rotateInDownLeft" data-wow-duration="1s" data-wow-delay="1.1s">
+                    <i class="dib five"></i>
+                    <p>安全</p>
+                    <span>签订保密协议，严防客户数据外泄</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--advantage end-->
+
+    <!--流程 start-->
+    <div class="sever-process02">
+        <div class="w1200">
+            <div class="xdcy-tit_3">
+                <i class="dib left"></i>
+                <span class="dib">服务流程</span>
+                <i class="dib right"></i>
+                <p></p>
+            </div>
+            <p class="f-tit">
+                我们将为您分配 专属会计
+                <br/>
+                您可实时查看每个月的记账报税情况
+            </p>
+            <ul class="part-ul-one clear">
+                <li class="wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.3s">
+                    <span>第一步</span>
+                    <p>STEP1</p>
+                </li>
+                <li class="wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                    <span>第二步</span>
+                    <p>STEP2</p>
+                </li>
+                <li class="wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.7s">
+                    <span>第三步</span>
+                    <p>STEP3</p>
+                </li>
+                <li class="wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.9s">
+                    <span>第四步</span>
+                    <p>STEP4</p>
+                </li>
+                <li class="wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="1.1s">
+                    <span>第五步</span>
+                    <p>STEP5</p>
+                </li>
+                <li class="wow fadeInLeft last" data-wow-duration="1s" data-wow-delay="1.3s">
+                    <span>第六步</span>
+                    <p>STEP6</p>
+                </li>
+            </ul>
+            <ul class="part-ul clear">
+                <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <p>免费咨询</p>
+                    <span>套餐匹配</span>
+                </li>
+                <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <p>签订合同</p>
+                    <span>提供资料</span>
+                </li>
+                <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
+                    <p>免费上门</p>
+                    <span>收取票据</span>
+                </li>
+                <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.9s">
+                    <p>专属会计</p>
+                    <span>开始做账</span>
+                </li>
+                <li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.1s">
+                    <p>纳税申报</p>
+                    <span>规避风险</span>
+                </li>
+                <li class="wow fadeInLeft last" data-wow-duration="1s" data-wow-delay="1.3s">
+                    <p>财务报表</p>
+                    <span>一目了然</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--流程 end-->
+
+    <!--news start-->
+    <div class="xd-development w1200">
+        <div class="cont">
+            <div class="one wow fadeInDown fl" data-wow-duration="1s" data-wow-delay="0.4s">
+                <p><a href="#">更多</a>公司注册</p>
+                <ul>
+                    <!--9个-->
+                    <li>
+                        <a href="#" title="【广汉注册公司】费用流程_广汉注册公司资料以及步骤">
+                            <span>2019-10-11</span>
+                            【广汉注册公司】费用流程_广汉注册公司资料以及步骤
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="two wow fadeInDown fl" data-wow-duration="1s" data-wow-delay="0.7s">
+                <p><a href="#">更多</a>企业财税</p>
+                <ul>
+                    <li>
+                        <a href="#" title="为什么不能找个人代理记账">
+                            <span>2019-09-19</span>
+                            为什么不能找个人代理记账
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="three wow fadeInDown fl" data-wow-duration="1s" data-wow-delay="1.0s">
+                <p><a href="#">更多</a>企业变更</p>
+                <ul>
+                    <li>
+                        <a href="#" title="【公司吊销对法人股东的影响】如何避免以及处理办法">
+                            <span>2019-09-20</span>
+                            【公司吊销对法人股东的影响】如何避免以及处理办法
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--news end-->
+    <!--合作伙伴 start-->
+    <div class="cooperative-partner">
+        <div class="dgg-clock-bg">
+            <div class="xdcy-tit_3">
+                <i class="dib left"></i>
+                <span class="dib">合作伙伴</span>
+                <i class="dib right"></i>
+                <p></p>
+            </div>
+        </div>
+        <div class="dgg-part1 w1200 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <ul>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_1.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_2.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_3.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_4.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_5.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_6.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_7.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_8.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_9.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_10.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_11.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_12.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_13.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_14.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+                <li>
+                <span class="dib atthis">
+                    <img src="static/picture/hzhb_15.jpg" alt="合作伙伴" title="合作伙伴">
+                </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--合作伙伴 end-->
+    <!--展示 start-->
+    <div class="about-picture">
+        <div class="w1200">
+            <div class="fl wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s"></div>
+            <div class="fr wow fadeInRight picturetwo" data-wow-duration="1s" data-wow-delay="0.3s"></div>
+        </div>
+    </div>
+    <!--展示 end-->
+
+</div>
+<!--content end-->
+<div class="footer" style="padding-top: 0">
+
+    <div class="footer-show">
+
+        <div class="bottom-nav w1200">
+
+            <ul class="clear">
+
+                <li class="li1">
+
+                    <div class="db">
+
+                        <img src="static/picture/c5.png" alt="">
+
+                        <p class="bot-nav-p1">多元产品</p>
+
+                        <p class="bot-nav-p2">一站式商业服务平台</p></div>
+
+                </li>
+
+                <li>
+
+                    <div class="db">
+
+                        <img src="static/picture/c2.png" alt="">
+
+                        <p class="bot-nav-p1">品质保障</p>
+
+                        <p class="bot-nav-p2">所有服务由专业团队全程服务</p></div>
+
+                </li>
+
+                <li>
+
+                    <div class="db">
+
+                        <img src="static/picture/c1.png" alt="">
+
+                        <p class="bot-nav-p1">极速响应</p>
+
+                        <p class="bot-nav-p2">第一时间解决您的问题</p></div>
+
+                </li>
+
+                <li>
+
+                    <div class="db">
+
+                        <img src="static/picture/c3.png" alt="">
+
+                        <p class="bot-nav-p1">信息保密</p>
+
+                        <p class="bot-nav-p2">客户信息严格保密杜绝信息外泄</p></div>
+
+                </li>
+
+                <li>
+
+                    <div class="db">
+
+                        <img src="static/picture/c4.png" alt="">
+
+                        <p class="bot-nav-p1">售后服务</p>
+
+                        <p class="bot-nav-p2">客户的口碑就是生命线</p></div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="city">
+        <div class="w1200">
+            <b>选择城市 <span>City</span></b>
+            <a href="#" target="_blank">上海</a> /
+            <a href="#" target="_blank">广州</a> /
+            <a href="#" target="_blank">深圳</a> /
+            <a href="#" target="_blank">厦门</a> /
+            <a href="#" target="_blank">杭州</a> /
+            <a href="#" target="_blank">南京</a> /
+            <a href="#" target="_blank">重庆</a> /
+            <a href="#" target="_blank">天津</a> /
+            <a href="#" target="_blank">武汉</a> /
+            <a href="#" target="_blank">济南</a> /
+            <a href="#" target="_blank">青岛</a> /
+            <a href="#" target="_blank">长沙</a> /
+            <a href="#" target="_blank">西安</a> /
+            <a href="#" target="_blank">郑州</a> /
+            <a href="#" target="_blank">宁波</a> /
+            <a href="#" target="_blank">东莞</a> /
+            <a href="#" target="_blank">义乌 </a> /
+            <a href="#" target="_blank">无锡 </a> /
+            <a href="#" target="_blank">合肥 </a> /
+            <a href="#" target="_blank">北京 </a> /
+            <a href="#" target="_blank">贵阳 </a> /
+            <a href="#" target="_blank">福州 </a> /
+            <a href="#" target="_blank">温州 </a> /
+            <a href="#" target="_blank">昆明 </a> /
+            <a href="#" target="_blank">成都 </a> /
+            <a href="#" target="_blank">德阳 </a> /
+            <a href="#" target="_blank">绵阳 </a> /
+            <a href="#" target="_blank">石家庄</a> /
+            <a href="#" target="_blank">佛山 </a> /
+            <a href="#" target="_blank">南昌 </a> /
+            <a href="#" target="_blank">太原 </a> /
+            <a href="#" target="_blank">长春 </a> /
+            <a href="#" target="_blank">南宁 </a> /
+        </div>
+    </div>
+    <div class="w1200">
+        <div class="up clear">
+            <p class="fl">易创企服</p>
+            <a href="javascript:void(0);" class="dib fr back-top">返回顶部</a>
+        </div>
+        <div class="down clear">
+            <div class="left fl">
+                <ul class="clear">
+                    <li class="one">
+                        <p>服务中心</p>
+                        <a class="dib one" href="#">代理记账</a>
+                        <a class="dib" href="#">许可证办理</a>
+                        <a class="dib one" href="#">审计验资</a>
+                        <a class="dib" href="#">商标注册</a>
+                        <a class="dib" href="#">财税咨询</a>
+                        <a class="dib" href="#">公司注册</a>
+                        <a class="dib" href="#">公司变更</a>
+                        <a class="dib" href="#">银行开户</a>
+                        <a class="dib" href="#">互联网品牌营销</a>
+                    </li>
+                    <li class="two">
+                        <p>关于我们</p>
+                        <a class="dib one" href="#">关于上海易创 </a>
+                        <a class="dib" href="#">联系我们</a>
+                        <a class="dib one" href="#">加盟我们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mid fl">
+                <ul class="clear">
+                    <li class="one">
+                        <p>关注微信服务号</p>
+                        <span class="dib">您身边的财税专家</span><br>
+                        <i class="one dib"><img src="static/picture/5d267f9ab2a98.jpg" alt="关注微信服务号"></i>
+                    </li>
+                    <li>
+                        <p>访问手机网站</p>
+                        <span class="dib">财税热点早知道</span><br>
+                        <i class="two dib"><img src="static/picture/5d267f9ac0d28.jpg" alt="访问手机网站"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="right fl">
+                <p>联系我们</p>
+                <div class="img dib">
+                    <img src="static/picture/tel-b.png" alt="">
+                </div>
+                <div class="num dib">
+                    <p>服务咨询热线</p>
+                    <b><?=$sys->tel?></b>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom">
+                <p class="dib">友情链接</p>
+                <a href="http://www.68jiaoyu.com/" title="职业学校" target="_blank">职业学校</a>
+                <a href="http://www.bestjsxy.com/" title="健身教练培训学校" target="_blank">健身教练培训学校</a>
+                <a href="http://www.scjbk.com/" title="山特ups" target="_blank">山特ups</a>
+                <a href="http://www.yshyhg.com/"title="四川火锅加盟"target="_blank">四川火锅加盟</a>
+                <a href="http://www.jmjgb.com/" title="重庆鸡公煲加盟" target="_blank">重庆鸡公煲加盟</a>
+                <a href="http://www.8-sbw.com/ " title="注册商标" target="_blank">注册商标</a>
+                <span class="fr">
+                    版权所有:易创企服服务 &nbsp;&nbsp; 备案号：
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 漂浮 -->
+<div class="navSidebars">
+    <div class="kf_chat" onclick="purepop2()">
+        <img src="static/picture/kf-chat.png">
+        <span>在线咨询</span>
+        <div class="hover-content" onclick="purepop()">
+            <span style="margin-right:80px;">专业顾问，免费咨询</span>
+            <span>&gt;</span>
+        </div>
+    </div>
+    <div class="kf-tel" onclick="purepop2()">
+        <img src="static/picture/tel_l.png">
+        <span>免费电话</span>
+        <div class="hover-content" onclick="purepop2()">
+            <span class="tiptel">24小时专业解答</span>
+            <span class="tiptel">请输入您的联系电话，座机请加区号</span>
+            <p class="addins"></p>
+        </div>
+    </div>
+    <div class="add-chat" onclick="purepop()">
+        <img src="static/picture/add-chat.png">
+        <span>加盟咨询</span>
+        <div class="hover-content" onclick="purepop()">
+            <span>申请加盟我们，共同为企业服务</span>
+            <span>&gt;</span>
+        </div>
+    </div>
+    <div class="__wechat">
+        <img src="static/picture/wechat.png">
+        <span>公众号</span>
+        <div class="hover-content">
+            <img class="hover-erweima" src="static/picture/5d267f9ab2a98.jpg" alt="关注微信服务号">
+        </div>
+    </div>
+    <div class="__wechat">
+        <a href="#" target="_self">
+            <p style="margin: 5px 0 -10px;color:#fff;font-size: 26px;">^</p>
+            <span>返回顶部</span>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $(".wechat").on("click", function () {
+                $("#layui-layim-close").click();
+            });
+        });
+    </script>
+    <div class="right_arrow" style="">
+        <img src="static/picture/right-arrow.png">
+    </div>
+</div>
+<script type="text/javascript" src="static/js/superslide.js"></script>
+<script type="text/javascript" src="static/js/wow.min.js"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/three_linkage.js"></script>
+<script type="text/javascript" src="static/js/select.js"></script>
+</body>
+</html>

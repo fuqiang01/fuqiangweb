@@ -13,6 +13,19 @@ Page({
     },
     onTap(e) {
         let type = e.currentTarget.dataset.type;
+        if ( type === 'wrong' && this.data.sumObj.wrong === 0) {
+            wx.showToast({
+                title: '当前没有错题',
+                icon: 'success',
+            })
+            return;
+        } else if ( type === 'order' && this.data.sumObj.achieve === this.data.sumObj.allNum ) {
+            wx.showToast({
+                title: '题目已做完',
+                icon: 'success',
+            })
+            return;
+        }
         wx.navigateTo({
             url: `/pages/info/info?num=${this.data.num}&type=${type}`
         })
@@ -22,8 +35,6 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(app.globalData)
-        let self = this;
         if ( options.num == 1 ) {
             this.setData({
                 imgSrc: '/img/bg1.jpg',
@@ -35,22 +46,6 @@ Page({
                 num: options.num
             })
         }
-        wx.request({
-            url: 'https://www.fqiang.co/getSum',
-            data: {
-                type: options.num
-            },
-            method: 'GET',
-            success(res) {
-                console.log(res)
-                self.setData({
-                    sumObj: res.data
-                })
-            },
-            fail(err) {
-                console.log(err);
-            }
-        })
     },
 
     /**
@@ -64,7 +59,24 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        let self = this;
+        wx.request({
+            url: 'https://www.fqiang.co/getSum',
+            data: {
+                type: this.data.num,
+                userId: app.globalData.userId
+            },
+            method: 'GET',
+            success(res) {
+                console.log(res)
+                self.setData({
+                    sumObj: res.data
+                })
+            },
+            fail(err) {
+                console.log(err);
+            }
+        })
     },
 
     /**

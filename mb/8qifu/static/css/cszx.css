@@ -1,0 +1,153 @@
+﻿@charset "utf-8";
+/*about 财税整站——财税咨询
+ *设计：hemingli  前端：zyr
+ *time:2018-2-7
+ */
+/*公用 start*/
+.tt-h3{font-size: 30px;color: #333;font-weight: bold;padding: 49px 0;text-align: center;line-height: 1;}
+.cszx-icon{background: url(../images/icons_03_1.png) no-repeat;}
+.orange{color: #ed7c04;}
+.box1{background: #e5ecf2;padding-bottom: 60px;}
+.tt-H3{text-align: center;font-size: 30px;padding: 60px 0 50px;color: #333;font-weight: bold;}
+.corlorfff{color: #fff;}
+.tt-box{text-align: center;padding: 59px 0 30px;}
+.tt-box h3{padding: 0;line-height: 32px;}
+.tt-box p{font-size: 16px;color: #666;padding: 13px 0 0 ;line-height: 18px;}
+/*公用 end*/
+/*banner start*/
+.banner{width: 100%;height: 450px;min-width: 1180px;overflow: hidden;position: relative;z-index: 0;}
+.attatchment{position: absolute;top: 0;z-index: 0;background: url(../images/banner_03.jpg) center no-repeat; background-attachment: fixed;background-size: cover;*background-size: auto;width: 100%;height: 450px;-webkit-transition: all 4s;-moz-transition: all 4s;transition: all 4s;-webkit-transform: scale(1.05);-moz-transform: scale(1.05);transform: scale(1.05);}
+.attatchment.active{-webkit-transform: scale(1);-moz-transform: scale(1);transform: scale(1);}
+.banner-txt{text-align: left;position: relative;color: white;height: 450px;padding-left: 60px;}
+.banner-txt .p1{padding: 58px 0 0 0;line-height: 1;}
+.banner-txt a{display: block;width: 256px;height: 56px;line-height:56px;color: white;font-size:20px;border: 1px solid #fff;text-align: center;margin: 40px 0 0 0;-webkit-transition: all .35s;transition: all .35s;}
+.banner-txt a:hover{background: #fff;color: #004B92;}
+.banner-phone{position: absolute;left: 50%;margin-left: -252px;bottom: -17px;}
+.top-list li{font-size: 14px;color: #888;line-height: 24px;text-align: left;}
+.top-list li span{padding-right: 35px;}
+.greet-wx{width: 100%;text-align: center;margin: 15px 0 0;border-top: 1px solid #f2f2f2;padding: 15px 0 0;}
+.greet-wx p{color: #666;line-height: 32px;}
+.inside-banner {width: 100%;min-width: 1200px;overflow: hidden;height: 450px;position: relative;*z-index: -1;
+}
+.inside-banner>.bd {width: 1920px;position: absolute;left: 50%;margin-left: -960px;height: 450px;    
+}
+.inside-dot{position: absolute;bottom:25px;width: 100%;z-index: 3;
+}
+.inside-dot>ul {text-align: center;
+}
+.inside-dot>ul>li{cursor: pointer;display: inline-block;vertical-align: middle;*display: inline;*zoom: 1;width:12px;height:12px;margin:0 6px;background: #fff;filter:alpha(opacity=20); -moz-opacity:0.2;-khtml-opacity:0.2;opacity: 0.2;overflow: hidden;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;font-size: 0;
+}
+.inside-dot>ul>li.on {background: #fff;filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity: 1;
+}
+
+/*banner end*/
+/*企业发展遇到的财税问题 start*/
+.issue-box{position: relative;height: 400px;z-index: 3;}
+.issue-img{position: absolute;left: 0;top: -42px;z-index: -41;}
+.issue-list{padding-left: 450px;}
+.issue-list li{overflow: hidden;padding-bottom: 70px;}
+.issue-list li:first-child{padding-bottom: 45px !important;}
+.issue-list li i{width: 70px;height: 70px;vertical-align: middle;margin-right: 20px;-webkit-transition: all .96s;transition: all .96s;}
+.issue-list li .issue-icons2{background-position: -70px 0;margin-left: 98px;}
+.issue-list li .issue-icons3{background-position: -140px 0;margin-left: 140px;}
+.issue-list li p{font-size: 14px;color: #666;line-height: 24px;text-align: left;vertical-align: middle;}
+.issue-list li p span{font-size: 20px;color: #333;}
+.issue-list li a{width: 98px;height: 34px;text-align: center;line-height: 34px;border-radius: 10px;border: 1px solid #0c64bb;font-size: 14px;color: #0c64bb;vertical-align: middle;margin-top: 20px;-webkit-transition: all .35s;transition: all .35s;}
+.issue-list li:first-child a{margin-right: 253px !important;}
+.issue-list li:last-child a{margin-right: 45px !important;}
+.issue-list li:hover i{-webkit-transform: scale(1.05);transform: scale(1.05);}
+.issue-list li:hover a{background: #0c64bb;color: #fff;}
+/*企业发展遇到的财税问题 end*/
+/*怎么解决问题 start*/
+.solve-box{overflow: hidden;padding-bottom:44px ;}
+.solve-box ul{width: 710px;}
+.solve-box ul li{width: 100%;overflow: hidden;margin-bottom: 20px;}
+.solve-box ul li span{display: block;float: left;width: 110px;height: 130px;line-height: 130px;text-align: center;background: #f1f1f1;font-size: 84px;font-family: impact;color: #ed7c04;}
+.solve-box ul li .fl{width: 600px;height: 130px;background: #fff;text-align: left;}
+.solve-box ul li .fl p{padding:29px 0 0 25px;font-size: 14px;color: #858585;line-height: 24px;}
+.solve-box ul li .fl p font{color: #333;font-size: 20px;}
+.solve-box ul li:hover p font{color: #ed7c04;font-weight: bold;}
+.solve-fr{width: 400px;height: 430px;background: #fff;text-align: left;padding: 0 20px;}
+.solve-fr h4{font-size: 16px;color: #333;line-height: 18px;padding: 29px 0 15px;}
+.solve-fr p{font-size: 14px;color: #666;line-height: 24px;}
+.solve-fr img{padding: 10px 0 15px;}
+
+.solve-zx{overflow: hidden;}
+.solve-zx p{font-size: 14px;line-height: 24px;color: #666;}
+.solve-zx b{color: #0c64bb;font-size: 30px;}
+.zx-btn{width: 110px;text-align: center;line-height: 36px;height: 36px;background: #0C64BB;font-size: 14px;color: #fff;border-radius: 18px;margin-top: 10px;}
+/*怎么解决问题 end*/
+/*顶呱呱财税服务内容 start*/
+.matter-box{padding: 10px 60px 75px;width:1060px ;overflow: hidden;}
+.matter-list{position: relative;padding: 60px 0 0;}
+.matter-list img{-webkit-transition: all .75s;transition: all .75s;}
+.matter-list:hover img{transform: translate(0,-10px);}
+.matter-list:hover .matter-bd{top: 30px;}
+.matter-bd{width: 454px;height: 444px;position: absolute;margin: 0 auto;background: #fff;z-index: 3;top: 0;left: 50%;margin-left: -227px;box-shadow: 0 0 7px 1px rgba(41,58,64,0.15);text-align: center;-webkit-transition: all .75s;transition: all .75s;}
+.matter-bd h3{width: 100%;background: #6779ef;font-size: 24px;text-align: center;line-height: 70px;height: 70px;color: #fff;}
+.matter-box ..matter-list:first-child .matter-bd h3{background: #6779ef;}
+.matter-bd h3 span{width: 140px;height: 1px ;background: #fff;vertical-align: middle;margin: 0 10px;}
+.matter-text{width: 400px;padding: 30px 0 0;overflow: hidden;margin: 0 auto;}
+.matter-text span{width: 188px;height: 68px;text-align: center;line-height: 68px;border: 1px solid #dedede;font-size: 16px;color: #333;margin-bottom:20px;}
+.matter-text span:hover{color: #ff7f00;}
+.matter-bd a{font-size: 16px;font-weight: bold;color: #ff7f00;line-height: 46px;}
+.matter-bd a:hover{text-decoration: underline;}
+.matter-bd a i{width: 20px;height: 12px;background-position: 0 -70px ;vertical-align: middle;margin-right: 15px;
+-webkit-animation: arrow-movement 3s 0s linear infinite;animation: arrow-movement 3s 0s linear infinite;}
+/*顶呱呱财税服务内容 end*/
+/*6大服务细节 start*/
+.detail-box{background: url(../images/six-bg_02.jpg) center top no-repeat #e5ecf2;padding-bottom: 60px;}
+.need-bg{background: #064988;text-align: center;padding: 30px 0;position: relative;color: #fff;}
+.need-bg h1{font-size: 30px !important;line-height: 32px;}
+.need-bg p{font-size: 16px;padding: 12px 0 0;}
+.need-bg span{width: 0;height: 0;content: "";border-width: 14px 16px 0 16px;border-color: #064988 transparent transparent; transform: ;border-style: solid ;position: absolute;left: 50%;margin-left: -8px;bottom: -14px;}
+.detail-list{width:1110px ;padding: 0 20px 0 50px;overflow: hidden;}
+.detail-list li{width: 340px;height: 280px;float: left;background: #fff;text-align: center;margin: 0 30px 30px 0;}
+.detail-list li img{width: 100%;height: 150px;-webkit-transition: all .46s;transition: all .46s;}
+.detail-list li p{font-size: 16px;color: #333;line-height: 26px;padding: 14px 0 0;}
+.detail-list li p b{font-size: 20px;line-height: 44px;color: #064988;}
+.detail-list li:hover img{-webkit-transform: translate(10px ,10px);transform: translate(10px ,10px);}
+/*6大服务细节 end*/
+/*仅需5步 鉴证到位 start*/
+.flow-list{width: 990px;padding: 40px 95px 0;height: 264px;overflow: hidden;}
+.flow-list li{width: 17%;float: left;text-align: center;line-height: 0;}
+.flow-list .w35{width: 35px;}
+.flow-list li span{display: block;font-size: 30px;line-height: 53px;padding: 10px 0 0;-webkit-transition: all .45s;transition: all .45s;color: #999;}
+.flow-list li:hover span{padding: 0;}
+.flow-list li i{width: 90px;height: 90px;background: url(../images/flow-icon_03.png) no-repeat;}
+.flow-list li .flow-icon2{background-position: -90px 0;}
+.flow-list li .flow-icon3{background-position: -180px 0;width: 91px;}
+.flow-list li .flow-icon4{background-position: -271px 0;width: 91px;}
+.flow-list li .flow-icon5{background-position: -362px 0;width: 91px}
+.flow-list li:hover i,.flow-list .active i{-webkit-animation: hot ease-in .65s;animation: hot ease-in .65s;background-position: 0 -90px;}
+.flow-list li:hover .flow-icon2,.flow-list .active i{background-position: -90px -90px;}
+.flow-list li:hover .flow-icon3,.flow-list .active i{background-position: -180px -90px;}
+.flow-list li:hover .flow-icon4,.flow-list .active i{background-position: -271px -90px;}
+.flow-list li:hover .flow-icon5,.flow-list .active i{background-position: -362px -90px;;}
+.flow-line{width: 1px;height: 0;background: #eb963c;position: relative;margin: 0 auto;-webkit-transition: height .45s;transition: height .45s;}
+.flow-list li:hover .flow-line,.flow-list .active .flow-line{height: 28px;}
+.flow-list .w35 em{width: 35px;height: 34px;background-position: -169px -120px;margin-top:96px;}
+.flow-line:before{width: 0;height: 4px;border-radius: 50%;background: #eb963c;content: "";position: absolute;left: 50%;margin-left: -2px;bottom: -3px;}
+.flow-list li:hover .flow-line:before,.flow-list .active .flow-line:before {width: 4px;}
+.flow-list li p{font-size: 18px;line-height: 28px;color: #333;padding: 30px 0 0;}
+.flow-list li:hover p,.flow-list .active p{padding: 23px 0 0;}
+/*仅需5步 鉴证到位 end*/
+/*鉴证常见问题 start*/
+.ask-list{width: 1120px;padding: 60px 30px 0;}
+.ask-list li,.ask-list li p{width: 100%;}
+.ask-list li{border-bottom: 1px dashed  #cecece;padding: 24px 0 18px;}
+.ask-list li p{overflow: hidden;font-size: 16px;}
+.ask-list li p:first-child{padding-bottom: 10px !important;}
+.ask-list li p:first-child span{background: #ed7c04;}
+.ask-list li p:first-child font{color: #333;font-weight: bold;}
+.ask-list li p font{display: block;width: 1070px;float: left;text-align: left;color: #666;line-height: 26px;}
+.ask-list li p span{width: 32px;height: 25px;text-align: center;line-height: 25px;border-radius: 4px;display: block;float: left;margin-right: 10px;background: #0c66bb;color: #fff;}
+.more-btn{display: block;margin: 50px auto 60px;width: 385px;height: 50px;text-align: center;line-height: 50px;border-radius: 25px;background: #0c66bb;font-size: 18px;color: #fff;}
+/*鉴证常见问题 end*/
+.btn-box{width: 503px;height: 48px;line-height: 48px;border-radius: 29px;overflow: hidden;margin: 20px auto 0;text-align: left;position: relative;font-size: 18px;color: #888;border: 1px solid #0c66bb;background: #fff;vertical-align: middle;}
+.btn-box font{font-size: 32px;font-family: impact;vertical-align: middle;color: #0c66bb;}
+.btn-box span{margin: 0 13px 0 25px;vertical-align: middle;}
+.btn-box a{display: block;font-size: 18px;text-align: center;width: 156px;line-height: 51px;height: 51px;color: #fff;border-radius: 0 25px 25px 0;position: absolute;right: 0;top:-1px;background: #0c66bb;}
+.btn-box2{width: 383px;}
+.btn-box2 span{margin-left: 50px;}
+

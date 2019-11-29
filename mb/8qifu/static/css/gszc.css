@@ -1,0 +1,91 @@
+﻿.banner-part-ny{ height: 450px; width: 100%; }
+.inside-banner {height: 450px;}
+.inside-banner > .bd {height: 450px;}
+
+.big-gray {width: 100%;min-width: 1180px;position: relative;overflow: hidden;background-color: #eee;}
+.crumbs {padding: 0 0 0 23px;height: 33px;line-height: 33px;background: url("../images/crumbs-icon.png") no-repeat 2px center;color: #999;}
+.crumbs a {color: #666;}
+.crumbs a.on {color: #11bbb8;}
+
+.what-gsbg {padding: 60px 0;}
+.what-gsbg .left-img {width: 465px;}
+.what-gsbg .right-txt {width: 660px;color: #555;font-size: 16px;text-align: justify;}
+.what-gsbg .right-txt .til {color: #333;font-size: 24px;font-weight: bold;line-height: 1;border-bottom: 5px solid #ddd;padding-bottom: 10px; /*margin-bottom: 15px;*/}
+.what-gsbg .right-txt .til span {color: #666;font-size: 18px;font-weight: normal;padding-left: 10px;}
+.what-gsbg .right-txt span {color: #ff7000;}
+.what-gsbg .right-txt .txt {padding-left: 35px;margin-top: 25px;background: url("../images/gszc-shape.png") no-repeat 15px 5px;}
+.what-gsbg .right-txt .p1 {margin-top: 30px;padding-top: 20px;line-height: 24px;border-top: 1px solid #ddd;}
+.what-gsbg .right-txt .p1 span {display: inline-block;*display: inline;*zoom: 1;color: #333;font-size: 16px;font-weight: bold;margin-bottom: 5px;}
+
+.gray-box {width: 100%;min-width: 1180px;position: relative;overflow: hidden;background-color: #f1f2f3;}
+.big-til {line-height: 1;text-align: center;padding: 45px 0 35px;}
+.big-til h3 {font-size: 0;}
+.big-til span {color: #333;font-size: 30px;font-weight: bold;vertical-align: middle;padding: 0 5px;}
+.big-til .line {background-color: #999;width: 90px;height: 1px;display: inline-block;*display: inline;*zoom: 1;vertical-align: middle;padding: 0;}
+.big-til i {display: inline-block;*display: inline;*zoom: 1;vertical-align: middle;width: 3px;height: 3px;background-color: #999;}
+.service-item ul {font-size: 0;margin-left: -20px;padding-bottom: 30px;}
+.service-item ul li {display: inline-block;*display: inline;*zoom: 1;width: 220px;height: 100px;line-height: 100px;background-color: white;margin-left: 20px;margin-bottom: 20px;text-align: center;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
+.service-item ul li a {color: #333;font-size: 18px;display: block;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
+.service-item ul li:hover {background-color: #11bbb8;}
+.service-item ul li:hover a {color: white;}
+
+.change-guide {width: 100%;min-width: 1180px;background: url("../images/change-guide-bg.jpg") no-repeat;height: 680px;}
+.change-guide .big-til span {color: white;}
+.change-guide .big-til .line {background-color: white;}
+.change-guide .big-til i {background-color: white;}
+.guide-details {background: url("../images/book.png") no-repeat center;height: 526px;width: 1116px;margin: 0 auto;color: #000;}
+.guide-details div {padding-top: 60px;}
+.guide-details .left-info {margin-left: 64px;width: 460px;line-height: 24px;}
+.guide-details p {margin-bottom: 20px;text-align: justify;}
+.guide-details .til {font-size: 18px;font-weight: bold;line-height: 1;}
+.guide-details .sub {color: #666;font-size: 14px;}
+.guide-details .sub span {color: #ff7000;font-weight: bold;display: block;margin-bottom: 7px;}
+.guide-details .right-info {width: 455px;margin-right: 55px;line-height: 24px;}
+
+.flow-steps {background: url("../images/flow-steps-bg.png") no-repeat;height: 340px;padding-bottom: 50px;}
+.flow-steps .service-flow {width: 420px;margin-left: 55px;padding-top: 60px;}
+.flow-steps .til {line-height: 1;color: white;font-size: 18px;}
+.flow-steps .til span {font-size: 20px;font-weight: bold;}
+.flow-steps .sub {font-size: 16px;color: #7cc0be;text-transform: uppercase;margin-top: 2px;}
+.flow-steps ul {font-size: 0;margin-top: 15px;margin-left: -20px;}
+.flow-steps ul li {width: 40px;margin-left: 20px;display: inline-block;*display: inline;*zoom: 1;position: relative;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;height: 150px;}
+.flow-steps ul li a {position: absolute;color: #46aca9;font-size: 16px;background-color: white;display: inline-block;*display: inline;*zoom: 1;line-height: 1.2;padding: 32px 10px;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;top: 5px;}
+.flow-steps ul li:hover a {padding: 37px 10px;top: 0;}
+.flow-steps .operation-flow {padding-top: 70px;margin-right: 85px;width: 420px;}
+.flow-steps .operation-flow .til {color: #376f6d;}
+.flow-steps .operation-flow .sub {color: #80a7a6;}
+.flow-steps .operation-flow ul li a {color: #376f6d;}
+.hand-information {padding-bottom: 20px;}
+.get-licence {padding: 0 20px;}
+.get-licence ul {overflow: hidden;}
+.get-licence ul li {float: left;width: 33.333%;text-align: center;padding-top: 20px;}
+.get-licence ul li img {-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
+.get-licence ul li:hover img {margin-top: -20px;}
+.licence-steps {text-align: center;margin-top: 30px;}
+
+.four-advantage {width: 100%;min-width: 1180px;background: url("../images/four-advan-bg.jpg") no-repeat;height: 634px;}
+.four-advantage .big-til span {color: white;}
+.four-advantage .big-til .line {background-color: white;}
+.four-advantage .big-til i {background-color: white;}
+.four-advantage .left-txt {width: 800px;height: 470px;background-color: white;vertical-align: middle;}
+.four-advantage .left-txt ul {padding: 45px 55px;overflow: hidden;margin-left: -90px;}
+.four-advantage .left-txt ul li {float: left;position: relative;width: 270px;color: #666;font-size: 14px;margin-bottom: 50px;margin-left: 90px;}
+.four-advantage .left-txt ul li i {width: 41px;height: 52px;background: url("../images/four-advan-icon.png") no-repeat;}
+.four-advantage .left-txt ul li .icon2 {background-position: -41px 0;}
+.four-advantage .left-txt ul li .icon3 {background-position: -82px 0;}
+.four-advantage .left-txt ul li .icon4 {background-position: -123px 0;}
+.four-advantage .left-txt ul li .til {color: #333;font-size: 16px;line-height: 1;margin: 5px 0 10px;font-weight: bold;}
+.four-advantage .left-txt ul li .line {width: 40px;height: 2px;background-color: #11bbb8;margin-bottom: 15px;}
+.four-advantage .left-txt ul li span {position: absolute;color: #f2f2f2;font-size: 85px;line-height: 1;left: 210px;top: 0;font-weight: lighter;font-family: sans-serif;}
+.four-advantage .left-txt ul li .num2 {left: 220px;}
+.four-advantage .right-txt {vertical-align: middle;font-weight: bold;margin-left: 80px;line-height: 40px;}
+.four-advantage .right-txt .til {color: #ffd800;font-size: 24px;font-weight: bold;}
+.four-advantage .right-txt .sub {color: white;font-size: 18px;}
+.four-advantage .right-txt a {display: block;width: 260px;line-height: 42px;color: white;font-size: 18px;background-color: #11bbb8;border-radius: 3px;margin-top: 115px;text-align: center;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
+.four-advantage .right-txt .txt {padding-left: 70px;margin-top: 20px;font-size: 16px;color: white;font-weight: normal;}
+.four-advantage .right-txt a:hover {background-color: #FFAD5E;}
+.more-need ul {overflow: hidden;padding-bottom: 66px;}
+.more-need ul li {float: left;width: 280px;height: 160px;position: relative;margin-left: 20px;}
+.more-need ul li:first-child {margin-left: 0;}
+.more-need ul li .txt {position: absolute;width: 106px;height: 106px;line-height: 106px;text-align: center;border: 2px solid white;background: url("../images/more-bg.png") repeat;border-radius: 106px;top: 25px;left: 85px;color: white;font-size: 20px;font-weight: bold;-webkit-transition: all .3s;-moz-transition: all .3s;transition: all .3s;}
+.more-need ul li:hover .txt {top: 15px;}

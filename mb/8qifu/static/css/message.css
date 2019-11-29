@@ -1,0 +1,38 @@
+﻿.add-qy{ padding:40px 0 30px 0; background: url(../images/tools_bg.png) no-repeat; margin-bottom: 40px}
+.add-qy .tab-catalog-02{ padding-bottom: 25px;  font-size:18px; text-align: center; }
+.add-qy .tab-catalog-02>a{ padding: 0 50px; color: #bad1ff }
+.add-qy .tab-catalog-02>a.atthis{font-weight: bold;color:#333;font-size: 20px;color: #fff}
+.qy-cont .floor{ display: none;}
+.qy-cont{ overflow:visible !important }
+.bannerb-input{width:1026px; margin:0 auto; }
+.banner-input-con {height: 60px;line-height: 60px;background: #fff;font-size: 14px;}
+.banner-city {width: 128px;padding-left: 40px;color: #3d4450;position: relative;}
+.banner-city-img {display: block;width: 11px;height: 6px;position: absolute;top: 28px;right:30px;}
+#formCityMock4 {font-size: 14px;color: #3d4450;}
+.banner-name {width: 365px;}
+.banner-name .banner-name-input {border: none;outline: 0;border-left: 1px solid #d2d2d2;padding-left: 30px;height: 32px;width: 100%;box-sizing: border-box;font-size: 14px;color: #3d4450;font-size: 14px;}
+.banner-trade {width: 180px;position: relative;}
+.banner-trade .banner-trade-input {border: none;outline: 0;border-left: 1px solid #d2d2d2;padding-left: 18px;height: 32px;width: 100%;box-sizing: border-box;font-size: 14px;color: #3d4450;font-size: 14px;}
+.banner-trade-img {display: block;width: 11px;height: 6px;position: absolute;top: 28px;right: 30px;}
+.banner-suffix {width:170px;position: relative;}
+.banner-suffixname {width: 350px !important;}
+.banner-suffix .banner-suffix-input {border: none;outline: none;border-left: 1px solid #d2d2d2;padding-left: 18px;height: 32px;width: 100%;box-sizing: border-box;font-size: 14px;color: #3d4450;}
+.banner-suffix-img {display: block;width: 11px;height: 6px;position: absolute;top: 28px;right: 45px;}
+.banner-btn {width: 140px;height: 60px;line-height: 60px;border: none;outline: none;font-size:18px;color: #fff;cursor: pointer;background:#2faaff;text-align: center;}
+.banner-hint {font-size: 14px;color: #bad1ff;width: 100%;text-align: center;padding-top:20px;letter-spacing: 1px;}
+.banner-hint-icon {display: inline-block;width: 13px;height: 17px;background: url(../images/icon_position.png) no-repeat;padding-left: 6px;vertical-align: bottom;}
+.banner-trade-select {width: 1026px;height: 240px;background: #fff;border-radius: 6px;position: absolute;top:80px;left: 85px;box-shadow: 0 6px 30px 0 rgba(106,109,141,0.1);display: none;z-index: 999}
+.banner-trade-select:before {position: absolute;content: "";width: 0;height: 0;left: 520px;top: -8px;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 8px solid #fff;}
+.banner-trade-select .lists li.actived {width: 64px;height: 26px;background: #e8effc;margin: 0 18px 0 16px; }
+.banner-trade-select .lists li {height: 26px;line-height: 26px;text-align: center;margin-right: 24px;font-size: 14px;color: #3d4450;}
+.banner-trade-select .lists6 li.hint {height: 26px;line-height: 26px;text-align: center;padding-left: 16px;margin-top: 6px;font-size: 14px;color: #999;}
+.banner-trade-select .lists6 li i {display: inline-block;width: 13px;height: 13px;padding-right: 8px;vertical-align: middle;background: url(../images/hm-friendly-hint.png) no-repeat;}
+.banner-trade-select .lists li a{font-size: 14px;color: #3d4450;}
+.banner-trade-select .lists li a:hover {color: #64a6fe;}
+.banner-trade-select .lists1 {margin-top: 24px;}
+.banner-trade-select .lists2,.banner-trade-select .lists3,.banner-trade-select .lists4,.banner-trade-select .lists5 {margin-top: 10px;}
+.banner-suffix-select {width: 153px;height: 173px;background: #fff;border-radius: 6px;position: absolute;top: 80px;right: 240px;font-size: 14px;color: #3d4450;box-shadow: 0 6px 30px 0 rgba(106,109,141,0.1);display: none; z-index: 999}
+.banner-suffix-select:before {position: absolute;content: "";width: 0;height: 0;left: 65px;top: -8px;border-left: 8px solid transparent;border-right: 8px solid transparent;border-bottom: 8px solid #fff;}
+.banner-suffix-select li {height: 33px;line-height: 33px;padding-left: 25px;font-size: 14px;color: #3d4450;cursor: pointer;}
+.banner-suffix-select li:first-child {margin-top: 22px;}
+.banner-suffix-select li.suffix-actived {background: #eef4ff;color: #64a6fe;}

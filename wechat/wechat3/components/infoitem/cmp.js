@@ -28,15 +28,16 @@ Component({
                 classList: arr
             })
             if ( this.data.topicObj.titleType == "多选题" ) return;
-            if( index == this.data.topicObj.answer[0] ) {
-                this.triggerEvent('tonext');// 触发切换下一题事件
-            } else {
+            if( index == this.data.topicObj.answer[0] ) { //正确
+                this.triggerEvent('correct',{ id: this.properties.topicObj.id});
+            } else { // 错误
                 arr[index] = 'red';
                 this.setData({
                     showExplain: true,
                     classList: arr
                 })
                 console.log('将错题id上传服务器')
+                this.triggerEvent('wrong',{ id: this.properties.topicObj.id});
             }
         },
         submitBtnTap(){
@@ -55,14 +56,15 @@ Component({
                     showExplain = true;
                 }
             }
-            if ( !showExplain ){
-                this.triggerEvent('tonext'); // 触发切换下一题事件
-            } else {
+            if ( !showExplain ){ //正确
+                this.triggerEvent('correct',{ id: this.properties.topicObj.id});
+            } else { // 错误
                 this.setData({
                     classList,
                     showExplain
                 })
                 console.log('将错题id上传服务器')
+                this.triggerEvent('wrong',{ id: this.properties.topicObj.id});
             }
             
         }

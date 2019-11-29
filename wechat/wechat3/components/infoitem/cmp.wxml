@@ -3,6 +3,9 @@
         <text class="title-type">{{ topicObj.titleType }}</text>
         <text class="title-text">{{ topicObj.titleText }}</text>
     </view>
+    <view class="img-wrap" wx:if="{{ topicObj.imgSrc }}">
+        <image src="{{ 'https://www.fqiang.co' + topicObj.imgSrc }}" mode="widthFix"/>
+    </view>
     <view class="options">
         <view 
             class="options-item {{ classList[index] }}"
