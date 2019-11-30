@@ -15,7 +15,9 @@ Component({
         classList: new Array(10),
         showExplain: false
     },
-
+    attached(){
+        console.log(this.properties.topicObj)
+    },
     /**
      * 组件的方法列表
      */
