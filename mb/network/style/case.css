@@ -1,0 +1,148 @@
+.banner {
+  background: url("../img/banner_case.jpg");
+  height: 500px;
+  background-size: cover;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 130px;
+  color: #fff;
+}
+
+.banner h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.banner h1 span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 20px;
+}
+
+.banner h5 {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.banner ul {
+  padding-top: 65px;
+}
+
+.banner ul li {
+  display: inline-block;
+  padding: 0 50px;
+}
+
+.banner ul li:not(:last-of-type) {
+  border-right: 1px solid #fff;
+}
+
+.banner ul li .p1 {
+  text-align: left;
+  font-size: 18px;
+}
+
+.banner ul li .p2 {
+  font-size: 90px;
+  line-height: 80px;
+}
+
+.banner-bot {
+  background: #ededed;
+  padding: 10px 0;
+}
+
+.banner-bot .right {
+  float: right;
+  display: inline-block;
+  line-height: 45px;
+  background: #fff;
+  padding: 0 30px;
+  color: #d31f23;
+  border-radius: 3px;
+}
+
+.banner-bot .right img, .banner-bot .right span {
+  vertical-align: middle;
+}
+
+.banner-bot .left a, .banner-bot .left span {
+  display: inline-block;
+  line-height: 45px;
+}
+
+.banner-bot .left a.left-home {
+  background: url("../img/banner_top_h.png") center no-repeat;
+  padding-left: 60px;
+  color: #555;
+}
+
+.banner-bot .left a.left-home:hover {
+  color: #d31f23;
+  background-image: url("../img/banner_bot_h1.png");
+}
+
+.banner-bot .left a.active {
+  color: #d31f23;
+}
+
+.content {
+  padding: 80px 0;
+}
+
+.content ul li {
+  float: left;
+  width: 380px;
+  margin: 10px;
+}
+
+.content ul li .img {
+  height: 228px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.content ul li .img img {
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
+
+.content ul li h3 {
+  line-height: 50px;
+}
+
+.content ul li .text {
+  color: #777;
+  line-height: 25px;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.content ul li .tag {
+  border-left: 3px solid #d31f23;
+  padding-left: 10px;
+  margin-top: 20px;
+  color: #999;
+  line-height: 20px;
+}
+
+.content ul li .tag span {
+  margin: 0 5px;
+}
+
+.content ul li:hover h3 {
+  color: #d31f23;
+}
+
+.content ul li:hover .img img {
+  transform: scale(1.2);
+}

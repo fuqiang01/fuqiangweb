@@ -1,0 +1,164 @@
+@import './color.scss';
+// banner
+.banner{
+    background: url('../img/wzjs_banner.jpg');
+    height: 420px;
+    background-size: cover;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 180px;
+    color: #fff;
+    h1{
+        font-size: 45px;
+        margin-bottom: 10px;
+        span{
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin: 0 20px;
+        }
+    }
+    h5{
+        font-size: 20px;
+        font-weight: 100;
+    }
+}
+.banner-bot{
+    background: #ededed;
+    padding: 10px 0;
+    .right{
+        float: right;
+        display: inline-block;
+        line-height: 45px;
+        background: #fff;
+        padding: 0 30px;
+        color: $mainColor;
+        border-radius: 3px;
+        img,span{
+            vertical-align: middle;
+        }
+    }
+    .left{
+        a,span{
+            display: inline-block;
+            line-height: 45px;
+        }
+        a.left-home{
+            background: url('../img/banner_top_h.png') center no-repeat;
+            padding-left: 60px;
+            color: #555;
+            &:hover{
+                color: $mainColor;
+                background-image: url('../img/banner_bot_h1.png');
+            }
+        }
+        a.active{
+            color: $mainColor;
+        }
+    }
+}
+// content
+.content{
+    >div{
+        padding: 80px 0; 
+        .text{
+            float: left;
+            color: #fff;
+            width: 450px;
+            padding-top: 40px;
+            h1{
+                font-size: 60px;
+            }
+            .line{
+                width: 50px;
+                height: 3px;
+                background: #fff;
+                margin: 10px 0 20px;
+            }
+            h4{
+                font-weight: 100;
+                font-size: 18px;
+                line-height: 30px;
+                height: 180px;
+            }
+            .check{
+                display: inline-block;
+                color: #fff;
+                border: 1px solid #fff;
+                font-size: 18px;
+                padding: 15px 40px;
+                border-radius: 30px;
+                margin-top: 50px;
+                position: relative;
+                overflow: hidden;
+                span{
+                    position: relative;
+                    z-index: 3;
+                }
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    position: relative;
+                    width: 20px;
+                    height: 12px;
+                    margin-left: 30px;
+                    background: url('../img/website_ico1.png') center no-repeat;
+                }
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 0%;
+                    height: 100%;
+                    background: #fff;
+                    transition: width .4s;
+                }
+                &:hover{
+                    color: #69f;;
+                    &::after{
+                        background-image: url('../img/website_ico2_.png');
+                    }
+                    &::before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .img{
+            float: left;
+            width: 750px;
+            &.align-left{
+                text-align: left;
+            }
+            &.align-right{
+                text-align: right;
+            }
+        }
+    }
+    .enterprise{
+        background: url('../img/website_1.png');
+    }
+    .brand{
+        background: url('../img/website_2.png');
+    }
+    .wechat{
+        background: url('../img/website_3.png');
+    }
+    .mall{
+        background: url('../img/website_4.png');
+    }
+    .marketing{
+        background: url('../img/website_5.png');
+    }
+    .portal{
+        background: url('../img/website_6.png');
+    }
+    .responsive{
+        background: url('../img/website_7.png');
+    }
+}

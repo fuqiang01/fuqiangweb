@@ -1,0 +1,231 @@
+.banner {
+  background: url("../img/banner_electricity.jpg");
+  height: 420px;
+  background-size: cover;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 180px;
+  color: #fff;
+}
+
+.banner h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.banner h1 span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 20px;
+}
+
+.banner h5 {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.banner-bot {
+  background: #ededed;
+  padding: 10px 0;
+}
+
+.banner-bot .right {
+  float: right;
+  display: inline-block;
+  line-height: 45px;
+  background: #fff;
+  padding: 0 30px;
+  color: #d31f23;
+  border-radius: 3px;
+}
+
+.banner-bot .right img, .banner-bot .right span {
+  vertical-align: middle;
+}
+
+.banner-bot .left a, .banner-bot .left span {
+  display: inline-block;
+  line-height: 45px;
+}
+
+.banner-bot .left a.left-home {
+  background: url("../img/banner_top_h.png") center no-repeat;
+  padding-left: 60px;
+  color: #555;
+}
+
+.banner-bot .left a.left-home:hover {
+  color: #d31f23;
+  background-image: url("../img/banner_bot_h1.png");
+}
+
+.banner-bot .left a.active {
+  color: #d31f23;
+}
+
+.content .plan {
+  padding: 50px 0;
+}
+
+.content .plan .title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.content .plan .title h5 {
+  font-weight: 100;
+  color: #777;
+}
+
+.content .plan .title .line {
+  display: inline-block;
+  width: 80px;
+  height: 1px;
+  background: #ccc;
+}
+
+.content .plan ul li {
+  float: left;
+  width: 400px;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  transition: box-shadow .5s;
+}
+
+.content .plan ul li:nth-of-type(2n+1) {
+  background: #f8f8f8;
+}
+
+.content .plan ul li:nth-of-type(2n) {
+  background: #f0f0f0;
+}
+
+.content .plan ul li img, .content .plan ul li h3 {
+  padding-left: 10px;
+}
+
+.content .plan ul li p {
+  line-height: 25px;
+  height: 75px;
+  color: #777;
+  padding-top: 10px;
+}
+
+.content .plan ul li:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.content .func-list {
+  padding-bottom: 80px;
+}
+
+.content .func-list > img {
+  display: block;
+  width: 100%;
+}
+
+.content .func-list .container {
+  margin-top: -33px;
+  position: relative;
+}
+
+.content .func-list .container .list-title {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.content .func-list .container .list-title li {
+  float: left;
+  width: 300px;
+  background: #fff;
+  text-align: center;
+  padding: 25px 0;
+  color: #666;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.content .func-list .container .list-title li:hover, .content .func-list .container .list-title li.active {
+  background: #d31f23;
+  color: #fff;
+}
+
+.content .func-list .container .list-info > div {
+  display: none;
+}
+
+.content .func-list .container .list-info > div.qtgn {
+  display: block;
+}
+
+.content .func-list .container .list-info table {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.content .func-list .container .list-info table tr, .content .func-list .container .list-info table td, .content .func-list .container .list-info table th {
+  border: 1px solid #fff;
+  line-height: 25px;
+  padding: 12px 30px;
+}
+
+.content .func-list .container .list-info table tr:nth-of-type(2n+1) {
+  background: #f0f0f0;
+}
+
+.content .func-list .container .list-info table tr:nth-of-type(2n) {
+  background: #f8f8f8;
+}
+
+.content .func-list .container .list-info table td {
+  font-size: 12px;
+  color: #666;
+}
+
+.content .func-list .container .list-info table td span {
+  font-weight: bold;
+  color: #333;
+}
+
+.content .func-list .container .list-info .gmwd dl dt {
+  margin-top: 5px;
+  padding: 0 100px;
+  line-height: 70px;
+  position: relative;
+  cursor: pointer;
+  background: #f0f0f0 url("../img/qadd.png") 1150px center no-repeat;
+}
+
+.content .func-list .container .list-info .gmwd dl dt::before {
+  content: '';
+  width: 70px;
+  height: 100%;
+  position: absolute;
+  background: #D90000 url("../img/quesico.png") center no-repeat;
+  left: 0;
+  top: 0;
+}
+
+.content .func-list .container .list-info .gmwd dl dd {
+  line-height: 25px;
+  padding: 15px 100px;
+  background: #f8f8f8;
+  position: relative;
+  color: #666;
+  display: none;
+}
+
+.content .func-list .container .list-info .gmwd dl dd::before {
+  content: '';
+  width: 70px;
+  height: 100%;
+  position: absolute;
+  background: #666 url("../img/answico.png") center no-repeat;
+  left: 0;
+  top: 0;
+}

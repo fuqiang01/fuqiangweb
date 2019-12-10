@@ -1,0 +1,180 @@
+@import './color.scss';
+html,body{
+    overflow-x: hidden;
+}
+// header
+.header{
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    .logo{
+        float: left;
+        img{
+            height: 70px;
+            display: block;
+        }
+    }
+    .header-nav{
+        float: right;
+        li{
+            float: left;
+            >a{
+                display: block;
+                line-height: 70px;
+                padding: 0 20px;
+                font-size: 16px;
+                color: #fff;
+                img{
+                    display: block;
+                    margin-top: 22px;
+                }
+            }
+            &:hover{
+                >a{
+                    color: $mainColor;
+                }
+                .hover-show{
+                    display: block;
+                }
+            }
+            .hover-show{
+                position: fixed;
+                left: 0;
+                right: 0;
+                background: #f2f2f2;
+                display: none;
+                dt,dd{
+                    float: left;
+                }
+                dt{
+                    background: url('../img/header_hover_dt.png') right center no-repeat;
+                    width: 360px;
+                    height: 260px;
+                    box-sizing: border-box;
+                    padding: 50px 0 20px 50px;
+                    h2{
+                        color: #ccc;
+                    }
+                }
+                dd{
+                    width: 270px;
+                    height: 260px;
+                    padding: 15px 10px 0px 30px;
+                    box-sizing: border-box;
+                    &:not(:first-of-type){
+                        border-left: 1px dashed #ccc;
+                    }
+                    a{
+                        display: block;
+                        margin: 10px 0;
+                        img,span{
+                            vertical-align: middle;
+                        }
+                        span{
+                            margin-left: 10px;
+                            font-size: 15px;
+                            color: #666;
+                            display: inline-block;
+                            line-height: 45px;
+                        }
+                    }
+                }
+                &.hover-wx-min{
+                    dd{
+                        border: none;
+                        text-align: center;
+                        height: auto;
+                        padding: 20px 0 30px;
+                        h4{
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// footer
+footer{
+    // 需求
+    .demand{
+        background: #f5f5f5;
+        padding: 50px 0;
+        .demand-title{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        input{
+            background: #fff;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            width: 200px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            &.demand-type{
+                width: 580px;
+            }
+            &.demand-focus{
+                width: 300px;
+            }
+        }
+        .demand-btn{
+            background: $mainColor;
+            color: #fff;
+            display: inline-block;
+            line-height: 41px;
+            padding: 0 50px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .annotation{
+            color: #999;
+            font-size: 12px;
+        }
+    }
+    // 友情链接
+    .link-about{
+        background: #3b3b3b;
+        color: #fff;
+        padding: 30px 0;
+        .link-about-title{
+            border-bottom: 1px solid #545454;
+            font-size: 18px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+        .link-wrap{
+            a{
+                color: #969696;
+                display: inline-block;
+                line-height: 30px;
+                padding-right: 10px;
+                &:not(:last-of-type)::after{
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 10px;
+                    background: #969696;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    // 备案
+    .beian{
+        text-align: center;
+        padding: 10px 0;
+        background: #151515;
+        p{
+            line-height: 30px;
+            color: #666;
+            a{
+                color: #666;
+            }
+        }
+    }
+}

@@ -1,0 +1,295 @@
+@import './color.scss';
+// banner
+.banner{
+    background: url('../img/banner_wechat.jpg');
+    height: 420px;
+    background-size: cover;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 180px;
+    color: #fff;
+    h1{
+        font-size: 45px;
+        margin-bottom: 10px;
+        span{
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin: 0 20px;
+        }
+    }
+    h5{
+        font-size: 20px;
+        font-weight: 100;
+    }
+}
+.banner-bot{
+    background: #ededed;
+    padding: 10px 0;
+    .right{
+        float: right;
+        display: inline-block;
+        line-height: 45px;
+        background: #fff;
+        padding: 0 30px;
+        color: $mainColor;
+        border-radius: 3px;
+        img,span{
+            vertical-align: middle;
+        }
+    }
+    .left{
+        a,span{
+            display: inline-block;
+            line-height: 45px;
+        }
+        a.left-home{
+            background: url('../img/banner_top_h.png') center no-repeat;
+            padding-left: 60px;
+            color: #555;
+            &:hover{
+                color: $mainColor;
+                background-image: url('../img/banner_bot_h1.png');
+            }
+        }
+        a.active{
+            color: $mainColor;
+        }
+    }
+}
+// content
+.content{
+    >div{
+        padding: 80px 0;
+        .title{
+            text-align: center;
+            margin-bottom: 50px;
+            p{
+                line-height: 25px;
+                color: #777;
+                padding-top: 10px;
+            }
+        }
+    }
+    // 介绍
+    .introduce{
+        .info{
+            li{
+                float: left;
+                width: 300px;
+                box-sizing: border-box;
+                padding: 20px;
+                border: 1px solid #ccc;
+                transition: box-shadow .5s;
+                &:not(:last-of-type){
+                    border-right-color: transparent;
+                }
+                .p1{
+                    font-size: 48px;
+                    color: $mainColor;
+                }
+                .p2{
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                .p3{
+                    line-height: 23px;
+                    color: #777;
+                }
+                &:hover{
+                    box-shadow: 0 0 15px rgba(0,0,0,.2);
+                }
+            }
+        }
+    }
+    // 流浪入口
+    .entrance{
+        background: url('../img/appletbg.jpg');
+        color: #fff;
+        .info{
+            padding-top: 30px;
+            li{
+                float: left;
+                width: 240px;
+                box-sizing: border-box;
+                text-align: center;
+                img{
+                    transition: all .5s;
+                }
+                .p1{
+                    font-size: 20px;
+                    margin: 10px 0;
+                }
+                .p2{
+                    line-height: 25px;
+                    color: #bbb;
+                    font-size: 16px;
+                }
+                &:hover{
+                    img{
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+    }
+    // 小程序应用举例
+    .application{
+        .info{
+            li{
+                float: left;
+                width: 380px;
+                margin: 10px;
+                border: 1px solid #e0e0e0;
+                text-align: center;
+                padding: 40px 0;
+                box-sizing: border-box;
+                transition: all .3s;
+                .img{
+                    height: 90px;
+                }
+                .p1{
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+                .p2{
+                    color: #777;
+                    line-height: 25px;
+                }
+                &:hover{
+                    box-shadow: 0 0 10px rgba(0,0,0,.2);
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+    // 适用行业
+    .industry{
+        background: #f5f5f5;
+        .info{
+            li{
+                float: left;
+                width: 290px;
+                height: 215px;
+                margin: 5px;
+                background: #fff;
+                box-sizing: border-box;
+                border-radius: 5px;
+                box-shadow: 0px -5px 5px rgba(0,0,0,.1);
+                .p1{
+                    font-size: 60px;
+                    color: #ccc;
+                    padding: 20px 20px 0;
+                    line-height: 50px;
+                }
+                .p2{
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding: 10px 20px;
+                }
+                .p3{
+                    color: #999;
+                    padding: 0 20px 20px;
+                    border-radius: 0 0 5px 5px;
+                    background: #fff;
+                    box-shadow: 0px 5px 5px rgba(0,0,0,.1);
+                    span{
+                        display: inline-block;
+                        line-height: 25px;
+                        height: 75px;
+                        transition: height .5s;
+                        overflow: hidden;
+                    }
+                }
+                &:nth-of-type(1):hover{
+                    .p3{
+                        span{
+                            height: 225px;
+                        }
+                    }
+                }
+                &:nth-of-type(2):hover{
+                    .p3{
+                        span{
+                            height: 225px;
+                        }
+                    }
+                }
+                &:nth-of-type(3):hover{
+                    .p3{
+                        span{
+                            height: 200px;
+                        }
+                    }
+                }
+                &:nth-of-type(4):hover{
+                    .p3{
+                        span{
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 我们能为您做的
+    .can{
+        .info{
+            li{
+                float: left;
+                width: 360px;
+                margin: 0 20px;
+                padding: 30px 0;
+                border-radius: 5px;
+                text-align: center;
+                box-sizing: border-box;
+                border: 1px solid #e0e0e0;
+                position: relative;
+                overflow: hidden;
+                img{
+                    transition: all .5s;
+                }
+                .p1{
+                    padding: 10px 0;
+                    font-size: 18px;
+                    font-weight: bold
+                }
+                .p2{
+                    color: #777;
+                    line-height: 25px;
+                    transition: opacity .5s;
+                }
+                .info-btn{
+                    position: absolute;
+                    width: 140px;
+                    line-height: 40px;
+                    left: 50%;
+                    margin-left: -70px;
+                    border-radius: 5px;
+                    bottom: -45px;
+                    border: 1px solid #ccc;
+                    transition: bottom .5s;
+                    &:hover{
+                        border-color: $mainColor;
+                        color: $mainColor;
+                    }
+                }
+                &:hover{
+                    img{
+                        transform: translateY(-5px);
+                    }
+                    .p2{
+                        opacity: 0;
+                    }
+                    .info-btn{
+                        bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

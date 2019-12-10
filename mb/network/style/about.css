@@ -1,0 +1,261 @@
+@charset "UTF-8";
+.banner {
+  background: url("../img/banner_news.jpg");
+  height: 420px;
+  background-size: cover;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 180px;
+  color: #fff;
+}
+
+.banner h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.banner h1 span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 20px;
+}
+
+.banner h5 {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.banner-bot {
+  background: #ededed;
+  padding: 10px 0;
+}
+
+.banner-bot .right {
+  float: right;
+  display: inline-block;
+  line-height: 45px;
+  background: #fff;
+  padding: 0 30px;
+  color: #d31f23;
+  border-radius: 3px;
+}
+
+.banner-bot .right img, .banner-bot .right span {
+  vertical-align: middle;
+}
+
+.banner-bot .left a, .banner-bot .left span {
+  display: inline-block;
+  line-height: 45px;
+}
+
+.banner-bot .left a.left-home {
+  background: url("../img/banner_top_h.png") center no-repeat;
+  padding-left: 60px;
+  color: #555;
+}
+
+.banner-bot .left a.left-home:hover {
+  color: #d31f23;
+  background-image: url("../img/banner_bot_h1.png");
+}
+
+.banner-bot .left a.active {
+  color: #d31f23;
+}
+
+.content .about {
+  padding: 80px 0;
+}
+
+.content .about .img {
+  float: right;
+  width: 500px;
+}
+
+.content .about .img img {
+  width: 100%;
+}
+
+.content .about .text {
+  padding-right: 530px;
+}
+
+.content .about .text h1 {
+  padding: 10px 0 20px;
+}
+
+.content .about .text h1 span {
+  color: #d31f23;
+}
+
+.content .about .text p {
+  line-height: 25px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.content .about .list {
+  padding-top: 80px;
+}
+
+.content .about .list li {
+  float: left;
+  width: 370px;
+  height: 300px;
+  margin: 15px;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 80px 50px;
+  background-size: 100% 100%;
+}
+
+.content .about .list li:nth-of-type(1) {
+  background-image: url("../img/aboutcard01.jpg");
+}
+
+.content .about .list li:nth-of-type(2) {
+  background-image: url("../img/aboutcard02.jpg");
+}
+
+.content .about .list li:nth-of-type(3) {
+  background-image: url("../img/aboutcard03.jpg");
+}
+
+.content .about .list li .p1 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.content .about .list li .p2 {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 5px 0 20px;
+}
+
+.content .about .list li .p3 {
+  line-height: 25px;
+}
+
+.content .server {
+  background: url("../img/about_bg1.jpg");
+  color: #fff;
+  padding: 80px 0;
+}
+
+.content .server h1 {
+  color: #d31f23;
+  margin-bottom: 20px;
+}
+
+.content .server .p1 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.content .server .p2 {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 0 40px;
+}
+
+.content .server ul li {
+  float: left;
+  width: 200px;
+  text-align: center;
+}
+
+.content .server ul li .item-t {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .server ul li .item-t span {
+  font-size: 65px;
+}
+
+.content .contact {
+  padding: 50px 0;
+}
+
+.content .contact ul li {
+  float: left;
+  width: 290px;
+  margin: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 30px 20px;
+  border-radius: 5px;
+}
+
+.content .contact ul li .p1 {
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.content .contact ul li .p2 {
+  line-height: 25px;
+  color: #666;
+  height: 50px;
+}
+
+.content .map-wrap {
+  height: 600px;
+}
+
+/*map*/
+.custom-input-card {
+  width: 22rem;
+}
+
+.amap-overlays {
+  z-index: 98;
+}
+
+.custom-input-card .btn {
+  margin-right: 1rem;
+}
+
+.custom-input-card .btn:last-child {
+  margin-right: 0;
+}
+
+.info-title {
+  color: white;
+  font-size: 14px;
+  background-color: #25A5F7;
+  line-height: 26px;
+  padding: 0px 0 0 6px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+.info-content {
+  font: 12px Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial;
+  padding: 4px;
+  color: #666666;
+  line-height: 23px;
+}
+
+.info-content p {
+  white-space: nowrap;
+}
+
+.info-content p span {
+  color: red;
+  font-weight: bold;
+}
+
+.amap-info-combo .keyword-input {
+  height: 25px;
+  border-radius: 2px 0 0 2px;
+}
+
+/*map end*/

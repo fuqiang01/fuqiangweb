@@ -1,0 +1,232 @@
+@import './color.scss';
+// banner
+.banner{
+    background: url('../img/banner_news.jpg');
+    height: 420px;
+    background-size: cover;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 180px;
+    color: #fff;
+    h1{
+        font-size: 45px;
+        margin-bottom: 10px;
+        span{
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin: 0 20px;
+        }
+    }
+    h5{
+        font-size: 20px;
+        font-weight: 100;
+    }
+}
+.banner-bot{
+    background: #ededed;
+    padding: 10px 0;
+    .right{
+        float: right;
+        display: inline-block;
+        line-height: 45px;
+        background: #fff;
+        padding: 0 30px;
+        color: $mainColor;
+        border-radius: 3px;
+        img,span{
+            vertical-align: middle;
+        }
+    }
+    .left{
+        a,span{
+            display: inline-block;
+            line-height: 45px;
+        }
+        a.left-home{
+            background: url('../img/banner_top_h.png') center no-repeat;
+            padding-left: 60px;
+            color: #555;
+            &:hover{
+                color: $mainColor;
+                background-image: url('../img/banner_bot_h1.png');
+            }
+        }
+        a.active{
+            color: $mainColor;
+        }
+    }
+}
+// content
+.content{
+    // 关于我们
+    .about{
+        padding: 80px 0;
+        .img{
+            float: right;
+            width: 500px;
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            padding-right: 530px;
+            h1{
+                padding: 10px 0 20px;
+                span{
+                    color: $mainColor;
+                }
+            }
+            p{
+                line-height: 25px;
+                color: #666;
+                margin-bottom: 20px;
+            }
+        }
+        .list{
+            padding-top: 80px;
+            li{
+                float: left;
+                width: 370px;
+                height: 300px;
+                margin: 15px;
+                color: #fff;
+                box-sizing: border-box;
+                padding: 80px 50px;
+                background-size: 100% 100%;
+                &:nth-of-type(1){
+                    background-image: url('../img/aboutcard01.jpg');
+                }
+                &:nth-of-type(2){
+                    background-image: url('../img/aboutcard02.jpg');
+                }
+                &:nth-of-type(3){
+                    background-image: url('../img/aboutcard03.jpg');
+                }
+                .p1{
+                    text-transform: uppercase; 
+                    font-size: 16px;
+                }
+                .p2{
+                    font-size: 22px;
+                    font-weight: bold;
+                    padding: 5px 0 20px;
+                }
+                .p3{
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+    // 服务
+    .server{
+        background: url('../img/about_bg1.jpg');
+        color: #fff;
+        padding: 80px 0;
+        h1{
+            color: $mainColor;
+            margin-bottom: 20px;
+        }
+        .p1{
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .p2{
+            font-size: 22px;
+            font-weight: bold;
+            padding: 10px 0 40px;
+        }
+        ul{
+            li{
+                float: left;
+                width: 200px;
+                text-align: center;
+                .item-t{
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    span{
+                        font-size: 65px;
+                    }
+                }
+            }
+        }
+    }
+    // 联系方式
+    .contact{
+        padding: 50px 0;
+        ul{
+            li{
+                float: left;
+                width: 290px;
+                margin: 5px;
+                text-align: center;
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                box-sizing: border-box;
+                padding: 30px 20px;
+                border-radius: 5px;
+                .p1{
+                    font-weight: bold;
+                    padding: 10px 0;
+                }
+                .p2{
+                    line-height: 25px;
+                    color: #666;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    // 地图
+    .map-wrap{
+        height: 600px;
+    }
+}
+
+/*map*/
+.custom-input-card {
+    width: 22rem;
+}
+.amap-overlays {
+    z-index: 98;
+}
+.custom-input-card .btn {
+    margin-right: 1rem;
+}
+
+.custom-input-card .btn:last-child {
+    margin-right: 0;
+}
+.info-title {
+    color: white;
+    font-size: 14px;
+    background-color: #25A5F7;
+    line-height: 26px;
+    padding: 0px 0 0 6px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.info-content {
+    font: 12px Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial;
+    padding: 4px;
+    color: #666666;
+    line-height: 23px;
+}
+
+.info-content p {
+    white-space: nowrap;
+}
+.info-content p span{
+    color: red;
+    font-weight: bold;
+}
+.amap-info-combo .keyword-input{
+    height: 25px;
+    border-radius: 2px 0 0 2px;
+}
+/*map end*/
