@@ -9,6 +9,10 @@ html, body {
   width: 100%;
 }
 
+.header.header-dark {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 .header .logo {
   float: left;
 }
@@ -197,4 +201,189 @@ footer .beian p {
 
 footer .beian p a {
   color: #666;
+}
+
+.popup-box {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: #fff;
+  padding: 80px 0 120px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.popup-box .container {
+  position: relative;
+}
+
+.popup-box .left {
+  float: left;
+  width: 500px;
+  margin-right: 150px;
+}
+
+.popup-box .left h2 {
+  font-size: 38px;
+  color: #d31f23;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.popup-box .left h1 {
+  font-size: 40px;
+  line-height: 45px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 25px;
+  margin-bottom: 40px;
+}
+
+.popup-box .left .p1 {
+  line-height: 25px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.popup-box .left .p2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.popup-box .left .p2 span {
+  font-weight: bold;
+  color: #555;
+}
+
+.popup-box .left .p3 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.popup-box .right {
+  float: left;
+  width: 500px;
+}
+
+.popup-box .right .p1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.popup-box .right .company-wrap, .popup-box .right .email-wrap, .popup-box .right .user-info {
+  padding: 5px 0;
+}
+
+.popup-box .right .company-wrap input, .popup-box .right .email-wrap input, .popup-box .right .user-info input {
+  width: 100%;
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.popup-box .right .user-info {
+  width: 100%;
+}
+
+.popup-box .right .user-info input {
+  width: 49%;
+}
+
+.popup-box .right .user-info input:nth-of-type(1) {
+  float: left;
+}
+
+.popup-box .right .user-info input:nth-of-type(2) {
+  float: right;
+}
+
+.popup-box .right .p2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.popup-box .right .p3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.popup-box .right .server-type li {
+  float: left;
+  width: 119px;
+  margin: 3px;
+  background: #f5f5f5;
+  box-sizing: border-box;
+  line-height: 25px;
+  padding: 5px 20px;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #666;
+  border: 2px solid transparent;
+}
+
+.popup-box .right .server-type li.active {
+  border-color: #d31f23;
+}
+
+.popup-box .right .p4 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.popup-box .right .radio-wrap {
+  margin-bottom: 15px;
+}
+
+.popup-box .right .radio-wrap input, .popup-box .right .radio-wrap label {
+  vertical-align: middle;
+}
+
+.popup-box .right .radio-wrap label {
+  margin-right: 10px;
+}
+
+.popup-box .right .validation {
+  margin-bottom: 15px;
+}
+
+.popup-box .right .validation input {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.popup-box .right .validation .code {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.popup-box .right .popup-sub-btn {
+  text-align: center;
+  border: 2px solid #d31f23;
+  color: #d31f23;
+  line-height: 45px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.popup-box .right .popup-shut-btn {
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  font-size: 40px;
+  color: #999;
+  cursor: pointer;
+}
+
+.popup-box .right .popup-shut-btn:hover {
+  color: #444;
+  cursor: pointer;
 }

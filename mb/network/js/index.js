@@ -1,10 +1,10 @@
 var mySwiper = new Swiper('.banner', {
   loop: true, // 循环模式选项
-  autoplay: {
-    delay: 5000,
-    stopOnLastSlide: false,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   stopOnLastSlide: false,
+  //   disableOnInteraction: false,
+  // },
   //autoplay:true, //自动播放
 
   // 如果需要分页器

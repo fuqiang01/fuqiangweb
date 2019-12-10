@@ -4,7 +4,7 @@
 }
 
 .banner .swiper-wrapper .swiper-slide {
-  height: 800px;
+  height: 780px;
 }
 
 .banner .swiper-wrapper .swiper-slide .animated {
@@ -43,13 +43,14 @@
 .banner .swiper-wrapper .swiper-slide > a.slide-port {
   padding-top: 200px;
   position: relative;
+  display: block;
 }
 
 .banner .swiper-wrapper .swiper-slide > a.slide-port .video {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: -10px;
   z-index: -1;
 }
 
