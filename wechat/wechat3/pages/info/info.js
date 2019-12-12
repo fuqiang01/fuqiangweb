@@ -6,36 +6,62 @@ Page({
      * 页面的初始数据
      */
     data: {
-        num: '',
-        type: '',
-        topicArr: [],
-        current: 0,
+        num: '', // 科目，1代表科目一，4代表科目四
+        type: '', // 类型，顺序练习或模拟考试或错题回顾
+        topicArr: [], // 题目对象集合
+        current: 0, // swiper当前的显示页
         showIndex: 0,
         isTouch: false,
-        isToNext: false
+        isToNext: false,
+        yesNum: 0,
+        didArr: []
     },
     correct(e) {
-        console.log('收到正确题id：' + e.detail.id);
-        wx.request({
-            url: 'https://www.fqiang.co/addYesId',
-            data: {
-                type: this.data.num,
-                topicType: this.data.type,
-                id: e.detail.id,
-                userId: app.globalData.userId
-            },
-            method: 'GET',
-            success(res) {
-                console.log(res)
-            },
-            fail(err) {
-                console.log(err);
-            }
-        })
+        this.addDidArr(e.detail);
+        if (this.data.type === 'test') {
+            this.setData({
+                yesNum: this.data.yesNum + 1
+            })
+        } else {
+            wx.request({
+                url: 'https://www.fqiang.co/addYesId',
+                data: {
+                    type: this.data.num,
+                    topicType: this.data.type,
+                    id: e.detail.id,
+                    userId: app.globalData.userId
+                },
+                method: 'GET',
+                success(res) {
+                    // console.log(res)
+                },
+                fail(err) {
+                    // console.log(err);
+                }
+            })
+        }
         this.toNext();
     },
     toNext() {
         if (this.data.showIndex >= this.data.topicArr.length - 1) {
+            if (this.data.type === 'test') {
+                const results = this.data.yesNum * 20;
+                const str = results >= 90 ? '成绩合格' : '成绩不合格';
+                wx.showModal({
+                    title: '考试结束',
+                    content: `${str},分数：${results}分`,
+                    //是否显示取消按钮,默认值true
+                    showCancel: false,
+                    success(res) {
+                        if (res.confirm) {
+                            wx.navigateTo({
+                                url: '/pages/index/index'
+                            })
+                        }
+                    }
+                })
+                return;
+            }
             wx.showToast({
                 title: '已经是最后一题',
                 icon: 'success',
@@ -48,7 +74,8 @@ Page({
         })
     },
     wrong(e) {
-        console.log('收到错误题id：' + e.detail.id);
+        this.addDidArr(e.detail);
+        if (this.data.type === 'test') return;
         wx.request({
             url: 'https://www.fqiang.co/addWrongId',
             data: {
@@ -59,10 +86,10 @@ Page({
             },
             method: 'GET',
             success(res) {
-                console.log(res)
+                // console.log(res)
             },
             fail(err) {
-                console.log(err);
+                // console.log(err);
             }
         })
     },
@@ -92,6 +119,11 @@ Page({
             isToNext: false
         })
     },
+    addDidArr( obj ) {
+        this.setData({
+            didArr: [...this.data.didArr, obj]
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -111,7 +143,6 @@ Page({
                     },
                     method: 'GET',
                     success(res) {
-                        console.log(res)
                         self.setData({
                             topicArr: res.data
                         })
@@ -130,7 +161,6 @@ Page({
                     },
                     method: 'GET',
                     success(res) {
-                        console.log(res)
                         self.setData({
                             topicArr: res.data
                         })
@@ -150,7 +180,6 @@ Page({
                     },
                     method: 'GET',
                     success(res) {
-                        console.log(res)
                         self.setData({
                             topicArr: res.data
                         })

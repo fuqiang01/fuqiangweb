@@ -132,4 +132,5 @@
     line-height: 45rpx;
     font-size: 30rpx;
     color: #888;
+    padding-bottom: 60rpx;
 }

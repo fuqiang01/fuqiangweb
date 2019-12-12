@@ -13,7 +13,11 @@
                     <scroll-view
                         class="scroll-view"
                         scroll-y="true">
-                        <f-info-item bindcorrect="correct" bindwrong="wrong" topicObj="{{ item }}"></f-info-item>
+                        <f-info-item 
+                            bindcorrect="correct" 
+                            bindwrong="wrong" 
+                            topicObj="{{ item }}"
+                            didArr="{{ didArr }}"></f-info-item>
                     </scroll-view>
                 </swiper-item>
             </block>
