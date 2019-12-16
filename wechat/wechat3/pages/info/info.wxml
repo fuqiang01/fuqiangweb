@@ -22,4 +22,5 @@
                 </swiper-item>
             </block>
         </swiper>
+        <f-num-box sumObj="{{ sumObj }}"/>
 </view>

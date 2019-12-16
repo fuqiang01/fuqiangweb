@@ -1,5 +1,8 @@
+.info{
+    padding-bottom: 100rpx;
+}
 .swiper{
-    height: 100vh;
+    height: calc(100vh - 100rpx);
 }
 .scroll-view{
     height: 100%;

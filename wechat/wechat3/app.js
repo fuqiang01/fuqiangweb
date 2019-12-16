@@ -2,6 +2,11 @@
 App({
   onLaunch: function () {
     const self = this;
+    this.onLogin( data => {
+      self.globalData.userId = data;
+    });
+  },
+  onLogin( callback){
     wx.login({
       success (res) {
         if (res.code) {
@@ -11,7 +16,7 @@ App({
               code: res.code
             },
             success( res ) {
-              self.globalData.userId = res.data;
+              callback(res.data)
             }
           })
         } else {

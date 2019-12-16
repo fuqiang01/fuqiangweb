@@ -30,22 +30,48 @@ Page({
             url: `/pages/info/info?num=${this.data.num}&type=${type}`
         })
     },
-
+    querySum(id){
+        const self = this;
+        wx.request({
+            url: 'https://www.fqiang.co/getSum',
+            data: {
+                type: this.data.num,
+                userId: id
+            },
+            method: 'GET',
+            success(res) {
+                self.setData({
+                    sumObj: res.data
+                })
+                console.log(res.data)
+            },
+            fail(err) {
+                // console.log(err);
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        // wx.hideShareMenu();
+        let title = '';
         if ( options.num == 1 ) {
+            title = '科目一';
             this.setData({
                 imgSrc: '/img/bg1.jpg',
                 num: options.num
             })
         } else {
+            title = '科目四';
             this.setData({
                 imgSrc: '/img/bg2.jpg',
                 num: options.num
             })
         }
+        wx.setNavigationBarTitle({
+            title
+        })
     },
 
     /**
@@ -60,23 +86,20 @@ Page({
      */
     onShow: function () {
         let self = this;
-        wx.request({
-            url: 'https://www.fqiang.co/getSum',
-            data: {
-                type: this.data.num,
-                userId: app.globalData.userId
-            },
-            method: 'GET',
-            success(res) {
-                console.log(res)
-                self.setData({
-                    sumObj: res.data
-                })
-            },
-            fail(err) {
-                console.log(err);
-            }
+        wx.showLoading({
+            mask: true,
+            title: '加载中...'
         })
+        if(app.globalData.userId){
+            self.querySum(app.globalData.userId);
+            wx.hideLoading();
+        } else {
+            app.onLogin( data => {
+                self.querySum(data);
+                wx.hideLoading();
+            })
+        }
+        
     },
 
     /**
@@ -111,6 +134,9 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return {
+            path: '/pages/index/index',
+            imageUrl: '/img/share.jpg'
+        }
     }
 })

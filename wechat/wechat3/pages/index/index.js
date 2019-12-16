@@ -12,6 +12,20 @@ Page({
       url: `/pages/page/page?num=${num}`
     })
   },
-  onLoad: function () {
+  feedbackTop(){
+    wx.showModal({
+      tite: '反馈',
+      showCancel: false,
+      content: '有任何问题或建议请发送到邮箱\r\n206234924@qq.com'
+    })
   },
+  onLoad: function () {
+    
+  },
+  onShareAppMessage: function () {
+    return {
+        path: '/pages/index/index',
+        imageUrl: '/img/share.jpg'
+    }
+}
 })

@@ -19,3 +19,18 @@
   font-size: 50rpx;
   transform: translate(-50%, -50%);
 }
+.feedback{
+  position: fixed;
+  bottom: 100rpx;
+  right: 50rpx;
+  background: rgba(0,0,0,.3);
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedback image{
+  width: 50%;
+}

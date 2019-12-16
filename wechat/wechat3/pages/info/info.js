@@ -14,7 +14,8 @@ Page({
         isTouch: false,
         isToNext: false,
         yesNum: 0,
-        didArr: []
+        didArr: [],
+        sumObj: {}
     },
     correct(e) {
         this.addDidArr(e.detail);
@@ -40,12 +41,13 @@ Page({
                 }
             })
         }
+        this.changeSumObj('yes');
         this.toNext();
     },
     toNext() {
         if (this.data.showIndex >= this.data.topicArr.length - 1) {
             if (this.data.type === 'test') {
-                const results = this.data.yesNum * 20;
+                const results = this.data.yesNum * 2;
                 const str = results >= 90 ? '成绩合格' : '成绩不合格';
                 wx.showModal({
                     title: '考试结束',
@@ -75,6 +77,7 @@ Page({
     },
     wrong(e) {
         this.addDidArr(e.detail);
+        this.changeSumObj('no');
         if (this.data.type === 'test') return;
         wx.request({
             url: 'https://www.fqiang.co/addWrongId',
@@ -119,22 +122,21 @@ Page({
             isToNext: false
         })
     },
-    addDidArr( obj ) {
+    addDidArr(obj) {
         this.setData({
             didArr: [...this.data.didArr, obj]
         })
     },
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-        this.setData({
-            type: options.type,
-            num: options.num
-        })
+    setTopicArr(options) {
         let self = this;
+        let title = '';
+        wx.showLoading({
+            mask: true,
+            title: '加载中...'
+        })
         switch (options.type) {
             case 'order':  //顺章练习
+                title = '顺章练习';
                 wx.request({
                     url: 'https://www.fqiang.co/getTopic',
                     data: {
@@ -146,6 +148,7 @@ Page({
                         self.setData({
                             topicArr: res.data
                         })
+                        wx.hideLoading();
                     },
                     fail(err) {
                         console.log(err);
@@ -154,6 +157,7 @@ Page({
                 break;
 
             case 'test': //模拟考试
+                title = '模拟考试';
                 wx.request({
                     url: 'https://www.fqiang.co/getTestTopic',
                     data: {
@@ -164,6 +168,7 @@ Page({
                         self.setData({
                             topicArr: res.data
                         })
+                        wx.hideLoading();
                     },
                     fail(err) {
                         console.log(err);
@@ -172,6 +177,7 @@ Page({
                 break;
 
             case 'wrong': //错题回顾
+                title = '错题回顾';
                 wx.request({
                     url: 'https://www.fqiang.co/getWrongTopic',
                     data: {
@@ -183,12 +189,72 @@ Page({
                         self.setData({
                             topicArr: res.data
                         })
+                        wx.hideLoading();
                     },
                     fail(err) {
                         console.log(err);
                     }
                 })
         }
+        wx.setNavigationBarTitle({
+            title
+        })
+    },
+    setSumObj() {
+        let self = this;
+        if ( this.data.type === 'test' ) {
+            this.setData({
+                sumObj: {
+                    yes: 0,
+                    no: 0,
+                    all: 50
+                }
+            })
+            return;
+        }
+        wx.request({
+            url: 'https://www.fqiang.co/getSum',
+            data: {
+                type: this.data.num,
+                userId: app.globalData.userId
+            },
+            method: 'GET',
+            success(res) {
+                self.setData({
+                    sumObj: {
+                        yes: res.data.achieve - res.data.wrong,
+                        no: res.data.wrong,
+                        all: res.data.allNum
+                    }
+                })
+            }
+        })
+    },
+    changeSumObj(state) {
+        switch (state) {
+            case 'yes':
+                this.setData({
+                    'sumObj.yes': this.data.sumObj.yes + 1,
+                    'sumObj.all': this.data.sumObj.all + 1,
+                })
+                break;
+            case 'no':
+                this.setData({
+                    'sumObj.no': this.data.sumObj.no + 1,
+                    'sumObj.all': this.data.sumObj.all + 1,
+                })
+        }
+    },
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
+        this.setData({
+            type: options.type,
+            num: options.num
+        })
+        this.setTopicArr(options);
+        this.setSumObj();
     },
 
     /**
@@ -202,7 +268,6 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
     },
 
     /**
@@ -237,6 +302,9 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return {
+            path: '/pages/index/index',
+            imageUrl: '/img/share.jpg'
+        }
     }
 })
