@@ -30,7 +30,7 @@ Page({
             url: `/pages/info/info?num=${this.data.num}&type=${type}`
         })
     },
-    querySum(id){
+    querySum(id){ // 请求数量数据
         const self = this;
         wx.request({
             url: 'https://www.fqiang.co/getSum',
@@ -90,7 +90,7 @@ Page({
             mask: true,
             title: '加载中...'
         })
-        if(app.globalData.userId){
+        if(app.globalData.userId){ //判断用户是否登录
             self.querySum(app.globalData.userId);
             wx.hideLoading();
         } else {

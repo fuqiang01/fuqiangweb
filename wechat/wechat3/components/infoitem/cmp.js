@@ -43,6 +43,9 @@ Component({
                 classList: arr
             })
             if ( this.data.topicObj.titleType == "多选题" ) return; //是多选题的话不在这处理
+            this.setData({
+                isDid: true
+            })
             if( index == this.data.topicObj.answer[0] ) { //正确
                 this.triggerEvent('correct',{ id: id, classList: arr});
             } else { // 错误
@@ -56,6 +59,9 @@ Component({
         },
         submitBtnTap(){ // 多选题提交事件
             if ( this.data.isDid ) return;//该题如果被做过了，点击什么都不做
+            this.setData({
+                isDid: true
+            })
             let classList = this.data.classList;
             let showExplain = false;
             const id = this.properties.topicObj.id;

@@ -23,7 +23,7 @@ export default {
     props: ["data"],
     components: {
         DateWrap,
-        CoverLayer
+        CoverLayer,
     },
     data(){
         return {

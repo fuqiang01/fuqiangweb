@@ -10,14 +10,14 @@ Page({
         type: '', // 类型，顺序练习或模拟考试或错题回顾
         topicArr: [], // 题目对象集合
         current: 0, // swiper当前的显示页
-        showIndex: 0,
-        isTouch: false,
-        isToNext: false,
-        yesNum: 0,
-        didArr: [],
-        sumObj: {}
+        showIndex: 0,//显示项为当前题目数组的第几项
+        isTouch: false, // 是否通过滑动来触发下一题
+        isToNext: false,  // 当前项是否是点击了正确的选项，自动滑动到下一页的
+        yesNum: 0, // 模拟测试中，做对的题目总数
+        didArr: [],  // 存放做过了的题的信息，[{id: ..., classList: [...]}]
+        sumObj: {}  // 存放做对的题数量，做错的题的数量和题目总数
     },
-    correct(e) {
+    correct(e) { // 题目做正确了执行
         this.addDidArr(e.detail);
         if (this.data.type === 'test') {
             this.setData({
@@ -44,9 +44,9 @@ Page({
         this.changeSumObj('yes');
         this.toNext();
     },
-    toNext() {
-        if (this.data.showIndex >= this.data.topicArr.length - 1) {
-            if (this.data.type === 'test') {
+    toNext() { 
+        if (this.data.showIndex >= this.data.topicArr.length - 1) { // 到了最后一题了
+            if (this.data.type === 'test') { // 做的模拟考试
                 const results = this.data.yesNum * 2;
                 const str = results >= 90 ? '成绩合格' : '成绩不合格';
                 wx.showModal({
@@ -75,7 +75,7 @@ Page({
             isToNext: true
         })
     },
-    wrong(e) {
+    wrong(e) { // 题目做错执行
         this.addDidArr(e.detail);
         this.changeSumObj('no');
         if (this.data.type === 'test') return;
@@ -96,12 +96,12 @@ Page({
             }
         })
     },
-    onStart() {
+    onStart() { // 手指触摸事件
         this.setData({
             isTouch: true
         })
     },
-    onFinish(e) {
+    onFinish(e) { // swiper动画结束时触发
         if (e.detail.source != 'touch' && !this.data.isToNext) {
             this.setData({
                 isTouch: false
@@ -127,7 +127,7 @@ Page({
             didArr: [...this.data.didArr, obj]
         })
     },
-    setTopicArr(options) {
+    setTopicArr(options) { // 根据类型请求题目数据
         let self = this;
         let title = '';
         wx.showLoading({
@@ -200,7 +200,7 @@ Page({
             title
         })
     },
-    setSumObj() {
+    setSumObj() { // 请求题目数量数据
         let self = this;
         if ( this.data.type === 'test' ) {
             this.setData({
@@ -230,7 +230,7 @@ Page({
             }
         })
     },
-    changeSumObj(state) {
+    changeSumObj(state) { // 修改题目数据
         switch (state) {
             case 'yes':
                 this.setData({
