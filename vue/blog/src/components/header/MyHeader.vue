@@ -43,5 +43,8 @@ export default {
             font-size: 15px;
         }
     }
+    .input-wrap{
+        margin-right: 20px;
+    }
 }
 </style>
