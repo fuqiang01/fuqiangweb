@@ -4,7 +4,9 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        sumObj: Object
+        sumObj: Object,
+        showTimer: Boolean,
+        timerStart: Boolean
     },
 
     /**
@@ -18,6 +20,8 @@ Component({
      * 组件的方法列表
      */
     methods: {
-
+        onOver(){
+            this.triggerEvent('onover')
+        }
     }
 })

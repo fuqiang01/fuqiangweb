@@ -4,6 +4,7 @@
         current="{{ current }}"
         duration="{{ isTouch ? 500 : 0 }}"
         bindanimationfinish="onFinish"
+        bindchange="onChange"
         bindtouchstart="onStart">
             <block 
                 wx:for="{{ topicArr }}"
@@ -22,5 +23,9 @@
                 </swiper-item>
             </block>
         </swiper>
-        <f-num-box sumObj="{{ sumObj }}"/>
+        <f-num-box 
+            sumObj="{{ sumObj }}" 
+            showTimer="{{ type === 'test' }}"
+            timerStart="{{ timerStart }}"
+            bindonover="onOver"/>
 </view>

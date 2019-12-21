@@ -10,12 +10,14 @@ Page({
         type: '', // 类型，顺序练习或模拟考试或错题回顾
         topicArr: [], // 题目对象集合
         current: 0, // swiper当前的显示页
-        showIndex: 0,//显示项为当前题目数组的第几项
+        showIndex: 0, //显示项为当前题目数组的第几项
         isTouch: false, // 是否通过滑动来触发下一题
-        isToNext: false,  // 当前项是否是点击了正确的选项，自动滑动到下一页的
+        isToNext: false, // 当前项是否是点击了正确的选项，自动滑动到下一页的
         yesNum: 0, // 模拟测试中，做对的题目总数
-        didArr: [],  // 存放做过了的题的信息，[{id: ..., classList: [...]}]
-        sumObj: {}  // 存放做对的题数量，做错的题的数量和题目总数
+        didArr: [], // 存放做过了的题的信息，[{id: ..., classList: [...]}]
+        sumObj: {}, // 存放做对的题数量，做错的题的数量和题目总数
+        //isSame: true, // 确认执行动画之后是否还是原来的(是否滑动了但是没有滑到下一题)
+        timerStart: false, // 计时器是否开始运行
     },
     correct(e) { // 题目做正确了执行
         this.addDidArr(e.detail);
@@ -32,44 +34,15 @@ Page({
                     id: e.detail.id,
                     userId: app.globalData.userId
                 },
-                method: 'GET',
-                success(res) {
-                    // console.log(res)
-                },
-                fail(err) {
-                    // console.log(err);
-                }
+                method: 'GET'
             })
         }
         this.changeSumObj('yes');
         this.toNext();
     },
-    toNext() { 
-        if (this.data.showIndex >= this.data.topicArr.length - 1) { // 到了最后一题了
-            if (this.data.type === 'test') { // 做的模拟考试
-                const results = this.data.yesNum * 2;
-                const str = results >= 90 ? '成绩合格' : '成绩不合格';
-                wx.showModal({
-                    title: '考试结束',
-                    content: `${str},分数：${results}分`,
-                    //是否显示取消按钮,默认值true
-                    showCancel: false,
-                    success(res) {
-                        if (res.confirm) {
-                            wx.navigateTo({
-                                url: '/pages/index/index'
-                            })
-                        }
-                    }
-                })
-                return;
-            }
-            wx.showToast({
-                title: '已经是最后一题',
-                icon: 'success',
-            })
-            return;
-        }
+    toNext() {
+        console.log('toNext执行了')
+        if (this.isLastTopic()) return;
         this.setData({
             current: this.data.current + 1,
             isToNext: true
@@ -87,21 +60,30 @@ Page({
                 id: e.detail.id,
                 userId: app.globalData.userId
             },
-            method: 'GET',
-            success(res) {
-                // console.log(res)
-            },
-            fail(err) {
-                // console.log(err);
-            }
+            method: 'GET'
         })
     },
-    onStart() { // 手指触摸事件
+    onStart(e) { // 手指触摸事件
+        // console.log('手指触摸了',e)
         this.setData({
-            isTouch: true
+            isTouch: true,
+            // isSame: true
         })
+    },
+    onChange(e) {
+        console.log('change执行了',e)
+        // this.setData({
+        //     isSame: false
+        // })
     },
     onFinish(e) { // swiper动画结束时触发
+        console.log('onFinish执行了',e)
+        if (this.isLastTopic()) return;
+        // if (this.data.isSame) return;
+        // console.log('哈哈哈')
+        // this.setData({
+        //     isSame: true
+        // })
         if (e.detail.source != 'touch' && !this.data.isToNext) {
             this.setData({
                 isTouch: false
@@ -135,7 +117,7 @@ Page({
             title: '加载中...'
         })
         switch (options.type) {
-            case 'order':  //顺章练习
+            case 'order': //顺章练习
                 title = '顺章练习';
                 wx.request({
                     url: 'https://www.fqiang.co/getTopic',
@@ -169,6 +151,19 @@ Page({
                             topicArr: res.data
                         })
                         wx.hideLoading();
+                        wx.showModal({
+                            title: '考试规则',
+                            content: '考试时间: 30分钟\r\n考试题目: 50道(科目一50题皆为单选,科目四前40题单选后10题多选)',
+                            //是否显示取消按钮,默认值true
+                            showCancel: false,
+                            success(res) {
+                                if (res.confirm) {
+                                    self.setData({
+                                        timerStart: true
+                                    })
+                                }
+                            }
+                        })
                     },
                     fail(err) {
                         console.log(err);
@@ -202,7 +197,7 @@ Page({
     },
     setSumObj() { // 请求题目数量数据
         let self = this;
-        if ( this.data.type === 'test' ) {
+        if (this.data.type === 'test') {
             this.setData({
                 sumObj: {
                     yes: 0,
@@ -235,15 +230,47 @@ Page({
             case 'yes':
                 this.setData({
                     'sumObj.yes': this.data.sumObj.yes + 1,
-                    'sumObj.all': this.data.sumObj.all + 1,
                 })
                 break;
             case 'no':
                 this.setData({
                     'sumObj.no': this.data.sumObj.no + 1,
-                    'sumObj.all': this.data.sumObj.all + 1,
                 })
         }
+    },
+    getResults() {
+        const results = this.data.yesNum * 2;
+        const str = results >= 90 ? '成绩合格' : '成绩不合格';
+        wx.showModal({
+            title: '考试结束',
+            content: `${str},分数：${results}分`,
+            //是否显示取消按钮,默认值true
+            showCancel: false,
+            success(res) {
+                if (res.confirm) {
+                    wx.reLaunch({
+                        url: '/pages/index/index'
+                    })
+                }
+            }
+        })
+    },
+    onOver() {
+        this.getResults();
+    },
+    isLastTopic() {
+        if (this.data.showIndex >= this.data.topicArr.length - 1) { // 到了最后一题了
+            if (this.data.type === 'test') { // 做的模拟考试
+                this.getResults();
+                return true;
+            }
+            wx.showToast({
+                title: '已经是最后一题',
+                icon: 'success',
+            })
+            return true;
+        }
+        return false;
     },
     /**
      * 生命周期函数--监听页面加载
@@ -267,8 +294,7 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
-    },
+    onShow: function () {},
 
     /**
      * 生命周期函数--监听页面隐藏
