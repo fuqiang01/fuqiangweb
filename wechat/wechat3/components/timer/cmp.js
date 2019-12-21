@@ -11,7 +11,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    date: 10,
+    date: 30 * 60,
     temp: null
   },
   observers: {
@@ -27,6 +27,11 @@ Component({
           this.triggerEvent('onover')
         }
       }, 1000)
+    }
+  },
+  lifetimes:{
+    detached(){
+      clearInterval(this.data.temp);
     }
   },
   /**

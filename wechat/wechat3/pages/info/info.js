@@ -16,8 +16,9 @@ Page({
         yesNum: 0, // 模拟测试中，做对的题目总数
         didArr: [], // 存放做过了的题的信息，[{id: ..., classList: [...]}]
         sumObj: {}, // 存放做对的题数量，做错的题的数量和题目总数
-        //isSame: true, // 确认执行动画之后是否还是原来的(是否滑动了但是没有滑到下一题)
+        isSame: true, // 确认执行动画之后是否还是原来的(是否滑动了但是没有滑到下一题)
         timerStart: false, // 计时器是否开始运行
+        canChangeIsSame: true
     },
     correct(e) { // 题目做正确了执行
         this.addDidArr(e.detail);
@@ -64,26 +65,28 @@ Page({
         })
     },
     onStart(e) { // 手指触摸事件
-        // console.log('手指触摸了',e)
         this.setData({
-            isTouch: true,
-            // isSame: true
+            isTouch: true
         })
     },
     onChange(e) {
-        console.log('change执行了',e)
-        // this.setData({
-        //     isSame: false
-        // })
+        if (this.data.canChangeIsSame) {
+            this.setData({
+                isSame: false
+            })
+        } else {
+            this.setData({
+                canChangeIsSame: true
+            })
+        }
+
     },
     onFinish(e) { // swiper动画结束时触发
-        console.log('onFinish执行了',e)
         if (this.isLastTopic()) return;
-        // if (this.data.isSame) return;
-        // console.log('哈哈哈')
-        // this.setData({
-        //     isSame: true
-        // })
+        if (this.data.isSame) return;
+        this.setData({
+            isSame: true
+        })
         if (e.detail.source != 'touch' && !this.data.isToNext) {
             this.setData({
                 isTouch: false
@@ -98,10 +101,15 @@ Page({
             showIndex = showIndex <= 0 ? 0 : showIndex - 1;
         }
         current = showIndex == 0 ? 0 : 1;
+        if (current !== e.detail.current) {
+            this.setData({
+                canChangeIsSame: false
+            })
+        }
         this.setData({
             showIndex,
             current,
-            isToNext: false
+            isToNext: false,
         })
     },
     addDidArr(obj) {
