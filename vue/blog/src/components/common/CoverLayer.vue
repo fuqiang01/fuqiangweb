@@ -1,9 +1,11 @@
 <template>
-    <div class="cover-layer" @click="wrapTap" v-if="isShow">
-        <div class="cover-content" @click="contentTap">
-            <slot />
+    <transition name="myfade">
+        <div class="cover-layer" @click="wrapTap" v-if="isShow">
+            <div class="cover-content" @click="contentTap">
+                <slot />
+            </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script>
@@ -32,8 +34,11 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    .cover-content {
-        color: #fff;
-    }
+}
+.myfade-enter-active,.myfade-leave-active{
+    transition: all 1s;
+}
+.myfade-enter,.myfade-leave-to{
+    opacity: 0;
 }
 </style>
