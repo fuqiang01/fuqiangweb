@@ -1,0 +1,29 @@
+.page{
+    margin: 30rpx;
+}
+.item{
+    position: relative;
+}
+.item image{
+    width: 100%;
+    border-radius: 10rpx;
+}
+.item .text-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.text-wrap text{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.text-wrap .t1{
+    font-size: 50rpx;
+    margin-bottom: 10rpx;
+}
+.text-wrap .t2{
+    font-size: 40rpx;
+}
