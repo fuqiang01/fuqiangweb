@@ -13,6 +13,7 @@ Page({
     },
     onTap(e) {
         let type = e.currentTarget.dataset.type;
+        const testV = e.currentTarget.dataset.testv;
         if ( type === 'wrong' && this.data.sumObj.wrong === 0) {
             wx.showToast({
                 title: '当前没有错题',
@@ -26,8 +27,9 @@ Page({
             })
             return;
         }
+        const urlPath = testV ? '/newinfo/newinfo' : '/info/info';
         wx.navigateTo({
-            url: `/pages/info/info?num=${this.data.num}&type=${type}`
+            url: `/pages${urlPath}?num=${this.data.num}&type=${type}`
         })
     },
     querySum(id){ // 请求数量数据
