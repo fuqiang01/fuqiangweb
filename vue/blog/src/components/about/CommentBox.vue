@@ -2,12 +2,7 @@
     <div :class="['comment-box',aboutBgWhite && 'bg-white']">
         <a-comment>
             <div class="photo-wrap" slot="avatar">
-                <a-avatar
-                    shape="square"
-                    icon="user"
-                    src=""
-                    @click="photoClick"
-                />
+                <a-avatar shape="square" icon="user" src @click="photoClick" />
                 <input
                     type="file"
                     @change="photoFileChange"
@@ -69,30 +64,35 @@ export default {
         },
         onKeyUp(e) {
             if (e.ctrlKey) {
-                this.onRelease()
+                this.onRelease();
             }
         },
         onRelease() {
+            if (!this.commentText) {
+                this.$message.warning("评论不能为空！");
+                return;
+            }
             const data = {
                 photo: "",
-                name: this.name,
+                name: this.name || "匿名",
                 email: this.email,
                 content: this.commentText,
-                parentId: this.parentId || '',
+                parentId: this.parentId || "",
                 date: new Date().getTime()
             };
-            console.log('发送数据：');
-            console.log(data)
-            this.name = '';
-            this.email = '';
-            this.commentText = '';
+            this.$emit("release");
+            console.log("发送数据：");
+            console.log(data);
+            this.name = "";
+            this.email = "";
+            this.commentText = "";
         },
         photoClick() {
             this.$refs.photoFile.click();
         },
         photoFileChange() {
             console.log("上传文件：");
-            console.log(this.$refs.photoFile.files[0])
+            console.log(this.$refs.photoFile.files[0]);
         }
     }
 };

@@ -9,5 +9,11 @@ const MyAxios = Axios.create({
 export default{
     getComments(){
         return MyAxios.get(Urls.getComments);
+    },
+    getContentList(){
+        return MyAxios.get(Urls.getContentList);
+    },
+    getInfoById(){
+        return MyAxios.get(Urls.getInfoById);
     }
 }

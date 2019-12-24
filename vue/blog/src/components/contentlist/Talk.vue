@@ -1,6 +1,6 @@
 <template>
     <div class="talk">
-        <p class="con-text">{{ data.text }}</p>
+        <p class="con-text">{{ data.title }}</p>
         <p class="con-origin">
             <a :href="data.origin.url || 'javaScript:void(0)' ">--- {{ data.origin.text }}</a>
         </p>

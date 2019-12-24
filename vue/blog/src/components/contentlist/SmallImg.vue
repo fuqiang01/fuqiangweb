@@ -1,7 +1,7 @@
 <template>
     <div class="small-img">
         <div class="title">
-            <a href="#">{{ data.title }}</a>
+            <router-link :to="{name:'about',params:{id: data.id}}">{{ data.title }}</router-link>
         </div>
         <div class="describe">
             <div class="describe-img" @click="imgClick">

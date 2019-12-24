@@ -1,7 +1,7 @@
 <template>
     <div class="plain-text">
         <div class="title">
-            <a href="#">{{ data.title }}</a>
+            <router-link :to="{name:'about',params:{id: data.id}}">{{ data.title }}</router-link>
         </div>
         <div class="describe">{{ data.describe }}</div>
         <DateWrap :data="data"/>

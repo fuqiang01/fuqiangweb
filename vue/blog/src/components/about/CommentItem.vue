@@ -78,11 +78,17 @@ export default {
         line-height: 23px;
         color: #fff;
     }
+    .ant-comment-content-author-name > * {
+        color: #fff;
+    }
     .btn-like {
         margin-right: 10px;
     }
     &.bg-white {
         .comments-content {
+            color: #4d4d4d;
+        }
+        .ant-comment-content-author-name > * {
             color: #4d4d4d;
         }
     }
