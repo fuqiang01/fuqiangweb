@@ -1,15 +1,16 @@
 <template>
     <div class="header">
         <div class="header-nav">
-            <a href="#">主页</a>
-            <a href="#">知识点</a>
-            <a href="#">影音娱乐</a>
-            <a href="#">文章分享</a>
+            <router-link to="/">主页</router-link>
+            <router-link :to="{name: 'home', params:{search: 'knowledge'}}">知识点</router-link>
+            <router-link :to="{name: 'home', params:{search: 'entertainment'}}">影音娱乐</router-link>
+            <router-link :to="{name: 'home', params:{search: 'article'}}">文章分享</router-link>
         </div>
         <div class="input-wrap">
             <a-input-search
                 placeholder="标题，关键词，描述"
                 style="width: 250px"
+                v-model="searchValue"
                 @search="onSearch"
             />
         </div>
@@ -18,9 +19,15 @@
 
 <script>
 export default {
+    data(){
+        return{
+            searchValue: ''
+        }
+    },
     methods: {
         onSearch(value) {
-            console.log(value);
+            this.$router.push(`/${value}`);
+            this.searchValue = '';
         }
     }
 };

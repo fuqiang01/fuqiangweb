@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+    <div id="app">
+        <a-layout>
+            <MySlider />
+            <a-layout>
+                <MyHeader />
+                <MyContent />
+            </a-layout>
+        </a-layout>
+    </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import MyContent from '@/components/layout/MyContent'
+import MyHeader from '@/components/layout/MyHeader'
+import MySlider from '@/components/layout/MySlider'
+export default {
+    components: {
+        MyContent,
+        MyHeader,
+        MySlider
     }
-  }
+};
+</script>
+<style lang="scss">
+html,
+body {
+    width: 100%;
+    height: 100%;
+    #app {
+        width: 100%;
+        height: 100%;
+        .ant-layout{
+            height: 100%;
+        }
+    }
 }
 </style>

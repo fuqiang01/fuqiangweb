@@ -1,5 +1,5 @@
 <template>
-    <div :class="['comment-box',aboutBgWhite && 'bg-white']">
+    <div :class="['comment-box',isBgWhite && 'bg-white']">
         <a-comment>
             <div class="photo-wrap" slot="avatar">
                 <a-avatar shape="square" icon="user" src @click="photoClick" />
@@ -33,7 +33,7 @@
                     <span>
                         <a-button
                             ghost
-                            :type="aboutBgWhite ? 'primary' : 'default'"
+                            :type="isBgWhite ? 'primary' : 'default'"
                             @click="onClose"
                         >取消</a-button>
                     </span>
@@ -46,7 +46,7 @@
 <script>
 import { mapState } from "vuex";
 export default {
-    props: ["parentId"],
+    props: ["parentId", "bgWhite"],
     data() {
         return {
             name: "",
@@ -55,7 +55,10 @@ export default {
         };
     },
     computed: {
-        ...mapState(["aboutBgWhite"])
+        ...mapState(["aboutBgWhite"]),
+        isBgWhite(){
+            return (this.aboutBgWhite || this.bgWhite);
+        }
     },
     methods: {
         onClose() {

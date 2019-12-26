@@ -5,8 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    sliderCollapsed: false
   },
   mutations: {
+    setSliderCollapsed(state, bool){
+      state.sliderCollapsed = bool;
+    }
   },
   actions: {
   },
