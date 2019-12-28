@@ -1,77 +1,81 @@
 <template>
-    <div class="edit_container">
-        <quill-editor 
-            v-model="content"
-            ref="myQuillEditor"
-            :options="editorOption"
-            @blur="onEditorBlur($event)"
-            @focus="onEditorFocus($event)"
-            @change="onEditorChange($event)"
-        ></quill-editor >
-        <button v-on:click="saveHtml">保存</button>
+    <div class="add-article">
+        <!-- <RichText /> -->
+        <a-form
+            id="components-form-demo-normal-login"
+            :form="form"
+            class="login-form"
+            @submit="handleSubmit"
+        >
+            <a-form-item>
+                <a-input
+                    v-decorator="['userName',{ rules: [{ required: true, message: '标题不可为空！' }] },]"
+                    placeholder="标题"
+                >
+                    <a-icon slot="prefix" type="edit" style="color: rgba(0,0,0,.25)" />
+                </a-input>
+            </a-form-item>
+            <a-form-item>
+                <TypeSelection />
+            </a-form-item>
+            <a-form-item>
+                <ArticleOrigin />
+            </a-form-item>
+            <a-form-item>
+                <Tags />
+            </a-form-item>
+            <a-form-item>
+                <RichText />
+            </a-form-item>
+            <a-form-item>
+                <a-button type="primary" html-type="submit" class="login-form-button">Log in</a-button>
+            </a-form-item>
+        </a-form>
     </div>
 </template>
 
 <script>
-import {quillEditor } from 'vue-quill-editor'
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
-import hljs from "highlight.js"; //导入代码高亮文件
-import "highlight.js/styles/monokai-sublime.css"; //导入代码高亮样式
+import RichText from "@/components/addArticle/RichText";
+import Tags from "@/components/addArticle/Tags";
+import ArticleOrigin from "@/components/addArticle/ArticleOrigin";
+import TypeSelection from "@/components/addArticle/TypeSelection";
 export default {
-    components:{
-        quillEditor 
+    components: {
+        RichText,
+        Tags,
+        ArticleOrigin,
+        TypeSelection
     },
-    data() {
-        return {
-            content: "",
-            editorOption: {
-                modules: {
-                    toolbar: [
-                        ["bold", "italic", "underline", "strike"],
-                        ["blockquote", "code-block"],
-                        [{ header: 1 }, { header: 2 }],
-                        [{ list: "ordered" }, { list: "bullet" }],
-                        [{ script: "sub" }, { script: "super" }],
-                        [{ indent: "-1" }, { indent: "+1" }],
-                        [{ direction: "rtl" }],
-                        [{ size: ["small", false, "large", "huge"] }],
-                        [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                        [{ font: [] }],
-                        [{ color: [] }, { background: [] }],
-                        [{ align: [] }],
-                        ["clean"],
-                        ["link", "image", "video"]
-                    ],
-                    syntax: {
-                        highlight: text => hljs.highlightAuto(text).value
-                    }
-                }
-            }
-        };
-    },
-    computed: {
-        editor() {
-            return this.$refs.myQuillEditor.quill;
-        }
+    beforeCreate() {
+        this.form = this.$form.createForm(this, { name: "normal_login" });
     },
     methods: {
-        onEditorReady() {
-            // 准备编辑器
+        handleSubmit(e) {
+            e.preventDefault();
+            this.form.validateFields((err, values) => {
+                if (!err) {
+                    console.log("Received values of form: ", values);
+                }
+            });
         },
-        onEditorBlur() {}, // 失去焦点事件
-        onEditorFocus() {}, // 获得焦点事件
-        onEditorChange() {}, // 内容改变事件
-        saveHtml: function() {
-            console.log(this.content);
-        }
+        
+    },
+    mounted(){
+        
     }
 };
 </script>
 
-<style>
-.ql-editor{
-    min-height: 400px;
+<style lang="scss">
+.add-article {
+    background: #fff;
+    margin: 20px;
+    padding: 20px;
+    #components-form-demo-normal-login .login-form {
+        max-width: 300px;
+    }
+    #components-form-demo-normal-login .login-form-button {
+        width: 100%;
+    }
 }
 </style>

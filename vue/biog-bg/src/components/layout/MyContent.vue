@@ -1,5 +1,5 @@
 <template>
-    <a-layout-content :style="{ margin: '24px 16px',  background: '#fff', minHeight: '280px' }" >
+    <a-layout-content :style="{ minHeight: '280px' }" >
         <div class="my-content-wrap">
             <router-view></router-view>
         </div>
@@ -15,7 +15,7 @@ export default {};
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    padding: 24px;
+    overflow-x: hidden;
     &::-webkit-scrollbar {
         width: 5px;
     }
