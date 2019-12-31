@@ -1,53 +1,35 @@
 <template>
-    <div class="add-article">
+    <div class="add-article" @keyup.enter="keyEnter">
         <!-- <RichText /> -->
-        <a-form
-            id="components-form-demo-normal-login"
-            :form="form"
-            class="login-form"
-            @submit="handleSubmit"
-        >
+        <a-form id="components-form-demo-normal-login" class="add-form" @submit="handleSubmit" :form="form">
+            <AddArticleTitle />
+            <TypeSelection />
+            <Tags />
+            <RichText v-if="showRichText" />
             <a-form-item>
-                <a-input
-                    v-decorator="['userName',{ rules: [{ required: true, message: '标题不可为空！' }] },]"
-                    placeholder="标题"
-                >
-                    <a-icon slot="prefix" type="edit" style="color: rgba(0,0,0,.25)" />
-                </a-input>
-            </a-form-item>
-            <a-form-item>
-                <TypeSelection />
-            </a-form-item>
-            <a-form-item>
-                <ArticleOrigin />
-            </a-form-item>
-            <a-form-item>
-                <Tags />
-            </a-form-item>
-            <a-form-item>
-                <RichText />
-            </a-form-item>
-            <a-form-item>
-                <a-button type="primary" html-type="submit" class="login-form-button">Log in</a-button>
+                <a-button type="primary" html-type="submit" class="add-form-button">确认提交</a-button>
             </a-form-item>
         </a-form>
     </div>
 </template>
 
 <script>
+import AddArticleTitle from "@/components/addArticle/AddArticleTitle";
 import RichText from "@/components/addArticle/RichText";
 import Tags from "@/components/addArticle/Tags";
-import ArticleOrigin from "@/components/addArticle/ArticleOrigin";
 import TypeSelection from "@/components/addArticle/TypeSelection";
 export default {
     components: {
+        AddArticleTitle,
         RichText,
         Tags,
-        ArticleOrigin,
         TypeSelection
     },
-    beforeCreate() {
-        this.form = this.$form.createForm(this, { name: "normal_login" });
+    computed: {
+        showRichText() {
+            const arr = ["talk", "music"];
+            return !arr.includes(this.$route.params.type);
+        }
     },
     methods: {
         handleSubmit(e) {
@@ -58,11 +40,15 @@ export default {
                 }
             });
         },
-        
+        keyEnter(e) {
+            if (!e.ctrlKey) return;
+            console.log("ctrl + Enter 可以提交了");
+        }
     },
-    mounted(){
-        
-    }
+    beforeCreate() {
+        this.form = this.$form.createForm(this, { name: "normal_login" });
+    },
+    mounted() {}
 };
 </script>
 
@@ -71,11 +57,13 @@ export default {
     background: #fff;
     margin: 20px;
     padding: 20px;
-    #components-form-demo-normal-login .login-form {
+    #components-form-demo-normal-login .add-form {
         max-width: 300px;
     }
-    #components-form-demo-normal-login .login-form-button {
+    #components-form-demo-normal-login .add-form-button {
         width: 100%;
+        height: 40px;
+        line-height: 40px;
     }
 }
 </style>

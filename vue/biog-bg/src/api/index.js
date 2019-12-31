@@ -11,5 +11,8 @@ export default{
     },
     getWordCloud(){
         return MyAxios.get(Urls.getWordCloud);
+    },
+    getContentList(){
+        return MyAxios.get(Urls.getContentList);
     }
 }

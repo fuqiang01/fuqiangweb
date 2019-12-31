@@ -1,5 +1,5 @@
 <template>
-    <div class="edit_container">
+    <a-form-item class="edit_container">
         <quill-editor
             v-model="content"
             ref="myQuillEditor"
@@ -8,7 +8,7 @@
             @focus="onEditorFocus($event)"
             @change="onEditorChange($event)"
         ></quill-editor>
-    </div>
+    </a-form-item>
 </template>
 
 <script>
@@ -71,11 +71,13 @@ export default {
 .ql-editor {
     min-height: 400px;
     font-size: 14px;
-    .ql-snow .ql-picker-label::before {
+}
+.ql-snow {
+    .ql-picker-label::before {
         position: absolute;
     }
-    .ql-snow .ql-color-picker .ql-picker-label svg,
-    .ql-snow .ql-icon-picker .ql-picker-label svg {
+    .ql-color-picker .ql-picker-label svg,
+    .ql-icon-picker .ql-picker-label svg {
         position: absolute;
         top: 0;
         left: 0;

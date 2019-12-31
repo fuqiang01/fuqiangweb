@@ -1,5 +1,5 @@
 <template>
-    <div class="tags">
+    <a-form-item class="tags">
         <div class="tag-selected">
             <a-tag
                 v-for="(item, index) in selectedTag"
@@ -34,7 +34,7 @@
         <div class="tag-unselected">
             <a-tag v-for="item in unselectedTag" :key="item" @click="tagAdd(item)">{{ item }}</a-tag>
         </div>
-    </div>
+    </a-form-item>
 </template>
 
 <script>

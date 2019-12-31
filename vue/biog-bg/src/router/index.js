@@ -16,7 +16,7 @@ const routes = [
     component: () => import('../views/ArticleList.vue')
   },
   {
-    path: '/add',
+    path: '/add/:type',
     name: 'add',
     component: () => import('../views/AddArticle.vue')
   }

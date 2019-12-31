@@ -17,7 +17,7 @@
                 </router-link>
             </a-menu-item>
             <a-menu-item key="3">
-                <router-link to="/add">
+                <router-link :to="{name: 'add', params: {type: 'plainText'}}">
                     <a-icon type="smile" />
                     <span>新增文章</span>
                 </router-link>
