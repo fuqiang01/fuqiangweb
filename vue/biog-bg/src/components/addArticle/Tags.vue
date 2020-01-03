@@ -1,8 +1,8 @@
 <template>
-    <a-form-item class="tags">
+    <a-form-item class="tags" v-if="showFromItemObj.tags">
         <div class="tag-selected">
             <a-tag
-                v-for="(item, index) in selectedTag"
+                v-for="(item, index) in fromData.tags"
                 :key="item"
                 :color="tagColorArr[index]"
                 closable
@@ -39,18 +39,19 @@
 
 <script>
 import { getRandomColor } from '@/util'
+import {mapState, mapMutations} from 'vuex'
 export default {
     data(){
         return{
             addTagValue: '',
             addTagInputVisible: false,
-            selectedTag: [ 'Vue', 'React', 'ES6', 'jQuery', 'HTML', 'CSS', 'javaScript', 'typeScript', 'webGl'],
             unselectedTag: ['标签一', '标签二', '标签三', '标签四', '标签五', '标签六', '标签七', '标签八', '标签九', '标签十']
         }
     },
     computed:{
+        ...mapState(['fromData', 'showFromItemObj']),
         tagColorArr(){
-            const len = this.selectedTag.length;
+            const len = this.fromData.tags.length;
             let colorArr = [];
             for ( let i = 0; i < len; i++){
                 const color = this.getColor();
@@ -60,6 +61,7 @@ export default {
         }
     },
     methods: {
+        ...mapMutations(['setFromData']),
         addTagBtnClick(){
             this.addTagInputVisible = true;
             this.$nextTick( () => {
@@ -75,18 +77,20 @@ export default {
             return this.getColor();
         },
         tagClose(item){
-            const index = this.selectedTag.indexOf(item);
-            this.selectedTag.splice(index, 1);
+            const arr = this.fromData.tags.filter( ele => ele !== item );
+            this.setFromData({tags: arr})
             this.unselectedTag.push(item);
         },
         tagAdd(item){
             const index = this.unselectedTag.indexOf(item);
+            const arr = [...this.fromData.tags, item];
             this.unselectedTag.splice(index, 1);
-            this.selectedTag.push(item);
+            this.setFromData({tags: arr})
         },
         addTagInputEnter(e){
             const val = e.target.value;
-            this.selectedTag.push(val);
+            const arr = [...this.fromData.tags, val];
+            this.setFromData({tags: arr})
             this.addTagInputVisible = false;
         }
     }

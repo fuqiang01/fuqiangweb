@@ -1,6 +1,11 @@
 <template>
     <a-form-item class="type-selection">
-        <a-select :defaultValue="$route.params.type" style="width: 300px" @change="handleChange">
+        <a-select
+            style="width: 300px"
+            @change="handleChange"
+            v-model="type"
+            v-if="showFromItemObj.type"
+        >
             <a-select-option value="plainText">
                 <a-icon type="form" class="type-selection-icon" />纯文本
             </a-select-option>
@@ -20,47 +25,72 @@
                 <a-icon type="edit" class="type-selection-icon" />毒鸡汤
             </a-select-option>
         </a-select>
-        <span class="type-selection-weight">
+        <span class="type-selection-weight" v-if="showFromItemObj.weight">
             <a-icon type="rise" style="color: rgba(0,0,0,.25)" />
             <span class="weigh-text">权重：</span>
-            <a-input-number :min="0" :max="10" v-model="weightNum"/>
+            <a-input-number :min="0" :max="10" v-model="weight" />
         </span>
-        <a-button 
-            :type="isReprint ? 'primary' : 'dashed'" 
-            @click="isReprint = !isReprint">转载滴</a-button>
+        <a-button :type="isReprint ? 'primary' : 'dashed'" @click="changeReprint">转载滴</a-button>
         <UploadFile />
-        <ArticleOrigin v-if="isReprint" />
+        <ArticleOrigin />
     </a-form-item>
 </template>
 
 <script>
-import UploadFile from './UploadFile'
-import ArticleOrigin from './ArticleOrigin'
+import UploadFile from "./UploadFile";
+import ArticleOrigin from "./ArticleOrigin";
+import { mapState, mapMutations } from "vuex";
 export default {
     components: {
         UploadFile,
         ArticleOrigin
     },
-    data(){
-        return{
-            weightNum: 1,
+    data() {
+        return {
             isReprint: false
+        };
+    },
+    computed: {
+        ...mapState(["fromData", "showFromItemObj"]),
+        type: {
+            get() {
+                return this.fromData.type;
+            },
+            set(value) {
+                this.setFromData({ type: value });
+            }
+        },
+        weight: {
+            get() {
+                return this.fromData.weight;
+            },
+            set(value) {
+                this.setFromData({ weight: value });
+            }
         }
     },
     methods: {
-      handleChange(value) {
-          this.$router.push(`/add/${value}`);
-      },
+        ...mapMutations(["setFromData", "setShowFromItemObj"]),
+        handleChange(value) {
+            this.$router.push(`/add/${value}`);
+        },
+        changeReprint() {
+            this.isReprint = !this.isReprint;
+            this.setShowFromItemObj({origin: this.isReprint, originUrl: this.isReprint})
+        }
+    },
+    beforeMount() {
+        this.setFromData({ type: this.$route.params.type });
     }
 };
 </script>
 
 <style lang="scss">
-.type-selection-icon{
-    color: rgba(0,0,0,.25);
+.type-selection-icon {
+    color: rgba(0, 0, 0, 0.25);
     margin-right: 10px;
 }
-.type-selection-weight{
+.type-selection-weight {
     display: inline-block;
     border-radius: 4px;
     line-height: 30px;
@@ -68,11 +98,11 @@ export default {
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 10px;
-    .weigh-text{
+    .weigh-text {
         color: rgba(0, 0, 0, 0.25);
         padding-left: 5px;
     }
-    .ant-input-number{
+    .ant-input-number {
         border: none;
         background-color: transparent;
         height: 30px;

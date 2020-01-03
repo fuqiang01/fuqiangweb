@@ -3,8 +3,8 @@
         name="file"
         class="avatar-uploader-file"
         :multiple="true"
-        action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
         @change="handleChange"
+        :beforeUpload="beforeUpload"
     >
         <p class="ant-upload-drag-icon upload-file-icon">
             <a-icon type="inbox" />
@@ -13,11 +13,15 @@
     </a-upload-dragger>
 </template>
 <script>
+import {mapMutations} from 'vuex'
 export default {
     data() {
-        return {};
+        return {
+            
+        };
     },
     methods: {
+        ...mapMutations(['setFromData']),
         handleChange(info) {
             const status = info.file.status;
             if (status !== "uploading") {
@@ -30,6 +34,11 @@ export default {
             } else if (status === "error") {
                 this.$message.error(`${info.file.name} file upload failed.`);
             }
+        },
+        beforeUpload(file){
+            console.log(file)
+            this.setFromData({ musicVideoData: file });
+            return false;
         }
     }
 };

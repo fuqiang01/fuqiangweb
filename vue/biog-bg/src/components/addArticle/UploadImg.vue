@@ -5,7 +5,6 @@
         class="avatar-uploader-img"
         :showUploadList="false"
         :multiple="true"
-        action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
         :beforeUpload="beforeUpload"
         @change="handleChange"
     >
@@ -18,6 +17,7 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 function getBase64(img, callback) {
     const reader = new FileReader();
     reader.addEventListener("load", () => callback(reader.result));
@@ -31,13 +31,14 @@ export default {
         };
     },
     methods: {
+        ...mapMutations(['setFromData']),
         handleChange(info) {
+            console.log(info)
             if (info.file.status === "uploading") {
                 this.loading = true;
                 return;
             }
-            if (info.file.status === "done") {
-                // Get this url from response in real world.
+            if (typeof info.file.originFileObj === 'object') {
                 getBase64(info.file.originFileObj, imageUrl => {
                     this.imageUrl = imageUrl;
                     this.loading = false;
@@ -45,15 +46,23 @@ export default {
             }
         },
         beforeUpload(file) {
-            const isJPG = file.type === "image/jpeg";
-            if (!isJPG) {
-                this.$message.error("You can only upload JPG file!");
-            }
-            const isLt2M = file.size / 1024 / 1024 < 2;
-            if (!isLt2M) {
-                this.$message.error("Image must smaller than 2MB!");
-            }
-            return isJPG && isLt2M;
+            this.loading = true;
+            this.setFromData({ imgFileData: file });
+            console.log(file)
+            getBase64(file, imageUrl => {
+                    this.imageUrl = imageUrl;
+                    this.loading = false;
+                });
+            return false;
+            // const isJPG = file.type === "image/jpeg";
+            // if (!isJPG) {
+            //     this.$message.error("You can only upload JPG file!");
+            // }
+            // const isLt2M = file.size / 1024 / 1024 < 2;
+            // if (!isLt2M) {
+            //     this.$message.error("Image must smaller than 2MB!");
+            // }
+            // return isJPG && isLt2M;
         }
     }
 };

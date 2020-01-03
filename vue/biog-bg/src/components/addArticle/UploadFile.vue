@@ -1,30 +1,24 @@
 <template>
     <div class="upload-file">
-        <UploadImg v-if="showUploadImg"/>
-        <UploadMusicVideo v-if="showUploadMusicVideo"/>
+        <UploadImg v-if="showFromItemObj.imgFileData"/>
+        <UploadMusicVideo v-if="showFromItemObj.musicVideoData"/>
     </div>
 </template>
 
 <script>
 import UploadImg from './UploadImg'
 import UploadMusicVideo from './UploadMusicVideo'
+import {mapState} from 'vuex'
 export default {
     components: {
         UploadImg,
         UploadMusicVideo
     },
     computed: {
-        showUploadImg(){
-            const arr = ['smallImg', 'bigImg', 'music'];
-            return ( arr.includes(this.$route.params.type) );
-        },
-        showUploadMusicVideo(){
-            const arr = ['music', 'video'];
-            return ( arr.includes(this.$route.params.type) );
-        }
+        ...mapState(['showFromItemObj'])
     },
     mounted(){
-        console.log(this.$route.params.type)
+        
     }
 };
 </script>

@@ -1,12 +1,9 @@
 <template>
-    <a-form-item class="edit_container">
+    <a-form-item class="edit_container" v-if="showFromItemObj.richText">
         <quill-editor
-            v-model="content"
+            v-model="richText"
             ref="myQuillEditor"
             :options="editorOption"
-            @blur="onEditorBlur($event)"
-            @focus="onEditorFocus($event)"
-            @change="onEditorChange($event)"
         ></quill-editor>
     </a-form-item>
 </template>
@@ -18,13 +15,13 @@ import "quill/dist/quill.snow.css";
 import "quill/dist/quill.bubble.css";
 import hljs from "highlight.js"; //导入代码高亮文件
 import "highlight.js/styles/monokai-sublime.css"; //导入代码高亮样式
+import {mapState, mapMutations} from 'vuex'
 export default {
     components: {
         quillEditor
     },
     data() {
         return {
-            content: "",
             editorOption: {
                 modules: {
                     toolbar: [
@@ -51,18 +48,21 @@ export default {
         };
     },
     computed: {
+        ...mapState(['fromData', 'showFromItemObj']),
         editor() {
             return this.$refs.myQuillEditor.quill;
+        },
+        richText: {
+            get(){
+                return this.fromData.richText;
+            },
+            set(value){
+                this.setFromData({richText: value})
+            }
         }
     },
     methods: {
-        onEditorReady() {
-            // 准备编辑器
-        },
-        onEditorBlur() {}, // 失去焦点事件
-        onEditorFocus() {}, // 获得焦点事件
-        onEditorChange() {}, // 内容改变事件
-        saveHtml: function() {}
+        ...mapMutations(['setFromData'])
     }
 };
 </script>
