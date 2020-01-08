@@ -1,21 +1,21 @@
 <template>
     <a-form-item class="edit_container" v-if="showFromItemObj.richText">
-        <quill-editor
-            v-model="richText"
-            ref="myQuillEditor"
-            :options="editorOption"
-        ></quill-editor>
+        <quill-editor v-model="richText" ref="myQuillEditor" :options="editorOption"></quill-editor>
     </a-form-item>
 </template>
 
 <script>
-import { quillEditor } from "vue-quill-editor";
+
+import { quillEditor, Quill } from "vue-quill-editor";
+import { container, ImageExtend, QuillWatch } from "quill-image-extend-module";
 import "quill/dist/quill.core.css";
 import "quill/dist/quill.snow.css";
 import "quill/dist/quill.bubble.css";
 import hljs from "highlight.js"; //导入代码高亮文件
 import "highlight.js/styles/monokai-sublime.css"; //导入代码高亮样式
 import {mapState, mapMutations} from 'vuex'
+
+Quill.register("modules/ImageExtend", ImageExtend);
 export default {
     components: {
         quillEditor
@@ -24,22 +24,23 @@ export default {
         return {
             editorOption: {
                 modules: {
-                    toolbar: [
-                        ["bold", "italic", "underline", "strike"],
-                        ["blockquote", "code-block"],
-                        [{ header: 1 }, { header: 2 }],
-                        [{ list: "ordered" }, { list: "bullet" }],
-                        [{ script: "sub" }, { script: "super" }],
-                        [{ indent: "-1" }, { indent: "+1" }],
-                        [{ direction: "rtl" }],
-                        [{ size: ["small", false, "large", "huge"] }],
-                        [{ header: [1, 2, 3, 4, 5, 6, false] }],
-                        [{ font: [] }],
-                        [{ color: [] }, { background: [] }],
-                        [{ align: [] }],
-                        ["clean"],
-                        ["link", "image", "video"]
-                    ],
+                    ImageExtend: {
+                        loading: true,
+                        name: "img",
+                        action:
+                            "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+                        response: res => {
+                            return res.url;
+                        }
+                    },
+                    toolbar: {
+                        container: container,
+                        handlers: {
+                            image: function() {
+                                QuillWatch.emit(this.quill.id);
+                            }
+                        }
+                    },
                     syntax: {
                         highlight: text => hljs.highlightAuto(text).value
                     }
@@ -57,6 +58,7 @@ export default {
                 return this.fromData.richText;
             },
             set(value){
+                console.log(value)
                 this.setFromData({richText: value})
             }
         }
