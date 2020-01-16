@@ -18,6 +18,7 @@ import RichText from "@/components/addArticle/RichText";
 import Tags from "@/components/addArticle/Tags";
 import TypeSelection from "@/components/addArticle/TypeSelection";
 import { mapState, mapMutations } from "vuex";
+import Api from '@/api'
 export default {
     components: {
         AddArticleTitle,
@@ -58,7 +59,13 @@ export default {
                     myForm.append( key, element )
                 }
             }
-            console.log(myForm);
+            Api.addBlog(myForm)
+                .then(res => {
+                    console.log(res)
+                })
+                .catch(err => {
+                    console.log(err)
+                })
         },
         keyEnter(e) {
             if (!e.ctrlKey) return;
@@ -77,7 +84,8 @@ export default {
             this.initShowFromItemObj();
             let defaultObj = {
                 title: true,
-                type: true,
+                blogType: true,
+                styleType: true,
                 weight: true,
                 tags: true,
                 richText: true

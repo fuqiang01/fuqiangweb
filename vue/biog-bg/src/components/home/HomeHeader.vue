@@ -12,73 +12,98 @@
         <ul class="home-header-right">
             <li>
                 <p class="p1">今日上传文章数</p>
-                <p class="p2">1000</p>
+                <p class="p2">{{ numObj.todayRelease }}</p>
             </li>
             <li>
                 <p class="p1">文章总数</p>
-                <p class="p2">1000</p>
+                <p class="p2">{{ numObj.allRelease }}</p>
             </li>
             <li>
                 <p class="p1">今日浏览量</p>
-                <p class="p2">1000</p>
+                <p class="p2">{{ numObj.todayBrowse }}</p>
             </li>
             <li>
                 <p class="p1">总浏览量</p>
-                <p class="p2">1000</p>
+                <p class="p2">{{ numObj.allBrowse }}</p>
             </li>
         </ul>
     </div>
 </template>
 
 <script>
-export default {};
+import Api from '@/api';
+export default {
+    data(){
+        return {
+            numObj: {
+                todayRelease: 0,
+                todayBrowse: 0,
+                allRelease: 0,
+                allBrowse: 0
+            }
+        }
+    },
+    methods: {
+        queryLogs(){
+            Api.getLogs()
+                .then(res => {
+                    this.numObj = {
+                        ...res.data
+                    }
+                })
+        }
+    },
+    mounted(){
+        this.queryLogs();
+    }
+};
 </script>
 
 <style lang="scss">
-.home-header{
-    margin:3px;
+.home-header {
+    margin: 3px;
     display: flex;
     justify-content: space-between;
     background: #fff;
     padding: 0 30px;
     height: 100px;
-    .home-header-left{
+    .home-header-left {
         display: flex;
         align-items: center;
-        .img{
-            img{
+        .img {
+            img {
                 width: 80px;
                 height: 80px;
                 border-radius: 50%;
             }
         }
-        .text{
+        .text {
             padding-left: 20px;
-            .p1{
+            .p1 {
                 font-size: 16px;
                 font-weight: bold;
                 margin: 0;
             }
-            .p2{
+            .p2 {
                 margin: 0;
                 padding-top: 10px;
             }
         }
     }
-    .home-header-right{
+    .home-header-right {
         list-style: none;
         display: flex;
         margin: 0;
         padding: 0;
-        li{
+        li {
             display: flex;
             flex-direction: column;
             justify-content: center;
             position: relative;
             padding: 0 25px;
-            &:not(:last-of-type){
-                &::after{
-                    content: '';
+            &:not(:last-of-type) {
+                &::after {
+                    content: "";
                     display: block;
                     width: 1px;
                     height: 35px;
@@ -87,13 +112,13 @@ export default {};
                     right: 0;
                 }
             }
-            p{
+            p {
                 margin: 0;
-                &.p1{
+                &.p1 {
                     font-weight: bold;
                     color: #666;
                 }
-                &.p2{
+                &.p2 {
                     font-size: 20px;
                     font-weight: bold;
                     color: #777;

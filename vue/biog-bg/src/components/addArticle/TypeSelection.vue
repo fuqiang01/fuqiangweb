@@ -1,10 +1,31 @@
 <template>
     <a-form-item class="type-selection">
         <a-select
+            style="width: 300px;margin-right: 10px"
+            v-model="blogType"
+            v-if="showFromItemObj.blogType"
+        >
+            <a-select-option value="knowledge">
+                <a-icon type="thunderbolt" class="type-selection-icon" />知识点
+            </a-select-option>
+            <a-select-option value="article">
+                <a-icon type="book" class="type-selection-icon" />文章
+            </a-select-option>
+            <a-select-option value="music">
+                <a-icon type="customer-service" class="type-selection-icon" />音乐
+            </a-select-option>
+            <a-select-option value="video">
+                <a-icon type="youtube" class="type-selection-icon" />视屏
+            </a-select-option>
+            <a-select-option value="talk">
+                <a-icon type="edit" class="type-selection-icon" />毒鸡汤
+            </a-select-option>
+        </a-select>
+        <a-select
             style="width: 300px"
-            @change="handleChange"
-            v-model="type"
-            v-if="showFromItemObj.type"
+            @change="styleTypeChange"
+            v-model="styleType"
+            v-if="showFromItemObj.styleType"
         >
             <a-select-option value="plainText">
                 <a-icon type="form" class="type-selection-icon" />纯文本
@@ -22,7 +43,7 @@
                 <a-icon type="youtube" class="type-selection-icon" />视屏
             </a-select-option>
             <a-select-option value="talk">
-                <a-icon type="edit" class="type-selection-icon" />毒鸡汤
+                <a-icon type="edit" class="type-selection-icon" />说说
             </a-select-option>
         </a-select>
         <span class="type-selection-weight" v-if="showFromItemObj.weight">
@@ -52,12 +73,20 @@ export default {
     },
     computed: {
         ...mapState(["fromData", "showFromItemObj"]),
-        type: {
+        blogType: {
             get() {
-                return this.fromData.type;
+                return this.fromData.blogType;
             },
             set(value) {
-                this.setFromData({ type: value });
+                this.setFromData({ blogType: value });
+            }
+        },
+        styleType: {
+            get() {
+                return this.fromData.styleType;
+            },
+            set(value) {
+                this.setFromData({ styleType: value });
             }
         },
         weight: {
@@ -71,7 +100,7 @@ export default {
     },
     methods: {
         ...mapMutations(["setFromData", "setShowFromItemObj"]),
-        handleChange(value) {
+        styleTypeChange(value) {
             this.$router.push(`/add/${value}`);
         },
         changeReprint() {

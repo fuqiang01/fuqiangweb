@@ -8,25 +8,26 @@
 <script>
 import G2 from "@antv/g2";
 import { DataView } from "@antv/data-set";
+import Api from '@/api'
 export default {
     methods: {
-        createRadarMap() {
-            const data = [
-                { item: "Design", a: 70, b: 30 },
-                { item: "Development", a: 60, b: 70 },
-                { item: "Marketing", a: 50, b: 60 },
-                { item: "Users", a: 40, b: 50 },
-                { item: "Test", a: 60, b: 70 },
-                { item: "Language", a: 70, b: 50 },
-                { item: "Technology", a: 50, b: 40 },
-                { item: "Support", a: 30, b: 40 },
-                { item: "Sales", a: 60, b: 40 },
-                { item: "UX", a: 50, b: 60 }
-            ];
+        updataBlogTypeViewsData(data){
+            const dataArr = [];
+            data.forEach(ele => {
+                const obj = { 
+                    blogType: ele.blogType,
+                    "发布数量": ele.release, 
+                    "浏览数量": ele. browse
+                }
+                dataArr.push(obj);
+            });
+            return dataArr;
+        },
+        createRadarMap(data) {
             const dv = new DataView().source(data);
             dv.transform({
                 type: "fold",
-                fields: ["a", "b"], // 展开字段集
+                fields: ["发布数量", "浏览数量"], // 展开字段集
                 key: "user", // key字段
                 value: "score" // value字段
             });
@@ -38,8 +39,7 @@ export default {
             });
             chart.source(dv, {
                 score: {
-                    min: 0,
-                    max: 80
+                    min: 0
                 }
             });
             chart.coord("polar", {
@@ -72,12 +72,12 @@ export default {
             });
             chart
                 .line()
-                .position("item*score")
+                .position("blogType*score")
                 .color("user")
                 .size(2);
             chart
                 .point()
-                .position("item*score")
+                .position("blogType*score")
                 .color("user")
                 .shape("circle")
                 .size(4)
@@ -87,10 +87,17 @@ export default {
                     fillOpacity: 1
                 });
             chart.render();
+        },
+        queryBlogTypeViewsData(){
+            Api.getBlogTypeViews()
+                .then(res => {
+                    const data = this.updataBlogTypeViewsData(res.data);
+                    this.createRadarMap(data);
+                })
         }
     },
     mounted() {
-        this.createRadarMap();
+        this.queryBlogTypeViewsData();
     }
 };
 </script>

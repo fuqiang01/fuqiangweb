@@ -1,10 +1,10 @@
 <template>
     <div class="my-list">
-        <a-list itemLayout="vertical" size="large" :pagination="pagination" :dataSource="listData">
+        <a-list itemLayout="vertical" size="large" :pagination="pagination" :dataSource="articleList">
             <div slot="footer">
                 <p class="list-footer-text">
-                    {{ originText + typeText + (info ? '的' + info : '') }}共查询到
-                    <b>{{ listData.length }}</b> 条信息
+                    {{ originText + typeText + (articleFilterConditions.info ? '的' + articleFilterConditions.info : '') }}共查询到
+                    <b>{{ articleList.length }}</b> 条信息
                 </p>
             </div>
             <a-list-item slot="renderItem" slot-scope="item" :key="item.id">
@@ -15,29 +15,26 @@
 </template>
 <script>
 import MyListItem from "./MyListItem";
-import Api from "@/api";
+import {mapActions, mapState} from 'vuex'
 export default {
     components: {
         MyListItem
     },
     data() {
         return {
-            listData: [],
             pagination: {
                 showQuickJumper: true,
                 onChange: page => {
                     console.log(page);
                 },
                 pageSize: 7
-            },
-            origin: "originAll",
-            type: "typeAll",
-            info: ""
+            }
         };
     },
     computed: {
+        ...mapState(['articleList', 'articleFilterConditions']),
         originText() {
-            switch (this.origin) {
+            switch (this.articleFilterConditions.origin) {
                 case "original":
                     return "原创";
                 case "reprint":
@@ -47,7 +44,7 @@ export default {
             }
         },
         typeText() {
-            switch (this.type) {
+            switch (this.articleFilterConditions.type) {
                 case "knowledge":
                     return "知识点";
                 case "article":
@@ -64,18 +61,10 @@ export default {
         }
     },
     methods: {
-        queryContentList() {
-            Api.getContentList().then(res => {
-                this.listData = res.data;
-                console.log(res.data);
-            });
-        }
+        ...mapActions(['queryArticleList'])
     },
     mounted() {
-        this.queryContentList();
-        this.origin = this.$route.query.origin;
-        this.type = this.$route.query.type;
-        this.info = this.$route.query.info;
+        this.queryArticleList();
     }
 };
 </script>

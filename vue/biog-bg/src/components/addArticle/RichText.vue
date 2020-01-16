@@ -14,6 +14,7 @@ import "quill/dist/quill.bubble.css";
 import hljs from "highlight.js"; //导入代码高亮文件
 import "highlight.js/styles/monokai-sublime.css"; //导入代码高亮样式
 import {mapState, mapMutations} from 'vuex'
+import Urls from '@/api';
 
 Quill.register("modules/ImageExtend", ImageExtend);
 export default {
@@ -26,9 +27,8 @@ export default {
                 modules: {
                     ImageExtend: {
                         loading: true,
-                        name: "img",
-                        action:
-                            "http://127.0.0.1:12306/getImg",
+                        name: "file",
+                        action: Urls.setFileToCos,
                         response: res => {
                             return res.url;
                         }
@@ -58,7 +58,6 @@ export default {
                 return this.fromData.richText;
             },
             set(value){
-                console.log(value)
                 this.setFromData({richText: value})
             }
         }
