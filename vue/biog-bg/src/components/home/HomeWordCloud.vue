@@ -1,6 +1,6 @@
 <template>
     <div class="home-word-cloud">
-        <p class="home-word-cloud-title">关键词热度</p>
+        <p class="home-word-cloud-title">各关键词发布量</p>
         <div id="word-cloud"></div>
     </div>
 </template>
@@ -46,7 +46,7 @@ export default {
                     const max = range[1];
                     const imageMask = new Image();
                     imageMask.crossOrigin = '';
-                    imageMask.src = 'http://localhost:8080/img/word_cloud2.58fd28c2.jpg';
+                    imageMask.src = 'http://cos.fqiang.co/blog/word_cloud.jpg';
                     imageMask.onload = () => {
                     dv.transform({
                         type: 'tag-cloud',

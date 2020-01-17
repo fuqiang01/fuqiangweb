@@ -1,42 +1,55 @@
 <template>
-    <div class='comment-item'>
-        <div class="comment-item-i" v-for="(item,index) in commentsData" :key="item.id">
+    <div class="comment-item">
+        <div class="comment-item-i" v-for="item in commentsData" :key="item.id">
             <a-comment>
-                <a-avatar shape="square" :src="item.photo" :alt="item.name" slot="avatar" />
+                <a-avatar
+                    shape="square"
+                    :src="item.photoSrc"
+                    :alt="item.name"
+                    slot="avatar"
+                    icon="user"
+                />
                 <span slot="author">{{ item.name }}</span>
-                <span slot="datetime">{{ myGetTime(item.date) }}</span>
-                <p slot="content" class="comments-content">{{ item.content }}</p>
+                <span slot="datetime">{{ myGetTime(item.timeStamp) }}</span>
+                <p slot="content" class="comments-content">{{ item.comment }}</p>
                 <template slot="actions">
                     <span class="btn-like">
-                        <a-button
-                            ghost
-                            @click="onLike(index)"
-                            type="primary"
-                        >
+                        <a-button ghost @click="onLike(item.id)" type="primary">
                             <a-icon :theme="item.isLike ? 'filled' : 'outlined'" type="like" />
                             {{item.likeNumber}}
                         </a-button>
                     </span>
                     <span>
+                        <a-button icon="message" type="primary" ghost @click="onReply(item.id)">回复</a-button>
+                    </span>
+                    <span>
                         <a-button
-                            icon="message"
+                            icon="check-circle"
                             type="primary"
                             ghost
-                            @click="onReply(index)"
-                        >回复</a-button>
+                            @click="onAudit(item.id)"
+                        >确认审核</a-button>
+                    </span>
+                    <span>
+                        <a-button icon="delete" type="primary" ghost @click="onDelete(item.id)">删除</a-button>
                     </span>
                 </template>
-                <CommentBox v-if="item.showCommentBox" :parentId="item.id" @close="onReply(index)" />
+                <CommentBox
+                    v-if="item.showCommentBox"
+                    :parentId="item.id"
+                    @close="onReply(item.id)"
+                />
             </a-comment>
         </div>
     </div>
 </template>
 
 <script>
-import {myGetTime} from "@/util";
+import { myGetTime } from "@/util";
 import CommentBox from "./CommentBox";
+import { mapState, mapMutations } from "vuex";
+import Api from "@/api";
 export default {
-    props: ["commentsData"],
     components: {
         CommentBox
     },
@@ -45,21 +58,54 @@ export default {
             myGetTime
         };
     },
+    computed: {
+        ...mapState(["commentsData"])
+    },
     methods: {
-        onLike(index) {
-            const item = this.commentsData[index];
-            if (item.isLike) {
-                item.likeNumber = item.likeNumber - 1;
-            } else {
-                item.likeNumber = item.likeNumber + 1;
-            }
-            item.isLike = !item.isLike;
+        ...mapMutations(["setCommentsDate"]),
+        onLike(id) {
+            const newData = this.commentsData.map(ele => {
+                if (ele.id === id) {
+                    if (ele.isLike) {
+                        ele.likeNumber = ele.likeNumber - 1;
+                        Api.cancelLikeByComment(id);
+                    } else {
+                        ele.likeNumber = ele.likeNumber + 1;
+                        Api.giveLikeByComment(id);
+                    }
+                    ele.isLike = !ele.isLike
+                }
+                return ele;
+            });
+            this.setCommentsDate(newData);
         },
-        onReply(index) {
-            const bool = this.commentsData[index].showCommentBox ? false : true;
-            this.$set(this.commentsData[index],'showCommentBox', bool);
+        onReply(id) {
+            const newData = this.commentsData.map(ele => {
+                if (ele.id === id) {
+                    ele.showCommentBox = !ele.showCommentBox
+                }
+                return ele;
+            })
+            this.setCommentsDate(newData);
+        },
+        onAudit(id) {
+            const arr = this.commentsData.filter(ele => ele.id !== id);
+            this.setCommentsDate(arr);
+            Api.commentAudit(id)
+                .then(() => {
+                    this.$message.success('已完成审核！');
+                })
+        },
+        onDelete(id) {
+            const arr = this.commentsData.filter(ele => ele.id !== id);
+            this.setCommentsDate(arr);
+            Api.deleteComment(id)
+                .then(() => {
+                    this.$message.success('删除成功！');
+                })
         }
-    }
+    },
+    mounted() {}
 };
 </script>
 

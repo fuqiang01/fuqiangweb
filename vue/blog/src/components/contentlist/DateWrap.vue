@@ -2,30 +2,35 @@
     <div class="date-wrap">
         <div class="left">
             <a-icon type="clock-circle" />
-            <span>{{ data.date }}</span>
+            <span>{{ myGetTime(data.timeStamp) }}</span>
             <a-icon type="heart" />
-            <span>{{ data.like }}</span>
+            <span>{{ data.likeNumber }}</span>
             <a-icon type="message" />
-            <span>{{ data.messageLen }}</span>
+            <span>{{ data.messageNumber }}</span>
             <a-icon type="heat-map" />
             <span>
                 <a
-                    :href="item.url || 'javaScript:void(0)'"
-                    v-for="item in data.keywords"
-                    :key="item.text"
-                >{{ item.text }}</a>
+                    v-for="item in data.tags"
+                    :key="item"
+                >{{ item }}</a>
             </span>
-            <a-rate :defaultValue="data.score" allowHalf disabled />
+            <a-rate :defaultValue="data.scoresNumber ? (data.scoresSum / data.scoresNumber) : data.scoresSum" allowHalf disabled />
         </div>
         <div class="right">
-            <a :href="data.origin.url || 'javaScript:void(0)'">{{ data.origin.text}}</a>
+            <a :href="data.originUrl || 'javaScript:void(0)'">{{ data.originText}}</a>
         </div>
     </div>
 </template>
 
 <script>
+import myGetTime from '@/util/myGetTime'
 export default {
-    props: ["data"]
+    props: ["data"],
+    data(){
+        return{
+            myGetTime
+        }
+    }
 };
 </script>
 

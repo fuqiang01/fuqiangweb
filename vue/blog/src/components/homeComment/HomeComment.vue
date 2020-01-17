@@ -9,8 +9,9 @@
             :closable="true"
             @close="onClose"
             :visible="visible"
-            width="700">
-            <CommentBox :bgWhite="true"/>
+            width="700"
+        >
+            <CommentBox :bgWhite="true" />
             <HomeCommentItem :commentsData="commentsData" />
         </a-drawer>
     </div>
@@ -21,7 +22,7 @@ import CommentBox from "@/components/about/CommentBox";
 import HomeCommentItem from "@/components/homeComment/HomeCommentItem";
 import Api from "@/api";
 export default {
-    components:{
+    components: {
         CommentBox,
         HomeCommentItem
     },
@@ -35,26 +36,28 @@ export default {
         onClose() {
             this.visible = false;
         },
-        openCommentBox(){
+        openCommentBox() {
             this.visible = true;
         },
         queryComments() {
-            Api.getComments().then(res => {
-                this.commentsData = res.data.data;
-            });
+            Api.getComments(0)
+                .then(res => {
+                    console.log(res);
+                    // this.commentsData = res.data.data;
+                });
         },
-        onRelease(){
+        onRelease() {
             this.queryComments();
         }
     },
-    mounted(){
+    mounted() {
         this.queryComments();
     }
 };
 </script>
 
 <style>
-.open-comment-box{
+.open-comment-box {
     position: fixed;
     right: 100px;
     bottom: 100px;
@@ -62,7 +65,7 @@ export default {
     height: 40px;
     z-index: 10;
     cursor: pointer;
-    background: rgba(0,0,0,.3);
+    background: rgba(0, 0, 0, 0.3);
     color: #fff;
     display: flex;
     justify-content: center;

@@ -2,9 +2,11 @@
     <div class="header">
         <div class="header-nav">
             <router-link to="/">主页</router-link>
-            <router-link :to="{name: 'home', params:{search: 'knowledge'}}">知识点</router-link>
-            <router-link :to="{name: 'home', params:{search: 'entertainment'}}">影音娱乐</router-link>
-            <router-link :to="{name: 'home', params:{search: 'article'}}">文章分享</router-link>
+            <router-link :to="{name: 'home', params:{type: 'knowledge'}}">知识点</router-link>
+            <router-link :to="{name: 'home', params:{type: 'article'}}">文章</router-link>
+            <router-link :to="{name: 'home', params:{type: 'music'}}">音乐</router-link>
+            <router-link :to="{name: 'home', params:{type: 'video'}}">视屏</router-link>
+            <router-link :to="{name: 'home', params:{type: 'talk'}}">毒鸡汤</router-link>
         </div>
         <div class="input-wrap">
             <a-input-search
@@ -19,15 +21,21 @@
 
 <script>
 export default {
-    data(){
-        return{
-            searchValue: ''
-        }
+    data() {
+        return {
+            searchValue: ""
+        };
     },
     methods: {
         onSearch(value) {
-            this.$router.push(`/${value}`);
-            this.searchValue = '';
+            this.$router.push({
+                name: "home",
+                params: { 
+                    type: this.$route.params.type,
+                    info: value 
+                }
+            });
+            this.searchValue = "";
         }
     }
 };
@@ -41,8 +49,8 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .header-nav{
-        a{
+    .header-nav {
+        a {
             display: inline-block;
             padding: 0px 20px;
             line-height: 35px;
@@ -50,7 +58,7 @@ export default {
             font-size: 15px;
         }
     }
-    .input-wrap{
+    .input-wrap {
         margin-right: 20px;
     }
 }

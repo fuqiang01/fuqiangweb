@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/:search?',
+    path: '/:type?/:info?',
     name: 'home',
     component: Home
   },

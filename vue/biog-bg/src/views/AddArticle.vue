@@ -81,6 +81,7 @@ export default {
             this.setShowFromItemObj(obj);
         },
         changeShowFromItemObjByType(type) {
+            this.setFromData({styleType: type});
             this.initShowFromItemObj();
             let defaultObj = {
                 title: true,

@@ -2,7 +2,7 @@
     <div class="comment-box">
         <a-comment>
             <div class="photo-wrap" slot="avatar">
-                <a-avatar shape="square" icon="user" src @click="photoClick" />
+                <a-avatar shape="square" icon="user" :src="photo" @click="photoClick" />
                 <input
                     type="file"
                     @change="photoFileChange"
@@ -44,16 +44,24 @@
 </template>
 
 <script>
+import Api from '@/api';
 export default {
-    props: ["parentId", "bgWhite"],
+    props: ["parentId"],
     data() {
         return {
             name: "",
             email: "",
-            commentText: ""
+            commentText: "",
+            photo: ''
         };
     },
     methods: {
+        uploadPhoto(formData){
+            Api.setFileToCos(formData)
+                .then(res => {
+                    this.photo = res.data.url
+                })
+        },
         onClose() {
             this.commentText = "";
             this.$emit("close");
@@ -69,26 +77,30 @@ export default {
                 return;
             }
             const data = {
-                photo: "",
+                photo: this.photo,
                 name: this.name || "匿名",
                 email: this.email,
                 content: this.commentText,
-                parentId: this.parentId || "",
-                date: new Date().getTime()
+                parentId: this.parentId || 0
             };
-            this.$emit("release");
-            console.log("发送数据：");
-            console.log(data);
+            Api.addComment(data)
+                .then(() => {
+                    this.$message.success('评论成功！');
+                })
+            this.$emit("close");
             this.name = "";
             this.email = "";
             this.commentText = "";
+            this.photo = "";
         },
         photoClick() {
             this.$refs.photoFile.click();
         },
         photoFileChange() {
-            console.log("上传文件：");
-            console.log(this.$refs.photoFile.files[0]);
+            const file = this.$refs.photoFile.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+            this.uploadPhoto(formData)
         }
     }
 };

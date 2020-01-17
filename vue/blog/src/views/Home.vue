@@ -1,12 +1,12 @@
 <template>
     <div class="home">
         <div v-for="item in contentList" :key="item.id">
-            <PlainText v-if="item.type === 'plainText'" :data="item" />
-            <SmallImg v-else-if="item.type === 'smallImg'" :data="item" />
-            <BigImg v-else-if="item.type === 'bigImg'" :data="item" />
-            <Music v-else-if="item.type === 'music'" :data="item" />
-            <MyVideo v-else-if="item.type === 'video'" :data="item" />
-            <Talk v-else-if="item.type === 'talk'" :data="item" />
+            <PlainText v-if="item.styleType === 'plainText'" :data="item" />
+            <SmallImg v-else-if="item.styleType === 'smallImg'" :data="item" />
+            <BigImg v-else-if="item.styleType === 'bigImg'" :data="item" />
+            <Music v-else-if="item.styleType === 'music'" :data="item" />
+            <MyVideo v-else-if="item.styleType === 'video'" :data="item" />
+            <Talk v-else-if="item.styleType === 'talk'" :data="item" />
         </div>
         <div class="home-bottom-loading" v-if="isSold">
             <a-icon type="loading" />
@@ -38,41 +38,50 @@ export default {
     },
     data() {
         return {
-            contentList: [],
+            contentList: []
         };
     },
     computed: {
-        ...mapGetters(['isSold'])
+        ...mapGetters(["isSold"])
     },
     watch: {
-        isSold(){
-            console.log(this.isSold,'发送再次加载请求')
+        isSold() {
+            console.log(this.isSold, "发送再次加载请求");
         }
     },
     methods: {
         queryContentList(data) {
-            console.log(data)
-            Api.getContentList().then(res => {
-                this.contentList = res.data;
-            });
+            Api.getContentList(data)
+                .then(res => {
+                    this.contentList = res.data.data;
+                    console.log(res.data.data)
+                });
         }
     },
     beforeRouteUpdate(to, from, next) {
-        this.queryContentList(to.params.search);
+        const type = to.params.type === undefined ? "typeAll" : to.params.type;
+        const info = to.params.info === undefined ? "" : to.params.info;
+        this.queryContentList({
+            type,info
+        });
         next();
     },
-    mounted() {
-        this.queryContentList();
+    mounted(){
+        const type = this.$route.params.type === undefined ? "typeAll" : this.$route.params.type;
+        const info = this.$route.params.info === undefined ? "" : this.$route.params.info;
+        this.queryContentList({
+            type, info
+        });
     }
 };
 </script>
 
 <style lang="scss">
-.home-bottom-loading{
+.home-bottom-loading {
     text-align: center;
     color: #fff;
     font-size: 15px;
-    >span{
+    > span {
         margin-left: 10px;
     }
 }

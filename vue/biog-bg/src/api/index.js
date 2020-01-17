@@ -6,8 +6,8 @@ const MyAxios = Axios.create({
 })
 
 export default {
-    getComments() {
-        return MyAxios.get(Urls.getComments);
+    getNotAuditComment() {
+        return MyAxios.get(Urls.getNotAuditComment);
     },
     getWordCloud() {
         return MyAxios.get(Urls.getWordCloud);
@@ -32,5 +32,39 @@ export default {
     },
     getBlogTypeViews(){
         return MyAxios.get(Urls.getBlogTypeViews)
+    },
+    giveLikeByComment(id){
+        return MyAxios.get(Urls.giveLikeByComment, {
+            params: {
+                id
+            }
+        })
+    },
+    cancelLikeByComment(id){
+        return MyAxios.get(Urls.cancelLikeByComment,{
+            params: {
+                id
+            }
+        })
+    },
+    commentAudit(id){
+        return MyAxios.get(Urls.commentAudit,{
+            params: {
+                id
+            }
+        })
+    },
+    deleteComment(id){
+        return MyAxios.get(Urls.deleteComment,{
+            params: {
+                id
+            }
+        })
+    },
+    setFileToCos(formData){
+        return MyAxios.post(Urls.setFileToCos, formData);
+    },
+    addComment(data){
+        return MyAxios.post(Urls.addComment, data)
     }
 }

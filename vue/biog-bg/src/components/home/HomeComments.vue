@@ -1,28 +1,18 @@
 <template>
     <div class="home-comments">
-        <HomeCommentItem :commentsData="commentsData" />
+        <HomeCommentItem />
     </div>
 </template>
 
 <script>
 import HomeCommentItem from '@/components/comments/HomeCommentItem'
-import Api from '@/api'
+import {mapActions} from 'vuex'
 export default {
     components: {
         HomeCommentItem
     },
-    data(){
-        return{
-            commentsData: []
-        }
-    },
     methods: {
-        queryComments(){
-            Api.getComments()
-                .then( res => {
-                    this.commentsData = res.data.data;
-                })
-        }
+        ...mapActions(['queryComments'])
     },
     mounted(){
         this.queryComments();

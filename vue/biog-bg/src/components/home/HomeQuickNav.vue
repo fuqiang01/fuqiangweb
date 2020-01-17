@@ -2,15 +2,11 @@
     <div class="home-quick-nav">
         <p class="home-quick-nav-title">快速开始 / 便捷导航</p>
         <div class="operation-wrap">
-            <a href="#">操作一</a>
-            <a href="#">操作一</a>
-            <a href="#">操作一</a>
-            <a href="#">操作一</a>
-            <a href="#">操作一</a>
-            <a href="#">操作一</a>
-            <a href="#">操作一</a>
-            <a href="#">操作一</a>
-            <a href="#">操作一</a>
+            <router-link to="/add/smallImg">小图</router-link>
+            <router-link to="/add/bigImg">大图</router-link>
+            <router-link to="/add/music">音乐</router-link>
+            <router-link to="/add/video">视屏</router-link>
+            <router-link to="/add/talk">毒鸡汤</router-link>
             <a-button icon="plus" ghost size="small" type="primary">添加</a-button>
         </div>
     </div>

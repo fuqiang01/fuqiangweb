@@ -3,7 +3,7 @@
         <div class="title">
             <router-link :to="{name:'about',params:{id: data.id}}">{{ data.title }}</router-link>
         </div>
-        <div class="describe">{{ data.describe }}</div>
+        <div class="describe">{{ data.blogDescribe }}</div>
         <DateWrap :data="data"/>
     </div>
 </template>
