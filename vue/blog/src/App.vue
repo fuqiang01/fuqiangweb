@@ -1,5 +1,8 @@
 <template>
     <div class="app" ref="app" @scroll="onAppScroll">
+        <div class="home-loading-mask" v-if="$store.state.isLoading.contentList">
+            <a-spin size="large"></a-spin>
+        </div>
         <!-- <Topbar /> -->
         <MyHeader />
         <div class="content">
@@ -22,9 +25,12 @@ export default {
         MyFooter
     },
     methods: {
-        ...mapMutations(["setAppDom","setDistanceFromBottom"]),
-        onAppScroll(e){
-            const number = e.target.scrollHeight - e.target.clientHeight - e.target.scrollTop;
+        ...mapMutations(["setAppDom", "setDistanceFromBottom"]),
+        onAppScroll(e) {
+            const number =
+                e.target.scrollHeight -
+                e.target.clientHeight -
+                e.target.scrollTop;
             this.setDistanceFromBottom(number);
         }
     },
@@ -53,6 +59,17 @@ export default {
     a:active,
     a:focus {
         text-decoration: none;
+    }
+    .home-loading-mask {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(255,255,255,.3);
+        z-index: 999;
+        text-align: center;
+        padding-top: 100px;
     }
 }
 </style>

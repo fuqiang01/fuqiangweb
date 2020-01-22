@@ -2,15 +2,17 @@
     <div class="about">
         <div class="left">
             <div class="text-wrap">
-                <Context :context="infoData.mainText"/>
+                <a-skeleton active :loading="isLoading.context" :paragraph="{rows: 10}" :title="false">
+                    <Context :context="blogData.content"/>
+                </a-skeleton>
             </div>
             <div class="comments-wrap">
-                <Comments :id="id"/>
+                <Comments />
             </div>
         </div>
         <div class="right">
             <a-affix :offsetTop="affixTop" :target="() => this.appDom">
-                <Related :infoData="infoData" v-if="infoData.id"/>
+                <Related :blogData="blogData" v-if="blogData.id"/>
                 <div class="tab-btn-wrap">
                     <a-button ghost @click="onTabBg">点击切换背景颜色</a-button>
                 </div>
@@ -35,25 +37,25 @@ export default {
     data() {
         return {
             affixTop: 10,
-            infoData: {},
-            id: null
+            blogData: {}
         };
     },
     computed: {
-        ...mapState(["appDom","aboutBgWhite"])
+        ...mapState(["appDom","aboutBgWhite", "isLoading"])
     },
     methods: {
-        ...mapMutations(['setAboutBgWhite']),
+        ...mapMutations(['setAboutBgWhite','setIsLoading']),
         onTabBg() {
             this.setAboutBgWhite( !this.aboutBgWhite ) 
         }
     },
     mounted(){
         const id = this.$route.params.id;
-        this.id = id;
-        Api.getInfoById()
+        this.setIsLoading({context: true})
+        Api.getBlogById(id)
             .then( res=> {
-                this.infoData = res.data;
+                this.blogData = res.data;
+                this.setIsLoading({context: false})
             })
     }
 };

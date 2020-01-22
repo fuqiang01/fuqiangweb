@@ -1,10 +1,10 @@
 <template>
     <div class="hoome-comment-item bg-white">
         <a-comment v-for="(item) in commentsData" :key="item.id">
-            <a-avatar shape="square" :src="item.photo" :alt="item.name" slot="avatar" />
+            <a-avatar shape="square" :src="item.photoSrc" icon="user" slot="avatar" />
             <span slot="author">{{ item.name }}</span>
-            <span slot="datetime">{{ myGetTime(item.date) }}</span>
-            <p slot="content" class="comments-content">{{ item.content }}</p>
+            <span slot="datetime">{{ myGetTime(item.timeStamp) }}</span>
+            <p slot="content" class="comments-content">{{ item.comment }}</p>
         </a-comment>
     </div>
 </template>

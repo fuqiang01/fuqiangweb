@@ -2,19 +2,19 @@
     <div :class="['related',aboutBgWhite && 'bg-white']">
         <p>
             <span>作者：</span>
-            <a :href="infoData.origin.url || 'javaScript:void(0)'">{{ infoData.origin.text }}</a>
+            <a :href="blogData.originUrl || 'javaScript:void(0)'">{{ blogData.origin }}</a>
         </p>
         <p>
             <span>发布时间：</span>
-            <span>{{ infoData.date }}</span>
+            <span>{{myGetTime(blogData.timeStamp)}}</span>
         </p>
         <p class="keywords-wrap">
             <span>相关标签：</span>
             <a
-                v-for="item in infoData.keywords"
-                :key="item.text"
-                :href="item.url || 'javaScript:void(0)'"
-            >{{ item.text }}</a>
+                v-for="item in blogData.tags"
+                :key="item"
+                href='javaScript:void(0)'
+            >{{ item }}</a>
         </p>
         <div>
             <span class="btn-wrap">
@@ -30,12 +30,15 @@
 
 <script>
 import {mapState} from 'vuex'
+import myGetTime from '@/util/myGetTime'
+import Api from '@/api'
 export default {
-    props: ["infoData"],
+    props: ["blogData"],
     data() {
         return {
             isLike: false,
-            rateValue: 5
+            rateValue: 5,
+            myGetTime
         };
     },
     computed: {
@@ -44,7 +47,12 @@ export default {
     methods: {
         onBtnClick() {
             this.isLike = !this.isLike;
-            console.log(this.$refs);
+            if(this.isLike){
+                Api.giveLikeByBlog(this.blogData.id)
+            }
+            else{
+                Api.cancelLikeByBlog(this.blogData.id)
+            }
         }
     }
 };

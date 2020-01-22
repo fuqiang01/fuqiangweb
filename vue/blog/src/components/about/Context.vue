@@ -32,6 +32,9 @@ export default {
         box-shadow: 0 0 5px rgba(255,255,255,.5);
         border-radius: 5px;
         padding: 10px 20px;
+        .hljs-comment, .hljs-deletion, .hljs-meta{
+            color: #999;
+        }
     }
     &.bg-white{
         background-color: #fff;
@@ -47,6 +50,7 @@ export default {
             border-radius: 5px;
             padding: 10px 20px;
             background: #2d2d2d;
+            color: #fff;
         }
     }
 }

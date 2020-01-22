@@ -1,6 +1,6 @@
 <template>
     <div :class="['comments',aboutBgWhite && 'bg-white']">
-        <CommentBox @release="onRelease"/>
+        <CommentBox />
         <CommentItem :commentsData="commentsData" />
     </div>
 </template>
@@ -8,34 +8,20 @@
 <script>
 import CommentBox from "./CommentBox";
 import CommentItem from "./CommentItem";
-import { mapState } from "vuex";
-import Api from "@/api";
+import { mapState, mapActions } from "vuex";
 export default {
-    props: ["id"],
     components: {
         CommentItem,
         CommentBox
     },
-    data() {
-        return {
-            commentsData: []
-        };
-    },
     computed: {
-        ...mapState(["aboutBgWhite"])
+        ...mapState(["aboutBgWhite", "commentsData"])
     },
     methods: {
-        queryComments() {
-            Api.getComments().then(res => {
-                this.commentsData = res.data.data;
-            });
-        },
-        onRelease(){
-            this.queryComments();
-        }
+        ...mapActions(['queryComments'])
     },
     mounted() {
-        this.queryComments();
+        this.queryComments(this.$route.params.id);
     }
 };
 </script>

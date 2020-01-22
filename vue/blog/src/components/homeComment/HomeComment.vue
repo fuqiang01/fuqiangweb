@@ -20,7 +20,7 @@
 <script>
 import CommentBox from "@/components/about/CommentBox";
 import HomeCommentItem from "@/components/homeComment/HomeCommentItem";
-import Api from "@/api";
+import { mapState, mapActions } from "vuex";
 export default {
     components: {
         CommentBox,
@@ -28,23 +28,19 @@ export default {
     },
     data() {
         return {
-            visible: false,
-            commentsData: []
+            visible: false
         };
     },
+    computed: {
+        ...mapState([ "commentsData"]),
+    },
     methods: {
+        ...mapActions(['queryComments']),
         onClose() {
             this.visible = false;
         },
         openCommentBox() {
             this.visible = true;
-        },
-        queryComments() {
-            Api.getComments(0)
-                .then(res => {
-                    console.log(res);
-                    // this.commentsData = res.data.data;
-                });
         },
         onRelease() {
             this.queryComments();

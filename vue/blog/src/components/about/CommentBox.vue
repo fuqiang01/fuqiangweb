@@ -2,7 +2,7 @@
     <div :class="['comment-box',isBgWhite && 'bg-white']">
         <a-comment>
             <div class="photo-wrap" slot="avatar">
-                <a-avatar shape="square" icon="user" src @click="photoClick" />
+                <a-avatar shape="square" icon="user" :src="photo" @click="photoClick" />
                 <input
                     type="file"
                     @change="photoFileChange"
@@ -44,14 +44,16 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
+import Api from '@/api';
 export default {
     props: ["parentId", "bgWhite"],
     data() {
         return {
             name: "",
             email: "",
-            commentText: ""
+            commentText: "",
+            photo: ''
         };
     },
     computed: {
@@ -61,6 +63,7 @@ export default {
         }
     },
     methods: {
+        ...mapActions(['queryComments']),
         onClose() {
             this.commentText = "";
             this.$emit("close");
@@ -75,27 +78,40 @@ export default {
                 this.$message.warning("评论不能为空！");
                 return;
             }
+            const blogId = this.$route.params.id;
             const data = {
-                photo: "",
+                photo: this.photo,
                 name: this.name || "匿名",
                 email: this.email,
                 content: this.commentText,
-                parentId: this.parentId || "",
-                date: new Date().getTime()
+                parentId: this.parentId || 0,
+                blogId
             };
-            this.$emit("release");
-            console.log("发送数据：");
-            console.log(data);
+            Api.addComment(data)
+                .then(() => {
+                    this.$message.success('评论成功！');
+                    this.queryComments(this.$route.params.id);
+                })
+            this.$emit("close");
             this.name = "";
             this.email = "";
             this.commentText = "";
+            this.photo = "";
         },
         photoClick() {
             this.$refs.photoFile.click();
         },
         photoFileChange() {
-            console.log("上传文件：");
-            console.log(this.$refs.photoFile.files[0]);
+            const file = this.$refs.photoFile.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+            this.uploadPhoto(formData)
+        },
+        uploadPhoto(formData){
+            Api.setFileToCos(formData)
+                .then(res => {
+                    this.photo = res.data.url
+                })
         }
     }
 };

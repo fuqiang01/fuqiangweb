@@ -50,8 +50,10 @@ export default {
             }
             return bool;
         },
+        //数据提交函数
         handleSubmit() {
             if (!this.checkFromData()) return;
+            const submiting = this.$message.loading('上传中..', 0)
             let myForm = new FormData();
             for (const key in this.fromData) {
                 if (this.fromData.hasOwnProperty(key)) {
@@ -61,9 +63,13 @@ export default {
             }
             Api.addBlog(myForm)
                 .then(res => {
+                    submiting();
+                    this.$message.success('提交成功！');
                     console.log(res)
                 })
                 .catch(err => {
+                    submiting();
+                    this.$message.error('提交失败！');
                     console.log(err)
                 })
         },

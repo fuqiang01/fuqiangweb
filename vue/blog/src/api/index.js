@@ -20,7 +20,43 @@ export default{
             params: data
         });
     },
-    getInfoById(){
-        return MyAxios.get(Urls.getInfoById);
+    getBlogById(id){
+        return MyAxios.get(Urls.getBlogById, {
+            params: {id}
+        });
+    },
+    giveLikeByComment(id){
+        return MyAxios.get(Urls.giveLikeByComment, {
+            params: {
+                id
+            }
+        })
+    },
+    cancelLikeByComment(id){
+        return MyAxios.get(Urls.cancelLikeByComment,{
+            params: {
+                id
+            }
+        })
+    },
+    addComment(data){
+        return MyAxios.post(Urls.addComment, data)
+    },
+    setFileToCos(formData){
+        return MyAxios.post(Urls.setFileToCos, formData);
+    },
+    cancelLikeByBlog(id){
+        return MyAxios.get(Urls.cancelLikeByBlog, {
+            params: {
+                id
+            }
+        })
+    },
+    giveLikeByBlog(id){
+        return MyAxios.get(Urls.giveLikeByBlog, {
+            params: {
+                id
+            }
+        })
     }
 }
