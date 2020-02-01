@@ -58,5 +58,10 @@ export default{
                 id
             }
         })
+    },
+    addScore(data){
+        return MyAxios.get(Urls.addScore, {
+            params: data
+        })
     }
 }

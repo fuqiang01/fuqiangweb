@@ -13,4 +13,10 @@ export default {
     commentAudit: '/commentAudit', // 审核评论 
     deleteComment: '/deleteComment',// 删除评论
     addComment: '/addComment', // 添加评论
+    getUserInfoByUser: '/getUserInfoByUser', // 获取用户信息
+    addUserQuickNav: '/addUserQuickNav', //添加快捷导航
+    getHotTags: '/getHotTags', // 获取热门标签
+    deleteBlog: '/deleteBlog', // 删除博客
+    getBlogById: '/getBlogById', // 获取某一篇博客的全部内容
+    editorBlog: '/editorBlog', // 修改某一条博客
 }

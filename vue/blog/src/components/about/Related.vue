@@ -23,7 +23,10 @@
                     <a-icon v-else type="like" theme="filled" />
                 </a-button>
             </span>
-            <a-rate v-model="rateValue" allowHalf />
+            <a-rate 
+                allowHalf 
+                v-model="rateValue" 
+                @change="rateChange"/>
         </div>
     </div>
 </template>
@@ -53,7 +56,23 @@ export default {
             else{
                 Api.cancelLikeByBlog(this.blogData.id)
             }
+        },
+        rateChange(val){
+            const id = this.$route.params.id;
+            let data = {
+                blogId: id,
+                currentScores: val,
+                prevScores: 0
+            };
+            if(sessionStorage[id]){
+                data.prevScores = sessionStorage[id]
+            }
+            sessionStorage[id] = val;
+            Api.addScore(data)
         }
+    },
+    mounted(){
+        this.rateValue = this.blogData.scoresNumber ? (this.blogData.scoresSum / this.blogData.scoresNumber) : this.blogData.scoresSum
     }
 };
 </script>

@@ -4,7 +4,7 @@
             <div slot="footer">
                 <p class="list-footer-text">
                     {{ originText + typeText + (articleFilterConditions.info ? '的' + articleFilterConditions.info : '') }}共查询到
-                    <b>{{ articleList.length }}</b> 条信息
+                    <b>{{ articleSum }}</b> 条信息
                 </p>
             </div>
             <a-list-item slot="renderItem" slot-scope="item" :key="item.id">
@@ -32,7 +32,7 @@ export default {
         };
     },
     computed: {
-        ...mapState(['articleList', 'articleFilterConditions']),
+        ...mapState(['articleList', 'articleFilterConditions', 'articleSum']),
         originText() {
             switch (this.articleFilterConditions.origin) {
                 case "original":
@@ -61,7 +61,7 @@ export default {
         }
     },
     methods: {
-        ...mapActions(['queryArticleList'])
+        ...mapActions(['queryArticleList']),
     },
     mounted() {
         this.queryArticleList();

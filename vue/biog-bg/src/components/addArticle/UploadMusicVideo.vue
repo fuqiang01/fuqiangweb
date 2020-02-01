@@ -13,15 +13,14 @@
     </a-upload-dragger>
 </template>
 <script>
-import {mapMutations} from 'vuex'
+import { mapMutations } from "vuex";
 export default {
     data() {
         return {
-            
         };
     },
     methods: {
-        ...mapMutations(['setFromData']),
+        ...mapMutations(["setFromData"]),
         handleChange(info) {
             const status = info.file.status;
             if (status !== "uploading") {
@@ -35,8 +34,8 @@ export default {
                 this.$message.error(`${info.file.name} file upload failed.`);
             }
         },
-        beforeUpload(file){
-            console.log(file)
+        beforeUpload(file) {
+            console.log(file);
             this.setFromData({ musicVideoData: file });
             return false;
         }
@@ -44,14 +43,14 @@ export default {
 };
 </script>
 <style lang="scss">
-.avatar-uploader-file{
-    .ant-upload{
+.avatar-uploader-file {
+    .ant-upload {
         height: 128px;
         padding-top: 20px;
-        .upload-file-icon{
-            margin-bottom: 10px!important;
+        .upload-file-icon {
+            margin-bottom: 10px !important;
         }
-        .uploader-file-text{
+        .uploader-file-text {
             font-size: 13px;
             color: #999;
             padding: 0 150px;

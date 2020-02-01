@@ -32,24 +32,23 @@
             </a-tooltip>
         </div>
         <div class="tag-unselected">
-            <a-tag v-for="item in unselectedTag" :key="item" @click="tagAdd(item)">{{ item }}</a-tag>
+            <a-tag v-for="item in hotTags" :key="item" @click="tagAdd(item)">{{ item }}</a-tag>
         </div>
     </a-form-item>
 </template>
 
 <script>
 import { getRandomColor } from '@/util'
-import {mapState, mapMutations} from 'vuex'
+import {mapState, mapMutations, mapActions} from 'vuex'
 export default {
     data(){
         return{
             addTagValue: '',
-            addTagInputVisible: false,
-            unselectedTag: ['标签一', '标签二', '标签三', '标签四', '标签五', '标签六', '标签七', '标签八', '标签九', '标签十']
+            addTagInputVisible: false
         }
     },
     computed:{
-        ...mapState(['fromData', 'showFromItemObj']),
+        ...mapState(['fromData', 'showFromItemObj', 'hotTags']),
         tagColorArr(){
             const len = this.fromData.tags.length;
             let colorArr = [];
@@ -61,7 +60,8 @@ export default {
         }
     },
     methods: {
-        ...mapMutations(['setFromData']),
+        ...mapMutations(['setFromData', 'setHotTags']),
+        ...mapActions(['queryHotTags']),
         addTagBtnClick(){
             this.addTagInputVisible = true;
             this.$nextTick( () => {
@@ -79,12 +79,12 @@ export default {
         tagClose(item){
             const arr = this.fromData.tags.filter( ele => ele !== item );
             this.setFromData({tags: arr})
-            this.unselectedTag.push(item);
+            this.setHotTags([...this.hotTags, item])
         },
         tagAdd(item){
-            const index = this.unselectedTag.indexOf(item);
             const arr = [...this.fromData.tags, item];
-            this.unselectedTag.splice(index, 1);
+            const newHotTags = this.hotTags.filter(ele => ele !== item);
+            this.setHotTags(newHotTags);
             this.setFromData({tags: arr})
         },
         addTagInputEnter(e){
@@ -92,7 +92,10 @@ export default {
             const arr = [...this.fromData.tags, val];
             this.setFromData({tags: arr})
             this.addTagInputVisible = false;
-        }
+        },
+    },
+    mounted(){
+        this.queryHotTags();
     }
 };
 </script>

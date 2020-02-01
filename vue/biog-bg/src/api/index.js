@@ -66,5 +66,31 @@ export default {
     },
     addComment(data){
         return MyAxios.post(Urls.addComment, data)
-    }
+    },
+    getUserInfoByUser(user){
+        return MyAxios.get(Urls.getUserInfoByUser, {
+            params: { user }
+        })
+    },
+    addUserQuickNav(data){
+        return MyAxios.post(Urls.addUserQuickNav, data);
+    },
+    getHotTags(sum = 20){
+        return MyAxios.get(Urls.getHotTags, {
+            params: { sum }
+        });
+    },
+    deleteBlog(id){
+        return MyAxios.get(Urls.deleteBlog, {
+            params: { id }
+        })
+    },
+    getBlogById(id){
+        return MyAxios.get(Urls.getBlogById, {
+            params: { id }
+        })
+    },
+    editorBlog(formData) {
+        return MyAxios.post(Urls.editorBlog, formData)
+    },
 }

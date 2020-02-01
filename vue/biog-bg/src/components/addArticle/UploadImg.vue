@@ -8,7 +8,9 @@
         :beforeUpload="beforeUpload"
         @change="handleChange"
     >
+        <!-- imageUrl代表上传的图片，fromData.imgSrc代表是在修改状态，并且修改的博客有图片 -->
         <img v-if="imageUrl" :src="imageUrl" alt="avatar" />
+        <img v-else-if="fromData.imgSrc" :src="fromData.imgSrc" alt="avatar" />
         <div v-else>
             <a-icon :type="loading ? 'loading' : 'plus'" />
             <div class="ant-upload-text">上传图片</div>
@@ -17,7 +19,7 @@
 </template>
 
 <script>
-import {mapMutations} from 'vuex'
+import { mapMutations, mapState } from "vuex";
 function getBase64(img, callback) {
     const reader = new FileReader();
     reader.addEventListener("load", () => callback(reader.result));
@@ -30,15 +32,17 @@ export default {
             imageUrl: ""
         };
     },
+    computed: {
+        ...mapState(["fromData"])
+    },
     methods: {
-        ...mapMutations(['setFromData']),
+        ...mapMutations(["setFromData"]),
         handleChange(info) {
-            console.log(info)
             if (info.file.status === "uploading") {
                 this.loading = true;
                 return;
             }
-            if (typeof info.file.originFileObj === 'object') {
+            if (typeof info.file.originFileObj === "object") {
                 getBase64(info.file.originFileObj, imageUrl => {
                     this.imageUrl = imageUrl;
                     this.loading = false;
@@ -48,11 +52,10 @@ export default {
         beforeUpload(file) {
             this.loading = true;
             this.setFromData({ imgFileData: file });
-            console.log(file)
             getBase64(file, imageUrl => {
-                    this.imageUrl = imageUrl;
-                    this.loading = false;
-                });
+                this.imageUrl = imageUrl;
+                this.loading = false;
+            });
             return false;
             // const isJPG = file.type === "image/jpeg";
             // if (!isJPG) {

@@ -1,23 +1,15 @@
 <template>
     <div id="app">
-        <a-layout>
-            <MySlider />
-            <a-layout>
-                <MyHeader />
-                <MyContent />
-            </a-layout>
-        </a-layout>
+        <a-spin :spinning="$store.state.rootLoading">
+            <Layout />
+        </a-spin>
     </div>
 </template>
 <script>
-import MyContent from '@/components/layout/MyContent'
-import MyHeader from '@/components/layout/MyHeader'
-import MySlider from '@/components/layout/MySlider'
+import Layout from "@/layout/layout";
 export default {
     components: {
-        MyContent,
-        MyHeader,
-        MySlider
+        Layout
     }
 };
 </script>
@@ -29,9 +21,6 @@ body {
     #app {
         width: 100%;
         height: 100%;
-        .ant-layout{
-            height: 100%;
-        }
     }
 }
 </style>

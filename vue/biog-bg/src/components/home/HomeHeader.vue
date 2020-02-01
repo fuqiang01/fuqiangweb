@@ -2,11 +2,11 @@
     <div class="home-header">
         <div class="home-header-left">
             <div class="img">
-                <img src="@/assets/img/header_photo.jpg" alt />
+                <img :src="userInfo.headerPhoto || 'http://cos.fqiang.co/blog/test1.jpg'"/>
             </div>
             <div class="text">
-                <p class="p1">哦吼</p>
-                <p class="p2">嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻</p>
+                <p class="p1">{{ userInfo.name }}</p>
+                <p class="p2">{{ userInfo.signature }}</p>
             </div>
         </div>
         <ul class="home-header-right">
@@ -32,6 +32,7 @@
 
 <script>
 import Api from '@/api';
+import {mapState} from 'vuex'
 export default {
     data(){
         return {
@@ -42,6 +43,9 @@ export default {
                 allBrowse: 0
             }
         }
+    },
+    computed: {
+        ...mapState(['userInfo'])
     },
     methods: {
         queryLogs(){

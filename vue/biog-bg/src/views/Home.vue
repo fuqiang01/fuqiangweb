@@ -22,6 +22,7 @@ import HomeQuickNav from '@/components/home/HomeQuickNav'
 import HomeArticlesSum from '@/components/home/HomeArticlesSum'
 import HomeComments from '@/components/home/HomeComments'
 import HomeWordCloud from '@/components/home/HomeWordCloud'
+import {mapActions} from 'vuex'
 export default {
     components: {
         HomeHeader,
@@ -30,6 +31,12 @@ export default {
         HomeArticlesSum,
         HomeComments,
         HomeWordCloud
+    },
+    methods: {
+        ...mapActions(['queryUserInfo'])
+    },
+    mounted(){
+        this.queryUserInfo()
     }
 }
 </script>
