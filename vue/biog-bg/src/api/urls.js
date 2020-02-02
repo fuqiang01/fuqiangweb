@@ -1,5 +1,5 @@
 export default {
-    baseURL: "",
+    baseURL: "http://api.fqla.cn",
     getNotAuditComment: "/getNotAuditComment", // 获取没有审核的评论
     getWordCloud: "/getWordCloud", // 获取词云的数组
     getContentList: "/getContentList", // 获取文章列表

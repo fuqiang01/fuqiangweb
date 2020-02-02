@@ -1,5 +1,5 @@
 export default {
-    baseURL: "",
+    baseURL: "http://api.fqla.cn",
     getComments: "/getComments",
     getContentList: "/getContentList",
     getBlogById: "/getBlogById", // 获取博客类容
