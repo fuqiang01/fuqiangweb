@@ -1,5 +1,6 @@
 export default {
     baseURL: "http://api.fqla.cn",
+    // baseURL: "",
     getComments: "/getComments",
     getContentList: "/getContentList",
     getBlogById: "/getBlogById", // 获取博客类容
@@ -10,4 +11,5 @@ export default {
     cancelLikeByBlog: '/cancelLikeByBlog', // 取消博客点赞
     giveLikeByBlog: '/giveLikeByBlog', // 博客点赞
     addScore: '/addScore', // 添加评分
+    addBrowseNum: '/addBrowseNum', // 添加浏览量
 }

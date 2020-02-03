@@ -1,4 +1,5 @@
 export default {
+    // baseURL: '',
     baseURL: "http://api.fqla.cn",
     getNotAuditComment: "/getNotAuditComment", // 获取没有审核的评论
     getWordCloud: "/getWordCloud", // 获取词云的数组
@@ -19,4 +20,5 @@ export default {
     deleteBlog: '/deleteBlog', // 删除博客
     getBlogById: '/getBlogById', // 获取某一篇博客的全部内容
     editorBlog: '/editorBlog', // 修改某一条博客
+    login:'/login', // 登录接口
 }

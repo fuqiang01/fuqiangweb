@@ -93,4 +93,7 @@ export default {
     editorBlog(formData) {
         return MyAxios.post(Urls.editorBlog, formData)
     },
+    login(userObj){
+        return MyAxios.post(Urls.login, userObj)
+    }
 }

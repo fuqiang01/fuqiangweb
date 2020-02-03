@@ -63,5 +63,10 @@ export default{
         return MyAxios.get(Urls.addScore, {
             params: data
         })
+    },
+    addBrowseNum(blogId){
+        return MyAxios.get(Urls.addBrowseNum, {
+            params: { blogId }
+        })
     }
 }

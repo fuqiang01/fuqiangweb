@@ -3,7 +3,7 @@
         <p class="item-title">{{ data.title || ( data.songName + ' —— ' + data.singer) }}</p>
         <div class="date-wrap">
             <a-icon type="clock-circle" />
-            <span>{{ data.timeStamp }}</span>
+            <span>{{ myGetTime(data.timeStamp) }}</span>
             <a-icon type="like" />
             <span>{{ data.likeNumber }}</span>
             <a-icon type="message" />
@@ -33,9 +33,15 @@
 
 <script>
 import Api from "@/api";
+import {myGetTime} from '@/util'
 import { mapActions, mapMutations } from "vuex";
 export default {
     props: ["data"],
+    data(){
+        return{
+            myGetTime
+        }
+    },
     methods: {
         ...mapMutations(["setFromData", "setRootLoading"]),
         ...mapActions(["queryArticleList"]),

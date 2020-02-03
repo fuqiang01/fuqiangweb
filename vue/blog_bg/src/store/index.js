@@ -35,7 +35,7 @@ export default new Vuex.Store({
             pageNum: 1 // 当前请求的页码
         },
         commentsData:[], // 存储评论数组
-        userInfo: { user: 'fuqiang'}, // 用户信息
+        userInfo: {}, // 用户信息
         hotTags: [], // 热门标签
     },
     getters: {

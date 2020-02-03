@@ -16,7 +16,7 @@
             </li>
             <li>
                 <p class="p1">文章总数</p>
-                <p class="p2">{{ numObj.allRelease }}</p>
+                <p class="p2">{{ numObj.allRelease || 0 }}</p>
             </li>
             <li>
                 <p class="p1">今日浏览量</p>
@@ -24,7 +24,7 @@
             </li>
             <li>
                 <p class="p1">总浏览量</p>
-                <p class="p2">{{ numObj.allBrowse }}</p>
+                <p class="p2">{{ numObj.allBrowse || 0 }}</p>
             </li>
         </ul>
     </div>

@@ -2,7 +2,9 @@
     <div class="talk">
         <p class="con-text">{{ data.title }}</p>
         <p class="con-origin">
-            <a :href="data.origin.url || 'javaScript:void(0)' ">--- {{ data.origin.text }}</a>
+            <a :href="data.originUrl || 'javaScript:void(0)' ">
+                <template v-if="data.originText">--- {{ data.originText }}</template> 
+            </a>
         </p>
     </div>
 </template>

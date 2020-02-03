@@ -23,6 +23,7 @@ export default {
 </script>
 <style lang="scss">
 .layout {
+    height: 100vh;
     .ant-layout {
         height: 100%;
     }

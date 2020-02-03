@@ -1,16 +1,12 @@
 <template>
     <div id="app">
         <a-spin :spinning="$store.state.rootLoading">
-            <Layout />
+            <router-view></router-view>
         </a-spin>
     </div>
 </template>
 <script>
-import Layout from "@/layout/layout";
 export default {
-    components: {
-        Layout
-    }
 };
 </script>
 <style lang="scss">
