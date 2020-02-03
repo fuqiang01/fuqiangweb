@@ -1,20 +1,27 @@
 <template>
     <div class="date-wrap">
         <div class="left">
-            <a-icon type="clock-circle" />
-            <span>{{ myGetTime(data.timeStamp) }}</span>
-            <a-icon type="heart" />
-            <span>{{ data.likeNumber }}</span>
-            <a-icon type="message" />
-            <span>{{ data.messageNumber }}</span>
-            <a-icon type="heat-map" />
-            <span>
-                <a
-                    v-for="item in data.tags"
-                    :key="item"
-                >{{ item }}</a>
+            <span class="left-item">
+                <a-icon type="clock-circle" />
+                {{ myGetTime(data.timeStamp) }}
             </span>
-            <a-rate :defaultValue="data.scoresNumber ? (data.scoresSum / data.scoresNumber) : data.scoresSum" allowHalf disabled />
+            <span class="left-item">
+                <a-icon type="heart" />
+                {{ data.likeNumber }}
+            </span>
+            <span class="left-item">
+                <a-icon type="message" />
+                {{ data.messageNumber }}
+            </span>
+            <span class="left-item">
+                <a-icon type="heat-map" />
+                <template v-for="item in data.tags">{{ item }}</template>
+            </span>
+            <a-rate
+                :defaultValue="data.scoresNumber ? (data.scoresSum / data.scoresNumber) : data.scoresSum"
+                allowHalf
+                disabled
+            />
         </div>
         <div class="right">
             <a :href="data.originUrl || 'javaScript:void(0)'">{{ data.originText}}</a>
@@ -23,13 +30,13 @@
 </template>
 
 <script>
-import myGetTime from '@/util/myGetTime'
+import myGetTime from "@/util/myGetTime";
 export default {
     props: ["data"],
-    data(){
-        return{
+    data() {
+        return {
             myGetTime
-        }
+        };
     }
 };
 </script>
@@ -40,9 +47,12 @@ export default {
     justify-content: space-between;
     .left {
         color: #e0e0e0;
-        span {
-            margin: 0 20px 0 5px;
-            color: ccc;
+        .left-item {
+            margin-right: 15px;
+            color: #ccc;
+            .anticon {
+                margin-right: 8px;
+            }
             a {
                 padding: 0 8px;
                 color: #ccc;
