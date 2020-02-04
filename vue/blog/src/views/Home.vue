@@ -113,11 +113,11 @@ export default {
     },
     beforeRouteUpdate(to, from, next) {
         this.pageNum = 1; // 路由改变的时候请求的数据要保证在第一页
-        this.queryContentList(to.params.type, to.params.info); // 每次路由改变，都重新请求数据
+        this.queryContentList(to.query.type, to.query.info); // 每次路由改变，都重新请求数据
         next();
     },
     mounted() {
-        this.queryContentList(this.$route.params.type, this.$route.params.info); // 第一次加载时请求数据
+        this.queryContentList(this.$route.query.type, this.$route.query.info); // 第一次加载时请求数据
     }
 };
 </script>

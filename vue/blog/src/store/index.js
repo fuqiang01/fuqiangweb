@@ -13,7 +13,7 @@ export default new Vuex.Store({
         distanceNum: 100,
         commentsData: [],
         isLoading: {
-            contentList: true,
+            contentList: false,
             context: true
         }
     },

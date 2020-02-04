@@ -19,17 +19,17 @@ export default {
                     fontSize: cfg.origin._origin.size,
                     rotate: cfg.origin._origin.rotate,
                     text: cfg.origin._origin.text,
-                    textAlign: 'center',
+                    textAlign: "center",
                     fontFamily: cfg.origin._origin.font,
                     fill: cfg.color,
-                    textBaseline: 'Alphabetic'
+                    textBaseline: "Alphabetic"
                 };
             }
             // 给point注册一个词云的shape
-            G2.Shape.registerShape('point', 'cloud', {
+            G2.Shape.registerShape("point", "cloud", {
                 drawShape(cfg, container) {
                     const attrs = getTextAttrs(cfg);
-                    return container.addShape('text', {
+                    return container.addShape("text", {
                         attrs: {
                             ...attrs,
                             x: cfg.x,
@@ -38,37 +38,38 @@ export default {
                     });
                 }
             });
-            Api.getWordCloud()
-                .then( ({data})=>{
-                    const dv = new DataSet.View().source(data);
-                    const range = dv.range('value');
-                    const min = range[0];
-                    const max = range[1];
-                    const imageMask = new Image();
-                    imageMask.crossOrigin = '';
-                    imageMask.src = 'http://cos.fqiang.co/blog/word_cloud.jpg';
-                    imageMask.onload = () => {
+            Api.getWordCloud().then(({ data }) => {
+                const dv = new DataSet.View().source(data);
+                const range = dv.range("value");
+                const min = range[0];
+                const max = range[1];
+                const imageMask = new Image();
+                imageMask.crossOrigin = "";
+                imageMask.src = "http://cos.fqiang.co/blog/word_cloud.jpg";
+                imageMask.onload = () => {
                     dv.transform({
-                        type: 'tag-cloud',
-                        fields: [ 'name', 'value' ],
+                        type: "tag-cloud",
+                        fields: ["name", "value"],
                         imageMask,
-                        font: 'Verdana',
-                        size: [ 400, 300 ], // 宽高设置最好根据 imageMask 做调整
+                        font: "Verdana",
+                        size: [400, 300], // 宽高设置最好根据 imageMask 做调整
                         padding: 0,
                         timeInterval: 5000, // max execute time
                         rotate() {
-                        let random = ~~(Math.random() * 4) % 4;
-                        if (random === 2) {
-                            random = 0;
-                        }
-                        return random * 90; // 0, 90, 270
+                            let random = ~~(Math.random() * 4) % 4;
+                            if (random === 2) {
+                                random = 0;
+                            }
+                            return random * 90; // 0, 90, 270
                         },
                         fontSize(d) {
-                        return ((d.value - min) / (max - min)) * (32 - 8) + 8;
+                            return (
+                                ((d.value - min) / (max - min)) * (32 - 8) + 8
+                            );
                         }
                     });
                     const chart = new G2.Chart({
-                        container: 'word-cloud',
+                        container: "word-cloud",
                         forceFit: true,
                         height: 300,
                         padding: 0
@@ -83,19 +84,20 @@ export default {
                         showTitle: false
                     });
                     chart.coord().reflect();
-                    chart.point()
-                        .position('x*y')
-                        .color('text')
-                        .shape('cloud');
+                    chart
+                        .point()
+                        .position("x*y")
+                        .color("text")
+                        .shape("cloud");
                     chart.render();
                 };
             });
-        }    
+        }
     },
-    mounted(){
-        this.createWordCloud()
+    mounted() {
+        this.createWordCloud();
     }
-}        
+};
 </script>
 
 <style lang="scss">

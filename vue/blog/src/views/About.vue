@@ -54,6 +54,7 @@ export default {
             this.setAboutBgWhite(!this.aboutBgWhite);
         },
         queryBlog(id) {
+            this.setIsLoading({ context: true });
             Api.getBlogById(id).then(res => {
                 this.blogData = res.data;
                 this.setIsLoading({ context: false });
@@ -62,7 +63,6 @@ export default {
     },
     mounted() {
         const id = this.$route.params.id;
-        this.setIsLoading({ context: true });
         this.queryBlog(id);
         Api.addBrowseNum(id);
     }
