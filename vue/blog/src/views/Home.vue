@@ -46,7 +46,7 @@ export default {
         return {
             contentList: [],
             pageNum: 1, // 页数，从1开始
-            pageSize: 3, // 每页的数据数
+            pageSize: 10, // 每页的数据数
             isLastPage: false // 是否是最后一页
         };
     },
@@ -85,13 +85,19 @@ export default {
         ) {
             const newType = type === undefined ? "typeAll" : type;
             const newInfo = info === undefined ? "" : info;
+            let tempByLoading = null;
             const newData = {
                 type: newType,
                 info: newInfo,
                 pageNum: this.pageNum,
                 pageSize: this.pageSize
             };
-            config.showLoading && this.setIsLoading({ contentList: true }); // 设置加载中为true
+            if(config.showLoading){ // 判断是否需要显示加载动画
+                //设置timeout的原因，是为了处理请求事件太短导致屏幕闪烁不好看
+                tempByLoading = setTimeout(() => {
+                    this.setIsLoading({ contentList: true }); // 设置加载中为true
+                }, 200);
+            }
             Api.getContentList(newData).then(res => {
                 if (config.isChangePage) {
                     // 是否是由于切换页面引发的请求，是的话拼接，不是的话替换
@@ -100,6 +106,7 @@ export default {
                     this.contentList = res.data.data;
                 }
                 this.handleIsLastPage(res.data.data.length);
+                clearTimeout(tempByLoading); // 清除定时器
                 this.setIsLoading({ contentList: false });
             });
         },
