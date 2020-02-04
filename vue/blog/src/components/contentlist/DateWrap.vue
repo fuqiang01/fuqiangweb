@@ -15,7 +15,7 @@
             </span>
             <span class="left-item">
                 <a-icon type="heat-map" />
-                <template v-for="item in data.tags">{{ item }}</template>
+                <a v-for="item in data.tags" :key="item">{{ item }}</a>
             </span>
             <a-rate
                 :defaultValue="data.scoresNumber ? (data.scoresSum / data.scoresNumber) : data.scoresSum"
@@ -54,7 +54,7 @@ export default {
                 margin-right: 8px;
             }
             a {
-                padding: 0 8px;
+                padding: 0 5px;
                 color: #ccc;
             }
         }
