@@ -1,5 +1,5 @@
 export default {
-    baseURL: "http://api.fqla.cn",
+    baseURL: "http://api.fqiang.co",
     // baseURL: "",
     getComments: "/getComments",
     getContentList: "/getContentList",
