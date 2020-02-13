@@ -1,6 +1,6 @@
 export default {
-    baseURL: 'http://127.0.0.1:19524',
-    // baseURL: "http://api.fqiang.co",
+    // baseURL: 'http://127.0.0.1:19524',
+    baseURL: "http://api.fqiang.co",
     getNotAuditComment: "/getNotAuditComment", // 获取没有审核的评论
     getWordCloud: "/getWordCloud", // 获取词云的数组
     getContentList: "/getContentList", // 获取文章列表
