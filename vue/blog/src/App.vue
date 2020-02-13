@@ -47,7 +47,7 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
-    background: url("./assets/img/home_bg.jpg");
+    background: url("http://cos.fqiang.co/blog/home_bg.jpg");
     background-size: cover;
     overflow-y: auto;
     .content {
