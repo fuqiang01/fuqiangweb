@@ -58,6 +58,8 @@ export default {
             Api.getBlogById(this.data.id).then(res => {
                 this.setFromData({
                     ...res.data,
+                    imgFileData: res.data.imgSrc.split('/').pop(), // 这里返回的是带有域名的地址，而我们只需要文件名
+                    musicVideoData: res.data.dataFile.split('/').pop(),
                     richText: res.data.content
                 });
                 this.$router.push(`/add/${res.data.styleType}`);

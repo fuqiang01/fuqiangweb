@@ -69,7 +69,7 @@ export default {
             // 校验数据
             if (!this.checkFromData()) return;
             // 校验成功
-            const submiting = this.$message.loading("上传中..", 0);
+            const submiting = this.$message.loading("上传中...", 0);
             // 创建form数据
             let myForm = new FormData();
             for (const key in this.fromData) {
