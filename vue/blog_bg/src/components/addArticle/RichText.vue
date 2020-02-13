@@ -71,7 +71,8 @@ export default {
 
 <style lang="scss">
 .ql-editor {
-    min-height: 400px;
+    height: 400px;
+    overflow-y: auto;
     font-size: 14px;
 }
 .ql-snow {

@@ -1,5 +1,5 @@
 <template>
-    <div :class="['context',aboutBgWhite && 'bg-white']" v-html="context"></div>
+    <div :class="['ql-editor context',aboutBgWhite && 'bg-white']" v-html="context"></div>
 </template>
 
 <script>
@@ -27,11 +27,29 @@ export default {
     }
     p {
         margin: 0;
+        line-height: 25px;
+        margin-bottom: 8px;
     }
     pre{
         box-shadow: 0 0 5px rgba(255,255,255,.5);
         border-radius: 5px;
         padding: 10px 20px;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            height: 5px;
+            width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: rgba(0,0,0,.2);
+            border-radius: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,.1);
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgba(255,255,255,.3);
+        }
         .hljs-comment, .hljs-deletion, .hljs-meta{
             color: #999;
         }
