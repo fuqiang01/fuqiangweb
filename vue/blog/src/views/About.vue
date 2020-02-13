@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import "highlight.js/styles/monokai-sublime.css"; //导入代码高亮样式
 import Context from "@/components/about/Context";
 import Related from "@/components/about/Related";
 import Comments from "@/components/about/Comments";

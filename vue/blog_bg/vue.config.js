@@ -10,18 +10,19 @@ module.exports = {
                 deleteOriginalAssets: false // 是否删除原文件
             })
         ],
-        externals: { // 使用外部扩展的包，左边是你在使用的时候导入的名称，右侧是cdn源码中放到全局中的名称
-            'vue': 'Vue',
-            'vuex': 'Vuex',
-            'vue-router': 'VueRouter',
-            'ant-design-vue': 'antd',
-            'axios': 'axios',
-            'highlight.js': 'hljs',
-            'vue-quill-editor': 'VueQuillEditor',
-            'quill': 'Quill',
-            '@antv/g2': 'G2',
-            '@antv/data-set': 'DataSet'
-        }
+        // 使用外部扩展的包，左边是你在使用的时候导入的名称，右侧是cdn源码中放到全局中的名称
+        // externals: { 
+        //     'vue': 'Vue',
+        //     'vuex': 'Vuex',
+        //     'vue-router': 'VueRouter',
+        //     'ant-design-vue': 'antd',
+        //     'axios': 'axios',
+        //     'highlight.js': 'hljs',
+        //     'vue-quill-editor': 'VueQuillEditor',
+        //     'quill': 'Quill',
+        //     '@antv/g2': 'G2',
+        //     '@antv/data-set': 'DataSet'
+        // }
     }
     // devServer: {
     //     proxy: {

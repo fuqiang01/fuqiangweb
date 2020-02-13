@@ -92,6 +92,7 @@ export default {
             const arr = [...this.fromData.tags, val];
             this.setFromData({tags: arr})
             this.addTagInputVisible = false;
+            this.addTagValue = '';
         },
     },
     mounted(){
