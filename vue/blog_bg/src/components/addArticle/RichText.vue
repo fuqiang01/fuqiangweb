@@ -8,9 +8,10 @@
 
 import { quillEditor, Quill } from "vue-quill-editor";
 import { container, ImageExtend, QuillWatch } from "quill-image-extend-module";
-import "quill/dist/quill.core.css";
-import "quill/dist/quill.snow.css";
-import "quill/dist/quill.bubble.css";
+// 这里使用了cdn了，可以注释掉
+// import "quill/dist/quill.core.css";
+// import "quill/dist/quill.snow.css";
+// import "quill/dist/quill.bubble.css";
 import hljs from "highlight.js"; //导入代码高亮文件
 import "highlight.js/styles/monokai-sublime.css"; //导入代码高亮样式
 import {mapState, mapMutations} from 'vuex'

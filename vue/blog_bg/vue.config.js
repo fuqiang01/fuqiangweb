@@ -15,7 +15,12 @@ module.exports = {
             'vuex': 'Vuex',
             'vue-router': 'VueRouter',
             'ant-design-vue': 'antd',
-            'axios': 'axios'
+            'axios': 'axios',
+            'highlight.js': 'hljs',
+            'vue-quill-editor': 'VueQuillEditor',
+            'quill': 'Quill',
+            '@antv/g2': 'G2',
+            '@antv/data-set': 'DataSet'
         }
     }
     // devServer: {
