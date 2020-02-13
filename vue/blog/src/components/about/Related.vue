@@ -2,7 +2,7 @@
     <div :class="['related',aboutBgWhite && 'bg-white']">
         <p>
             <span>作者：</span>
-            <a :href="blogData.originUrl || 'javaScript:void(0)'">{{ blogData.origin }}</a>
+            <a :href="blogData.originUrl || 'javaScript:void(0)'">{{ blogData.originText }}</a>
         </p>
         <p>
             <span>发布时间：</span>

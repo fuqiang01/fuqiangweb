@@ -23,9 +23,9 @@
                 disabled
             />
         </div>
-        <div class="right">
+        <!-- <div class="right">
             <a :href="data.originUrl || 'javaScript:void(0)'">{{ data.originText}}</a>
-        </div>
+        </div> -->
     </div>
 </template>
 
