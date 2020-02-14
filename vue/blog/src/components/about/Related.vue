@@ -91,6 +91,8 @@ export default {
         margin-right: 10px;
     }
     .keywords-wrap {
+        display: flex;
+        flex-wrap: wrap;
         a {
             padding: 0 5px;
         }
