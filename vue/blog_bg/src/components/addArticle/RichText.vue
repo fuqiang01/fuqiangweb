@@ -96,6 +96,7 @@ export default {
 // }
 .ql-editor {
     height: 500px;
+    padding-bottom: 200px;
     overflow-y: auto;
     font-size: 14px;
 }

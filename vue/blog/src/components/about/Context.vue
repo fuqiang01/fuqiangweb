@@ -25,10 +25,12 @@ export default {
     h1,h2,h3,h4,h5,h6 {
         color: #fff;
     }
+    p,h1,h2,h3,h4,h5,h6 {
+        margin-bottom: 8px;
+    }
     p {
         margin: 0;
         line-height: 25px;
-        margin-bottom: 8px;
     }
     pre{
         box-shadow: 0 0 5px rgba(255,255,255,.5);
