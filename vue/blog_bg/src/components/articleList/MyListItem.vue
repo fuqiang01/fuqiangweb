@@ -12,7 +12,7 @@
             <span>{{ data.styleType }}</span>
             <a-icon type="heat-map" />
             <span>
-                <a href="javaScript:void(0)" v-for="item in data.tags" :key="item">{{ item }}</a>
+                <a href="javaScript:void(0)" v-for="(item, index) in data.tags" :key="index">{{ item }}</a>
             </span>
             <a :href="`http://localhost:8081/about/${data.id}`" target="_blank">
                 <a-icon type="link" />

@@ -56,6 +56,10 @@ export default {
             color: #999;
         }
     }
+    li{
+        padding-left: 0;
+        list-style-type: disc;
+    }
     &.bg-white{
         background-color: #fff;
         color: #4f4f4f;

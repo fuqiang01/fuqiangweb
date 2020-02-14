@@ -106,7 +106,7 @@ export default new Vuex.Store({
         },
         // 获取热门标签
         queryHotTags({commit}){
-            const sum = 20; // 要获取的数量
+            const sum = 100; // 要获取的数量
             Api.getHotTags(sum)
                 .then(res => {
                     const data = res.data.map(ele => ele.name)

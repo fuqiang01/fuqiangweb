@@ -31,8 +31,9 @@ export default {
         },
         queryTagViewsData(num){
             Api.getTagViews(num)
-                .then(res => {
-                    this.createAnalysis(res.data)
+                .then(res => { 
+                    // 柱形图只显示10组
+                    this.createAnalysis(res.data.slice(0, 3 * 10));
                 })
         }
     },

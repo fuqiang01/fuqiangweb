@@ -3,7 +3,7 @@
         <div class="tag-selected">
             <a-tag
                 v-for="(item, index) in fromData.tags"
-                :key="item"
+                :key="index"
                 :color="tagColorArr[index]"
                 closable
                 @close="tagClose(item)"
@@ -32,7 +32,7 @@
             </a-tooltip>
         </div>
         <div class="tag-unselected">
-            <a-tag v-for="item in hotTags" :key="item" @click="tagAdd(item)">{{ item }}</a-tag>
+            <a-tag v-for="(item, index) in hotTags" :key="index" @click="tagAdd(item)">{{ item }}</a-tag>
         </div>
     </a-form-item>
 </template>
@@ -82,6 +82,7 @@ export default {
             this.setHotTags([...this.hotTags, item])
         },
         tagAdd(item){
+            if(!this.canAddTag(item)) return;
             const arr = [...this.fromData.tags, item];
             const newHotTags = this.hotTags.filter(ele => ele !== item);
             this.setHotTags(newHotTags);
@@ -89,11 +90,17 @@ export default {
         },
         addTagInputEnter(e){
             const val = e.target.value;
+            if(!this.canAddTag(val)) return;
             const arr = [...this.fromData.tags, val];
             this.setFromData({tags: arr})
             this.addTagInputVisible = false;
             this.addTagValue = '';
         },
+        canAddTag(tagName){
+            if(!this.fromData.tags.includes(tagName)) return true;
+            this.$message.error("添加新标签失败，不能够重复创建标签" + tagName + "!");
+            return false;
+        }
     },
     mounted(){
         this.queryHotTags();
