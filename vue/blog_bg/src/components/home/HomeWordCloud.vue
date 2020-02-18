@@ -39,6 +39,7 @@ export default {
                 }
             });
             Api.getWordCloud().then(({ data }) => {
+                console.log(data)
                 const dv = new DataSet.View().source(data);
                 const range = dv.range("value");
                 const min = range[0];
@@ -88,7 +89,8 @@ export default {
                         .point()
                         .position("x*y")
                         .color("text")
-                        .shape("cloud");
+                        .shape("cloud")
+                        .tooltip('name*value');
                     chart.render();
                 };
             });

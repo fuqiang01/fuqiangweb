@@ -3,7 +3,7 @@
         <div class="tag-selected">
             <a-tag
                 v-for="(item, index) in fromData.tags"
-                :key="index"
+                :key="item"
                 :color="tagColorArr[index]"
                 closable
                 @close="tagClose(item)"
