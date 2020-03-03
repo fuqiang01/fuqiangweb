@@ -1,0 +1,16 @@
+html, body{
+  height: 100%;
+  font-size: 0.267vw;
+}
+#root{
+  font-size: 16rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}

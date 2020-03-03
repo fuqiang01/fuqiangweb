@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>俄罗斯方块</title>
+    <style>
+        #root {
+            margin: 0px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        #panel {
+            position: relative;
+            background: #000;
+        }
+        .right{
+            padding-top: 30px;
+        }
+        #obscuration{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, .8);
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #obscuration span{
+            display: inline-block;
+            padding: 20px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            background: violet;
+            color: #fff;
+        }
+        #next {
+            position: relative;
+        }
+        #score{
+            text-align: center;
+            line-height: 50px;
+            font-size: 35px;
+            font-weight: bold;
+            color: #f40;
+        }
+        .info{
+            padding-left: 30px;
+            padding-top: 100px;
+            color: #aaa;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div id="panel">
+            <div id="obscuration">
+                <span id="game-status"></span>
+            </div>
+        </div>
+        <div class="right">
+            <div id="next"></div>
+            <div id="score"></div>
+            <div class="info">
+                <p>↑：旋转</p>
+                <p>↓：直接落下</p>
+                <p>←：向左移动</p>
+                <p>→：向右移动</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

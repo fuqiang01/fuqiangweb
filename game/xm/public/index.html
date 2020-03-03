@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #root{
+            height: 400px;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+        }
+        #game-interface{
+            position: relative;
+            border: 1px solid #008c8c;
+        }
+        #right{
+            width: 200px;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #score-wrap{
+            margin-bottom: 20px;
+        }
+        #score{
+            color: red;
+        }
+        #game-state.playing{
+            color: green;
+        }
+        #game-state.puase{
+            color: purple;
+        }
+        #game-state.over{
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div id="game-interface"></div>
+        <div id="right">
+            <div id="score-wrap">
+                <span class="s1">分数：</span>
+                <span id="score"></span>
+            </div>
+            <div id="game-state"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.wrapper{
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+.header{
+    background-color: #6495ed;
+    padding: 10rem;
+}
