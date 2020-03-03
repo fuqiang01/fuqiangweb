@@ -2,6 +2,8 @@ import pageConfig from "./pageConfig";
 import $ from 'jquery'
 import { moveDirection, IGameViewer, gameState } from "../types";
 import Game from "../Game";
+const bgImg = require('../../img/bg_1.jpg');
+const bambooImg = require('../../img/bamboo.png');
 
 export default class GamePageViewer implements IGameViewer {
     constructor(
@@ -17,7 +19,11 @@ export default class GamePageViewer implements IGameViewer {
         const bam = pageConfig.bamboo;
         this._gameDom.css({
             width: bam.bambooToEdge * 2 + bam.sum * bam.width + (bam.sum - 1) * bam.bambooToBamboo,
-            height: pageConfig.interface.height
+            height: pageConfig.interface.height,
+            overflow: 'hidden',
+            backgroundImage: `url(${bgImg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
         })
         // 添加竹子
         for (let i = 0; i < bam.sum; i++) {
@@ -27,7 +33,8 @@ export default class GamePageViewer implements IGameViewer {
                 position: 'absolute',
                 left: bam.bambooToEdge + i * (bam.width + bam.bambooToBamboo),
                 top: 0,
-                background: 'green'
+                backgroundImage: `url(${bambooImg})`,
+                backgroundSize: '100% 100%'
             }).appendTo(this._gameDom)
         }
         // 绑定事件

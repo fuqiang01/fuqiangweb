@@ -2,6 +2,7 @@ import { IPandaViewer, animalName, Dir, moveDirection } from "../types";
 import AnimalViewer from "./AnimalViewer";
 import pageConfig from "./pageConfig";
 import Panda from "../Panda";
+const pandaImg = require('../../img/panda_1.png');
 
 export default class PandaViewer extends AnimalViewer implements IPandaViewer {
     // 熊猫初始化
@@ -12,7 +13,7 @@ export default class PandaViewer extends AnimalViewer implements IPandaViewer {
         this._animal.point = { x, y };
         this._animal.direction = Dir.right;
         this._dom!.css({
-            backgroundImage: 'url(../../../public/img/panda_bg.jpg)',
+            backgroundImage: `url(${pandaImg})`,
             zIndex: 3
         })
     }

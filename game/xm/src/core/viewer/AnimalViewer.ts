@@ -2,6 +2,7 @@ import { IAnimalViewer, Dir, animalName } from "../types";
 import $ from 'jquery'
 import pageConfig from './pageConfig'
 import Animal from "../Animal";
+const wormImg = require('../../img/worm_2.png');
 
 export default abstract class AnimalViewer implements IAnimalViewer {
     protected _dom?: JQuery<HTMLElement>
@@ -18,7 +19,7 @@ export default abstract class AnimalViewer implements IAnimalViewer {
                 position: 'absolute',
                 width: pageConfig[animalType].width + 'px',
                 height: pageConfig[animalType].height + 'px',
-                background: 'red',
+                backgroundImage: `url(${wormImg})`, // 先全部设置成虫子的图片，熊猫会初始化修改的
                 transform: 'rotateY(0deg)',
                 backgroundSize: '100% 100%'
             }).appendTo(this._container);
@@ -30,6 +31,11 @@ export default abstract class AnimalViewer implements IAnimalViewer {
             left: bam.bambooToEdge + (this._animal.point.x - 1) * (bam.bambooToBamboo + bam.width) + num - pageConfig[animalType].width + 'px',
             bottom: this._animal.point.y * pageConfig[animalType].height
         })
+        if(this._animal.direction === Dir.left && this._animal.name === animalName.worm){
+            this._dom.css({
+                transform: 'rotateY(-180deg)'
+            })
+        }
     }
     die(): void {
         if (this._isDie || !this._dom) return;
