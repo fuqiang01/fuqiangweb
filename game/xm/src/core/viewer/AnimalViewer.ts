@@ -2,7 +2,7 @@ import { IAnimalViewer, Dir, animalName } from "../types";
 import $ from 'jquery'
 import pageConfig from './pageConfig'
 import Animal from "../Animal";
-const wormImg = require('../../img/worm_2.png');
+const wormImg = require('../../img/worm_2.png').default;
 
 export default abstract class AnimalViewer implements IAnimalViewer {
     protected _dom?: JQuery<HTMLElement>

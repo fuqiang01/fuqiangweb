@@ -2,8 +2,8 @@ import pageConfig from "./pageConfig";
 import $ from 'jquery'
 import { moveDirection, IGameViewer, gameState } from "../types";
 import Game from "../Game";
-const bgImg = require('../../img/bg_1.jpg');
-const bambooImg = require('../../img/bamboo.png');
+const bgImg = require('../../img/bg_1.jpg').default;
+const bambooImg = require('../../img/bamboo.png').default;
 
 export default class GamePageViewer implements IGameViewer {
     constructor(

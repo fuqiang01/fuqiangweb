@@ -2,7 +2,7 @@ import { IPandaViewer, animalName, Dir, moveDirection } from "../types";
 import AnimalViewer from "./AnimalViewer";
 import pageConfig from "./pageConfig";
 import Panda from "../Panda";
-const pandaImg = require('../../img/panda_1.png');
+const pandaImg = require('../../img/panda_1.png').default;
 
 export default class PandaViewer extends AnimalViewer implements IPandaViewer {
     // 熊猫初始化
