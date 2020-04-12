@@ -13,7 +13,7 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.ts$/, use: "ts-loader" },
+            { test: /\.ts$/, use: "ts-loader?transpileOnly=true" },
             {
                 test: /\.(jpg|jpeg|png|gif)$/,
                 use: [

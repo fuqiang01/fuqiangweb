@@ -1,10 +1,15 @@
-import Spirit from "./core/Spirit";
-import "./core/preload"
-// console.log(staticData.bgLight)
-const point = {
-    x: 10,
-    y: 10
-}
+import Game from "./core/base/Game";
+import Preload from "./core/base/Preload";
+
+
 const canvas = document.getElementsByTagName("canvas")[0];
+// 设置canvas填充整个屏幕
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
 const ctx = canvas.getContext("2d");
-// new Spirit(point, staticData.bgLight, 100, 100).show(ctx)
+const preload = new Preload();
+const game = new Game(ctx, preload);
+
+// 绑定点击事件
+canvas.addEventListener("click", game.canvasClick);

@@ -1,0 +1,10 @@
+// 解决使用import导入图片资源或者音频资源时报错的问题
+declare module '*.svg'
+declare module '*.png'
+declare module '*.jpg'
+declare module '*.jpeg'
+declare module '*.gif'
+declare module '*.bmp'
+declare module '*.tiff'
+declare module '*.mp3'
+declare module '*.wav'
