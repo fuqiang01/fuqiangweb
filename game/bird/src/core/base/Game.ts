@@ -6,8 +6,9 @@ import Ground from "../derived/Ground";
 import Pipe from "../derived/Pipe";
 import Bird from "../derived/Bird";
 import Page from "./Page";
-import StartPage from "../pages/StartPage"
-import PreparePage from "../pages/PreparePage"
+import StartPage from "../pages/StartPage";
+import PreparePage from "../pages/PreparePage";
+import RuningPage from "../pages/RuningPage";
 
 export default class Game {
     // 游戏状态
@@ -39,6 +40,10 @@ export default class Game {
     // 前往preparePage页面
     goPreparePage(){
         this._page = new PreparePage(this._ctx, this._preload.imgElement)
+    }
+    // 前往runingPage页面
+    goRuningPage(){
+        this._page = new RuningPage(this._ctx, this._preload.imgElement)
     }
     constructor(
         private _ctx: CanvasRenderingContext2D | null,

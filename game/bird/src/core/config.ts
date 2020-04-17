@@ -15,6 +15,8 @@ export const GROUND_HEIGHT = 112;
 // 管道宽高
 export const PIPE_WIDTH = 54;
 export const PIPE_HEIGHT = 640;
+// 上下管道间隔距离
+export const PIPE_INTERVAL = 100;
 
 // 小鸟宽高
 export const BIRD_WIDTH = 34;
@@ -32,7 +34,11 @@ export const TITLES_INFO = {
         width: 178,
         height: 48
     },
-
+    readyTitle: {
+        top: 200,
+        width: 184,
+        height: 50
+    }
 }
 
 // 开始游戏按钮
@@ -40,4 +46,17 @@ export const START_BTN = {
     width: 104,
     height: 58,
     top: 400
+}
+
+// ready页面的info图片信息
+export const READY_INFO = {
+    top: 300,
+    width: 114,
+    height: 98
+}
+
+// 分数
+export const NUM = {
+    width: 24,
+    height: 36
 }
