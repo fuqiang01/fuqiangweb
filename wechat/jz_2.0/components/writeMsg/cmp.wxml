@@ -1,0 +1,14 @@
+<view class="wrap">
+    <textarea 
+        placeholder="输入您想反馈或需要帮助的内容..."
+        placeholder-style="color:#aaa"/>
+    <view class="img-wrap">
+        <view class="img">
+            <image mode="aspectFill" src="/img/photo_1.jpg"/>
+        </view>
+        <view class="upload-btn">
+            <image mode="widthFix" src="/img/camera.png" />
+            <text>照片/视屏</text>
+        </view>
+    </view>
+</view>

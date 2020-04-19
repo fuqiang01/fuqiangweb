@@ -1,0 +1,14 @@
+<view class="container">
+    <view class="btn-wrap">
+        <view class="leave-msg">
+            <image mode="widthFix" src="/img/leave_msg.png" />
+            <text>留个言吧...</text>
+        </view>
+        <button class="show-my-msg" open-type="getUserInfo" bindgetuserinfo="getUserInfo">我的留言</button>
+    </view>
+    <view class="msg-list">
+        <f-leaveMsg />
+        <f-leaveMsg />
+        <f-leaveMsg />
+    </view>
+</view>

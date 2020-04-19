@@ -1,37 +1,13 @@
 <!--index.wxml-->
 <view class="container">
-    <swiper 
-        bindanimationfinish="onFinish" 
-        bindchange="onChange" 
-        current="{{ nowIndex }}" 
-        duration="{{ isTouch ? 500 : 0 }}"
-        bindtouchstart="onStart"
-        bindtouchend="onEnd">
-        <block wx:for="{{ arr }}" wx:key="{{ item }}">
-            <swiper-item>
-                <text>{{ item }}</text>
-                <text>{{ activeIndex }}</text>
-                <text>{{ nowIndex }}</text>
-            </swiper-item>
-        </block>
-    </swiper>
-    <swiper 
-        bindanimationfinish="onFinishA" 
-        current="{{ currentA }}"
-        duration="{{ isTouchA ? 500 : 0 }}"
-        bindtouchstart="onStartA"
-        bindtouchend="onEndA">  
-        <block 
-            wx:for="{{ arrA }}" 
-            wx:key="{{ index }}" 
-            wx:if="{{ index <= nowIndexA + 1 && index >= nowIndexA - 1}}" >
-            <swiper-item>
-                <text>{{ index }}</text>
-                <text>{{ nowIndexA }}</text>
-            </swiper-item>
-        </block>
-    </swiper>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
 </view>
-<!-- <view>
-    <my-swiper />
-</view> -->

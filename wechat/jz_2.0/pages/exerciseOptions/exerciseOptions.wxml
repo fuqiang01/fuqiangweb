@@ -1,0 +1,33 @@
+<view class="container">
+    <image class="motorcycle-gif" mode="widthFix" src="/img/motorcycle_gif.gif" />
+    <view class="test-order">
+        <text class="order" bind:tap="goAQPage" data-practice="order">顺序练习</text>
+        <text class="test" bind:tap="goAQPage" data-practice="test">模拟考试</text>
+    </view>
+    <view class="other-options">
+        <view class="item" bind:tap="goAQPage" data-practice="random">
+            <image mode="widthFix" src="/img/icon_5.png" />
+            <text>随机练习</text>
+        </view>
+        <view class="item">
+            <image mode="widthFix" src="/img/icon_1.png" />
+            <text>章节练习</text>
+        </view>
+        <view class="item">
+            <image mode="widthFix" src="/img/icon_4.png" />
+            <text>专项练习</text>
+        </view>
+        <view class="item" bind:tap="goAQPage" data-practice="wrong">
+            <image mode="widthFix" src="/img/icon_8.png" />
+            <text>错题本</text>
+        </view>
+        <view class="item" bind:tap="goAQPage" data-practice="collect">
+            <image mode="widthFix" src="/img/icon_6.png" />
+            <text>收藏</text>
+        </view>
+        <view class="item">
+            <image mode="widthFix" src="/img/icon_9.png" />
+            <text>成绩排行</text>
+        </view>
+    </view>
+</view>
