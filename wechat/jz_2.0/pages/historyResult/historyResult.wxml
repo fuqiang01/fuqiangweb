@@ -1,9 +1,7 @@
 <view class="container">
-    
-            <canvas canvas-id="myCanvas" style="border: 1px solid red"></canvas>
     <view class="top-box">
         <view class="highest-wrap">
-            <!-- <canvas id="myCanvas" canvas-id="myCanvas"></canvas> -->
+            <canvas id="myCanvas" canvas-id="myCanvas"></canvas>
             <text class="highest">
                 <text class="num">6</text>
                 <text class="text">历史最高分</text>
@@ -26,5 +24,25 @@
     </view>
     <view class="top-box-bot">
         <image mode="widthFix" src="/img/unqualified_bg.png" />
+    </view>
+    <view class="performance">
+        <view class="title">
+            <image mode="widthFix" src="/img/clock.png" />
+            <text>历史成绩</text>
+        </view>
+        <view class="performance-list">
+            <view class="item">
+                <text class="score">6分</text>
+                <text class="time-consuming">0分26秒</text>
+                <text class="date">2020-04-18</text>
+                <text class="tag">马路杀手</text>
+            </view>
+            <view class="item">
+                <text class="score">6分</text>
+                <text class="time-consuming">0分26秒</text>
+                <text class="date">2020-04-18</text>
+                <text class="tag">马路杀手</text>
+            </view>
+        </view>
     </view>
 </view>

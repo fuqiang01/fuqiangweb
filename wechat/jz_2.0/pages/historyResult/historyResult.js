@@ -20,32 +20,19 @@ Page({
      */
     onReady: function () {
         const ctx = wx.createCanvasContext('myCanvas')
-        ctx.setLineCap("round");
+        ctx.lineCap = "round";
         ctx.beginPath();
-        ctx.setLineWidth(10);
+        ctx.lineWidth = 10;
         ctx.arc(150 , 85 , 80 , (Math.PI * 3 / 4) , Math.PI / 4 , 0 );
-        ctx.setStrokeStyle("rgba(0,0,0,0.1)");
+        ctx.strokeStyle = "rgba(0,0,0,0.1)";
         ctx.stroke();
 
-        // const query = wx.createSelectorQuery()
-        // query.select('#myCanvas')
-        //     .fields({ node: true, size: true })
-        //     .exec((res) => {
-        //         const canvas = res[0].node
-        //         const ctx = canvas.getContext('2d');
-                // ctx.lineCap = "round";
-                // ctx.beginPath();
-                // ctx.lineWidth = 10;
-                // ctx.arc(150 , 85 , 80 , (Math.PI * 3 / 4) , Math.PI / 4 , 0 );
-                // ctx.strokeStyle = "rgba(0,0,0,0.1)";
-                // ctx.stroke();
-
-                // ctx.beginPath();
-                // ctx.lineWidth = 6;
-                // ctx.arc(150 , 85 , 80 , (Math.PI * 3 / 4) , Math.PI , 0 );
-                // ctx.strokeStyle = "#fff";
-                // ctx.stroke();
-            // })
+        ctx.beginPath();
+        ctx.lineWidth = 6;
+        ctx.arc(150 , 85 , 80 , (Math.PI * 3 / 4) , Math.PI , 0 );
+        ctx.strokeStyle = "#fff";
+        ctx.stroke();
+        ctx.draw();
     },
 
     /**

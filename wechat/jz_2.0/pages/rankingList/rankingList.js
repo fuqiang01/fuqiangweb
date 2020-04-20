@@ -1,32 +1,18 @@
-const app = getApp();
-// pages/message/message.js
+// pages/rankingList/rankingList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isSuper: false, //是否为超级用户
-    msgList: [{
-      id: 1,
-      name: "Alan",
-      date: "2020年4月20日 21:42",
-      msgText: "这是留言内容",
-      photoUrl: "/img/photo_1.jpg",
-      replyMsg: "作者回复消息",
-      imgArr: ["/img/photo_1.jpg"]
-    }]
+
   },
-  getUserInfo(e) {
-    console.log(e.detail.userInfo)
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      isSuper: app.globalData.userInfo.isSuper
-    })
+
   },
 
   /**

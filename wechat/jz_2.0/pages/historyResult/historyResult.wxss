@@ -1,0 +1,95 @@
+.top-box{
+    height: 450rpx;
+    position: relative;
+    background: linear-gradient(to bottom, #E28951, #FE5B47);
+}
+.highest-wrap{
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-bottom: 60rpx;
+}
+#myCanvas{
+    margin: 0 auto;
+}
+.highest{
+    position: absolute;
+    width: 100%;
+    bottom: 0rpx;
+    left: 0;
+}
+.highest .num{
+    display: block;
+    font-size: 120rpx;
+    
+}
+.highest .text{
+    display: block;
+    font-size: 32rpx;
+}
+.topic-num-list{
+    display: flex;
+    justify-content: space-around;
+}
+.topic-num-list .item text{
+    display: block;
+    text-align: center;
+    color: #fff;
+}
+.topic-num-list .item .flag{
+    font-size: 40rpx;
+}
+.topic-num-list .item .num{
+    line-height: 60rpx;
+}
+.topic-num-list .item .text{
+    font-size: 24rpx;
+}
+.top-box-bot image{
+    width: 100%;
+    display: block;
+    transform: translateY(-2rpx);
+}
+.performance{
+    padding: 20rpx;
+    font-size: 26rpx;
+    color: #333;
+}
+.performance .title{
+    border-bottom: 1px solid #f5f5f5;
+    padding: 20rpx 0;
+    margin-bottom: 10rpx;
+}
+.performance .title image{
+    width: 32rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+.performance .title text{
+    vertical-align: middle;
+}
+.performance-list .item{
+    display: flex;
+    justify-content: space-between;
+    padding: 12rpx 0;
+    color: #999;
+    position: relative;
+    padding-left: 20rpx;
+}
+.performance-list .item::before{
+    content: "";
+    position: absolute;
+    width: 6rpx;
+    height: 30rpx;
+    left: 0;
+    top: 50%;
+    margin-top: -15rpx;
+    border-radius: 3rpx;
+    background-color: #FE5B47;
+}
+.performance-list .score{
+    color: #333;
+}
+.performance-list .tag{
+    color: #FE5B47;
+}

@@ -29,6 +29,18 @@ Page({
       url: "/pages/specialPractice/specialPractice"
     })
   },
+  // 跳转到历史成绩页面
+  goHRPage(e){
+    wx.navigateTo({
+      url: "/pages/historyResult/historyResult"
+    })
+  },
+  // 跳转到排行榜页面
+  goRLPage(e){
+    wx.navigateTo({
+      url: "/pages/rankingList/rankingList"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

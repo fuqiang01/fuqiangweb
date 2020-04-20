@@ -25,9 +25,13 @@
             <image mode="widthFix" src="/img/icon_6.png" />
             <text>收藏</text>
         </view>
-        <view class="item">
+        <view class="item" bind:tap="goHRPage">
+            <image mode="widthFix" src="/img/icon_10.png" />
+            <text>成绩分析</text>
+        </view>
+        <view class="item" bind:tap="goRLPage">
             <image mode="widthFix" src="/img/icon_9.png" />
-            <text>成绩排行</text>
+            <text>排行榜</text>
         </view>
     </view>
 </view>

@@ -7,8 +7,6 @@
         <button class="show-my-msg" open-type="getUserInfo" bindgetuserinfo="getUserInfo">我的留言</button>
     </view>
     <view class="msg-list">
-        <f-leaveMsg />
-        <f-leaveMsg />
-        <f-leaveMsg />
+        <f-leaveMsg wx:for="{{msgList}}" wx:key="{{item.id}}" isSuper="{{isSuper}}" msgInfo="{{ item }}"/>
     </view>
 </view>

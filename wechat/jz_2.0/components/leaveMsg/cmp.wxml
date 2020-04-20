@@ -1,16 +1,22 @@
 <view class="item">
     <view class="user-info-wrap">
-        <image mode="widthFix" src="/img/photo_2.jpg" />
+        <image mode="widthFix" src="{{ msgInfo.photoUrl }}" />
         <view class="text">
-            <text class="name">Alan</text>
-            <text class="date">2020年04月18日 21:35</text>
+            <text class="name">{{ msgInfo.name }}</text>
+            <text class="date">{{ msgInfo.date }}</text>
         </view>
     </view>
-    <text class="msg-text">这里放留言内容这里放留言内容这里放留言内容这里放留言内容这里放留言内容</text>
-    <view class="img-wrap">
-        <image mode="aspectFill" src="/img/photo_1.jpg" />
+    <text class="msg-text">{{ msgInfo.msgText }}</text>
+    <view class="img-wrap {{ imgWrapClass }}">
+        <image
+            wx:for="{{msgInfo.imgArr}}" 
+            wx:key="{{index}}" 
+            mode="aspectFill" 
+            src="{{ item }}" 
+            bind:tap="previewImage"
+            data-src="{{ item }}"/>
     </view>
-    <view class="reply-delete">
+    <view class="reply-delete" wx:if="{{isSuper}}">
         <view class="reply">
             <image mode="widthFix" src="/img/reply.png" />
             <text>回复</text>
@@ -22,6 +28,6 @@
     </view>
     <view class="reply-msg">
         <text>作者回复：</text>
-        <text>作者回复消息</text>
+        <text>{{ msgInfo.replyMsg }}</text>
     </view>
 </view>

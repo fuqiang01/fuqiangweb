@@ -26,6 +26,28 @@
     padding: 10rpx 0 20rpx;
     line-height: 42rpx;
 }
+.img-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.img-wrap image{
+    border-radius: 10rpx;
+    margin-bottom: 10rpx;
+}
+.img-wrap.sum2 image:not(:nth-of-type(2n)){
+    margin-right: 10rpx;
+}
+.img-wrap.sum2 image{
+    width: 350rpx;
+    height: 350rpx;
+}
+.img-wrap.more image:not(:nth-of-type(3n)){
+    margin-right: 10rpx;
+}
+.img-wrap.more image{
+    width: 230rpx;
+    height: 230rpx;
+}
 .reply-delete{
     display: flex;
 }
