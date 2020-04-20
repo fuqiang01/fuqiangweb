@@ -17,6 +17,18 @@ Page({
       url: "/pages/answerQuestions/answerQuestions"
     })
   },
+  // 跳转到章节列表页面
+  goCLPage(e){
+    wx.navigateTo({
+      url: "/pages/chapterList/chapterList"
+    })
+  },
+  // 跳转到章节练习页面
+  goSPPage(e){
+    wx.navigateTo({
+      url: "/pages/specialPractice/specialPractice"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

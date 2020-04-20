@@ -9,11 +9,11 @@
             <image mode="widthFix" src="/img/icon_5.png" />
             <text>随机练习</text>
         </view>
-        <view class="item">
+        <view class="item" bind:tap="goCLPage">
             <image mode="widthFix" src="/img/icon_1.png" />
             <text>章节练习</text>
         </view>
-        <view class="item">
+        <view class="item" bind:tap="goSPPage">
             <image mode="widthFix" src="/img/icon_4.png" />
             <text>专项练习</text>
         </view>

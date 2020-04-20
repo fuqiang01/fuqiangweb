@@ -1,0 +1,40 @@
+<view class="container">
+    <view class="type-list">
+        <view class="item">
+            <view class="title-wrap">
+                <text class="title">按内容类型</text>
+                <text class="sum">1435题</text>
+            </view>
+            <view class="types">
+                <text>文字题</text>
+                <text>图片题</text><text>文字题</text>
+                <text>图片题</text><text>文字题</text>
+                <text>图片题</text>
+            </view>
+        </view>
+        <view class="item">
+            <view class="title-wrap">
+                <text class="title">按内容类型</text>
+                <text class="sum">1435题</text>
+            </view>
+            <view class="types">
+                <text>文字题</text>
+                <text>图片题</text><text>文字题</text>
+                <text>图片题</text><text>文字题</text>
+                <text>图片题</text>
+            </view>
+        </view>
+        <view class="item">
+            <view class="title-wrap">
+                <text class="title">按内容类型</text>
+                <text class="sum">1435题</text>
+            </view>
+            <view class="types">
+                <text>文字题</text>
+                <text>图片题</text><text>文字题</text>
+                <text>图片题</text><text>文字题</text>
+                <text>图片题</text>
+            </view>
+        </view>
+    </view>
+</view>
