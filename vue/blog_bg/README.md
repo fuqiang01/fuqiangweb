@@ -1,4 +1,4 @@
-# biog-bg
+# blog-bg
 
 ## Project setup
 ```

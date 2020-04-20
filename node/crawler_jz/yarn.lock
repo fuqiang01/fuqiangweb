@@ -4,7 +4,11 @@
 
 "@types/node@*":
   version "13.11.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-13.11.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-13.11.1.tgz#49a2a83df9d26daacead30d0ccc8762b128d53c7"
+=======
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-13.11.1.tgz#49a2a83df9d26daacead30d0ccc8762b128d53c7"
+>>>>>>> d13618b381a32ae5f8dfaeb66619f8eda31d64de
   integrity sha1-SaKoPfnSbarOrTDQzMh2KxKNU8c=
 
 axios@^0.19.2:
@@ -21,7 +25,11 @@ boolbase@~1.0.0:
 
 cheerio@^1.0.0-rc.3:
   version "1.0.0-rc.3"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/cheerio/download/cheerio-1.0.0-rc.3.tgz#094636d425b2e9c0f4eb91a46c05630c9a1a8bf6"
+=======
+  resolved "https://registry.npm.taobao.org/cheerio/download/cheerio-1.0.0-rc.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcheerio%2Fdownload%2Fcheerio-1.0.0-rc.3.tgz#094636d425b2e9c0f4eb91a46c05630c9a1a8bf6"
+>>>>>>> d13618b381a32ae5f8dfaeb66619f8eda31d64de
   integrity sha1-CUY21CWy6cD065GkbAVjDJoai/Y=
   dependencies:
     css-select "~1.2.0"
@@ -43,19 +51,31 @@ css-select@~1.2.0:
 
 css-what@2.1:
   version "2.1.3"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/css-what/download/css-what-2.1.3.tgz#a6d7604573365fe74686c3f311c56513d88285f2"
+=======
+  resolved "https://registry.npm.taobao.org/css-what/download/css-what-2.1.3.tgz?cache=0&sync_timestamp=1573341698559&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcss-what%2Fdownload%2Fcss-what-2.1.3.tgz#a6d7604573365fe74686c3f311c56513d88285f2"
+>>>>>>> d13618b381a32ae5f8dfaeb66619f8eda31d64de
   integrity sha1-ptdgRXM2X+dGhsPzEcVlE9iChfI=
 
 debug@=3.1.0:
   version "3.1.0"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/debug/download/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+=======
+  resolved "https://registry.npm.taobao.org/debug/download/debug-3.1.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdebug%2Fdownload%2Fdebug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+>>>>>>> d13618b381a32ae5f8dfaeb66619f8eda31d64de
   integrity sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=
   dependencies:
     ms "2.0.0"
 
 dom-serializer@0:
   version "0.2.2"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/dom-serializer/download/dom-serializer-0.2.2.tgz?cache=0&sync_timestamp=1573447907918&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdom-serializer%2Fdownload%2Fdom-serializer-0.2.2.tgz#1afb81f533717175d478655debc5e332d9f9bb51"
+=======
+  resolved "https://registry.npm.taobao.org/dom-serializer/download/dom-serializer-0.2.2.tgz#1afb81f533717175d478655debc5e332d9f9bb51"
+>>>>>>> d13618b381a32ae5f8dfaeb66619f8eda31d64de
   integrity sha1-GvuB9TNxcXXUeGVd68XjMtn5u1E=
   dependencies:
     domelementtype "^2.0.1"
@@ -63,7 +83,11 @@ dom-serializer@0:
 
 dom-serializer@~0.1.1:
   version "0.1.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/dom-serializer/download/dom-serializer-0.1.1.tgz?cache=0&sync_timestamp=1573447907918&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdom-serializer%2Fdownload%2Fdom-serializer-0.1.1.tgz#1ec4059e284babed36eec2941d4a970a189ce7c0"
+=======
+  resolved "https://registry.npm.taobao.org/dom-serializer/download/dom-serializer-0.1.1.tgz#1ec4059e284babed36eec2941d4a970a189ce7c0"
+>>>>>>> d13618b381a32ae5f8dfaeb66619f8eda31d64de
   integrity sha1-HsQFnihLq+027sKUHUqXChic58A=
   dependencies:
     domelementtype "^1.3.0"
@@ -121,7 +145,11 @@ follow-redirects@1.5.10:
 
 htmlparser2@^3.9.1:
   version "3.10.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/htmlparser2/download/htmlparser2-3.10.1.tgz?cache=0&sync_timestamp=1582421747970&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhtmlparser2%2Fdownload%2Fhtmlparser2-3.10.1.tgz#bd679dc3f59897b6a34bb10749c855bb53a9392f"
+=======
+  resolved "https://registry.npm.taobao.org/htmlparser2/download/htmlparser2-3.10.1.tgz#bd679dc3f59897b6a34bb10749c855bb53a9392f"
+>>>>>>> d13618b381a32ae5f8dfaeb66619f8eda31d64de
   integrity sha1-vWedw/WYl7ajS7EHSchVu1OpOS8=
   dependencies:
     domelementtype "^1.3.1"
@@ -150,7 +178,11 @@ lodash@^4.15.0:
 
 ms@2.0.0:
   version "2.0.0"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/ms/download/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+=======
+  resolved "https://registry.npm.taobao.org/ms/download/ms-2.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fms%2Fdownload%2Fms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+>>>>>>> d13618b381a32ae5f8dfaeb66619f8eda31d64de
   integrity sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
 
 nth-check@~1.0.1:
@@ -183,7 +215,11 @@ safe-buffer@~5.2.0:
 
 "safer-buffer@>= 2.1.2 < 3":
   version "2.1.2"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/safer-buffer/download/safer-buffer-2.1.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsafer-buffer%2Fdownload%2Fsafer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+=======
+  resolved "https://registry.npm.taobao.org/safer-buffer/download/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
+>>>>>>> d13618b381a32ae5f8dfaeb66619f8eda31d64de
   integrity sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=
 
 string_decoder@^1.1.1:

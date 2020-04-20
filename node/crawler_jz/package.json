@@ -1,6 +1,7 @@
 {
   "name": "crawler_jz",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +10,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+=======
+  "main": "index.js",
+  "license": "MIT",
+>>>>>>> d13618b381a32ae5f8dfaeb66619f8eda31d64de
   "dependencies": {
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
