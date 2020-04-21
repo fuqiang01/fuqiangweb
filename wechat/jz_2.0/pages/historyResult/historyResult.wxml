@@ -1,29 +1,29 @@
 <view class="container">
-    <view class="top-box">
+    <view class="top-box {{ highestNum >= 90 ? 'qualified' : 'unqualified' }}">
         <view class="highest-wrap">
             <canvas id="myCanvas" canvas-id="myCanvas"></canvas>
             <text class="highest">
-                <text class="num">6</text>
+                <text class="num">{{ highestNum }}</text>
                 <text class="text">历史最高分</text>
             </text>
         </view>
         <view class="topic-num-list">
             <view class="item">
-                <text class="num">1436</text>
+                <text class="num">{{ topicNumObj.notMakeNum }}</text>
                 <text class="text">未做题</text>
             </view>
             <view class="item">
-                <text class="num flag">36</text>
+                <text class="num flag">{{ topicNumObj.wrongNum }}</text>
                 <text class="text">答错题</text>
             </view>
             <view class="item">
-                <text class="num">14</text>
+                <text class="num">{{ topicNumObj.yesNum }}</text>
                 <text class="text">答对题</text>
             </view>
         </view>
     </view>
     <view class="top-box-bot">
-        <image mode="widthFix" src="/img/unqualified_bg.png" />
+        <image mode="widthFix" src=" {{ highestNum >= 90 ? '/img/qualified_bg.png' : '/img/unqualified_bg.png' }}" />
     </view>
     <view class="performance">
         <view class="title">
@@ -31,17 +31,11 @@
             <text>历史成绩</text>
         </view>
         <view class="performance-list">
-            <view class="item">
-                <text class="score">6分</text>
-                <text class="time-consuming">0分26秒</text>
-                <text class="date">2020-04-18</text>
-                <text class="tag">马路杀手</text>
-            </view>
-            <view class="item">
-                <text class="score">6分</text>
-                <text class="time-consuming">0分26秒</text>
-                <text class="date">2020-04-18</text>
-                <text class="tag">马路杀手</text>
+            <view class="item {{ item.score >= 90 ? 'qualified' : 'unqualified' }}" wx:for="{{ performanceList }}" wx:key="{{ item.id }}">
+                <text class="score">{{ item.score }}分</text>
+                <text class="time-consuming">{{ item.timeConsuming }}</text>
+                <text class="date">{{ item.date }}</text>
+                <text class="tag">{{ item.tag }}</text>
             </view>
         </view>
     </view>

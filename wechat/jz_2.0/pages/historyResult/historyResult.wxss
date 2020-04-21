@@ -1,6 +1,11 @@
 .top-box{
     height: 450rpx;
     position: relative;
+}
+.top-box.qualified{
+    background: linear-gradient(to bottom, #0BBFE5, #22C282);
+}
+.top-box.unqualified{
     background: linear-gradient(to bottom, #E28951, #FE5B47);
 }
 .highest-wrap{
@@ -85,11 +90,20 @@
     top: 50%;
     margin-top: -15rpx;
     border-radius: 3rpx;
+}
+.performance-list .item.qualified::before{
+    background-color: #22C282;
+}
+.performance-list .item.unqualified::before{
     background-color: #FE5B47;
 }
 .performance-list .score{
     color: #333;
+    width: 80rpx;
 }
-.performance-list .tag{
+.qualified .tag{
+    color: #22C282;
+}
+.unqualified .tag{
     color: #FE5B47;
 }

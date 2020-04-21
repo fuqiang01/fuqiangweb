@@ -20,6 +20,12 @@ Page({
   getUserInfo(e) {
     console.log(e.detail.userInfo)
   },
+  // 跳转到填写留言页面
+  goWMPage(e){
+    wx.navigateTo({
+      url: "/pages/writeMsg/writeMsg"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

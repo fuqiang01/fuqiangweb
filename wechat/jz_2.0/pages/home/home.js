@@ -21,6 +21,19 @@ Page({
       photoUrl
     })
   },
+  // 切换题库当前还不支持，直接弹窗
+  switchTopicList(){
+    wx.showModal({
+      title: "当前仅支持摩托车三轮车，其他车型敬请期待",
+      showCancel: false
+    })
+  },
+  // 跳转到留言界面
+  goMPage(){
+    wx.switchTab({
+      url: "/pages/message/message"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

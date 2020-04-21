@@ -70,7 +70,6 @@ Page({
     },
     // 根据练习的类型请求题目数据
     setTopicArr() {
-        let _this = this;
         let title = '加载中...'; // 用来动态设置页面标题的
         // 根据练习类型确定要请求的题目]
         switch (this.data.practiceType) {
@@ -78,6 +77,23 @@ Page({
                 title = '顺章练习';
                 // 请求少量的题目，懒加载
                 getTopicForSome(this.data.currentSubject, this.data.userId).then(res => {
+                     // 先判断当前是否还有没做完的题
+                     if(res.data.length === 0){
+                        // 全部按顺序做完了，直接弹框让用户退出当前页面或者重置所有选项（也就是把所有做过的题目清零）
+                        wx.showModal({
+                            title: "当前没有未做的题哦！",
+                            content: "请点击确定按钮返回上一页，或者，点击重置按钮重置所有题目",
+                            cancelText: "重置",
+                            success(res){
+                                console.log(res)
+                                if(res.cancel){ // 点击的重置
+                                    console.log("向服务器发送重置请求")
+                                } else { // 点击的确定
+                                    wx.navigateBack({delta: 1})
+                                }
+                            }
+                        })
+                    }
                     this.setData({
                         topicArr: res.data
                     })
@@ -95,8 +111,8 @@ Page({
                 break;
             case 'test':
                 title = '模拟考试';
-                getTestTopic(_this.data.currentSubject).then(res => {
-                    _this.setData({
+                getTestTopic(this.data.currentSubject).then(res => {
+                    this.setData({
                         topicArr: res.data
                     })
                     // 关闭加载框
@@ -105,8 +121,19 @@ Page({
                 break;
             case 'wrong':
                 title = '错题回顾';
-                getWrongTopic(_this.data.currentSubject, _this.data.userId).then(res => {
-                    _this.setData({
+                getWrongTopic(this.data.currentSubject, this.data.userId).then(res => {
+                    // 先判断当前是否错题
+                    if(res.data.length === 0){
+                        // 没有错题，直接弹框让用户退出当前页面
+                        wx.showModal({
+                            title: "当前没有错题哦！",
+                            showCancel: false,
+                            success(){
+                                wx.navigateBack({delta: 1})
+                            }
+                        })
+                    }
+                    this.setData({
                         topicArr: res.data
                     })
                     // 关闭加载框
@@ -215,7 +242,6 @@ Page({
             currentSubject: app.globalData.currentSubject,
             practiceType: app.globalData.practiceType
         })
-        console.log(this.data.userId, this.data.currentSubject, this.data.practiceType)
         // 显示一个加载框
         wx.showLoading({
             mask: true,

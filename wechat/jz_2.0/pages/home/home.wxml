@@ -7,7 +7,7 @@
         <text wx:else class="user-name">{{ name }}</text>
     </view>
     <view class="list">
-        <view class="item">
+        <view class="item" bind:tap="switchTopicList">
             <view class="left">
                 <image mode="widthFix" src="/img/topic.png" />
                 <text>当前题库</text>
@@ -27,7 +27,7 @@
                 <image mode="widthFix" src="/img/arrow_r.png" />
             </view>
         </view>
-        <view class="item">
+        <view class="item" bind:tap="goMPage">
             <view class="left">
                 <image mode="widthFix" src="/img/feedback.png" />
                 <text>帮助反馈</text>

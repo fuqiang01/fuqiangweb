@@ -44,7 +44,7 @@ App({
       gender: 0, // 性别：0未知、1男、2女
       photoUrl: null, // 头像url地址
       address: "全国", // 用户定位地址精确到市，默认为全国
-      isSuper: false, // 改用户是否为超级用户，如果是的话就有回复和删除留言的能力
+      isSuper: true, // 改用户是否为超级用户，如果是的话就有回复和删除留言的能力
     },
     currentSubject: 0, // 当前科目，1：科目一；4：科目四；其他数字：未知
     loginCallback: null, // 登录的回调函数

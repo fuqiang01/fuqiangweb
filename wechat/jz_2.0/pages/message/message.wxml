@@ -1,6 +1,6 @@
 <view class="container">
     <view class="btn-wrap">
-        <view class="leave-msg">
+        <view class="leave-msg" bind:tap="goWMPage">
             <image mode="widthFix" src="/img/leave_msg.png" />
             <text>留个言吧...</text>
         </view>
