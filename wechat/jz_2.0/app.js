@@ -13,9 +13,9 @@ App({
     wx.login({
       success(res) {
         onLogin(res.code).then(data => {
-          app.globalData.userInfo.userId = data.data;
+          app.globalData.userInfo.userId = data.data.data;
           // 页面需要userId的时候可能这里异步请求并没有完成，所以到时候可以定义一个回调函数在这里调用
-          app.globalData.loginCallback && app.globalData.loginCallback(data.data);
+          app.globalData.loginCallback && app.globalData.loginCallback(data.data.data);
         })
       }
     })

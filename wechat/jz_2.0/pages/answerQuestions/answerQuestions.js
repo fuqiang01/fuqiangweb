@@ -1,13 +1,13 @@
 import {
-    getTopicForSome,
-    getTestTopic,
+    getNotDoneTopic,
     getWrongTopic,
-    getSum,
-    addYesId,
-    addWrongId,
-    getTopic
+    getRightWrongNotDoneTopicNumber,
+    addRightTopic,
+    addWrongTopic
 } from "../../api/index.js"
-import {removeDuplicateForObjArr} from "../../utils/util.js"
+import {
+    removeDuplicateForObjArr
+} from "../../utils/util.js"
 
 const app = getApp()
 const util = require('../../utils/util.js');
@@ -30,7 +30,7 @@ Page({
         timerStart: true, // 计时器是否开始运行
     },
     // 题目做正确了执行
-    correct(e) { 
+    correct(e) {
         this.addDidArr(e.detail);
         if (this.data.type === 'test') {
             this.setData({
@@ -50,14 +50,14 @@ Page({
         })
     },
     // 题目做错执行
-    wrong(e) { 
+    wrong(e) {
         this.addDidArr(e.detail);
         this.changeSumObj('no');
         if (this.data.type === 'test') return;
         addWrongId(this.data.currentSubject, this.data.userId, e.detail.id);
     },
     // swiper动画结束时触发
-    onFinish(e) { 
+    onFinish(e) {
         this.setData({
             showIndex: e.detail.current
         })
@@ -71,37 +71,42 @@ Page({
     // 根据练习的类型请求题目数据
     setTopicArr() {
         let title = '加载中...'; // 用来动态设置页面标题的
+        const subject = this.data.currentSubject;
+        const userId = this.data.userId;
         // 根据练习类型确定要请求的题目]
         switch (this.data.practiceType) {
             case 'order':
                 title = '顺章练习';
                 // 请求少量的题目，懒加载
-                getTopicForSome(this.data.currentSubject, this.data.userId).then(res => {
-                     // 先判断当前是否还有没做完的题
-                     if(res.data.length === 0){
+                getNotDoneTopic(subject, userId, true).then(res => {
+                    const data = res.data.data;
+                    // 先判断当前是否还有没做完的题
+                    if (data.length === 0) {
                         // 全部按顺序做完了，直接弹框让用户退出当前页面或者重置所有选项（也就是把所有做过的题目清零）
                         wx.showModal({
                             title: "当前没有未做的题哦！",
                             content: "请点击确定按钮返回上一页，或者，点击重置按钮重置所有题目",
                             cancelText: "重置",
-                            success(res){
-                                console.log(res)
-                                if(res.cancel){ // 点击的重置
+                            success(res) {
+                                if (res.cancel) { // 点击的重置
                                     console.log("向服务器发送重置请求")
                                 } else { // 点击的确定
-                                    wx.navigateBack({delta: 1})
+                                    wx.navigateBack({
+                                        delta: 1
+                                    })
                                 }
                             }
                         })
                     }
+                    console.log(data)
                     this.setData({
-                        topicArr: res.data
+                        topicArr: data
                     })
                     // 关闭加载框
                     wx.hideLoading();
                 }).then(_ => {
                     // 马上再请求所有题目，并且去掉重复的
-                    getTopic(this.data.currentSubject, this.data.userId).then(res => {
+                    getNotDoneTopic(subject, userId, false).then(res => {
                         const newArr = this.data.topicArr.concat(res.data);
                         this.setData({
                             topicArr: removeDuplicateForObjArr(newArr) // 调用一下去重函数
@@ -123,13 +128,15 @@ Page({
                 title = '错题回顾';
                 getWrongTopic(this.data.currentSubject, this.data.userId).then(res => {
                     // 先判断当前是否错题
-                    if(res.data.length === 0){
+                    if (res.data.length === 0) {
                         // 没有错题，直接弹框让用户退出当前页面
                         wx.showModal({
                             title: "当前没有错题哦！",
                             showCancel: false,
-                            success(){
-                                wx.navigateBack({delta: 1})
+                            success() {
+                                wx.navigateBack({
+                                    delta: 1
+                                })
                             }
                         })
                     }
@@ -146,7 +153,7 @@ Page({
         })
     },
     // 请求题目数量数据
-    setSumObj() { 
+    setSumObj() {
         // 如果是模拟考试的话题目数量是固定的，不用发送请求
         if (this.data.practiceType === 'test') {
             this.setData({
@@ -158,14 +165,15 @@ Page({
             })
             return;
         }
-        getSum(this.data.currentSubject, this.data.userId).then(res => {
-            switch(this.data.practiceType){
+        getRightWrongNotDoneTopicNumber(this.data.currentSubject, this.data.userId).then(res => {
+            const data = res.data.data;
+            switch (this.data.practiceType) {
                 case "order":
                     this.setData({
                         sumObj: {
-                            yes: res.data.achieve - res.data.wrong,
-                            no: res.data.wrong,
-                            all: res.data.allNum
+                            yes: data.rightNumber,
+                            no: data.wrongNumber,
+                            all: data.rightNumber + data.wrongNumber + data.notDoneNumber
                         }
                     })
                     break;
@@ -174,15 +182,15 @@ Page({
                         sumObj: {
                             yes: 0,
                             no: 0,
-                            all: res.data.wrong
+                            all: data.wrongNumber
                         }
                     })
             }
-            
+
         })
     },
     // 修改题目数据
-    changeSumObj(state) { 
+    changeSumObj(state) {
         switch (state) {
             case 'yes':
                 this.setData({
@@ -272,8 +280,7 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
-    },
+    onShow: function () {},
 
     /**
      * 生命周期函数--监听页面隐藏

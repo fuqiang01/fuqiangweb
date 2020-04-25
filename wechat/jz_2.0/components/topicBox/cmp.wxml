@@ -1,10 +1,10 @@
 <view class="info-item">
     <view class="title">
-        <text class="title-type">{{ topicObj.titleType }}</text>
-        <text class="title-text">{{ topicObj.titleText }}</text>
+        <text class="title-type">{{ testType[topicObj.testType] }}</text>
+        <text class="title-text">{{ topicObj.title }}</text>
     </view>
-    <view class="img-wrap" wx:if="{{ topicObj.imgSrc }}">
-        <image src="{{ 'https://www.fqiang.co/getImg?src=' + topicObj.imgSrc }}" mode="widthFix"/>
+    <view class="img-wrap" wx:if="{{ topicObj.imgUrl }}">
+        <image src="{{ 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/topic_1/' + topicObj.imgUrl }}" mode="widthFix"/>
     </view>
     <view class="options">
         <view 
@@ -26,7 +26,7 @@
             <text >本题答案: </text>
             <text wx:for="{{ topicObj.answer }}" wx:key="item">{{ optionT[item] }}</text>
         </view>
-        <text class="explain-info">{{ topicObj.explain }}</text>
+        <text class="explain-info">{{ topicObj.topicExplain }}</text>
     </view>
 </view>
 
