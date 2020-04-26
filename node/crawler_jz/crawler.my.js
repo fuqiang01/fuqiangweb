@@ -18,7 +18,7 @@ async function downloadImg(imgSrc, num) {
 
 
 async function root() {
-    const result = await axios("https://www.fqiang.co/getTopicAll?type=4");
+    const result = await axios("https://www.fqiang.co/getTopicAll?type=1");
     for (let i = 0; i < result.data.length; i++) {
         const ele = result.data[i];
         let imgUrl = "";
