@@ -1,4 +1,4 @@
-// pages/exerciseOptions/exerciseOptions.js
+import {updateNameAndPhoto} from "../../api/index.js"
 //获取应用实例
 const app = getApp()
 Page({
@@ -8,6 +8,24 @@ Page({
    */
   data: {
     
+  },
+  // 获取用户信息
+  getUserInfo(e){
+    const userInfo = e.detail.userInfo;
+    if(userInfo !== undefined){
+      app.globalData.userInfo.name = userInfo.nickName;
+      app.globalData.userInfo.gender = userInfo.gender;
+      app.globalData.userInfo.photoUrl = userInfo.avatarUrl;
+      const userId = app.globalData.userInfo.userId;
+      // 上传用户信息
+      updateNameAndPhoto(userId, userInfo.nickName, userInfo.avatarUrl);
+      this.goRLPage();
+    }else{
+      wx.showModal({
+        title: "需要登陆才可以查看排行榜哦！",
+        showCancel: false
+      })
+    }
   },
   // 跳转到答题页面
   goAQPage(e){

@@ -1,6 +1,6 @@
 <view class="info-item">
     <view class="title">
-        <text class="title-type">{{ testType[topicObj.testType] }}</text>
+        <text class="title-type">{{ topicObj.testType }}</text>
         <text class="title-text">{{ topicObj.title }}</text>
     </view>
     <view class="img-wrap" wx:if="{{ topicObj.imgUrl }}">

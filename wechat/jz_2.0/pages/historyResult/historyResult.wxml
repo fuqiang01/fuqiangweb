@@ -31,10 +31,10 @@
             <text>历史成绩</text>
         </view>
         <view class="performance-list">
-            <view class="item {{ item.score >= 90 ? 'qualified' : 'unqualified' }}" wx:for="{{ performanceList }}" wx:key="{{ item.id }}">
+            <view class="item {{ item.score >= 90 ? 'qualified' : 'unqualified' }}" wx:for="{{ performanceList }}" wx:key="id">
                 <text class="score">{{ item.score }}分</text>
                 <text class="time-consuming">{{ item.timeConsuming }}</text>
-                <text class="date">{{ item.date }}</text>
+                <text class="date">{{ item.createTime }}</text>
                 <text class="tag">{{ item.tag }}</text>
             </view>
         </view>

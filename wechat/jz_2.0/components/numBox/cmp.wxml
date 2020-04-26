@@ -1,4 +1,8 @@
 <view class="num-box">
+    <view class="item" bindtap="onCollectionClick">
+        <image mode="widthFix" src="{{ isCollection ? '/img/collection_action.png' : '/img/collection.png' }}" />
+        <text>收藏</text>
+    </view>
     <view class="item">
         <image mode="widthFix" src="/img/yes.png" />
         <text>{{ sumObj.yes }}</text>

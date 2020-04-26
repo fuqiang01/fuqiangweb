@@ -35,6 +35,13 @@
     text-align: center;
     margin-bottom: 20rpx;
 }
+/* 清除btn的默认样式 */
+.other-options .item button{
+    width: 100%!important;
+    background-color: transparent!important;
+    padding: 0!important;
+
+}
 .other-options .item image{
     width: 90rpx;
 }
@@ -42,4 +49,5 @@
     display: block;
     color: #333;
     font-size: 28rpx;
+    font-weight: normal;
 }

@@ -8,3 +8,11 @@ export function removeDuplicateForObjArr(arr) {
   });
   return newArr;
 }
+
+// 如果一个数字小于10就在前边加个0，1 => 01
+export function addZero(num){
+  if(num < 10){
+    num = "0" + num;
+  }
+  return num;
+}

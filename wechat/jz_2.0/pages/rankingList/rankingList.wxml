@@ -1,59 +1,26 @@
 <view class="container">
     <view class="list">
-        <view class="item">
+        <view class="item" wx:for="{{ rankingList }}" wx:key="id">
             <view class="left">
-                <text class="ranking no1">1</text>
-                <image class="photo" mode="widthFix" src="/img/photo_1.jpg" />
+                <text class="ranking no{{ index + 1 }}">{{ index + 1 }}</text>
+                <image class="photo" mode="widthFix" src="{{ item.user.photoUrl || '/img/photo_1.jpg' }}" data-id="{{item.id}}" binderror="photoError" />
                 <view class="score-name">
-                    <text class="name">Alan</text>
-                    <text class="score">100分</text>
+                    <text class="name">{{ item.user.name === "" ? "未登录用户" : item.user.name }}</text>
+                    <text class="score">{{ item.score }}分</text>
                 </view>
             </view>
-            <view class="date">1分25秒</view>
-        </view>
-        <view class="item">
-            <view class="left">
-                <text class="ranking no2">2</text>
-                <image class="photo" mode="widthFix" src="/img/photo_1.jpg" />
-                <view class="score-name">
-                    <text class="name">Alan</text>
-                    <text class="score">100分</text>
-                </view>
-            </view>
-            <view class="date">1分25秒</view>
-        </view>
-        <view class="item">
-            <view class="left">
-                <text class="ranking no3">3</text>
-                <image class="photo" mode="widthFix" src="/img/photo_1.jpg" />
-                <view class="score-name">
-                    <text class="name">Alan</text>
-                    <text class="score">100分</text>
-                </view>
-            </view>
-            <view class="date">1分25秒</view>
-        </view>
-        <view class="item">
-            <view class="left">
-                <text class="ranking">4</text>
-                <image class="photo" mode="widthFix" src="/img/photo_1.jpg" />
-                <view class="score-name">
-                    <text class="name">Alan</text>
-                    <text class="score">100分</text>
-                </view>
-            </view>
-            <view class="date">1分25秒</view>
+            <view class="date">{{ item.timeConsuming }}</view>
         </view>
     </view>
     <view class="my-rank">
         <view class="left">
-            <text class="ranking">4</text>
-            <image class="photo" mode="widthFix" src="/img/photo_1.jpg" />
+            <text class="ranking">{{ bestResult.ranking == 0 ? "100+" : bestResult.ranking }}</text>
+            <image class="photo" mode="widthFix" src="{{ bestResult.photoUrl || '/img/photo_1.jpg' }}" />
             <view class="score-name">
-                <text class="name">Alan</text>
-                <text class="score">100分</text>
+                <text class="name">{{ bestResult.userName }}</text>
+                <text class="score">{{ bestResult.score }}分</text>
             </view>
         </view>
-        <view class="date">1分25秒</view>
+        <view class="date">{{ bestResult.timeConsuming }}</view>
     </view>
 </view>

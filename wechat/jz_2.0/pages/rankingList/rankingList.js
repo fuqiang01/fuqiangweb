@@ -1,3 +1,8 @@
+import {
+  getRankingList
+} from "../../api/index.js";
+
+const app = getApp();
 // pages/rankingList/rankingList.js
 Page({
 
@@ -5,14 +10,58 @@ Page({
    * 页面的初始数据
    */
   data: {
+    rankingList: [], // 排行榜数组
+    bestResult: {}, // 个人最高排行
+  },
+  // 图片加载错误时执行，将错误的图片地址更换
+  photoError(e){
+    const id = e.currentTarget.dataset.id;
+    const newRankingList = this.data.rankingList.map(result => {
+      if(result.id == id){
+        result.user.photoUrl = "/img/photo_2.jpg"
+      }
+      return result;
+    })
+    this.setData({
+      rankingList: newRankingList
+    })
+  },
+  // 请求数据
+  requestData() {
+    const subject = app.globalData.currentSubject;
+    const userId = app.globalData.userInfo.userId;
+    const userName = app.globalData.userInfo.name;
+    const photoUrl = app.globalData.userInfo.photoUrl;
+    // 请求排行榜数据
+    getRankingList(subject, userId).then(res => {
+      console.log(res)
+      let {topOneHundredResults, bestResult} = res.data.data;
+      topOneHundredResults = topOneHundredResults.map(result => this.handleResult(result));
+      bestResult = this.handleResult(bestResult);
+      bestResult.userName = userName;
+      bestResult.photoUrl = photoUrl;
+
+      this.setData({ 
+        bestResult,
+        rankingList: topOneHundredResults
+      })
+    })
+
 
   },
-
+  // 处理成绩数据成我想展示的样子
+  handleResult(result) {
+    const timeConsuming = `${Math.floor(result.timeConsuming / 60)}分${result.timeConsuming % 60}秒`;
+    return {
+      ...result,
+      timeConsuming
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.requestData();
   },
 
   /**

@@ -10,6 +10,10 @@ export default {
     getAllResult: "/user/getAllResult", // 返回该用户的所有考试成绩
     getBestResult: "/user/getBestResult", // 返回该用户的最好考试成绩 
     getMessagesByUser: "/user/getMessages", // 返回改用户的所有留言
+    updateCollectionTopic: "/user/updateCollectionTopic", // 添加收藏，或取消收藏
+    getCollectionTopic: "/user/getCollectionTopic", // 返回收藏的题目
+    getCollectionTopicIds: "/user/getCollectionTopicIds", // 返回收藏的题目的id数组
+    getRandomTopic: "/user/getRandomTopic", // 返回随机练习的题目
     getTestTopic: "/topic/getTestTopic", // 返回某一科目的测试题
     addResult: "/result/add", // 添加一条成绩
     getRankingList: "/result/getRankingList", // 获取某一科目的成绩排行前一百名

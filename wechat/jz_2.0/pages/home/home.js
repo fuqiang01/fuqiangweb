@@ -1,3 +1,4 @@
+import {updateNameAndPhoto} from "../../api/index.js"
 const app = getApp();
 // pages/home/home.js
 Page({
@@ -10,6 +11,7 @@ Page({
     name: "",
     photoUrl: "/img/photo_1.jpg"
   },
+  // 获取用户信息
   getUserInfo: function(e) {
     const name = e.detail.userInfo.nickName;
     const photoUrl = e.detail.userInfo.avatarUrl;
@@ -20,6 +22,9 @@ Page({
       name,
       photoUrl
     })
+    // 上传用户信息
+    const userId = app.globalData.userInfo.userId;
+    updateNameAndPhoto(userId, name, photoUrl);
   },
   // 切换题库当前还不支持，直接弹窗
   switchTopicList(){

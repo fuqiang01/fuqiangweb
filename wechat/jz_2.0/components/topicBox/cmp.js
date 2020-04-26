@@ -12,7 +12,6 @@ Component({
    * 组件的初始数据
    */
   data: {
-      testType: ["判断题","单选题","多选题"], // 题目类型后台传的是数字，这里映射成文字
       optionT: [ 'A', 'B', 'C', 'D'],//选项字母数组
       classList: new Array(4),//存放点击后的类名的数组
       showExplain: false, // 是否显示注释

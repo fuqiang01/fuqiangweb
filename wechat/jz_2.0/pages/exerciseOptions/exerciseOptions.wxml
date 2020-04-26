@@ -29,9 +29,11 @@
             <image mode="widthFix" src="/img/icon_10.png" />
             <text>成绩分析</text>
         </view>
-        <view class="item" bind:tap="goRLPage">
-            <image mode="widthFix" src="/img/icon_9.png" />
-            <text>排行榜</text>
+        <view class="item">
+            <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+                <image mode="widthFix" src="/img/icon_9.png" />
+                <text>排行榜</text>
+            </button>
         </view>
     </view>
 </view>
