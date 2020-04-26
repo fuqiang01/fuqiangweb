@@ -1,3 +1,7 @@
+import urls from "../../api/urls.js";
+import {addMessage} from "../../api/index.js"
+
+const app = getApp()
 // pages/writeMsg/writeMsg.js
 Page({
 
@@ -5,9 +9,83 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        imgUrls: [], // 展示图片的地址
+        cosUrls: [], // 在cos上的地址，也就是要上传到数据库中的数据
+        uploadImgOk: true, // 图片是否全部上传完成
+        loading: false, // 是否为上传中
+        inputValue: '', // 文本框中的内容
     },
+    // 输入框输入事件
+    onInput: function (e) {
+        this.setData({
+            inputValue: e.detail.value
+        })
+    },
+    // 上传图片
+    uploadImg() {
+        const _this = this;
+        wx.chooseImage({
+            success(res) {
+                const tempFilePaths = res.tempFilePaths;
+                _this.setData({
+                    imgUrls: tempFilePaths,
+                    uploadImgOk: false
+                })
+                tempFilePaths.forEach(url => {
+                    wx.uploadFile({
+                        url: urls.baseUrl + urls.addFileToCos,
+                        filePath: url,
+                        name: 'file',
+                        success(res) {
+                            const fileName = JSON.parse(res.data).data;
+                            _this.setData({
+                                cosUrls: [..._this.data.cosUrls, fileName]
+                            })
+                            // 判断是否全部图片上传完毕
+                            if (_this.data.cosUrls.length === tempFilePaths.length) {
+                                _this.setData({
+                                    uploadImgOk: true
+                                })
+                                // 看看用户是否点击提交了，但是因为图片没上传完导致未上传，如果是那就现在上传
+                                if(_this.data.loading){
+                                    this.onSubmit();
+                                }
+                            }
+                        }
+                    })
+                })
 
+            }
+        })
+    },
+    // 提交
+    onSubmit() {
+        if (!this.data.uploadImgOk) return;
+        this.setData({
+            loading: true
+        })
+        const content = this.data.inputValue;
+        const imgUrls = this.data.cosUrls.join(";");
+        if(content === "" && imgUrls === ""){
+            this.setData({
+                loading: false
+            })
+            wx.showModal({
+                title: "没有发现可提交的内容！",
+                showCancel: false
+            })
+            return;
+        }
+        const userId = app.globalData.userInfo.userId;
+        addMessage(userId, imgUrls, content).then(res => {
+            wx.showToast({
+                title: "上传完成"
+            })
+            wx.switchTab({
+                url: "/pages/message/message"
+            })
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

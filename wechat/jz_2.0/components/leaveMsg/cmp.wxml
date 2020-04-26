@@ -1,16 +1,16 @@
 <view class="item">
     <view class="user-info-wrap">
-        <image mode="widthFix" src="{{ msgInfo.photoUrl }}" />
+        <image mode="widthFix" src="{{ msgInfo.user.photoUrl }}" />
         <view class="text">
-            <text class="name">{{ msgInfo.name }}</text>
-            <text class="date">{{ msgInfo.date }}</text>
+            <text class="name">{{ msgInfo.user.name }}</text>
+            <text class="date">{{ msgInfo.createTime }}</text>
         </view>
     </view>
-    <text class="msg-text">{{ msgInfo.msgText }}</text>
+    <text class="msg-text">{{ msgInfo.content }}</text>
     <view class="img-wrap {{ imgWrapClass }}">
         <image
-            wx:for="{{msgInfo.imgArr}}" 
-            wx:key="{{index}}" 
+            wx:for="{{msgInfo.imgUrls}}" 
+            wx:key="index" 
             mode="aspectFill" 
             src="{{ item }}" 
             bind:tap="previewImage"
@@ -26,8 +26,8 @@
             <text>删除</text>
         </view>
     </view>
-    <view class="reply-msg">
+    <view class="reply-msg" wx:if="{{msgInfo.reply !== ''}}">
         <text>作者回复：</text>
-        <text>{{ msgInfo.replyMsg }}</text>
+        <text>{{ msgInfo.reply }}</text>
     </view>
 </view>

@@ -22,7 +22,7 @@ Component({
     // 全屏预览图片
     previewImage(e){
       wx.previewImage({
-        urls: this.properties.msgInfo.imgArr,
+        urls: this.properties.msgInfo.imgUrls,
         current: e.currentTarget.dataset.src
       })
     }
@@ -31,7 +31,7 @@ Component({
   lifetimes: {
     attached: function() {
       // 在组件实例进入页面节点树时执行
-      const imgLen = this.properties.msgInfo.imgArr.length;
+      const imgLen = this.properties.msgInfo.imgUrls.length;
       let imgWrapClass = "";
       if(imgLen === 2 || imgLen === 4){
         imgWrapClass = "sum2";

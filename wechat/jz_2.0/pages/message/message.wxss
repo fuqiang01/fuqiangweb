@@ -35,3 +35,10 @@
 .msg-list{
     padding: 120rpx 20rpx 0;
 }
+.noMore{
+    display: block;
+    text-align: center;
+    font-size: 26rpx;
+    color: #aaa;
+    line-height: 60rpx;
+}
