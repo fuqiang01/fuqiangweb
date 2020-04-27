@@ -1,0 +1,7 @@
+<view class="container">
+    <view class="logo">
+        <image mode="widthFix" src="/img/f_logo.png" />
+    </view>
+    <text class="name">摩托车驾照理论题</text>
+    <text class="version">2.0.1</text>
+</view>

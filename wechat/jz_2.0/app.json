@@ -9,7 +9,9 @@
         "pages/specialPractice/specialPractice",
         "pages/rankingList/rankingList",
         "pages/historyResult/historyResult",
-        "pages/writeMsg/writeMsg"
+        "pages/writeMsg/writeMsg",
+        "pages/about/about",
+        "pages/testMsg/testMsg"
     ],
     "permission": {
         "scope.userLocation": {

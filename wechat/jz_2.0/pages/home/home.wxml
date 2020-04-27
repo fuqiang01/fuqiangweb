@@ -13,17 +13,7 @@
                 <text>当前题库</text>
             </view>
             <view class="right">
-                <text>摩托车</text>
-                <image mode="widthFix" src="/img/arrow_r.png" />
-            </view>
-        </view>
-        <view class="item">
-            <view class="left">
-                <image mode="widthFix" src="/img/results.png" />
-                <text>我的成绩</text>
-            </view>
-            <view class="right">
-                <text>马路杀手</text>
+                <text>摩托车（D/E/F）理论题</text>
                 <image mode="widthFix" src="/img/arrow_r.png" />
             </view>
         </view>
@@ -36,7 +26,7 @@
                 <image mode="widthFix" src="/img/arrow_r.png" />
             </view>
         </view>
-        <view class="item">
+        <view class="item" bindtap="goAboutPage">
             <view class="left">
                 <image mode="widthFix" src="/img/about.png" />
                 <text>关于我们</text>

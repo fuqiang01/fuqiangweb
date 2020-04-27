@@ -1,26 +1,85 @@
-import {
-  getMessageByPage,
-  updateNameAndPhoto,
-  getMessagesByUser
-} from "../../api/index.js";
-import {
-  addZero
-} from "../../utils/util.js"
+import {getMessageByPage,updateNameAndPhoto,getMessagesByUser,replyMessage} from "../../api/index.js";
+import {addZero} from "../../utils/util.js"
 const app = getApp();
-// pages/message/message.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
+    replyInputShow: false, // 是否显示回复对话框
+    currentReplyMsgId: 0, // 当前点击回复按钮的新闻id
+    replyValue: "", // 回复的内容
+    replyInputBottom: 0, // 回复框的bottom定位值
     isSuper: false, //是否为超级用户
     pageNumber: 0, // 当前第几页，从0开始
     pageCapacity: 10, // 每一页显示多少条
     msgList: [], // 留言数组
     isLastPage: false, // 是否是最后一页
     isAllMessagePage: true, // 当前是否是所有留言的界面
+    isPreviewImage: false, // 因为每次显示页面都要触发一次下拉刷新，但是全屏浏览图片后再返回也会触发，所以这里设置一个值判断当前是否是在预览图片
   },
+  // 输入框聚焦事件
+  onFocus(e) {
+    // fixed定位的input元素，在键盘拉取的时候回自动让光标的位置平齐键盘的最上边，所以这里设置一个bottom为10rpx显示就很好
+    this.setData({
+      replyInputBottom: 10
+    })
+  },
+  // 输入框失焦事件 
+  onBlur(e) {
+    // 失焦让bottom的值重置为0
+    this.setData({
+      replyInputBottom: 0
+    })
+  },
+  // 输入框输入事件
+  onInput(e) {
+    this.setData({
+      replyValue: e.detail.value
+    })
+  },
+  // 发送回复消息
+  onReply(){
+    const text = this.data.replyValue;
+    const userId = app.globalData.userInfo.userId;
+    const msgId = this.data.currentReplyMsgId;
+    // 将本地数据的对应留言添加回复
+    const msgList = this.data.msgList.map(msg => {
+      if(msg.id == msgId){
+        msg.reply = text;
+      }
+      return msg;
+    })
+    // 上传回复到服务器
+    replyMessage(userId, text, msgId)
+    // 更新本地文件
+    this.setData({
+      replyValue: "",
+      msgList
+    })
+  },
+  // 回复按钮点击的回调
+  replyCallback(e){
+    const id = e.detail;
+    this.setData({
+      currentReplyMsgId: id,
+      replyInputShow: true
+    })
+  },
+  // 子组件用来修改isPreviewImage值的方法
+  updateIsPreviewImage(e) {
+    const bool = e.detail;
+    this.setData({
+      isPreviewImage: bool
+    })
+  },
+  // 删除留言的回调
+  deleteMsgCallback(e) {
+    const id = e.detail;
+    const msgList = this.data.msgList.filter(msg => msg.id != id);
+    this.setData({
+      msgList
+    })
+  },
+  // 获取用户信息
   getUserInfo(e) {
     const name = e.detail.userInfo.nickName;
     const photoUrl = e.detail.userInfo.avatarUrl;
@@ -42,7 +101,7 @@ Page({
     })
   },
   // 切换留言显示
-  swiperMessage(){
+  swiperMessage() {
     this.setData({
       isAllMessagePage: !this.data.isAllMessagePage
     })
@@ -50,23 +109,24 @@ Page({
     wx.startPullDownRefresh();
   },
   // 请求留言数据
-  requestMessage(){
-    if(this.data.isAllMessagePage){
+  requestMessage() {
+    if (this.data.isAllMessagePage) {
       this.requestAllMessage()
-    }else{
+    } else {
       this.requestUserMessage()
     }
   },
   // 按页请求留言
   requestAllMessage() {
+    console.log(this.data.isLastPage)
     // 如果已经是最后一页了就不用再加载了
-    if(this.data.isLastPage) return;
+    if (this.data.isLastPage) return;
     const pageNumber = this.data.pageNumber;
     const pageCapacity = this.data.pageCapacity;
     getMessageByPage(pageNumber, pageCapacity).then(res => {
       const msgList = this.handleMsgList(res.data.data);
       // 如果请求回的数据小于每页的数据就说明这已经是最后一页了
-      if(msgList.length < pageCapacity){
+      if (msgList.length < pageCapacity) {
         this.setData({
           isLastPage: true
         })
@@ -116,7 +176,7 @@ Page({
       const Min = addZero(date.getMinutes());
       const S = addZero(date.getSeconds());
       const createTime = `${Y}年${M}月${D}日 ${H}:${Min}:${S}`;
-      const imgUrls = msg.imgUrls.split(";").map(url => "http://cos.fqiang.co/jz/message/" + url);
+      const imgUrls = msg.imgUrls === "" ? [] : msg.imgUrls.split(";").map(url => "http://cos.fqiang.co/jz/message/" + url);
       return {
         ...msg,
         createTime,
@@ -134,9 +194,14 @@ Page({
 
   },
   onShow() {
-    console.log("加载")
-    // 每次进入页面就自动进行一次下拉刷新
-    wx.startPullDownRefresh();
+    // 判断是否是从预览图片中跳转过来的
+    if (!this.data.isPreviewImage) {
+      wx.startPullDownRefresh();
+    } else {
+      this.setData({
+        isPreviewImage: false
+      })
+    }
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
@@ -144,6 +209,7 @@ Page({
   onPullDownRefresh: function () {
     // 初始化页码
     this.setData({
+      isLastPage: false,
       pageNumber: 0
     })
     // 请求数据
@@ -155,11 +221,11 @@ Page({
    */
   onReachBottom: function () {
     // 如果是自己留言界面的话触底啥也不干
-    if(!this.data.isAllMessagePage) return;
+    if (!this.data.isAllMessagePage) return;
     this.setData({
       pageNumber: this.data.pageNumber + 1
     })
-    if(!this.data.isLastPage){
+    if (!this.data.isLastPage) {
       wx.showNavigationBarLoading();
       this.requestMessage();
     }

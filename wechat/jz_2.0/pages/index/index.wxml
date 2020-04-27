@@ -15,7 +15,7 @@
                     <view class="img"></view>
                     <text>顺序练习</text>
                 </view>
-                <view class="test" bind:tap="goAQPage" data-subject="1" data-practice="test">
+                <view class="test" bind:tap="goTMPage" data-subject="1" data-practice="test">
                     <view class="img"></view>
                     <text>模拟考试</text>
                 </view>
@@ -43,7 +43,7 @@
                     <view class="img"></view>
                     <text>顺序练习</text>
                 </view>
-                <view class="test" bind:tap="goAQPage" data-subject="4" data-practice="test">
+                <view class="test" bind:tap="goTMPage" data-subject="4" data-practice="test">
                     <view class="img"></view>
                     <text>模拟考试</text>
                 </view>

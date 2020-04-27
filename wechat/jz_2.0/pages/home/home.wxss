@@ -54,4 +54,5 @@ page{
 .item .right text{
     color: #aaa;
     vertical-align: middle;
+    font-size: 26rpx;
 }

@@ -39,6 +39,12 @@ Page({
       url: "/pages/message/message"
     })
   },
+  // 跳转到关于我们界面
+  goAboutPage(){
+    wx.navigateTo({
+      url: "/pages/about/about"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

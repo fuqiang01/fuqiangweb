@@ -42,3 +42,27 @@
     color: #aaa;
     line-height: 60rpx;
 }
+.reply-input{
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 0 10rpx #eee;
+    display: flex;
+    padding: 6rpx;
+    border-radius: 10rpx;
+}
+.reply-input input{
+    border: 1px solid #eee;
+    flex: 1 1 auto;
+    height: 60rpx;
+}
+.reply-input text{
+    flex: 0 0 auto;
+    background: #B7CBFE;
+    font-size: 26rpx;
+    padding: 0 30rpx;
+    margin-left: 10rpx;
+    line-height: 60rpx;
+    border-radius: 10rpx;
+}

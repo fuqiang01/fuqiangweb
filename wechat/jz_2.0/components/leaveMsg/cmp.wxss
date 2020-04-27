@@ -34,6 +34,9 @@
     border-radius: 10rpx;
     margin-bottom: 10rpx;
 }
+.img-wrap.sum0{
+    display: none;
+}
 .img-wrap.sum2 image:not(:nth-of-type(2n)){
     margin-right: 10rpx;
 }
@@ -61,8 +64,11 @@
     color: #777;
     vertical-align: middle;
 }
-.reply, .delete{
-    padding: 6rpx 20rpx;
+.reply{
+    padding: 6rpx 0;
+}
+.delete{
+    padding: 6rpx 40rpx;
 }
 .reply-msg{
     margin-top: 10rpx;

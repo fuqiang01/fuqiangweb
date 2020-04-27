@@ -55,5 +55,14 @@ Page({
     wx.navigateTo({
       url: "/pages/answerQuestions/answerQuestions"
     })
+  },
+  // 跳转到考试信息介绍页面
+  goTMPage(e){
+    const {subject, practice} = e.currentTarget.dataset;
+    app.globalData.currentSubject = subject;
+    app.globalData.practiceType = practice;
+    wx.navigateTo({
+      url: "/pages/testMsg/testMsg"
+    })
   }
 })

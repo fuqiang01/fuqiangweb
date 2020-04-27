@@ -1,4 +1,4 @@
-import {updateNameAndPhoto} from "../../api/index.js"
+import { updateNameAndPhoto } from "../../api/index.js"
 //获取应用实例
 const app = getApp()
 Page({
@@ -7,12 +7,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+
   },
   // 获取用户信息
-  getUserInfo(e){
+  getUserInfo(e) {
     const userInfo = e.detail.userInfo;
-    if(userInfo !== undefined){
+    if (userInfo !== undefined) {
       app.globalData.userInfo.name = userInfo.nickName;
       app.globalData.userInfo.gender = userInfo.gender;
       app.globalData.userInfo.photoUrl = userInfo.avatarUrl;
@@ -20,41 +20,49 @@ Page({
       // 上传用户信息
       updateNameAndPhoto(userId, userInfo.nickName, userInfo.avatarUrl);
       this.goRLPage();
-    }else{
+    } else {
       wx.showModal({
         title: "需要登陆才可以查看排行榜哦！",
         showCancel: false
       })
     }
   },
+  // 跳转到考试信息介绍页面
+  goTMPage(e) {
+    const { practice } = e.currentTarget.dataset;
+    app.globalData.practiceType = practice;
+    wx.navigateTo({
+      url: "/pages/testMsg/testMsg"
+    })
+  },
   // 跳转到答题页面
-  goAQPage(e){
-    const {practice} = e.currentTarget.dataset;
+  goAQPage(e) {
+    const { practice } = e.currentTarget.dataset;
     app.globalData.practiceType = practice;
     wx.navigateTo({
       url: "/pages/answerQuestions/answerQuestions"
     })
   },
   // 跳转到章节列表页面
-  goCLPage(e){
+  goCLPage(e) {
     wx.navigateTo({
       url: "/pages/chapterList/chapterList"
     })
   },
   // 跳转到章节练习页面
-  goSPPage(e){
+  goSPPage(e) {
     wx.navigateTo({
       url: "/pages/specialPractice/specialPractice"
     })
   },
   // 跳转到历史成绩页面
-  goHRPage(e){
+  goHRPage(e) {
     wx.navigateTo({
       url: "/pages/historyResult/historyResult"
     })
   },
   // 跳转到排行榜页面
-  goRLPage(e){
+  goRLPage(e) {
     wx.navigateTo({
       url: "/pages/rankingList/rankingList"
     })
@@ -65,11 +73,11 @@ Page({
   onLoad: function (options) {
     const currentSubject = parseInt(app.globalData.currentSubject);
     let title = "未知";
-    switch(currentSubject){
+    switch (currentSubject) {
       case 1:
         title = "科目一";
         break;
-      case 4: 
+      case 4:
         title = "科目四";
     }
     // 动态设置标题
