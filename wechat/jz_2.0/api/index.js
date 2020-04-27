@@ -285,3 +285,15 @@ export function getRandomTopic(subject, userId){
         }
     })
 }
+
+// 重置用户题目
+export function resetUserTopic(subject, userId){
+    return myRequest({
+        url: urls.resetUserTopic,
+        method: "POST",
+        data: {
+            subject,
+            userId
+        }
+    })
+}

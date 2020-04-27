@@ -27,7 +27,8 @@ Page({
   onBlur(e) {
     // 失焦让bottom的值重置为0
     this.setData({
-      replyInputBottom: 0
+      replyInputBottom: 0,
+      replyInputShow: false
     })
   },
   // 输入框输入事件

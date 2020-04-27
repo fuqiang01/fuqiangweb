@@ -12,7 +12,7 @@
         <text>{{ sumObj.no }}</text>
     </view>
     <view class="item">
-        <f-timer wx:if="{{ showTimer }}" start="{{timerStart}}" bindonover="onOver"></f-timer>
+        <text wx:if="{{showTimer}}">{{ minutes }} : {{ seconds }}</text>
     </view>
     <view class="item">
         <image mode="widthFix" src="/img/all.png" />

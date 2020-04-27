@@ -1,5 +1,6 @@
 export default {
-    baseUrl: "http://localhost:3000",
+    // baseUrl: "https://wxjz.fqiang.co:442",
+    baseUrl: "http://localhost:19525",
     onLogin: "/user/onLogin", // 登录
     updateNameAndPhoto: "/user/updateNameAndPhoto", // 更新用户的名字和头像地址
     addWrongTopic: "/user/addWrongTopic", // 上传错题的id或者id数组(数组用 ; 来分割)
@@ -14,6 +15,7 @@ export default {
     getCollectionTopic: "/user/getCollectionTopic", // 返回收藏的题目
     getCollectionTopicIds: "/user/getCollectionTopicIds", // 返回收藏的题目的id数组
     getRandomTopic: "/user/getRandomTopic", // 返回随机练习的题目
+    resetUserTopic: "/user/resetUserTopic", // 重置用户题目
     getTestTopic: "/topic/getTestTopic", // 返回某一科目的测试题
     addResult: "/result/add", // 添加一条成绩
     getRankingList: "/result/getRankingList", // 获取某一科目的成绩排行前一百名

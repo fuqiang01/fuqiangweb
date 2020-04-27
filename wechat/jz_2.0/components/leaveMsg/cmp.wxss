@@ -37,6 +37,9 @@
 .img-wrap.sum0{
     display: none;
 }
+.img-wrap.sum1 image{
+    width: 100%;
+}
 .img-wrap.sum2 image:not(:nth-of-type(2n)){
     margin-right: 10rpx;
 }

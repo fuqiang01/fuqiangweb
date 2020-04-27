@@ -48,7 +48,7 @@ Page({
                                 })
                                 // 看看用户是否点击提交了，但是因为图片没上传完导致未上传，如果是那就现在上传
                                 if(_this.data.loading){
-                                    this.onSubmit();
+                                    _this.onSubmit();
                                 }
                             }
                         }
@@ -60,10 +60,13 @@ Page({
     },
     // 提交
     onSubmit() {
-        if (!this.data.uploadImgOk) return;
+        wx.showLoading({
+            title: "上传中"
+        })
         this.setData({
             loading: true
         })
+        if (!this.data.uploadImgOk) return;
         const content = this.data.inputValue;
         const imgUrls = this.data.cosUrls.join(";");
         if(content === "" && imgUrls === ""){

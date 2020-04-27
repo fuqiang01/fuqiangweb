@@ -2,7 +2,9 @@ import {
     getRightWrongNotDoneTopicNumber,
     getAllResult,
 } from "../../api/index.js";
-import { addZero } from "../../utils/util.js"
+import {
+    addZero
+} from "../../utils/util.js"
 
 const app = getApp();
 // pages/resultRank/resultRank.js
@@ -31,31 +33,24 @@ Page({
     // 绘制画布
     drawCanvas(highestNum) {
         const ctx = wx.createCanvasContext('myCanvas');
-        // 设置线段为圆角
-        ctx.lineCap = "round";
         // 先获取当前最高成绩对应的角度值
         const angle = (highestNum / 100) * (3 * Math.PI / 2) + (3 * Math.PI / 4);
-        let currentAngle = Math.PI * 3 / 4;
-        const timer = setInterval(() => {
-            if (currentAngle >= angle) {
-                currentAngle = angle;
-                clearInterval(timer);
-            }
-            // 绘制进度条背景
-            ctx.beginPath();
-            ctx.lineWidth = 10;
-            ctx.arc(150, 85, 80, (Math.PI * 3 / 4), Math.PI / 4, 0);
-            ctx.strokeStyle = "rgba(0,0,0,0.1)";
-            ctx.stroke();
-            // 绘制进度条
-            ctx.beginPath();
-            ctx.lineWidth = 6;
-            ctx.arc(150, 85, 80, (Math.PI * 3 / 4), currentAngle, 0);
-            ctx.strokeStyle = "#fff";
-            ctx.stroke();
-            ctx.draw();
-            currentAngle += 0.05;
-        }, 1000 / 60);
+        
+        // 设置线段为圆角
+        ctx.lineCap = "round";
+        // 绘制进度条背景
+        ctx.beginPath();
+        ctx.lineWidth = 10;
+        ctx.arc(150, 85, 80, (Math.PI * 3 / 4), Math.PI / 4, 0);
+        ctx.strokeStyle = "rgba(0,0,0,0.1)";
+        ctx.stroke();
+        // 绘制进度条
+        ctx.beginPath();
+        ctx.lineWidth = 6;
+        ctx.arc(150, 85, 80, (Math.PI * 3 / 4), angle, 0);
+        ctx.strokeStyle = "#fff";
+        ctx.stroke();
+        ctx.draw();
     },
     // 请求数据
     requestData() {
@@ -99,17 +94,17 @@ Page({
         return highestNumber;
     },
     // 根据后台给的数据，加工展示需要的数据
-    getPerformanceList(data){
+    getPerformanceList(data) {
         return data.map(result => {
             const timeConsuming = `${Math.floor(result.timeConsuming / 60)}分${result.timeConsuming % 60}秒`;
             const date = new Date(result.createTime)
             const createTime = `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${addZero(date.getDate())} ${addZero(date.getHours())}:${addZero(date.getMinutes())}:${addZero(date.getSeconds())}`;
             let tag;
-            if(result.score < 90){
+            if (result.score < 90) {
                 tag = "马路杀手";
-            }else if(result.score < 98){
+            } else if (result.score < 98) {
                 tag = "新人上路"
-            }else{
+            } else {
                 tag = "驾考王者"
             }
             return {

@@ -9,7 +9,7 @@
         <view class="img" wx:for="{{imgUrls}}" wx:key="index">
             <image mode="aspectFill" src="{{ item }}"/>
         </view>
-        <view class="upload-btn" bindtap="uploadImg">
+        <view class="upload-btn" bindtap="uploadImg" wx:if="{{imgUrls.length < 9}}">
             <image mode="widthFix" src="/img/camera.png" />
             <text>照片/视屏</text>
         </view>
