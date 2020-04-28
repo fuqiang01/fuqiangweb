@@ -14,7 +14,8 @@ import {
   getTextOrImageTopic,
   getRightOrWrongTopic,
   getTestTypeTopic,
-  getKnowledgeTypeTopic
+  getKnowledgeTypeTopic,
+  getChapterTypeTopoics
 
 } from "../../api/index.js"
 import {
@@ -91,6 +92,8 @@ Page({
   },
   // 判断当前题目是否为收藏
   handleCollection() {
+    // 如果题目数组为空就不用比较了
+    if (this.data.topicArr.length === 0) return;
     const currentId = this.data.topicArr[this.data.showIndex].id;
     const currentTopicIsCollection = this.data.collectionTopicIdsArr.includes(currentId.toString());
     this.setData({
@@ -180,7 +183,9 @@ Page({
           success(res) {
             if (res.cancel) { // 点击的重置
               // 向服务器发送重置请求
-              wx.showLoading({ title: "重置中..." });
+              wx.showLoading({
+                title: "重置中..."
+              });
               resetUserTopic(subject, userId).then(_ => {
                 // 服务器重置成功，再次发送请求来获取题目数据
                 this.setTopicArr();
@@ -246,16 +251,7 @@ Page({
       wx.hideLoading();
       // 先判断当前是否错题
       if (data.length === 0) {
-        // 没有错题，直接弹框让用户退出当前页面
-        wx.showModal({
-          title: "当前没有错题哦！",
-          showCancel: false,
-          success() {
-            wx.navigateBack({
-              delta: 1
-            })
-          }
-        })
+        this.myShowModal("错误")
         return;
       }
       this.setData({
@@ -276,16 +272,7 @@ Page({
       wx.hideLoading();
       // 先判断当前是否有收藏的题目
       if (data.length === 0) {
-        // 没有收藏，直接弹框让用户退出当前页面
-        wx.showModal({
-          title: "当前没有收藏任何题目哦！",
-          showCancel: false,
-          success() {
-            wx.navigateBack({
-              delta: 1
-            })
-          }
-        })
+        this.myShowModal("收藏")
         return;
       }
       this.setData({
@@ -314,7 +301,9 @@ Page({
           success(res) {
             if (res.cancel) { // 点击的重置
               // 向服务器发送重置请求
-              wx.showLoading({ title: "重置中..." });
+              wx.showLoading({
+                title: "重置中..."
+              });
               resetUserTopic(subject, userId).then(_ => {
                 // 服务器重置成功，再次发送请求来获取题目数据
                 this.setTopicArr();
@@ -378,12 +367,18 @@ Page({
   requestTestTypeTopics(type) {
     const subject = this.data.currentSubject;
     getTestTypeTopic(subject, type).then(res => {
-      this.setData({
-        topicArr: res.data.data,
-        'sumObj.all': res.data.data.length
-      })
+      const data = res.data.data;
       // 关闭加载框
       wx.hideLoading();
+      // 先判断当前是否有题目
+      if (data.length === 0) {
+        this.myShowModal()
+        return;
+      }
+      this.setData({
+        topicArr: data,
+        'sumObj.all': data.length
+      })
       // 请求收藏的题目id数组
       this.getCollectionTopicIdsArr();
     })
@@ -392,15 +387,54 @@ Page({
   requestKnowledgeTypeTopics(type) {
     const subject = this.data.currentSubject;
     getKnowledgeTypeTopic(subject, type).then(res => {
-      this.setData({
-        topicArr: res.data.data,
-        'sumObj.all': res.data.data.length
-      })
+      const data = res.data.data;
       // 关闭加载框
       wx.hideLoading();
+      // 先判断当前是否有题目
+      if (data.length === 0) {
+        this.myShowModal()
+        return;
+      }
+      this.setData({
+        topicArr: data,
+        'sumObj.all': data.length
+      })
       // 请求收藏的题目id数组
       this.getCollectionTopicIdsArr();
     })
+  },
+  // 请求某一章节的题目
+  requestChapterTypeTopoics(type) {
+    const subject = this.data.currentSubject;
+    getChapterTypeTopoics(subject, type).then(res => {
+      const data = res.data.data;
+      // 关闭加载框
+      wx.hideLoading();
+      // 先判断当前是否有题目
+      if (data.length === 0) {
+        this.myShowModal()
+        return;
+      }
+      this.setData({
+        topicArr: data,
+        'sumObj.all': data.length
+      })
+      // 请求收藏的题目id数组
+      this.getCollectionTopicIdsArr();
+    })
+  },
+  // 如果没有请求到题目的弹窗
+  myShowModal(text){
+    wx.showModal({
+      title: `当前没有任何${text}题目哦！`,
+      showCancel: false,
+      success() {
+        wx.navigateBack({
+          delta: 1
+        })
+      }
+    })
+
   },
   // 根据练习的类型请求题目数据
   setTopicArr() {
@@ -439,6 +473,11 @@ Page({
         break;
       case 'knowledgeType':
         this.requestKnowledgeTypeTopics(type);
+        break;
+      case 'chapterType':
+        let num = type == 1 ? "一" : type == 2 ? "二" : "三";
+        title = `第${num}章节`;
+        this.requestChapterTypeTopoics(type);
     }
     // 设置标题为该练习类型
     wx.setNavigationBarTitle({
@@ -567,13 +606,12 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () { },
+  onShow: function () {},
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-  },
+  onHide: function () {},
 
   /**
    * 生命周期函数--监听页面卸载

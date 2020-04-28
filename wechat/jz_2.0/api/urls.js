@@ -22,6 +22,8 @@ export default {
     getTestTypeTopic: "/topic/getTestTypeTopic", // 返回单选题或者判断题或者判断题的题目
     getKnowledgeTypeTopic: "/topic/getKnowledgeTypeTopic", //返回只是各个知识类型的题目
     getRightOrWrongTopic: "/topic/getRightOrWrongTopic", // 返回正确题或错误题
+    getChapterTypeTopicNumber: "/topic/getChapterTypeTopicNumber", // 返回各章节的题目数量
+    getChapterTypeTopoics: "/topic/getChapterTypeTopoics", // 返回某个章节的题目
     addResult: "/result/add", // 添加一条成绩
     getRankingList: "/result/getRankingList", // 获取某一科目的成绩排行前一百名
     addMessage: "/message/add", // 添加一条留言

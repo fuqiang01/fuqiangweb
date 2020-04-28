@@ -351,3 +351,25 @@ export function getRightOrWrongTopic(subject, type){
         }
     })
 }
+
+// 返回每个章节的题目数量
+export function getChapterTypeTopicNumber(subject){
+    return myRequest({
+        url: urls.getChapterTypeTopicNumber,
+        data: {
+            subject
+        }
+    })
+}
+
+
+// 返回某一章节的题目
+export function getChapterTypeTopoics(subject, type){
+    return myRequest({
+        url: urls.getChapterTypeTopoics,
+        data: {
+            subject,
+            type
+        }
+    })
+}

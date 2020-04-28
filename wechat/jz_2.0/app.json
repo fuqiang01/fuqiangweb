@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/trafficSignsInfoList/trafficSignsInfoList",
+    "pages/trafficSignsList/trafficSignsList",
+    "pages/trafficSigns/trafficSigns",
     "pages/index/index",
     "pages/message/message",
     "pages/home/home",

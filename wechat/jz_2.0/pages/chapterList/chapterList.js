@@ -1,4 +1,4 @@
-import { getTopicTypeNumber } from "../../api/index.js"
+import { getChapterTypeTopicNumber } from "../../api/index.js"
 const app = getApp();
 // pages/chapterList/chapterList.js
 Page({
@@ -7,21 +7,14 @@ Page({
      * 页面的初始数据
      */
     data: {
-        one: 0,
-        two: 0,
-        there: 0,
-        four: 0
+        numObj: {}
     },
     // 请求各类型的数量
     requestNumber() {
         const subject = app.globalData.currentSubject;
-        getTopicTypeNumber(subject).then(res => {
-            const data = res.data.data;
+        getChapterTypeTopicNumber(subject).then(res => {
             this.setData({
-                one: data.pointsTopicNumber + data.drivingLicenceTopicNumber + data.speedTopicNumber,
-                two: data.markTopicNumber,
-                there: data.securityTopicNumber + data.lightTopicNumber + data.specialWeatherTopicNumber,
-                four: data.dangerousTopicNumber + data.accidentTopicNumber
+                numObj: res.data.data
             })
         })
     },

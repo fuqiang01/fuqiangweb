@@ -1,0 +1,32 @@
+<view class="container">
+    <view class="item">
+        <view class="title-wrap">
+            <text class="title">禁令标志</text>
+            <view class="right">
+                <text>50张图片</text>
+                <image mode="widthFix" src="/img/arrow_r.png" />
+            </view>
+        </view>
+        <view class="img-wrap">
+            <image mode="widthFix" src="/img/photo_2.jpg" />
+            <image mode="widthFix" src="/img/photo_2.jpg" />
+            <image mode="widthFix" src="/img/photo_2.jpg" />
+            <image mode="widthFix" src="/img/photo_2.jpg" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="title-wrap">
+            <text class="title">禁令标志</text>
+            <view class="right">
+                <text>50张图片</text>
+                <image mode="widthFix" src="/img/arrow_r.png" />
+            </view>
+        </view>
+        <view class="img-wrap">
+            <image mode="widthFix" src="/img/photo_2.jpg" />
+            <image mode="widthFix" src="/img/photo_2.jpg" />
+            <image mode="widthFix" src="/img/photo_2.jpg" />
+            <image mode="widthFix" src="/img/photo_2.jpg" />
+        </view>
+    </view>
+</view>

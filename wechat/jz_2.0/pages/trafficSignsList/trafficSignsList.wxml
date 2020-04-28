@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="item">
+        <image mode="widthFix" src="/img/photo_1.jpg" />
+        <text>停车让行</text>
+    </view>
+    <view class="item">
+        <image mode="widthFix" src="/img/photo_1.jpg" />
+        <text>停车让行</text>
+    </view>
+    <view class="item">
+        <image mode="widthFix" src="/img/photo_1.jpg" />
+        <text>停车让行</text>
+    </view>
+    <view class="item">
+        <image mode="widthFix" src="/img/photo_1.jpg" />
+        <text>停车让行</text>
+    </view>
+</view>
