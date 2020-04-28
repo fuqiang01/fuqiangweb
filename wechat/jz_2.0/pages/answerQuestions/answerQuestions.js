@@ -10,7 +10,12 @@ import {
   updateCollectionTopic,
   getRandomTopic,
   resetUserTopic,
-  addResult
+  addResult,
+  getTextOrImageTopic,
+  getRightOrWrongTopic,
+  getTestTypeTopic,
+  getKnowledgeTypeTopic
+
 } from "../../api/index.js"
 import {
   removeDuplicateForObjArr
@@ -49,14 +54,14 @@ Page({
     canChangeIsSame: true
   },
   // 启动计时器
-  startTimer(){
+  startTimer() {
     clearInterval(tempTimer);
     tempTimer = setInterval(() => {
       const currentTime = this.data.countdownTime - 1;
       this.setData({
         countdownTime: currentTime
       })
-      if(currentTime <= 0){
+      if (currentTime <= 0) {
         // 倒计时结束
         clearInterval(tempTimer);
         this.onOver();
@@ -146,7 +151,7 @@ Page({
       current,
       isToNext: false,
     })
-    
+
     // 判断当前题目是否为收藏
     this.handleCollection()
   },
@@ -156,214 +161,288 @@ Page({
       didArr: [...this.data.didArr, obj]
     })
   },
-  // 根据练习的类型请求题目数据
-  setTopicArr() {
-    let title = '加载中...'; // 用来动态设置页面标题的
+  // 请求顺章练习的题目
+  requestOrderTopics() {
     const subject = this.data.currentSubject;
     const userId = this.data.userId;
+    // 请求少量的题目，懒加载
+    getNotDoneTopic(subject, userId, true).then(res => {
+      const data = res.data.data;
+      // 关闭加载框
+      wx.hideLoading();
+      // 先判断当前是否还有没做完的题
+      if (data.length === 0) {
+        // 全部按顺序做完了，直接弹框让用户退出当前页面或者重置所有选项（也就是把所有做过的题目清零）
+        wx.showModal({
+          title: "当前没有未做的题哦！",
+          content: "请点击确定按钮返回上一页，或者，点击重置按钮重置所有题目",
+          cancelText: "重置",
+          success(res) {
+            if (res.cancel) { // 点击的重置
+              // 向服务器发送重置请求
+              wx.showLoading({ title: "重置中..." });
+              resetUserTopic(subject, userId).then(_ => {
+                // 服务器重置成功，再次发送请求来获取题目数据
+                this.setTopicArr();
+              })
+            } else { // 点击的确定
+              wx.navigateBack({
+                delta: 1
+              })
+            }
+          }
+        })
+        return;
+      }
+      this.setData({
+        topicArr: data
+      })
+      // 请求收藏的题目id数组
+      this.getCollectionTopicIdsArr();
+    }).then(_ => {
+      // 马上再请求所有题目，并且去掉重复的
+      getNotDoneTopic(subject, userId, false).then(res => {
+        const newArr = this.data.topicArr.concat(res.data.data);
+        this.setData({
+          topicArr: removeDuplicateForObjArr(newArr) // 调用一下去重函数
+        })
+      })
+    })
+    // 请求题目数量
+    getRightWrongNotDoneTopicNumber(subject, userId).then(res => {
+      const data = res.data.data;
+      this.setData({
+        sumObj: {
+          yes: data.rightNumber,
+          no: data.wrongNumber,
+          all: data.rightNumber + data.wrongNumber + data.notDoneNumber
+        }
+      })
+    })
+  },
+  // 请求模拟考试的题目
+  requestTestTopics() {
+    const subject = this.data.currentSubject;
+    getTestTopic(subject).then(res => {
+      this.setData({
+        topicArr: res.data.data,
+        'sumObj.all': 50
+      })
+      // 请求收藏的题目id数组
+      this.getCollectionTopicIdsArr();
+      // 关闭加载框
+      wx.hideLoading();
+      // 启动计时器
+      this.startTimer();
+    })
+  },
+  // 请求错题
+  requestWrongTopics() {
+    const subject = this.data.currentSubject;
+    const userId = this.data.userId;
+    getWrongTopic(subject, userId).then(res => {
+      const data = res.data.data;
+      // 关闭加载框
+      wx.hideLoading();
+      // 先判断当前是否错题
+      if (data.length === 0) {
+        // 没有错题，直接弹框让用户退出当前页面
+        wx.showModal({
+          title: "当前没有错题哦！",
+          showCancel: false,
+          success() {
+            wx.navigateBack({
+              delta: 1
+            })
+          }
+        })
+        return;
+      }
+      this.setData({
+        topicArr: data,
+        "sumObj.all": data.length
+      })
+      // 请求收藏的题目id数组
+      this.getCollectionTopicIdsArr();
+    })
+  },
+  // 请求收藏
+  requestCollectTopics() {
+    const subject = this.data.currentSubject;
+    const userId = this.data.userId;
+    getCollectionTopic(subject, userId).then(res => {
+      const data = res.data.data;
+      // 关闭加载框
+      wx.hideLoading();
+      // 先判断当前是否有收藏的题目
+      if (data.length === 0) {
+        // 没有收藏，直接弹框让用户退出当前页面
+        wx.showModal({
+          title: "当前没有收藏任何题目哦！",
+          showCancel: false,
+          success() {
+            wx.navigateBack({
+              delta: 1
+            })
+          }
+        })
+        return;
+      }
+      this.setData({
+        topicArr: data,
+        "sumObj.all": data.length
+      })
+      // 请求收藏的题目id数组
+      this.getCollectionTopicIdsArr();
+    })
+  },
+  // 请求随机练习
+  requestRandomTopics() {
+    const subject = this.data.currentSubject;
+    const userId = this.data.userId;
+    getRandomTopic(subject, userId).then(res => {
+      const data = res.data.data;
+      // 关闭加载框
+      wx.hideLoading();
+      // 先判断当前是否还有没做完的题
+      if (data.length === 0) {
+        // 全部按顺序做完了，直接弹框让用户退出当前页面或者重置所有选项（也就是把所有做过的题目清零）
+        wx.showModal({
+          title: "当前没有未做的题哦！",
+          content: "请点击确定按钮返回上一页，或者，点击重置按钮重置所有题目",
+          cancelText: "重置",
+          success(res) {
+            if (res.cancel) { // 点击的重置
+              // 向服务器发送重置请求
+              wx.showLoading({ title: "重置中..." });
+              resetUserTopic(subject, userId).then(_ => {
+                // 服务器重置成功，再次发送请求来获取题目数据
+                this.setTopicArr();
+              })
+            } else { // 点击的确定
+              wx.navigateBack({
+                delta: 1
+              })
+            }
+          }
+        })
+        return;
+      }
+      this.setData({
+        topicArr: data
+      })
+      // 请求收藏的题目id数组
+      this.getCollectionTopicIdsArr();
+    })
+    // 请求题目数量
+    getRightWrongNotDoneTopicNumber(subject, userId).then(res => {
+      const data = res.data.data;
+      this.setData({
+        sumObj: {
+          yes: data.rightNumber,
+          no: data.wrongNumber,
+          all: data.rightNumber + data.wrongNumber + data.notDoneNumber
+        }
+      })
+    })
+  },
+  // 请求按内容类型分类的题目
+  requestContentTypeTopics(type) {
+    const subject = this.data.currentSubject;
+    getTextOrImageTopic(subject, type).then(res => {
+      this.setData({
+        topicArr: res.data.data,
+        'sumObj.all': res.data.data.length
+      })
+      // 关闭加载框
+      wx.hideLoading();
+      // 请求收藏的题目id数组
+      this.getCollectionTopicIdsArr();
+    })
+  },
+  // 请求按答案类型分类的题目
+  requestAnswerTypeTopics(type) {
+    const subject = this.data.currentSubject;
+    getRightOrWrongTopic(subject, type).then(res => {
+      this.setData({
+        topicArr: res.data.data,
+        'sumObj.all': res.data.data.length
+      })
+      // 关闭加载框
+      wx.hideLoading();
+      // 请求收藏的题目id数组
+      this.getCollectionTopicIdsArr();
+    })
+  },
+  // 请求按试题类型分类的题目
+  requestTestTypeTopics(type) {
+    const subject = this.data.currentSubject;
+    getTestTypeTopic(subject, type).then(res => {
+      this.setData({
+        topicArr: res.data.data,
+        'sumObj.all': res.data.data.length
+      })
+      // 关闭加载框
+      wx.hideLoading();
+      // 请求收藏的题目id数组
+      this.getCollectionTopicIdsArr();
+    })
+  },
+  // 请求按知识点类型分类的题目
+  requestKnowledgeTypeTopics(type) {
+    const subject = this.data.currentSubject;
+    getKnowledgeTypeTopic(subject, type).then(res => {
+      this.setData({
+        topicArr: res.data.data,
+        'sumObj.all': res.data.data.length
+      })
+      // 关闭加载框
+      wx.hideLoading();
+      // 请求收藏的题目id数组
+      this.getCollectionTopicIdsArr();
+    })
+  },
+  // 根据练习的类型请求题目数据
+  setTopicArr() {
+    const type = app.globalData.typeValue;
+    let title = type; // 用来动态设置页面标题的
     // 根据练习类型确定要请求的题目]
     switch (this.data.practiceType) {
       case 'order':
         title = '顺章练习';
-        // 请求少量的题目，懒加载
-        getNotDoneTopic(subject, userId, true).then(res => {
-          const data = res.data.data;
-          // 关闭加载框
-          wx.hideLoading();
-          // 先判断当前是否还有没做完的题
-          if (data.length === 0) {
-            // 全部按顺序做完了，直接弹框让用户退出当前页面或者重置所有选项（也就是把所有做过的题目清零）
-            wx.showModal({
-              title: "当前没有未做的题哦！",
-              content: "请点击确定按钮返回上一页，或者，点击重置按钮重置所有题目",
-              cancelText: "重置",
-              success(res) {
-                if (res.cancel) { // 点击的重置
-                  // 向服务器发送重置请求
-                  wx.showLoading({title: "重置中..."});
-                  resetUserTopic(subject, userId).then(_ => {
-                    // 服务器重置成功，再次发送请求来获取题目数据
-                    this.setTopicArr();
-                  })
-                } else { // 点击的确定
-                  wx.navigateBack({
-                    delta: 1
-                  })
-                }
-              }
-            })
-            return;
-          }
-          this.setData({
-            topicArr: data
-          })
-          // 请求收藏的题目id数组
-          this.getCollectionTopicIdsArr();
-        }).then(_ => {
-          // 马上再请求所有题目，并且去掉重复的
-          getNotDoneTopic(subject, userId, false).then(res => {
-            const newArr = this.data.topicArr.concat(res.data.data);
-            this.setData({
-              topicArr: removeDuplicateForObjArr(newArr) // 调用一下去重函数
-            })
-          })
-        })
+        this.requestOrderTopics();
         break;
       case 'test':
         title = '模拟考试';
-        getTestTopic(subject).then(res => {
-          this.setData({
-            topicArr: res.data.data
-          })
-          // 请求收藏的题目id数组
-          this.getCollectionTopicIdsArr();
-          // 关闭加载框
-          wx.hideLoading();
-          // 启动计时器
-          this.startTimer();
-        })
+        this.requestTestTopics();
         break;
       case 'wrong':
         title = '错题回顾';
-        getWrongTopic(subject, userId).then(res => {
-          const data = res.data.data;
-          // 关闭加载框
-          wx.hideLoading();
-          // 先判断当前是否错题
-          if (data.length === 0) {
-            // 没有错题，直接弹框让用户退出当前页面
-            wx.showModal({
-              title: "当前没有错题哦！",
-              showCancel: false,
-              success() {
-                wx.navigateBack({
-                  delta: 1
-                })
-              }
-            })
-            return;
-          }
-          this.setData({
-            topicArr: data
-          })
-          // 请求收藏的题目id数组
-          this.getCollectionTopicIdsArr();
-        })
+        this.requestWrongTopics();
         break;
       case 'collect':
         title = "我的收藏";
-        getCollectionTopic(subject, userId).then(res => {
-          const data = res.data.data;
-          // 关闭加载框
-          wx.hideLoading();
-          // 先判断当前是否有收藏的题目
-          if (data.length === 0) {
-            // 没有收藏，直接弹框让用户退出当前页面
-            wx.showModal({
-              title: "当前没有收藏任何题目哦！",
-              showCancel: false,
-              success() {
-                wx.navigateBack({
-                  delta: 1
-                })
-              }
-            })
-            return;
-          }
-          this.setData({
-            topicArr: data
-          })
-          // 请求收藏的题目id数组
-          this.getCollectionTopicIdsArr();
-        })
+        this.requestCollectTopics();
         break;
       case 'random':
         title = "随机练习";
-        getRandomTopic(subject, userId).then(res => {
-          const data = res.data.data;
-          // 关闭加载框
-          wx.hideLoading();
-          // 先判断当前是否还有没做完的题
-          if (data.length === 0) {
-            // 全部按顺序做完了，直接弹框让用户退出当前页面或者重置所有选项（也就是把所有做过的题目清零）
-            wx.showModal({
-              title: "当前没有未做的题哦！",
-              content: "请点击确定按钮返回上一页，或者，点击重置按钮重置所有题目",
-              cancelText: "重置",
-              success(res) {
-                if (res.cancel) { // 点击的重置
-                  // 向服务器发送重置请求
-                  wx.showLoading({title: "重置中..."});
-                  resetUserTopic(subject, userId).then(_ => {
-                    // 服务器重置成功，再次发送请求来获取题目数据
-                    this.setTopicArr();
-                  })
-                } else { // 点击的确定
-                  wx.navigateBack({
-                    delta: 1
-                  })
-                }
-              }
-            })
-            return;
-          }
-          this.setData({
-            topicArr: data
-          })
-          // 请求收藏的题目id数组
-          this.getCollectionTopicIdsArr();
-        })
-
+        this.requestRandomTopics();
+        break;
+      case 'contentType':
+        this.requestContentTypeTopics(type);
+        break;
+      case 'answerType':
+        this.requestAnswerTypeTopics(type);
+        break;
+      case 'testType':
+        this.requestTestTypeTopics(type);
+        break;
+      case 'knowledgeType':
+        this.requestKnowledgeTypeTopics(type);
     }
     // 设置标题为该练习类型
     wx.setNavigationBarTitle({
       title
-    })
-  },
-  // 请求题目数量数据
-  setSumObj() {
-    // 如果是模拟考试的话题目数量是固定的，不用发送请求
-    if (this.data.practiceType === 'test') {
-      this.setData({
-        sumObj: {
-          yes: 0,
-          no: 0,
-          all: 50
-        }
-      })
-      return;
-    }
-    getRightWrongNotDoneTopicNumber(this.data.currentSubject, this.data.userId).then(res => {
-      const data = res.data.data;
-      switch (this.data.practiceType) {
-        case "order":
-          this.setData({
-            sumObj: {
-              yes: data.rightNumber,
-              no: data.wrongNumber,
-              all: data.rightNumber + data.wrongNumber + data.notDoneNumber
-            }
-          })
-          break;
-        case "wrong":
-          this.setData({
-            sumObj: {
-              yes: 0,
-              no: 0,
-              all: data.wrongNumber
-            }
-          })
-          break;
-        case "collect":
-          this.setData({
-            sumObj: {
-              yes: 0,
-              no: 0,
-              all: data.collectionNumber
-            }
-          })
-      }
-
     })
   },
   // 修改题目数据
@@ -468,14 +547,12 @@ Page({
     // 判断是否获取到了userId，如果还没有获取到就把调用函数写到回调中
     if (app.globalData.userInfo.userId) {
       this.setTopicArr();
-      this.setSumObj();
     } else {
       app.globalData.loginCallback = userId => {
         this.setData({
           userId
         })
         this.setTopicArr();
-        this.setSumObj();
       }
     }
   },
@@ -490,7 +567,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () { },
 
   /**
    * 生命周期函数--监听页面隐藏

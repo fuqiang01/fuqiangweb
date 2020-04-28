@@ -297,3 +297,57 @@ export function resetUserTopic(subject, userId){
         }
     })
 }
+
+// 获取题目各类型的数量
+export function getTopicTypeNumber(subject){
+    return myRequest({
+        url: urls.getTopicTypeNumber,
+        data: {
+            subject
+        }
+    })
+}
+
+// 返回文字题或者图片题
+export function getTextOrImageTopic(subject, type){
+    return myRequest({
+        url: urls.getTextOrImageTopic,
+        data: {
+            subject,
+            type
+        }
+    })
+}
+
+// 返回单选题或者判断题或者判断题的题目
+export function getTestTypeTopic(subject, type){
+    return myRequest({
+        url: urls.getTestTypeTopic,
+        data: {
+            subject,
+            type
+        }
+    })
+}
+
+ //返回只是各个知识类型的题目
+export function getKnowledgeTypeTopic(subject, type){
+    return myRequest({
+        url: urls.getKnowledgeTypeTopic,
+        data: {
+            subject,
+            type
+        }
+    })
+}
+
+// 返回正确题或错误题
+export function getRightOrWrongTopic(subject, type){
+    return myRequest({
+        url: urls.getRightOrWrongTopic,
+        data: {
+            subject,
+            type
+        }
+    })
+}

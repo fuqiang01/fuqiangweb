@@ -3,7 +3,7 @@ const fs = require("fs");
 
 
 function uploadTopic(topicData) {
-    return axios.post("http://localhost:3000/topic/create", topicData)
+    return axios.post("http://localhost:19525/topic/create", topicData)
 }
 
 async function downloadImg(imgSrc, num) {
@@ -17,14 +17,15 @@ async function downloadImg(imgSrc, num) {
 }
 
 
-async function root() {
-    const result = await axios("https://www.fqiang.co/getTopicAll?type=1");
+async function root(subject) {
+    const result = await axios(`https://www.fqiang.co/getTopicAll?type=${subject}`);
     for (let i = 0; i < result.data.length; i++) {
         const ele = result.data[i];
         let imgUrl = "";
         let testType = "";
         if (ele.imgSrc) {
-            imgUrl = await downloadImg(ele.imgSrc, i + 1)
+            // imgUrl = await downloadImg(ele.imgSrc, i + 1)
+            imgUrl = `${i + 1}.jpg`
         }
         switch (ele.titleType) {
             case "单选题":
@@ -37,7 +38,7 @@ async function root() {
                 testType = "judge";
         }
         const topicData = {
-            subject: 1,
+            subject,
             title: ele.titleText,
             answer: ele.answer,
             topicExplain: ele.explain,
@@ -57,4 +58,4 @@ async function root() {
 
 }
 
-root();
+root(4);

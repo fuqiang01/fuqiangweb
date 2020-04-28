@@ -1,3 +1,5 @@
+import { getTopicTypeNumber } from "../../api/index.js"
+const app = getApp();
 // pages/chapterList/chapterList.js
 Page({
 
@@ -5,14 +7,38 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        one: 0,
+        two: 0,
+        there: 0,
+        four: 0
     },
-
+    // 请求各类型的数量
+    requestNumber() {
+        const subject = app.globalData.currentSubject;
+        getTopicTypeNumber(subject).then(res => {
+            const data = res.data.data;
+            this.setData({
+                one: data.pointsTopicNumber + data.drivingLicenceTopicNumber + data.speedTopicNumber,
+                two: data.markTopicNumber,
+                there: data.securityTopicNumber + data.lightTopicNumber + data.specialWeatherTopicNumber,
+                four: data.dangerousTopicNumber + data.accidentTopicNumber
+            })
+        })
+    },
+    // 跳转到答题页面
+    goAQPage(e) {
+        const { type, practice } = e.currentTarget.dataset;
+        app.globalData.practiceType = practice;
+        app.globalData.typeValue = type;
+        wx.navigateTo({
+            url: "/pages/answerQuestions/answerQuestions"
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.requestNumber()
     },
 
     /**

@@ -49,5 +49,6 @@ App({
     currentSubject: 0, // 当前科目，1：科目一；4：科目四；其他数字：未知
     loginCallback: null, // 登录的回调函数
     practiceType: null, // 练习类型，order: 顺章练习；test：模拟考试；wrong：错题；random：随机；collect：收藏
+    typeValue: "", // 在专项练习和章节练习中具体的分类名称（比如：正确题、错误题等）
   }
 })

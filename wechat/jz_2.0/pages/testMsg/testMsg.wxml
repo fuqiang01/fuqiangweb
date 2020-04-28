@@ -2,7 +2,7 @@
     <view class="user-info">
         <image class="photo" mode="widthFix" src="{{ photoUrl === '' ? '/img/photo_1.jpg' : photoUrl }}" />
         <text class="name">{{ name === '' ? '未登录' : name}}</text>
-        <text class="best-result">最好成绩100分，用时0分26秒</text>
+        <text class="best-result">最好成绩{{ score }}分，用时{{ timeConsuming }}</text>
     </view>
     <view class="info">
         <view class="item">

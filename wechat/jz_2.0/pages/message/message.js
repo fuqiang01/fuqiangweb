@@ -119,7 +119,6 @@ Page({
   },
   // 按页请求留言
   requestAllMessage() {
-    console.log(this.data.isLastPage)
     // 如果已经是最后一页了就不用再加载了
     if (this.data.isLastPage) return;
     const pageNumber = this.data.pageNumber;

@@ -11,7 +11,7 @@ Page({
         name: "", // 用户名
         photoUrl: "", // 头像url地址
         score: 0, // 最好成绩
-        timeConsuming: "", // 耗时
+        timeConsuming: "0分0秒", // 耗时
     },
     // 跳转到答题页面
     goAQPage() {
@@ -27,6 +27,8 @@ Page({
         const subject = app.globalData.currentSubject;
         getBestResult(subject, userId).then(res => {
             const data = res.data.data;
+            // 如果还没有进行过考试就会为undefined
+            if(data === undefined) return;
             this.setData({
                 subject,
                 name,

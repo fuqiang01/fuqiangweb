@@ -29,7 +29,8 @@
 .types text{
     color: #666;
     border: 1px solid #e5e5e5;
-    width: 164rpx;
+    /* width: 164rpx; */
+    padding: 0 20rpx;
     text-align: center;
     display: inline-block;
     box-sizing: border-box;
