@@ -373,3 +373,30 @@ export function getChapterTypeTopoics(subject, type){
         }
     })
 }
+
+// 返回各类型标志的数量
+export function getMarkTypeNumber(){
+    return myRequest({
+        url: urls.getMarkTypeNumber,
+    })
+}
+
+// 返回某一类型的标志数据
+export function getMarkByType(type, signsType, pageNumber, pageCapacity){
+    return myRequest({
+        url: urls.getMarkByType,
+        data: {
+            type, 
+            pageNumber, 
+            pageCapacity,
+            signsType
+        }
+    })
+}
+
+// 返回交通标志页面的各种标志的数据集合
+export function getSignsTypeList(){
+    return myRequest({
+        url: urls.getSignsTypeList
+    })
+}

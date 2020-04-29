@@ -23,5 +23,5 @@
     justify-content: space-between;
 }
 .img-wrap image{
-    width: 24%;
+    width: 20%;
 }

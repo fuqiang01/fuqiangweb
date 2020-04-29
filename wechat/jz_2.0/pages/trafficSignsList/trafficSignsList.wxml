@@ -1,18 +1,11 @@
 <view class="container">
-    <view class="item">
-        <image mode="widthFix" src="/img/photo_1.jpg" />
-        <text>停车让行</text>
-    </view>
-    <view class="item">
-        <image mode="widthFix" src="/img/photo_1.jpg" />
-        <text>停车让行</text>
-    </view>
-    <view class="item">
-        <image mode="widthFix" src="/img/photo_1.jpg" />
-        <text>停车让行</text>
-    </view>
-    <view class="item">
-        <image mode="widthFix" src="/img/photo_1.jpg" />
-        <text>停车让行</text>
+    <view 
+        class="item" 
+        wx:for="{{ trafficSignsList }}" 
+        wx:key="id" 
+        data-index="{{ index }}" 
+        bindtap="goTSILPage">
+        <image mode="widthFix" src="{{ 'http://cos.fqiang.co/jz/topic_1/' + item.imgUrl }}" />
+        <text>{{ item.name }}</text>
     </view>
 </view>

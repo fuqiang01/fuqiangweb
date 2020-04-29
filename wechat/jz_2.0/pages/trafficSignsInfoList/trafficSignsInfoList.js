@@ -1,4 +1,5 @@
-// pages/trafficSignsInfoList/trafficSignsInfoList.js
+import {getMarkByType} from "../../api/index.js"
+const app = getApp();
 Page({
 
   /**
@@ -9,38 +10,7 @@ Page({
     showIndex: 0, // 当前显示的的是第几个，初始化的时候一定要跟current的值保持一致
     activeScale: 1.1,
     nextScale: 1,
-    dataList: [
-      {
-        id: 1,
-        imgUrl: "/img/photo_2.jpg",
-        title: "限制速度",
-        explain: "这是解释这是解释这是解"
-      },
-      {
-        id: 2,
-        imgUrl: "/img/photo_2.jpg",
-        title: "限制速度",
-        explain: "这是解释这是解释这是解"
-      },
-      {
-        id: 3,
-        imgUrl: "/img/photo_2.jpg",
-        title: "限制速度",
-        explain: "这是解释这是解释这是解"
-      },
-      {
-        id: 4,
-        imgUrl: "/img/photo_2.jpg",
-        title: "限制速度",
-        explain: "这是解释这是解释这是解"
-      },
-      {
-        id: 5,
-        imgUrl: "/img/photo_2.jpg",
-        title: "限制速度",
-        explain: "这是解释这是解释这是解"
-      }
-    ]
+    dataList: []
   },
   // 滑块运动时触发，动态改变滑块的scale
   onTransition(e){
@@ -60,12 +30,33 @@ Page({
       activeScale: 1.1,
       nextScale: 1
     })
+    // 动态设置当前标题
+    wx.setNavigationBarTitle({
+      title: `${this.data.showIndex + 1}/${this.data.dataList.length}`
+    });
+  },
+  // 请求数据
+  requestMarkByType(){
+    const index = app.globalData.markInfoListIndex;
+    const markType = app.globalData.markType;
+    const signsType = app.globalData.signsType;
+    getMarkByType(markType, signsType).then(res => {
+      this.setData({
+        dataList: res.data.data,
+        current: index,
+        showIndex: index
+      })
+      // 动态设置当前标题
+      wx.setNavigationBarTitle({
+        title: `${index + 1}/${res.data.data.length}`
+      });
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.requestMarkByType();
   },
 
   /**

@@ -62,27 +62,27 @@
     <view class="mark">
         <text class="title">交通标志</text>
         <view class="mark-list">
-            <view class="traffic">
+            <view class="traffic" data-mark="交通标志" bindtap="goTSPage">
                 <view class="img"></view>
                 <text>交通标志</text>
             </view>
-            <view class="dashboard">
+            <view class="dashboard" data-mark="仪表指示灯" bindtap="goTSLPage">
                 <view class="img"></view>
                 <text>仪表指示灯</text>
             </view>
-            <view class="gesture">
+            <view class="gesture" data-mark="交警手势" bindtap="goTSLPage">
                 <view class="img"></view>
                 <text>交警手势</text>
             </view>
-            <view class="function-btn">
+            <view class="function-btn" data-mark="车内功能按键" bindtap="goTSLPage">
                 <view class="img"></view>
                 <text>车内功能按键</text>
             </view>
-            <view class="responsibility">
+            <view class="responsibility" data-mark="责任认定图解" bindtap="goTSLPage">
                 <view class="img"></view>
                 <text>责任认定图解</text>
             </view>
-            <view class="color-blindness">
+            <view class="color-blindness" data-mark="色盲侧视图" bindtap="goTSLPage">
                 <view class="img"></view>
                 <text>色盲测试图</text>
             </view>

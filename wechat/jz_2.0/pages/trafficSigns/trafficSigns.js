@@ -1,18 +1,34 @@
-// pages/trafficSigns/trafficSigns.js
+import {getSignsTypeList} from "../../api/index.js";
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    signsTypeList: []
   },
-
+  // 请求交通标志各分类的数据
+  requestSignsTypeList(){
+    getSignsTypeList().then(res => {
+      this.setData({
+        signsTypeList: res.data.data
+      })
+    })
+  },
+  // 跳转到标志列表页
+  goTSLPage(e){
+    const {signs} = e.currentTarget.dataset;
+    app.globalData.signsType = signs;
+    wx.navigateTo({
+      url: '/pages/trafficSignsList/trafficSignsList'
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.requestSignsTypeList();
   },
 
   /**

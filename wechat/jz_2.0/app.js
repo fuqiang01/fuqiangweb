@@ -55,5 +55,8 @@ App({
     loginCallback: null, // 登录的回调函数
     practiceType: null, // 练习类型，order: 顺章练习；test：模拟考试；wrong：错题；random：随机；collect：收藏
     typeValue: "", // 在专项练习和章节练习中具体的分类名称（比如：正确题、错误题等）
+    markType: "", // 标志的各种类型，比如交通标志、仪表指示灯、交警手势等
+    signsType: "", // 交通标志的各种类型 ，比如：禁令标志、指示标志灯
+    markInfoListIndex: 0, // 标志详情列表页初始化时应该显示第几个
   }
 })

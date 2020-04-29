@@ -64,5 +64,21 @@ Page({
     wx.navigateTo({
       url: "/pages/testMsg/testMsg"
     })
-  }
+  },
+  // 跳转到交通标志页面
+  goTSPage(e){
+    const {mark} = e.currentTarget.dataset;
+    app.globalData.markType = mark;
+    wx.navigateTo({
+      url: "/pages/trafficSigns/trafficSigns"
+    })
+  },
+  // 跳转到标志列表页
+  goTSLPage(e){
+    const {mark} = e.currentTarget.dataset;
+    app.globalData.markType = mark;
+    wx.navigateTo({
+      url: '/pages/trafficSignsList/trafficSignsList'
+    });
+  },
 })

@@ -33,4 +33,7 @@ export default {
     getMessageByPage: "/message/getMessageByPage", // 分页获得留言
     getNotReadMessage: "/message/getNotRead", // 获得未读的留言
     addFileToCos: "/message/addFileToCos", // 上传文件到cos上
+    getMarkTypeNumber: "/mark/getTypeNumber", // 返回各类型标志的数量
+    getMarkByType: "/mark/getMarkByType", // 返回某一类型的标志数据
+    getSignsTypeList: "/mark/getSignsTypeList", // 返回交通标志页面的各种标志的数据集合
 }
