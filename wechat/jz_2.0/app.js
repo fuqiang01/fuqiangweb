@@ -16,6 +16,11 @@ App({
           app.globalData.userInfo.userId = data.data.data;
           // 页面需要userId的时候可能这里异步请求并没有完成，所以到时候可以定义一个回调函数在这里调用
           app.globalData.loginCallback && app.globalData.loginCallback(data.data.data);
+        }).catch(_ => {
+          // 如果无法登陆，也就是服务器关闭了，直接显示服务器维护页面
+          wx.reLaunch({
+            url: "/pages/serverMaintenance/serverMaintenance"
+          })
         })
       }
     })
