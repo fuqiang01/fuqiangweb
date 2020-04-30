@@ -1,17 +1,15 @@
 {
-  "name": "crawler_jz",
+  "name": "puppeteer_test",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "main": "index.js",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
-    "cheerio": "^1.0.0-rc.3",
-    "iconv-lite": "^0.5.1"
+    "axios": "^0.19.2"
   }
 }
