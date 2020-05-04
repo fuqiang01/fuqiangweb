@@ -17,6 +17,7 @@
                         <f-topicBox 
                             bindcorrect="correct" 
                             bindwrong="wrong" 
+                            imgBaseUrl="{{ imgBaseUrl }}"
                             topicObj="{{ item }}"
                             didArr="{{ didArr }}"></f-topicBox>
                     </scroll-view>

@@ -43,17 +43,17 @@
 .no1{
     color: #fff;
     font-weight: bold;
-    background-image: url(http://cos.fqiang.co/jz/rank_1.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/rank_1.png);
 }
 .no2{
     color: #fff;
     font-weight: bold;
-    background-image: url(http://cos.fqiang.co/jz/rank_2.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/rank_2.png);
 }
 .no3{
     color: #fff;
     font-weight: bold;
-    background-image: url(http://cos.fqiang.co/jz/rank_3.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/rank_3.png);
 }
 .date{
     font-size: 36rpx;

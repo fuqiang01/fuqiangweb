@@ -1,7 +1,7 @@
 <view class="container">
     <view class="btn-wrap">
         <view class="leave-msg" bind:tap="goWMPage">
-            <image mode="widthFix" src="/img/leave_msg.png" />
+            <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/leave_msg.png" />
             <text>留个言吧...</text>
         </view>
         <button wx:if="{{isAllMessagePage}}" class="show-my-msg" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="swiperMessage">
@@ -20,6 +20,7 @@
             bindreplycallback="replyCallback" />
     </view>
     <text class="noMore" wx:if="{{isLastPage}}">没有更多了</text>
+    <!-- 回复框 -->
     <view class="reply-input" wx:if="{{replyInputShow}}" style="bottom: {{ replyInputBottom }}rpx">
         <input 
             value="{{ replyValue }}"
@@ -29,5 +30,9 @@
             bindblur="onBlur"
             bindinput="onInput" />
         <text bindtap="onReply">回复</text>
+    </view>
+    <!-- 悬浮的未回复信息查看按钮 -->
+    <view class="not-read" wx:if="{{isSuper}}" bindtap="requestNotReadMessage"> 
+        <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/not_read.png" />
     </view>
 </view>

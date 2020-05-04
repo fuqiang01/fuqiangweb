@@ -1,4 +1,4 @@
-import {getMessageByPage,updateNameAndPhoto,getMessagesByUser,replyMessage} from "../../api/index.js";
+import {getMessageByPage,updateNameAndPhoto,getMessagesByUser,replyMessage, getNotReadMessage} from "../../api/index.js";
 import {addZero} from "../../utils/util.js"
 const app = getApp();
 Page({
@@ -165,6 +165,15 @@ Page({
       wx.stopPullDownRefresh()
     })
   },
+  // 请求未读的留言
+  requestNotReadMessage(){
+    getNotReadMessage().then(res => {
+      const msgList = this.handleMsgList(res.data.data);
+      this.setData({
+        msgList
+      })
+    })
+  },
   // 把从后端请求的数据处理成前端展示需要的数据
   handleMsgList(data) {
     return data.map(msg => {
@@ -176,7 +185,7 @@ Page({
       const Min = addZero(date.getMinutes());
       const S = addZero(date.getSeconds());
       const createTime = `${Y}年${M}月${D}日 ${H}:${Min}:${S}`;
-      const imgUrls = msg.imgUrls === "" ? [] : msg.imgUrls.split(";").map(url => "http://cos.fqiang.co/jz/message/" + url);
+      const imgUrls = msg.imgUrls === "" ? [] : msg.imgUrls.split(";").map(url => "https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/message/" + url);
       return {
         ...msg,
         createTime,

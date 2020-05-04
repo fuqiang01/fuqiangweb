@@ -1,13 +1,18 @@
-<!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <swiper 
+    class="swiper" 
+    current="{{ current }}"
+    bindchange="Change"
+    bindanimationfinish="onFinish">
+    <swiper-item 
+      wx:for="{{dataArr}}" 
+      wx:key="id"
+      class="item" 
+      wx:if="{{ index >= min && index < min + 4 }}">
+      <text>{{item.text}}</text>
+    </swiper-item>
+  </swiper>
+  <button class="btn" bindtap="onPrev">下一页</button>
+  <button class="btn" bindtap="onNext">上一页</button>
+  <button bindtap="goLogs">跳转页面</button>
 </view>

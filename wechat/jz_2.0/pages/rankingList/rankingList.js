@@ -18,7 +18,7 @@ Page({
     const id = e.currentTarget.dataset.id;
     const newRankingList = this.data.rankingList.map(result => {
       if(result.id == id){
-        result.user.photoUrl = "/img/photo_2.jpg"
+        result.user.photoUrl = "https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/photo_2.jpg"
       }
       return result;
     })
@@ -40,17 +40,18 @@ Page({
       bestResult = this.handleResult(bestResult);
       bestResult.userName = userName;
       bestResult.photoUrl = photoUrl;
-
       this.setData({ 
         bestResult,
         rankingList: topOneHundredResults
       })
     })
-
-
   },
   // 处理成绩数据成我想展示的样子
   handleResult(result) {
+    // 当该用户还没有考试的时候就为undefined
+    if(result.timeConsuming === undefined) {
+      return { ...result, timeConsuming: "0分0秒"}
+    }
     const timeConsuming = `${Math.floor(result.timeConsuming / 60)}分${result.timeConsuming % 60}秒`;
     return {
       ...result,

@@ -7,7 +7,7 @@
                 <text class="title">科目一</text>
                 <view class="subjects-type">
                     <text>{{ address + topicType }}</text>
-                    <image mode="widthFix" src="/img/arrow_r.png" />
+                    <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/arrow_r.png" />
                 </view>
             </view>
             <view class="item-list">
@@ -35,7 +35,7 @@
                 <text class="title">科目四</text>
                 <view class="subjects-type">
                     <text>{{ address + topicType }}</text>
-                    <image mode="widthFix" src="/img/arrow_r.png" />
+                    <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/arrow_r.png" />
                 </view>
             </view>
             <view class="item-list">
@@ -74,15 +74,15 @@
                 <view class="img"></view>
                 <text>交警手势</text>
             </view>
-            <view class="function-btn" data-mark="车内功能按键" bindtap="goTSLPage">
+            <view class="function-btn" data-mark="功能按键" bindtap="goTSLPage">
                 <view class="img"></view>
                 <text>车内功能按键</text>
             </view>
-            <view class="responsibility" data-mark="责任认定图解" bindtap="goTSLPage">
+            <view class="responsibility" data-mark="责任认定" bindtap="goTSLPage">
                 <view class="img"></view>
                 <text>责任认定图解</text>
             </view>
-            <view class="color-blindness" data-mark="色盲侧视图" bindtap="goTSLPage">
+            <view class="color-blindness" data-mark="色盲测试图" bindtap="goTSLPage">
                 <view class="img"></view>
                 <text>色盲测试图</text>
             </view>

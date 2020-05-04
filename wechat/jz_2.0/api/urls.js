@@ -1,5 +1,5 @@
 export default {
-    // baseUrl: "https://wxjz.fqiang.co:442",
+    // baseUrl: "https://wxjz.fqiang.co",
     baseUrl: "http://localhost:19525",
     onLogin: "/user/onLogin", // 登录
     updateNameAndPhoto: "/user/updateNameAndPhoto", // 更新用户的名字和头像地址
@@ -32,6 +32,7 @@ export default {
     getAllMessage: "/message/getAll", // 返回所有留言
     getMessageByPage: "/message/getMessageByPage", // 分页获得留言
     getNotReadMessage: "/message/getNotRead", // 获得未读的留言
+    markRead: "/message/markRead", // 将某条未读留言标记为已读
     addFileToCos: "/message/addFileToCos", // 上传文件到cos上
     getMarkTypeNumber: "/mark/getTypeNumber", // 返回各类型标志的数量
     getMarkByType: "/mark/getMarkByType", // 返回某一类型的标志数据

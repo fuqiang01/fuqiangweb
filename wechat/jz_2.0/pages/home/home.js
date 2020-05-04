@@ -9,7 +9,7 @@ Page({
   data: {
     hasUserInfo: false,
     name: "",
-    photoUrl: "/img/photo_1.jpg"
+    photoUrl: "https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/photo_1.jpg"
   },
   // 获取用户信息
   getUserInfo: function(e) {

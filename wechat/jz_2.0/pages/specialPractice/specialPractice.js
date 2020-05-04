@@ -11,8 +11,15 @@ Page({
     },
     // 请求各类型的数量
     requestNumber() {
+        // 开启加载框
+        wx.showLoading({
+            title: "加载中",
+            mask: true
+        });
         const subject = app.globalData.currentSubject;
         getTopicTypeNumber(subject).then(res => {
+            // 关闭加载框
+            wx.hideLoading();
             this.setData({
                 numberObj: res.data.data
             })

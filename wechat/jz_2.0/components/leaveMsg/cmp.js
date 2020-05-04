@@ -1,4 +1,4 @@
-import { deleteMessage } from "../../api/index.js"
+import { deleteMessage, markRead } from "../../api/index.js"
 const app = getApp();
 // components/leaveMsg/cmp.js
 Component({
@@ -6,7 +6,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    isSuper: Boolean,
+    isSuper: Boolean, // 是否为超级用户
     msgInfo: Object
   },
 
@@ -15,6 +15,7 @@ Component({
    */
   data: {
     imgWrapClass: "", // 图片包裹盒子的类名，一张为空串、两张和4张为sum2、3张或更多为more
+    isRead: false, // 是否为已读，这个属性的主要作用就是免得标记为已读了还要去外边改留言数组
   },
 
   /**
@@ -58,6 +59,18 @@ Component({
             })
           }
         }
+      })
+    },
+    // 标记为已读
+    markRead(){
+      markRead(this.properties.msgInfo.id).then(_ => {
+        this.setData({
+          isRead: true
+        })
+        wx.showToast({
+          title: "已标记为已读",
+          duration: 500
+        })
       })
     },
     // 回复按钮被点击后触发

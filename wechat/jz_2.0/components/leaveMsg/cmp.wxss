@@ -6,6 +6,7 @@
 }
 .user-info-wrap image{
     width: 90rpx;
+    max-height: 90rpx;
     border-radius: 10rpx;
     margin-right: 16rpx;
 }
@@ -67,7 +68,7 @@
     color: #777;
     vertical-align: middle;
 }
-.reply{
+.reply, .read{
     padding: 6rpx 0;
 }
 .delete{

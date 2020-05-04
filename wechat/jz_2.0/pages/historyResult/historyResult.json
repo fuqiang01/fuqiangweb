@@ -1,5 +1,6 @@
 {
   "usingComponents": {},
   "navigationBarTitleText": "我的成绩",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#0BBFE5"
 }

@@ -4,11 +4,11 @@
             <text class="title">{{ item.type }}</text>
             <view class="right">
                 <text>{{ item.count }}张图片</text>
-                <image mode="widthFix" src="/img/arrow_r.png" />
+                <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/arrow_r.png" />
             </view>
         </view>
         <view class="img-wrap">
-            <image wx:for="{{item.imgUrls }}" wx:key="index" mode="widthFix" src="{{'http://cos.fqiang.co/jz/topic_1/' + item }}" />
+            <image wx:for="{{item.imgUrls }}" wx:key="index" mode="widthFix" src="{{'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/mark/' + item }}" />
         </view>
     </view>
 </view>

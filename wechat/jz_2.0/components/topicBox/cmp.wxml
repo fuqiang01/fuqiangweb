@@ -4,7 +4,7 @@
         <text class="title-text">{{ topicObj.title }}</text>
     </view>
     <view class="img-wrap" wx:if="{{ topicObj.imgUrl }}">
-        <image src="{{ 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/topic_1/' + topicObj.imgUrl }}" mode="widthFix"/>
+        <image src="{{ imgBaseUrl + topicObj.imgUrl }}" mode="widthFix"/>
     </view>
     <view class="options">
         <view 

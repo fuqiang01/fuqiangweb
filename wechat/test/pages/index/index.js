@@ -1,54 +1,71 @@
-//index.js
-//获取应用实例
 const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    dataArr: [
+      {id: 1, text: "文本一"},
+      {id: 2, text: "文本二"},
+      {id: 3, text: "文本三"},
+      {id: 4, text: "文本四"},
+      {id: 5, text: "文本五"},
+      {id: 6, text: "文本六"},
+      {id: 7, text: "文本七"},
+      {id: 8, text: "文本八"},
+      {id: 9, text: "文本九"},
+      {id: 10, text: "文本十"}
+    ],    
+    current: 0,
+    min: 0,
+    showIndex: 0,
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
+  onChange(e){
+    console.log("change:", e.detail)
+    if(e.detail.current >= 2){
       this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        min: this.data.min + e.detail.current - 1,
+        current: 1
       })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
+    }else if  (e.detail.current == 0){
+      if(this.data.min == 0) return;
+      this.setData({
+        min: this.data.min - 1,
+        current: this.data.current + 1
       })
     }
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  onFinish(e){
+    console.log("finish:",e.detail)
+    if(e.detail.current >= 2){
+      this.setData({
+        min: this.data.min + e.detail.current - 1,
+        current: 1
+      })
+    }else if  (e.detail.current == 0){
+      if(this.data.min == 0) return;
+      this.setData({
+        min: this.data.min - 1,
+        current: 1
+      })
+    }
+  },
+  goLogs(){
+    wx.navigateTo({
+      url: "/pages/logs/logs"
     })
-  }
+  },
+  onPrev(){
+    // const len = this.data.dataArr.length;
+    // const item = {id: len + 1, text: "文本" + (len + 1)}
+    // this.setData({
+    //   dataArr: [item, ...this.data.dataArr]
+    // })
+    this.setData({
+      current: this.data.current - 1
+    })
+  },
+  onNext(){
+    this.setData({
+      current: this.data.current + 1
+    })
+  },
 })

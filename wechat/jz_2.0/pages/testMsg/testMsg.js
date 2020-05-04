@@ -27,14 +27,19 @@ Page({
         const subject = app.globalData.currentSubject;
         getBestResult(subject, userId).then(res => {
             const data = res.data.data;
+            let score = 0;
+            let timeConsuming = "0分0秒";
             // 如果还没有进行过考试就会为undefined
-            if(data === undefined) return;
+            if(data !== undefined){
+                score = data.score;
+                timeConsuming = `${Math.floor(data / 60)}分${Math.floor(data % 60)}秒`
+            }
             this.setData({
                 subject,
                 name,
                 photoUrl,
-                score: data.score,
-                timeConsuming: `${Math.floor(data / 60)}分${Math.floor(data % 60)}秒`
+                score,
+                timeConsuming
             })
         })
     },

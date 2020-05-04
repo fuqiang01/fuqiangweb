@@ -1,0 +1,12 @@
+<swiper 
+    class="my-swiper" 
+    current="{{ current }}"
+    bindanimationfinish="onFinish">
+    <f-swiper-item
+      wx:for="{{dataArr}}" 
+      wx:key="id"
+      class="my-swiper-item" 
+      wx:if="{{ index >= min && index < min + 4 }}">
+      <text>测试文本</text>
+    <f-swiper-item />
+  </swiper>

@@ -1,0 +1,10 @@
+  .my-swiper{
+    width: 100%;
+    height: 400rpx;
+  }
+  .my-swiper-item{
+    background: #808c8c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

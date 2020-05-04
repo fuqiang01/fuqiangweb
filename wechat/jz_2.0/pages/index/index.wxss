@@ -57,16 +57,16 @@ page{
     font-size: 28rpx;
 }
 .order .img{
-    background-image: url(http://cos.fqiang.co/jz/icon_2.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_2.png);
 }
 .test .img{
-    background-image: url(http://cos.fqiang.co/jz/icon_3.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_3.png);
 }
 .wrong .img{
-    background-image: url(http://cos.fqiang.co/jz/icon_8.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_8.png);
 }
 .collect .img{
-    background-image: url(http://cos.fqiang.co/jz/icon_6.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_6.png);
 }
 /* 交通标志 */
 .mark{
@@ -112,20 +112,20 @@ page{
 
 }
 .traffic .img{
-    background-image: url(http://cos.fqiang.co/jz/icon_12.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_12.png);
 }
 .dashboard .img{
-    background-image: url(http://cos.fqiang.co/jz/icon_14.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_14.png);
 }
 .gesture .img{
-    background-image: url(http://cos.fqiang.co/jz/icon_17.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_17.png);
 }
 .function-btn .img{
-    background-image: url(http://cos.fqiang.co/jz/icon_15.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_15.png);
 }
 .responsibility .img{
-    background-image: url(http://cos.fqiang.co/jz/icon_19.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_19.png);
 }
 .color-blindness .img{
-    background-image: url(http://cos.fqiang.co/jz/icon_18.png);
+    background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_18.png);
 }

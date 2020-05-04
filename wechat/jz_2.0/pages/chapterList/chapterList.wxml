@@ -7,7 +7,7 @@
             </view>
             <view class="right">
                 <text class="sum">{{ numObj.chapterOne }}</text>
-                <image mode="widthFix" src="/img/arrow_r.png" />
+                <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/arrow_r.png" />
             </view>
         </view>
         <view class="item" data-practice="chapterType" data-type="2" bindtap="goAQPage">
@@ -17,7 +17,7 @@
             </view>
             <view class="right">
                 <text class="sum">{{ numObj.chapterTwo }}</text>
-                <image mode="widthFix" src="/img/arrow_r.png" />
+                <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/arrow_r.png" />
             </view>
         </view>
         <view class="item" data-practice="chapterType" data-type="3" bindtap="goAQPage">
@@ -27,7 +27,7 @@
             </view>
             <view class="right">
                 <text class="sum">{{ numObj.chapterThere }}</text>
-                <image mode="widthFix" src="/img/arrow_r.png" />
+                <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/arrow_r.png" />
             </view>
         </view>
         <view class="item" data-practice="chapterType" data-type="4" bindtap="goAQPage">
@@ -37,7 +37,7 @@
             </view>
             <view class="right">
                 <text class="sum">{{ numObj.chapterFour }}</text>
-                <image mode="widthFix" src="/img/arrow_r.png" />
+                <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/arrow_r.png" />
             </view>
         </view>
     </view>

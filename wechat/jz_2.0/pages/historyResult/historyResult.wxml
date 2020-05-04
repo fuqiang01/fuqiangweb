@@ -23,11 +23,11 @@
         </view>
     </view>
     <view class="top-box-bot">
-        <image mode="widthFix" src=" {{ highestNum >= 90 ? '/img/qualified_bg.png' : '/img/unqualified_bg.png' }}" />
+        <image mode="widthFix" src=" {{ highestNum >= 90 ? 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/qualified_bg.png' : 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/unqualified_bg.png' }}" />
     </view>
     <view class="performance">
         <view class="title">
-            <image mode="widthFix" src="/img/clock.png" />
+            <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/clock.png" />
             <text>历史成绩</text>
         </view>
         <view class="performance-list">

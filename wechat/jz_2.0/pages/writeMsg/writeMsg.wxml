@@ -10,7 +10,7 @@
             <image mode="aspectFill" src="{{ item }}"/>
         </view>
         <view class="upload-btn" bindtap="uploadImg" wx:if="{{imgUrls.length < 9}}">
-            <image mode="widthFix" src="/img/camera.png" />
+            <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/camera.png" />
             <text>照片/视屏</text>
         </view>
     </view>

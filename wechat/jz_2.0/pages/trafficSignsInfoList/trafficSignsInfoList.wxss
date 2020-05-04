@@ -4,10 +4,9 @@ page{
 .wrap{
     min-height: 100vh;
 }
-
 .item{
     box-sizing: border-box;
-    padding: 100rpx 30rpx 0;
+    padding: 100rpx 20rpx 0;
 }
 .content{
     display: flex;
@@ -18,7 +17,6 @@ page{
     box-shadow: 0 0 20rpx #eee;
     padding: 80rpx 40rpx 0;
     height: 900rpx;
-    will-change: transform;
 }
 .item image{
     width: 80%;

@@ -32,6 +32,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    imgBaseUrl: "", // 访问图片的根地址
     userId: null, // 用户id
     currentSubject: null, // 当前科目
     practiceType: null, // 练习类型，是模拟考试还谁顺序练习。。。
@@ -424,7 +425,7 @@ Page({
     })
   },
   // 如果没有请求到题目的弹窗
-  myShowModal(text){
+  myShowModal(text = ""){
     wx.showModal({
       title: `当前没有任何${text}题目哦！`,
       showCancel: false,
@@ -573,10 +574,15 @@ Page({
    */
   onLoad: function (options) {
     // 页面初始化时给用户id、当前科目和练习类型赋值
+    const userId = app.globalData.userInfo.userId;
+    const subject = app.globalData.currentSubject;
+    const practiceType = app.globalData.practiceType;
+    const imgBaseUrl = `https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/topic_${subject}/`;
     this.setData({
-      userId: app.globalData.userInfo.userId,
-      currentSubject: app.globalData.currentSubject,
-      practiceType: app.globalData.practiceType
+      userId,
+      currentSubject: subject,
+      practiceType,
+      imgBaseUrl
     })
     // 显示一个加载框
     wx.showLoading({

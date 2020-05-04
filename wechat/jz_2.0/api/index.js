@@ -400,3 +400,14 @@ export function getSignsTypeList(){
         url: urls.getSignsTypeList
     })
 }
+
+// 将某条未读留言标记为已读
+export function markRead(messageId){
+    return myRequest({
+        url: urls.markRead,
+        method: "POST",
+        data: {
+            messageId
+        }
+    })
+}

@@ -5,7 +5,7 @@
         wx:key="id" 
         data-index="{{ index }}" 
         bindtap="goTSILPage">
-        <image mode="widthFix" src="{{ 'http://cos.fqiang.co/jz/topic_1/' + item.imgUrl }}" />
+        <image mode="widthFix" src="{{ 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/mark/' + item.imgUrl }}" />
         <text>{{ item.name }}</text>
     </view>
 </view>
