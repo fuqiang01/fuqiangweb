@@ -1,14 +1,22 @@
-const Nightmare = require('nightmare')
-const nightmare = Nightmare({ show: true })
+const cheerio = require("cheerio");
+const axios = require('axios');
+const iconv = require('iconv-lite');
 
-nightmare
-    .goto('https://duckduckgo.com')
-    .type('#search_form_input_homepage', 'github nightmare')
-    .click('#search_button_homepage')
-    .wait('#r1-0 a.result__a')
-    .evaluate(() => document.querySelector('#r1-0 a.result__a').href)
-    .end()
-    .then(console.log)
-    .catch(error => {
-        console.error('Search failed:', error)
+axios({
+    url: "http://www.fqla.cn",
+    responseType: 'stream' //将数据转化为流返回，默认值是json
+}).then(res => {
+    let chunks = [];
+    res.data.on('data', chunk => {
+        chunks.push(chunk);
+    });
+    res.data.on('end', () => {
+        //  Buffer 类用来创建一个专门存放二进制数据的缓存区。Buffer.concat: 缓冲区合并
+        const buffer = Buffer.concat(chunks);
+        // 通过iconv来进行转化编码格式
+        const html = iconv.decode(buffer, 'gbk');
+        // 使用cheerio插件获取$对象，然后就可以像使用jQuery一样来获取一些dom信息了
+        const $ = cheerio.load(html);
     })
+})
+

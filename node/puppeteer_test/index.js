@@ -1,13 +1,18 @@
 // 爬取驾考宝典的各种标志的
 const puppeteer = require('puppeteer');
 const axios = require("axios");
-// const url = "https://www.jiakaobaodian.com/sign/keypad/";
+
+// 下别这些都是爬取数据上传都数据库中所需要的一些东西
+const url = "https://www.jiakaobaodian.com/sign/keypad/";
 const count = 6;
 const type = "功能按键";
 
 (async () => {
+    // 创建一个浏览器实例 browser
     const browser = await puppeteer.launch();
+    // 创建一个页面实例
     const page = await browser.newPage();
+    // 打开指定页面
     await page.goto(url);
     // 获取下一页按钮，并且点击一下，这时候回调装到第二张
     await page.$eval(".icon-right", el => el.click());
@@ -34,9 +39,11 @@ const type = "功能按键";
         // 点击下一条
         await page.$eval(".icon-right", el => el.click());
     }
+    // 关闭浏览器
     await browser.close();
 })();
 
+// 延迟函数
 function delay(number) {
     return new Promise(res => {
         setTimeout(() => {
@@ -45,6 +52,7 @@ function delay(number) {
     })
 }
 
+// 上传到数据库的后台接口
 function addMark(body) {
     return axios.post("http://localhost:19525/mark/add",body)
 }
