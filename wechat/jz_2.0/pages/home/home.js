@@ -1,4 +1,4 @@
-import {updateNameAndPhoto} from "../../api/index.js"
+import { updateNameAndPhoto } from "../../api/index.js"
 const app = getApp();
 // pages/home/home.js
 Page({
@@ -12,7 +12,7 @@ Page({
     photoUrl: "https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/photo_1.jpg"
   },
   // 获取用户信息
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     const name = e.detail.userInfo.nickName;
     const photoUrl = e.detail.userInfo.avatarUrl;
     app.globalData.userInfo.name = name;
@@ -27,20 +27,20 @@ Page({
     updateNameAndPhoto(userId, name, photoUrl);
   },
   // 切换题库当前还不支持，直接弹窗
-  switchTopicList(){
+  switchTopicList() {
     wx.showModal({
       title: "当前仅支持摩托车三轮车，其他车型敬请期待",
       showCancel: false
     })
   },
   // 跳转到留言界面
-  goMPage(){
+  goMPage() {
     wx.switchTab({
       url: "/pages/message/message"
     })
   },
   // 跳转到关于我们界面
-  goAboutPage(){
+  goAboutPage() {
     wx.navigateTo({
       url: "/pages/about/about"
     })
@@ -49,7 +49,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if(app.globalData.userInfo.name !== null){
+    if (app.globalData.userInfo.name !== null) {
       this.setData({
         hasUserInfo: true,
         name: app.globalData.userInfo.name,
@@ -104,6 +104,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '摩托车驾照理论题',
+      path: '/pages/index/index'
+    }
   }
 })

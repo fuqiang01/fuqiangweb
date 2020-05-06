@@ -35,7 +35,7 @@ Page({
         const ctx = wx.createCanvasContext('myCanvas');
         // 先获取当前最高成绩对应的角度值
         const angle = (highestNum / 100) * (3 * Math.PI / 2) + (3 * Math.PI / 4);
-        
+
         // 设置线段为圆角
         ctx.lineCap = "round";
         // 绘制进度条背景
@@ -170,6 +170,9 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return {
+            title: '摩托车驾照理论题',
+            path: '/pages/index/index'
+        }
     }
 })

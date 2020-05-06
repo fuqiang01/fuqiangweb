@@ -1,5 +1,5 @@
 import urls from "../../api/urls.js";
-import {addMessage} from "../../api/index.js"
+import { addMessage } from "../../api/index.js"
 
 const app = getApp()
 // pages/writeMsg/writeMsg.js
@@ -47,7 +47,7 @@ Page({
                                     uploadImgOk: true
                                 })
                                 // 看看用户是否点击提交了，但是因为图片没上传完导致未上传，如果是那就现在上传
-                                if(_this.data.loading){
+                                if (_this.data.loading) {
                                     _this.onSubmit();
                                 }
                             }
@@ -69,7 +69,7 @@ Page({
         if (!this.data.uploadImgOk) return;
         const content = this.data.inputValue;
         const imgUrls = this.data.cosUrls.join(";");
-        if(content === "" && imgUrls === ""){
+        if (content === "" && imgUrls === "") {
             this.setData({
                 loading: false
             })
@@ -142,6 +142,9 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return {
+            title: '摩托车驾照理论题',
+            path: '/pages/index/index'
+        }
     }
 })

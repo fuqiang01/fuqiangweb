@@ -12,7 +12,7 @@ Page({
     nextScale: 1, // 前一项以及后一项的缩放值
     dataList: [], // 数据
     minIndex: 0, // 当前轮播图显示最前边的一张应该是数组的第几项 
-    showCount: 3, // 一共需要显示几页轮播图  
+    showCount: 5, // 一共需要显示几页轮播图  
   },
   // 滑块运动时触发，动态改变滑块的scale
   onTransition(e) {
@@ -21,7 +21,7 @@ Page({
     // 计算差值
     const num = dx - prev;
     // 如果上一次的dx值为null说明是刚开始动，就初始化一下值，不干别的
-    if(prev == null){
+    if (prev == null) {
       prev = dx;
       return;
     }
@@ -38,7 +38,7 @@ Page({
   onFinish(e) {
     // 将前一次dx的值初始化为空，缩放
     // prev = null;
-    let {minIndex, showCount} = this.data;
+    let { minIndex, showCount } = this.data;
     let current = e.detail.current;
     // 获取正常情况下应该显示在第几页
     const centerIndex = Math.ceil(showCount / 2) - 1;
@@ -73,11 +73,37 @@ Page({
     const index = app.globalData.markInfoListIndex;
     const markType = app.globalData.markType;
     const signsType = app.globalData.signsType;
+
+    // 显示加载框
+    wx.showLoading({
+      title: "加载中",
+      mask: true
+    });
     getMarkByType(markType, signsType).then(res => {
+      const data = res.data.data;
+      const len = data.length;
+      wx.hideLoading();
+      // 计算如果是居中显示的话，那么curren的值是多少
+      const centerIndex = Math.ceil(this.data.showCount / 2) - 1;
+      // 计算minIndex的值
+      let minIndex = index - centerIndex;
+      if (minIndex < 0) {
+        minIndex = 0;
+      } else if (minIndex + this.data.showCount > len) {
+        minIndex = len - this.data.showCount;
+      }
+      // 计算current的值
+      let current = centerIndex;
+      if (index <= centerIndex) {
+        current = index;
+      } else if (index >= len - centerIndex) {
+        current = centerIndex - len + index + 1 + centerIndex;
+      }
       this.setData({
         dataList: res.data.data,
-        current: index,
-        showIndex: index
+        current,
+        showIndex: current,
+        minIndex
       })
       // 动态设置当前标题
       wx.setNavigationBarTitle({
@@ -138,6 +164,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '摩托车驾照理论题',
+      path: '/pages/index/index'
+    }
   }
 })

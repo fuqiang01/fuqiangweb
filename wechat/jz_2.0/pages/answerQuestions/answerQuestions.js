@@ -425,7 +425,7 @@ Page({
     })
   },
   // 如果没有请求到题目的弹窗
-  myShowModal(text = ""){
+  myShowModal(text = "") {
     wx.showModal({
       title: `当前没有任何${text}题目哦！`,
       showCancel: false,
@@ -612,12 +612,12 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () { },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {},
+  onHide: function () { },
 
   /**
    * 生命周期函数--监听页面卸载
@@ -646,6 +646,7 @@ Page({
    */
   onShareAppMessage: function () {
     return {
+      title: '摩托车驾照理论题',
       path: '/pages/index/index'
     }
   }

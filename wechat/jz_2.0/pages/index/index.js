@@ -110,4 +110,10 @@ Page({
       url: '/pages/trafficSignsList/trafficSignsList'
     });
   },
+  onShareAppMessage: function () {
+    return {
+      title: '摩托车驾照理论题',
+      path: '/pages/index/index'
+    }
+  }
 })

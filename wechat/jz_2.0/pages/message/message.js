@@ -1,5 +1,5 @@
-import {getMessageByPage,updateNameAndPhoto,getMessagesByUser,replyMessage, getNotReadMessage} from "../../api/index.js";
-import {addZero} from "../../utils/util.js"
+import { getMessageByPage, updateNameAndPhoto, getMessagesByUser, replyMessage, getNotReadMessage } from "../../api/index.js";
+import { addZero } from "../../utils/util.js"
 const app = getApp();
 Page({
 
@@ -38,13 +38,13 @@ Page({
     })
   },
   // 发送回复消息
-  onReply(){
+  onReply() {
     const text = this.data.replyValue;
     const userId = app.globalData.userInfo.userId;
     const msgId = this.data.currentReplyMsgId;
     // 将本地数据的对应留言添加回复
     const msgList = this.data.msgList.map(msg => {
-      if(msg.id == msgId){
+      if (msg.id == msgId) {
         msg.reply = text;
       }
       return msg;
@@ -58,7 +58,7 @@ Page({
     })
   },
   // 回复按钮点击的回调
-  replyCallback(e){
+  replyCallback(e) {
     const id = e.detail;
     this.setData({
       currentReplyMsgId: id,
@@ -166,7 +166,7 @@ Page({
     })
   },
   // 请求未读的留言
-  requestNotReadMessage(){
+  requestNotReadMessage() {
     getNotReadMessage().then(res => {
       const msgList = this.handleMsgList(res.data.data);
       this.setData({
@@ -244,6 +244,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '摩托车驾照理论题',
+      path: '/pages/index/index'
+    }
   }
 })

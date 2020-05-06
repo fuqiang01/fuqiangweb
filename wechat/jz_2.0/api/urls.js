@@ -1,6 +1,6 @@
 export default {
-    // baseUrl: "https://wxjz.fqiang.co",
-    baseUrl: "http://localhost:19525",
+    baseUrl: "https://wxjz.fqiang.co",
+    // baseUrl: "http://localhost:19525",
     onLogin: "/user/onLogin", // 登录
     updateNameAndPhoto: "/user/updateNameAndPhoto", // 更新用户的名字和头像地址
     addWrongTopic: "/user/addWrongTopic", // 上传错题的id或者id数组(数组用 ; 来分割)

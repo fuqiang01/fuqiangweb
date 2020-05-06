@@ -12,7 +12,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        
+
     },
 
     /**
@@ -61,6 +61,9 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        return {
+            title: '摩托车驾照理论题',
+            path: '/pages/index/index'
+        }
     }
 })

@@ -36,8 +36,8 @@ Page({
     })
   },
   // 跳转到标志详情列表页
-  goTSILPage(e){
-    const {index} = e.currentTarget.dataset;
+  goTSILPage(e) {
+    const { index } = e.currentTarget.dataset;
     app.globalData.markInfoListIndex = index;
     wx.navigateTo({
       url: "/pages/trafficSignsInfoList/trafficSignsInfoList"
@@ -97,6 +97,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '摩托车驾照理论题',
+      path: '/pages/index/index'
+    }
   }
 })

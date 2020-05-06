@@ -1,4 +1,4 @@
-import {getSignsTypeList} from "../../api/index.js";
+import { getSignsTypeList } from "../../api/index.js";
 const app = getApp();
 Page({
 
@@ -9,7 +9,7 @@ Page({
     signsTypeList: []
   },
   // 请求交通标志各分类的数据
-  requestSignsTypeList(){
+  requestSignsTypeList() {
     getSignsTypeList().then(res => {
       this.setData({
         signsTypeList: res.data.data
@@ -17,8 +17,8 @@ Page({
     })
   },
   // 跳转到标志列表页
-  goTSLPage(e){
-    const {signs} = e.currentTarget.dataset;
+  goTSLPage(e) {
+    const { signs } = e.currentTarget.dataset;
     app.globalData.signsType = signs;
     wx.navigateTo({
       url: '/pages/trafficSignsList/trafficSignsList'
@@ -77,6 +77,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '摩托车驾照理论题',
+      path: '/pages/index/index'
+    }
   }
 })
