@@ -43,7 +43,7 @@ Component({
             this.setData({
                 classList: arr
             })
-            if (this.data.topicObj.titleType == "多选题") return; //是多选题的话不在这处理
+            if (this.data.topicObj.testType == "多选题") return; //是多选题的话不在这处理
             this.setData({
                 isDid: true
             })

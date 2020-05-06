@@ -224,6 +224,17 @@ export function getMessageByPage(pageNumber, pageCapacity) {
     })
 }
 
+// 分页获取超级用户留言
+export function getSuperUserMessages(pageNumber, pageCapacity){
+    return myRequest({
+        url: urls.getSuperUserMessages,
+        data: {
+            pageNumber,
+            pageCapacity
+        }
+    })
+}
+
 // 获得未读的留言
 export function getNotReadMessage() {
     return myRequest({

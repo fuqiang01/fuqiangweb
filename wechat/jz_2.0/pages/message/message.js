@@ -1,5 +1,14 @@
-import { getMessageByPage, updateNameAndPhoto, getMessagesByUser, replyMessage, getNotReadMessage } from "../../api/index.js";
-import { addZero } from "../../utils/util.js"
+import {
+  getMessageByPage,
+  getSuperUserMessages,
+  updateNameAndPhoto,
+  getMessagesByUser,
+  replyMessage,
+  getNotReadMessage
+} from "../../api/index.js";
+import {
+  addZero
+} from "../../utils/util.js"
 const app = getApp();
 Page({
 
@@ -117,28 +126,36 @@ Page({
       this.requestUserMessage()
     }
   },
+  // 处理按页面请求获得的数据
+  handleRequestDataByPage(data) {
+    const msgList = this.handleMsgList(data);
+    // 如果请求回的数据小于每页的数据就说明这已经是最后一页了
+    if (msgList.length < this.data.pageCapacity) {
+      this.setData({
+        isLastPage: true
+      })
+    }
+    this.setData({
+      msgList: [...this.data.msgList, ...msgList]
+    })
+    // 结束下拉刷新
+    wx.stopPullDownRefresh()
+    wx.hideNavigationBarLoading()
+  },
   // 按页请求留言
   requestAllMessage() {
     // 如果已经是最后一页了就不用再加载了
     if (this.data.isLastPage) return;
     const pageNumber = this.data.pageNumber;
     const pageCapacity = this.data.pageCapacity;
-    getMessageByPage(pageNumber, pageCapacity).then(res => {
-      const msgList = this.handleMsgList(res.data.data);
-      // 如果请求回的数据小于每页的数据就说明这已经是最后一页了
-      if (msgList.length < pageCapacity) {
-        this.setData({
-          isLastPage: true
-        })
-      }
-      // 如果页码为0，说明第一次请求直接替换，否则拼接数组
-      const newMsgList = pageNumber == 0 ? msgList : [...this.data.msgList, ...msgList];
-      this.setData({
-        msgList: newMsgList
+    if(this.data.isSuper){
+      getMessageByPage(pageNumber, pageCapacity).then(res => {
+        this.handleRequestDataByPage(res.data.data);
       })
-      // 结束下拉刷新
-      wx.stopPullDownRefresh()
-      wx.hideNavigationBarLoading()
+      return;
+    }
+    getSuperUserMessages(pageNumber, pageCapacity).then(res => {
+      this.handleRequestDataByPage(res.data.data);
     })
   },
   // 请求用户自己的留言
@@ -218,6 +235,7 @@ Page({
   onPullDownRefresh: function () {
     // 初始化页码
     this.setData({
+      msgList: [],
       isLastPage: false,
       pageNumber: 0
     })

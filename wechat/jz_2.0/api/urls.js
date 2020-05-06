@@ -16,6 +16,7 @@ export default {
     getCollectionTopicIds: "/user/getCollectionTopicIds", // 返回收藏的题目的id数组
     getRandomTopic: "/user/getRandomTopic", // 返回随机练习的题目
     resetUserTopic: "/user/resetUserTopic", // 重置用户题目
+    getSuperUserMessages: "/user/getSuperUserMessages", // 分页返回超级用户的留言
     getTestTopic: "/topic/getTestTopic", // 返回某一科目的测试题
     getTopicTypeNumber: "/topic/getTopicTypeNumber", // 返回题目各类型的数量
     getTextOrImageTopic: "/topic/getTextOrImageTopic", // 返回文字题或者图片题

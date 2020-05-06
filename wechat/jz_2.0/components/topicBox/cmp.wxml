@@ -17,7 +17,7 @@
             <text class="t2">{{ item }}</text>
         </view>
     </view>
-    <view class="btn-wrap" wx:if="{{ topicObj.titleType == '多选题' }}">
+    <view class="btn-wrap" wx:if="{{ topicObj.testType == '多选题' }}">
         <text class="btn" bindtap="submitBtnTap">确认提交</text>
     </view>
     <view class="explain" wx:if="{{ showExplain || isDid }}"> 
