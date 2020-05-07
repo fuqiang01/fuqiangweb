@@ -94,7 +94,7 @@ Page({
   // 判断当前题目是否为收藏
   handleCollection() {
     // 如果题目数组为空就不用比较了
-    if (this.data.topicArr.length === 0) return;
+    if (this.data.topicArr == undefined || this.data.topicArr.length === 0) return;
     const currentId = this.data.topicArr[this.data.showIndex].id;
     const currentTopicIsCollection = this.data.collectionTopicIdsArr.includes(currentId.toString());
     this.setData({
@@ -208,7 +208,10 @@ Page({
     }).then(_ => {
       // 马上再请求所有题目，并且去掉重复的
       getNotDoneTopic(subject, userId, false).then(res => {
-        const newArr = this.data.topicArr.concat(res.data.data);
+        // 先判断请求的数据和已有的数据是否都为数组
+        const data = Array.isArray(res.data.data) ? res.data.data : [];
+        const tempArr = Array.isArray(this.data.topicArr) ? this.data.topicArr : [];
+        const newArr = tempArr.concat(data);
         this.setData({
           topicArr: removeDuplicateForObjArr(newArr) // 调用一下去重函数
         })
@@ -554,6 +557,8 @@ Page({
   },
   // 处理子组件点击收藏按钮事件
   onCollectionClick() {
+    // 如果当前题目数组中没有任何题目，直接返回
+    if (this.data.topicArr == undefined || this.data.topicArr.length === 0) return;
     const currentId = this.data.topicArr[this.data.showIndex].id;
     const collectionTopicIdsArr = this.data.collectionTopicIdsArr;
     let newArr;

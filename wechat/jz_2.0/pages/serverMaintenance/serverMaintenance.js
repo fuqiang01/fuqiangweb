@@ -26,8 +26,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        // 影藏返回按钮，如果显示这个页面的话就不让用户进行别的操作了
-        wx.hideHomeButton()
+        if(wx.canIUse('hideHomeButton')){
+            // 影藏返回按钮，如果显示这个页面的话就不让用户进行别的操作了
+            wx.hideHomeButton()
+        }
     },
 
     /**

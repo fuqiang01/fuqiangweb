@@ -13,6 +13,9 @@ Page({
   },
   // 获取用户信息
   getUserInfo: function (e) {
+    const userInfo = e.detail.userInfo;
+    // 用户点击拒绝，userInfo就为undefined
+    if(userInfo == undefined) return;
     const name = e.detail.userInfo.nickName;
     const photoUrl = e.detail.userInfo.avatarUrl;
     app.globalData.userInfo.name = name;

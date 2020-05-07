@@ -1,6 +1,9 @@
 page{
     background-color: #f5f5f5;
 }
+.container{
+    padding-bottom: 20rpx;
+}
 /* 选择科目 */
 .options-subjects{
     padding: 0 30rpx;
