@@ -34,7 +34,6 @@ Page({
     const photoUrl = app.globalData.userInfo.photoUrl;
     // 请求排行榜数据
     getRankingList(subject, userId).then(res => {
-      console.log(res)
       let { topOneHundredResults, bestResult } = res.data.data;
       topOneHundredResults = topOneHundredResults.map(result => this.handleResult(result));
       bestResult = this.handleResult(bestResult);

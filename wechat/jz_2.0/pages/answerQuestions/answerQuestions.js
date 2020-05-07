@@ -39,7 +39,6 @@ Page({
     topicArr: [], // 题目对象集合
     current: 0, // swiper当前的显示页
     showIndex: 0, //显示项为当前题目数组的第几项
-    yesNum: 0, // 模拟测试中，做对的题目总数
     didArr: [], // 存放做过了的题的信息，[{id: ..., classList: [...]}]
     collectionTopicIdsArr: [], // 收藏的题目id的数组
     currentTopicIsCollection: false, // 当前显示的题目是否为收藏的
@@ -73,15 +72,10 @@ Page({
   // 题目做正确了执行
   correct(e) {
     this.addDidArr(e.detail);
-    if (this.data.type === 'test') {
-      this.setData({
-        yesNum: this.data.yesNum + 1
-      })
-    } else {
-      addRightTopic(this.data.currentSubject, this.data.userId, e.detail.id);
-    }
     this.changeSumObj('yes');
     this.toNext();
+    if (this.data.practiceType === 'test') return;
+    addRightTopic(this.data.currentSubject, this.data.userId, e.detail.id);
   },
   // 自动跳到下一题
   toNext() {
@@ -105,7 +99,7 @@ Page({
   wrong(e) {
     this.addDidArr(e.detail);
     this.changeSumObj('no');
-    if (this.data.type === 'test') return;
+    if (this.data.practiceType === 'test') return;
     addWrongTopic(this.data.currentSubject, this.data.userId, e.detail.id);
   },
   // 手指触摸事件
@@ -504,7 +498,7 @@ Page({
   },
   // 显示模拟考试的成绩
   getResults() {
-    const results = this.data.yesNum * 2;
+    const results = this.data.sumObj.yes * 2;
     const str = results >= 90 ? '成绩合格' : '成绩不合格';
     wx.showModal({
       title: '考试结束',
@@ -525,14 +519,14 @@ Page({
     this.getResults();
     const subject = this.data.currentSubject;
     const userId = this.data.userId;
-    const score = this.data.yesNum * 2;
+    const score = this.data.sumObj.yes * 2;
     const timeConsuming = 30 * 60 - this.data.countdownTime;
     addResult(subject, userId, score, timeConsuming);
   },
   // 是否到达最后一题了
   isLastTopic() {
     if (this.data.showIndex >= this.data.topicArr.length - 1) { // 到了最后一题了
-      if (this.data.type === 'test') { // 做的模拟考试
+      if (this.data.practiceType === 'test') { // 做的模拟考试
         // 倒计时结束
         clearInterval(tempTimer);
         this.onOver();
