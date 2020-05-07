@@ -7,6 +7,30 @@ App({
     app = this;
     this.login();
   },
+  // 检测版本更新，如果已经更新了让用户重启一下
+  update(){
+    const updateManager = wx.getUpdateManager();
+    // 有新的版本
+    updateManager.onUpdateReady( _ => {
+      wx.showModal({
+        title: '更新提示',
+        content: '新版本已经准备好，是否重启应用？',
+        success: function (res) {
+          if (res.confirm) {
+            // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+            updateManager.applyUpdate();
+          }
+        }
+      })
+    })
+    // 下载新的版本失败
+    updateManager.onUpdateFailed(function () {
+      wx.showModal({
+        title: '出错',
+        content: '新版本下载失败，请关闭小程序并且清理掉小程序后台，然后重新进入！'
+      })
+    })
+  },
   // 登录
   login() {
     wx.login({
@@ -64,5 +88,9 @@ App({
     markType: "", // 标志的各种类型，比如交通标志、仪表指示灯、交警手势等
     signsType: "", // 交通标志的各种类型 ，比如：禁令标志、指示标志灯
     markInfoListIndex: 0, // 标志详情列表页初始化时应该显示第几个
-  }
+  },
+  onShow(){
+    // 每次加载检测是否发布新版本了
+    this.update();
+  },
 })

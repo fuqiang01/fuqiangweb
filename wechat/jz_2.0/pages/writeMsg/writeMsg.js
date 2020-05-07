@@ -36,6 +36,7 @@ Page({
                         url: urls.baseUrl + urls.addFileToCos,
                         filePath: url,
                         name: 'file',
+                        timeout: 1000 * 60 * 5,
                         success(res) {
                             const fileName = JSON.parse(res.data).data;
                             _this.setData({
@@ -51,6 +52,20 @@ Page({
                                     _this.onSubmit();
                                 }
                             }
+                        },
+                        fail(err){
+                            wx.hideLoading();
+                            wx.showModal({
+                                title: '请求超时',
+                                content: '服务器带宽太小，不建议上传总大小超过5M的图片',
+                                showCancel: false,
+                                success(){
+                                    _this.setData({
+                                        imgUrls: [],
+                                        cosUrls: []
+                                    })
+                                }
+                            });
                         }
                     })
                 })
