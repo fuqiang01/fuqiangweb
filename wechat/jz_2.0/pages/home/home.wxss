@@ -11,6 +11,7 @@ page{
 }
 .photo image{
     width: 220rpx;
+    height: 220rpx;
     border-radius: 50%;
 }
 .login-btn, .user-name{

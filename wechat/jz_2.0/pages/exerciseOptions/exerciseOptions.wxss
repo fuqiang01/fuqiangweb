@@ -1,5 +1,6 @@
 .motorcycle-gif{
     width: 100%;
+    height: 300rpx;
 }
 .test-order{
     border-bottom: 1px solid #eee;

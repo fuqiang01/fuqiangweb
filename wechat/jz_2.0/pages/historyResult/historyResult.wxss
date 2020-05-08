@@ -52,6 +52,7 @@
 }
 .top-box-bot image{
     width: 100%;
+    height: 60rpx;
     display: block;
     transform: translateY(-2rpx);
 }

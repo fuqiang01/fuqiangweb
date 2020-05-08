@@ -8,7 +8,9 @@
             </view>
         </view>
         <view class="img-wrap">
-            <image wx:for="{{item.imgUrls }}" wx:key="index" mode="widthFix" src="{{'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/mark/' + item }}" />
+            <view class="img" wx:for="{{item.imgUrls }}" wx:key="index">
+                <f-img mode="widthFix" src="{{'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/mark/' + item }}" />
+            </view>
         </view>
     </view>
 </view>

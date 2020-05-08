@@ -18,7 +18,7 @@ page{
     padding: 80rpx 40rpx 0;
     height: 900rpx;
 }
-.item image{
+.item .img{
     width: 80%;
 }
 .title{

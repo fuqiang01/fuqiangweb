@@ -5,9 +5,9 @@ Component({
      */
     properties: {
         src: String,
-        lazySrc: {
+        lazySrc: { // 默认加载图片时显示的一张图片，这里用的是一张#eee背景的图片，大小1.4k左右
             type: String,
-            value: "/img/lazyImg.png"
+            value: "https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/lazyImg.png"
         },
         mode: {
             type: String,

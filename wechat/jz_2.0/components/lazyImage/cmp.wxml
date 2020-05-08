@@ -1,4 +1,7 @@
-<image wx:if="{{isLoad}}" src="{{src}}" mode="{{mode}}" bindload="onLoad" />
- <image wx:else src="{{lazySrc}}"  mode="{{mode}}" />
+<block>
+    <image src="{{src}}" bindload="onLoad"  class="hidden" />
+    <image src="{{isLoad ? src : lazySrc}}"  mode="{{mode}}" class="show" />
+</block>
+
 
 

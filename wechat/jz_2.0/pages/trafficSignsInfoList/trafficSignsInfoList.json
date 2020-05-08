@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "f-img": "/components/lazyImage/cmp"
+  },
   "navigationBarBackgroundColor": "#f4f7ff"
 }

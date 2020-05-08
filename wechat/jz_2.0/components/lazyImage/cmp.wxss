@@ -1,1 +1,6 @@
-/* components/lazyImage/cms.wxss */
+.hidden{
+    display: none;
+}
+.show{
+    width: 100%;
+}

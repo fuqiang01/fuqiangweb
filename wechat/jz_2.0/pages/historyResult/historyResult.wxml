@@ -23,7 +23,7 @@
         </view>
     </view>
     <view class="top-box-bot">
-        <image mode="widthFix" src=" {{ highestNum >= 90 ? 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/qualified_bg.png' : 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/unqualified_bg.png' }}" />
+        <image mode="widthFix" src="{{ highestNum >= 90 ? 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/qualified_bg.png' : 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/unqualified_bg.png' }}" />
     </view>
     <view class="performance">
         <view class="title">
