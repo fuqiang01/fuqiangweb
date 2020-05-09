@@ -24,4 +24,6 @@
 }
 .img-wrap .img{
     width: 20%;
+    height: 142rpx;
+    overflow: hidden;
 }
