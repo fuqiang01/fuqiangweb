@@ -87,8 +87,8 @@ Page({
   },
   // 判断当前题目是否为收藏
   handleCollection() {
-    // 如果题目数组为空就不用比较了
-    if (this.data.topicArr == undefined || this.data.topicArr.length === 0) return;
+    // 如果题目数据不为数组、或者数组为空就不用比较了
+    if ( !Array.isArray(this.data.topicArr) || this.data.topicArr.length === 0) return;
     const currentId = this.data.topicArr[this.data.showIndex].id;
     const currentTopicIsCollection = this.data.collectionTopicIdsArr.includes(currentId.toString());
     this.setData({
@@ -565,8 +565,8 @@ Page({
   },
   // 处理子组件点击收藏按钮事件
   onCollectionClick() {
-    // 如果当前题目数组中没有任何题目，直接返回
-    if (this.data.topicArr == undefined || this.data.topicArr.length === 0) return;
+    // 如果当前题目数组中没有任何题目或者不是一个数组，直接返回
+    if (!Array.isArray(this.data.topicArr) || this.data.topicArr.length === 0) return;
     const currentId = this.data.topicArr[this.data.showIndex].id;
     const collectionTopicIdsArr = this.data.collectionTopicIdsArr;
     let newArr;

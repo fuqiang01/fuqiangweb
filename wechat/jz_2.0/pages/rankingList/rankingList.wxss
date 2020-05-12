@@ -1,5 +1,5 @@
 .list{
-    padding: 0 20rpx;
+    padding: 0 20rpx 140rpx;
 }
 .list .item:not(:last-of-type){
     border-bottom: 1px solid #eee;
@@ -68,3 +68,7 @@
     width: 100%;
     box-sizing: border-box;
 }
+/* 宽度不够， */
+/* .my-rank .ranking{
+    width: 70rpx;
+} */

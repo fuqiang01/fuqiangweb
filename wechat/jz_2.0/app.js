@@ -9,6 +9,8 @@ App({
   },
   // 检测版本更新，如果已经更新了让用户重启一下
   update(){
+    // 判断当前微信版本是否支持getUpdateManager这个API
+    if(wx.canIUse('getUpdateManager')) return;
     const updateManager = wx.getUpdateManager();
     // 有新的版本
     updateManager.onUpdateReady( _ => {
