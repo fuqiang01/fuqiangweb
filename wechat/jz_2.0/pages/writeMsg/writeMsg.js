@@ -28,7 +28,7 @@ Page({
             success(res) {
                 const tempFilePaths = res.tempFilePaths;
                 _this.setData({
-                    imgUrls: tempFilePaths,
+                    imgUrls: [..._this.data.imgUrls, ...tempFilePaths],
                     uploadImgOk: false
                 })
                 tempFilePaths.forEach(url => {
@@ -36,14 +36,14 @@ Page({
                         url: urls.baseUrl + urls.addFileToCos,
                         filePath: url,
                         name: 'file',
-                        timeout: 1000 * 60 * 5,
+                        timeout: 1000 * 60 * 5, // 请求超时时间，5分钟
                         success(res) {
                             const fileName = JSON.parse(res.data).data;
                             _this.setData({
                                 cosUrls: [..._this.data.cosUrls, fileName]
                             })
                             // 判断是否全部图片上传完毕
-                            if (_this.data.cosUrls.length === tempFilePaths.length) {
+                            if (_this.data.cosUrls.length === _this.data.imgUrls.length) {
                                 _this.setData({
                                     uploadImgOk: true
                                 })
