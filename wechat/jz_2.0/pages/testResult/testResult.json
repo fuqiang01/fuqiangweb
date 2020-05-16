@@ -2,7 +2,7 @@
   "usingComponents": {
     "f-resultBox": "/components/resultBox/cmp"
   },
-  "navigationBarTitleText": "我的成绩",
+  "navigationBarTitleText": "本次测试成绩",
   "navigationBarTextStyle": "white",
   "navigationBarBackgroundColor": "#0BBFE5"
 }

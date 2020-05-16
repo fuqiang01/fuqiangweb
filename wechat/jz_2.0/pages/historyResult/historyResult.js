@@ -30,28 +30,6 @@ Page({
             backgroundColor: color
         })
     },
-    // 绘制画布
-    drawCanvas(highestNum) {
-        const ctx = wx.createCanvasContext('myCanvas');
-        // 先获取当前最高成绩对应的角度值
-        const angle = (highestNum / 100) * (3 * Math.PI / 2) + (3 * Math.PI / 4);
-
-        // 设置线段为圆角
-        ctx.lineCap = "round";
-        // 绘制进度条背景
-        ctx.beginPath();
-        ctx.lineWidth = 10;
-        ctx.arc(150, 85, 80, (Math.PI * 3 / 4), Math.PI / 4, 0);
-        ctx.strokeStyle = "rgba(0,0,0,0.1)";
-        ctx.stroke();
-        // 绘制进度条
-        ctx.beginPath();
-        ctx.lineWidth = 6;
-        ctx.arc(150, 85, 80, (Math.PI * 3 / 4), angle, 0);
-        ctx.strokeStyle = "#fff";
-        ctx.stroke();
-        ctx.draw();
-    },
     // 请求数据
     requestData() {
         const subject = app.globalData.currentSubject;
@@ -73,8 +51,6 @@ Page({
             const highestNum = this.getHighestNum(data);
             // 设置navbar背景色
             this.setNavBg(highestNum);
-            // 绘制进度条动画
-            this.drawCanvas(highestNum);
             // 加工数据成想要的格式
             const performanceList = this.getPerformanceList(data);
             this.setData({

@@ -1,0 +1,3 @@
+<f-resultBox result='{{ result }}' text='{{ result >= 90 ? "成绩合格" : "成绩不合格" }}'>
+    
+</f-resultBox>

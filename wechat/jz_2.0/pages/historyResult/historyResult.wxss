@@ -1,38 +1,5 @@
-.top-box{
-    height: 450rpx;
-    position: relative;
-}
-.top-box.qualified{
-    background: linear-gradient(to bottom, #0BBFE5, #22C282);
-}
-.top-box.unqualified{
-    background: linear-gradient(to bottom, #E28951, #FE5B47);
-}
-.highest-wrap{
-    text-align: center;
-    color: #fff;
-    position: relative;
-    margin-bottom: 60rpx;
-}
-#myCanvas{
-    margin: 0 auto;
-}
-.highest{
-    position: absolute;
-    width: 100%;
-    bottom: 0rpx;
-    left: 0;
-}
-.highest .num{
-    display: block;
-    font-size: 120rpx;
-    
-}
-.highest .text{
-    display: block;
-    font-size: 32rpx;
-}
 .topic-num-list{
+    padding-top: 60rpx;
     display: flex;
     justify-content: space-around;
 }

@@ -10,7 +10,7 @@ App({
   // 检测版本更新，如果已经更新了让用户重启一下
   update(){
     // 判断当前微信版本是否支持getUpdateManager这个API
-    if(wx.canIUse('getUpdateManager')) return;
+    if(!wx.canIUse('getUpdateManager')) return;
     const updateManager = wx.getUpdateManager();
     // 有新的版本
     updateManager.onUpdateReady( _ => {
@@ -90,6 +90,10 @@ App({
     markType: "", // 标志的各种类型，比如交通标志、仪表指示灯、交警手势等
     signsType: "", // 交通标志的各种类型 ，比如：禁令标志、指示标志灯
     markInfoListIndex: 0, // 标志详情列表页初始化时应该显示第几个
+    testResult: {// 本次考试成绩
+      score: 0,
+      timeConsuming: ''
+    }, 
   },
   onShow(){
     // 每次加载检测是否发布新版本了
