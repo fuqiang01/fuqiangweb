@@ -1,19 +1,35 @@
 import {
-    getBestResult
-} from "../../api/index.js";
-import {
     getTagByScore
 } from "../../utils/util.js"
-
+import { updateNameAndPhoto } from "../../api/index.js"
 const app = getApp();
-// pages/resultRank/resultRank.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        result: 100
+        result: 100,
+        tag: '',
+        photoUrl: ''
+    },
+    // 获取用户信息
+    getUserInfo(e) {
+        const userInfo = e.detail.userInfo;
+        if (userInfo !== undefined) {
+            app.globalData.userInfo.name = userInfo.nickName;
+            app.globalData.userInfo.gender = userInfo.gender;
+            app.globalData.userInfo.photoUrl = userInfo.avatarUrl;
+            const userId = app.globalData.userInfo.userId;
+            // 上传用户信息
+            updateNameAndPhoto(userId, userInfo.nickName, userInfo.avatarUrl);
+            this.goRLPage();
+        } else {
+            wx.showModal({
+                title: "需要登陆才可以查看排行榜哦！",
+                showCancel: false
+            })
+        }
     },
     // 设置导航栏背景色
     setNavBg(result) {
@@ -23,21 +39,46 @@ Page({
             backgroundColor: color
         })
     },
-    // 请求最好的成绩
-    requestBestResult() {
-        const subject = app.globalData.currentSubject;
-        const userId = app.globalData.userInfo.userId;
-        // 获取成绩列表
-        getBestResult(subject, userId).then(res => {
-            console.log(res)
+    // 本次错题
+    goTestWrongTopic(){
+        app.globalData.practiceType = 'testWrong';
+        wx.reLaunch({
+            url: "/pages/answerQuestions/answerQuestions"
+        })
+    },
+    // 跳转到历史成绩页面
+    goHRPage(){
+        wx.reLaunch({
+            url: '/pages/historyResult/historyResult'
+        })
+    },
+    // 跳转到成绩排行榜页面
+    goRLPage(){
+        wx.reLaunch({
+            url: '/pages/rankingList/rankingList'
+        })
+    },
+    // 重新考试
+    testAgain(){
+        // 重新考试的话，当前信息并没有被修改，直接跳转到答题页面就好了
+        wx.reLaunch({
+            url: "/pages/answerQuestions/answerQuestions"
         })
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.requestBestResult();
-
+        // this.requestBestResult();
+        const {score} = app.globalData.testResult;
+        const tag = getTagByScore(score);
+        const photoUrl = app.globalData.userInfo.photoUrl;
+        this.setData({
+            result: score,
+            tag,
+            photoUrl
+        })
+        this.setNavBg(score);
     },
 
     /**

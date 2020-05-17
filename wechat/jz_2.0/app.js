@@ -94,6 +94,7 @@ App({
       score: 0,
       timeConsuming: ''
     }, 
+    testWrongTopics: [], // 本次考试做错了的题目
   },
   onShow(){
     // 每次加载检测是否发布新版本了

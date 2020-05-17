@@ -3,9 +3,9 @@ import {
     getAllResult,
 } from "../../api/index.js";
 import {
-    addZero
+    addZero,
+    getTagByScore
 } from "../../utils/util.js"
-
 const app = getApp();
 // pages/resultRank/resultRank.js
 Page({
@@ -75,14 +75,7 @@ Page({
             const timeConsuming = `${Math.floor(result.timeConsuming / 60)}分${result.timeConsuming % 60}秒`;
             const date = new Date(result.createTime)
             const createTime = `${date.getFullYear()}-${addZero(date.getMonth() + 1)}-${addZero(date.getDate())} ${addZero(date.getHours())}:${addZero(date.getMinutes())}:${addZero(date.getSeconds())}`;
-            let tag;
-            if (result.score < 90) {
-                tag = "马路杀手";
-            } else if (result.score < 98) {
-                tag = "新人上路"
-            } else {
-                tag = "驾考王者"
-            }
+            const tag = getTagByScore(result.score);
             return {
                 ...result,
                 score: result.score,
@@ -97,7 +90,6 @@ Page({
      */
     onLoad: function (options) {
         this.requestData();
-
     },
 
     /**

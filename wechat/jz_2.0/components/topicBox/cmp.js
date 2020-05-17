@@ -16,7 +16,7 @@ Component({
         optionT: ['A', 'B', 'C', 'D'], //选项字母数组
         classList: new Array(4), //存放点击后的类名的数组
         showExplain: false, // 是否显示注释
-        isDid: false // 该题目是否做够
+        isDid: false // 该题目是否做过
     },
     attached() {
         const topicObj = this.properties.topicObj;

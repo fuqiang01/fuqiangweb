@@ -99,7 +99,15 @@ Page({
   wrong(e) {
     this.addDidArr(e.detail);
     this.changeSumObj('no');
-    if (this.data.practiceType === 'test') return;
+    // 去判断是否是最后一题了
+    this.isLastTopic();
+    if (this.data.practiceType === 'test') {
+      // 如果是模拟考试中做错题目了，那么就把这个题目数据存到全局，后边可能有用
+      const id = e.detail.id;
+      const wrongTopic = this.data.topicArr.find(topic => topic.id = id);
+      app.globalData.testWrongTopics.push(wrongTopic);
+      return;
+    }
     addWrongTopic(this.data.currentSubject, this.data.userId, e.detail.id);
   },
   // 手指触摸事件
@@ -421,6 +429,23 @@ Page({
       this.getCollectionTopicIdsArr();
     })
   },
+  // 请求本次考试的错题
+  requestTestWrongTopics(){
+    const topics = app.globalData.testWrongTopics;
+    // 关闭加载框
+    wx.hideLoading();
+    // 先判断当前是否有题目
+    if (topics.length === 0) {
+      this.myShowModal('做错的')
+      return;
+    }
+    this.setData({
+      topicArr: topics,
+      'sumObj.all': topics.length
+    })
+    // 请求收藏的题目id数组
+    this.getCollectionTopicIdsArr();
+  },
   // 如果没有请求到题目的弹窗
   myShowModal(text = "") {
     wx.showModal({
@@ -446,6 +471,8 @@ Page({
         break;
       case 'test':
         title = '模拟考试';
+        // 先重置本次做错的题目数组
+        app.globalData.testWrongTopics = [];
         this.requestTestTopics();
         break;
       case 'wrong':
@@ -476,6 +503,10 @@ Page({
         let num = type == 1 ? "一" : type == 2 ? "二" : "三";
         title = `第${num}章节`;
         this.requestChapterTypeTopoics(type);
+        break;
+      case 'testWrong':
+        title = '考试错题回顾';
+        this.requestTestWrongTopics();
     }
     // 设置标题为该练习类型
     wx.setNavigationBarTitle({
@@ -496,32 +527,23 @@ Page({
         })
     }
   },
-  // 显示模拟考试的成绩
-  getResults() {
-    const results = this.data.sumObj.yes * 2;
-    const str = results >= 90 ? '成绩合格' : '成绩不合格';
-    wx.showModal({
-      title: '考试结束',
-      content: `${str},分数：${results}分`,
-      //是否显示取消按钮,默认值true
-      showCancel: false,
-      success(res) {
-        if (res.confirm) {
-          wx.reLaunch({
-            url: '/pages/index/index'
-          })
-        }
-      }
-    })
-  },
   // 考试结束事件
   onOver() {
-    this.getResults();
     const subject = this.data.currentSubject;
     const userId = this.data.userId;
     const score = this.data.sumObj.yes * 2;
     const timeConsuming = 30 * 60 - this.data.countdownTime;
+    // 将本次考试成绩信息存到全局
+    app.globalData.testResult = {
+      score,
+      timeConsuming
+    }
+    // 上传本次成绩
     addResult(subject, userId, score, timeConsuming);
+    // 跳转到考试成绩显示页面
+    wx.reLaunch({
+      url: '/pages/testResult/testResult'
+    })
   },
   // 是否到达最后一题了
   isLastTopic() {

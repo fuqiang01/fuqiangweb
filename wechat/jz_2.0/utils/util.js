@@ -18,9 +18,9 @@ export function addZero(num) {
 }
 
 // 根据分数返回标签
-export function getTagByScore(result) {
+export function getTagByScore(score) {
   let tag = '';
-  if (result.score < 90) {
+  if (score < 90) {
     tag = "马路杀手";
   } else if (result.score < 98) {
     tag = "新人上路"
