@@ -22,7 +22,7 @@ export function getTagByScore(score) {
   let tag = '';
   if (score < 90) {
     tag = "马路杀手";
-  } else if (result.score < 98) {
+  } else if (score < 98) {
     tag = "新人上路"
   } else {
     tag = "驾考王者"
