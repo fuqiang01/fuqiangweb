@@ -1,7 +1,11 @@
 .info-item {
     margin: 0 20rpx;
+    transition: margin .3s;
 }
-
+.info-item.isbg{
+    filter: blur(10rpx);
+    margin: 20rpx;
+}
 .title {
     margin-bottom: 50rpx;
 }

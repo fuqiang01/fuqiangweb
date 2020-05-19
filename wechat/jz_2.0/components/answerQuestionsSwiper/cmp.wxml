@@ -12,12 +12,16 @@
             bindwrong="wrong" 
             imgBaseUrl="{{ '' }}"
             topicObj="{{ item }}"
-            didArr="{{ [] }}"></f-topicBox>
+            isBg="{{ topicBoxIsBg }}"/>
         <f-numBox 
             isCollection="{{ true }}" 
             sumObj="{{ sumObj }}" 
             showTimer="{{ true }}" 
             countdownTime="{{1000}}"
+            topicArr="{{ dataList }}"
+            currentIndex="{{ showIndex }}"
+            bindonhandletopicnumbox="onhandletopicnumbox"
+            bindonswitchtopic="onswitchtopic"
             bindoncollectionclick="onCollectionClick" />
     </swiper-item>    
 </swiper>

@@ -1,4 +1,4 @@
-<view class="info-item">
+<view class="info-item  {{ isBg && 'isbg' }}">
     <view class="title">
         <text class="title-type">{{ topicObj.testType }}</text>
         <text class="title-text">{{ topicObj.title }}</text>

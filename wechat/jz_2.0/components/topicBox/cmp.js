@@ -6,7 +6,8 @@ Component({
     properties: {
         imgBaseUrl: String, // 图片根地址
         topicObj: Object, // 题目的数据
-        didArr: Array // 做过了的题目数据[{id: ..., classList: [...] } ]
+        didArr: Array, // 做过了的题目数据[{id: ..., classList: [...] } ]
+        isBg: Boolean, // 当前是否是个背景，也就是是否需要使用滤镜来进行模糊处理
     },
 
     /**

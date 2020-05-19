@@ -163,6 +163,8 @@ Page({
   },
   // 将做过的题目的信息存起来，主要目的是因为一面翻过去了这题再返回回来的时候知道刚刚做题目选的什么
   addDidArr(obj) {
+    const topic = this.data.topicArr.find(topic => topic.id === obj.id);
+    topic && (topic.classList = obj.classList);
     this.setData({
       didArr: [...this.data.didArr, obj]
     })

@@ -13,8 +13,7 @@ Component({
     data: {
         current: 0, // 用来初始化轮播图应该显示第几个
         showIndex: 0, // 当前显示的的是第几个，初始化的时候一定要跟current的值保持一致
-        dataList: [
-            {
+        dataList: [{
                 id: 56,
                 subject: 1,
                 title: '这个标志是何含义？',
@@ -26,6 +25,7 @@ Component({
                 updateTime: '1588040901603',
                 testType: '单选题',
                 knowledgeType: '标志题',
+                classList: [null, null, 'red', null],
             },
             {
                 id: 57,
@@ -48,6 +48,7 @@ Component({
             no: 2,
             all: 10
         }, // 存放做对的题数量，做错的题的数量和题目总数
+        topicBoxIsBg: false, // topicBox组件是否充当背景在使用
     },
 
     /**
@@ -58,7 +59,10 @@ Component({
         onFinish(e) {
             // 将前一次dx的值初始化为空，缩放
             // prev = null;
-            let { minIndex, showCount } = this.data;
+            let {
+                minIndex,
+                showCount
+            } = this.data;
             let current = e.detail.current;
             // 获取正常情况下应该显示在第几页
             const centerIndex = Math.ceil(showCount / 2) - 1;
@@ -103,11 +107,72 @@ Component({
                 current = centerIndex - len + index + 1 + centerIndex;
             }
             this.setData({
-                dataList: res.data.data,
                 current,
                 showIndex: current,
                 minIndex
             })
+        },
+        // 题目做错了的回调
+        wrong(e) {
+            this.addClassList(e.detail);
+            this.changeSumObj('no');
+            // 去判断是否是最后一题了
+            // this.isLastTopic();
+            // if (this.data.practiceType === 'test') {
+            //     // 如果是模拟考试中做错题目了，那么就把这个题目数据存到全局，后边可能有用
+            //     const id = e.detail.id;
+            //     const wrongTopic = this.data.topicArr.find(topic => topic.id = id);
+            //     app.globalData.testWrongTopics.push(wrongTopic);
+            //     return;
+            // }
+            // addWrongTopic(this.data.currentSubject, this.data.userId, e.detail.id);
+        },
+        // 题目做正确了的回调
+        correct(e) {
+            this.addClassList(e.detail);
+            this.changeSumObj('yes');
+            this.toNext();
+            // if (this.data.practiceType === 'test') return;
+            // addRightTopic(this.data.currentSubject, this.data.userId, e.detail.id);
+        },
+        // topic-num-box的显示与影藏的回调
+        onhandletopicnumbox(e) {
+            this.setData({
+                topicBoxIsBg: e.detail
+            })
+        },
+        // 点击了某个题目的回调
+        onswitchtopic(e) {
+            const index = e.detail;
+            console.log(index)
+            this.goItemByIndex(index);
+            this.setData({
+                topicBoxIsBg: false
+            })
+        },
+        // 自动跳到下一题
+        toNext() {
+            // if (this.isLastTopic()) return;
+            this.goItemByIndex(this.data.showIndex + 1)
+        },
+        // 将做过的题目的信息存起来，主要目的是因为一面翻过去了这题再返回回来的时候知道刚刚做题目选的什么
+        addClassList({id, classList}) {
+            const topic = this.data.dataList.find(topic => topic.id === id);
+            topic && (topic.classList = classList);
+        },
+        // 修改题目数据
+        changeSumObj(state) {
+            switch (state) {
+                case 'yes':
+                    this.setData({
+                        'sumObj.yes': this.data.sumObj.yes + 1,
+                    })
+                    break;
+                case 'no':
+                    this.setData({
+                        'sumObj.no': this.data.sumObj.no + 1,
+                    })
+            }
         },
     }
 })
