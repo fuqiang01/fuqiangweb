@@ -14,7 +14,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        highestNum: 100, // 历史最高分
+        highestNum: 0, // 历史最高分
         topicNumObj: {
             yesNum: 0, // 做对的题目数量
             wrongNum: 0, // 做错的题目数量

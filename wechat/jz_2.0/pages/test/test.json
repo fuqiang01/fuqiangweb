@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "f-answerQuestionsSwiper": "/components/answerQuestionsSwiper/cmp"
+  }
+}

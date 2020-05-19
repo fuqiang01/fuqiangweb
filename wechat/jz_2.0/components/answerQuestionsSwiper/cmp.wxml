@@ -1,0 +1,23 @@
+<swiper 
+    class="wrap"
+    current="{{ current }}"
+    bindanimationfinish="onFinish">
+    <swiper-item 
+        wx:for="{{dataList}}" 
+        wx:key="id"
+        class="item"
+        wx:if="{{ index >= minIndex && index < minIndex + showCount }}">
+        <f-topicBox 
+            bindcorrect="correct" 
+            bindwrong="wrong" 
+            imgBaseUrl="{{ '' }}"
+            topicObj="{{ item }}"
+            didArr="{{ [] }}"></f-topicBox>
+        <f-numBox 
+            isCollection="{{ true }}" 
+            sumObj="{{ sumObj }}" 
+            showTimer="{{ true }}" 
+            countdownTime="{{1000}}"
+            bindoncollectionclick="onCollectionClick" />
+    </swiper-item>    
+</swiper>

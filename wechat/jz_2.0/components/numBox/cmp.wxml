@@ -1,21 +1,39 @@
-<view class="num-box">
-    <view class="item" bindtap="onCollectionClick">
-        <image mode="widthFix" src="{{ isCollection ? 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/collection_action.png' : 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/collection.png' }}" />
-        <text>收藏</text>
+<view class="num-box-wrap">
+    <view class="num-box">
+        <view class="item" bindtap="onCollectionClick">
+            <image mode="widthFix" src="{{ isCollection ? 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/collection_action.png' : 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/collection.png' }}" />
+            <text>收藏</text>
+        </view>
+        <view class="item">
+            <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/yes.png" />
+            <text>{{ sumObj.yes }}</text>
+        </view>
+        <view class="item">
+            <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/no.png" />
+            <text>{{ sumObj.no }}</text>
+        </view>
+        <view class="item">
+            <text wx:if="{{showTimer}}">{{ minutes }} : {{ seconds }}</text>
+        </view>
+        <view class="item">
+            <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/all.png" />
+            <text>{{ ( sumObj.yes + sumObj.no ) }} / {{ sumObj.all }}</text>
+        </view>
     </view>
-    <view class="item">
-        <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/yes.png" />
-        <text>{{ sumObj.yes }}</text>
-    </view>
-    <view class="item">
-        <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/no.png" />
-        <text>{{ sumObj.no }}</text>
-    </view>
-    <view class="item">
-        <text wx:if="{{showTimer}}">{{ minutes }} : {{ seconds }}</text>
-    </view>
-    <view class="item">
-        <image mode="widthFix" src="https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/all.png" />
-        <text>{{ ( sumObj.yes + sumObj.no ) }} / {{ sumObj.all }}</text>
-    </view>
+    <scroll-view class="topic-num-scroll">
+        <view class="topic-num-box">
+            <view class="item">1</view>
+            <view class="item">1</view>
+            <view class="item">1</view>
+            <view class="item">1</view>
+            <view class="item">1</view>
+            <view class="item">1</view>
+            <view class="item">1</view>
+            <view class="item">1</view>
+            <view class="item">1</view>
+            <view class="item">1</view>
+            <view class="item">1</view>
+        </view>
+    </scroll-view>
 </view>
+<view class="bg"></view>

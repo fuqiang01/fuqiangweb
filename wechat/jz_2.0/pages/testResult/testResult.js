@@ -9,7 +9,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        result: 100,
+        result: 0,
         tag: '',
         photoUrl: ''
     },

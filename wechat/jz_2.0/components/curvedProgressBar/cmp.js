@@ -11,17 +11,15 @@ Component({
     },
     observers: {
         'percentage': function(percentage){
-            const angle = (percentage / 100) * (3 * Math.PI / 2) + (3 * Math.PI / 4);
-            this.setData({
-                maxAngle: angle
-            })
+            this.drawProgress(percentage);
+            // this.drawCanvas(percentage);
         }
     },
     /**
      * 组件的初始数据
      */
     data: {
-        maxAngle: null
+        
     },
 
 
@@ -53,6 +51,7 @@ Component({
             query.select('#curvedProgressBarCanvas')
                 .fields({ node: true, size: true })
                 .exec((res) => {
+                    if(!res[0].node) return;
                     const canvas = res[0].node;
                     const ctx = canvas.getContext('2d');
                     // 设置线段样式为圆角
@@ -65,7 +64,6 @@ Component({
                     const renderLoop = () => {
                         ctx.clearRect(0, 0, 300, 150);
                         currentAngle += 0.05;
-                        angle = _this.data.maxAngle === null ? angle : _this.data.maxAngle;
                         if (currentAngle >= angle) {
                             currentAngle = angle;
                             _this.drawBg(ctx);
@@ -78,12 +76,44 @@ Component({
                     }
                     canvas.requestAnimationFrame(renderLoop);
                 })
-        }
+        },
+        // 上边的方法低版本不兼容
+        drawCanvas(percentage) {
+            const ctx = wx.createCanvasContext('myCanvas');
+            // 先获取当前最高成绩对应的角度值
+            const angle = (percentage / 100) * (3 * Math.PI / 2) + (3 * Math.PI / 4);
+            let currentAngle = Math.PI * 3 / 4;
+            // 设置线段为圆角
+            // ctx.lineCap = "round";
+
+            // const timer = setInterval(() => {
+            //     currentAngle += 0.05;
+            //     if(currentAngle >= angle ){
+            //         currentAngle = angle;
+            //         clearInterval(timer);
+            //     }
+            //     // 绘制进度条背景
+            //     ctx.beginPath();
+            //     ctx.lineWidth = 10;
+            //     ctx.arc(150, 85, 80, (Math.PI * 3 / 4), Math.PI / 4, 0);
+            //     ctx.strokeStyle = "rgba(0,0,0,0.1)";
+            //     ctx.stroke();
+            //     // 绘制进度条
+            //     ctx.beginPath();
+            //     ctx.lineWidth = 6;
+            //     ctx.arc(150, 85, 80, (Math.PI * 3 / 4), currentAngle, 0);
+            //     ctx.strokeStyle = "#fff";
+            //     ctx.stroke();
+            //     ctx.draw();
+            // }, 1000/60);
+            
+        },
     },
     lifetimes: {
         // 在组件实例进入页面节点树时执行
         attached: function () {
             this.drawProgress(this.properties.percentage);
+            // this.drawCanvas(this.properties.percentage);
         },
         detached: function () {
             // 在组件实例被从页面节点树移除时执行
