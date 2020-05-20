@@ -1,54 +1,54 @@
+import {
+    addRightTopic,
+    addWrongTopic,
+    updateCollectionTopic,
+    addResult,
+} from "../../api/index.js"
+const app = getApp();
 // components/answerQuestionsSwiper/cmp.js
 Component({
     /**
      * 组件的属性列表
      */
     properties: {
-
+        // 题目数组
+        topicArr: {
+            type: Array,
+            value: []
+        },
+        // 存放做对的题数量，做错的题的数量和题目总数
+        sumObj: {
+            type: Object,
+            value: {
+                yes: 0,
+                no: 0,
+                all: 0
+            }
+        }
     },
-
+    observers: {
+        'topicArr': function (topicArr) {
+            this.setData({
+                dataList: topicArr
+            })
+        }
+    },
     /**
      * 组件的初始数据
      */
     data: {
         current: 0, // 用来初始化轮播图应该显示第几个
         showIndex: 0, // 当前显示的的是第几个，初始化的时候一定要跟current的值保持一致
-        dataList: [{
-                id: 56,
-                subject: 1,
-                title: '这个标志是何含义？',
-                options: ['路面高突', '驼峰桥', '路面低洼', '路面不平'],
-                answer: ['0'],
-                topicExplain: '警告标志，路面高突。2个凸起是路面不平，凹进去是路面低洼，空心的是驼峰桥，1个凸起是路面高突。',
-                imgUrl: '',
-                createTime: '1588040901603',
-                updateTime: '1588040901603',
-                testType: '单选题',
-                knowledgeType: '标志题',
-                classList: [null, null, 'red', null],
-            },
-            {
-                id: 57,
-                subject: 1,
-                title: '这个标志是何含义？',
-                options: ['路面高突', '驼峰桥', '路面低洼', '路面不平'],
-                answer: ['0'],
-                topicExplain: '警告标志，路面高突。2个凸起是路面不平，凹进去是路面低洼，空心的是驼峰桥，1个凸起是路面高突。',
-                imgUrl: '',
-                createTime: '1588040901603',
-                updateTime: '1588040901603',
-                testType: '单选题',
-                knowledgeType: '标志题',
-            },
-        ], // 数据
+        dataList: [], // 数据
         minIndex: 0, // 当前轮播图显示最前边的一张应该是数组的第几项 
-        showCount: 3, // 一共需要显示几页轮播图  
-        sumObj: {
-            yes: 1,
-            no: 2,
-            all: 10
-        }, // 存放做对的题数量，做错的题的数量和题目总数
+        showCount: 5, // 一共需要显示几页轮播图 
         topicBoxIsBg: false, // topicBox组件是否充当背景在使用
+        countdownTime: 30 * 60, // 倒计时的秒数
+        practiceType: '', // 练习类型
+        userId: '', // 用户id 
+        subject: '', // 科目
+        imgBaseUrl: '', // 题目图片的baseUrl
+        tempTimer: null, // 模拟测试的定时器
     },
 
     /**
@@ -108,32 +108,43 @@ Component({
             }
             this.setData({
                 current,
-                showIndex: current,
+                showIndex: current + minIndex,
                 minIndex
             })
         },
         // 题目做错了的回调
-        wrong(e) {
+        onwrong(e) {
             this.addClassList(e.detail);
-            this.changeSumObj('no');
+            this.triggerEvent('onchangesumobj', 'no');
             // 去判断是否是最后一题了
-            // this.isLastTopic();
-            // if (this.data.practiceType === 'test') {
-            //     // 如果是模拟考试中做错题目了，那么就把这个题目数据存到全局，后边可能有用
-            //     const id = e.detail.id;
-            //     const wrongTopic = this.data.topicArr.find(topic => topic.id = id);
-            //     app.globalData.testWrongTopics.push(wrongTopic);
-            //     return;
-            // }
-            // addWrongTopic(this.data.currentSubject, this.data.userId, e.detail.id);
+            this.isLastTopic();
+            if (this.data.practiceType === 'test') {
+                // 如果是模拟考试中做错题目了，那么就把这个题目数据存到全局，后边可能有用
+                const id = e.detail.id;
+                const wrongTopic = this.properties.topicArr.find(topic => topic.id === id);
+                app.globalData.testWrongTopics.push(wrongTopic);
+                return;
+            }
+            addWrongTopic(this.data.subject, this.data.userId, e.detail.id);
         },
         // 题目做正确了的回调
-        correct(e) {
+        oncorrect(e) {
             this.addClassList(e.detail);
-            this.changeSumObj('yes');
+            this.triggerEvent('onchangesumobj', 'yes');
             this.toNext();
-            // if (this.data.practiceType === 'test') return;
-            // addRightTopic(this.data.currentSubject, this.data.userId, e.detail.id);
+            if (this.data.practiceType === 'test') return;
+            addRightTopic(this.data.subject, this.data.userId, e.detail.id);
+        },
+        // 点击收藏按钮的回调
+        oncollectionclick() {
+            const index = this.data.showIndex;
+            const isCollection = !this.data.dataList[index].isCollection;
+            this.data.dataList[index].isCollection = isCollection;
+            this.setData({
+                dataList: this.data.dataList
+            })
+            // 发送请求
+            updateCollectionTopic(this.data.subject, this.data.userId, this.data.dataList[index].id)
         },
         // topic-num-box的显示与影藏的回调
         onhandletopicnumbox(e) {
@@ -144,7 +155,6 @@ Component({
         // 点击了某个题目的回调
         onswitchtopic(e) {
             const index = e.detail;
-            console.log(index)
             this.goItemByIndex(index);
             this.setData({
                 topicBoxIsBg: false
@@ -152,27 +162,96 @@ Component({
         },
         // 自动跳到下一题
         toNext() {
-            // if (this.isLastTopic()) return;
-            this.goItemByIndex(this.data.showIndex + 1)
+            if (this.isLastTopic()) return;
+            this.setData({
+                current: this.data.current + 1
+            })
         },
         // 将做过的题目的信息存起来，主要目的是因为一面翻过去了这题再返回回来的时候知道刚刚做题目选的什么
-        addClassList({id, classList}) {
+        addClassList({ id, classList }) {
             const topic = this.data.dataList.find(topic => topic.id === id);
             topic && (topic.classList = classList);
+            this.setData({
+                dataList: this.data.dataList
+            })
         },
-        // 修改题目数据
-        changeSumObj(state) {
-            switch (state) {
-                case 'yes':
-                    this.setData({
-                        'sumObj.yes': this.data.sumObj.yes + 1,
-                    })
-                    break;
-                case 'no':
-                    this.setData({
-                        'sumObj.no': this.data.sumObj.no + 1,
-                    })
+
+        // 是否到达最后一题了
+        isLastTopic() {
+            if (this.data.showIndex < this.data.dataList.length - 1) return false;
+            // 到了最后一题了
+            if (this.data.practiceType === 'test') { // 做的模拟考试
+                // 倒计时结束
+                clearInterval(this.data.tempTimer);
+                this.onOver();
+                return true;
             }
+            wx.showToast({
+                title: '已经是最后一题',
+                icon: 'success',
+            })
+            return true;
         },
-    }
+        // 启动计时器
+        startTimer() {
+            clearInterval(this.data.tempTimer);
+            const tempTimer = setInterval(() => {
+                const currentTime = this.data.countdownTime - 1;
+                this.setData({
+                    countdownTime: currentTime
+                })
+                if (currentTime <= 0) {
+                    // 倒计时结束
+                    clearInterval(this.data.tempTimer);
+                    this.onOver();
+                }
+            }, 1000);
+            this.setData({
+                tempTimer
+            })
+        },
+        // 考试结束事件
+        onOver() {
+            const subject = this.data.subject;
+            const userId = this.data.userId;
+            const score = this.properties.sumObj.yes * 2;
+            const timeConsuming = 30 * 60 - this.data.countdownTime;
+            // 将本次考试成绩信息存到全局
+            app.globalData.testResult = {
+                score,
+                timeConsuming
+            }
+            // 上传本次成绩
+            addResult(subject, userId, score, timeConsuming);
+            // 跳转到考试成绩显示页面
+            wx.reLaunch({
+                url: '/pages/testResult/testResult'
+            })
+        },
+    },
+    // 组件的生命周期
+    lifetimes: {
+        attached: function () {
+            // 在组件实例进入页面节点树时执行
+            // 页面初始化时给用户id、当前科目和练习类型赋值
+            const userId = app.globalData.userInfo.userId;
+            const subject = app.globalData.currentSubject;
+            const practiceType = app.globalData.practiceType;
+            const imgBaseUrl = `https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/topic_${subject}/`;
+            if(practiceType === 'test') {
+                // 启动计时器
+                this.startTimer();
+            }
+            this.setData({
+                userId,
+                subject,
+                practiceType,
+                imgBaseUrl
+            })
+        },
+        detached: function () {
+            // 在组件实例被从页面节点树移除时执行
+            clearInterval(this.data.tempTimer);
+        },
+    },
 })

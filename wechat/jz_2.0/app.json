@@ -16,8 +16,7 @@
         "pages/trafficSignsList/trafficSignsList",
         "pages/trafficSigns/trafficSigns",
         "pages/serverMaintenance/serverMaintenance",
-        "pages/testResult/testResult",
-        "pages/test/test"
+        "pages/testResult/testResult"
     ],
     "permission": {
         "scope.userLocation": {

@@ -6,22 +6,28 @@
         wx:for="{{dataList}}" 
         wx:key="id"
         class="item"
-        wx:if="{{ index >= minIndex && index < minIndex + showCount }}">
-        <f-topicBox 
-            bindcorrect="correct" 
-            bindwrong="wrong" 
-            imgBaseUrl="{{ '' }}"
-            topicObj="{{ item }}"
-            isBg="{{ topicBoxIsBg }}"/>
-        <f-numBox 
-            isCollection="{{ true }}" 
-            sumObj="{{ sumObj }}" 
-            showTimer="{{ true }}" 
-            countdownTime="{{1000}}"
-            topicArr="{{ dataList }}"
-            currentIndex="{{ showIndex }}"
-            bindonhandletopicnumbox="onhandletopicnumbox"
-            bindonswitchtopic="onswitchtopic"
-            bindoncollectionclick="onCollectionClick" />
+        wx:if="{{ index >= minIndex && index < minIndex + showCount }}"
+    >
+        <scroll-view class="scroll-view" scroll-y="{{true}}">
+            <f-topicBox 
+                bindcorrect="oncorrect" 
+                bindwrong="onwrong" 
+                imgBaseUrl="{{ imgBaseUrl }}"
+                topicObj="{{ item }}"
+                isBg="{{ topicBoxIsBg }}"
+            />
+            <f-numBox 
+                isCollection="{{ item.isCollection }}" 
+                sumObj="{{ sumObj }}" 
+                showTimer="{{ practiceType === 'test' }}" 
+                countdownTime="{{ countdownTime }}"
+                topicArr="{{ dataList }}"
+                currentIndex="{{ showIndex }}"
+                bindonhandletopicnumbox="onhandletopicnumbox"
+                bindonswitchtopic="onswitchtopic"
+                bindoncollectionclick="oncollectionclick" 
+            />
+        </scroll-view>
+        
     </swiper-item>    
 </swiper>

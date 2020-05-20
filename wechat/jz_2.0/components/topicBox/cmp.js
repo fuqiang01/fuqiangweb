@@ -21,15 +21,13 @@ Component({
     },
     attached() {
         const topicObj = this.properties.topicObj;
-        const didArr = this.properties.didArr;
-        didArr.forEach(ele => {
-            if (ele.id === topicObj.id) { //如果这题做过了
-                this.setData({
-                    classList: ele.classList,
-                    isDid: true
-                })
-            }
-        })
+        // 如果这题做过了
+        if(Array.isArray(topicObj.classList)){
+            this.setData({
+                classList: topicObj.classList,
+                isDid: true
+            })
+        }
     },
     /**
      * 组件的方法列表

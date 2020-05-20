@@ -102,7 +102,7 @@ Page({
       this.setData({
         dataList: res.data.data,
         current,
-        showIndex: current,
+        showIndex: current + minIndex,
         minIndex
       })
       // 动态设置当前标题

@@ -1,6 +1,8 @@
 .tag-wrap{
     display: flex;
     padding: 40rpx 0 0 40rpx;
+    position: relative;
+    z-index: 3;
 }
 .tag-wrap .photo image{
     width: 100rpx;

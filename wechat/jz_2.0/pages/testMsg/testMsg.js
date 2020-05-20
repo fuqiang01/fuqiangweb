@@ -32,7 +32,7 @@ Page({
             // 如果还没有进行过考试就会为undefined
             if(data !== undefined){
                 score = data.score;
-                timeConsuming = `${Math.floor(data / 60)}分${Math.floor(data % 60)}秒`
+                timeConsuming = `${Math.floor(data.timeConsuming / 60)}分${Math.floor(data.timeConsuming % 60)}秒`
             }
             this.setData({
                 subject,
