@@ -4,8 +4,8 @@
             <router-link to="/">主页</router-link>
             <router-link :to="{name: 'home', query:{type: 'knowledge'}}">知识点</router-link>
             <router-link :to="{name: 'home', query:{type: 'article'}}">文章</router-link>
-            <router-link :to="{name: 'home', query:{type: 'music'}}">音乐</router-link>
-            <router-link :to="{name: 'home', query:{type: 'video'}}">视屏</router-link>
+            <!-- <router-link :to="{name: 'home', query:{type: 'music'}}">音乐</router-link>
+            <router-link :to="{name: 'home', query:{type: 'video'}}">视屏</router-link> -->
             <router-link :to="{name: 'home', query:{type: 'talk'}}">毒鸡汤</router-link>
         </div>
         <div class="input-wrap">

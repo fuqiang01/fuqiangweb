@@ -18,7 +18,7 @@
                 <span>玩命加载中...</span>
             </template>
         </div>
-        <HomeComment />
+        <!-- <HomeComment /> -->
     </div>
 </template>
 
@@ -30,7 +30,7 @@ import BigImg from "@/components/contentlist/BigImg";
 import Music from "@/components/contentlist/Music";
 import MyVideo from "@/components/contentlist/MyVideo";
 import Talk from "@/components/contentlist/Talk";
-import HomeComment from "@/components/homeComment/HomeComment";
+// import HomeComment from "@/components/homeComment/HomeComment";
 import Api from "@/api";
 export default {
     components: {
@@ -40,7 +40,7 @@ export default {
         Music,
         MyVideo,
         Talk,
-        HomeComment
+        // HomeComment
     },
     data() {
         return {

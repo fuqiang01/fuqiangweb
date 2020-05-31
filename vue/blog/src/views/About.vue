@@ -11,9 +11,9 @@
                     <Context :context="blogData.content" />
                 </a-skeleton>
             </div>
-            <div class="comments-wrap">
+            <!-- <div class="comments-wrap">
                 <Comments />
-            </div>
+            </div> -->
         </div>
         <div class="right">
             <a-affix :offsetTop="affixTop" :target="() => this.appDom">
@@ -29,14 +29,14 @@
 <script>
 import Context from "@/components/about/Context";
 import Related from "@/components/about/Related";
-import Comments from "@/components/about/Comments";
+// import Comments from "@/components/about/Comments";
 import { mapState, mapMutations } from "vuex";
 import Api from "@/api";
 export default {
     components: {
         Context,
         Related,
-        Comments
+        // Comments
     },
     data() {
         return {
