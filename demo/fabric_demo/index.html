@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.min.css">
+</head>
+
+<body>
+    <div class="canvas-wrap">
+        <canvas id="canvas" width="300" height="500" class="canvas"></canvas>
+        <div class="prompt">轻点任意元素开始编辑</div>
+    </div>
+    <div class="options-box">
+        <div class="change-text">修改文字</div>
+        <div class="change-img">换图片</div>
+        <div class="add-text">添加文字</div>
+        <div class="add-img">添加图片</div>
+    </div>
+    <div class="change-text-window">
+        <textarea rows="20"></textarea>
+        <div class="btn-wrap">
+            <div class="ok">确认</div>
+            <div class="no">取消</div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/fabric.js/3.6.3/fabric.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        // 拖拽构造函数
+        class CanvasDragDrop {
+
+            // 当前选中的元素
+            selectedElement = undefined;
+            // canvas对象
+            canvas = new fabric.Canvas('canvas');
+
+            // 绘制图片函数promise化
+            drawImgFromUrlToPromise(imgUrl) {
+                return new Promise((resolve, reject) => {
+                    fabric.Image.fromURL( imgUrl, function (oImg) {
+                        resolve(oImg);
+                    });
+                })
+            }
+
+            // 修改图片
+            updateImgUrl(element, url){
+                return new Promise( (resolve, reject) => {
+                    if(element === undefined){
+                        reject('当前没有选中任何元素')
+                    }
+                    if(element.get('type') !== 'image') {
+                        reject('非图片元素，不可进行修改图片操作！')
+                    }
+                    element.setSrc(url, img => {
+                        this.canvas.renderAll();
+                        reject(img);
+                    })
+                })
+                
+            }
+
+            // 给当前画布绑定事件
+            bindEvent(){
+                const _this = this;
+                this.canvas.on('mouse:down', function(options){
+                    // 更新当前选中的的元素
+                    _this.selectedElement = options.target;
+                })
+            }
+
+            // 修改元素的属性
+            updateElement(element, attrObj){
+                console.log(element)
+                element.set(attrObj);
+                this.canvas.renderAll()
+            }
+
+            // 添加文字
+            addText(value = ''){
+                // 初始渲染的文字
+                const text = new fabric.Text( value, {
+                    left: 10,
+                    top: 10,
+                    fontSize: 20,
+                    fontFamily: '宋体',
+                    fontWeigth: 'bold',
+                    zIndex: 10
+                });
+                this.canvas.add(text);
+                // 让新创建的text为选中元素
+                this.selectedElement = text;
+                return text;
+            }
+
+            // 添加图片
+            async addImg(url){
+                if(!url) throw new Error('url值不可为空');
+                return this.drawImgFromUrlToPromise(url).then(img => {
+                    this.canvas.add(img);
+                })
+            }
+
+            // 初始化函数
+            init() {
+                // 当选择画布中的对象时，该对象不出现在顶层。
+                this.canvas.preserveObjectStacking = true;
+
+                // 给画布绑定事件
+                this.bindEvent();
+
+                // 初始渲染的文字
+                const initText = new fabric.Text('文字测试', {
+                    left: 10,
+                    top: 10,
+                    fontSize: 20,
+                    fontFamily: '宋体',
+                    fontWeigth: 'bold'
+                });
+                // 绘制背景
+                this.drawImgFromUrlToPromise('./bg.jpg').then(bgImg => {
+                    bgImg
+                        .scale(0.5)
+                        .set({ width: 600, height: 1000 })
+                    // 开始绘制
+                    this.canvas.add(bgImg, initText);
+                })
+            }
+        }
+
+        const canvasDragDrop = new CanvasDragDrop();
+        canvasDragDrop.init();
+        // 修改文字
+        $('.change-text').click(_ => {
+            const selectedElement = canvasDragDrop.selectedElement;
+            if(selectedElement === undefined){
+                alert('当前没有选中任何元素！')
+                return;
+            }
+            if(selectedElement.get('type') !== 'text'){
+                alert('当前没有选中元素不可更改文字！')
+                return;
+            }
+            const value = selectedElement.text;
+            $('.change-text-window')
+                .find('textarea')
+                .val(value)
+                .end()
+                .fadeIn();
+        })
+        $('.ok').click(_ => {
+            const value = $('.change-text-window textarea').val();
+            canvasDragDrop.updateElement(canvasDragDrop.selectedElement, {text: value});
+            $('.change-text-window').fadeOut()
+        })
+        // 修改图片
+        $('.change-img').click(_ => {
+            canvasDragDrop.updateImgUrl(canvasDragDrop.selectedElement, './test.png')
+        })
+        // 添加文字
+        $('.add-text').click( _ => {
+            $('.change-text-window').fadeIn();
+            const text = canvasDragDrop.addText();
+        })
+        // 添加图片
+        $('.add-img').click( _ => {
+            canvasDragDrop.addImg('./test.png')
+        })
+    </script>
+</body>
+
+</html>
