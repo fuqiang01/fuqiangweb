@@ -117,7 +117,7 @@ export default {
                 fontSize: 20,
                 fontFamily: "宋体",
                 fontWeight: "bold",
-                textColor: 'red'
+                fill: 'red'
             });
             // 绘制背景
             this.drawImgFromUrlToPromise(bg).then(bgImg => {

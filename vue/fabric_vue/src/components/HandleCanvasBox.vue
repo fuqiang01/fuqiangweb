@@ -47,7 +47,7 @@
                         <Icon name="arrow-down" />
                     </div>
                     <div class="color-size">
-                        <div class="color" :style="{backgroundColor: element.color || '#fff'}"></div>
+                        <div class="color" :style="{backgroundColor: element.fill || '#fff'}"></div>
                         <div class="size">{{ element.fontSize || 0 }}</div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ export default {
             this.shouldShowAddBox = false;
             this.shouldShowHandleImgBox = false;
             this.shouldShowHandleTextBox = true;
-            console.log(this.element.get('color'))
+            console.log(this.element.fill)
         },
 
         // 显示编辑图片操作面板
