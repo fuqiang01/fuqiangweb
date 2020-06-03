@@ -1,5 +1,5 @@
 <template>
-    <div class="fabric-canvas">
+    <div class="fabric-canvas" @touchstart='fabricCanvasTouch' ref="fabricCanvasTouch">
         <div class="canvas-wrap">
             <canvas :id="canvasId" :width="canvasWidth" :height="canvasHeight"></canvas>
         </div>
@@ -15,10 +15,10 @@ export default {
     props: ["handleBox"],
     data() {
         return {
-            canvasWidth: 0, // 画布宽度
-            canvasHeight: 0, // 画布高度
-            canvasId: "fabric-canvas", // 画布id
-            selectedElement: undefined // 当前选中的画布中的元素
+            canvasWidth: 0,               // 画布宽度
+            canvasHeight: 0,              // 画布高度
+            canvasId: "fabric-canvas",    // 画布id
+            selectedElement: null,        // 当前选中的画布中的元素
         };
     },
     computed: {
@@ -37,24 +37,25 @@ export default {
         },
 
         // 修改图片
-        updateImgUrl(element, url) {
+        updateImgUrl(url) {
             return new Promise((resolve, reject) => {
-                if (element === undefined) {
+                if (this.selectedElement === null) {
                     reject("当前没有选中任何元素");
                 }
-                if (element.get("type") !== "image") {
+                if (this.selectedElement.get("type") !== "image") {
                     reject("非图片元素，不可进行修改图片操作！");
                 }
-                element.setSrc(url, img => {
+                this.selectedElement.setSrc(url, img => {
                     this.canvas.renderAll();
-                    reject(img);
+                    resolve(img);
                 });
             });
         },
 
-        // 修改元素的属性
-        updateElement(element, attrObj) {
-            element.set(attrObj);
+        // 修改当前选中元素的属性
+        updateElement(attrObj) {
+            if(this.selectedElement === null) return;
+            this.selectedElement.set(attrObj);
             this.canvas.renderAll();
         },
 
@@ -62,10 +63,16 @@ export default {
         bindEvent() {
             const _this = this;
             this.canvas.on("mouse:down", function(options) {
+                // 如果这次点击事件没有选中任何元素，就将选中元素设置为undefined并退出
+                if(options.target === null){
+                    _this.selectedElement = undefined;
+                    // _this.handleBox
+                    return;
+                }
                 // 更新当前选中的的元素
                 _this.selectedElement = options.target;
                 // 严谨性判断
-                if( _this.handleBox === undefined) return;
+                if( _this.handleBox === null) return;
                 // 判断当前选中的元素的类型
                 if (options.target.get("type") === "image") {
                     // 图片类型显示操作图片的操作栏
@@ -102,6 +109,12 @@ export default {
             });
         },
 
+        // 删除元素
+        removeElement(element){
+            if(!element) return;
+            return this.canvas.remove(element);
+        },
+
         // 初始化函数
         init() {
             // 当选择画布中的对象时，该对象不出现在顶层。
@@ -125,6 +138,14 @@ export default {
                 // 开始绘制
                 this.canvas.add(bgImg, initText);
             });
+        },
+
+        // 整个组件点击事件
+        fabricCanvasTouch(e){
+            if(e.target === this.$refs.fabricCanvasTouch){
+                // 显示初始面板
+                this.handleBox.showToolWrap();
+            }
         }
     },
     created() {
