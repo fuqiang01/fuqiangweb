@@ -39,6 +39,7 @@ page{
 
 .item .left image{
     width: 48rpx;
+    max-height: 48rpx;
     margin-right: 20rpx;
     vertical-align: middle;
 }
