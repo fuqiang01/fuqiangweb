@@ -1,7 +1,7 @@
 <view class="container">
     <view class="user-info">
-        <image class="photo" mode="widthFix" src="{{ photoUrl === '' ? 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/photo_1.jpg' : photoUrl }}" />
-        <text class="name">{{ name === '' ? '未登录' : name}}</text>
+        <image class="photo" mode="widthFix" src="{{ photoUrl ? photoUrl : 'https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/photo_1.jpg' }}" />
+        <text class="name">{{ name ? name : '未登录'}}</text>
         <text class="best-result">最好成绩{{ score }}分，用时{{ timeConsuming }}</text>
     </view>
     <view class="info">

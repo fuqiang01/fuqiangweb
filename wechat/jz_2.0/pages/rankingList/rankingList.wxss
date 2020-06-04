@@ -10,6 +10,7 @@
     padding: 20rpx 0;
 }
 .left{
+    flex: 1 1 auto;
     display: flex;
     align-items: center;
 }
@@ -25,6 +26,10 @@
 .score-name .name{
     line-height: 60rpx;
     font-size: 36rpx;
+    max-width: 335rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .score-name .score{
     line-height: 40rpx;
@@ -56,6 +61,7 @@
     background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/rank_3.png);
 }
 .date{
+    flex: 0 0 auto;
     font-size: 36rpx;
     line-height: 100rpx;
     color: #FE5B47;
