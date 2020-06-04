@@ -66,7 +66,7 @@ export default {
                 // 如果这次点击事件没有选中任何元素，就将选中元素设置为undefined并退出
                 if(options.target === null){
                     _this.selectedElement = undefined;
-                    // _this.handleBox
+                    _this.handleBox.showToolWrap();
                     return;
                 }
                 // 更新当前选中的的元素

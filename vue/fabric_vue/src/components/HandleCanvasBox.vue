@@ -1,7 +1,8 @@
 <template>
     <div class="handle-canvas-box">
+        <!-- 默认操作面板 -->
         <transition name="van-slide-up">
-            <ul class="tool-wrap" v-show="shouldShowToolWrap">
+            <ul class="tool-wrap" v-show="shouldShow.shouldShowToolWrap">
                 <li>
                     <div class="icon">
                         <Icon name="edit" />
@@ -22,24 +23,26 @@
                 </li>
             </ul>
         </transition>
+        <!-- 添加操作面板 -->
         <transition name="van-slide-up">
-            <div class="add-box" v-show="shouldShowAddBox">
+            <div class="add-box" v-show="shouldShow.shouldShowAddBox">
                 <div class="btn-wrap">
-                     <input
+                    <input
                         type="file"
                         style="display: none"
                         ref="addImgFileInput"
                         @change="addImgInputChange"
                     />
                     <Button icon="edit" color="#191c24" @touchstart="addTextTouch">加字</Button>
-                    <Button icon="photo" color="#191c24" @touchstart='addImgTouch'>加图</Button>
+                    <Button icon="photo" color="#191c24" @touchstart="addImgTouch">加图</Button>
                     <Button icon="newspaper-o" color="#191c24">素材</Button>
                 </div>
                 <p class="cancel" @touchstart="showToolWrap">取消</p>
             </div>
         </transition>
+        <!-- 图片操作面板 -->
         <transition name="van-slide-up">
-            <div class="handle-img-box" v-show="shouldShowHandleImgBox">
+            <div class="handle-img-box" v-show="shouldShow.shouldShowHandleImgBox">
                 <input
                     type="file"
                     style="display: none"
@@ -51,8 +54,9 @@
                 <p>缩小</p>
             </div>
         </transition>
+        <!-- 文字操作面板 -->
         <transition name="van-slide-up">
-            <div class="handle-text-box" v-show="shouldShowHandleTextBox">
+            <div class="handle-text-box" v-show="shouldShow.shouldShowHandleTextBox">
                 <div class="top">
                     <div class="font">
                         <span>{{ fontFamily }}</span>
@@ -63,7 +67,7 @@
                         <div class="size">{{ element.fontSize || 0 }}</div>
                     </div>
                 </div>
-                <div class="type">
+                <div class="type-list">
                     <p @touchstart="touchChangeText">改字</p>
                     <p>对齐</p>
                     <p>样式</p>
@@ -71,6 +75,48 @@
                 </div>
             </div>
         </transition>
+        <!-- 文字对齐方式操作面板 -->
+        <transition name="van-slide-up">
+            <div class="align-box" v-show="shouldShow.shouldShowAlignBox">
+                <div class="type-list">
+                    <p>左对齐</p>
+                    <p class="active">居中对齐</p>
+                    <p>右对齐</p>
+                </div>
+                <div class="bottom-bar">
+                    <div class="complete">
+                        <Icon name="success" />
+                    </div>
+                    <p>对齐</p>
+                    <div class="cancel">
+                        <Icon name="cross" />
+                    </div>
+                </div>
+            </div>
+        </transition>
+        <!-- 斜体、下划线、加粗操作 -->
+        <transition name="van-slide-up">
+            <div class="styles-box" v-show="shouldShow.shouldShowStylesBox">
+                <div class="type-list">
+                    <p>斜体</p>
+                    <p class="active">上划线</p>
+                    <p>中划线</p>
+                    <p>下划线</p>
+                </div>
+                <div class="bottom-bar">
+                    <div class="complete">
+                        <Icon name="success" />
+                    </div>
+                    <p>对齐</p>
+                    <div class="cancel">
+                        <Icon name="cross" />
+                    </div>
+                </div>
+            </div>
+        </transition>
+        <!-- <transition name="van-slide-up"></transition> -->
+        <!-- <transition name="van-slide-up"></transition> -->
+        <!-- <transition name="van-slide-up"></transition> -->
     </div>
 </template>
 
@@ -85,10 +131,15 @@ export default {
     },
     data() {
         return {
-            shouldShowToolWrap: true,
-            shouldShowAddBox: false,
-            shouldShowHandleImgBox: false,
-            shouldShowHandleTextBox: false
+            // 控制所有操作面板的显示与否
+            shouldShow: {
+                shouldShowToolWrap: false,
+                shouldShowAddBox: false,
+                shouldShowHandleImgBox: false,
+                shouldShowHandleTextBox: false,
+                shouldShowAlignBox: false,
+                shouldShowStylesBox: false,
+            }
         };
     },
     computed: {
@@ -98,15 +149,17 @@ export default {
             if (
                 this.canvasBox == null ||
                 this.canvasBox.selectedElement == null
-            ) return {};
+            )
+                return {};
             return this.canvasBox.selectedElement;
         },
         // 当前选中文字元素的字体及粗细
         fontFamily() {
             if (
-                this.element.fontWeight === undefined 
-                || this.element.fontFamily === undefined
-            ) return "未选中任何文本";
+                this.element.fontWeight === undefined ||
+                this.element.fontFamily === undefined
+            )
+                return "未选中任何文本";
             const fotWeight = this.element.fontWeight;
             const fontFamily = this.element.fontFamily;
             let weightText = "粗体";
@@ -117,36 +170,34 @@ export default {
         }
     },
     methods: {
+        // 隐藏所有面板
+        hideAllBox() {
+            for (const prop in this.shouldShow) {
+                this.shouldShow[prop] = false;
+            }
+        },
         // 显示添加面板
         showAddBox() {
-            this.shouldShowToolWrap = false;
-            this.shouldShowAddBox = true;
-            this.shouldShowHandleImgBox = false;
-            this.shouldShowHandleTextBox = false;
+            this.hideAllBox();
+            this.shouldShow.shouldShowAddBox = true;
         },
 
         // 显示初始面板
         showToolWrap() {
-            this.shouldShowAddBox = false;
-            this.shouldShowToolWrap = true;
-            this.shouldShowHandleImgBox = false;
-            this.shouldShowHandleTextBox = false;
+            this.hideAllBox();
+            this.shouldShow.shouldShowToolWrap = true;
         },
 
         // 显示编辑文字操作面板
         showHandleTextBox() {
-            this.shouldShowToolWrap = false;
-            this.shouldShowAddBox = false;
-            this.shouldShowHandleImgBox = false;
-            this.shouldShowHandleTextBox = true;
+            this.hideAllBox();
+            this.shouldShow.shouldShowHandleTextBox = true;
         },
 
         // 显示编辑图片操作面板
         showHandleImgBox() {
-            this.shouldShowToolWrap = false;
-            this.shouldShowAddBox = false;
-            this.shouldShowHandleImgBox = true;
-            this.shouldShowHandleTextBox = false;
+            this.hideAllBox();
+            this.shouldShow.shouldShowHandleImgBox = true;
         },
 
         // 点击改字
@@ -165,7 +216,7 @@ export default {
         },
 
         // 点击加图
-        addImgTouch(){
+        addImgTouch() {
             this.$refs.addImgFileInput.click();
         },
 
@@ -180,14 +231,14 @@ export default {
         },
 
         // 加图选择上传文件的change事件
-        addImgInputChange(){
+        addImgInputChange() {
             // 获取上传的文件
             const file = this.$refs.addImgFileInput.files[0];
             // 获取上传文件在本机的绝对地址
             const url = window.URL.createObjectURL(file);
             // 更新图片
             this.canvasBox.addImg(url);
-        },
+        }
     }
 };
 </script>
@@ -197,6 +248,28 @@ export default {
 .handle-canvas-box {
     color: #fff;
     position: relative;
+    .type-list {
+        display: flex;
+        justify-content: space-between;
+        background-color: @bgColor;
+        border-radius: 10px;
+        > p {
+            width: 100%;
+            text-align: center;
+            line-height: 90px;
+            font-size: 28px;
+        }
+    }
+    .bottom-bar{
+        display: flex;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 40px;
+        >p{
+            font-size: 28px;
+        }
+    }
     .tool-wrap {
         display: flex;
         justify-content: space-around;
@@ -296,16 +369,15 @@ export default {
                 }
             }
         }
-        .type {
-            display: flex;
-            justify-content: space-between;
-            background-color: @bgColor;
-            border-radius: 10px;
-            > p {
-                width: 100%;
-                text-align: center;
-                line-height: 90px;
-                font-size: 28px;
+    }
+    .align-box, .styles-box{
+        margin: 0 30px;
+        .type-list{
+            p{
+                color: #aaa;
+                &.active{
+                    color: #fff;
+                }
             }
         }
     }
