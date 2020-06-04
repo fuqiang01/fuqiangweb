@@ -88,4 +88,8 @@
             </view>
         </view>
     </view>
+    <!-- 广告 -->
+    <view class="advertising-box">
+        <ad unit-id="adunit-418a151902c4f030"></ad>
+    </view>
 </view>

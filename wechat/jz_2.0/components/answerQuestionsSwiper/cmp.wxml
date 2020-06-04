@@ -28,6 +28,6 @@
                 bindoncollectionclick="oncollectionclick" 
             />
         </scroll-view>
-        
-    </swiper-item>    
+    </swiper-item>
 </swiper>
+

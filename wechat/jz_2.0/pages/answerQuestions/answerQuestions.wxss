@@ -1,0 +1,7 @@
+.advertising-box{
+    /* position: fixed;
+    bottom: 100rpx; */
+    /* width: calc(100% - 40rpx);
+    margin: 0 20rpx;
+    border-radius: 10rpx; */
+}

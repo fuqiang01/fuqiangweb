@@ -76,6 +76,7 @@ page{
     background-color: #fff;
     padding: 30rpx 30rpx 0;
     border-radius: 10rpx;
+    margin-bottom: 30rpx;
 }
 .mark .title{
     display: block;
@@ -131,4 +132,9 @@ page{
 }
 .color-blindness .img{
     background-image: url(https://fqiang-1300549778.cos.ap-chongqing.myqcloud.com/jz/icon_18.png);
+}
+/* 广告 */
+.advertising-box{
+    border-radius: 10rpx;
+    overflow: hidden;
 }
