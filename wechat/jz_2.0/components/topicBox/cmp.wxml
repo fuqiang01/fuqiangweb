@@ -4,7 +4,7 @@
         <text class="title-text">{{ topicObj.title }}</text>
     </view>
     <view class="img-wrap" wx:if="{{ topicObj.imgUrl }}">
-        <image src="{{ imgBaseUrl + topicObj.imgUrl }}" mode="widthFix"/>
+        <image src="{{ imgBaseUrl + topicObj.imgUrl }}" mode="aspectFit"/>
     </view>
     <view class="options">
         <view 
