@@ -1,5 +1,9 @@
 <template>
-    <div class="fabric-canvas" @touchstart='fabricCanvasTouch' ref="fabricCanvasTouch">
+    <div class="fabric-canvas" 
+        @touchstart='fabricCanvasTouch' 
+        ref="fabricCanvasTouch"
+        :style='{paddingTop: canvasTop + "px"}'
+    >
         <div class="canvas-wrap">
             <canvas :id="canvasId" :width="canvasWidth" :height="canvasHeight"></canvas>
         </div>
@@ -15,6 +19,7 @@ export default {
     props: ["handleBox"],
     data() {
         return {
+            canvasTop: 0,                 // 画布距离顶部的高度，就是让画布居中好看点
             canvasWidth: 0,               // 画布宽度
             canvasHeight: 0,              // 画布高度
             canvasId: "fabric-canvas",    // 画布id
@@ -134,7 +139,8 @@ export default {
             });
             // 绘制背景
             this.drawImgFromUrlToPromise(bg).then(bgImg => {
-                bgImg.scale(0.5).set({ width: 600, height: 1000 });
+                const scale = this.canvasWidth / 600;
+                bgImg.scale(scale).set({ width: 600, height: 1000 });
                 // 开始绘制
                 this.canvas.add(bgImg, initText);
             });
@@ -149,10 +155,38 @@ export default {
         }
     },
     created() {
-        const windowWidth = document.body.clientWidth;
-        // 暂时写一个固定的尺寸后边在改
-        this.canvasWidth = windowWidth * 0.8;
-        this.canvasHeight = windowWidth * 1.3333;
+        // 定义一个canvas的横纵比例，width : height
+        const canvasAspectRatio = 3 / 5;
+        // 可视窗口的宽
+        const windowWidth = document.documentElement.clientWidth;
+        // 可视窗口的高
+        const windowHeight = document.documentElement.clientHeight;
+        // 将以375为基准（也就是在375px宽的屏幕中1rem=100px）的rem的值转换成px值的转换参数
+        const remToPxK = windowWidth / 375 * 100;
+        // 顶部导航转换成px后的高度，下边的几个高度值写的是死的后期可能需要修改
+        const headerNavHeight = remToPxK * 0.46;
+        // 底部各种操作的盒子所占的高度
+        const bottomBoxHeight = remToPxK * 1.25;
+        // canvas下边的那一行字的高度
+        const promptTextHeight = remToPxK * 0.25;
+        // 计算当前canvas画布还可以利用的高度值
+        const canvasBoxHeight = windowHeight - headerNavHeight - bottomBoxHeight - promptTextHeight;
+        // 如果canvas画布高度完全占满可利用的高度，那么按照比例canvas的宽度是多少
+        const tempWidth = canvasBoxHeight * canvasAspectRatio;
+        // 先判断占满可利用高度的话，屏幕够不够宽放得下这个画布
+        if(tempWidth >= windowWidth){
+            // 不够宽，让画布的宽度等于屏幕宽度的90%，再计算响应的高度，并且设置画布距离顶部有一点距离，从而居中
+            const w = windowWidth * 0.9;
+            const h = w / canvasAspectRatio;
+            this.canvasWidth = w;
+            this.canvasHeight = h;
+            // 修改距离顶部的距离值
+            this.canvasTop = (canvasBoxHeight - h - promptTextHeight) / 2;
+            return;
+        }
+        // 宽度足够，高度占满，再计算响应的宽度
+        this.canvasWidth = tempWidth;
+        this.canvasHeight = canvasBoxHeight;
     },
     mounted() {
         this.init();

@@ -69,8 +69,8 @@
                 </div>
                 <div class="type-list">
                     <p @touchstart="touchChangeText">改字</p>
-                    <p>对齐</p>
-                    <p>样式</p>
+                    <p @touchstart="ShowAlignBox">对齐</p>
+                    <p @touchstart="ShowStylesBox">样式</p>
                     <p>间距</p>
                 </div>
             </div>
@@ -133,7 +133,7 @@ export default {
         return {
             // 控制所有操作面板的显示与否
             shouldShow: {
-                shouldShowToolWrap: false,
+                shouldShowToolWrap: true,
                 shouldShowAddBox: false,
                 shouldShowHandleImgBox: false,
                 shouldShowHandleTextBox: false,
@@ -198,6 +198,18 @@ export default {
         showHandleImgBox() {
             this.hideAllBox();
             this.shouldShow.shouldShowHandleImgBox = true;
+        },
+
+        // 显示文字对齐方式操作面板
+        ShowAlignBox(){
+            this.hideAllBox();
+            this.shouldShow.shouldShowAlignBox = true;
+        },
+
+        // 显示斜体、下划线、加粗操作面板
+        ShowStylesBox(){
+            this.hideAllBox();
+            this.shouldShow.shouldShowStylesBox = true;
         },
 
         // 点击改字

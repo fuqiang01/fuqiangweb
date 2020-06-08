@@ -1,6 +1,14 @@
 <template>
     <div class="home">
         <div :class="['along-wrap', shouldShowChangeText && 'along']">
+            <NavBar
+                title="海报制作"
+                left-text="返回"
+                right-text="保存"
+                left-arrow
+                @click-left="onClickLeft"
+                @click-right="onClickRight"
+            />
             <FabricCanvas ref="fabricCanvas" :handleBox="handleCanvasBoxRef" />
             <p class="prompt-text">轻点任意元素开始编辑</p>
             <div class="bottom-tools">
@@ -31,12 +39,13 @@
 <script>
 import FabricCanvas from "@/components/FabricCanvas";
 import HandleCanvasBox from "@/components/HandleCanvasBox";
-import { Icon } from "vant";
+import { Icon, NavBar } from "vant";
 export default {
     components: {
         FabricCanvas,
         HandleCanvasBox,
-        Icon
+        Icon,
+        NavBar,
     },
     data() {
         return {
@@ -92,7 +101,24 @@ export default {
             // 清空输入框中的内容并且影藏弹窗
             this.textareaValue = "";
             this.shouldShowChangeText = false;
-        }
+        },
+
+        // 点击了导航的回退按钮
+        onClickLeft(){
+            console.log('回退')
+        },
+
+        // 点击保存按钮
+        onClickRight(){
+            const canvas = this.fabricCanvasRef.canvas;
+            // 将canvas画布保存为base64格式并且后缀为jpeg的图片
+            const strDataUrl = canvas.toDataURL('image/jpeg');
+            // 创建一个a标签,用来自动将图片下载到本地
+            const aDom = document.createElement('a');
+            aDom.setAttribute('href', strDataUrl);
+            aDom.setAttribute('download', 'canvas.jpeg');
+            aDom.click();
+        },
     },
     mounted() {
         this.handleCanvasBoxRef = this.$refs.handleCanvasBox;
@@ -108,8 +134,8 @@ export default {
         height: 100vh;
         overflow: hidden;
         position: relative;
-        padding-top: 20px;
         box-sizing: border-box;
+        font-size: 28px;
         &.along {
             filter: blur(20px);
             -webkit-filter: blur(20px);
@@ -117,6 +143,7 @@ export default {
         .prompt-text {
             color: #999;
             text-align: center;
+            line-height: 50px;
         }
         .bottom-tools {
             position: absolute;
