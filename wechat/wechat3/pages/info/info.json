@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "f-info-item": "/components/infoitem/cmp",
-    "f-num-box": "/components/numbox/cmp"
-  }
-}

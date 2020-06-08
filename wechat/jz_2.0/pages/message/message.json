@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "f-leaveMsg": "/components/leaveMsg/cmp"
-  },
-  "enablePullDownRefresh": true,
-  "backgroundTextStyle": "dark"
-}
