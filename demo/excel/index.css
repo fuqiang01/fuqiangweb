@@ -1,0 +1,43 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.wrap{
+  background-color: #fff;
+  padding: 20px;
+}
+.title{
+  line-height: 40px;
+}
+.s1{
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.s2{
+  color: red;
+}
+.imgWrap img{
+  box-shadow: 0 0 10px #e0e0e0;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.update-wrap{
+  position: relative;
+  background-color: #ff4555;
+  width: 200px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  margin: 20px;
+  border-radius: 5px;
+}
+#upload{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+}

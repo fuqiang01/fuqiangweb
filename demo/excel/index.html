@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格转换</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="update-wrap">
+        <input type="file" id='upload' title="">
+        <span>上传文件</span>
+    </div>
+    <div class="wrap">
+        <div class="title">
+            <span class="s1">处理前的格式：</span>
+            <span class="s2">Sheet1中为带有金额的</span>
+        </div>
+        <div class="imgWrap">
+            <img src="./s_1.png" alt="">
+            <img src="./s_2.png" alt="">
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="title">
+            <span class="s1">处理后的格式：</span>
+            <span class="s2">Sheet2中有而Sheet1中没有的会在名字后方加上“+++++”</span>
+        </div>
+        <div class="imgWrap">
+            <img src="./e_1.png" alt="">
+            <img src="./e_2.png" alt="">
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./shim.min.js"></script>
+    <script src="./xlsx.full.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
